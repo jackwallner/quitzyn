@@ -1,7 +1,7 @@
 import Foundation
 
 enum AppGroup {
-    static let identifier = "group.com.jackwallner.nicfree"
+    static let identifier = "group.com.jackwallner.quitzyn"
 
     /// Set when onboarding completes; HomeView consumes it to present the
     /// paywall once on first arrival — the day-0 moment where the large

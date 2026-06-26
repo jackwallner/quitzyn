@@ -1,43 +1,43 @@
-A Sober Tracker egyszerűvé és motiválóvá teszi az alkoholmentes utadat. Számold meg minden józan napodat, jelentkezz be naponta egyszer, és nézd, ahogy egy virtuális kert virágba borul, miközben a sorozatod növekszik. Minden privát marad a készülékeden. Nincs szükség fiókra.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Ha egyetlen nyugodt helyre vágysz, ahol láthatod, milyen messzire jutottál, és folytathatod tovább, akkor ez az az alkalmazás.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-A JÓZANSÁGOD EGYETLEN PILLANTÁSRA (INGYENES)
-- Napszámláló, amely mutatja a napokat, órákat és a leghosszabb sorozatodat.
-- Egyérintéses napi bejelentkezés, hogy rögzítsd, milyen a mai napod.
-- Józansági naptár, amelyben minden józan nap egy helyen látható.
-- Mérföldkövek, amelyek a napok gyarapodásával érkeznek.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-EGY KERT, AMELY VELED EGYÜTT NŐ (INGYENES)
-- Virtuális kert, amely minden józan nappal virágba borul.
-- Új hajtások jelennek meg, ahogy a sorozatod épül.
-- Élő emlékeztető arra, milyen messzire jutottál.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-A KEZDŐKÉPERNYŐDÖN ÉS APPLE WATCH-ON (INGYENES)
-- Kezdőképernyő- és zárképernyő-widgetek a napjaid számával.
-- Apple Watch kísérő a bejelentkezéshez és a sorozatod megtekintéséhez.
-- A haladásod az alkalmazás megnyitása nélkül is látható.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-ALAPVETŐEN PRIVÁT (INGYENES)
-- Minden adatod a készülékeden marad.
-- Nincs szükség fiókra. Nincs reklám. Nincs követés. Nincsenek szerverek.
-- Az utad a tiéd marad.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (OPCIONÁLIS)
-Egy apró fejlesztés feloldja a teljes élményt:
-- Teljes egészségügyi előnyök idővonala forrásokkal
-- Naplózás vezetett ötletekkel
-- Eredmények és mérföldkövek feloldása
-- Megtakarított pénz és kalória az első naptól
-- Több növényfaj a kertedhez
-Az új előfizetők ingyenes próbaidőszakot kapnak.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Akár abbahagyod az ivást, akár visszafogod magad, akár józan napokat építesz, a Sober Tracker egyszerűvé teszi a felépülést: számold a józan idődet, jelentkezz be, és nézd, ahogy a kerted nő.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Töltsd le ingyen még ma.
+Download free today.
 
-Előfizetési részletek
-A Bloom+ automatikusan megújuló előfizetésként (havi $4.99 / éves $29.99 7 napos ingyenes próbaidőszakkal) vagy egyszeri, élethosszig tartó vásárlásként ($59.99) érhető el. A fizetést a megerősítéskor terheljük az Apple ID-dra. Az előfizetések automatikusan megújulnak, hacsak nem mondod le legalább 24 órával az időszak vége előtt. Bármikor kezelheted vagy lemondhatod a Beállítások > Apple ID > Előfizetések menüpontban.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Adatvédelmi irányelvek: https://jackwallner.github.io/sober/privacy-policy.html
-Felhasználási feltételek (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

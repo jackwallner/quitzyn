@@ -1,43 +1,43 @@
-Sober Tracker holder din alkoholfrie reise enkel og motiverende. Tell hver edru dag, sjekk inn én gang om dagen, og se en virtuell hage blomstre etter hvert som rekken din vokser. Alt forblir privat på enheten din. Ingen konto er nødvendig.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Hvis du ønsker ett rolig sted der du kan se hvor langt du har kommet og fortsette videre, så er dette den appen.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-EDRUELIGHETEN DIN I ETT OVERBLIKK (GRATIS)
-- Dagteller som viser dager, timer og din lengste rekke.
-- Daglig innsjekking med ett trykk for å notere hvordan dagen føles.
-- Edru-kalender med alle de edru dagene dine i ett overblikk.
-- Milepælsøyeblikk som dukker opp etter hvert som dagene legger seg sammen.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-EN HAGE SOM VOKSER MED DEG (GRATIS)
-- En virtuell hage som blomstrer for hver edru dag.
-- Ny vekst kommer til etter hvert som rekken din bygges opp.
-- En levende påminnelse om hvor langt du har kommet.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-PÅ HJEMSKJERMEN OG APPLE WATCH (GRATIS)
-- Widgets for hjemskjerm og låseskjerm med dagtellingen din.
-- Apple Watch-følgesvenn for å sjekke inn og se rekken din.
-- Fremgangen din er synlig uten å åpne appen.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-PRIVAT FRA BUNNEN AV (GRATIS)
-- Alle dataene dine forblir på enheten din.
-- Ingen konto kreves. Ingen reklame. Ingen sporing. Ingen servere.
-- Reisen din forblir din.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (VALGFRITT)
-En liten oppgradering låser opp hele opplevelsen:
-- Komplett tidslinje over helsefordeler med kilder
-- Dagbok med veiledede skriveforslag
-- Prestasjoner og opplåsing av milepæler
-- Penger og kalorier spart siden dag én
-- Flere hagearter å dyrke
-En gratis prøveperiode tilbys til nye abonnenter.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Enten du slutter å drikke, kutter ned eller bygger opp edru dager, holder Sober Tracker bedringen enkel: tell den edru tiden din, sjekk inn, og se hagen din vokse.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Last ned gratis i dag.
+Download free today.
 
-Abonnementsdetaljer
-Bloom+ er tilgjengelig som et abonnement med automatisk fornyelse (månedlig $4.99 / årlig $29.99 med 7 dagers gratis prøveperiode) eller som et engangskjøp for livstid ($59.99). Betalingen trekkes fra Apple ID-en din ved bekreftelse. Abonnementer fornyes automatisk med mindre de sies opp minst 24 timer før periodens slutt. Administrer eller si opp når som helst under Innstillinger > Apple ID > Abonnementer.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Personvernerklæring: https://jackwallner.github.io/sober/privacy-policy.html
-Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

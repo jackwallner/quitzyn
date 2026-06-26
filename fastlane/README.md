@@ -15,6 +15,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios create_app
+
+```sh
+[bundle exec] fastlane ios create_app
+```
+
+Create the app record on App Store Connect (App Store Connect API key auth)
+
 ### ios upload_metadata
 
 ```sh

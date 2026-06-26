@@ -3,6 +3,22 @@ opt_out_usage
 default_platform(:ios)
 
 platform :ios do
+  desc "Create the app record on App Store Connect."
+  desc "NOTE: Apple's API forbids creating apps, so this needs an Apple-ID web session."
+  desc "Run `fastlane spaceauth -u jackwallner@gmail.com` first and export FASTLANE_SESSION."
+  lane :create_app do
+    produce(
+      username: "jackwallner@gmail.com",
+      app_identifier: "com.jackwallner.quitzyn",
+      app_name: "Quit Zyn: Pouch & Snus Tracker",
+      language: "en-US",
+      sku: "com.jackwallner.quitzyn",
+      skip_devcenter: true,
+      team_id: "YXG4MP6W39",
+      itc_team_id: "YXG4MP6W39"
+    )
+  end
+
   desc "Upload screenshots and metadata to App Store Connect"
   lane :upload_metadata do
     api_key = app_store_connect_api_key(

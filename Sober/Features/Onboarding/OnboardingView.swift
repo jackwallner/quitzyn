@@ -33,7 +33,7 @@ struct OnboardingView: View {
             Spacer()
             Image(systemName: "leaf.fill")
                 .font(.system(size: 96))
-            Text("Nicotine Free").font(Theme.display(52, weight: .semibold))
+            Text("Quit Zyn").font(Theme.display(52, weight: .semibold))
                 .multilineTextAlignment(.center)
             Text("Track your nicotine-free days, grow your garden, watch your health return.")
                 .multilineTextAlignment(.center)
@@ -47,7 +47,7 @@ struct OnboardingView: View {
     private var startDateStep: some View {
         VStack(spacing: Theme.Space.xl) {
             Spacer()
-            Text("When did your sober journey begin?")
+            Text("When did your nicotine-free journey begin?")
                 .font(Theme.display())
                 .multilineTextAlignment(.center)
             DatePicker("", selection: $startDate, in: ...Date.now, displayedComponents: [.date])

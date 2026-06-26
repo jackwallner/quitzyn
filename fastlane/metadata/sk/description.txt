@@ -1,43 +1,43 @@
-Sober Tracker udržiava vašu cestu bez alkoholu jednoduchú a motivujúcu. Počítajte každý triezvy deň, raz denne sa prihláste pomocou check-inu a sledujte, ako virtuálna záhrada rozkvitá s rastúcou sériou. Všetko zostáva súkromné vo vašom zariadení. Nie je potrebný žiadny účet.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Ak chcete jedno pokojné miesto, kde uvidíte, ako ďaleko ste sa dostali, a budete pokračovať ďalej, toto je tá správna aplikácia.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-VAŠA TRIEZVOSŤ NA PRVÝ POHĽAD (ZADARMO)
-- Počítadlo dní, ktoré ukazuje dni, hodiny a vašu najdlhšiu sériu.
-- Denný check-in jedným ťuknutím, ktorým zaznamenáte, ako sa dnes cítite.
-- Kalendár triezvosti s každým triezvym dňom na jednom mieste.
-- Míľniky, ktoré prichádzajú s pribúdajúcimi dňami.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-ZÁHRADA, KTORÁ RASTIE S VAMI (ZADARMO)
-- Virtuálna záhrada, ktorá rozkvitá s každým triezvym dňom.
-- Nové výhonky sa objavujú, ako rastie vaša séria.
-- Živá pripomienka toho, ako ďaleko ste sa dostali.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-NA PLOCHE A APPLE WATCH (ZADARMO)
-- Widgety na ploche a na uzamknutej obrazovke s počtom vašich dní.
-- Spoločník pre Apple Watch na check-in a zobrazenie vašej série.
-- Váš pokrok je viditeľný bez otvorenia aplikácie.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-SÚKROMIE OD ZÁKLADU (ZADARMO)
-- Všetky vaše údaje zostávajú vo vašom zariadení.
-- Nie je potrebný účet. Žiadne reklamy. Žiadne sledovanie. Žiadne servery.
-- Vaša cesta zostáva vaša.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (VOLITEĽNÉ)
-Malé vylepšenie odomkne plný zážitok:
-- Kompletná časová os zdravotných prínosov so zdrojmi
-- Denník s vedenými námetmi
-- Odznaky a odomykanie míľnikov
-- Ušetrené peniaze a kalórie od prvého dňa
-- Viac druhov rastlín pre vašu záhradu
-Novým predplatiteľom sa ponúka bezplatná skúšobná verzia.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Či už prestávate piť, obmedzujete sa, alebo si budujete triezve dni, Sober Tracker zachováva jednoduchosť zotavenia: počítajte svoj triezvy čas, prihlasujte sa pomocou check-inu a sledujte, ako vaša záhrada rastie.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Stiahnite si zadarmo ešte dnes.
+Download free today.
 
-Podrobnosti o predplatnom
-Bloom+ je k dispozícii ako automaticky obnovované predplatné (mesačne $4.99 / ročne $29.99 so 7-dňovou bezplatnou skúšobnou verziou) alebo ako jednorazový doživotný nákup ($59.99). Platba sa účtuje vášmu Apple ID pri potvrdení. Predplatné sa automaticky obnovuje, pokiaľ nie je zrušené aspoň 24 hodín pred koncom obdobia. Spravujte alebo zrušte kedykoľvek v Nastavenia > Apple ID > Predplatné.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Zásady ochrany súkromia: https://jackwallner.github.io/sober/privacy-policy.html
-Podmienky používania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

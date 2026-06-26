@@ -17,11 +17,11 @@ struct Achievement: Identifiable, Hashable {
 enum AchievementCatalog {
     static let all: [Achievement] = [
         // Time milestones
-        Achievement(id: "first-step", title: "First Step", description: "Begin your journey to sobriety.", kind: .timeMilestone, dayThreshold: 0, icon: "leaf.fill"),
+        Achievement(id: "first-step", title: "First Step", description: "Begin your nicotine-free journey.", kind: .timeMilestone, dayThreshold: 0, icon: "leaf.fill"),
         Achievement(id: "strong-foundation", title: "Strong Foundation", description: "Complete your first week.", kind: .timeMilestone, dayThreshold: 7, icon: "shield.lefthalf.filled"),
         Achievement(id: "rising-star", title: "Rising Star", description: "One month milestone reached.", kind: .timeMilestone, dayThreshold: 30, icon: "star.fill"),
         Achievement(id: "quarter-master", title: "Quarter Master", description: "Three months strong.", kind: .timeMilestone, dayThreshold: 90, icon: "medal.fill"),
-        Achievement(id: "half-year-hero", title: "Half-Year Hero", description: "Six months of sobriety.", kind: .timeMilestone, dayThreshold: 180, icon: "trophy.fill"),
+        Achievement(id: "half-year-hero", title: "Half-Year Hero", description: "Six months nicotine-free.", kind: .timeMilestone, dayThreshold: 180, icon: "trophy.fill"),
         Achievement(id: "year-one", title: "Year One", description: "A full year. Incredible.", kind: .timeMilestone, dayThreshold: 365, icon: "crown.fill"),
 
         // Streak / check-in achievements

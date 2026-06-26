@@ -1,43 +1,43 @@
-Sober Tracker rende il tuo percorso senza alcol semplice e motivante. Conta ogni giorno senza alcol, fai un check-in una volta al giorno e guarda un giardino virtuale fiorire mentre cresce la tua serie. Tutto resta privato sul tuo dispositivo. Nessun account.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Se vuoi un posto tranquillo per vedere quanta strada hai fatto e andare avanti, è questa l'app.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-LA TUA SOBRIETÀ A COLPO D'OCCHIO (GRATIS)
-- Contatore dei giorni con giorni, ore e la tua serie più lunga.
-- Check-in giornaliero con un tocco per annotare come va oggi.
-- Calendario della sobrietà con ogni giorno senza alcol a colpo d'occhio.
-- Traguardi che arrivano man mano che i giorni si sommano.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-UN GIARDINO CHE CRESCE CON TE (GRATIS)
-- Un giardino virtuale che fiorisce a ogni giorno di sobrietà.
-- Nuova crescita appare mentre la tua serie aumenta.
-- Un promemoria vivo di quanta strada hai fatto.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-SULLA TUA SCHERMATA HOME E APPLE WATCH (GRATIS)
-- Widget per schermata Home e di blocco con il conteggio dei giorni.
-- App per Apple Watch per fare il check-in e vedere la tua serie.
-- I tuoi progressi visibili senza aprire l'app.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-PRIVATO PER SCELTA (GRATIS)
-- Tutti i tuoi dati restano sul tuo dispositivo.
-- Nessun account. Nessuna pubblicità. Nessun tracciamento. Nessun server.
-- Il tuo percorso resta tuo.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (OPZIONALE)
-Un piccolo upgrade sblocca l'esperienza completa:
-- Cronologia completa dei benefici per la salute con fonti
-- Diario con spunti guidati
-- Obiettivi e traguardi raggiunti
-- Denaro e calorie risparmiati dal primo giorno
-- Più specie di giardino da coltivare
-Una prova gratuita è offerta ai nuovi abbonati.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Che tu stia smettendo di bere, riducendo o accumulando giorni senza alcol, Sober Tracker mantiene il recupero semplice: conta il tuo tempo da sobrio, fai il check-in e guarda crescere il tuo giardino.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Scaricala gratis.
+Download free today.
 
-Dettagli dell'abbonamento
-Bloom+ è disponibile come abbonamento a rinnovo automatico (mensile $4,99 / annuale $29,99 con 7 giorni di prova gratuita) o come acquisto una tantum a vita ($59,99). Il pagamento viene addebitato sul tuo Apple ID alla conferma. Gli abbonamenti si rinnovano automaticamente salvo disdetta almeno 24 ore prima della fine del periodo. Gestisci o annulla quando vuoi in Impostazioni > Apple ID > Abbonamenti.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Informativa sulla privacy: https://jackwallner.github.io/sober/privacy-policy.html
-Termini d'uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

@@ -315,7 +315,7 @@ struct TimelineView: View {
                 Image(systemName: checkIn.wasSober ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
                     .foregroundStyle(checkIn.wasSober ? Theme.success : Theme.danger)
                     .frame(width: 28)
-                Text(checkIn.wasSober ? "Logged sober" : "Logged a slip")
+                Text(checkIn.wasSober ? "Logged nicotine-free" : "Logged a slip")
                     .foregroundStyle(Theme.textPrimary)
                 Spacer()
             }
@@ -331,7 +331,7 @@ struct TimelineView: View {
                 if checkIn.wasSober { pendingSlipDay = day }
                 else { logCheckIn(on: day, wasSober: true) }
             } label: {
-                Label(checkIn.wasSober ? "Change to slip" : "Change to sober",
+                Label(checkIn.wasSober ? "Change to slip" : "Change to nicotine-free",
                       systemImage: "arrow.left.arrow.right")
             }
             if checkIn.wasSober {
@@ -345,7 +345,7 @@ struct TimelineView: View {
             Button {
                 logCheckIn(on: day, wasSober: true)
             } label: {
-                Label("Log as sober", systemImage: "checkmark.circle")
+                Label("Log as nicotine-free", systemImage: "checkmark.circle")
             }
             Button(role: .destructive) {
                 pendingSlipDay = day

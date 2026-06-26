@@ -1,43 +1,43 @@
-Sober Tracker pitää alkoholittoman matkasi yksinkertaisena ja motivoivana. Laske jokainen raitis päivä, tee päivittäinen kirjaus kerran päivässä ja katso, kuinka virtuaalinen puutarha kukkii putkesi kasvaessa. Kaikki pysyy yksityisenä laitteellasi. Tiliä ei tarvita.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Jos haluat yhden rauhallisen paikan, jossa näet kuinka pitkälle olet päässyt ja voit jatkaa eteenpäin, tämä on se sovellus.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-RAITTIUTESI YHDELLÄ SILMÄYKSELLÄ (ILMAINEN)
-- Päivälaskuri, joka näyttää päivät, tunnit ja pisimmän putkesi.
-- Yhden napautuksen päivittäinen kirjaus siitä, miltä tämä päivä tuntuu.
-- Raittiuskalenteri, jossa kaikki raittiit päivät näkyvät yhdellä silmäyksellä.
-- Virstanpylväshetkiä, jotka saapuvat päivien karttuessa.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-PUUTARHA, JOKA KASVAA KANSSASI (ILMAINEN)
-- Virtuaalinen puutarha, joka kukkii jokaisen raittiin päivän myötä.
-- Uutta kasvua ilmestyy putkesi rakentuessa.
-- Elävä muistutus siitä, kuinka pitkälle olet päässyt.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-ALOITUSNÄYTÖLLÄSI JA APPLE WATCHISSA (ILMAINEN)
-- Aloitusnäytön ja lukitusnäytön widgetit päivälaskureineen.
-- Apple Watch -kumppani kirjausten tekemiseen ja putken seuraamiseen.
-- Edistymisesi näkyvissä avaamatta sovellusta.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-YKSITYINEN JO LÄHTÖKOHTAISESTI (ILMAINEN)
-- Kaikki tietosi pysyvät laitteellasi.
-- Tiliä ei tarvita. Ei mainoksia. Ei seurantaa. Ei palvelimia.
-- Matkasi pysyy omanasi.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (VALINNAINEN)
-Pieni päivitys avaa koko kokemuksen:
-- Täydellinen terveyshyötyjen aikajana lähteineen
-- Päiväkirja ohjattuine kehotteineen
-- Saavutukset ja virstanpylväiden avaukset
-- Säästetyt rahat ja kalorit ensimmäisestä päivästä lähtien
-- Lisää kasvatettavia puutarhalajeja
-Uusille tilaajille tarjotaan ilmainen kokeilujakso.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Lopetatpa juomisen, vähennätpä sitä tai keräätpä raittiita päiviä, Sober Tracker pitää toipumisen yksinkertaisena: laske raitis aikasi, tee kirjaus ja katso puutarhasi kasvavan.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Lataa ilmaiseksi tänään.
+Download free today.
 
-Tilauksen tiedot
-Bloom+ on saatavilla automaattisesti uusiutuvana tilauksena (kuukausittain $4.99 / vuosittain $29.99 ja 7 päivän ilmainen kokeilujakso) tai kertaluonteisena elinikäisenä ostona ($59.99). Maksu veloitetaan Apple ID:ltäsi vahvistuksen yhteydessä. Tilaukset uusiutuvat automaattisesti, ellei niitä peruuteta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peruuta milloin tahansa kohdassa Asetukset > Apple ID > Tilaukset.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Tietosuojakäytäntö: https://jackwallner.github.io/sober/privacy-policy.html
-Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

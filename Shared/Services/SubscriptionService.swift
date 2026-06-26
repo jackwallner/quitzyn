@@ -19,7 +19,7 @@ enum PurchaseState {
 final class SubscriptionService: NSObject {
     static let shared = SubscriptionService()
 
-    static let apiKey = "appl_eTgmJWtWPGZuOHUGMvSEpOOemxA"
+    static let apiKey = "appl_BDBoakXMkpATRWZanjFJZzDtAOr"
 
     // The real entitlement identifier in the RevenueCat dashboard (the three
     // IAP products are attached to it). NOT "pro" — that mismatch is what left
@@ -30,7 +30,7 @@ final class SubscriptionService: NSObject {
     private static let trialEndsKey = "bloomTrialEndsAt"
     private static let trialClaimedKey = "bloomTrialClaimed"
 
-    private let logger = Logger(subsystem: "com.jackwallner.nicfree", category: "Subscriptions")
+    private let logger = Logger(subsystem: "com.jackwallner.quitzyn", category: "Subscriptions")
 
     private var entitlementActive: Bool = false
     private var localOverride: Bool = false

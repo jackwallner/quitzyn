@@ -55,7 +55,7 @@ targets:
         buildPhase: resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.nicfree
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.quitzyn
         INFOPLIST_FILE: Sober/Info.plist
         CODE_SIGN_ENTITLEMENTS: Sober/Sober.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
@@ -81,7 +81,7 @@ targets:
         buildPhase: resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.nicfree.watch
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.quitzyn.watch
         INFOPLIST_FILE: SoberWatch/Info.plist
         CODE_SIGN_ENTITLEMENTS: SoberWatch/SoberWatch.entitlements
         WATCHOS_DEPLOYMENT_TARGET: "10.0"
@@ -100,7 +100,7 @@ targets:
           - "Services/SubscriptionPackageExtensions.swift"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.nicfree.widgets
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.quitzyn.widgets
         INFOPLIST_FILE: SoberWidgets/Info.plist
         CODE_SIGN_ENTITLEMENTS: SoberWidgets/SoberWidgets.entitlements
 
@@ -113,6 +113,6 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
-        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.nicfree.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.quitzyn.tests
     dependencies:
       - target: Sober

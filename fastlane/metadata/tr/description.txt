@@ -1,43 +1,43 @@
-Sober Tracker, alkolsüz yolculuğunu basit ve motive edici tutar. Her ayık günü say, günde bir kez giriş yap ve serin büyüdükçe sanal bir bahçenin çiçek açışını izle. Her şey cihazında özel kalır. Hesaba gerek yok.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Ne kadar yol kat ettiğini görmek ve devam etmek için sakin bir yer istiyorsan, aradığın uygulama bu.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-AYIKLIĞINA BİR BAKIŞTA (ÜCRETSİZ)
-- Günleri, saatleri ve en uzun serini gösteren gün sayacı.
-- Bugünün nasıl geçtiğini kaydetmek için tek dokunuşla günlük giriş.
-- Her ayık günü bir bakışta gösteren ayıklık takvimi.
-- Günler biriktikçe gelen kilometre taşı anları.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-SENİNLE BİRLİKTE BÜYÜYEN BİR BAHÇE (ÜCRETSİZ)
-- Her ayık günle çiçek açan sanal bir bahçe.
-- Serin büyüdükçe yeni filizler belirir.
-- Ne kadar yol kat ettiğinin canlı bir hatırlatıcısı.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-ANA EKRANINDA VE APPLE WATCH'TA (ÜCRETSİZ)
-- Gün sayını gösteren Ana Ekran ve Kilit Ekranı widget'ları.
-- Giriş yapmak ve serini görmek için Apple Watch yardımcı uygulaması.
-- Uygulamayı açmadan ilerlemen görünür.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-TASARIM GEREĞİ ÖZEL (ÜCRETSİZ)
-- Tüm verilerin cihazında kalır.
-- Hesap gerekmez. Reklam yok. Takip yok. Sunucu yok.
-- Yolculuğun sana ait kalır.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (İSTEĞE BAĞLI)
-Küçük bir yükseltme tüm deneyimin kilidini açar:
-- Kaynaklarıyla birlikte eksiksiz sağlık faydaları zaman çizelgesi
-- Rehberli ipuçlarıyla günlük tutma
-- Başarımlar ve kilometre taşı kilit açma
-- İlk günden beri biriktirilen para ve kaloriler
-- Yetiştirebileceğin daha fazla bahçe türü
-Yeni abonelere ücretsiz deneme sunulur.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-İçkiyi bırakıyor, azaltıyor ya da ayık günler biriktiriyor ol, Sober Tracker iyileşmeyi basit tutar: ayık zamanını say, giriş yap ve bahçenin büyüyüşünü izle.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Bugün ücretsiz indir.
+Download free today.
 
-Abonelik Ayrıntıları
-Bloom+, otomatik yenilenen bir abonelik (Aylık $4.99 / Yıllık $29.99, 7 günlük ücretsiz denemeyle) veya tek seferlik Ömür Boyu satın alma ($59.99) olarak sunulur. Ödeme, onay sırasında Apple ID'nden tahsil edilir. Abonelikler, dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir. İstediğin zaman Ayarlar > Apple ID > Abonelikler bölümünden yönet veya iptal et.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Gizlilik Politikası: https://jackwallner.github.io/sober/privacy-policy.html
-Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

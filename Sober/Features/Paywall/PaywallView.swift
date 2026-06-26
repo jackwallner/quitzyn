@@ -6,7 +6,7 @@ import RevenueCat
 
 /// Apple-required legal links for the paywall and any other upsell surface.
 enum PaywallLinks {
-    static let privacyPolicy = URL(string: "https://jackwallner.github.io/sober/privacy-policy.html")!
+    static let privacyPolicy = URL(string: "https://jackwallner.github.io/quitzyn/privacy-policy.html")!
     static let standardEULA = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
 }
 
@@ -490,7 +490,7 @@ struct PaywallView: View {
             let yearly = Double(costPerDayCents) * 365 / 100
             let yearlyLabel = Self.currencyFormatter.string(from: NSNumber(value: yearly)) ?? "$\(Int(yearly))"
             VStack(spacing: 4) {
-                Text("Your first sober year saves")
+                Text("Your first nicotine-free year saves")
                     .font(Theme.caption(weight: .semibold))
                     .foregroundStyle(.white.opacity(0.85))
                     .textCase(.uppercase)
@@ -516,7 +516,7 @@ struct PaywallView: View {
                     .font(.system(size: 52, weight: .bold, design: .rounded))
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
-                Text("across \(heroDays) sober day\(heroDays == 1 ? "" : "s"). Reinvest a fraction in your growth.")
+                Text("across \(heroDays) nicotine-free day\(heroDays == 1 ? "" : "s"). Reinvest a fraction in your growth.")
                     .font(Theme.caption())
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.white.opacity(0.8))

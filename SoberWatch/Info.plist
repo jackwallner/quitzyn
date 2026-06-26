@@ -15,7 +15,7 @@
 	<key>CFBundleName</key>
 	<string>Sober</string>
 	<key>CFBundleDisplayName</key>
-	<string>Nicotine Free</string>
+	<string>Quit Zyn</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,6 +27,6 @@
 	<key>WKApplication</key>
 	<true/>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.jackwallner.nicfree</string>
+	<string>com.jackwallner.quitzyn</string>
 </dict>
 </plist>

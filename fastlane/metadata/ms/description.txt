@@ -1,43 +1,43 @@
-Sober Tracker memastikan perjalanan bebas alkohol anda kekal mudah dan memberi semangat. Kira setiap hari tanpa minum, daftar masuk sekali sehari, dan saksikan taman maya berkembang apabila rentetan hari anda bertambah. Semuanya kekal peribadi pada peranti anda. Tiada akaun diperlukan.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Jika anda mahukan satu tempat yang tenang untuk melihat sejauh mana anda telah melangkah dan terus meneruskannya, inilah aplikasi itu.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-Kemajuan tanpa alkohol anda sepintas lalu (PERCUMA)
-- Pembilang hari yang memaparkan jumlah hari, jam, dan rentetan terpanjang anda.
-- Daftar masuk harian satu ketik untuk merekod perasaan hari ini.
-- Kalendar bebas alkohol yang memaparkan setiap hari tanpa minum sepintas lalu.
-- Detik pencapaian penting yang tiba apabila hari demi hari bertambah.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-Taman yang membesar bersama anda (PERCUMA)
-- Taman maya yang berkembang pada setiap hari tanpa minum.
-- Pertumbuhan baharu muncul apabila rentetan hari anda terbina.
-- Peringatan hidup tentang sejauh mana anda telah melangkah.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-Pada Skrin Utama & Apple Watch anda (PERCUMA)
-- Widget Skrin Utama dan Skrin Kunci dengan kiraan hari anda.
-- Pendamping Apple Watch untuk daftar masuk dan melihat rentetan hari anda.
-- Kemajuan anda kelihatan tanpa membuka aplikasi.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-Peribadi sejak direka (PERCUMA)
-- Semua data anda kekal pada peranti anda.
-- Tiada akaun diperlukan. Tiada iklan. Tiada penjejakan. Tiada pelayan.
-- Perjalanan anda kekal milik anda.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (PILIHAN)
-Naik taraf kecil membuka pengalaman penuh:
-- Garis masa manfaat kesihatan lengkap dengan sumber
-- Penulisan jurnal dengan panduan gesaan
-- Pencapaian dan pembukaan kunci pencapaian penting
-- Wang dan kalori yang dijimatkan sejak hari pertama
-- Lebih banyak spesies tumbuhan taman untuk ditanam
-Percubaan percuma ditawarkan kepada pelanggan baharu.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Sama ada anda sedang berhenti minum, mengurangkan, atau membina hari tanpa alkohol, Sober Tracker memastikan pemulihan kekal mudah: kira masa sedar anda, daftar masuk, dan saksikan taman anda membesar.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Muat turun percuma hari ini.
+Download free today.
 
-Butiran Langganan
-Bloom+ ditawarkan sebagai langganan pembaharuan automatik (Bulanan $4.99 / Tahunan $29.99 dengan percubaan percuma 7 hari) atau pembelian Seumur Hidup sekali bayar ($59.99). Bayaran dicaj ke Apple ID anda semasa pengesahan. Langganan diperbaharui secara automatik melainkan dibatalkan sekurang-kurangnya 24 jam sebelum tamat tempoh. Urus atau batalkan pada bila-bila masa dalam Tetapan > Apple ID > Langganan.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Dasar Privasi: https://jackwallner.github.io/sober/privacy-policy.html
-Syarat Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

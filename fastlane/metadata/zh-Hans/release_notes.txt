@@ -1,1 +1,1 @@
-进行了后台优化和错误修复，让 Sober 运行更顺畅。感谢一路有你。
+First release. Track your nicotine-free days, grow your garden, and watch your health recover one milestone at a time. Thank you for being here.

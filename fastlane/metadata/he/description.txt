@@ -1,43 +1,43 @@
-‏Sober Tracker שומר על מסע ההתנזרות שלך מאלכוהול פשוט ומעודד. ספרו כל יום נקי, עשו צ'ק אין פעם ביום, וצפו בגינה וירטואלית פורחת ככל שהרצף שלכם גדל. הכל נשאר פרטי במכשיר שלכם. אין צורך בחשבון.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-אם אתם רוצים מקום רגוע אחד שבו תראו כמה רחוק הגעתם ותמשיכו קדימה, זו האפליקציה בשבילכם.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-ההחלמה שלכם במבט אחד (חינם)
-- מונה ימים שמציג ימים, שעות ואת הרצף הארוך ביותר שלכם.
-- צ'ק אין יומי בנגיעה אחת כדי לתעד איך אתם מרגישים היום.
-- לוח שנה של התנזרות עם כל יום נקי במבט אחד.
-- רגעי ציון דרך שמגיעים ככל שהימים מצטברים.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-גינה שגדלה איתכם (חינם)
-- גינה וירטואלית שפורחת עם כל יום נקי.
-- צמיחה חדשה מופיעה ככל שהרצף שלכם בונה את עצמו.
-- תזכורת חיה לכמה רחוק הגעתם.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-על מסך הבית וב-Apple Watch (חינם)
-- ווידג'טים למסך הבית ולמסך הנעילה עם מספר הימים שלכם.
-- אפליקציה נלווית ל-Apple Watch לעשות צ'ק אין ולראות את הרצף.
-- ההתקדמות שלכם גלויה בלי לפתוח את האפליקציה.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-פרטי מעצם התכנון (חינם)
-- כל הנתונים שלכם נשארים במכשיר שלכם.
-- אין צורך בחשבון. אין פרסומות. אין מעקב. אין שרתים.
-- המסע שלכם נשאר שלכם.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-‏BLOOM+ (אופציונלי)
-שדרוג קטן פותח את החוויה המלאה:
-- ציר זמן מלא של יתרונות בריאותיים עם מקורות
-- כתיבת יומן עם הנחיות מודרכות
-- הישגים ופתיחת ציוני דרך
-- כסף וקלוריות שחסכתם מהיום הראשון
-- עוד מיני צמחים לגדל בגינה
-מוצעת תקופת ניסיון חינם למנויים חדשים.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-בין אם אתם מפסיקים לשתות, מצמצמים, או בונים ימים נקיים, Sober Tracker שומר על ההחלמה פשוטה: ספרו את הזמן הנקי שלכם, עשו צ'ק אין, וצפו בגינה שלכם גדלה.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-הורידו בחינם היום.
+Download free today.
 
-פרטי המנוי
-‏Bloom+ זמין כמנוי שמתחדש אוטומטית (חודשי ‏$4.99 / שנתי ‏$29.99 עם תקופת ניסיון חינם של 7 ימים) או כרכישה חד-פעמית לכל החיים (‏$59.99). התשלום נגבה מה-Apple ID שלכם בעת האישור. המנויים מתחדשים אוטומטית אלא אם בוטלו לפחות 24 שעות לפני סוף התקופה. ניתן לנהל או לבטל בכל עת בהגדרות > Apple ID > מנויים.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-מדיניות פרטיות: https://jackwallner.github.io/sober/privacy-policy.html
-תנאי שימוש (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
