@@ -1,43 +1,43 @@
-Sober Tracker îți menține călătoria fără alcool simplă și motivantă. Numără fiecare zi fără alcool, înregistrează-te o dată pe zi și privește cum o grădină virtuală înflorește pe măsură ce seria ta crește. Totul rămâne privat pe dispozitivul tău. Nu este nevoie de cont.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Dacă vrei un singur loc liniștit în care să vezi cât de departe ai ajuns și să continui, aceasta este aplicația potrivită.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-SOBRIETATEA TA DINTR-O PRIVIRE (GRATUIT)
-- Contor de zile care arată zilele, orele și cea mai lungă serie a ta.
-- Înregistrare zilnică cu o atingere pentru a nota cum te simți azi.
-- Calendar al sobrietății cu fiecare zi fără alcool la îndemână.
-- Momente de etapă care sosesc pe măsură ce zilele se adună.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-O GRĂDINĂ CARE CREȘTE ODATĂ CU TINE (GRATUIT)
-- O grădină virtuală care înflorește cu fiecare zi fără alcool.
-- Lăstari noi apar pe măsură ce seria ta se construiește.
-- O amintire vie a cât de departe ai ajuns.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-PE ECRANUL PRINCIPAL ȘI APPLE WATCH (GRATUIT)
-- Widget-uri pentru ecranul principal și ecranul de blocare cu numărul zilelor tale.
-- Aplicație însoțitoare pentru Apple Watch pentru înregistrare și vizualizarea seriei.
-- Progresul tău vizibil fără a deschide aplicația.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-PRIVAT PRIN DESIGN (GRATUIT)
-- Toate datele tale rămân pe dispozitivul tău.
-- Nu este nevoie de cont. Fără reclame. Fără urmărire. Fără servere.
-- Călătoria ta rămâne a ta.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (OPȚIONAL)
-Un mic upgrade deblochează experiența completă:
-- Cronologie completă a beneficiilor pentru sănătate, cu surse
-- Jurnal cu sugestii ghidate
-- Realizări și deblocări de etape
-- Bani și calorii economisite din prima zi
-- Mai multe specii de plante pentru grădina ta
-Noilor abonați li se oferă o perioadă de probă gratuită.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Fie că te lași de băut, reduci consumul sau construiești zile fără alcool, Sober Tracker face recuperarea simplă: numără-ți timpul de sobrietate, înregistrează-te și privește cum crește grădina ta.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Descarcă gratuit chiar azi.
+Download free today.
 
-Detalii despre abonament
-Bloom+ este disponibil ca abonament cu reînnoire automată (lunar $4.99 / anual $29.99 cu o perioadă de probă gratuită de 7 zile) sau ca achiziție unică pe viață ($59.99). Plata este percepută din Apple ID-ul tău la confirmare. Abonamentele se reînnoiesc automat, dacă nu sunt anulate cu cel puțin 24 de ore înainte de sfârșitul perioadei. Gestionează sau anulează oricând în Setări > Apple ID > Abonamente.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Politica de confidențialitate: https://jackwallner.github.io/sober/privacy-policy.html
-Termeni de utilizare (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

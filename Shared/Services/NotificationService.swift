@@ -23,7 +23,7 @@ enum NotificationService {
         content.title = committed ? "Showing up today" : "Daily check-in"
         content.body = committed
             ? "Log today and water your garden — you've got this."
-            : "If today's a sober one, log it and water your garden."
+            : "If today's nicotine-free, log it and water your garden."
         content.sound = .default
 
         var components = DateComponents()

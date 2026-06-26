@@ -1,4 +1,4 @@
-Sober Tracker keeps your nicotine-free journey simple and motivating. Count every day without nicotine, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn and nicotine pouches, vaping, dip, snus, or cigarettes, everything stays private on your device. No account needed.
+Quit Zyn keeps your nicotine-free journey simple and motivating. Count every day without nicotine, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn and nicotine pouches, vaping, dip, snus, or cigarettes, everything stays private on your device. No account needed.
 
 If you want one calm place to see how far you've come and keep going, this is that app.
 
@@ -32,12 +32,12 @@ A small upgrade unlocks the full experience:
 - More garden species to grow
 A free trial is offered to new subscribers.
 
-Whether you're quitting Zyn, cutting back on pouches, or finally done with vaping, Sober Tracker keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
+Whether you're quitting Zyn, cutting back on pouches, or finally done with vaping, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
 Download free today.
 
 Subscription Details
 Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Privacy Policy: https://jackwallner.github.io/sober/privacy-policy.html
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
 Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

@@ -57,7 +57,7 @@ struct SettingsView: View {
                             displayedComponents: [.date]
                         )
                     } header: {
-                        Text("Sobriety Start")
+                        Text("Nicotine-Free Since")
                     } footer: {
                         Text("Adjust the date your journey began.")
                     }
@@ -86,7 +86,7 @@ struct SettingsView: View {
                         Text("Daily Reminder")
                     } footer: {
                         if s.dailyReminderEnabled && notificationsDenied {
-                            Text("Notifications are turned off for Nicotine Free, so the reminder can't be delivered. Tap above to enable them in the Settings app.")
+                            Text("Notifications are turned off for Quit Zyn, so the reminder can't be delivered. Tap above to enable them in the Settings app.")
                         }
                     }
                     Section {

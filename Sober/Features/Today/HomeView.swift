@@ -85,7 +85,7 @@ struct HomeView: View {
                     .accessibilityLabel("More")
                 }
             }
-            .alert("Reset sobriety counter?", isPresented: $showResetAlert) {
+            .alert("Reset your counter?", isPresented: $showResetAlert) {
                 Button("Cancel", role: .cancel) {}
                 Button("Reset", role: .destructive) {
                     SobrietyService(context: context).reset()
@@ -191,8 +191,8 @@ struct HomeView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 .foregroundStyle(Theme.brandPrimary)
-                .accessibilityLabel("\(days) \(days == 1 ? "day" : "days") sober")
-            Text(days == 1 ? "Day Sober" : "Days Sober")
+                .accessibilityLabel("\(days) \(days == 1 ? "day" : "days") nicotine-free")
+            Text(days == 1 ? "Day Nicotine-Free" : "Days Nicotine-Free")
                 .font(.system(size: 13, weight: .semibold, design: .serif))
                 .tracking(2.0)
                 .textCase(.uppercase)
@@ -255,7 +255,7 @@ struct HomeView: View {
                         WidgetSnapshotPump.push(context: context)
                         recordPositiveMomentForReview()
                     } label: {
-                        Label("Still sober", systemImage: "checkmark.circle.fill")
+                        Label("Still nicotine-free", systemImage: "checkmark.circle.fill")
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 10)
@@ -324,7 +324,7 @@ struct HomeView: View {
                         Text("Check in for today")
                             .fontWeight(.semibold)
                     }
-                    Text("Log today sober and water your bonsai")
+                    Text("Log today nicotine-free and water your bonsai")
                         .font(Theme.caption())
                         .foregroundStyle(.white.opacity(0.85))
                 }
@@ -537,7 +537,7 @@ struct ProgressSheet: View {
                     } header: {
                         Text("Saved")
                     } footer: {
-                        Text("Streak counts your current run. Lifetime counts every sober day you've ever logged, so past progress isn't lost on a reset.")
+                        Text("Streak counts your current run. Lifetime counts every nicotine-free day you've ever logged, so past progress isn't lost on a reset.")
                     }
                 }
 

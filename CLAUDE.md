@@ -24,12 +24,12 @@ xcodebuild test -project Sober.xcodeproj -scheme Sober -destination "id=$UDID"
 TestFlight: `./scripts/testflight.sh` (auto-bumps build, generates project, archives, uploads).
 
 ## Targets (project.yml)
-- `Sober` (iOS app) — bundle `com.jackwallner.nicfree`
-- `SoberWatch` (watchOS app) — `com.jackwallner.nicfree.watch`
-- `SoberWidgets` (iOS widget extension) — `com.jackwallner.nicfree.widgets`
+- `Sober` (iOS app) — bundle `com.jackwallner.quitzyn`
+- `SoberWatch` (watchOS app) — `com.jackwallner.quitzyn.watch`
+- `SoberWidgets` (iOS widget extension) — `com.jackwallner.quitzyn.widgets`
 - `SoberTests` (unit tests)
 
-All share App Group `group.com.jackwallner.nicfree` for SwiftData container + widget snapshots.
+All share App Group `group.com.jackwallner.quitzyn` for SwiftData container + widget snapshots.
 
 ## Architecture
 - `Shared/Models/` — SwiftData `@Model` types: SobrietyJourney, DailyCheckIn, JournalEntry, GardenState, UserSettings, UnlockedAchievement, UnlockedHealthBenefit.

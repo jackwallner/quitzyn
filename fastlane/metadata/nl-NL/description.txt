@@ -1,43 +1,43 @@
-Sober Tracker maakt je alcoholvrije weg eenvoudig en motiverend. Tel elke droge dag, check één keer per dag in en zie een virtuele tuin bloeien naarmate je reeks groeit. Alles blijft privé op je apparaat. Geen account nodig.
+Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
 
-Als je een rustige plek wilt om te zien hoe ver je bent gekomen en door te gaan, dan is dit die app.
+If you want one calm place to see how far you've come and keep going, this is that app.
 
-JE NUCHTERHEID IN ÉÉN OOGOPSLAG (GRATIS)
-- Dagenteller met dagen, uren en je langste reeks.
-- Dagelijkse check-in met één tik om vast te leggen hoe vandaag voelt.
-- Nuchterheidskalender met elke droge dag in één oogopslag.
-- Mijlpalen die komen naarmate de dagen optellen.
+YOUR PROGRESS AT A GLANCE (FREE)
+- Day counter showing days, hours, and your longest streak.
+- One-tap daily check-in to log how today feels.
+- Calendar with every nicotine-free day at a glance.
+- Milestone moments that arrive as the days add up.
 
-EEN TUIN DIE MET JE MEEGROEIT (GRATIS)
-- Een virtuele tuin die bloeit met elke nuchtere dag.
-- Nieuwe groei verschijnt naarmate je reeks groeit.
-- Een levende herinnering aan hoe ver je bent gekomen.
+A GARDEN THAT GROWS WITH YOU (FREE)
+- A virtual garden that blooms with every nicotine-free day.
+- New growth appears as your streak builds.
+- A living reminder of how far you've come.
 
-OP JE BEGINSCHERM EN APPLE WATCH (GRATIS)
-- Widgets voor beginscherm en toegangsscherm met je dagenteller.
-- Apple Watch-app om in te checken en je reeks te zien.
-- Je voortgang zichtbaar zonder de app te openen.
+ON YOUR HOME SCREEN & APPLE WATCH (FREE)
+- Home Screen and Lock Screen widgets with your day count.
+- Apple Watch companion to check in and see your streak.
+- Your progress visible without opening the app.
 
-PRIVÉ VAN NATURE (GRATIS)
-- Al je gegevens blijven op je apparaat.
-- Geen account. Geen advertenties. Geen tracking. Geen servers.
-- Jouw weg blijft van jou.
+PRIVATE BY DESIGN (FREE)
+- All your data stays on your device.
+- No account required. No ads. No tracking. No servers.
+- Your journey stays yours.
 
-BLOOM+ (OPTIONEEL)
-Een kleine upgrade ontgrendelt de volledige ervaring:
-- Volledige tijdlijn met gezondheidsvoordelen en bronnen
-- Dagboek met begeleide prompts
-- Prestaties en mijlpalen
-- Bespaard geld en calorieën sinds dag één
-- Meer tuinsoorten om te laten groeien
-Nieuwe abonnees krijgen een gratis proefperiode.
+BLOOM+ (OPTIONAL)
+A small upgrade unlocks the full experience:
+- Complete nicotine recovery timeline with sources
+- Journaling with guided prompts
+- Achievements and milestone unlocks
+- Money, pouches, and nicotine avoided since day one
+- More garden species to grow
+A free trial is offered to new subscribers.
 
-Of je nu stopt met drinken, mindert of droge dagen opbouwt, Sober Tracker houdt herstel eenvoudig: tel je nuchtere tijd, check in en zie je tuin groeien.
+Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
-Download gratis.
+Download free today.
 
-Abonnementsgegevens
-Bloom+ is beschikbaar als automatisch verlengend abonnement (maandelijks $4,99 / jaarlijks $29,99 met 7 dagen gratis proef) of als eenmalige levenslange aankoop ($59,99). De betaling wordt bij bevestiging van je Apple ID afgeschreven. Abonnementen verlengen automatisch tenzij ze minstens 24 uur voor het einde van de periode worden opgezegd. Beheer of zeg op wanneer je wilt via Instellingen > Apple ID > Abonnementen.
+Subscription Details
+Bloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
-Privacybeleid: https://jackwallner.github.io/sober/privacy-policy.html
-Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
