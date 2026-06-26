@@ -8,13 +8,13 @@
       "internalID" : "S-LIFETIME",
       "localizations" : [
         {
-          "description" : "All Sober Pro features forever.",
-          "displayName" : "Sober Pro Lifetime",
+          "description" : "All Quit Zyn Pro features forever.",
+          "displayName" : "Quit Zyn Pro Lifetime",
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.jackwallner.sober.pro.lifetime",
-      "referenceName" : "Sober Pro Lifetime",
+      "productID" : "com.jackwallner.quitzyn.pro.lifetime",
+      "referenceName" : "Quit Zyn Pro Lifetime",
       "type" : "NonConsumable"
     }
   ],
@@ -30,7 +30,7 @@
     {
       "id" : "SG-PRO",
       "localizations" : [],
-      "name" : "Sober Pro",
+      "name" : "Quit Zyn Pro",
       "subscriptions" : [
         {
           "adHocOffers" : [],
@@ -46,14 +46,14 @@
           },
           "localizations" : [
             {
-              "description" : "All Sober Pro features, billed monthly.",
-              "displayName" : "Sober Pro Monthly",
+              "description" : "All Quit Zyn Pro features, billed monthly.",
+              "displayName" : "Quit Zyn Pro Monthly",
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.jackwallner.sober.pro.monthly",
+          "productID" : "com.jackwallner.quitzyn.pro.monthly",
           "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "Sober Pro Monthly",
+          "referenceName" : "Quit Zyn Pro Monthly",
           "subscriptionGroupID" : "SG-PRO",
           "type" : "RecurringSubscription"
         },
@@ -71,14 +71,14 @@
           },
           "localizations" : [
             {
-              "description" : "All Sober Pro features, billed yearly.",
-              "displayName" : "Sober Pro Yearly",
+              "description" : "All Quit Zyn Pro features, billed yearly.",
+              "displayName" : "Quit Zyn Pro Yearly",
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.jackwallner.sober.pro.yearly",
+          "productID" : "com.jackwallner.quitzyn.pro.yearly",
           "recurringSubscriptionPeriod" : "P1Y",
-          "referenceName" : "Sober Pro Yearly",
+          "referenceName" : "Quit Zyn Pro Yearly",
           "subscriptionGroupID" : "SG-PRO",
           "type" : "RecurringSubscription"
         }
