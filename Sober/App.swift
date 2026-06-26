@@ -74,7 +74,13 @@ struct RootView: View {
         settings.madeCommitment = true
         settings.hasCompletedOnboarding = true
 
-        let start = Calendar.current.date(byAdding: .day, value: -24, to: .now) ?? .now
+        // Optional "-seedDays N" controls the journey length (default ~3.5 weeks);
+        // screenshots use a longer run for a mature tree and bigger numbers.
+        var seedDays = 24
+        if let i = args.firstIndex(of: "-seedDays"), i + 1 < args.count, let n = Int(args[i + 1]) {
+            seedDays = max(1, n)
+        }
+        let start = Calendar.current.date(byAdding: .day, value: -seedDays, to: .now) ?? .now
         _ = SobrietyService(context: context).startJourney(at: start)
         _ = GardenService(context: context).current()
         CheckInService(context: context).fillJourney(start: start, through: .now)
