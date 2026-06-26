@@ -5,10 +5,13 @@ import RevenueCat
 
 #if canImport(RevenueCat)
 
+// Raw values drive paywall display order (lowest first). Yearly leads because
+// it carries the free trial and the best per-month value — that's the plan we
+// pitch first and pre-select. Lifetime sits last as the "or pay once" option.
 enum SoberPackageKind: Int {
-    case lifetime = 0
-    case yearly = 1
-    case monthly = 2
+    case yearly = 0
+    case monthly = 1
+    case lifetime = 2
     case other = 3
 }
 
