@@ -248,6 +248,20 @@ final class SubscriptionService: NSObject {
         #endif
     }
 
+    #if canImport(RevenueCat)
+    /// Yearly plan with a free-trial intro offer — the package the one-tap trial
+    /// sheet purchases. Prefer annual for LTV; fall back to any trial product.
+    var directTrialPackage: Package? {
+        let trialPackages = packages.filter { isEligibleForIntroOffer($0) }
+        return trialPackages.first { $0.soberPackageKind == .yearly } ?? trialPackages.first
+    }
+
+    /// Human-readable trial label for paywall hero copy.
+    var trialOfferHeadlineLabel: String? {
+        directTrialPackage?.soberIntroOfferLabel
+    }
+    #endif
+
     /// Grant a one-time complimentary trial (surfaced at emotional milestones).
     /// No-op if one has already been claimed.
     func startComplimentaryTrial(days: Int) {
