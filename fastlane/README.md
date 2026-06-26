@@ -35,6 +35,14 @@ Run `fastlane spaceauth -u jackwallner@gmail.com` first and export FASTLANE_SESS
 
 Upload screenshots and metadata to App Store Connect
 
+### ios upload_screenshots
+
+```sh
+[bundle exec] fastlane ios upload_screenshots
+```
+
+Upload ONLY the App Store screenshots (no metadata, no binary)
+
 ### ios beta
 
 ```sh
