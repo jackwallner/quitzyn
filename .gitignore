@@ -1,0 +1,13 @@
+build/
+DerivedData/
+*.xcarchive
+*.xcuserstate
+xcuserdata/
+Sober.xcodeproj
+.DS_Store
+
+# Tooling scratch & metadata backups (not part of the app or its submission set)
+fastlane/metadata.bak.*/
+fastlane/report.xml
+*.log
+.antigravitycli/
