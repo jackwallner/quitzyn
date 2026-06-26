@@ -5,9 +5,19 @@ struct OnboardingView: View {
     @Environment(\.modelContext) private var context
     @State private var step: Int = 0
     @State private var startDate: Date = .now
-    @State private var costPerDay: Double = 8
     @State private var pouchesPerDay: Double = 8
+    @State private var costPerCan: Double = 6
+    @State private var pouchesPerCan: Int = 15
     @State private var reminderHour: Int = 9
+
+    /// Cost is *derived* from real-world purchase units (a can/tin has a fixed
+    /// pouch count at a fixed price) so the dollars and pouches the user sees can
+    /// never disagree — unlike two free sliders. Per-pouch price = $/can ÷
+    /// pouches/can; daily spend = pouches/day × per-pouch price.
+    private var derivedCostPerDay: Double {
+        guard pouchesPerCan > 0 else { return 0 }
+        return pouchesPerDay * costPerCan / Double(pouchesPerCan)
+    }
 
     var body: some View {
         ZStack {
@@ -61,49 +71,72 @@ struct OnboardingView: View {
     }
 
     private var spendStep: some View {
-        VStack(spacing: Theme.Space.l) {
-            Spacer(minLength: Theme.Space.s)
-            Text("How much did you typically spend per day?")
+        VStack(spacing: Theme.Space.m) {
+            Text("How much were you using?")
                 .font(Theme.display())
                 .multilineTextAlignment(.center)
-            VStack(spacing: Theme.Space.s) {
-                Text("$\(Int(costPerDay)) / day")
-                    .font(.system(size: 44, weight: .bold, design: .rounded))
-                Slider(value: $costPerDay, in: 0...60, step: 1)
-                    .tint(.white)
+
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: Theme.Space.l) {
+                    VStack(spacing: Theme.Space.xs) {
+                        Text("\(Int(pouchesPerDay)) pouches / day")
+                            .font(.system(size: 38, weight: .bold, design: .rounded))
+                        Slider(value: $pouchesPerDay, in: 0...40, step: 1)
+                            .tint(.white)
+                    }
+
+                    VStack(spacing: Theme.Space.xs) {
+                        Text("Cost per can")
+                            .font(Theme.body())
+                            .foregroundStyle(.white.opacity(0.85))
+                        Text(formatCurrencyDecimal(costPerCan))
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+                        Slider(value: $costPerCan, in: 1...15, step: 0.5)
+                            .tint(.white)
+                    }
+
+                    VStack(spacing: Theme.Space.xs) {
+                        Text("Pouches per can")
+                            .font(Theme.body())
+                            .foregroundStyle(.white.opacity(0.85))
+                        Picker("Pouches per can", selection: $pouchesPerCan) {
+                            ForEach([15, 20, 24], id: \.self) { count in
+                                Text("\(count)").tag(count)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .colorScheme(.dark)
+                    }
+
+                    savingsProjection
+                }
+                .padding(.vertical, Theme.Space.s)
             }
-            VStack(spacing: Theme.Space.s) {
-                Text("Pouches per day")
-                    .font(Theme.body())
-                    .foregroundStyle(.white.opacity(0.85))
-                Text("\(Int(pouchesPerDay)) / day")
-                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                Slider(value: $pouchesPerDay, in: 0...40, step: 1)
-                    .tint(.white)
-            }
-            savingsProjection
-            Spacer(minLength: Theme.Space.s)
+
             primaryButton("Continue") { step = 3 }
         }
     }
 
     @ViewBuilder
     private var savingsProjection: some View {
-        let dollars = Int(costPerDay)
         let pouches = Int(pouchesPerDay)
-        if dollars > 0 || pouches > 0 {
-            let yearlyDollars = dollars * 365
+        let dailyCost = derivedCostPerDay
+        if dailyCost > 0 || pouches > 0 {
+            let yearlyDollars = Int((dailyCost * 365).rounded())
             let yearlyPouches = pouches * 365
             VStack(spacing: 4) {
+                Text("That's about \(formatCurrencyDecimal(dailyCost)) / day")
+                    .font(Theme.subhead(weight: .semibold))
+                    .foregroundStyle(.white)
                 Text("In a year, that's")
-                    .font(Theme.subhead())
+                    .font(Theme.caption())
                     .foregroundStyle(.white.opacity(0.75))
-                if dollars > 0 {
+                if yearlyDollars > 0 {
                     Text(formatCurrency(yearlyDollars))
-                        .font(.system(size: 44, weight: .bold, design: .rounded))
+                        .font(.system(size: 40, weight: .bold, design: .rounded))
                 }
                 if pouches > 0 {
-                    Text(dollars > 0
+                    Text(yearlyDollars > 0
                          ? "plus \(yearlyPouches.formatted()) pouches you won't put in. That's the nicotine your body never has to process."
                          : "\(yearlyPouches.formatted()) pouches you won't put in — nicotine your body never has to process.")
                         .font(Theme.caption())
@@ -122,6 +155,17 @@ struct OnboardingView: View {
         let f = NumberFormatter()
         f.numberStyle = .currency
         f.maximumFractionDigits = 0
+        return f.string(from: NSNumber(value: amount)) ?? "$\(amount)"
+    }
+
+    /// Currency with cents only when needed (e.g. "$6" vs "$6.50" vs "$0.40"),
+    /// so the per-can price and derived daily spend read cleanly.
+    private func formatCurrencyDecimal(_ amount: Double) -> String {
+        let isWhole = amount == amount.rounded()
+        let f = NumberFormatter()
+        f.numberStyle = .currency
+        f.minimumFractionDigits = isWhole ? 0 : 2
+        f.maximumFractionDigits = isWhole ? 0 : 2
         return f.string(from: NSNumber(value: amount)) ?? "$\(amount)"
     }
 
@@ -202,7 +246,7 @@ struct OnboardingView: View {
 
     private func complete(committed: Bool = true) {
         let settings = SettingsService(context: context).current()
-        settings.costPerDayCents = Int(costPerDay * 100)
+        settings.costPerDayCents = Int((derivedCostPerDay * 100).rounded())
         settings.pouchesPerDay = Int(pouchesPerDay)
         settings.dailyReminderHour = reminderHour
         settings.hasCompletedOnboarding = true
