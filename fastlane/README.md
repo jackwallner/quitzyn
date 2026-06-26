@@ -21,7 +21,11 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios create_app
 ```
 
-Create the app record on App Store Connect (App Store Connect API key auth)
+Create the app record on App Store Connect.
+
+NOTE: Apple's API forbids creating apps, so this needs an Apple-ID web session.
+
+Run `fastlane spaceauth -u jackwallner@gmail.com` first and export FASTLANE_SESSION.
 
 ### ios upload_metadata
 
