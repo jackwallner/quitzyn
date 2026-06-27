@@ -132,7 +132,7 @@ struct SettingsView: View {
                     Text("Free, confidential help is available any time. Reaching out is a strength, not a setback.")
                 }
                 Section("Help") {
-                    resourceLink(url: "mailto:jackwallner+st@gmail.com",
+                    resourceLink(url: PaywallLinks.supportMailto.absoluteString,
                                  icon: "envelope.fill",
                                  title: "Contact Support",
                                  subtitle: "Questions or trouble? Reach out.")

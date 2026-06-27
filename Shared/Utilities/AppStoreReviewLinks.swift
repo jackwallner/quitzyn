@@ -1,9 +1,9 @@
 import Foundation
 import StoreKit
 
-/// App Store review deep links for Sober.
+/// App Store review deep links for Quit Zyn.
 enum AppStoreReviewLinks {
-    static let appStoreID = "6768869215"
+    static let appStoreID = "6784788496"
 
     /// Opens the App Store write-review page in the user's storefront.
     static var writeReviewURL: URL {

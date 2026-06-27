@@ -235,7 +235,7 @@ struct ReviewPromptSheet: View {
     static func feedbackMailURL(body: String) -> URL? {
         var components = URLComponents()
         components.scheme = "mailto"
-        components.path = "jackwallner@gmail.com"
+        components.path = PaywallLinks.supportEmail
         components.queryItems = [
             URLQueryItem(name: "subject", value: "Nicotine Free feedback"),
             URLQueryItem(name: "body", value: body),
