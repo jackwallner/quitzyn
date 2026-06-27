@@ -1,902 +1,1002 @@
 {
   "ar-SA": {
     "name": {
-      "old": "سوبر – بلا كحول",
-      "new": "سوبر – بلا كحول",
-      "len": 15
+      "old": "كيت زين – بلا نيكوتين",
+      "new": "كيت زين – بلا نيكوتين",
+      "len": 21
     },
     "subtitle": {
-      "old": "أيام جافة وحديقة",
-      "new": "أيام جافة وحديقة",
+      "old": "أيام بلا نيكوتين",
+      "new": "أيام بلا نيكوتين",
       "len": 16
     },
     "keywords": {
-      "old": "شرب,أقل,إقلاع,إدمان,امتناع,تعافي,انتكاسة,شهوة,مزاج,سلسلة",
-      "new": "شرب,أقل,إقلاع,إدمان,امتناع,تعافي,انتكاسة,شهوة,مزاج,سلسلة",
-      "len": 56
+      "old": "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
+      "new": "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
+      "len": 62
     },
-    "description_chars": 337
+    "description_chars": 339,
+    "promotional_chars": 121,
+    "release_notes_chars": 106
   },
   "bn-BD": {
     "name": {
-      "old": "সোবার – মদ ছাড়া",
-      "new": "সোবার – মদ ছাড়া",
-      "len": 16
+      "old": "কুইট জিন – নিকোটিন মুক্ত",
+      "new": "কুইট জিন – নিকোটিন মুক্ত",
+      "len": 24
     },
     "subtitle": {
-      "old": "শুষ্ক দিন ও বাগান",
-      "new": "শুষ্ক দিন ও বাগান",
-      "len": 17
+      "old": "নিকোটিন মুক্ত দিন গণনা",
+      "new": "নিকোটিন মুক্ত দিন গণনা",
+      "len": 22
     },
     "keywords": {
-      "old": "পান,কম,আসক্তি,সংযম,পুনরুদ্ধার,পুনরাবৃত্তি,লালসা,মেজাজ,ধারা",
-      "new": "পান,কম,আসক্তি,সংযম,পুনরুদ্ধার,পুনরাবৃত্তি,লালসা,মেজাজ,ধারা",
-      "len": 58
+      "old": "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
+      "new": "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
+      "len": 62
     },
-    "description_chars": 337
+    "description_chars": 350,
+    "promotional_chars": 164,
+    "release_notes_chars": 121
   },
   "ca": {
     "name": {
-      "old": "Sober – Sense alcohol",
-      "new": "Sober – Sense alcohol",
-      "len": 21
+      "old": "Quit Zyn – Sense nicotina",
+      "new": "Quit Zyn – Sense nicotina",
+      "len": 25
     },
     "subtitle": {
-      "old": "Dies secs i jardí",
-      "new": "Dies secs i jardí",
-      "len": 17
+      "old": "Dies sense nicotina",
+      "new": "Dies sense nicotina",
+      "len": 19
     },
     "keywords": {
-      "old": "beure,menys,deixar,addicció,abstinència,recuperació,recaiguda,desig,humor,ratxa",
-      "new": "beure,menys,deixar,addicció,abstinència,recuperació,recaiguda,desig,humor,ratxa",
-      "len": 79
+      "old": "bosses,vape,deixar,addicció,abstinència,recuperació,hàbit,diari,app,velo",
+      "new": "bosses,vape,deixar,addicció,abstinència,recuperació,hàbit,diari,app,velo",
+      "len": 72
     },
-    "description_chars": 380
+    "description_chars": 395,
+    "promotional_chars": 148,
+    "release_notes_chars": 126
   },
   "cs": {
     "name": {
-      "old": "Sober – Bez alkoholu",
-      "new": "Sober – Bez alkoholu",
-      "len": 20
+      "old": "Quit Zyn – Bez nikotinu",
+      "new": "Quit Zyn – Bez nikotinu",
+      "len": 23
     },
     "subtitle": {
-      "old": "Suché dny a zahrada",
-      "new": "Suché dny: počítadlo",
-      "len": 20
+      "old": "Dny bez nikotinu",
+      "new": "Dny bez nikotinu",
+      "len": 16
     },
     "keywords": {
-      "old": "pít,méně,přestat,závislost,abstinence,zotavení,relaps,chuť,nálada,pruh",
-      "new": "pít,méně,přestat,závislost,abstinence,zotavení,relaps,chuť,nálada,pruh",
+      "old": "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
+      "new": "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
       "len": 70
     },
-    "description_chars": 375
+    "description_chars": 370,
+    "promotional_chars": 150,
+    "release_notes_chars": 128
   },
   "da": {
     "name": {
-      "old": "Sober – Alkoholfri",
-      "new": "Sober – Alkoholfri",
-      "len": 18
+      "old": "Quit Zyn – Nikotinfri",
+      "new": "Quit Zyn – Nikotinfri",
+      "len": 21
     },
     "subtitle": {
-      "old": "Tørre dage og have",
-      "new": "Tørre dage og have",
-      "len": 18
+      "old": "Dage uden nikotin",
+      "new": "Dage uden nikotin",
+      "len": 17
     },
     "keywords": {
-      "old": "drikke,mindre,stoppe,afhængighed,afholdenhed,bedring,tilbagefald,trang,humør,stribe",
-      "new": "drikke,mindre,stoppe,afhængighed,afholdenhed,bedring,tilbagefald,trang,humør,stribe",
-      "len": 83
+      "old": "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
+      "new": "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
+      "len": 71
     },
-    "description_chars": 356
+    "description_chars": 351,
+    "promotional_chars": 156,
+    "release_notes_chars": 121
   },
   "de-DE": {
     "name": {
-      "old": "Sober: Alkoholfrei Tracker",
-      "new": "Sober: Alkoholfrei Tracker",
-      "len": 26
-    },
-    "subtitle": {
-      "old": "Trockene Tage & Garten",
-      "new": "Trockene Tage & Garten",
+      "old": "Quit Zyn – Nikotinfrei",
+      "new": "Quit Zyn – Nikotinfrei",
       "len": 22
     },
-    "keywords": {
-      "old": "trinken,weniger,aufhören,entzug,nüchtern,sucht,erholung,serie,abstinenz,rückfall,stimmung,streak",
-      "new": "trinken,weniger,aufhören,entzug,nüchtern,sucht,erholung,serie,abstinenz,rückfall,stimmung,streak",
-      "len": 96
+    "subtitle": {
+      "old": "Tagezähler & Garten",
+      "new": "Tagezähler & Garten",
+      "len": 19
     },
-    "description_chars": 760
+    "keywords": {
+      "old": "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,aufhören,kauen,velo,app",
+      "new": "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,aufhören,kauen,velo,app",
+      "len": 76
+    },
+    "description_chars": 752,
+    "promotional_chars": 165,
+    "release_notes_chars": 160
   },
   "el": {
     "name": {
-      "old": "Sober – Χωρίς αλκοόλ",
-      "new": "Sober – Χωρίς αλκοόλ",
-      "len": 20
+      "old": "Quit Zyn – Χωρίς νικοτίνη",
+      "new": "Quit Zyn – Χωρίς νικοτίνη",
+      "len": 25
     },
     "subtitle": {
-      "old": "Ξηρές μέρες και κήπος",
-      "new": "Ξηρές μέρες: μετρητής",
+      "old": "Ημέρες χωρίς νικοτίνη",
+      "new": "Ημέρες χωρίς νικοτίνη",
       "len": 21
     },
     "keywords": {
-      "old": "πίνω,λιγότερο,σταματώ,εξάρτηση,αποχή,ανάρρωση,υποτροπή,λαχτάρα,διάθεση,σειρά",
-      "new": "πίνω,λιγότερο,σταματώ,εξάρτηση,αποχή,ανάρρωση,υποτροπή,λαχτάρα,διάθεση,σειρά",
-      "len": 76
+      "old": "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
+      "new": "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
+      "len": 71
     },
-    "description_chars": 395
+    "description_chars": 392,
+    "promotional_chars": 158,
+    "release_notes_chars": 141
   },
   "en-AU": {
     "name": {
-      "old": "Sober Tracker - Alcohol Free",
-      "new": "Sober Tracker - Alcohol Free",
-      "len": 28
+      "old": "Quit Zyn: Pouch & Snus Tracker",
+      "new": "Quit Zyn: Pouch & Snus Tracker",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dry Days Counter & Garden",
-      "new": "Dry Days: Sobriety Counter",
+      "old": "Nicotine Free: Day Counter",
+      "new": "Nicotine Free: Day Counter",
       "len": 26
     },
     "keywords": {
-      "old": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "new": "drink,less,quit,stop,recovery,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "len": 91
+      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "len": 65
     },
-    "description_chars": 825
+    "description_chars": 2227,
+    "promotional_chars": 144,
+    "release_notes_chars": 144
   },
   "en-CA": {
     "name": {
-      "old": "Sober Tracker - Alcohol Free",
-      "new": "Sober Tracker - Alcohol Free",
-      "len": 28
+      "old": "Quit Zyn: Pouch & Snus Tracker",
+      "new": "Quit Zyn: Pouch & Snus Tracker",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dry Days Counter & Garden",
-      "new": "Dry Days: Sobriety Counter",
+      "old": "Nicotine Free: Day Counter",
+      "new": "Nicotine Free: Day Counter",
       "len": 26
     },
     "keywords": {
-      "old": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "new": "drink,less,quit,stop,recovery,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "len": 91
+      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "len": 65
     },
-    "description_chars": 825
+    "description_chars": 2227,
+    "promotional_chars": 144,
+    "release_notes_chars": 144
   },
   "en-GB": {
     "name": {
-      "old": "Sober Tracker - Alcohol Free",
-      "new": "Sober Tracker - Alcohol Free",
-      "len": 28
+      "old": "Quit Zyn: Pouch & Snus Tracker",
+      "new": "Quit Zyn: Pouch & Snus Tracker",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dry Days Counter & Garden",
-      "new": "Dry Days: Sobriety Counter",
+      "old": "Nicotine Free: Day Counter",
+      "new": "Nicotine Free: Day Counter",
       "len": 26
     },
     "keywords": {
-      "old": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "new": "drink,less,quit,stop,recovery,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "len": 91
+      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "len": 65
     },
-    "description_chars": 825
+    "description_chars": 2227,
+    "promotional_chars": 144,
+    "release_notes_chars": 144
   },
   "en-US": {
     "name": {
-      "old": "Sober Tracker - Alcohol Free",
-      "new": "Sober Tracker - Alcohol Free",
-      "len": 28
+      "old": "Quit Zyn: Pouch & Snus Tracker",
+      "new": "Quit Zyn: Pouch & Snus Tracker",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dry Days Counter & Garden",
-      "new": "Dry Days: Sobriety Counter",
+      "old": "Nicotine Free: Day Counter",
+      "new": "Nicotine Free: Day Counter",
       "len": 26
     },
     "keywords": {
-      "old": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "new": "drink,less,quit,stop,recovery,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-      "len": 91
+      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
+      "len": 65
     },
-    "description_chars": 825
+    "description_chars": 2227,
+    "promotional_chars": 144,
+    "release_notes_chars": 144
   },
   "es-ES": {
     "name": {
-      "old": "Sober – Sin alcohol",
-      "new": "Sober – Sin alcohol",
-      "len": 19
+      "old": "Quit Zyn – Sin nicotina",
+      "new": "Quit Zyn – Sin nicotina",
+      "len": 23
     },
     "subtitle": {
-      "old": "Días secos y jardín",
-      "new": "Días secos y jardín",
-      "len": 19
+      "old": "Días sin nicotina",
+      "new": "Días sin nicotina",
+      "len": 17
     },
     "keywords": {
-      "old": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-      "new": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-      "len": 87
+      "old": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
+      "new": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
+      "len": 78
     },
-    "description_chars": 713
+    "description_chars": 718,
+    "promotional_chars": 152,
+    "release_notes_chars": 136
   },
   "es-MX": {
     "name": {
-      "old": "Sober – Sin alcohol",
-      "new": "Sober – Sin alcohol",
-      "len": 19
+      "old": "Quit Zyn – Sin nicotina",
+      "new": "Quit Zyn – Sin nicotina",
+      "len": 23
     },
     "subtitle": {
-      "old": "Días secos y jardín",
-      "new": "Días secos y jardín",
-      "len": 19
+      "old": "Días sin nicotina",
+      "new": "Días sin nicotina",
+      "len": 17
     },
     "keywords": {
-      "old": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-      "new": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-      "len": 87
+      "old": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
+      "new": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
+      "len": 78
     },
-    "description_chars": 384
+    "description_chars": 389,
+    "promotional_chars": 149,
+    "release_notes_chars": 123
   },
   "fi": {
     "name": {
-      "old": "Sober – Alkoholiton",
-      "new": "Sober – Alkoholiton",
-      "len": 19
+      "old": "Quit Zyn – Nikotiiniton",
+      "new": "Quit Zyn – Nikotiiniton",
+      "len": 23
     },
     "subtitle": {
-      "old": "Kuivat päivät ja puutarha",
-      "new": "Kuivat päivät ja puutarha",
-      "len": 25
+      "old": "Päivät ilman nikotiinia",
+      "new": "Päivät ilman nikotiinia",
+      "len": 23
     },
     "keywords": {
-      "old": "juoda,vähemmän,lopettaa,riippuvuus,raittius,toipuminen,retkahdus,himo,mieli,pätkä",
-      "new": "juoda,vähemmän,lopettaa,riippuvuus,raittius,toipuminen,retkahdus,himo,mieli,pätkä",
-      "len": 81
+      "old": "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
+      "new": "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
+      "len": 74
     },
-    "description_chars": 426
+    "description_chars": 422,
+    "promotional_chars": 168,
+    "release_notes_chars": 147
   },
   "fr-CA": {
     "name": {
-      "old": "Sober – Sans alcool",
-      "new": "Sober – Sans alcool",
-      "len": 19
+      "old": "Quit Zyn – Sans nicotine",
+      "new": "Quit Zyn – Sans nicotine",
+      "len": 24
     },
     "subtitle": {
-      "old": "Jours secs et jardin",
-      "new": "Jours secs et jardin",
-      "len": 20
+      "old": "Compteur jours sans nicotine",
+      "new": "Compteur jours sans nicotine",
+      "len": 28
     },
     "keywords": {
-      "old": "boire,moins,arrêter,sevrage,abstinence,rétablissement,envie,sevrer,dépendance,humeur,rechute",
-      "new": "boire,moins,arrêter,sevrage,abstinence,rétablissement,envie,sevrer,dépendance,humeur,rechute",
-      "len": 92
+      "old": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
+      "new": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
+      "len": 71
     },
-    "description_chars": 455
+    "description_chars": 466,
+    "promotional_chars": 166,
+    "release_notes_chars": 128
   },
   "fr-FR": {
     "name": {
-      "old": "Sober – Sans alcool",
-      "new": "Sober – Sans alcool",
-      "len": 19
+      "old": "Quit Zyn – Sans nicotine",
+      "new": "Quit Zyn – Sans nicotine",
+      "len": 24
     },
     "subtitle": {
-      "old": "Jours secs & jardin",
-      "new": "Jours secs & jardin",
-      "len": 19
+      "old": "Compteur jours sans nicotine",
+      "new": "Compteur jours sans nicotine",
+      "len": 28
     },
     "keywords": {
-      "old": "boire,moins,arrêter,sevrage,abstinence,sevrer,sevrage,envie,rétablissement,dépendance,humeur",
-      "new": "boire,moins,arrêter,sevrage,abstinence,sevrer,sevrage,envie,rétablissement,dépendance,humeur",
-      "len": 92
+      "old": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
+      "new": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
+      "len": 71
     },
-    "description_chars": 804
+    "description_chars": 816,
+    "promotional_chars": 163,
+    "release_notes_chars": 145
   },
   "gu-IN": {
     "name": {
-      "old": "સોબર – દારૂ મુક્ત",
-      "new": "સોબર – દારૂ મુક્ત",
-      "len": 17
+      "old": "ક્વિટ ઝિન – નિકોટિન મુક્ત",
+      "new": "ક્વિટ ઝિન – નિકોટિન મુક્ત",
+      "len": 25
     },
     "subtitle": {
-      "old": "સૂકા દિવસ અને બગીચો",
-      "new": "સૂકા દિવસ અને બગીચો",
-      "len": 19
+      "old": "નિકોટિન મુક્ત દિવસ ગણતરી",
+      "new": "નિકોટિન મુક્ત દિવસ ગણતરી",
+      "len": 24
     },
     "keywords": {
-      "old": "પીવું,ઓછું,છોડવું,વ્યસન,ત્યાગ,પુનઃપ્રાપ્તિ,પુનરાવર્તન,તૃષ્ણા,મૂડ,શ્રેણી",
-      "new": "પીવું,ઓછું,છોડવું,વ્યસન,ત્યાગ,પુનઃપ્રાપ્તિ,પુનરાવર્તન,તૃષ્ણા,મૂડ,શ્રેણી",
-      "len": 71
+      "old": "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
+      "new": "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
+      "len": 56
     },
-    "description_chars": 305
+    "description_chars": 300,
+    "promotional_chars": 146,
+    "release_notes_chars": 110
   },
   "he": {
     "name": {
-      "old": "סובר – נטול אלכוהול",
-      "new": "סובר – נטול אלכוהול",
-      "len": 19
+      "old": "קוויט זין – ללא ניקוטין",
+      "new": "קוויט זין – ללא ניקוטין",
+      "len": 23
     },
     "subtitle": {
-      "old": "ימים יבשים וגינה",
-      "new": "ימים יבשים וגינה",
+      "old": "ימים ללא ניקוטין",
+      "new": "ימים ללא ניקוטין",
       "len": 16
     },
     "keywords": {
-      "old": "שתייה,פחות,הפסקה,התמכרות,התנזרות,החלמה,נפילה,תשוקה,מצב,רוח,רצף",
-      "new": "שתייה,פחות,הפסקה,התמכרות,התנזרות,החלמה,נפילה,תשוקה,מצב,רוח,רצף",
-      "len": 62
+      "old": "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
+      "new": "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
+      "len": 65
     },
-    "description_chars": 300
+    "description_chars": 296,
+    "promotional_chars": 120,
+    "release_notes_chars": 96
   },
   "hi": {
     "name": {
-      "old": "सोबर – शराब मुक्त",
-      "new": "सोबर – शराब मुक्त",
-      "len": 17
+      "old": "क्विट ज़िन – निकोटीन मुक्त",
+      "new": "क्विट ज़िन – निकोटीन मुक्त",
+      "len": 26
     },
     "subtitle": {
-      "old": "सूखे दिन और बगीचा",
-      "new": "सूखे दिन और बगीचा",
-      "len": 17
+      "old": "निकोटीन मुक्त दिन गिनती",
+      "new": "निकोटीन मुक्त दिन गिनती",
+      "len": 23
     },
     "keywords": {
-      "old": "पीना,कम,छोड़ना,लत,संयम,सुधार,पुनरावृत्ति,लालसा,मनोदशा,लकीर",
-      "new": "पीना,कम,छोड़ना,लत,संयम,सुधार,पुनरावृत्ति,लालसा,मनोदशा,लकीर",
-      "len": 58
+      "old": "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
+      "new": "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
+      "len": 54
     },
-    "description_chars": 367
+    "description_chars": 372,
+    "promotional_chars": 140,
+    "release_notes_chars": 131
   },
   "hr": {
     "name": {
-      "old": "Sober – Bez alkohola",
-      "new": "Sober – Bez alkohola",
-      "len": 20
+      "old": "Quit Zyn – Bez nikotina",
+      "new": "Quit Zyn – Bez nikotina",
+      "len": 23
     },
     "subtitle": {
-      "old": "Suhi dani i vrt",
-      "new": "Suhi dani i vrt",
-      "len": 15
+      "old": "Dani bez nikotina",
+      "new": "Dani bez nikotina",
+      "len": 17
     },
     "keywords": {
-      "old": "piti,manje,prestati,ovisnost,apstinencija,oporavak,relaps,želja,raspoloženje,niz",
-      "new": "piti,manje,prestati,ovisnost,apstinencija,oporavak,relaps,želja,raspoloženje,niz",
-      "len": 80
+      "old": "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
+      "new": "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
+      "len": 76
     },
-    "description_chars": 360
+    "description_chars": 355,
+    "promotional_chars": 162,
+    "release_notes_chars": 120
   },
   "hu": {
     "name": {
-      "old": "Sober – Alkoholmentes",
-      "new": "Sober – Alkoholmentes",
-      "len": 21
+      "old": "Quit Zyn – Nikotinmentes",
+      "new": "Quit Zyn – Nikotinmentes",
+      "len": 24
     },
     "subtitle": {
-      "old": "Száraz napok és kert",
-      "new": "Száraz napok és kert",
-      "len": 20
+      "old": "Nikotinmentes napok",
+      "new": "Nikotinmentes napok",
+      "len": 19
     },
     "keywords": {
-      "old": "inni,kevesebb,abbahagy,függőség,elvonás,felépülés,visszaesés,vágy,hangulat,sáv",
-      "new": "inni,kevesebb,abbahagy,függőség,elvonás,felépülés,visszaesés,vágy,hangulat,sáv",
-      "len": 78
+      "old": "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
+      "new": "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
+      "len": 71
     },
-    "description_chars": 374
+    "description_chars": 369,
+    "promotional_chars": 153,
+    "release_notes_chars": 143
   },
   "id": {
     "name": {
-      "old": "Sober – Bebas Alkohol",
-      "new": "Sober – Bebas Alkohol",
-      "len": 21
+      "old": "Quit Zyn – Bebas Nikotin",
+      "new": "Quit Zyn – Bebas Nikotin",
+      "len": 24
     },
     "subtitle": {
-      "old": "Hari kering dan taman",
-      "new": "Hari kering: kira sedar",
-      "len": 23
+      "old": "Hari bebas nikotin",
+      "new": "Hari bebas nikotin",
+      "len": 18
     },
     "keywords": {
-      "old": "minum,sedikit,berhenti,kecanduan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-      "new": "minum,sedikit,berhenti,kecanduan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-      "len": 84
+      "old": "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
+      "new": "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
+      "len": 82
     },
-    "description_chars": 371
+    "description_chars": 366,
+    "promotional_chars": 155,
+    "release_notes_chars": 144
   },
   "it": {
     "name": {
-      "old": "Sober – Senza alcol",
-      "new": "Sober – Senza alcol",
-      "len": 19
+      "old": "Quit Zyn – Senza nicotina",
+      "new": "Quit Zyn – Senza nicotina",
+      "len": 25
     },
     "subtitle": {
-      "old": "Giorni secchi e giardino",
-      "new": "Giorni secchi: contatore",
-      "len": 24
+      "old": "Giorni senza nicotina",
+      "new": "Giorni senza nicotina",
+      "len": 21
     },
     "keywords": {
-      "old": "bere,meno,smettere,astinenza,dipendenza,recupero,ricaduta,voglia,craving,umore,sbronzo",
-      "new": "bere,meno,smettere,astinenza,dipendenza,recupero,ricaduta,voglia,craving,umore,sbronzo",
-      "len": 86
+      "old": "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
+      "new": "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
+      "len": 77
     },
-    "description_chars": 564
+    "description_chars": 569,
+    "promotional_chars": 170,
+    "release_notes_chars": 140
   },
   "ja": {
     "name": {
-      "old": "ソーバー：アルコールフリー",
-      "new": "ソーバー：アルコールフリー",
-      "len": 13
-    },
-    "subtitle": {
-      "old": "ドライデイズとガーデン",
-      "new": "ドライデイズとガーデン",
-      "len": 11
-    },
-    "keywords": {
-      "old": "飲む,減らす,禁酒,依存,断酒,回復,再発,渇望,気分,連続",
-      "new": "飲む,減らす,禁酒,依存,断酒,回復,再発,渇望,気分,連続",
-      "len": 30
-    },
-    "description_chars": 328
-  },
-  "kn-IN": {
-    "name": {
-      "old": "ಸೋಬರ್ – ಮದ್ಯಮುಕ್ತ",
-      "new": "ಸೋಬರ್ – ಮದ್ಯಮುಕ್ತ",
-      "len": 17
-    },
-    "subtitle": {
-      "old": "ಒಣ ದಿನಗಳು ಮತ್ತು ತೋಟ",
-      "new": "ಒಣ ದಿನಗಳು ಮತ್ತು ತೋಟ",
-      "len": 19
-    },
-    "keywords": {
-      "old": "ಕುಡಿಯುವುದು,ಕಡಿಮೆ,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಚೇತರಿಕೆ,ಮರುಕಳಿಕೆ,ಹಂಬಲ,ಮನಸ್ಥಿತಿ,ಸರಣಿ",
-      "new": "ಕುಡಿಯುವುದು,ಕಡಿಮೆ,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಚೇತರಿಕೆ,ಮರುಕಳಿಕೆ,ಹಂಬಲ,ಮನಸ್ಥಿತಿ,ಸರಣಿ",
-      "len": 69
-    },
-    "description_chars": 328
-  },
-  "ko": {
-    "name": {
-      "old": "소버 – 무알코올",
-      "new": "소버 – 무알코올",
-      "len": 9
-    },
-    "subtitle": {
-      "old": "마른 날과 정원",
-      "new": "마른 날과 정원",
-      "len": 8
-    },
-    "keywords": {
-      "old": "마시다,줄이다,끊다,중독,절주,회복,재발,갈망,기분,연속",
-      "new": "마시다,줄이다,끊다,중독,절주,회복,재발,갈망,기분,연속",
-      "len": 31
-    },
-    "description_chars": 257
-  },
-  "ml-IN": {
-    "name": {
-      "old": "സോബർ – മദ്യമുക്ത",
-      "new": "സോബർ – മദ്യമുക്ത",
+      "old": "クィットザン – ニコチンフリー",
+      "new": "クィットザン – ニコチンフリー",
       "len": 16
     },
     "subtitle": {
-      "old": "ഉണങ്ങിയ ദിവസങ്ങളും തോട്ടവും",
-      "new": "ഉണങ്ങിയ ദിവസങ്ങളും തോട്ടവും",
-      "len": 27
-    },
-    "keywords": {
-      "old": "കുടിക്കൽ,കുറവ്,നിർത്തൽ,ആസക്തി,വർജനം,വീണ്ടെടുക്കൽ,വീഴ്ച,ആഗ്രഹം,മാനസികാവസ്ഥ,ശ്രേണി",
-      "new": "കുടിക്കൽ,കുറവ്,നിർത്തൽ,ആസക്തി,വർജനം,വീണ്ടെടുക്കൽ,വീഴ്ച,ആഗ്രഹം,മാനസികാവസ്ഥ,ശ്രേണി",
-      "len": 80
-    },
-    "description_chars": 318
-  },
-  "mr-IN": {
-    "name": {
-      "old": "सोबर – दारूमुक्त",
-      "new": "सोबर – दारूमुक्त",
-      "len": 16
-    },
-    "subtitle": {
-      "old": "कोरडे दिवस आणि बाग",
-      "new": "कोरडे दिवस आणि बाग",
-      "len": 18
-    },
-    "keywords": {
-      "old": "पिणे,कमी,सोडणे,व्यसन,त्याग,पुनर्प्राप्ती,पुनरावृत्ती,तळमळ,मूड,मालिका",
-      "new": "पिणे,कमी,सोडणे,व्यसन,त्याग,पुनर्प्राप्ती,पुनरावृत्ती,तळमळ,मूड,मालिका",
-      "len": 68
-    },
-    "description_chars": 303
-  },
-  "ms": {
-    "name": {
-      "old": "Sober – Bebas Alkohol",
-      "new": "Sober – Bebas Alkohol",
-      "len": 21
-    },
-    "subtitle": {
-      "old": "Hari kering dan taman",
-      "new": "Hari kering: kira sedar",
-      "len": 23
-    },
-    "keywords": {
-      "old": "minum,kurang,berhenti,ketagihan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-      "new": "minum,kurang,berhenti,ketagihan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-      "len": 83
-    },
-    "description_chars": 366
-  },
-  "nl-NL": {
-    "name": {
-      "old": "Sober – Alcoholvrij",
-      "new": "Sober – Alcoholvrij",
-      "len": 19
-    },
-    "subtitle": {
-      "old": "Droge dagen en tuin",
-      "new": "Droge dagen en tuin",
-      "len": 19
-    },
-    "keywords": {
-      "old": "stoppen,minder,drinken,verslaving,ontwenning,nuchter,herstel,terugval,verlangen,stemming,streak",
-      "new": "stoppen,minder,drinken,verslaving,ontwenning,nuchter,herstel,terugval,verlangen,stemming,streak",
-      "len": 95
-    },
-    "description_chars": 434
-  },
-  "no": {
-    "name": {
-      "old": "Sober – Alkoholfri",
-      "new": "Sober – Alkoholfri",
-      "len": 18
-    },
-    "subtitle": {
-      "old": "Tørre dager og hage",
-      "new": "Tørre dager og hage",
-      "len": 19
-    },
-    "keywords": {
-      "old": "drikke,mindre,slutte,avhengighet,avholdenhet,bedring,tilbakefall,sug,humør,streak",
-      "new": "drikke,mindre,slutte,avhengighet,avholdenhet,bedring,tilbakefall,sug,humør,streak",
-      "len": 81
-    },
-    "description_chars": 352
-  },
-  "or-IN": {
-    "name": {
-      "old": "ସୋବର – ମଦ୍ୟମୁକ୍ତ",
-      "new": "ସୋବର – ମଦ୍ୟମୁକ୍ତ",
-      "len": 16
-    },
-    "subtitle": {
-      "old": "ଶୁଷ୍କ ଦିନ ଓ ବଗିଚା",
-      "new": "ଶୁଷ୍କ ଦିନ ଓ ବଗିଚା",
-      "len": 17
-    },
-    "keywords": {
-      "old": "ପିଇବା,କମ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ପୁନରୁଦ୍ଧାର,ପୁନରାବୃତ୍ତି,ଲାଳସା,ମୁଡ୍,ଶୃଙ୍ଖଳା",
-      "new": "ପିଇବା,କମ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ପୁନରୁଦ୍ଧାର,ପୁନରାବୃତ୍ତି,ଲାଳସା,ମୁଡ୍,ଶୃଙ୍ଖଳା",
-      "len": 70
-    },
-    "description_chars": 296
-  },
-  "pa-IN": {
-    "name": {
-      "old": "ਸੋਬਰ – ਸ਼ਰਾਬ ਮੁਕਤ",
-      "new": "ਸੋਬਰ – ਸ਼ਰਾਬ ਮੁਕਤ",
-      "len": 17
-    },
-    "subtitle": {
-      "old": "ਸੁੱਕੇ ਦਿਨ ਅਤੇ ਬਾਗ",
-      "new": "ਸੁੱਕੇ ਦਿਨ ਅਤੇ ਬਾਗ",
-      "len": 17
-    },
-    "keywords": {
-      "old": "ਪੀਣਾ,ਘੱਟ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਬਰਾਮਦਗੀ,ਮੁੜ,ਆਉਣਾ,ਤਰਸ,ਮੂਡ,ਲਕੀਰ",
-      "new": "ਪੀਣਾ,ਘੱਟ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਬਰਾਮਦਗੀ,ਮੁੜ,ਆਉਣਾ,ਤਰਸ,ਮੂਡ,ਲਕੀਰ",
-      "len": 53
-    },
-    "description_chars": 303
-  },
-  "pl": {
-    "name": {
-      "old": "Sober – Bez alkoholu",
-      "new": "Sober – Bez alkoholu",
-      "len": 20
-    },
-    "subtitle": {
-      "old": "Suche dni i ogród",
-      "new": "Suche dni i ogród",
-      "len": 17
-    },
-    "keywords": {
-      "old": "pić,mniej,przestać,uzależnienie,abstynencja,odwyk,nawrót,głód,nastrój,pasmo",
-      "new": "pić,mniej,przestać,uzależnienie,abstynencja,odwyk,nawrót,głód,nastrój,pasmo",
-      "len": 75
-    },
-    "description_chars": 419
-  },
-  "pt-BR": {
-    "name": {
-      "old": "Sober – Sem Álcool",
-      "new": "Sober – Sem Álcool",
-      "len": 18
-    },
-    "subtitle": {
-      "old": "Dias secos e jardim",
-      "new": "Dias secos e jardim",
-      "len": 19
-    },
-    "keywords": {
-      "old": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-      "new": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-      "len": 81
-    },
-    "description_chars": 519
-  },
-  "pt-PT": {
-    "name": {
-      "old": "Sober – Sem Álcool",
-      "new": "Sober – Sem Álcool",
-      "len": 18
-    },
-    "subtitle": {
-      "old": "Dias secos e jardim",
-      "new": "Dias secos e jardim",
-      "len": 19
-    },
-    "keywords": {
-      "old": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-      "new": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-      "len": 81
-    },
-    "description_chars": 364
-  },
-  "ro": {
-    "name": {
-      "old": "Sober – Fără alcool",
-      "new": "Sober – Fără alcool",
-      "len": 19
-    },
-    "subtitle": {
-      "old": "Zile uscate și grădină",
-      "new": "Zile uscate și grădină",
-      "len": 22
-    },
-    "keywords": {
-      "old": "bea,puțin,opri,dependență,abstinență,recuperare,recădere,poftă,dispoziție,dungă",
-      "new": "bea,puțin,opri,dependență,abstinență,recuperare,recădere,poftă,dispoziție,dungă",
-      "len": 79
-    },
-    "description_chars": 376
-  },
-  "ru": {
-    "name": {
-      "old": "Sober – Без алкоголя",
-      "new": "Sober – Без алкоголя",
-      "len": 20
-    },
-    "subtitle": {
-      "old": "Сухие дни и сад",
-      "new": "Сухие дни и сад",
-      "len": 15
-    },
-    "keywords": {
-      "old": "пить,меньше,бросить,зависимость,воздержание,восстановление,срыв,тяга,настроение,серия",
-      "new": "пить,меньше,бросить,зависимость,воздержание,восстановление,срыв,тяга,настроение,серия",
-      "len": 85
-    },
-    "description_chars": 397
-  },
-  "sk": {
-    "name": {
-      "old": "Sober – Bez alkoholu",
-      "new": "Sober – Bez alkoholu",
-      "len": 20
-    },
-    "subtitle": {
-      "old": "Suché dni a záhrada",
-      "new": "Suché dni: počítadlo",
-      "len": 20
-    },
-    "keywords": {
-      "old": "piť,menej,prestať,závislosť,abstinencia,zotavenie,relaps,chuť,nálada,pruh",
-      "new": "piť,menej,prestať,závislosť,abstinencia,zotavenie,relaps,chuť,nálada,pruh",
-      "len": 73
-    },
-    "description_chars": 356
-  },
-  "sl-SI": {
-    "name": {
-      "old": "Sober – Brez alkohola",
-      "new": "Sober – Brez alkohola",
-      "len": 21
-    },
-    "subtitle": {
-      "old": "Suhi dnevi in vrt",
-      "new": "Suhi dnevi in vrt",
-      "len": 17
-    },
-    "keywords": {
-      "old": "piti,manj,nehati,odvisnost,abstinenca,okrevanje,povratek,hrepenenje,razpoloženje,niz",
-      "new": "piti,manj,nehati,odvisnost,abstinenca,okrevanje,povratek,hrepenenje,razpoloženje,niz",
-      "len": 84
-    },
-    "description_chars": 343
-  },
-  "sv": {
-    "name": {
-      "old": "Sober – Alkoholfri",
-      "new": "Sober – Alkoholfri",
-      "len": 18
-    },
-    "subtitle": {
-      "old": "Torra dagar och trädgård",
-      "new": "Torra dagar och trädgård",
-      "len": 24
-    },
-    "keywords": {
-      "old": "dricka,mindre,sluta,beroende,abstinens,återhämtning,återfall,sug,humör,streak",
-      "new": "dricka,mindre,sluta,beroende,abstinens,återhämtning,återfall,sug,humör,streak",
-      "len": 77
-    },
-    "description_chars": 376
-  },
-  "ta-IN": {
-    "name": {
-      "old": "சோபர் – மதுவிலா",
-      "new": "சோபர் – மதுவிலா",
-      "len": 15
-    },
-    "subtitle": {
-      "old": "உலர் நாட்கள் மற்றும் தோட்டம்",
-      "new": "உலர் நாட்கள் மற்றும் தோட்டம்",
-      "len": 28
-    },
-    "keywords": {
-      "old": "குடிப்பது,குறைவு,விடுவது,அடிமைத்தனம்,தவிர்ப்பு,மீட்பு,மீள்தொற்று,ஏக்கம்,மனநிலை,தொடர்",
-      "new": "குடிப்பது,குறைவு,விடுவது,அடிமைத்தனம்,தவிர்ப்பு,மீட்பு,மீள்தொற்று,ஏக்கம்,மனநிலை,தொடர்",
-      "len": 84
-    },
-    "description_chars": 338
-  },
-  "te-IN": {
-    "name": {
-      "old": "సోబర్ – మద్యముక్త",
-      "new": "సోబర్ – మద్యముక్త",
-      "len": 17
-    },
-    "subtitle": {
-      "old": "ఎండిన రోజులు మరియు తోట",
-      "new": "ఎండిన రోజులు: స్వచ్ఛత",
-      "len": 21
-    },
-    "keywords": {
-      "old": "తాగడం,తక్కువ,వదలడం,వ్యసనం,సంయమం,పునరుద్ధరణ,పునరావృత్తి,కోరిక,మానసిక,స్థితి,సిరీస్",
-      "new": "తాగడం,తక్కువ,వదలడం,వ్యసనం,సంయమం,పునరుద్ధరణ,పునరావృత్తి,కోరిక,మానసిక,స్థితి,సిరీస్",
-      "len": 81
-    },
-    "description_chars": 310
-  },
-  "th": {
-    "name": {
-      "old": "โซเบอร์ – ไร้แอลกอฮอล์",
-      "new": "โซเบอร์ – ไร้แอลกอฮอล์",
-      "len": 22
-    },
-    "subtitle": {
-      "old": "วันแห้งและสวน",
-      "new": "วันแห้งและสวน",
-      "len": 13
-    },
-    "keywords": {
-      "old": "ดื่ม,น้อย,เลิก,ติด,เหล้า,เลิก,เหล้า,หาย,อยาก,อารมณ์,streak",
-      "new": "ดื่ม,น้อย,เลิก,ติด,เหล้า,เลิก,เหล้า,หาย,อยาก,อารมณ์,streak",
-      "len": 58
-    },
-    "description_chars": 308
-  },
-  "tr": {
-    "name": {
-      "old": "Sober – Alkolsüz",
-      "new": "Sober – Alkolsüz",
-      "len": 16
-    },
-    "subtitle": {
-      "old": "Kuru günler ve bahçe",
-      "new": "Kuru günler ve bahçe",
-      "len": 20
-    },
-    "keywords": {
-      "old": "içmek,az,bırakmak,bağımlılık,soğuma,iyileşme,nüks,istek,ruh,hali,seri",
-      "new": "içmek,az,bırakmak,bağımlılık,soğuma,iyileşme,nüks,istek,ruh,hali,seri",
-      "len": 69
-    },
-    "description_chars": 374
-  },
-  "uk": {
-    "name": {
-      "old": "Sober – Без алкоголю",
-      "new": "Sober – Без алкоголю",
-      "len": 20
-    },
-    "subtitle": {
-      "old": "Сухі дні та сад",
-      "new": "Сухі дні та сад",
-      "len": 15
-    },
-    "keywords": {
-      "old": "пити,менше,кинути,залежність,утримання,одужання,зрив,тяга,настрій,серія",
-      "new": "пити,менше,кинути,залежність,утримання,одужання,зрив,тяга,настрій,серія",
-      "len": 71
-    },
-    "description_chars": 380
-  },
-  "ur-PK": {
-    "name": {
-      "old": "سوبر – شراب سے پاک",
-      "new": "سوبر – شراب سے پاک",
-      "len": 18
-    },
-    "subtitle": {
-      "old": "خشک دن اور باغ",
-      "new": "خشک دن اور باغ",
+      "old": "ニコチンフリー日数カウンター",
+      "new": "ニコチンフリー日数カウンター",
       "len": 14
     },
     "keywords": {
-      "old": "پینا,کم,چھوڑنا,نشہ,پرہیز,بحالی,دوبارہ,لگنا,آرزو,موڈ,سلسلہ",
-      "new": "پینا,کم,چھوڑنا,نشہ,پرہیز,بحالی,دوبارہ,لگنا,آرزو,موڈ,سلسلہ",
-      "len": 57
+      "old": "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
+      "new": "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
+      "len": 39
     },
-    "description_chars": 281
+    "description_chars": 318,
+    "promotional_chars": 76,
+    "release_notes_chars": 66
   },
-  "vi": {
+  "kn-IN": {
     "name": {
-      "old": "Sober – Không cồn",
-      "new": "Sober – Không cồn",
-      "len": 17
+      "old": "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
+      "new": "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
+      "len": 28
     },
     "subtitle": {
-      "old": "Ngày khô và vườn",
-      "new": "Ngày khô và vườn",
+      "old": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
+      "new": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
+      "len": 21
+    },
+    "keywords": {
+      "old": "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
+      "new": "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
+      "len": 58
+    },
+    "description_chars": 338,
+    "promotional_chars": 142,
+    "release_notes_chars": 136
+  },
+  "ko": {
+    "name": {
+      "old": "퀴트 진 – 니코틴 프리",
+      "new": "퀴트 진 – 니코틴 프리",
+      "len": 13
+    },
+    "subtitle": {
+      "old": "니코틴 프리 일수 카운터",
+      "new": "니코틴 프리 일수 카운터",
+      "len": 13
+    },
+    "keywords": {
+      "old": "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
+      "new": "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
+      "len": 36
+    },
+    "description_chars": 251,
+    "promotional_chars": 91,
+    "release_notes_chars": 69
+  },
+  "ml-IN": {
+    "name": {
+      "old": "ക്വിറ്റ് സിൻ",
+      "new": "ക്വിറ്റ് സിൻ",
+      "len": 12
+    },
+    "subtitle": {
+      "old": "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
+      "new": "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
+      "len": 24
+    },
+    "keywords": {
+      "old": "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
+      "new": "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
+      "len": 60
+    },
+    "description_chars": 327,
+    "promotional_chars": 169,
+    "release_notes_chars": 125
+  },
+  "mr-IN": {
+    "name": {
+      "old": "क्विट झिन – निकोटीन मुक्त",
+      "new": "क्विट झिन – निकोटीन मुक्त",
+      "len": 25
+    },
+    "subtitle": {
+      "old": "निकोटीन मुक्त दिवस मोजणी",
+      "new": "निकोटीन मुक्त दिवस मोजणी",
+      "len": 24
+    },
+    "keywords": {
+      "old": "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
+      "new": "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
+      "len": 56
+    },
+    "description_chars": 310,
+    "promotional_chars": 149,
+    "release_notes_chars": 109
+  },
+  "ms": {
+    "name": {
+      "old": "Quit Zyn – Bebas Nikotin",
+      "new": "Quit Zyn – Bebas Nikotin",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "Hari bebas nikotin",
+      "new": "Hari bebas nikotin",
+      "len": 18
+    },
+    "keywords": {
+      "old": "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
+      "new": "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
+      "len": 79
+    },
+    "description_chars": 361,
+    "promotional_chars": 160,
+    "release_notes_chars": 153
+  },
+  "nl-NL": {
+    "name": {
+      "old": "Quit Zyn – Nikotinvrij",
+      "new": "Quit Zyn – Nikotinvrij",
+      "len": 22
+    },
+    "subtitle": {
+      "old": "Dagen zonder nicotine",
+      "new": "Dagen zonder nicotine",
+      "len": 21
+    },
+    "keywords": {
+      "old": "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
+      "new": "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
+      "len": 80
+    },
+    "description_chars": 431,
+    "promotional_chars": 156,
+    "release_notes_chars": 136
+  },
+  "no": {
+    "name": {
+      "old": "Quit Zyn – Nikotinfri",
+      "new": "Quit Zyn – Nikotinfri",
+      "len": 21
+    },
+    "subtitle": {
+      "old": "Dager uten nikotin",
+      "new": "Dager uten nikotin",
+      "len": 18
+    },
+    "keywords": {
+      "old": "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
+      "new": "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
+      "len": 72
+    },
+    "description_chars": 347,
+    "promotional_chars": 150,
+    "release_notes_chars": 121
+  },
+  "or-IN": {
+    "name": {
+      "old": "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
+      "new": "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
+      "len": 25
+    },
+    "subtitle": {
+      "old": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
+      "new": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
+      "len": 22
+    },
+    "keywords": {
+      "old": "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
+      "new": "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
+      "len": 55
+    },
+    "description_chars": 299,
+    "promotional_chars": 169,
+    "release_notes_chars": 124
+  },
+  "pa-IN": {
+    "name": {
+      "old": "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
+      "new": "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
+      "new": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
+      "len": 22
+    },
+    "keywords": {
+      "old": "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
+      "new": "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
+      "len": 50
+    },
+    "description_chars": 304,
+    "promotional_chars": 143,
+    "release_notes_chars": 101
+  },
+  "pl": {
+    "name": {
+      "old": "Quit Zyn – Bez nikotyny",
+      "new": "Quit Zyn – Bez nikotyny",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Dni bez nikotyny",
+      "new": "Dni bez nikotyny",
       "len": 16
     },
     "keywords": {
-      "old": "uống,ít,cai,nghiện,kiêng,phục,hồi,tái,phát,thèm,tâm,trạng,chuỗi",
-      "new": "uống,ít,cai,nghiện,kiêng,phục,hồi,tái,phát,thèm,tâm,trạng,chuỗi",
-      "len": 63
+      "old": "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
+      "new": "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
+      "len": 76
     },
-    "description_chars": 330
+    "description_chars": 425,
+    "promotional_chars": 137,
+    "release_notes_chars": 126
+  },
+  "pt-BR": {
+    "name": {
+      "old": "Quit Zyn – Sem Nicotina",
+      "new": "Quit Zyn – Sem Nicotina",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Dias sem nicotina",
+      "new": "Dias sem nicotina",
+      "len": 17
+    },
+    "keywords": {
+      "old": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+      "new": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+      "len": 83
+    },
+    "description_chars": 521,
+    "promotional_chars": 167,
+    "release_notes_chars": 134
+  },
+  "pt-PT": {
+    "name": {
+      "old": "Quit Zyn – Sem Nicotina",
+      "new": "Quit Zyn – Sem Nicotina",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Dias sem nicotina",
+      "new": "Dias sem nicotina",
+      "len": 17
+    },
+    "keywords": {
+      "old": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+      "new": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+      "len": 83
+    },
+    "description_chars": 369,
+    "promotional_chars": 140,
+    "release_notes_chars": 122
+  },
+  "ro": {
+    "name": {
+      "old": "Quit Zyn – Fără nicotină",
+      "new": "Quit Zyn – Fără nicotină",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "Zile fără nicotină",
+      "new": "Zile fără nicotină",
+      "len": 18
+    },
+    "keywords": {
+      "old": "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
+      "new": "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
+      "len": 73
+    },
+    "description_chars": 375,
+    "promotional_chars": 144,
+    "release_notes_chars": 128
+  },
+  "ru": {
+    "name": {
+      "old": "Quit Zyn – Без никотина",
+      "new": "Quit Zyn – Без никотина",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Дни без никотина",
+      "new": "Дни без никотина",
+      "len": 16
+    },
+    "keywords": {
+      "old": "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
+      "new": "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
+      "len": 76
+    },
+    "description_chars": 414,
+    "promotional_chars": 156,
+    "release_notes_chars": 134
+  },
+  "sk": {
+    "name": {
+      "old": "Quit Zyn – Bez nikotínu",
+      "new": "Quit Zyn – Bez nikotínu",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Dni bez nikotínu",
+      "new": "Dni bez nikotínu",
+      "len": 16
+    },
+    "keywords": {
+      "old": "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
+      "new": "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
+      "len": 73
+    },
+    "description_chars": 351,
+    "promotional_chars": 153,
+    "release_notes_chars": 130
+  },
+  "sl-SI": {
+    "name": {
+      "old": "Quit Zyn – Brez nikotina",
+      "new": "Quit Zyn – Brez nikotina",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "Dnevi brez nikotina",
+      "new": "Dnevi brez nikotina",
+      "len": 19
+    },
+    "keywords": {
+      "old": "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
+      "new": "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
+      "len": 72
+    },
+    "description_chars": 338,
+    "promotional_chars": 160,
+    "release_notes_chars": 120
+  },
+  "sv": {
+    "name": {
+      "old": "Quit Zyn – Nikotinfri",
+      "new": "Quit Zyn – Nikotinfri",
+      "len": 21
+    },
+    "subtitle": {
+      "old": "Dagar utan nikotin",
+      "new": "Dagar utan nikotin",
+      "len": 18
+    },
+    "keywords": {
+      "old": "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
+      "new": "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
+      "len": 69
+    },
+    "description_chars": 379,
+    "promotional_chars": 159,
+    "release_notes_chars": 125
+  },
+  "ta-IN": {
+    "name": {
+      "old": "க்விட் ஸின்",
+      "new": "க்விட் ஸின்",
+      "len": 11
+    },
+    "subtitle": {
+      "old": "நிக்கோட்டின் இல்லா நாட்கள்",
+      "new": "நிக்கோட்டின் இல்லா நாட்கள்",
+      "len": 26
+    },
+    "keywords": {
+      "old": "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
+      "new": "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
+      "len": 67
+    },
+    "description_chars": 351,
+    "promotional_chars": 169,
+    "release_notes_chars": 147
+  },
+  "te-IN": {
+    "name": {
+      "old": "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
+      "new": "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
+      "len": 27
+    },
+    "subtitle": {
+      "old": "నికోటిన్ ఫ్రీ రోజులు",
+      "new": "నికోటిన్ ఫ్రీ రోజులు",
+      "len": 20
+    },
+    "keywords": {
+      "old": "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
+      "new": "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
+      "len": 62
+    },
+    "description_chars": 313,
+    "promotional_chars": 170,
+    "release_notes_chars": 133
+  },
+  "th": {
+    "name": {
+      "old": "ควิตซิน – ปลอดนิโคติน",
+      "new": "ควิตซิน – ปลอดนิโคติน",
+      "len": 21
+    },
+    "subtitle": {
+      "old": "นับวันปลอดนิโคติน",
+      "new": "นับวันปลอดนิโคติน",
+      "len": 17
+    },
+    "keywords": {
+      "old": "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
+      "new": "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
+      "len": 53
+    },
+    "description_chars": 301,
+    "promotional_chars": 123,
+    "release_notes_chars": 103
+  },
+  "tr": {
+    "name": {
+      "old": "Quit Zyn – Nikotinsiz",
+      "new": "Quit Zyn – Nikotinsiz",
+      "len": 21
+    },
+    "subtitle": {
+      "old": "Nikotinsiz günler",
+      "new": "Nikotinsiz günler",
+      "len": 17
+    },
+    "keywords": {
+      "old": "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
+      "new": "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
+      "len": 75
+    },
+    "description_chars": 370,
+    "promotional_chars": 156,
+    "release_notes_chars": 143
+  },
+  "uk": {
+    "name": {
+      "old": "Quit Zyn – Без нікотину",
+      "new": "Quit Zyn – Без нікотину",
+      "len": 23
+    },
+    "subtitle": {
+      "old": "Дні без нікотину",
+      "new": "Дні без нікотину",
+      "len": 16
+    },
+    "keywords": {
+      "old": "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
+      "new": "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
+      "len": 71
+    },
+    "description_chars": 375,
+    "promotional_chars": 154,
+    "release_notes_chars": 134
+  },
+  "ur-PK": {
+    "name": {
+      "old": "کوئٹ زِن – نکوٹین سے پاک",
+      "new": "کوئٹ زِن – نکوٹین سے پاک",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "نکوٹین سے پاک دن گنتی",
+      "new": "نکوٹین سے پاک دن گنتی",
+      "len": 21
+    },
+    "keywords": {
+      "old": "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
+      "new": "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
+      "len": 56
+    },
+    "description_chars": 280,
+    "promotional_chars": 151,
+    "release_notes_chars": 103
+  },
+  "vi": {
+    "name": {
+      "old": "Quit Zyn – Không nicotin",
+      "new": "Quit Zyn – Không nicotin",
+      "len": 24
+    },
+    "subtitle": {
+      "old": "Ngày không nicotin",
+      "new": "Ngày không nicotin",
+      "len": 18
+    },
+    "keywords": {
+      "old": "túi,vape,cai,nghiện,kiêng,thóiquen,nhậtký,ứngdụng,velo,snus,chuỗi",
+      "new": "túi,vape,cai,nghiện,kiêng,thóiquen,nhậtký,ứngdụng,velo,snus,chuỗi",
+      "len": 65
+    },
+    "description_chars": 335,
+    "promotional_chars": 170,
+    "release_notes_chars": 118
   },
   "zh-Hans": {
     "name": {
-      "old": "清醒助手 - 无酒精",
-      "new": "清醒助手 - 无酒精",
-      "len": 10
+      "old": "戒瘾助手 - 无烟碱追踪",
+      "new": "戒瘾助手 - 无烟碱追踪",
+      "len": 12
     },
     "subtitle": {
-      "old": "干燥天数与花园",
-      "new": "干燥天数与花园",
+      "old": "无烟碱日计数器",
+      "new": "无烟碱日计数器",
       "len": 7
     },
     "keywords": {
-      "old": "喝,戒酒,少喝,上瘾,戒断,恢复,复发,渴望,心情,连续",
-      "new": "喝,戒酒,少喝,上瘾,戒断,恢复,复发,渴望,心情,连续",
-      "len": 28
+      "old": "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
+      "new": "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
+      "len": 37
     },
-    "description_chars": 240
+    "description_chars": 234,
+    "promotional_chars": 49,
+    "release_notes_chars": 37
   },
   "zh-Hant": {
     "name": {
-      "old": "清醒助手 - 無酒精",
-      "new": "清醒助手 - 無酒精",
-      "len": 10
+      "old": "戒癮助手 - 無菸鹼追蹤",
+      "new": "戒癮助手 - 無菸鹼追蹤",
+      "len": 12
     },
     "subtitle": {
-      "old": "乾燥天數與花園",
-      "new": "乾燥天數與花園",
+      "old": "無菸鹼日計數器",
+      "new": "無菸鹼日計數器",
       "len": 7
     },
     "keywords": {
-      "old": "喝,戒酒,少喝,上癮,戒斷,恢復,復發,渴望,心情,連續",
-      "new": "喝,戒酒,少喝,上癮,戒斷,恢復,復發,渴望,心情,連續",
-      "len": 28
+      "old": "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
+      "new": "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
+      "len": 39
     },
-    "description_chars": 162
+    "description_chars": 160,
+    "promotional_chars": 49,
+    "release_notes_chars": 37
   }
 }
