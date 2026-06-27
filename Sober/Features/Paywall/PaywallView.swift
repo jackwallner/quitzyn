@@ -6,6 +6,9 @@ import RevenueCat
 
 /// Apple-required legal links for the paywall and any other upsell surface.
 enum PaywallLinks {
+    static let supportEmail = "jackwallner+qz@gmail.com"
+    static var supportMailto: URL { URL(string: "mailto:\(supportEmail)")! }
+
     static let privacyPolicy = URL(string: "https://jackwallner.github.io/quitzyn/privacy-policy.html")!
     static let standardEULA = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
 }
