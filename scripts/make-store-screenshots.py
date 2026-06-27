@@ -4,13 +4,18 @@ Cream canvas + serif headline + sans subline + device-framed screenshot,
 matching the Sober set's recipe. Erases the launch breadcrumb, normalizes the
 status bar, rounds corners, adds a bezel + soft shadow.
 """
+from __future__ import annotations
+
 import os
 import sys
+from pathlib import Path
+
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-SCRATCH = "/private/tmp/claude-501/-Users-jackwallner-nicfree/e931b6ce-54ba-4b65-8f01-729a0ab3f62e/scratchpad"
-OUT = os.path.join(SCRATCH, "store")
-os.makedirs(OUT, exist_ok=True)
+ROOT = Path(__file__).resolve().parent.parent
+SCRATCH = Path(__file__).resolve().parent / "screenshot-scratchpad"
+OUT = ROOT / "fastlane/screenshots/en-US"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CW, CH = 1320, 2868
 CREAM = (246, 239, 224)
@@ -22,16 +27,11 @@ SANS = "/System/Library/Fonts/Helvetica.ttc"
 
 # (source, headline, subline)
 FRAMES = [
-    ("cap_home2.png",  "Count every\nnicotine-free day",
-     "Your quit counter — days, streaks, and a tree that grows"),
-    ("cap_bloom.png",  "See what quitting\ngives back",
-     "Money saved, pouches skipped, nicotine never absorbed"),
-    ("cap_health.png", "Watch your\nbody recover",
-     "13 nicotine-recovery milestones, with real sources"),
-    ("cap_timeline.png", "Every clean day,\nat a glance",
-     "A calendar of your streaks and progress"),
-    ("cap_species.png", "Grow the tree\nyou choose",
-     "Six bonsai species — switch anytime, progress carries over"),
+    ("cap_home2.png", "Count every\nnicotine-free day", "Your quit counter: days, streaks, and a tree that grows"),
+    ("cap_bloom.png", "See what quitting\ngives back", "Money saved, pouches skipped, nicotine never absorbed"),
+    ("cap_health.png", "Watch your\nbody recover", "13 nicotine-recovery milestones, with real sources"),
+    ("cap_timeline.png", "Every clean day,\nat a glance", "A calendar of your streaks and progress"),
+    ("cap_species.png", "Grow the tree\nyou choose", "Six bonsai species. Switch anytime, progress carries over"),
 ]
 
 
@@ -44,10 +44,9 @@ def rounded_mask(size, radius):
 def prep_screenshot(path):
     shot = Image.open(path).convert("RGB")
     w, h = shot.size
-    # Erase the "<- Sober Tracker" launch breadcrumb under the clock, keep 9:41.
+    # Erase the "<- Quit Zyn" launch breadcrumb under the clock, keep 9:41.
     bg = shot.getpixel((40, 24))
     ImageDraw.Draw(shot).rectangle([16, 92, int(w * 0.34), 170], fill=bg)
-    # Round the corners.
     radius = 96
     shot.putalpha(rounded_mask((w, h), radius))
     return shot
@@ -79,11 +78,14 @@ def draw_centered(draw, lines, fnt, top, fill, leading):
 
 
 def build(src, headline, subline, idx):
+    src_path = SCRATCH / src
+    if not src_path.exists():
+        raise FileNotFoundError(f"Missing raw capture: {src_path}")
+
     canvas = Image.new("RGB", (CW, CH), CREAM)
     draw = ImageDraw.Draw(canvas)
 
     head_f = font(SERIF, 112)
-    # Auto-fit the subline so the longest one never crowds the safe margins.
     sub_size = 50
     sub_f = font(SANS, sub_size)
     max_w = 1170
@@ -93,19 +95,17 @@ def build(src, headline, subline, idx):
 
     hlines = headline.split("\n")
     y = draw_centered(draw, hlines, head_f, 170, INK, 132)
-    # subline a bit below headline
     draw_centered(draw, [subline], sub_f, y + 28, WARMGRAY, 64)
 
-    shot = prep_screenshot(os.path.join(SCRATCH, src))
+    shot = prep_screenshot(src_path)
     dev = make_device(shot)
 
-    DEVICE_H = 2150
-    scale = DEVICE_H / dev.size[1]
-    dev = dev.resize((int(dev.size[0] * scale), DEVICE_H), Image.LANCZOS)
+    device_h = 2150
+    scale = device_h / dev.size[1]
+    dev = dev.resize((int(dev.size[0] * scale), device_h), Image.LANCZOS)
     dx = (CW - dev.size[0]) // 2
-    dy = CH - DEVICE_H + 70  # bleed slightly off the bottom
+    dy = CH - device_h + 70
 
-    # soft shadow
     shadow = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
     sh = Image.new("RGBA", dev.size, (0, 0, 0, 0))
     sh.paste((0, 0, 0, 120), (0, 0), dev.split()[3])
@@ -115,10 +115,22 @@ def build(src, headline, subline, idx):
 
     canvas.paste(dev, (dx, dy), dev)
 
-    out = os.path.join(OUT, f"store-{idx}.png")
+    out = OUT / f"store-{idx}.png"
     canvas.save(out)
     print("wrote", out, canvas.size)
 
 
-for i, (src, h, s) in enumerate(FRAMES, 1):
-    build(src, h, s, i)
+def main() -> int:
+    missing = [src for src, _, _ in FRAMES if not (SCRATCH / src).exists()]
+    if missing:
+        print("error: copy raw captures into", SCRATCH, file=sys.stderr)
+        for m in missing:
+            print(f"  missing {m}", file=sys.stderr)
+        return 1
+    for i, (src, h, s) in enumerate(FRAMES, 1):
+        build(src, h, s, i)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

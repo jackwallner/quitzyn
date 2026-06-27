@@ -1,932 +1,406 @@
 #!/usr/bin/env python3
-"""Native App Store copy for all 50 ASC locales (Sober). Source of truth for true multi-language."""
+"""Native App Store copy for all 50 ASC locales (Quit Zyn). Source of truth."""
 from __future__ import annotations
 
-# name ≤30, subtitle ≤30, keywords ≤100 (comma, no spaces)
-
-EN_DESCRIPTION = """Sober Tracker helps you stay alcohol free with a clear day counter, daily check-in, and a virtual garden that grows with every sober day.
-
-FREE TO START
-• Alcohol-free day counter — see days, hours, and your longest streak
-• Daily check-in — one tap to log how today feels
-• Sobriety calendar — sober days at a glance
-• Virtual garden — watch your progress bloom
-• Private on your device — no account required
-
-BLOOM+ (OPTIONAL)
-• Full health benefits timeline with sources
-• Journal with prompts
-• Achievements and milestones
-• Money and calories saved
-• More garden species
-• Apple Watch companion and home-screen widgets
-
-Whether you are quitting drinking, cutting back, or building dry days, Sober Tracker keeps recovery simple: count sober time, check in, and grow your garden.
-
-Download free. Upgrade to Bloom+ anytime."""
-
 LOCALES: dict[str, dict[str, str]] = {
-    "en-US": {
-        "name": "Sober Tracker - Alcohol Free",
-        "subtitle": "Dry Days: Sobriety Counter",
-        "keywords": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-        "description": EN_DESCRIPTION,
-    },
-    "en-GB": {
-        "name": "Sober Tracker - Alcohol Free",
-        "subtitle": "Dry Days: Sobriety Counter",
-        "keywords": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-        "description": EN_DESCRIPTION.replace("cutting back", "cutting down"),
-    },
-    "en-AU": {
-        "name": "Sober Tracker - Alcohol Free",
-        "subtitle": "Dry Days: Sobriety Counter",
-        "keywords": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-        "description": EN_DESCRIPTION,
-    },
-    "en-CA": {
-        "name": "Sober Tracker - Alcohol Free",
-        "subtitle": "Dry Days: Sobriety Counter",
-        "keywords": "drink,less,quit,stop,recovery,sobriety,addiction,relapse,cravings,mood,streak,abstinence,daily,clean",
-        "description": EN_DESCRIPTION,
-    },
-    "de-DE": {
-        "name": "Sober: Alkoholfrei Tracker",
-        "subtitle": "Trockene Tage & Garten",
-        "keywords": "trinken,weniger,aufhören,entzug,nüchtern,sucht,erholung,serie,abstinenz,rückfall,stimmung,streak",
-        "description": """Sober Tracker hilft dir, alkoholfrei zu bleiben – mit Tageszähler, täglichem Check-in und einem virtuellen Garten, der mit jedem nüchternen Tag wächst.
-
-KOSTENLOS STARTEN
-• Alkoholfreier Tageszähler – Tage, Stunden und längste Serie
-• Täglicher Check-in – ein Tippen für deinen Tag
-• Nüchternheitskalender – nüchterne Tage auf einen Blick
-• Virtueller Garten – sieh deinen Fortschritt wachsen
-• Privat auf dem Gerät – kein Konto nötig
-
-BLOOM+ (OPTIONAL)
-• Gesundheits-Timeline mit Quellen
-• Tagebuch mit Impulsen
-• Erfolge und Meilensteine
-• Geld und Kalorien gespart
-• Mehr Gartenarten
-• Apple Watch & Widgets
-
-Ob du aufhörst zu trinken, weniger trinkst oder trockene Tage sammelst: Sober Tracker macht es einfach.
-
-Kostenlos laden. Bloom+ jederzeit upgraden.""",
-    },
-    "fr-FR": {
-        "name": "Sober – Sans alcool",
-        "subtitle": "Jours secs & jardin",
-        "keywords": "boire,moins,arrêter,sevrage,abstinence,sevrer,sevrage,envie,rétablissement,dépendance,humeur",
-        "description": """Sober Tracker vous aide à rester sobre avec un compteur de jours, un check-in quotidien et un jardin virtuel qui grandit à chaque jour sans alcool.
-
-GRATUIT POUR COMMENCER
-• Compteur de jours sans alcool – jours, heures et plus longue série
-• Check-in quotidien – une touche pour noter votre journée
-• Calendrier de sobriété – vos jours sobres en un coup d'œil
-• Jardin virtuel – voyez vos progrès fleurir
-• Privé sur l'appareil – aucun compte requis
-
-BLOOM+ (OPTIONNEL)
-• Timeline santé complète avec sources
-• Journal avec suggestions
-• Succès et jalons
-• Argent et calories économisés
-• Plus d'espèces au jardin
-• Apple Watch et widgets
-
-Que vous arrêtiez de boire, réduisiez ou accumuliez des jours secs, Sober Tracker simplifie la reprise.
-
-Téléchargement gratuit. Passez à Bloom+ quand vous voulez.""",
-    },
-    "fr-CA": {
-        "name": "Sober – Sans alcool",
-        "subtitle": "Jours secs et jardin",
-        "keywords": "boire,moins,arrêter,sevrage,abstinence,rétablissement,envie,sevrer,dépendance,humeur,rechute",
-        "description": """Sober Tracker vous aide à rester sobre avec un compteur de jours, un check-in quotidien et un jardin virtuel qui grandit à chaque jour sans alcool.
-
-GRATUIT
-• Compteur de jours sans alcool
-• Check-in quotidien
-• Calendrier de sobriété
-• Jardin virtuel
-• Privé sur l'appareil – aucun compte
-
-BLOOM+ (OPTIONNEL)
-• Timeline santé, journal, succès
-• Économies et plus d'espèces au jardin
-• Apple Watch et widgets
-
-Téléchargement gratuit. Bloom+ en tout temps.""",
-    },
-    "es-ES": {
-        "name": "Sober – Sin alcohol",
-        "subtitle": "Días secos y jardín",
-        "keywords": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-        "description": """Sober Tracker te ayuda a mantenerte sobrio con contador de días, check-in diario y un jardín virtual que crece con cada día sin alcohol.
-
-GRATIS PARA EMPEZAR
-• Contador de días sin alcohol – días, horas y racha más larga
-• Check-in diario – un toque para registrar el día
-• Calendario de sobriedad – días sobrios de un vistazo
-• Jardín virtual – mira crecer tu progreso
-• Privado en el dispositivo – sin cuenta
-
-BLOOM+ (OPCIONAL)
-• Línea de salud completa con fuentes
-• Diario con sugerencias
-• Logros e hitos
-• Dinero y calorías ahorrados
-• Más especies en el jardín
-• Apple Watch y widgets
-
-Deja de beber, reduce o suma días secos: Sober Tracker lo hace simple.
-
-Descarga gratis. Mejora a Bloom+ cuando quieras.""",
-    },
-    "es-MX": {
-        "name": "Sober – Sin alcohol",
-        "subtitle": "Días secos y jardín",
-        "keywords": "beber,menos,dejar,adicción,antojo,abstinencia,recuperación,sobriedad,recaída,humor,raya",
-        "description": """Sober Tracker te ayuda a mantenerte sobrio con contador de días, check-in diario y un jardín virtual que crece cada día sin alcohol.
-
-GRATIS
-• Contador de días sin alcohol
-• Check-in diario
-• Calendario de sobriedad
-• Jardín virtual
-• Privado – sin cuenta
-
-BLOOM+ (OPCIONAL)
-• Salud, diario, logros, ahorros
-• Más jardín, Apple Watch y widgets
-
-Descarga gratis. Bloom+ cuando quieras.""",
-    },
-    "ca": {
-        "name": "Sober – Sense alcohol",
-        "subtitle": "Dies secs i jardí",
-        "keywords": "beure,menys,deixar,addicció,abstinència,recuperació,recaiguda,desig,humor,ratxa",
-        "description": """Sober Tracker t'ajuda a mantenir-te sobri amb comptador de dies, check-in diari i un jardí virtual que creix cada dia sense alcohol.
-
-GRATUÏT
-• Comptador de dies sense alcohol
-• Check-in diari i calendari de sobrietat
-• Jardí virtual
-• Privat al dispositiu
-
-BLOOM+ (OPCIONAL)
-• Salut, diari, assoliments, estalvis
-• Apple Watch i widgets
-
-Descarrega gratuïta. Bloom+ quan vulguis.""",
-    },
-    "it": {
-        "name": "Sober – Senza alcol",
-        "subtitle": "Giorni secchi: contatore",
-        "keywords": "bere,meno,smettere,astinenza,dipendenza,recupero,ricaduta,voglia,craving,umore,sbronzo",
-        "description": """Sober Tracker ti aiuta a restare sobrio con contatore dei giorni, check-in quotidiano e un giardino virtuale che cresce a ogni giorno senza alcol.
-
-GRATIS
-• Contatore giorni senza alcol – giorni, ore e serie più lunga
-• Check-in quotidiano
-• Calendario della sobrietà
-• Giardino virtuale
-• Privato sul dispositivo – nessun account
-
-BLOOM+ (OPZIONALE)
-• Timeline salute con fonti
-• Diario con spunti
-• Traguardi e risparmi
-• Apple Watch e widget
-
-Smetti di bere o accumula giorni secchi: Sober Tracker semplifica il percorso.
-
-Download gratuito. Bloom+ quando vuoi.""",
-    },
-    "pt-BR": {
-        "name": "Sober – Sem Álcool",
-        "subtitle": "Dias secos e jardim",
-        "keywords": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-        "description": """O Sober Tracker ajuda você a ficar sóbrio com contador de dias, check-in diário e um jardim virtual que cresce a cada dia sem álcool.
-
-GRÁTIS
-• Contador de dias sem álcool – dias, horas e maior sequência
-• Check-in diário
-• Calendário de sobriedade
-• Jardim virtual
-• Privado no dispositivo – sem conta
-
-BLOOM+ (OPCIONAL)
-• Linha do tempo de saúde
-• Diário com prompts
-• Conquistas e economia
-• Apple Watch e widgets
-
-Pare de beber ou some dias secos: o Sober Tracker simplifica.
-
-Download grátis. Bloom+ quando quiser.""",
-    },
-    "pt-PT": {
-        "name": "Sober – Sem Álcool",
-        "subtitle": "Dias secos e jardim",
-        "keywords": "beber,menos,parar,dependência,abstinência,recuperação,recaída,vontade,humor,tarja",
-        "description": """O Sober Tracker ajuda-o a manter-se sóbrio com contador de dias, check-in diário e um jardim virtual que cresce em cada dia sem álcool.
-
-GRÁTIS
-• Contador de dias sem álcool
-• Check-in diário e calendário
-• Jardim virtual
-• Privado no dispositivo
-
-BLOOM+ (OPCIONAL)
-• Saúde, diário, conquistas
-• Apple Watch e widgets
-
-Transferência gratuita. Bloom+ quando quiser.""",
-    },
-    "nl-NL": {
-        "name": "Sober – Alcoholvrij",
-        "subtitle": "Droge dagen en tuin",
-        "keywords": "stoppen,minder,drinken,verslaving,ontwenning,nuchter,herstel,terugval,verlangen,stemming,streak",
-        "description": """Sober Tracker helpt je alcoholvrij te blijven met een dagteller, dagelijkse check-in en een virtuele tuin die groeit bij elke nuchtere dag.
-
-GRATIS
-• Alcoholvrije dagteller – dagen, uren en langste reeks
-• Dagelijkse check-in
-• Nuchterheidskalender
-• Virtuele tuin
-• Privé op je apparaat – geen account
-
-BLOOM+ (OPTIONEEL)
-• Gezondheidstijdlijn, dagboek, prestaties
-• Apple Watch en widgets
-
-Gratis downloaden. Bloom+ wanneer je wilt.""",
-    },
-    "pl": {
-        "name": "Sober – Bez alkoholu",
-        "subtitle": "Suche dni i ogród",
-        "keywords": "pić,mniej,przestać,uzależnienie,abstynencja,odwyk,nawrót,głód,nastrój,pasmo",
-        "description": """Sober Tracker pomaga pozostać trzeźwym dzięki licznikowi dni, codziennemu check-inowi i wirtualnemu ogrodowi rosnącemu z każdym dniem bez alkoholu.
-
-ZA DARMO
-• Licznik dni bez alkoholu
-• Codzienny check-in
-• Kalendarz trzeźwości
-• Wirtualny ogród
-• Prywatnie na urządzeniu – bez konta
-
-BLOOM+ (OPCJONALNIE)
-• Oś czasu zdrowia, dziennik, osiągnięcia
-• Apple Watch i widżety
-
-Pobierz za darmo. Bloom+ w dowolnym momencie.""",
-    },
-    "sv": {
-        "name": "Sober – Alkoholfri",
-        "subtitle": "Torra dagar och trädgård",
-        "keywords": "dricka,mindre,sluta,beroende,abstinens,återhämtning,återfall,sug,humör,streak",
-        "description": """Sober Tracker hjälper dig att hålla dig alkoholfri med dagräknare, daglig check-in och en virtuell trädgård som växer för varje nykter dag.
-
-GRATIS
-• Alkoholfri dagräknare
-• Daglig check-in och nykterhetskalender
-• Virtuell trädgård
-• Privat på enheten
-
-BLOOM+ (VALFRITT)
-• Hälsotidslinje, dagbok, prestationer
-• Apple Watch och widgetar
-
-Ladda ner gratis. Bloom+ när du vill.""",
-    },
-    "da": {
-        "name": "Sober – Alkoholfri",
-        "subtitle": "Tørre dage og have",
-        "keywords": "drikke,mindre,stoppe,afhængighed,afholdenhed,bedring,tilbagefald,trang,humør,stribe",
-        "description": """Sober Tracker hjælper dig med at forblive alkoholfri med dagtæller, daglig check-in og en virtuel have, der vokser for hver ædru dag.
-
-GRATIS
-• Alkoholfri dagtæller
-• Daglig check-in og ædrukalender
-• Virtuel have
-• Privat på enheden
-
-BLOOM+ (VALGFRIT)
-• Sundhedstidslinje, dagbog, præstationer
-• Apple Watch og widgets
-
-Gratis download. Bloom+ når du vil.""",
-    },
-    "no": {
-        "name": "Sober – Alkoholfri",
-        "subtitle": "Tørre dager og hage",
-        "keywords": "drikke,mindre,slutte,avhengighet,avholdenhet,bedring,tilbakefall,sug,humør,streak",
-        "description": """Sober Tracker hjelper deg å holde deg alkoholfri med dagteller, daglig innsjekk og en virtuell hage som vokser for hver edru dag.
-
-GRATIS
-• Alkoholfri dagteller
-• Daglig innsjekk og edrukalender
-• Virtuell hage
-• Privat på enheten
-
-BLOOM+ (VALGFRITT)
-• Helsetidslinje, dagbok, prestasjoner
-• Apple Watch og widgeter
-
-Last ned gratis. Bloom+ når du vil.""",
-    },
-    "fi": {
-        "name": "Sober – Alkoholiton",
-        "subtitle": "Kuivat päivät ja puutarha",
-        "keywords": "juoda,vähemmän,lopettaa,riippuvuus,raittius,toipuminen,retkahdus,himo,mieli,pätkä",
-        "description": """Sober Tracker auttaa pysymään alkoholittomana päivälaskurilla, päivittäisellä kirjauksella ja virtuaalisella puutarhalla, joka kasvaa jokaisena raittiina päivänä.
-
-ILMAISEKSI
-• Alkoholiton päivälaskuri
-• Päivittäinen kirjaus ja raittiuskalenteri
-• Virtuaalinen puutarha
-• Yksityinen laitteella
-
-BLOOM+ (VALINNAINEN)
-• Terveysaikajana, päiväkirja, saavutukset
-• Apple Watch ja widgetit
-
-Lataa ilmaiseksi. Bloom+ milloin haluat.""",
-    },
-    "cs": {
-        "name": "Sober – Bez alkoholu",
-        "subtitle": "Suché dny: počítadlo",
-        "keywords": "pít,méně,přestat,závislost,abstinence,zotavení,relaps,chuť,nálada,pruh",
-        "description": """Sober Tracker vám pomůže zůstat střízliví díky počítadlu dní, dennímu check-inu a virtuální zahradě, která roste s každým střízlivým dnem.
-
-ZDARMA
-• Počítadlo dnů bez alkoholu
-• Denní check-in a kalendář střízlivosti
-• Virtuální zahrada
-• Soukromě v zařízení
-
-BLOOM+ (VOLITELNÉ)
-• Zdravotní časová osa, deník, úspěchy
-• Apple Watch a widgety
-
-Stáhněte zdarma. Bloom+ kdykoli.""",
-    },
-    "sk": {
-        "name": "Sober – Bez alkoholu",
-        "subtitle": "Suché dni: počítadlo",
-        "keywords": "piť,menej,prestať,závislosť,abstinencia,zotavenie,relaps,chuť,nálada,pruh",
-        "description": """Sober Tracker vám pomôže zostať triezvymi s počítadlom dní, denným check-inom a virtuálnou záhradou, ktorá rastie s každým triezvym dňom.
-
-ZADARMO
-• Počítadlo dní bez alkoholu
-• Denný check-in a kalendár
-• Virtuálna záhrada
-• Súkromne v zariadení
-
-BLOOM+ (VOLITEĽNÉ)
-• Zdravie, denník, úspechy
-• Apple Watch a widgety
-
-Stiahnite zadarmo. Bloom+ kedykoľvek.""",
-    },
-    "hu": {
-        "name": "Sober – Alkoholmentes",
-        "subtitle": "Száraz napok és kert",
-        "keywords": "inni,kevesebb,abbahagy,függőség,elvonás,felépülés,visszaesés,vágy,hangulat,sáv",
-        "description": """A Sober Tracker segít alkoholmentesen maradni napszámlálóval, napi check-innel és virtuális kerttel, amely minden józansági nappal növekszik.
-
-INGYENES
-• Alkoholmentes napszámláló
-• Napi check-in és józansági naptár
-• Virtuális kert
-• Privát az eszközön
-
-BLOOM+ (OPCIONÁLIS)
-• Egészségidővonal, napló, eredmények
-• Apple Watch és widgetek
-
-Töltsd le ingyen. Bloom+ bármikor.""",
-    },
-    "ro": {
-        "name": "Sober – Fără alcool",
-        "subtitle": "Zile uscate și grădină",
-        "keywords": "bea,puțin,opri,dependență,abstinență,recuperare,recădere,poftă,dispoziție,dungă",
-        "description": """Sober Tracker te ajută să rămâi sobri cu contor de zile, check-in zilnic și o grădină virtuală care crește la fiecare zi fără alcool.
-
-GRATUIT
-• Contor zile fără alcool
-• Check-in zilnic și calendar de sobrietate
-• Grădină virtuală
-• Privat pe dispozitiv
-
-BLOOM+ (OPȚIONAL)
-• Cronologie sănătate, jurnal, realizări
-• Apple Watch și widgeturi
-
-Descarcă gratuit. Bloom+ oricând.""",
-    },
-    "hr": {
-        "name": "Sober – Bez alkohola",
-        "subtitle": "Suhi dani i vrt",
-        "keywords": "piti,manje,prestati,ovisnost,apstinencija,oporavak,relaps,želja,raspoloženje,niz",
-        "description": """Sober Tracker pomaže ostati trijezan uz brojač dana, dnevni check-in i virtualni vrt koji raste sa svakim trijeznim danom.
-
-BESPLATNO
-• Brojač dana bez alkohola
-• Dnevni check-in i kalendar triježnosti
-• Virtualni vrt
-• Privatno na uređaju
-
-BLOOM+ (OPCIONALNO)
-• Zdravstvena vremenska crta, dnevnik
-• Apple Watch i widgeti
-
-Preuzmi besplatno. Bloom+ kad želiš.""",
-    },
-    "el": {
-        "name": "Sober – Χωρίς αλκοόλ",
-        "subtitle": "Ξηρές μέρες: μετρητής",
-        "keywords": "πίνω,λιγότερο,σταματώ,εξάρτηση,αποχή,ανάρρωση,υποτροπή,λαχτάρα,διάθεση,σειρά",
-        "description": """Το Sober Tracker σας βοηθά να μείνετε νηφάλιοι με μετρητή ημερών, καθημερινό check-in και εικονικό κήπο που μεγαλώνει κάθε νηφάλια μέρα.
-
-ΔΩΡΕΑΝ
-• Μετρητής ημερών χωρίς αλκοόλ
-• Καθημερινό check-in και ημερολόγιο νηηλιακότητας
-• Εικονικός κήπος
-• Ιδιωτικό στη συσκευή
-
-BLOOM+ (ΠΡΟΑΙΡΕΤΙΚΟ)
-• Χρονολόγιο υγείας, ημερολόγιο, επιτεύγματα
-• Apple Watch και widgets
-
-Δωρεάν λήψη. Bloom+ όποτε θέλετε.""",
-    },
-    "tr": {
-        "name": "Sober – Alkolsüz",
-        "subtitle": "Kuru günler ve bahçe",
-        "keywords": "içmek,az,bırakmak,bağımlılık,soğuma,iyileşme,nüks,istek,ruh,hali,seri",
-        "description": """Sober Tracker, gün sayacı, günlük check-in ve her ayık günde büyüyen sanal bahçe ile alkolsüz kalmanıza yardımcı olur.
-
-ÜCRETSİZ
-• Alkolsüz gün sayacı
-• Günlük check-in ve ayıklık takvimi
-• Sanal bahçe
-• Cihazda gizli – hesap gerekmez
-
-BLOOM+ (İSTEĞE BAĞLI)
-• Sağlık zaman çizelgesi, günlük, başarılar
-• Apple Watch ve widget'lar
-
-Ücretsiz indirin. Bloom+ istediğiniz zaman.""",
-    },
-    "ru": {
-        "name": "Sober – Без алкоголя",
-        "subtitle": "Сухие дни и сад",
-        "keywords": "пить,меньше,бросить,зависимость,воздержание,восстановление,срыв,тяга,настроение,серия",
-        "description": """Sober Tracker помогает оставаться трезвым: счётчик дней, ежедневный чек-ин и виртуальный сад, который растёт с каждым трезвым днём.
-
-БЕСПЛАТНО
-• Счётчик дней без алкоголя
-• Ежедневный чек-ин и календарь трезвости
-• Виртуальный сад
-• Приватно на устройстве — без аккаунта
-
-BLOOM+ (ОПЦИОНАЛЬНО)
-• Линия здоровья, дневник, достижения
-• Apple Watch и виджеты
-
-Скачайте бесплатно. Bloom+ в любое время.""",
-    },
-    "uk": {
-        "name": "Sober – Без алкоголю",
-        "subtitle": "Сухі дні та сад",
-        "keywords": "пити,менше,кинути,залежність,утримання,одужання,зрив,тяга,настрій,серія",
-        "description": """Sober Tracker допомагає залишатися тверезим: лічильник днів, щоденний чек-ін і віртуальний сад, що росте з кожним тверезим днем.
-
-БЕЗКОШТОВНО
-• Лічильник днів без алкоголю
-• Щоденний чек-ін і календар тверезості
-• Віртуальний сад
-• Приватно на пристрої
-
-BLOOM+ (ЗА БАЖАННЯМ)
-• Лінія здоров'я, щоденник, досягнення
-• Apple Watch і віджети
-
-Завантажте безкоштовно. Bloom+ будь-коли.""",
-    },
-    "ja": {
-        "name": "ソーバー：アルコールフリー",
-        "subtitle": "ドライデイズとガーデン",
-        "keywords": "飲む,減らす,禁酒,依存,断酒,回復,再発,渇望,気分,連続",
-        "description": """Sober Trackerは、日数カウンター、毎日のチェックイン、禁酒するたびに育つバーチャルガーデンで、アルコールフリーな生活を続けやすくします。
-
-無料で始める
-• アルコールフリーの日数カウンター（日・時間・最長連続）
-• 毎日のチェックイン
-• 禁酒カレンダー
-• バーチャルガーデン
-• 端末内でプライベート — アカウント不要
-
-BLOOM+（オプション）
-• 健康ベネフィットのタイムライン
-• 日記とプロンプト
-• 実績と節目
-• 節約額・カロリー
-• Apple Watchとウィジェット
-
-禁酒・減酒・乾いた日を積み重ねる — Sober Trackerがシンプルに支えます。
-
-無料ダウンロード。いつでもBloom+にアップグレード。""",
-    },
-    "ko": {
-        "name": "소버 – 무알코올",
-        "subtitle": "마른 날과 정원",
-        "keywords": "마시다,줄이다,끊다,중독,절주,회복,재발,갈망,기분,연속",
-        "description": """Sober Tracker는 일수 카운터, 매일 체크인, 금주할 때마다 자라는 가상 정원으로 금주 생활을 이어가게 돕습니다.
-
-무료로 시작
-• 무알코올 일수 카운터
-• 매일 체크인
-• 금주 캘린더
-• 가상 정원
-• 기기에만 저장 — 계정 불필요
-
-BLOOM+ (선택)
-• 건강 타임라인, 일기, 업적
-• Apple Watch 및 위젯
-
-금주·절주·마른 날 쌓기 — Sober Tracker가 단순하게 돕습니다.
-
-무료 다운로드. Bloom+는 언제든 업그레이드.""",
-    },
-    "zh-Hans": {
-        "name": "清醒助手 - 无酒精",
-        "subtitle": "干燥天数与花园",
-        "keywords": "喝,戒酒,少喝,上瘾,戒断,恢复,复发,渴望,心情,连续",
-        "description": """Sober Tracker 用天数计数器、每日签到和随戒酒天数成长的虚拟花园，帮你保持清醒。
-
-免费开始
-• 无酒精天数计数（天、小时、最长连续）
-• 每日签到
-• 清醒日历
-• 虚拟花园
-• 仅保存在设备上 — 无需账户
-
-BLOOM+（可选）
-• 完整健康时间线与来源
-• 日记与提示
-• 成就与里程碑
-• 节省金额与卡路里
-• Apple Watch 与小组件
-
-戒酒、减量或积累干燥天数 — Sober Tracker 让恢复更简单。
-
-免费下载，随时升级 Bloom+。""",
-    },
-    "zh-Hant": {
-        "name": "清醒助手 - 無酒精",
-        "subtitle": "乾燥天數與花園",
-        "keywords": "喝,戒酒,少喝,上癮,戒斷,恢復,復發,渴望,心情,連續",
-        "description": """Sober Tracker 用天數計數器、每日簽到和隨戒酒天數成長的虛擬花園，幫你保持清醒。
-
-免費開始
-• 無酒精天數計數
-• 每日簽到與清醒日曆
-• 虛擬花園
-• 僅保存在裝置上 — 無需帳戶
-
-BLOOM+（可選）
-• 健康時間線、日記、成就
-• Apple Watch 與小工具
-
-免費下載，隨時升級 Bloom+。""",
-    },
     "ar-SA": {
-        "name": "سوبر – بلا كحول",
-        "subtitle": "أيام جافة وحديقة",
-        "keywords": "شرب,أقل,إقلاع,إدمان,امتناع,تعافي,انتكاسة,شهوة,مزاج,سلسلة",
-        "description": """يساعدك Sober Tracker على البقاء بعيدًا عن الكحول بعداد الأيام، وتسجيل يومي، وحديقة افتراضية تنمو مع كل يوم متعافٍ.
-
-مجانًا للبدء
-• عداد أيام بدون كحول
-• تسجيل يومي وتقويم التعافي
-• حديقة افتراضية
-• خاص على جهازك — لا حاجة لحساب
-
-BLOOM+ (اختياري)
-• خط زمني للصحة، يوميات، إنجازات
-• Apple Watch وودجات
-
-حمّل مجانًا. ترقية Bloom+ في أي وقت.""",
-    },
-    "he": {
-        "name": "סובר – נטול אלכוהול",
-        "subtitle": "ימים יבשים וגינה",
-        "keywords": "שתייה,פחות,הפסקה,התמכרות,התנזרות,החלמה,נפילה,תשוקה,מצב,רוח,רצף",
-        "description": """Sober Tracker עוזר לך להישאר פיכח עם מונה ימים, צ'ק-אין יומי וגינה וירטואלית שגדלה בכל יום פיכח.
-
-בחינם
-• מונה ימים ללא אלכוהול
-• צ'ק-אין יומי ולוח פיכחות
-• גינה וירטואלית
-• פרטי במכשיר — ללא חשבון
-
-BLOOM+ (אופציונלי)
-• ציר זמן בריאות, יומן, הישגים
-• Apple Watch ווידג'טים
-
-הורדה חינם. Bloom+ בכל עת.""",
-    },
-    "hi": {
-        "name": "सोबर – शराब मुक्त",
-        "subtitle": "सूखे दिन और बगीचा",
-        "keywords": "पीना,कम,छोड़ना,लत,संयम,सुधार,पुनरावृत्ति,लालसा,मनोदशा,लकीर",
-        "description": """Sober Tracker दिन गिनती, दैनिक चेक-इन और हर शराब-मुक्त दिन पर बढ़ने वाले वर्चुअल बगीचे से आपको शराब-मुक्त रहने में मदद करता है।
-
-मुफ़्त शुरू करें
-• शराब-मुक्त दिन काउंटर
-• दैनिक चेक-इन और कैलेंडर
-• वर्चुअल बगीचा
-• डिवाइस पर निजी — खाता नहीं
-
-BLOOM+ (वैकल्पिक)
-• स्वास्थ्य टाइमलाइन, जर्नल, उपलब्धियां
-• Apple Watch और विजेट
-
-मुफ़्त डाउनलोड। कभी भी Bloom+ अपग्रेड करें।""",
-    },
-    "th": {
-        "name": "โซเบอร์ – ไร้แอลกอฮอล์",
-        "subtitle": "วันแห้งและสวน",
-        "keywords": "ดื่ม,น้อย,เลิก,ติด,เหล้า,เลิก,เหล้า,หาย,อยาก,อารมณ์, streak",
-        "description": """Sober Tracker ช่วยคุณเลิกดื่มด้วยตัวนับวัน เช็คอินรายวัน และสวนเสมือนที่เติบโตทุกวันที่ไม่ดื่ม
-
-ฟรี
-• ตัวนับวันไม่ดื่มแอลกอฮอล์
-• เช็คอินและปฏิทินความกลับใจ
-• สวนเสมือน
-• ส่วนตัวบนอุปกรณ์
-
-BLOOM+ (ทางเลือก)
-• ไทม์ไลน์สุขภาพ ไดอารี่ ความสำเร็จ
-• Apple Watch และวิดเจ็ต
-
-ดาวน์โหลดฟรี อัปเกรด Bloom+ ได้ทุกเมื่อ""",
-    },
-    "vi": {
-        "name": "Sober – Không cồn",
-        "subtitle": "Ngày khô và vườn",
-        "keywords": "uống,ít,cai,nghiện,kiêng,phục,hồi,tái,phát,thèm,tâm,trạng,chuỗi",
-        "description": """Sober Tracker giúp bạn cai rượu với bộ đếm ngày, check-in hàng ngày và khu vườn ảo lớn lên mỗi ngày không uống.
-
-MIỄN PHÍ
-• Đếm ngày không cồn
-• Check-in và lịch cai rượu
-• Vườn ảo
-• Riêng tư trên thiết bị
-
-BLOOM+ (TÙY CHỌN)
-• Dòng thời gian sức khỏe, nhật ký
-• Apple Watch và widget
-
-Tải miễn phí. Nâng cấp Bloom+ bất cứ lúc nào.""",
-    },
-    "id": {
-        "name": "Sober – Bebas Alkohol",
-        "subtitle": "Hari kering: kira sedar",
-        "keywords": "minum,sedikit,berhenti,kecanduan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-        "description": """Sober Tracker membantu Anda tetap bebas alkohol dengan penghitung hari, check-in harian, dan taman virtual yang tumbuh setiap hari tanpa minum.
-
-GRATIS
-• Penghitung hari bebas alkohol
-• Check-in harian dan kalender
-• Taman virtual
-• Privat di perangkat
-
-BLOOM+ (OPSIONAL)
-• Linimasa kesehatan, jurnal, pencapaian
-• Apple Watch dan widget
-
-Unduh gratis. Bloom+ kapan saja.""",
-    },
-    "ms": {
-        "name": "Sober – Bebas Alkohol",
-        "subtitle": "Hari kering: kira sedar",
-        "keywords": "minum,kurang,berhenti,ketagihan,pantang,pemulihan,kambuh,hasrat,suasana,hati,streak",
-        "description": """Sober Tracker membantu anda kekal tanpa alkohol dengan pembilang hari, daftar masuk harian dan taman maya yang membesar setiap hari tanpa minum.
-
-PERCUMA
-• Pembilang hari tanpa alkohol
-• Daftar masuk dan kalendar
-• Taman maya
-• Peribadi pada peranti
-
-BLOOM+ (PILIHAN)
-• Garis masa kesihatan, diari
-• Apple Watch dan widget
-
-Muat turun percuma. Bloom+ bila-bila masa.""",
+        "name": "كيت زين – بلا نيكوتين",
+        "subtitle": "أيام بلا نيكوتين",
+        "keywords": "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
+        "description": "يساعدك Quit Zyn على البقاء بعيدًا عن النيكوتين بعداد الأيام، وتسجيل يومي، وحديقة افتراضية تنمو مع كل يوم متعافٍ.\n\nمجانًا للبدء\n• عداد أيام بدون نيكوتين\n• تسجيل يومي وتقويم التعافي\n• حديقة افتراضية\n• خاص على جهازك ,  لا حاجة لحساب\n\nBLOOM+ (اختياري)\n• خط زمني للصحة، يوميات، إنجازات\n• Apple Watch وودجات\n\nحمّل مجانًا. ترقية Bloom+ في أي وقت.",
+        "promotional": "احسب كل يوم بدون نيكوتين، سجّل مرة واحدة يوميًا، وشاهد حديقتك تزدهر مع نمو سلسلتك. خاص وبسيط ومجاني للبدء. لا حاجة لحساب.",
+        "release_notes": "الإصدار الأول. تتبع أيامك الخالية من النيكوتين، أنمِ حديقتك وشاهد صحتك تعود خطوة بخطوة. شكرًا لوجودك معنا.",
     },
     "bn-BD": {
-        "name": "সোবার – মদ ছাড়া",
-        "subtitle": "শুষ্ক দিন ও বাগান",
-        "keywords": "পান,কম,ছাড়া,আসক্তি,সংযম,পুনরুদ্ধার,পুনরাবৃত্তি,লালসা,মেজাজ,ধারা",
-        "description": """Sober Tracker দিন গণনা, দৈনিক চেক-ইন এবং প্রতিটি মদমুক্ত দিনে বেড়ে ওঠা ভার্চুয়াল বাগান দিয়ে আপনাকে মদমুক্ত থাকতে সাহায্য করে।
-
-বিনামূল্যে
-• মদমুক্ত দিন গণনা
-• দৈনিক চেক-ইন ও ক্যালেন্ডার
-• ভার্চুয়াল বাগান
-• ডিভাইসে ব্যক্তিগত
-
-BLOOM+ (ঐচ্ছিক)
-• স্বাস্থ্য টাইমলাইন, ডায়েরি
-• Apple Watch ও উইজেট
-
-বিনামূল্যে ডাউনলোড। যেকোনো সময় Bloom+।""",
+        "name": "কুইট জিন – নিকোটিন মুক্ত",
+        "subtitle": "নিকোটিন মুক্ত দিন গণনা",
+        "keywords": "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
+        "description": "Quit Zyn দিন গণনা, দৈনিক চেক-ইন এবং প্রতিটি নিকোটিন মুক্ত দিনে বেড়ে ওঠা ভার্চুয়াল বাগান দিয়ে আপনাকে নিকোটিন মুক্ত থাকতে সাহায্য করে।\n\nবিনামূল্যে\n• নিকোটিন মুক্ত দিন গণনা\n• দৈনিক চেক-ইন ও ক্যালেন্ডার\n• ভার্চুয়াল বাগান\n• ডিভাইসে ব্যক্তিগত\n\nBLOOM+ (ঐচ্ছিক)\n• স্বাস্থ্য টাইমলাইন, ডায়েরি\n• Apple Watch ও উইজেট\n\nবিনামূল্যে ডাউনলোড। যেকোনো সময় Bloom+।",
+        "promotional": "প্রতিটি নিকোটিন মুক্ত দিন গণনা করুন, দিনে একবার চেক-ইন করুন এবং আপনার ধারা বাড়ার সাথে বাগান ফুটতে দেখুন। ব্যক্তিগত, সহজ ও বিনামূল্যে শুরু। কোনো অ্যাকাউন্ট লাগে না।",
+        "release_notes": "প্রথম রিলিজ। নিকোটিন-মুক্ত দিন গণনা করুন, বাগান বাড়ান এবং স্বাস্থ্য ধীরে ধীরে ফিরে আসতে দেখুন। এখানে থাকার জন্য ধন্যবাদ।",
+    },
+    "ca": {
+        "name": "Quit Zyn – Sense nicotina",
+        "subtitle": "Dies sense nicotina",
+        "keywords": "bosses,vape,deixar,addicció,abstinència,recuperació,nicotina,hàbit,diari,app,velo",
+        "description": "Quit Zyn t'ajuda a mantenir-te sense nicotina amb comptador de dies, check-in diari i un jardí virtual que creix cada dia sense nicotina.\n\nGRATUÏT\n• Comptador de dies sense nicotina\n• Check-in diari i calendari de sense nicotinaetat\n• Jardí virtual\n• Privat al dispositiu\n\nBLOOM+ (OPCIONAL)\n• Salut, diari, assoliments, estalvis\n• Apple Watch i widgets\n\nDescarrega gratuïta. Bloom+ quan vulguis.",
+        "promotional": "Compta cada dia sense nicotina, fes un check-in diari i mira créixer el teu jardí amb la ratxa. Privat, senzill i gratis per començar. Sense compte.",
+        "release_notes": "Primera versió. Compta els dies sense nicotina, fes créixer el jardí i mira com torna la salut, pas a pas. Gràcies per ser-hi.",
+    },
+    "cs": {
+        "name": "Quit Zyn – Bez nikotinu",
+        "subtitle": "Dny bez nikotinu",
+        "keywords": "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
+        "description": "Quit Zyn vám pomůže zůstat střízliví díky počítadlu dní, dennímu check-inu a virtuální zahradě, která roste s každým střízlivým dnem.\n\nZDARMA\n• Počítadlo dnů bez nikotinu\n• Denní check-in a kalendář střízlivosti\n• Virtuální zahrada\n• Soukromě v zařízení\n\nBLOOM+ (VOLITELNÉ)\n• Zdravotní časová osa, deník, úspěchy\n• Apple Watch a widgety\n\nStáhněte zdarma. Bloom+ kdykoli.",
+        "promotional": "Počítejte každý den bez nikotinu, jednou denně se přihlaste a sledujte, jak vaše zahrada rozkvétá. Soukromé, jednoduché a zdarma na začátek. Bez účtu.",
+        "release_notes": "První vydání. Počítejte dny bez nikotinu, nechte zahradu růst a sledujte návrat zdraví krok za krokem. Děkujeme, že jste s námi.",
+    },
+    "da": {
+        "name": "Quit Zyn – Nikotinfri",
+        "subtitle": "Dage uden nikotin",
+        "keywords": "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
+        "description": "Quit Zyn hjælper dig med at forblive nikotinfri med dagtæller, daglig check-in og en virtuel have, der vokser for hver ædru dag.\n\nGRATIS\n• Alkoholfri dagtæller\n• Daglig check-in og ædrukalender\n• Virtuel have\n• Privat på enheden\n\nBLOOM+ (VALGFRIT)\n• Sundhedstidslinje, dagbog, præstationer\n• Apple Watch og widgets\n\nGratis download. Bloom+ når du vil.",
+        "promotional": "Tæl hver nikotinfri dag, tjek ind én gang om dagen, og se din have blomstre, når din stime vokser. Privat, enkel og gratis at starte. Ingen konto nødvendig.",
+        "release_notes": "Første udgivelse. Tæl nikotinfrie dage, lad haven vokse og se sundheden vende tilbage trin for trin. Tak fordi du er med.",
+    },
+    "de-DE": {
+        "name": "Quit Zyn – Nikotinfrei",
+        "subtitle": "Tagezähler & Garten",
+        "keywords": "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,nikotin,aufhören,kauen,velo,app",
+        "description": "Quit Zyn hilft dir, nikotinfrei zu bleiben, mit Tageszähler, täglichem Check-in und einem virtuellen Garten, der mit jedem nikotinfreien Tag wächst.\n\nKOSTENLOS STARTEN\n• Nikotinfreier Tageszähler, Tage, Stunden und längste Serie\n• Täglicher Check-in, ein Tippen für deinen Tag\n• Nikotinfreiheitskalender, nikotinfreie Tage auf einen Blick\n• Virtueller Garten, sieh deinen Fortschritt wachsen\n• Privat auf dem Gerät, kein Konto nötig\n\nBLOOM+ (OPTIONAL)\n• Gesundheits-Timeline mit Quellen\n• Tagebuch mit Impulsen\n• Erfolge und Meilensteine\n• Geld und Kalorien gespart\n• Mehr Gartenarten\n• Apple Watch & Widgets\n\nOb du aufhörst zu Beutel, weniger trinkst oder trockene Tage sammelst: Quit Zyn macht es einfach.\n\nKostenlos laden. Bloom+ jederzeit upgraden.",
+        "promotional": "Zähle jeden nikotinfreien Tag, mach täglich einen Check-in und sieh deinen Garten erblühen, während deine Serie wächst. Privat, einfach, kostenlos. Kein Konto nötig.",
+        "release_notes": "Erstveröffentlichung. Zähle nikotinfreie Tage, lass deinen Garten wachsen und sieh deine Gesundheit Schritt für Schritt zurückkehren. Danke, dass du dabei bist.",
+    },
+    "el": {
+        "name": "Quit Zyn – Χωρίς νικοτίνη",
+        "subtitle": "Ημέρες χωρίς νικοτίνη",
+        "keywords": "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
+        "description": "Το Quit Zyn σας βοηθά να μείνετε νηφάλιοι με μετρητή ημερών, καθημερινό check-in και εικονικό κήπο που μεγαλώνει κάθε νηφάλια μέρα.\n\nΔΩΡΕΑΝ\n• Μετρητής ημερών χωρίς νικοτίνη\n• Καθημερινό check-in και ημερολόγιο νηηλιακότητας\n• Εικονικός κήπος\n• Ιδιωτικό στη συσκευή\n\nBLOOM+ (ΠΡΟΑΙΡΕΤΙΚΟ)\n• Χρονολόγιο υγείας, ημερολόγιο, επιτεύγματα\n• Apple Watch και widgets\n\nΔωρεάν λήψη. Bloom+ όποτε θέλετε.",
+        "promotional": "Μετρήστε κάθε μέρα χωρίς νικοτίνη, κάντε check-in μία φορά την ημέρα και δείτε τον κήπο σας να ανθίζει. Ιδιωτικό, απλό και δωρεάν στην αρχή. Χωρίς λογαριασμό.",
+        "release_notes": "Πρώτη έκδοση. Μετρήστε τις ημέρες χωρίς νικοτίνη, αναπτύξτε τον κήπο και δείτε την υγεία να επιστρέφει βήμα βήμα. Ευχαριστούμε που είστε εδώ.",
+    },
+    "en-AU": {
+        "name": "Quit Zyn: Pouch & Snus Tracker",
+        "subtitle": "Nicotine Free: Day Counter",
+        "keywords": "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "description": "Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.\n\nIf you want one calm place to see how far you've come and keep going, this is that app.\n\nYOUR PROGRESS AT A GLANCE (FREE)\n- Day counter showing days, hours, and your longest streak.\n- One-tap daily check-in to log how today feels.\n- Calendar with every nicotine-free day at a glance.\n- Milestone moments that arrive as the days add up.\n\nA GARDEN THAT GROWS WITH YOU (FREE)\n- A virtual garden that blooms with every nicotine-free day.\n- New growth appears as your streak builds.\n- A living reminder of how far you've come.\n\nON YOUR HOME SCREEN & APPLE WATCH (FREE)\n- Home Screen and Lock Screen widgets with your day count.\n- Apple Watch companion to check in and see your streak.\n- Your progress visible without opening the app.\n\nPRIVATE BY DESIGN (FREE)\n- All your data stays on your device.\n- No account required. No ads. No tracking. No servers.\n- Your journey stays yours.\n\nBLOOM+ (OPTIONAL)\nA small upgrade unlocks the full experience:\n- Complete nicotine recovery timeline with sources\n- Journaling with guided prompts\n- Achievements and milestone unlocks\n- Money, pouches, and nicotine avoided since day one\n- More garden species to grow\nA free trial is offered to new subscribers.\n\nWhether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.\n\nDownload free today.\n\nSubscription Details\nBloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.\n\nPrivacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html\nTerms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "promotional": "Count each nicotine-free day, check in daily, and watch your garden bloom. Quit Zyn, pouches, vaping or dip. Private, simple, and free to start.",
+        "release_notes": "First release. Track your nicotine-free days, grow your garden, and watch your health recover one milestone at a time. Thank you for being here.",
+    },
+    "en-CA": {
+        "name": "Quit Zyn: Pouch & Snus Tracker",
+        "subtitle": "Nicotine Free: Day Counter",
+        "keywords": "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "description": "Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.\n\nIf you want one calm place to see how far you've come and keep going, this is that app.\n\nYOUR PROGRESS AT A GLANCE (FREE)\n- Day counter showing days, hours, and your longest streak.\n- One-tap daily check-in to log how today feels.\n- Calendar with every nicotine-free day at a glance.\n- Milestone moments that arrive as the days add up.\n\nA GARDEN THAT GROWS WITH YOU (FREE)\n- A virtual garden that blooms with every nicotine-free day.\n- New growth appears as your streak builds.\n- A living reminder of how far you've come.\n\nON YOUR HOME SCREEN & APPLE WATCH (FREE)\n- Home Screen and Lock Screen widgets with your day count.\n- Apple Watch companion to check in and see your streak.\n- Your progress visible without opening the app.\n\nPRIVATE BY DESIGN (FREE)\n- All your data stays on your device.\n- No account required. No ads. No tracking. No servers.\n- Your journey stays yours.\n\nBLOOM+ (OPTIONAL)\nA small upgrade unlocks the full experience:\n- Complete nicotine recovery timeline with sources\n- Journaling with guided prompts\n- Achievements and milestone unlocks\n- Money, pouches, and nicotine avoided since day one\n- More garden species to grow\nA free trial is offered to new subscribers.\n\nWhether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.\n\nDownload free today.\n\nSubscription Details\nBloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.\n\nPrivacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html\nTerms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "promotional": "Count each nicotine-free day, check in daily, and watch your garden bloom. Quit Zyn, pouches, vaping or dip. Private, simple, and free to start.",
+        "release_notes": "First release. Track your nicotine-free days, grow your garden, and watch your health recover one milestone at a time. Thank you for being here.",
+    },
+    "en-GB": {
+        "name": "Quit Zyn: Pouch & Snus Tracker",
+        "subtitle": "Nicotine Free: Day Counter",
+        "keywords": "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "description": "Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.\n\nIf you want one calm place to see how far you've come and keep going, this is that app.\n\nYOUR PROGRESS AT A GLANCE (FREE)\n- Day counter showing days, hours, and your longest streak.\n- One-tap daily check-in to log how today feels.\n- Calendar with every nicotine-free day at a glance.\n- Milestone moments that arrive as the days add up.\n\nA GARDEN THAT GROWS WITH YOU (FREE)\n- A virtual garden that blooms with every nicotine-free day.\n- New growth appears as your streak builds.\n- A living reminder of how far you've come.\n\nON YOUR HOME SCREEN & APPLE WATCH (FREE)\n- Home Screen and Lock Screen widgets with your day count.\n- Apple Watch companion to check in and see your streak.\n- Your progress visible without opening the app.\n\nPRIVATE BY DESIGN (FREE)\n- All your data stays on your device.\n- No account required. No ads. No tracking. No servers.\n- Your journey stays yours.\n\nBLOOM+ (OPTIONAL)\nA small upgrade unlocks the full experience:\n- Complete nicotine recovery timeline with sources\n- Journaling with guided prompts\n- Achievements and milestone unlocks\n- Money, pouches, and nicotine avoided since day one\n- More garden species to grow\nA free trial is offered to new subscribers.\n\nWhether you're quitting Zyn, cutting down on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.\n\nDownload free today.\n\nSubscription Details\nBloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.\n\nPrivacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html\nTerms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "promotional": "Count each nicotine-free day, check in daily, and watch your garden bloom. Quit Zyn, pouches, vaping or dip. Private, simple, and free to start.",
+        "release_notes": "First release. Track your nicotine-free days, grow your garden, and watch your health recover one milestone at a time. Thank you for being here.",
+    },
+    "en-US": {
+        "name": "Quit Zyn: Pouch & Snus Tracker",
+        "subtitle": "Nicotine Free: Day Counter",
+        "keywords": "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "description": "Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.\n\nIf you want one calm place to see how far you've come and keep going, this is that app.\n\nYOUR PROGRESS AT A GLANCE (FREE)\n- Day counter showing days, hours, and your longest streak.\n- One-tap daily check-in to log how today feels.\n- Calendar with every nicotine-free day at a glance.\n- Milestone moments that arrive as the days add up.\n\nA GARDEN THAT GROWS WITH YOU (FREE)\n- A virtual garden that blooms with every nicotine-free day.\n- New growth appears as your streak builds.\n- A living reminder of how far you've come.\n\nON YOUR HOME SCREEN & APPLE WATCH (FREE)\n- Home Screen and Lock Screen widgets with your day count.\n- Apple Watch companion to check in and see your streak.\n- Your progress visible without opening the app.\n\nPRIVATE BY DESIGN (FREE)\n- All your data stays on your device.\n- No account required. No ads. No tracking. No servers.\n- Your journey stays yours.\n\nBLOOM+ (OPTIONAL)\nA small upgrade unlocks the full experience:\n- Complete nicotine recovery timeline with sources\n- Journaling with guided prompts\n- Achievements and milestone unlocks\n- Money, pouches, and nicotine avoided since day one\n- More garden species to grow\nA free trial is offered to new subscribers.\n\nWhether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.\n\nDownload free today.\n\nSubscription Details\nBloom+ is available as an auto-renewing subscription (Monthly $4.99 / Yearly $29.99 with a 7-day free trial) or a one-time Lifetime purchase ($59.99). Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.\n\nPrivacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html\nTerms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "promotional": "Count each nicotine-free day, check in daily, and watch your garden bloom. Quit Zyn, pouches, vaping or dip. Private, simple, and free to start.",
+        "release_notes": "First release. Track your nicotine-free days, grow your garden, and watch your health recover one milestone at a time. Thank you for being here.",
+    },
+    "es-ES": {
+        "name": "Quit Zyn – Sin nicotina",
+        "subtitle": "Días sin nicotina",
+        "keywords": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,nicotina,habito,diario,app",
+        "description": "Quit Zyn te ayuda a mantenerte sin nicotina con contador de días, check-in diario y un jardín virtual que crece con cada día sin nicotina.\n\nGRATIS PARA EMPEZAR\n• Contador de días sin nicotina, días, horas y racha más larga\n• Check-in diario, un toque para registrar el día\n• Calendario de sin nicotina, días sin nicotinas de un vistazo\n• Jardín virtual, mira crecer tu progreso\n• Privado en el dispositivo, sin cuenta\n\nBLOOM+ (OPCIONAL)\n• Línea de salud completa con fuentes\n• Diario con sugerencias\n• Logros e hitos\n• Dinero y calorías ahorrados\n• Más especies en el jardín\n• Apple Watch y widgets\n\nDeja de bolsitas, reduce o suma días secos: Quit Zyn lo hace simple.\n\nDescarga gratis. Mejora a Bloom+ cuando quieras.",
+        "promotional": "Cuenta cada día sin nicotina, regístrate una vez al día y mira florecer tu jardín al crecer tu racha. Privado, simple y gratis para empezar. Sin cuenta.",
+        "release_notes": "Primer lanzamiento. Cuenta tus días sin nicotina, haz crecer tu jardín y mira recuperarse tu salud, hito a hito. Gracias por estar aquí.",
+    },
+    "es-MX": {
+        "name": "Quit Zyn – Sin nicotina",
+        "subtitle": "Días sin nicotina",
+        "keywords": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,nicotina,habito,diario,app",
+        "description": "Quit Zyn te ayuda a mantenerte sin nicotina con contador de días, check-in diario y un jardín virtual que crece cada día sin nicotina.\n\nGRATIS\n• Contador de días sin nicotina\n• Check-in diario\n• Calendario de sin nicotina\n• Jardín virtual\n• Privado, sin cuenta\n\nBLOOM+ (OPCIONAL)\n• Salud, diario, logros, ahorros\n• Más jardín, Apple Watch y widgets\n\nDescarga gratis. Bloom+ cuando quieras.",
+        "promotional": "Cuenta cada día sin nicotina, haz un check-in diario y mira florecer tu jardín al crecer tu racha. Privado, simple y gratis para empezar. Sin cuenta.",
+        "release_notes": "Primer lanzamiento. Cuenta tus días sin nicotina, haz crecer tu jardín y mira recuperarse tu salud. Gracias por estar aquí.",
+    },
+    "fi": {
+        "name": "Quit Zyn – Nikotiiniton",
+        "subtitle": "Päivät ilman nikotiinia",
+        "keywords": "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
+        "description": "Quit Zyn auttaa pysymään nikotiinittomana päivälaskurilla, päivittäisellä kirjauksella ja virtuaalisella puutarhalla, joka kasvaa jokaisena raittiina päivänä.\n\nILMAISEKSI\n• Alkoholiton päivälaskuri\n• Päivittäinen kirjaus ja raittiuskalenteri\n• Virtuaalinen puutarha\n• Yksityinen laitteella\n\nBLOOM+ (VALINNAINEN)\n• Terveysaikajana, päiväkirja, saavutukset\n• Apple Watch ja widgetit\n\nLataa ilmaiseksi. Bloom+ milloin haluat.",
+        "promotional": "Laske jokainen nikotiiniton päivä, tee kirjaus kerran päivässä ja katso puutarhasi kukkivan putken kasvaessa. Yksityinen, yksinkertainen ja ilmainen aloittaa. Ei tiliä.",
+        "release_notes": "Ensimmäinen julkaisu. Laske nikotiinittömiä päiviä, kasvata puutarhaa ja seuraa terveytesi palautumista askel askeleelta. Kiitos, että olet mukana.",
+    },
+    "fr-CA": {
+        "name": "Quit Zyn – Sans nicotine",
+        "subtitle": "Compteur jours sans nicotine",
+        "keywords": "sachet,vape,sevrage,envie,habitude,journal,nicotine,arrêter,serie,libre,velo,app",
+        "description": "Quit Zyn vous aide à rester sans nicotine avec un compteur de jours, un check-in quotidien et un jardin virtuel qui grandit à chaque jour sans nicotine.\n\nGRATUIT\n• Compteur de jours sans nicotine\n• Check-in quotidien\n• Calendrier de sans nicotine\n• Jardin virtuel\n• Privé sur l'appareil, aucun compte\n\nBLOOM+ (OPTIONNEL)\n• Timeline santé, journal, succès\n• Économies et plus d'espèces au jardin\n• Apple Watch et widgets\n\nTéléchargement gratuit. Bloom+ en tout temps.",
+        "promotional": "Comptez chaque jour sans nicotine, faites un check-in quotidien et regardez votre jardin fleurir au fil de votre série. Privé, simple et gratuit. Aucun compte requis.",
+        "release_notes": "Première version. Comptez vos jours sans nicotine, faites grandir votre jardin et regardez votre santé revenir. Merci d'être là.",
+    },
+    "fr-FR": {
+        "name": "Quit Zyn – Sans nicotine",
+        "subtitle": "Compteur jours sans nicotine",
+        "keywords": "sachet,vape,sevrage,envie,habitude,journal,nicotine,arrêter,serie,libre,velo,app",
+        "description": "Quit Zyn vous aide à rester sans nicotine avec un compteur de jours, un check-in quotidien et un jardin virtuel qui grandit à chaque jour sans nicotine.\n\nGRATUIT POUR COMMENCER\n• Compteur de jours sans nicotine, jours, heures et plus longue série\n• Check-in quotidien, une touche pour noter votre journée\n• Calendrier de sans nicotine, vos jours sans nicotines en un coup d'œil\n• Jardin virtuel, voyez vos progrès fleurir\n• Privé sur l'appareil, aucun compte requis\n\nBLOOM+ (OPTIONNEL)\n• Timeline santé complète avec sources\n• Journal avec suggestions\n• Succès et jalons\n• Argent et calories économisés\n• Plus d'espèces au jardin\n• Apple Watch et widgets\n\nQue vous arrêtiez de sachets, réduisiez ou accumuliez des jours secs, Quit Zyn simplifie la reprise.\n\nTéléchargement gratuit. Passez à Bloom+ quand vous voulez.",
+        "promotional": "Comptez chaque jour sans nicotine, faites un point quotidien et regardez votre jardin fleurir au fil de votre série. Privé, simple et gratuit. Aucun compte requis.",
+        "release_notes": "Première version. Comptez vos jours sans nicotine, faites grandir votre jardin et regardez votre santé revenir, étape par étape. Merci d'être là.",
     },
     "gu-IN": {
-        "name": "સોબર – દારૂ મુક્ત",
-        "subtitle": "સૂકા દિવસ અને બગીચો",
-        "keywords": "પીવું,ઓછું,છોડવું,વ્યસન,ત્યાગ,પુનઃપ્રાપ્તિ,પુનરાવર્તન,તૃષ્ણા,મૂડ,શ્રેણી",
-        "description": """Sober Tracker દિવસ ગણતરી, દૈનિક ચેક-ઇન અને દરેક મદમુક્ત દિવસે વધતા વર્ચુઅલ બગીચાથી તમને મદમુક્ત રાખવામાં મદદ કરે છે.
-
-મફત
-• મદમુક્ત દિવસ કાઉન્ટર
-• દૈનિક ચેક-ઇન અને કેલેન્ડર
-• વર્ચુઅલ બગીચો
-• ઉપકરણ પર ખાનગી
-
-BLOOM+ (વૈકલ્પિક)
-• આરોગ્ય, ડાયરી, સિદ્ધિઓ
-• Apple Watch અને વિજેટ
-
-મફત ડાઉનલોડ. Bloom+ ક્યારે પણ.""",
+        "name": "ક્વિટ ઝિન – નિકોટિન મુક્ત",
+        "subtitle": "નિકોટિન મુક્ત દિવસ ગણતરી",
+        "keywords": "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
+        "description": "Quit Zyn દિવસ ગણતરી, દૈનિક ચેક-ઇન અને દરેક મદમુક્ત દિવસે વધતા વર્ચુઅલ બગીચાથી તમને મદમુક્ત રાખવામાં મદદ કરે છે.\n\nમફત\n• મદમુક્ત દિવસ કાઉન્ટર\n• દૈનિક ચેક-ઇન અને કેલેન્ડર\n• વર્ચુઅલ બગીચો\n• ઉપકરણ પર ખાનગી\n\nBLOOM+ (વૈકલ્પિક)\n• આરોગ્ય, ડાયરી, સિદ્ધિઓ\n• Apple Watch અને વિજેટ\n\nમફત ડાઉનલોડ. Bloom+ ક્યારે પણ.",
+        "promotional": "દરેક નિકોટિન-મુક્ત દિવસ ગણો, દિવસમાં એક વાર ચેક-ઇન કરો અને તમારી શ્રેણી વધતાં બગીચો ખીલતો જુઓ. ખાનગી, સરળ અને મફતમાં શરૂ કરો. કોઈ ખાતાની જરૂર નથી.",
+        "release_notes": "પ્રથમ રિલીઝ. નિકોટિન-મુક્ત દિવસો ગણો, બગીચો વધારો અને સ્વાસ્થ્ય ધીમે ધીમે પાછું આવતું જુઓ. અહીં હોવા બદલ આભાર.",
+    },
+    "he": {
+        "name": "קוויט זין – ללא ניקוטין",
+        "subtitle": "ימים ללא ניקוטין",
+        "keywords": "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
+        "description": "Quit Zyn עוזר לך להישאר פיכח עם מונה ימים, צ'ק-אין יומי וגינה וירטואלית שגדלה בכל יום פיכח.\n\nבחינם\n• מונה ימים ללא ניקוטין\n• צ'ק-אין יומי ולוח פיכחות\n• גינה וירטואלית\n• פרטי במכשיר ,  ללא חשבון\n\nBLOOM+ (אופציונלי)\n• ציר זמן בריאות, יומן, הישגים\n• Apple Watch ווידג'טים\n\nהורדה חינם. Bloom+ בכל עת.",
+        "promotional": "ספרו כל יום ללא ניקוטין, עשו צ'ק-אין יומי וצפו בגינה שלכם פורחת ככל שהרצף גדל. פרטי, פשוט וחינם להתחלה. ללא צורך בחשבון.",
+        "release_notes": "גרסה ראשונה. ספרו ימים ללא ניקוטין, גדלו את הגינה וצפו בבריאות חוזרת צעד אחר צעד. תודה שאתם כאן.",
+    },
+    "hi": {
+        "name": "क्विट ज़िन – निकोटीन मुक्त",
+        "subtitle": "निकोटीन मुक्त दिन गिनती",
+        "keywords": "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
+        "description": "Quit Zyn दिन गिनती, दैनिक चेक-इन और हर निकोटीन-मुक्त दिन पर बढ़ने वाले वर्चुअल बगीचे से आपको निकोटीन-मुक्त रहने में मदद करता है।\n\nमुफ़्त शुरू करें\n• निकोटीन-मुक्त दिन काउंटर\n• दैनिक चेक-इन और कैलेंडर\n• वर्चुअल बगीचा\n• डिवाइस पर निजी ,  खाता नहीं\n\nBLOOM+ (वैकल्पिक)\n• स्वास्थ्य टाइमलाइन, जर्नल, उपलब्धियां\n• Apple Watch और विजेट\n\nमुफ़्त डाउनलोड। कभी भी Bloom+ अपग्रेड करें।",
+        "promotional": "हर निकोटीन-मुक्त दिन गिनें, रोज़ चेक-इन करें और अपनी स्ट्रीक बढ़ने पर बगीचे को खिलते देखें। निजी, सरल और मुफ़्त शुरुआत। खाते की ज़रूरत नहीं।",
+        "release_notes": "पहला संस्करण। अपने निकोटीन-मुक्त दिन गिनें, अपना बगीचा बढ़ाएं और अपने स्वास्थ्य को धीरे-धीरे लौटते देखें। यहाँ होने के लिए धन्यवाद।",
+    },
+    "hr": {
+        "name": "Quit Zyn – Bez nikotina",
+        "subtitle": "Dani bez nikotina",
+        "keywords": "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
+        "description": "Quit Zyn pomaže ostati trijezan uz brojač dana, dnevni check-in i virtualni vrt koji raste sa svakim trijeznim danom.\n\nBESPLATNO\n• Brojač dana bez nikotina\n• Dnevni check-in i kalendar triježnosti\n• Virtualni vrt\n• Privatno na uređaju\n\nBLOOM+ (OPCIONALNO)\n• Zdravstvena vremenska crta, dnevnik\n• Apple Watch i widgeti\n\nPreuzmi besplatno. Bloom+ kad želiš.",
+        "promotional": "Brojite svaki dan bez nikotina, prijavite se jednom dnevno i gledajte kako vaš vrt cvjeta dok niz raste. Privatno, jednostavno i besplatno za početak. Bez računa.",
+        "release_notes": "Prvo izdanje. Brojite dane bez nikotina, uzgajajte vrt i pratite povratak zdravlja korak po korak. Hvala što ste s nama.",
+    },
+    "hu": {
+        "name": "Quit Zyn – Nikotinmentes",
+        "subtitle": "Nikotinmentes napok",
+        "keywords": "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
+        "description": "A Quit Zyn segít nikotinmentesen maradni napszámlálóval, napi check-innel és virtuális kerttel, amely minden józansági nappal növekszik.\n\nINGYENES\n• Alkoholmentes napszámláló\n• Napi check-in és józansági naptár\n• Virtuális kert\n• Privát az eszközön\n\nBLOOM+ (OPCIONÁLIS)\n• Egészségidővonal, napló, eredmények\n• Apple Watch és widgetek\n\nTöltsd le ingyen. Bloom+ bármikor.",
+        "promotional": "Számold minden nikotinmentes napod, jelentkezz be naponta, és nézd, ahogy kerted virágzik a sorozatoddal. Privát, egyszerű, ingyen kezdhető. Fiók nélkül.",
+        "release_notes": "Első kiadás. Számolja a nikotinmentes napokat, növelje a kertet, és figyelje egészsége visszatérését lépésről lépésre. Köszönjük, hogy itt van.",
+    },
+    "id": {
+        "name": "Quit Zyn – Bebas Nikotin",
+        "subtitle": "Hari bebas nikotin",
+        "keywords": "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
+        "description": "Quit Zyn membantu Anda tetap bebas nikotin dengan penghitung hari, check-in harian, dan taman virtual yang tumbuh setiap hari tanpa minum.\n\nGRATIS\n• Penghitung hari bebas nikotin\n• Check-in harian dan kalender\n• Taman virtual\n• Privat di perangkat\n\nBLOOM+ (OPSIONAL)\n• Linimasa kesehatan, jurnal, pencapaian\n• Apple Watch dan widget\n\nUnduh gratis. Bloom+ kapan saja.",
+        "promotional": "Hitung setiap hari bebas nikotin, isi catatan sekali sehari, dan lihat taman Anda mekar seiring rentetan bertambah. Pribadi, sederhana, gratis. Tanpa akun.",
+        "release_notes": "Rilis perdana. Hitung hari bebas nikotin, kembangkan taman Anda, dan lihat kesehatan pulih selangkah demi selangkah. Terima kasih sudah di sini.",
+    },
+    "it": {
+        "name": "Quit Zyn – Senza nicotina",
+        "subtitle": "Giorni senza nicotina",
+        "keywords": "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
+        "description": "Quit Zyn ti aiuta a restare senza nicotina con contatore dei giorni, check-in quotidiano e un giardino virtuale che cresce a ogni giorno senza nicotina.\n\nGRATIS\n• Contatore giorni senza nicotina, giorni, ore e serie più lunga\n• Check-in quotidiano\n• Calendario della sobrietà\n• Giardino virtuale\n• Privato sul dispositivo, nessun account\n\nBLOOM+ (OPZIONALE)\n• Timeline salute con fonti\n• Diario con spunti\n• Traguardi e risparmi\n• Apple Watch e widget\n\nSmetti di bustine o accumula giorni secchi: Quit Zyn semplifica il percorso.\n\nDownload gratuito. Bloom+ quando vuoi.",
+        "promotional": "Conta ogni giorno senza nicotina, fai il check-in una volta al giorno e guarda il tuo giardino fiorire mentre la serie cresce. Privato, semplice e gratis. Nessun account.",
+        "release_notes": "Primo rilascio. Conta i giorni senza nicotina, fai crescere il giardino e guarda tornare la salute, passo dopo passo. Grazie per essere qui.",
+    },
+    "ja": {
+        "name": "クィットザン – ニコチンフリー",
+        "subtitle": "ニコチンフリー日数カウンター",
+        "keywords": "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
+        "description": "Quit Zynは、日数カウンター、毎日のチェックイン、禁煙するたびに育つバーチャルガーデンで、ニコチンフリーな生活を続けやすくします。\n\n無料で始める\n• ニコチンフリーの日数カウンター（日・時間・最長連続）\n• 毎日のチェックイン\n• 禁煙カレンダー\n• バーチャルガーデン\n• 端末内でプライベート ,  アカウント不要\n\nBLOOM+（オプション）\n• 健康ベネフィットのタイムライン\n• 日記とプロンプト\n• 実績と節目\n• 節約額・カロリー\n• Apple Watchとウィジェット\n\n禁煙・減酒・乾いた日を積み重ねる ,  Quit Zynがシンプルに支えます。\n\n無料ダウンロード。いつでもBloom+にアップグレード。",
+        "promotional": "ニコチンフリーの日を数え、毎日チェックインして、連続記録とともにガーデンを育てましょう。Zyn、スヌース、ポーチ、ベイプ。プライベートでシンプル、無料。",
+        "release_notes": "初回リリース。ニコチンフリーの日数を記録し、ガーデンを育て、健康の回復を一つひとつの節目で確認できます。ご利用ありがとうございます。",
     },
     "kn-IN": {
-        "name": "ಸೋಬರ್ – ಮದ್ಯಮುಕ್ತ",
-        "subtitle": "ಒಣ ದಿನಗಳು ಮತ್ತು ತೋಟ",
-        "keywords": "ಕುಡಿಯುವುದು,ಕಡಿಮೆ,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಚೇತರಿಕೆ,ಮರುಕಳಿಕೆ,ಹಂಬಲ,ಮನಸ್ಥಿತಿ,ಸರಣಿ",
-        "description": """Sober Tracker ದಿನಗಳ ಎಣಿಕೆ, ದೈನಂದಿನ ಚೆಕ್-ಇನ್ ಮತ್ತು ಪ್ರತಿ ಮದ್ಯಮುಕ್ತ ದಿನದಲ್ಲಿ ಬೆಳೆಯುವ ವರ್ಚುವಲ್ ತೋಟದೊಂದಿಗೆ ನಿಮಗೆ ಮದ್ಯಮುಕ್ತವಾಗಿರಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.
-
-ಉಚಿತ
-• ಮದ್ಯಮುಕ್ತ ದಿನ ಎಣಿಕೆ
-• ದೈನಂದಿನ ಚೆಕ್-ಇನ್
-• ವರ್ಚುವಲ್ ತೋಟ
-• ಸಾಧನದಲ್ಲಿ ಖಾಸಗಿ
-
-BLOOM+ (ಐಚ್ಛಿಕ)
-• ಆರೋಗ್ಯ, ದಿನಚರಿ, ಸಾಧನೆಗಳು
-• Apple Watch ಮತ್ತು ವಿಜೆಟ್
-
-ಉಚಿತ ಡೌನ್‌ಲೋಡ್. Bloom+ ಯಾವುದೇ ಸಮಯ.""",
+        "name": "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
+        "subtitle": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
+        "keywords": "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
+        "description": "Quit Zyn ದಿನಗಳ ಎಣಿಕೆ, ದೈನಂದಿನ ಚೆಕ್-ಇನ್ ಮತ್ತು ಪ್ರತಿ ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನದಲ್ಲಿ ಬೆಳೆಯುವ ವರ್ಚುವಲ್ ತೋಟದೊಂದಿಗೆ ನಿಮಗೆ ನಿಕೋಟಿನ್ ಮುಕ್ತವಾಗಿರಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.\n\nಉಚಿತ\n• ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನ ಎಣಿಕೆ\n• ದೈನಂದಿನ ಚೆಕ್-ಇನ್\n• ವರ್ಚುವಲ್ ತೋಟ\n• ಸಾಧನದಲ್ಲಿ ಖಾಸಗಿ\n\nBLOOM+ (ಐಚ್ಛಿಕ)\n• ಆರೋಗ್ಯ, ದಿನಚರಿ, ಸಾಧನೆಗಳು\n• Apple Watch ಮತ್ತು ವಿಜೆಟ್\n\nಉಚಿತ ಡೌನ್‌ಲೋಡ್. Bloom+ ಯಾವುದೇ ಸಮಯ.",
+        "promotional": "ಪ್ರತಿ ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನವನ್ನು ಎಣಿಸಿ, ದಿನಕ್ಕೊಮ್ಮೆ ಚೆಕ್-ಇನ್ ಮಾಡಿ, ಸರಣಿ ಬೆಳೆದಂತೆ ನಿಮ್ಮ ತೋಟ ಅರಳುವುದನ್ನು ನೋಡಿ. ಖಾಸಗಿ, ಸರಳ, ಉಚಿತ ಆರಂಭ. ಖಾತೆ ಬೇಕಿಲ್ಲ.",
+        "release_notes": "ಮೊದಲ ಬಿಡುಗಡೆ. ನಿಕೋಟಿನ್-ಮುಕ್ತ ದಿನಗಳನ್ನು ಎಣಿಸಿ, ತೋಟವನ್ನು ಬೆಳೆಸಿ ಮತ್ತು ಆರೋಗ್ಯ ನಿಧಾನವಾಗಿ ಹಿಂತಿರುಗುವುದನ್ನು ನೋಡಿ. ಇಲ್ಲಿ ಇರುವುದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.",
+    },
+    "ko": {
+        "name": "퀴트 진 – 니코틴 프리",
+        "subtitle": "니코틴 프리 일수 카운터",
+        "keywords": "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
+        "description": "Quit Zyn는 일수 카운터, 매일 체크인, 금연할 때마다 자라는 가상 정원으로 금연 생활을 이어가게 돕습니다.\n\n무료로 시작\n• 니코틴 프리 일수 카운터\n• 매일 체크인\n• 금연 캘린더\n• 가상 정원\n• 기기에만 저장 ,  계정 불필요\n\nBLOOM+ (선택)\n• 건강 타임라인, 일기, 업적\n• Apple Watch 및 위젯\n\n금연·절주·마른 날 쌓기 ,  Quit Zyn가 단순하게 돕습니다.\n\n무료 다운로드. Bloom+는 언제든 업그레이드.",
+        "promotional": "니코틴 프리 날을 매일 세고, 하루 한 번 체크인하고, 연속 기록이 늘수록 정원이 피어나는 모습을 보세요. 비공개이고 간단하며 무료로 시작. 계정이 필요 없습니다.",
+        "release_notes": "첫 출시. 니코틴 프리 일수를 기록하고, 정원을 키우며, 건강이 돌아오는 과정을 함께 확인하세요. 함께해 주셔서 감사합니다.",
     },
     "ml-IN": {
-        "name": "സോബർ – മദ്യമുക്ത",
-        "subtitle": "ഉണങ്ങിയ ദിവസങ്ങളും തോട്ടവും",
-        "keywords": "കുടിക്കൽ,കുറവ്,നിർത്തൽ,ആസക്തി,വർജനം,വീണ്ടെടുക്കൽ,വീഴ്ച,ആഗ്രഹം,മാനസികാവസ്ഥ,ശ്രേണി",
-        "description": """Sober Tracker ദിവസ എണ്ണം, ദൈനംദിന ചെക്ക്-ഇൻ, മദ്യമുക്ത ഓരോ ദിവസവും വളരുന്ന വെർച്വൽ തോട്ടം എന്നിവയിലൂടെ നിങ്ങളെ സഹായിക്കുന്നു.
-
-സൗജന്യം
-• മദ്യമുക്ത ദിവസ എണ്ണി
-• ദൈനംദിന ചെക്ക്-ഇൻ
-• വെർച്വൽ തോട്ടം
-• ഉപകരണത്തിൽ സ്വകാര്യം
-
-BLOOM+ (ഓപ്ഷണൽ)
-• ആരോഗ്യം, ഡയറി, നേട്ടങ്ങൾ
-• Apple Watch, വിജറ്റ്
-
-സൗജന്യ ഡൗൺലോഡ്. Bloom+ എപ്പോഴും.""",
+        "name": "ക്വിറ്റ് സിൻ",
+        "subtitle": "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
+        "keywords": "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
+        "description": "Quit Zyn ദിവസ എണ്ണം, ദൈനംദിന ചെക്ക്-ഇൻ, നിക്കോട്ടിൻ ഫ്രീ ഓരോ ദിവസവും വളരുന്ന വെർച്വൽ തോട്ടം എന്നിവയിലൂടെ നിങ്ങളെ സഹായിക്കുന്നു.\n\nസൗജന്യം\n• നിക്കോട്ടിൻ ഫ്രീ ദിവസ എണ്ണി\n• ദൈനംദിന ചെക്ക്-ഇൻ\n• വെർച്വൽ തോട്ടം\n• ഉപകരണത്തിൽ സ്വകാര്യം\n\nBLOOM+ (ഓപ്ഷണൽ)\n• ആരോഗ്യം, ഡയറി, നേട്ടങ്ങൾ\n• Apple Watch, വിജറ്റ്\n\nസൗജന്യ ഡൗൺലോഡ്. Bloom+ എപ്പോഴും.",
+        "promotional": "ഓരോ നിക്കോട്ടിൻ ഫ്രീ ദിവസവും എണ്ണുക, ദിവസേന ഒരിക്കൽ ചെക്ക്-ഇൻ ചെയ്യുക, സ്ട്രീക്ക് വളരുമ്പോൾ തോട്ടം പൂക്കുന്നത് കാണുക. സ്വകാര്യം, ലളിതം, സൗജന്യമായി തുടങ്ങാം. അക്കൗണ്ട്...",
+        "release_notes": "ആദ്യ റിലീസ്. നിക്കോട്ടിൻ ഫ്രീ ദിവസങ്ങൾ എണ്ണുക, ഗാർഡൻ വളർത്തുക, ആരോഗ്യം ക്രമേണ തിരിച്ചുവരുന്നത് കാണുക. ഇവിടെയുണ്ടായതിന് നന്ദി.",
     },
     "mr-IN": {
-        "name": "सोबर – दारूमुक्त",
-        "subtitle": "कोरडे दिवस आणि बाग",
-        "keywords": "पिणे,कमी,सोडणे,व्यसन,त्याग,पुनर्प्राप्ती,पुनरावृत्ती,तळमळ,मूड,मालिका",
-        "description": """Sober Tracker दिवस मोजणी, दैनंदिन चेक-इन आणि प्रत्येक दारूमुक्त दिवशी वाढणारी आभासी बाग यांद्वारे तुम्हाला दारूमुक्त राहण्यास मदत करते.
-
-मोफत
-• दारूमुक्त दिवस मोजणी
-• दैनंदिन चेक-इन
-• आभासी बाग
-• डिव्हाइसवर खाजगी
-
-BLOOM+ (पर्यायी)
-• आरोग्य, डायरी, यश
-• Apple Watch आणि विजेट
-
-मोफत डाउनलोड. Bloom+ कधीही.""",
+        "name": "क्विट झिन – निकोटीन मुक्त",
+        "subtitle": "निकोटीन मुक्त दिवस मोजणी",
+        "keywords": "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
+        "description": "Quit Zyn दिवस मोजणी, दैनंदिन चेक-इन आणि प्रत्येक निकोटीन मुक्त दिवशी वाढणारी आभासी बाग यांद्वारे तुम्हाला निकोटीन मुक्त राहण्यास मदत करते.\n\nमोफत\n• निकोटीन मुक्त दिवस मोजणी\n• दैनंदिन चेक-इन\n• आभासी बाग\n• डिव्हाइसवर खाजगी\n\nBLOOM+ (पर्यायी)\n• आरोग्य, डायरी, यश\n• Apple Watch आणि विजेट\n\nमोफत डाउनलोड. Bloom+ कधीही.",
+        "promotional": "प्रत्येक निकोटीन मुक्त दिवस मोजा, दिवसातून एकदा चेक-इन करा आणि तुमची मालिका वाढताना बाग फुलताना पाहा. खाजगी, सोपे आणि सुरुवात मोफत. खाते आवश्यक नाही.",
+        "release_notes": "पहिली आवृत्ती. निकोटीन-मुक्त दिवस मोजा, बाग वाढवा आणि आरोग्य हळूहळू परत येताना पहा. येथे असल्याबद्दल धन्यवाद.",
+    },
+    "ms": {
+        "name": "Quit Zyn – Bebas Nikotin",
+        "subtitle": "Hari bebas nikotin",
+        "keywords": "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
+        "description": "Quit Zyn membantu anda kekal tanpa nikotin dengan pembilang hari, daftar masuk harian dan taman maya yang membesar setiap hari tanpa minum.\n\nPERCUMA\n• Pembilang hari tanpa nikotin\n• Daftar masuk dan kalendar\n• Taman maya\n• Peribadi pada peranti\n\nBLOOM+ (PILIHAN)\n• Garis masa kesihatan, diari\n• Apple Watch dan widget\n\nMuat turun percuma. Bloom+ bila-bila masa.",
+        "promotional": "Kira setiap hari tanpa nikotin, daftar masuk sekali sehari dan lihat taman anda mekar sambil rentetan bertambah. Peribadi, mudah dan percuma. Tiada akaun perlu.",
+        "release_notes": "Keluaran pertama. Kira hari bebas nikotin, kembangkan taman anda, dan lihat kesihatan kembali selangkah demi selangkah. Terima kasih kerana bersama kami.",
+    },
+    "nl-NL": {
+        "name": "Quit Zyn – Nikotinvrij",
+        "subtitle": "Dagen zonder nicotine",
+        "keywords": "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
+        "description": "Quit Zyn helpt je nikotinvrij te blijven met een dagteller, dagelijkse check-in en een virtuele tuin die groeit bij elke nikotinvrije dag.\n\nGRATIS\n• Alcoholvrije dagteller, dagen, uren en langste reeks\n• Dagelijkse check-in\n• Nuchterheidskalender\n• Virtuele tuin\n• Privé op je apparaat, geen account\n\nBLOOM+ (OPTIONEEL)\n• Gezondheidstijdlijn, dagboek, prestaties\n• Apple Watch en widgets\n\nGratis downloaden. Bloom+ wanneer je wilt.",
+        "promotional": "Tel elke nikotinvrije dag, check één keer per dag in en zie je tuin bloeien terwijl je reeks groeit. Privé, simpel en gratis te starten. Geen account nodig.",
+        "release_notes": "Eerste release. Tel je nicotinevrije dagen, laat je tuin groeien en zie je gezondheid stap voor stap terugkomen. Bedankt dat je er bent.",
+    },
+    "no": {
+        "name": "Quit Zyn – Nikotinfri",
+        "subtitle": "Dager uten nikotin",
+        "keywords": "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
+        "description": "Quit Zyn hjelper deg å holde deg nikotinfri med dagteller, daglig innsjekk og en virtuell hage som vokser for hver edru dag.\n\nGRATIS\n• Alkoholfri dagteller\n• Daglig innsjekk og edrukalender\n• Virtuell hage\n• Privat på enheten\n\nBLOOM+ (VALGFRITT)\n• Helsetidslinje, dagbok, prestasjoner\n• Apple Watch og widgeter\n\nLast ned gratis. Bloom+ når du vil.",
+        "promotional": "Tell hver nikotinfri dag, sjekk inn én gang daglig, og se hagen blomstre når streaken vokser. Privat, enkel og gratis å starte. Ingen konto nødvendig.",
+        "release_notes": "Første utgivelse. Tell nikotinfrie dager, la hagen vokse og se helsen komme tilbake steg for steg. Takk for at du er her.",
     },
     "or-IN": {
-        "name": "ସୋବର – ମଦ୍ୟମୁକ୍ତ",
-        "subtitle": "ଶୁଷ୍କ ଦିନ ଓ ବଗିଚା",
-        "keywords": "ପିଇବା,କମ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ପୁନରୁଦ୍ଧାର,ପୁନରାବୃତ୍ତି,ଲାଳସା,ମୁଡ୍,ଶୃଙ୍ଖଳା",
-        "description": """Sober Tracker ଦିନ ଗଣନା, ଦୈନିକ ଚେକ-ଇନ୍ ଏବଂ ପ୍ରତ୍ୟେକ ମଦ୍ୟମୁକ୍ତ ଦିନରେ ବଢୁଥିବା ଭର୍ଚୁଆଲ୍ ବଗିଚା ସହିତ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରେ।
-
-ମାଗଣା
-• ମଦ୍ୟମୁକ୍ତ ଦିନ ଗଣନା
-• ଦୈନିକ ଚେକ-ଇନ୍
-• ଭର୍ଚୁଆଲ୍ ବଗିଚା
-• ଉପକରଣରେ ବ୍ୟକ୍ତିଗତ
-
-BLOOM+ (ବିକଳ୍ପ)
-• ସ୍ୱାସ୍ଥ୍ୟ, ଡାଇରି
-• Apple Watch ଏବଂ ୱିଜେଟ୍
-
-ମାଗଣା ଡାଉନଲୋଡ୍। Bloom+ ଯେକୋଣସି ସମୟରେ।""",
+        "name": "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
+        "subtitle": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
+        "keywords": "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
+        "description": "Quit Zyn ଦିନ ଗଣନା, ଦୈନିକ ଚେକ-ଇନ୍ ଏବଂ ପ୍ରତ୍ୟେକ ନିକୋଟିନ ମୁକ୍ତ ଦିନରେ ବଢୁଥିବା ଭର୍ଚୁଆଲ୍ ବଗିଚା ସହିତ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରେ।\n\nମାଗଣା\n• ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା\n• ଦୈନିକ ଚେକ-ଇନ୍\n• ଭର୍ଚୁଆଲ୍ ବଗିଚା\n• ଉପକରଣରେ ବ୍ୟକ୍ତିଗତ\n\nBLOOM+ (ବିକଳ୍ପ)\n• ସ୍ୱାସ୍ଥ୍ୟ, ଡାଇରି\n• Apple Watch ଏବଂ ୱିଜେଟ୍\n\nମାଗଣା ଡାଉନଲୋଡ୍। Bloom+ ଯେକୋଣସି ସମୟରେ।",
+        "promotional": "ପ୍ରତ୍ୟେକ ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା କରନ୍ତୁ, ଦୈନିକ ଥରେ ଚେକ-ଇନ୍ କରନ୍ତୁ, ଓ ଆପଣଙ୍କ ଧାରା ବଢିବା ସହ ବଗିଚା ଫୁଟିବା ଦେଖନ୍ତୁ। ବ୍ୟକ୍ତିଗତ, ସରଳ ଓ ମାଗଣାରେ ଆରମ୍ଭ। କୌଣସି ଆକାଉଣ୍ଟ ଦରକାର ନାହିଁ।",
+        "release_notes": "ପ୍ରଥମ ରିଲିଜ୍। ନିକୋଟିନ-ମୁକ୍ତ ଦିନ ଗଣନା କରନ୍ତୁ, ବଗିଚା ବଢ଼ାନ୍ତୁ ଏବଂ ସ୍ୱାସ୍ଥ୍ୟ ଧୀରେ ଧୀରେ ଫେରିବା ଦେଖନ୍ତୁ। ଏଠାରେ ଥିବା ପାଇଁ ଧନ୍ୟବାଦ।",
     },
     "pa-IN": {
-        "name": "ਸੋਬਰ – ਸ਼ਰਾਬ ਮੁਕਤ",
-        "subtitle": "ਸੁੱਕੇ ਦਿਨ ਅਤੇ ਬਾਗ",
-        "keywords": "ਪੀਣਾ,ਘੱਟ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਬਰਾਮਦਗੀ,ਮੁੜ,ਆਉਣਾ,ਤਰਸ,ਮੂਡ,ਲਕੀਰ",
-        "description": """Sober Tracker ਦਿਨ ਗਿਣਤੀ, ਰੋਜ਼ਾਨਾ ਚੈਕ-ਇਨ ਅਤੇ ਹਰ ਸ਼ਰਾਬ-ਮੁਕਤ ਦਿਨ ਨਾਲ ਵਧਦੇ ਵਰਚੁਅਲ ਬਾਗ ਨਾਲ ਤੁਹਾਨੂੰ ਸ਼ਰਾਬ-ਮੁਕਤ ਰਹਿਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।
-
-ਮੁਫ਼ਤ
-• ਸ਼ਰਾਬ-ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ
-• ਰੋਜ਼ਾਨਾ ਚੈਕ-ਇਨ
-• ਵਰਚੁਅਲ ਬਾਗ
-• ਡਿਵਾਈਸ ਤੇ ਨਿੱਜੀ
-
-BLOOM+ (ਵਿਕਲਪਿਕ)
-• ਸਿਹਤ, ਡਾਇਰੀ, ਪ੍ਰਾਪਤੀਆਂ
-• Apple Watch ਅਤੇ ਵਿਜੇਟ
-
-ਮੁਫ਼ਤ ਡਾਊਨਲੋਡ। Bloom+ ਕਦੇ ਵੀ।""",
+        "name": "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
+        "subtitle": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
+        "keywords": "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
+        "description": "Quit Zyn ਦਿਨ ਗਿਣਤੀ, ਰੋਜ਼ਾਨਾ ਚੈਕ-ਇਨ ਅਤੇ ਹਰ ਨਿਕੋਟੀਨ-ਮੁਕਤ ਦਿਨ ਨਾਲ ਵਧਦੇ ਵਰਚੁਅਲ ਬਾਗ ਨਾਲ ਤੁਹਾਨੂੰ ਨਿਕੋਟੀਨ-ਮੁਕਤ ਰਹਿਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।\n\nਮੁਫ਼ਤ\n• ਨਿਕੋਟੀਨ-ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ\n• ਰੋਜ਼ਾਨਾ ਚੈਕ-ਇਨ\n• ਵਰਚੁਅਲ ਬਾਗ\n• ਡਿਵਾਈਸ ਤੇ ਨਿੱਜੀ\n\nBLOOM+ (ਵਿਕਲਪਿਕ)\n• ਸਿਹਤ, ਡਾਇਰੀ, ਪ੍ਰਾਪਤੀਆਂ\n• Apple Watch ਅਤੇ ਵਿਜੇਟ\n\nਮੁਫ਼ਤ ਡਾਊਨਲੋਡ। Bloom+ ਕਦੇ ਵੀ।",
+        "promotional": "ਹਰ ਨਿਕੋਟੀਨ-ਮੁਕਤ ਦਿਨ ਗਿਣੋ, ਰੋਜ਼ ਇੱਕ ਵਾਰ ਚੈਕ-ਇਨ ਕਰੋ, ਅਤੇ ਆਪਣੀ ਲੜੀ ਵਧਣ ਨਾਲ ਬਾਗ ਨੂੰ ਖਿੜਦੇ ਵੇਖੋ। ਨਿੱਜੀ, ਸਰਲ ਅਤੇ ਮੁਫ਼ਤ ਸ਼ੁਰੂਆਤ। ਕੋਈ ਖਾਤਾ ਨਹੀਂ ਚਾਹੀਦਾ।",
+        "release_notes": "ਪਹਿਲੀ ਰਿਲੀਜ਼। ਨਿਕੋਟੀਨ-ਮੁਕਤ ਦਿਨ ਗਿਣੋ, ਬਾਗ ਵਧਾਓ ਅਤੇ ਸਿਹਤ ਧੀਰੇ-ਧੀਰੇ ਵਾਪਸ ਆਉਂਦੀ ਦੇਖੋ। ਇੱਥੇ ਹੋਣ ਲਈ ਧੰਨਵਾਦ।",
     },
-    "ta-IN": {
-        "name": "சோபர் – மதுவிலா",
-        "subtitle": "உலர் நாட்கள் மற்றும் தோட்டம்",
-        "keywords": "குடிப்பது,குறைவு,விடுவது,அடிமைத்தனம்,தவிர்ப்பு,மீட்பு,மீள்தொற்று,ஏக்கம்,மனநிலை,தொடர்",
-        "description": """Sober Tracker நாள் எண்ணி, தினசரி செக்-இன் மற்றும் ஒவ்வொரு மது இல்லா நாளிலும் வளரும் மெய்நிகர் தோட்டத்துடன் உங்களுக்கு உதவுகிறது.
-
-இலவசம்
-• மது இல்லா நாள் எண்ணி
-• தினசரி செக்-இன்
-• மெய்நிகர் தோட்டம்
-• சாதனத்தில் தனிப்பட்ட
-
-BLOOM+ (விருப்பம்)
-• ஆரோக்கியம், பதிவு, சாதனைகள்
-• Apple Watch மற்றும் விட்ஜெட்
-
-இலவச பதிவிறக்கம். Bloom+ எப்போதும்.""",
+    "pl": {
+        "name": "Quit Zyn – Bez nikotyny",
+        "subtitle": "Dni bez nikotyny",
+        "keywords": "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
+        "description": "Quit Zyn pomaga pozostać bez nikotynyym dzięki licznikowi dni, codziennemu check-inowi i wirtualnemu ogrodowi rosnącemu z każdym dniem bez nikotyny.\n\nZA DARMO\n• Licznik dni bez nikotyny\n• Codzienny check-in\n• Kalendarz bez nikotynyości\n• Wirtualny ogród\n• Prywatnie na urządzeniu, bez konta\n\nBLOOM+ (OPCJONALNIE)\n• Oś czasu zdrowia, dziennik, osiągnięcia\n• Apple Watch i widżety\n\nPobierz za darmo. Bloom+ w dowolnym momencie.",
+        "promotional": "Licz każdy dzień bez nikotyny, melduj się raz dziennie i patrz, jak ogród rozkwita z Twoją serią. Prywatnie, prosto, za darmo. Bez konta.",
+        "release_notes": "Pierwsze wydanie. Licz dni bez nikotyny, rozwijaj ogród i obserwuj powrót zdrowia krok po kroku. Dziękujemy, że jesteś z nami.",
     },
-    "te-IN": {
-        "name": "సోబర్ – మద్యముక్త",
-        "subtitle": "ఎండిన రోజులు: స్వచ్ఛత",
-        "keywords": "తాగడం,తక్కువ,వదలడం,వ్యసనం,సంయమం,పునరుద్ధరణ,పునరావృత్తి,కోరిక,మానసిక,స్థితి,సిరీస్",
-        "description": """Sober Tracker రోజుల లెక్క, రోజువారీ చెక్-ఇన్ మరియు ప్రతి మద్యముక్త రోజుతో పెరిగే వర్చువల్ తోటతో మీకు సహాయం చేస్తుంది.
-
-ఉచితం
-• మద్యముక్త రోజుల లెక్క
-• రోజువారీ చెక్-ఇన్
-• వర్చువల్ తోట
-• పరికరంలో ప్రైవేట్
-
-BLOOM+ (ఐచ్ఛికం)
-• ఆరోగ్యం, డైరీ, విజయాలు
-• Apple Watch మరియు విడ్జెట్
-
-ఉచిత డౌన్‌లోడ్. Bloom+ ఎప్పుడైనా.""",
+    "pt-BR": {
+        "name": "Quit Zyn – Sem Nicotina",
+        "subtitle": "Dias sem nicotina",
+        "keywords": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+        "description": "O Quit Zyn ajuda você a ficar sem nicotina com contador de dias, check-in diário e um jardim virtual que cresce a cada dia sem nicotina.\n\nGRÁTIS\n• Contador de dias sem nicotina, dias, horas e maior sequência\n• Check-in diário\n• Calendário de sobriedade\n• Jardim virtual\n• Privado no dispositivo, sem conta\n\nBLOOM+ (OPCIONAL)\n• Linha do tempo de saúde\n• Diário com prompts\n• Conquistas e economia\n• Apple Watch e widgets\n\nPare de saquinhos ou some dias secos: o Quit Zyn simplifica.\n\nDownload grátis. Bloom+ quando quiser.",
+        "promotional": "Conte cada dia sem nicotina, faça check-in uma vez ao dia e veja seu jardim florescer conforme sua sequência cresce. Privado, simples e grátis para começar. Sem conta.",
+        "release_notes": "Primeiro lançamento. Conte seus dias sem nicotina, cultive seu jardim e veja sua saúde voltar, marco a marco. Obrigado por estar aqui.",
     },
-    "ur-PK": {
-        "name": "سوبر – شراب سے پاک",
-        "subtitle": "خشک دن اور باغ",
-        "keywords": "پینا,کم,چھوڑنا,نشہ,پرہیز,بحالی,دوبارہ,لگنا,آرزو,موڈ,سلسلہ",
-        "description": """Sober Tracker دن گنتی، روزانہ چیک اِن اور ہر شراب سے پاک دن پر بڑھنے والے ورچوئل باغ کے ساتھ آپ کی مدد کرتا ہے۔
-
-مفت
-• شراب سے پاک دن گنتی
-• روزانہ چیک اِن
-• ورچوئل باغ
-• ڈیوائس پر نجی
-
-BLOOM+ (اختیاری)
-• صحت، ڈائری، کامیابیاں
-• Apple Watch اور وجیٹ
-
-مفت ڈاؤن لوڈ۔ Bloom+ کبھی بھی۔""",
+    "pt-PT": {
+        "name": "Quit Zyn – Sem Nicotina",
+        "subtitle": "Dias sem nicotina",
+        "keywords": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
+        "description": "O Quit Zyn ajuda-o a manter-se sem nicotina com contador de dias, check-in diário e um jardim virtual que cresce em cada dia sem nicotina.\n\nGRÁTIS\n• Contador de dias sem nicotina\n• Check-in diário e calendário\n• Jardim virtual\n• Privado no dispositivo\n\nBLOOM+ (OPCIONAL)\n• Saúde, diário, conquistas\n• Apple Watch e widgets\n\nTransferência gratuita. Bloom+ quando quiser.",
+        "promotional": "Conte cada dia sem nicotina, faça check-in uma vez por dia e veja o seu jardim florescer. Privado, simples e grátis para começar. Sem conta.",
+        "release_notes": "Primeiro lançamento. Conte os seus dias sem nicotina, cultive o jardim e veja a sua saúde voltar. Obrigado por estar aqui.",
+    },
+    "ro": {
+        "name": "Quit Zyn – Fără nicotină",
+        "subtitle": "Zile fără nicotină",
+        "keywords": "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
+        "description": "Quit Zyn te ajută să rămâi sobri cu contor de zile, check-in zilnic și o grădină virtuală care crește la fiecare zi fără nicotină.\n\nGRATUIT\n• Contor zile fără nicotină\n• Check-in zilnic și calendar de sobrietate\n• Grădină virtuală\n• Privat pe dispozitiv\n\nBLOOM+ (OPȚIONAL)\n• Cronologie sănătate, jurnal, realizări\n• Apple Watch și widgeturi\n\nDescarcă gratuit. Bloom+ oricând.",
+        "promotional": "Numără fiecare zi fără nicotină, fă check-in zilnic și privește grădina înflorind pe măsură ce seria crește. Privat, simplu, gratuit. Fără cont.",
+        "release_notes": "Prima lansare. Numără zilele fără nicotină, cultivă grădina și urmărește cum sănătatea revine pas cu pas. Mulțumim că ești aici.",
+    },
+    "ru": {
+        "name": "Quit Zyn – Без никотина",
+        "subtitle": "Дни без никотина",
+        "keywords": "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
+        "description": "Quit Zyn помогает оставаться без никотинаым: счётчик дней, ежедневный чек-ин и виртуальный сад, который растёт с каждым без никотинаым днём.\n\nБЕСПЛАТНО\n• Счётчик дней без никотина\n• Ежедневный чек-ин и календарь без никотинаости\n• Виртуальный сад\n• Приватно на устройстве ,  без аккаунта\n\nBLOOM+ (ОПЦИОНАЛЬНО)\n• Линия здоровья, дневник, достижения\n• Apple Watch и виджеты\n\nСкачайте бесплатно. Bloom+ в любое время.",
+        "promotional": "Считайте каждый без никотинаый день, отмечайтесь раз в день и смотрите, как цветёт сад вместе с вашей серией. Приватно, просто, бесплатно. Аккаунт не нужен.",
+        "release_notes": "Первый релиз. Считайте дни без никотина, выращивайте сад и наблюдайте, как здоровье возвращается шаг за шагом. Спасибо, что вы с нами.",
+    },
+    "sk": {
+        "name": "Quit Zyn – Bez nikotínu",
+        "subtitle": "Dni bez nikotínu",
+        "keywords": "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
+        "description": "Quit Zyn vám pomôže zostať triezvymi s počítadlom dní, denným check-inom a virtuálnou záhradou, ktorá rastie s každým triezvym dňom.\n\nZADARMO\n• Počítadlo dní bez nikotínu\n• Denný check-in a kalendár\n• Virtuálna záhrada\n• Súkromne v zariadení\n\nBLOOM+ (VOLITEĽNÉ)\n• Zdravie, denník, úspechy\n• Apple Watch a widgety\n\nStiahnite zadarmo. Bloom+ kedykoľvek.",
+        "promotional": "Počítajte každý deň bez nikotínu, robte denný check-in a sledujte, ako vaša záhrada rozkvitá s rastúcou sériou. Súkromné, jednoduché a zadarmo. Bez účtu.",
+        "release_notes": "Prvé vydanie. Počítajte dni bez nikotínu, nechajte záhradu rásť a sledujte návrat zdravia krok za krokom. Ďakujeme, že ste s nami.",
     },
     "sl-SI": {
-        "name": "Sober – Brez alkohola",
-        "subtitle": "Suhi dnevi in vrt",
-        "keywords": "piti,manj,nehati,odvisnost,abstinenca,okrevanje,povratek,hrepenenje,razpoloženje,niz",
-        "description": """Sober Tracker vam pomaga ostati trezni z številcem dni, dnevnim check-inom in virtualnim vrtom, ki raste z vsakim treznim dnem.
-
-BREZPLAČNO
-• Števec dni brez alkohola
-• Dnevni check-in in koledar
-• Virtualni vrt
-• Zasebno na napravi
-
-BLOOM+ (IZBIRNO)
-• Časovnica zdravja, dnevnik
-• Apple Watch in gradniki
-
-Brezplačen prenos. Bloom+ kadarkoli.""",
+        "name": "Quit Zyn – Brez nikotina",
+        "subtitle": "Dnevi brez nikotina",
+        "keywords": "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
+        "description": "Quit Zyn vam pomaga ostati trezni z številcem dni, dnevnim check-inom in virtualnim vrtom, ki raste z vsakim treznim dnem.\n\nBREZPLAČNO\n• Števec dni brez nikotina\n• Dnevni check-in in koledar\n• Virtualni vrt\n• Zasebno na napravi\n\nBLOOM+ (IZBIRNO)\n• Časovnica zdravja, dnevnik\n• Apple Watch in gradniki\n\nBrezplačen prenos. Bloom+ kadarkoli.",
+        "promotional": "Štejte vsak dan brez nikotina, se prijavite enkrat na dan in glejte, kako vaš vrt cveti z vašim nizom. Zasebno, preprosto in brezplačno za začetek. Brez računa.",
+        "release_notes": "Prva izdaja. Štejte dneve brez nikotina, gojite vrt in opazujte vračanje zdravja korak za korakom. Hvala, da ste z nami.",
+    },
+    "sv": {
+        "name": "Quit Zyn – Nikotinfri",
+        "subtitle": "Dagar utan nikotin",
+        "keywords": "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
+        "description": "Quit Zyn hjälper dig att hålla dig nikotinfri med dagräknare, daglig check-in och en virtuell trädgård som växer för varje nikotinfri dag.\n\nGRATIS\n• Alkoholfri dagräknare\n• Daglig check-in och nikotinfrihetskalender\n• Virtuell trädgård\n• Privat på enheten\n\nBLOOM+ (VALFRITT)\n• Hälsotidslinje, dagbok, prestationer\n• Apple Watch och widgetar\n\nLadda ner gratis. Bloom+ när du vill.",
+        "promotional": "Räkna varje nikotinfri dag, checka in en gång om dagen och se din trädgård blomma när din streak växer. Privat, enkel och gratis att börja. Inget konto behövs.",
+        "release_notes": "Första versionen. Räkna nikotinfria dagar, låt trädgården växa och se hälsan återvända steg för steg. Tack för att du är här.",
+    },
+    "ta-IN": {
+        "name": "க்விட் ஸின்",
+        "subtitle": "நிக்கோட்டின் இல்லா நாட்கள்",
+        "keywords": "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
+        "description": "Quit Zyn நாள் எண்ணி, தினசரி செக்-இன் மற்றும் ஒவ்வொரு நிக்கோட்டின் இல்லா நாளிலும் வளரும் மெய்நிகர் தோட்டத்துடன் உங்களுக்கு உதவுகிறது.\n\nஇலவசம்\n• நிக்கோட்டின் இல்லா நாள் எண்ணி\n• தினசரி செக்-இன்\n• மெய்நிகர் தோட்டம்\n• சாதனத்தில் தனிப்பட்ட\n\nBLOOM+ (விருப்பம்)\n• ஆரோக்கியம், பதிவு, சாதனைகள்\n• Apple Watch மற்றும் விட்ஜெட்\n\nஇலவச பதிவிறக்கம். Bloom+ எப்போதும்.",
+        "promotional": "ஒவ்வொரு நிக்கோட்டின் இல்லா நாளையும் எண்ணுங்கள், தினமும் ஒருமுறை செக்-இன் செய்யுங்கள், உங்கள் தொடர் வளர தோட்டம் மலர்வதைப் பாருங்கள். தனிப்பட்டது, எளிது, இலவசம். கணக்கு...",
+        "release_notes": "முதல் வெளியீடு. நிக்கோட்டின் இல்லா நாட்களை எண்ணுங்கள், தோட்டத்தை வளர்த்து, ஆரோக்கியம் படிப்படியாக திரும்புவதைப் பாருங்கள். இங்கே இருப்பதற்கு நன்றி.",
+    },
+    "te-IN": {
+        "name": "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
+        "subtitle": "నికోటిన్ ఫ్రీ రోజులు",
+        "keywords": "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
+        "description": "Quit Zyn రోజుల లెక్క, రోజువారీ చెక్-ఇన్ మరియు ప్రతి నికోటిన్ ఫ్రీ రోజుతో పెరిగే వర్చువల్ తోటతో మీకు సహాయం చేస్తుంది.\n\nఉచితం\n• నికోటిన్ ఫ్రీ రోజుల లెక్క\n• రోజువారీ చెక్-ఇన్\n• వర్చువల్ తోట\n• పరికరంలో ప్రైవేట్\n\nBLOOM+ (ఐచ్ఛికం)\n• ఆరోగ్యం, డైరీ, విజయాలు\n• Apple Watch మరియు విడ్జెట్\n\nఉచిత డౌన్‌లోడ్. Bloom+ ఎప్పుడైనా.",
+        "promotional": "ప్రతి నికోటిన్ ఫ్రీ రోజును లెక్కించండి, రోజుకు ఒకసారి చెక్-ఇన్ చేయండి, మీ సిరీస్ పెరిగేకొద్దీ తోట వికసించడం చూడండి. ప్రైవేట్, సరళం, ఉచితంగా ప్రారంభించండి. ఖాతా అవసరం ల...",
+        "release_notes": "మొదటి రిలీజ్. నికోటిన్ ఫ్రీ రోజులను లెక్కించండి, తోటను పెంచండి మరియు ఆరోగ్యం క్రమంగా తిరిగి రావడం చూడండి. ఇక్కడ ఉన్నందుకు ధన్యవాదాలు.",
+    },
+    "th": {
+        "name": "ควิตซิน – ปลอดนิโคติน",
+        "subtitle": "นับวันปลอดนิโคติน",
+        "keywords": "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
+        "description": "Quit Zyn ช่วยคุณเลิกดื่มด้วยตัวนับวัน เช็คอินรายวัน และสวนเสมือนที่เติบโตทุกวันที่ไม่ดื่ม\n\nฟรี\n• ตัวนับวันไม่ดื่มนิโคติน\n• เช็คอินและปฏิทินความกลับใจ\n• สวนเสมือน\n• ส่วนตัวบนอุปกรณ์\n\nBLOOM+ (ทางเลือก)\n• ไทม์ไลน์สุขภาพ ไดอารี่ ความสำเร็จ\n• Apple Watch และวิดเจ็ต\n\nดาวน์โหลดฟรี อัปเกรด Bloom+ ได้ทุกเมื่อ",
+        "promotional": "นับทุกวันที่ปลอดนิโคติน เช็คอินวันละครั้ง และดูสวนของคุณเบ่งบานเมื่อสตรีคยาวขึ้น ส่วนตัว ใช้ง่าย เริ่มฟรี ไม่ต้องสมัครบัญชี",
+        "release_notes": "เปิดตัวครั้งแรก นับวันปลอดนิโคติน ปลูกสวนให้เติบโต และดูสุขภาพค่อย ๆ กลับมาทีละขั้น ขอบคุณที่อยู่กับเรา",
+    },
+    "tr": {
+        "name": "Quit Zyn – Nikotinsiz",
+        "subtitle": "Nikotinsiz günler",
+        "keywords": "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
+        "description": "Quit Zyn, gün sayacı, günlük check-in ve her ayık günde büyüyen sanal bahçe ile nikotinsiz kalmanıza yardımcı olur.\n\nÜCRETSİZ\n• Alkolsüz gün sayacı\n• Günlük check-in ve ayıklık takvimi\n• Sanal bahçe\n• Cihazda gizli, hesap gerekmez\n\nBLOOM+ (İSTEĞE BAĞLI)\n• Sağlık zaman çizelgesi, günlük, başarılar\n• Apple Watch ve widget'lar\n\nÜcretsiz indirin. Bloom+ istediğiniz zaman.",
+        "promotional": "Her nikotinsiz günü sayın, günde bir kez check-in yapın ve seriniz büyüdükçe bahçenizin açışını izleyin. Gizli, basit ve başlaması ücretsiz. Hesap gerekmez.",
+        "release_notes": "İlk sürüm. Nikotinsiz günlerinizi sayın, bahçenizi büyütün ve sağlığınızın adım adım geri geldiğini izleyin. Burada olduğunuz için teşekkürler.",
+    },
+    "uk": {
+        "name": "Quit Zyn – Без нікотину",
+        "subtitle": "Дні без нікотину",
+        "keywords": "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
+        "description": "Quit Zyn допомагає залишатися тверезим: лічильник днів, щоденний чек-ін і віртуальний сад, що росте з кожним тверезим днем.\n\nБЕЗКОШТОВНО\n• Лічильник днів без нікотину\n• Щоденний чек-ін і календар тверезості\n• Віртуальний сад\n• Приватно на пристрої\n\nBLOOM+ (ЗА БАЖАННЯМ)\n• Лінія здоров'я, щоденник, досягнення\n• Apple Watch і віджети\n\nЗавантажте безкоштовно. Bloom+ будь-коли.",
+        "promotional": "Рахуйте кожен день без нікотину, робіть чек-ін раз на день і дивіться, як ваш сад розквітає разом із серією. Приватно, просто та безкоштовно. Без акаунта.",
+        "release_notes": "Перший реліз. Рахуйте дні без нікотину, вирощуйте сад і спостерігайте, як здоров'я повертається крок за кроком. Дякуємо, що ви з нами.",
+    },
+    "ur-PK": {
+        "name": "کوئٹ زِن – نکوٹین سے پاک",
+        "subtitle": "نکوٹین سے پاک دن گنتی",
+        "keywords": "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
+        "description": "Quit Zyn دن گنتی، روزانہ چیک اِن اور ہر نکوٹین سے پاک دن پر بڑھنے والے ورچوئل باغ کے ساتھ آپ کی مدد کرتا ہے۔\n\nمفت\n• نکوٹین سے پاک دن گنتی\n• روزانہ چیک اِن\n• ورچوئل باغ\n• ڈیوائس پر نجی\n\nBLOOM+ (اختیاری)\n• صحت، ڈائری، کامیابیاں\n• Apple Watch اور وجیٹ\n\nمفت ڈاؤن لوڈ۔ Bloom+ کبھی بھی۔",
+        "promotional": "ہر نکوٹین سے پاک دن گنیں، روزانہ ایک بار چیک اِن کریں، اور سلسلہ بڑھنے کے ساتھ اپنا باغ کھلتا دیکھیں۔ نجی، آسان اور مفت آغاز۔ کسی اکاؤنٹ کی ضرورت نہیں۔",
+        "release_notes": "پہلی ریلیز۔ نکوٹین سے پاک دن گنیں، باغ بڑھائیں اور صحت آہستہ آہستہ واپس آتے دیکھیں۔ یہاں ہونے کا شکریہ۔",
+    },
+    "vi": {
+        "name": "Quit Zyn – Không nicotin",
+        "subtitle": "Ngày không nicotin",
+        "keywords": "túi,vape,cai,nghiện,kiêng,thói quen,nhật ký,ứng dụng,velo,snus,chuỗi",
+        "description": "Quit Zyn giúp bạn cai nicotin với bộ đếm ngày, check-in hàng ngày và khu vườn ảo lớn lên mỗi ngày không uống.\n\nMIỄN PHÍ\n• Đếm ngày không nicotin\n• Check-in và lịch cai nicotin\n• Vườn ảo\n• Riêng tư trên thiết bị\n\nBLOOM+ (TÙY CHỌN)\n• Dòng thời gian sức khỏe, nhật ký\n• Apple Watch và widget\n\nTải miễn phí. Nâng cấp Bloom+ bất cứ lúc nào.",
+        "promotional": "Đếm từng ngày không nicotin, check-in mỗi ngày một lần và ngắm khu vườn nở hoa khi chuỗi ngày của bạn dài ra. Riêng tư, đơn giản, miễn phí để bắt đầu. Không cần tài kh...",
+        "release_notes": "Phát hành đầu tiên. Đếm ngày không nicotin, nuôi khu vườn và xem sức khỏe dần hồi phục từng bước. Cảm ơn bạn đã ở đây.",
+    },
+    "zh-Hans": {
+        "name": "戒瘾助手 - 无烟碱追踪",
+        "subtitle": "无烟碱日计数器",
+        "keywords": "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
+        "description": "Quit Zyn 用天数计数器、每日签到和随戒烟天数成长的虚拟花园，帮你保持无烟碱。\n\n免费开始\n• 无烟碱天数计数（天、小时、最长连续）\n• 每日签到\n• 无烟碱日历\n• 虚拟花园\n• 仅保存在设备上 ,  无需账户\n\nBLOOM+（可选）\n• 完整健康时间线与来源\n• 日记与提示\n• 成就与里程碑\n• 节省金额与卡路里\n• Apple Watch 与小组件\n\n戒烟、减量或积累干燥天数 ,  Quit Zyn 让恢复更简单。\n\n免费下载，随时升级 Bloom+。",
+        "promotional": "记录每一个无烟碱的日子，每天签到一次，看着花园随连续天数绽放成长。私密、简单、免费起步，无需账户。",
+        "release_notes": "首次发布。记录无烟碱天数，培育你的花园，一步步见证健康恢复。感谢你的使用。",
+    },
+    "zh-Hant": {
+        "name": "戒癮助手 - 無菸鹼追蹤",
+        "subtitle": "無菸鹼日計數器",
+        "keywords": "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
+        "description": "Quit Zyn 用天數計數器、每日簽到和隨戒菸天數成長的虛擬花園，幫你保持無菸鹼。\n\n免費開始\n• 無菸鹼天數計數\n• 每日簽到與無菸鹼日曆\n• 虛擬花園\n• 僅保存在裝置上 ,  無需帳戶\n\nBLOOM+（可選）\n• 健康時間線、日記、成就\n• Apple Watch 與小工具\n\n免費下載，隨時升級 Bloom+。",
+        "promotional": "記錄每一個無菸鹼的日子，每天簽到一次，看著花園隨連續天數綻放成長。私密、簡單、免費開始，無需帳戶。",
+        "release_notes": "首次發布。記錄無菸鹼天數，培育你的花園，一步步見證健康恢復。感謝你的使用。",
     },
 }

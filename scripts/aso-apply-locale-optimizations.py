@@ -55,11 +55,14 @@ def main() -> None:
         subtitle = trim_field(data["subtitle"], 30)
         keywords = trim_field(dedupe_keywords(name, subtitle, data["keywords"]), 100)
         description = data["description"].strip()
+        promotional = trim_field(data.get("promotional", ""), 170)
+        release_notes = data.get("release_notes", "").strip()
 
         for field, val, lim in [
             ("name", name, 30),
             ("subtitle", subtitle, 30),
             ("keywords", keywords, 100),
+            ("promotional", promotional, 170),
         ]:
             if len(val) > lim:
                 errors.append(f"{loc}/{field}: {len(val)}>{lim}")
@@ -72,12 +75,18 @@ def main() -> None:
         (loc_dir / "subtitle.txt").write_text(subtitle + "\n", encoding="utf-8")
         (loc_dir / "keywords.txt").write_text(keywords + "\n", encoding="utf-8")
         (loc_dir / "description.txt").write_text(description + "\n", encoding="utf-8")
+        if promotional:
+            (loc_dir / "promotional_text.txt").write_text(promotional + "\n", encoding="utf-8")
+        if release_notes:
+            (loc_dir / "release_notes.txt").write_text(release_notes + "\n", encoding="utf-8")
 
         report[loc] = {
             "name": {"old": old_name, "new": name, "len": len(name)},
             "subtitle": {"old": old_sub, "new": subtitle, "len": len(subtitle)},
             "keywords": {"old": old_kw, "new": keywords, "len": len(keywords)},
             "description_chars": len(description),
+            "promotional_chars": len(promotional),
+            "release_notes_chars": len(release_notes),
         }
 
     out = ROOT / "scripts" / "aso-locale-optimization-report.json"

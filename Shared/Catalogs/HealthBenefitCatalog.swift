@@ -66,7 +66,7 @@ enum HealthBenefitCatalog {
             hoursRequired: 72,
             title: "Cravings Peak & Ease",
             summary: "The hardest stretch passes.",
-            detail: "Around three days in, physical withdrawal tends to peak as the last nicotine leaves — then cravings begin getting shorter and less intense.",
+            detail: "Around three days in, physical withdrawal tends to peak as the last nicotine leaves. Then cravings begin getting shorter and less intense.",
             sourceLabel: "Truth Initiative",
             sourceURL: URL(string: "https://truthinitiative.org/research-resources/quitting-smoking-vaping")
         ),
