@@ -60,7 +60,7 @@ enum BloomFeature: CaseIterable {
 final class TrialOfferCoordinator: ObservableObject {
     static let shared = TrialOfferCoordinator()
 
-    enum Intent {
+    enum Intent: String {
         case postOnboarding
         case journal
         case healthTimeline
@@ -80,12 +80,81 @@ final class TrialOfferCoordinator: ObservableObject {
         }
     }
 
-    @Published var pendingIntent: Intent?
+    /// How `MainTabView` should present a pending pitch.
+    enum PitchPolicy: Equatable {
+        /// Day-0 / onboarding follow-up — always trial-first when eligible.
+        case initial
+        /// Settings upgrade row — trial-first when eligible.
+        case explicitUpgrade
+        /// Locked-feature tap after onboarding — plan picker first, trial on repeat intent.
+        case subsequentLocked
+        /// Positive-moment / tab-visit repitch — usage threshold + passive cooldown.
+        case subsequentPassive
+    }
+
+    struct PendingRequest: Equatable {
+        let intent: Intent
+        let policy: PitchPolicy
+    }
+
+    @Published var pendingRequest: PendingRequest?
 
     private init() {}
 
-    func request(_ intent: Intent) { pendingIntent = intent }
-    func clear() { pendingIntent = nil }
+    func request(_ intent: Intent, policy: PitchPolicy = .subsequentLocked) {
+        pendingRequest = PendingRequest(intent: intent, policy: policy)
+    }
+
+    func clear() { pendingRequest = nil }
+}
+
+/// Session cap + persisted action counts for *subsequent* trial pitches (not the
+/// onboarding / post-onboarding initial pitch). Mirrors StatScout's PaywallGate
+/// and Vitals' intent-vs-passive split.
+@MainActor
+enum TrialSubsequentPitchGate {
+    /// Locked-feature taps get the high-converting trial sheet from the 2nd reach onward.
+    static let lockedFeatureThreshold = 2
+    /// Tab visits, growth celebrations, and check-ins repitch after this many uses.
+    static let passiveUsageThreshold = 2
+    /// Cap trial-sheet presentations per intent per app session.
+    static let maxTrialPitchesPerIntentPerSession = 2
+
+    private static var sessionTrialPitchCounts: [String: Int] = [:]
+
+    static func actionCount(for intent: TrialOfferCoordinator.Intent) -> Int {
+        AppGroup.defaults.integer(forKey: AppGroup.bloomActionCountKey(for: intent.rawValue))
+    }
+
+    @discardableResult
+    static func recordAction(for intent: TrialOfferCoordinator.Intent) -> Int {
+        let next = actionCount(for: intent) + 1
+        AppGroup.defaults.set(next, forKey: AppGroup.bloomActionCountKey(for: intent.rawValue))
+        return next
+    }
+
+    static func canPresentTrialPitch(for intent: TrialOfferCoordinator.Intent) -> Bool {
+        sessionTrialPitchCounts[intent.rawValue, default: 0] < maxTrialPitchesPerIntentPerSession
+    }
+
+    static func markTrialPitchPresented(for intent: TrialOfferCoordinator.Intent) {
+        sessionTrialPitchCounts[intent.rawValue, default: 0] += 1
+        TrialNudgeGate.markShown()
+    }
+
+    @discardableResult
+    static func incrementPersistedCount(key: String) -> Int {
+        let next = AppGroup.defaults.integer(forKey: key) + 1
+        AppGroup.defaults.set(next, forKey: key)
+        return next
+    }
+}
+
+/// Locked Bloom+ control tapped while free — routes through the subsequent-pitch
+/// policy so the first reach shows the plan picker and repeat intent gets the trial sheet.
+@MainActor
+func requestSubsequentLockedFeaturePitch(_ intent: TrialOfferCoordinator.Intent) {
+    TrialOfferCoordinator.shared.request(intent, policy: .subsequentLocked)
 }
 
 /// Cooldown gate for *passive* trial nudges — the ones the app surfaces on its
@@ -128,14 +197,41 @@ func presentPassiveTrialNudge(
     guard !subscriptions.isProSubscriber,
           !subscriptions.hasClaimedTrial,
           subscriptions.hasTrialOfferAvailable,
-          TrialOfferCoordinator.shared.pendingIntent == nil,
+          TrialOfferCoordinator.shared.pendingRequest == nil,
           TrialNudgeGate.canShow()
     else { return }
     try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
     guard !Task.isCancelled,
           !subscriptions.isProSubscriber,
-          TrialOfferCoordinator.shared.pendingIntent == nil
+          TrialOfferCoordinator.shared.pendingRequest == nil
     else { return }
-    TrialNudgeGate.markShown()
-    TrialOfferCoordinator.shared.request(intent)
+    TrialOfferCoordinator.shared.request(intent, policy: .subsequentPassive)
+}
+
+/// Usage-counted repitch after a positive moment (2nd growth celebration, 3rd
+/// check-in, 2nd Journal tab open, etc.). Skips the initial onboarding pitches.
+@MainActor
+func evaluateUsageBasedTrialPitch(
+    _ subscriptions: SubscriptionService,
+    intent: TrialOfferCoordinator.Intent,
+    usageCount: Int,
+    threshold: Int = TrialSubsequentPitchGate.passiveUsageThreshold,
+    delay: Double = 1.5
+) async {
+    guard !subscriptions.isProSubscriber,
+          !subscriptions.hasClaimedTrial,
+          subscriptions.hasTrialOfferAvailable,
+          usageCount >= threshold,
+          TrialOfferCoordinator.shared.pendingRequest == nil,
+          TrialNudgeGate.canShow(),
+          TrialSubsequentPitchGate.canPresentTrialPitch(for: intent)
+    else { return }
+    try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+    guard !Task.isCancelled,
+          !subscriptions.isProSubscriber,
+          TrialOfferCoordinator.shared.pendingRequest == nil,
+          TrialNudgeGate.canShow(),
+          TrialSubsequentPitchGate.canPresentTrialPitch(for: intent)
+    else { return }
+    TrialOfferCoordinator.shared.request(intent, policy: .subsequentPassive)
 }
