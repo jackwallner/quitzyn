@@ -1,1 +1,1 @@
-Dias sem nicotina
+Contador de dias sem nicotina
