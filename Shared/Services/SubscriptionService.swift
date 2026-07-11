@@ -249,13 +249,14 @@ final class SubscriptionService: NSObject {
     }
 
     #if canImport(RevenueCat)
-    /// Monthly plan with a free-trial intro offer when available — the package
-    /// the one-tap trial sheet purchases. Monthly is the default trial entry
-    /// point; fall back to yearly, then any trial product.
+    /// Yearly plan with a free-trial intro offer when available — the package
+    /// the one-tap trial surfaces purchase. Yearly is the default trial entry
+    /// point (fleet-wide convention, matching Sober); fall back to monthly,
+    /// then any trial product.
     var directTrialPackage: Package? {
         let trialPackages = packages.filter { isEligibleForIntroOffer($0) }
-        return trialPackages.first { $0.soberPackageKind == .monthly }
-            ?? trialPackages.first { $0.soberPackageKind == .yearly }
+        return trialPackages.first { $0.soberPackageKind == .yearly }
+            ?? trialPackages.first { $0.soberPackageKind == .monthly }
             ?? trialPackages.first
     }
 
@@ -270,8 +271,8 @@ final class SubscriptionService: NSObject {
     /// and the cancel path). Nil until products load so the UI never shows a
     /// placeholder price. Falls back to a price-only variant when the intro
     /// offer isn't available to this Apple ID. Note: the button buys
-    /// `directTrialPackage` (monthly-preferred on this fork), so the price shown
-    /// is that package's price; it always matches what the tap charges.
+    /// `directTrialPackage` (yearly-preferred), so the price shown is that
+    /// package's price; it always matches what the tap charges.
     var directTrialCTADisclosureText: String? {
         guard let package = directTrialPackage ?? packages.first(where: { $0.soberPackageKind == .yearly }) else {
             return nil
