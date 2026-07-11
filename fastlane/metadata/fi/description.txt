@@ -1,8 +1,8 @@
-Quit Zyn auttaa pysymään nikotiinittomana päivälaskurilla, päivittäisellä kirjauksella ja virtuaalisella puutarhalla, joka kasvaa jokaisena raittiina päivänä.
+Quit Zyn auttaa pysymään nikotiinittomana päivälaskurilla, päivittäisellä kirjauksella ja virtuaalisella puutarhalla, joka kasvaa jokaisena nikotiinittomana päivänä.
 
 ILMAISEKSI
-• Alkoholiton päivälaskuri
-• Päivittäinen kirjaus ja raittiuskalenteri
+• Nikotiiniton päivälaskuri
+• Päivittäinen kirjaus ja nikotiinittomuuskalenteri
 • Virtuaalinen puutarha
 • Yksityinen laitteella
 

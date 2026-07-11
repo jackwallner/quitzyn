@@ -1,19 +1,19 @@
 {
   "ar-SA": {
     "name": {
-      "old": "كيت زين – بلا نيكوتين",
-      "new": "كيت زين – بلا نيكوتين",
-      "len": 21
+      "old": "إقلاع السنوس: أكياس ونيكوتين",
+      "new": "إقلاع السنوس: أكياس ونيكوتين",
+      "len": 28
     },
     "subtitle": {
-      "old": "أيام بلا نيكوتين",
-      "new": "أيام بلا نيكوتين",
-      "len": 16
+      "old": "عداد أيام خالية من النيكوتين",
+      "new": "عداد أيام خالية من النيكوتين",
+      "len": 28
     },
     "keywords": {
-      "old": "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
-      "new": "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
-      "len": 62
+      "old": "فيب,إدمان,امتناع,عادة,يوميات,سلسلة,تبغ,تقويم,صحة,خاص,انتكاسة,velo,snus,zyn,nicotine,pouch,puff,stop",
+      "new": "فيب,إدمان,امتناع,عادة,يوميات,سلسلة,تبغ,تقويم,صحة,خاص,انتكاسة,velo,snus,zyn,nicotine,pouch,puff,stop",
+      "len": 99
     },
     "description_chars": 339,
     "promotional_chars": 121,
@@ -21,19 +21,19 @@
   },
   "bn-BD": {
     "name": {
-      "old": "কুইট জিন – নিকোটিন মুক্ত",
-      "new": "কুইট জিন – নিকোটিন মুক্ত",
-      "len": 24
+      "old": "স্নাস ছাড়ুন – পাউচ ট্র্যাকার",
+      "new": "স্নাস ছাড়ুন – পাউচ ট্র্যাকার",
+      "len": 29
     },
     "subtitle": {
-      "old": "নিকোটিন মুক্ত দিন গণনা",
-      "new": "নিকোটিন মুক্ত দিন গণনা",
-      "len": 22
+      "old": "দিন গণনা ও বাগান",
+      "new": "নিকোটিন মুক্ত দিন গণনা ও বাগান",
+      "len": 30
     },
     "keywords": {
-      "old": "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
-      "new": "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
-      "len": 62
+      "old": "ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,ধারা,তামাক,ক্যালেন্ডার,স্বাস্থ্য,ব্যক্তিগত,snus,velo,zyn,puff",
+      "new": "ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,ধারা,তামাক,ক্যালেন্ডার,স্বাস্থ্য,ব্যক্তিগত,snus,velo,zyn,puff",
+      "len": 98
     },
     "description_chars": 350,
     "promotional_chars": 164,
@@ -41,19 +41,19 @@
   },
   "ca": {
     "name": {
-      "old": "Quit Zyn – Sense nicotina",
-      "new": "Quit Zyn – Sense nicotina",
-      "len": 25
+      "old": "Deixa snus: Bosses & velo",
+      "new": "Deixa el snus: Bosses & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Dies sense nicotina",
-      "new": "Dies sense nicotina",
-      "len": 19
+      "old": "Comptador dies & jardí",
+      "new": "Comptador dies sense nicotina",
+      "len": 29
     },
     "keywords": {
-      "old": "bosses,vape,deixar,addicció,abstinència,recuperació,hàbit,diari,app,velo",
-      "new": "bosses,vape,deixar,addicció,abstinència,recuperació,hàbit,diari,app,velo",
-      "len": 72
+      "old": "tabac,vape,addicció,abstinència,recuperació,hàbit,diari,sèrie,calendari,salut,privat,gana,zyn,puff",
+      "new": "tabac,vape,addicció,abstinència,recuperació,hàbit,diari,sèrie,calendari,salut,privat,gana,zyn,puff",
+      "len": 98
     },
     "description_chars": 395,
     "promotional_chars": 148,
@@ -61,19 +61,19 @@
   },
   "cs": {
     "name": {
-      "old": "Quit Zyn – Bez nikotinu",
-      "new": "Quit Zyn – Bez nikotinu",
-      "len": 23
+      "old": "Přestaň snus: Sáčky & velo",
+      "new": "Přestaň snus: Sáčky & velo",
+      "len": 26
     },
     "subtitle": {
-      "old": "Dny bez nikotinu",
-      "new": "Dny bez nikotinu",
-      "len": 16
+      "old": "Počítadlo dnů & zahrada",
+      "new": "Počítadlo dnů bez nikotinu",
+      "len": 26
     },
     "keywords": {
-      "old": "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
-      "new": "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
-      "len": 70
+      "old": "tabák,vape,přestat,závislost,abstinence,zvyk,deník,série,kalendář,zdraví,soukromí,chuť,žvýkat,zyn",
+      "new": "tabák,vape,přestat,závislost,abstinence,zvyk,deník,série,kalendář,zdraví,soukromí,chuť,žvýkat,zyn",
+      "len": 97
     },
     "description_chars": 370,
     "promotional_chars": 150,
@@ -81,59 +81,59 @@
   },
   "da": {
     "name": {
-      "old": "Quit Zyn – Nikotinfri",
-      "new": "Quit Zyn – Nikotinfri",
-      "len": 21
+      "old": "Stop snus: Poser & prillor",
+      "new": "Stop snus: Poser & prillor",
+      "len": 26
     },
     "subtitle": {
-      "old": "Dage uden nikotin",
-      "new": "Dage uden nikotin",
-      "len": 17
+      "old": "Nikotinfri dagtæller & have",
+      "new": "Nikotinfri dagtæller & have",
+      "len": 27
     },
     "keywords": {
-      "old": "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
-      "new": "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
-      "len": 71
+      "old": "velo,tobak,vape,afhængighed,abstinens,vane,dagbog,serie,kalender,sundhed,privat,trang,tygge,zyn,puff",
+      "new": "velo,tobak,vape,afhængighed,abstinens,vane,dagbog,serie,kalender,sundhed,privat,trang,tygge,zyn,puff",
+      "len": 100
     },
-    "description_chars": 351,
+    "description_chars": 363,
     "promotional_chars": 156,
     "release_notes_chars": 121
   },
   "de-DE": {
     "name": {
-      "old": "Quit Zyn – Nikotinfrei",
-      "new": "Quit Zyn – Nikotinfrei",
-      "len": 22
+      "old": "Snus aufhören: Beutel & Zyn",
+      "new": "Snus aufhören: Beutel & Zyn",
+      "len": 27
     },
     "subtitle": {
-      "old": "Tagezähler & Garten",
-      "new": "Tagezähler & Garten",
-      "len": 19
+      "old": "Nikotinfreie Tage & Garten",
+      "new": "Nikotinfreie Tage & Garten",
+      "len": 26
     },
     "keywords": {
-      "old": "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,aufhören,kauen,velo,app",
-      "new": "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,aufhören,kauen,velo,app",
-      "len": 76
+      "old": "velo,tabak,kauen,entzug,gewohnheit,serie,verlangen,kalender,gesundheit,privat,rückfall,dampfen,puff",
+      "new": "velo,tabak,kauen,entzug,gewohnheit,serie,verlangen,kalender,gesundheit,privat,rückfall,dampfen,puff",
+      "len": 99
     },
-    "description_chars": 752,
+    "description_chars": 763,
     "promotional_chars": 165,
     "release_notes_chars": 160
   },
   "el": {
     "name": {
-      "old": "Quit Zyn – Χωρίς νικοτίνη",
-      "new": "Quit Zyn – Χωρίς νικοτίνη",
-      "len": 25
+      "old": "Σταμάτα snus: Φακελάκια & velo",
+      "new": "Σταμάτα snus: Φακελάκια & velo",
+      "len": 30
     },
     "subtitle": {
-      "old": "Ημέρες χωρίς νικοτίνη",
-      "new": "Ημέρες χωρίς νικοτίνη",
-      "len": 21
+      "old": "Μετρητής ημερών & κήπος",
+      "new": "Μετρητής ημερών χωρίς νικοτίνη",
+      "len": 30
     },
     "keywords": {
-      "old": "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
-      "new": "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
-      "len": 71
+      "old": "καπνός,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,σειρά,υγεία,ιδιωτικό,λαχτάρα,μάσηση,zyn,nicotine",
+      "new": "καπνός,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,σειρά,υγεία,ιδιωτικό,λαχτάρα,μάσηση,zyn,nicotine",
+      "len": 98
     },
     "description_chars": 392,
     "promotional_chars": 158,
@@ -146,14 +146,14 @@
       "len": 30
     },
     "subtitle": {
-      "old": "Nicotine Free: Day Counter",
-      "new": "Nicotine Free: Day Counter",
-      "len": 26
+      "old": "Nicotine Free Days & Garden",
+      "new": "Nicotine Free Days & Garden",
+      "len": 27
     },
     "keywords": {
-      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "len": 65
+      "old": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "new": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "len": 97
     },
     "description_chars": 2227,
     "promotional_chars": 144,
@@ -166,14 +166,14 @@
       "len": 30
     },
     "subtitle": {
-      "old": "Nicotine Free: Day Counter",
-      "new": "Nicotine Free: Day Counter",
-      "len": 26
+      "old": "Nicotine Free Days & Garden",
+      "new": "Nicotine Free Days & Garden",
+      "len": 27
     },
     "keywords": {
-      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "len": 65
+      "old": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "new": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "len": 97
     },
     "description_chars": 2227,
     "promotional_chars": 144,
@@ -186,14 +186,14 @@
       "len": 30
     },
     "subtitle": {
-      "old": "Nicotine Free: Day Counter",
-      "new": "Nicotine Free: Day Counter",
-      "len": 26
+      "old": "Nicotine Free Days & Garden",
+      "new": "Nicotine Free Days & Garden",
+      "len": 27
     },
     "keywords": {
-      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "len": 65
+      "old": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "new": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "len": 97
     },
     "description_chars": 2227,
     "promotional_chars": 144,
@@ -206,14 +206,14 @@
       "len": 30
     },
     "subtitle": {
-      "old": "Nicotine Free: Day Counter",
-      "new": "Nicotine Free: Day Counter",
-      "len": 26
+      "old": "Nicotine Free Days & Garden",
+      "new": "Nicotine Free Days & Garden",
+      "len": 27
     },
     "keywords": {
-      "old": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "new": "velo,zyns,vape,streak,craving,dip,habit,tin,money,saved,chew,oral",
-      "len": 65
+      "old": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "new": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "len": 97
     },
     "description_chars": 2227,
     "promotional_chars": 144,
@@ -221,39 +221,39 @@
   },
   "es-ES": {
     "name": {
-      "old": "Quit Zyn – Sin nicotina",
-      "new": "Quit Zyn – Sin nicotina",
-      "len": 23
+      "old": "Dejar snus: Bolsas & velo",
+      "new": "Dejar el snus: Bolsas & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Días sin nicotina",
-      "new": "Días sin nicotina",
-      "len": 17
+      "old": "Contador de días & jardín",
+      "new": "Contador de días sin nicotina",
+      "len": 29
     },
     "keywords": {
-      "old": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
-      "new": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
-      "len": 78
+      "old": "tabaco,vapeo,adicción,antojo,abstinencia,recuperación,habito,diario,serie,salud,masticar,privado,zyn",
+      "new": "tabaco,vapeo,adicción,antojo,abstinencia,recuperación,habito,diario,serie,salud,masticar,privado,zyn",
+      "len": 100
     },
-    "description_chars": 718,
+    "description_chars": 734,
     "promotional_chars": 152,
     "release_notes_chars": 136
   },
   "es-MX": {
     "name": {
-      "old": "Quit Zyn – Sin nicotina",
-      "new": "Quit Zyn – Sin nicotina",
-      "len": 23
+      "old": "Dejar snus: Bolsas & velo",
+      "new": "Dejar el snus: Bolsas & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Días sin nicotina",
-      "new": "Días sin nicotina",
-      "len": 17
+      "old": "Contador de días & jardín",
+      "new": "Contador de días sin nicotina",
+      "len": 29
     },
     "keywords": {
-      "old": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
-      "new": "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,habito,diario,app",
-      "len": 78
+      "old": "tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,stop,puff,tobacco,salud",
+      "new": "tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,stop,puff,tobacco,salud",
+      "len": 98
     },
     "description_chars": 389,
     "promotional_chars": 149,
@@ -261,39 +261,39 @@
   },
   "fi": {
     "name": {
-      "old": "Quit Zyn – Nikotiiniton",
-      "new": "Quit Zyn – Nikotiiniton",
-      "len": 23
+      "old": "Lopeta nuuska: Pussit & snus",
+      "new": "Lopeta nuuska: Pussit & snus",
+      "len": 28
     },
     "subtitle": {
-      "old": "Päivät ilman nikotiinia",
-      "new": "Päivät ilman nikotiinia",
-      "len": 23
+      "old": "Päivälaskuri & puutarha",
+      "new": "Nikotiiniton päivälaskuri",
+      "len": 25
     },
     "keywords": {
-      "old": "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
-      "new": "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
-      "len": 74
+      "old": "velo,tupakka,vape,lopettaa,riippuvuus,tottumus,päiväkirja,sarja,kalenteri,terveys,yksityinen,himo",
+      "new": "velo,tupakka,vape,lopettaa,riippuvuus,tottumus,päiväkirja,sarja,kalenteri,terveys,yksityinen,himo",
+      "len": 97
     },
-    "description_chars": 422,
+    "description_chars": 438,
     "promotional_chars": 168,
     "release_notes_chars": 147
   },
   "fr-CA": {
     "name": {
-      "old": "Quit Zyn – Sans nicotine",
-      "new": "Quit Zyn – Sans nicotine",
-      "len": 24
+      "old": "Arrêter snus: Sachets & velo",
+      "new": "Arrêter snus: Sachets & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Compteur jours sans nicotine",
+      "old": "Compteur de jours & jardin",
       "new": "Compteur jours sans nicotine",
       "len": 28
     },
     "keywords": {
-      "old": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
-      "new": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
-      "len": 71
+      "old": "tabac,vapotage,sevrage,envie,journal,série,dépendance,abstinence,récupération,chiquer,cessation,zyn",
+      "new": "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
+      "len": 100
     },
     "description_chars": 466,
     "promotional_chars": 166,
@@ -301,39 +301,39 @@
   },
   "fr-FR": {
     "name": {
-      "old": "Quit Zyn – Sans nicotine",
-      "new": "Quit Zyn – Sans nicotine",
-      "len": 24
+      "old": "Arrêter snus: Sachets & velo",
+      "new": "Arrêter snus: Sachets & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Compteur jours sans nicotine",
+      "old": "Compteur de jours & jardin",
       "new": "Compteur jours sans nicotine",
       "len": 28
     },
     "keywords": {
-      "old": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
-      "new": "sachet,vape,sevrage,envie,habitude,journal,arrêter,serie,libre,velo,app",
-      "len": 71
+      "old": "tabac,vapotage,sevrage,envie,journal,série,dépendance,abstinence,récupération,chiquer,rechute,privé",
+      "new": "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
+      "len": 100
     },
-    "description_chars": 816,
+    "description_chars": 829,
     "promotional_chars": 163,
     "release_notes_chars": 145
   },
   "gu-IN": {
     "name": {
-      "old": "ક્વિટ ઝિન – નિકોટિન મુક્ત",
-      "new": "ક્વિટ ઝિન – નિકોટિન મુક્ત",
-      "len": 25
+      "old": "સ્નસ છોડો – પાઉચ ટ્રેકર",
+      "new": "સ્નસ છોડો – પાઉચ ટ્રેકર એપ",
+      "len": 26
     },
     "subtitle": {
-      "old": "નિકોટિન મુક્ત દિવસ ગણતરી",
-      "new": "નિકોટિન મુક્ત દિવસ ગણતરી",
-      "len": 24
+      "old": "દિવસ ગણતરી અને બગીચો",
+      "new": "નિકોટિન મુક્ત દિવસ ગણતરી બગીચો",
+      "len": 30
     },
     "keywords": {
-      "old": "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
-      "new": "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
-      "len": 56
+      "old": "વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,શ્રેણી,તમાકુ,કેલેન્ડર,આરોગ્ય,snus,velo,zyn,nicotine,puff,stop,streak",
+      "new": "વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,શ્રેણી,તમાકુ,કેલેન્ડર,આરોગ્ય,snus,velo,zyn,nicotine,puff,stop,streak",
+      "len": 100
     },
     "description_chars": 300,
     "promotional_chars": 146,
@@ -341,19 +341,19 @@
   },
   "he": {
     "name": {
-      "old": "קוויט זין – ללא ניקוטין",
-      "new": "קוויט זין – ללא ניקוטין",
-      "len": 23
+      "old": "הפסק snus: שקיות וסנוס",
+      "new": "הפסקת snus: שקיות וסנוס velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "ימים ללא ניקוטין",
-      "new": "ימים ללא ניקוטין",
-      "len": 16
+      "old": "מונה ימים ללא ניקוטין",
+      "new": "מונה ימים נקיים מניקוטין וגן",
+      "len": 28
     },
     "keywords": {
-      "old": "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
-      "new": "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
-      "len": 65
+      "old": "וייפ,התמכרות,התנזרות,הרגל,יומן,רצף,טבק,לוחשנה,בריאות,velo,zyn,nicotine,pouch,פרטי,puff,stop,streak",
+      "new": "וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,רצף,טבק,לוחשנה,בריאות,zyn,nicotine,pouch,פרטי,puff,stop,streak",
+      "len": 99
     },
     "description_chars": 296,
     "promotional_chars": 120,
@@ -361,19 +361,19 @@
   },
   "hi": {
     "name": {
-      "old": "क्विट ज़िन – निकोटीन मुक्त",
-      "new": "क्विट ज़िन – निकोटीन मुक्त",
+      "old": "स्नूस छोड़ें – पाउच ट्रैकर",
+      "new": "स्नूस छोड़ें – पाउच ट्रैकर",
       "len": 26
     },
     "subtitle": {
-      "old": "निकोटीन मुक्त दिन गिनती",
-      "new": "निकोटीन मुक्त दिन गिनती",
-      "len": 23
+      "old": "दिन गिनती और बगीचा",
+      "new": "निकोटीन मुक्त दिन गिनती बगीचा",
+      "len": 29
     },
     "keywords": {
-      "old": "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
-      "new": "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
-      "len": 54
+      "old": "वेप,छोड़ना,लत,संयम,आदत,डायरी,स्ट्रीक,तंबाकू,कैलेंडर,स्वास्थ्य,निजी,पुनरावृत्ति,snus,velo,zyn,puff",
+      "new": "वेप,छोड़ना,लत,संयम,आदत,डायरी,स्ट्रीक,तंबाकू,कैलेंडर,स्वास्थ्य,निजी,पुनरावृत्ति,snus,velo,zyn,puff",
+      "len": 97
     },
     "description_chars": 372,
     "promotional_chars": 140,
@@ -381,19 +381,19 @@
   },
   "hr": {
     "name": {
-      "old": "Quit Zyn – Bez nikotina",
-      "new": "Quit Zyn – Bez nikotina",
-      "len": 23
+      "old": "Prestani snus: Vrećice & velo",
+      "new": "Prestani snus: Vrećice & velo",
+      "len": 29
     },
     "subtitle": {
-      "old": "Dani bez nikotina",
-      "new": "Dani bez nikotina",
-      "len": 17
+      "old": "Brojač dana & vrt",
+      "new": "Brojač dana bez nikotina & vrt",
+      "len": 30
     },
     "keywords": {
-      "old": "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
-      "new": "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
-      "len": 76
+      "old": "duhan,vape,prestati,ovisnost,apstinencija,navika,dnevnik,niz,kalendar,zdravlje,privatno,želja,zyn",
+      "new": "duhan,vape,prestati,ovisnost,apstinencija,navika,dnevnik,niz,kalendar,zdravlje,privatno,želja,zyn",
+      "len": 97
     },
     "description_chars": 355,
     "promotional_chars": 162,
@@ -401,39 +401,39 @@
   },
   "hu": {
     "name": {
-      "old": "Quit Zyn – Nikotinmentes",
-      "new": "Quit Zyn – Nikotinmentes",
-      "len": 24
+      "old": "Snus abbahagy: Tasakok & velo",
+      "new": "Snus abbahagy: Tasakok & velo",
+      "len": 29
     },
     "subtitle": {
-      "old": "Nikotinmentes napok",
-      "new": "Nikotinmentes napok",
-      "len": 19
+      "old": "Napszámító & kert",
+      "new": "Nikotinfüggetlen napok & kert",
+      "len": 29
     },
     "keywords": {
-      "old": "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
-      "new": "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
-      "len": 71
+      "old": "dohány,vape,függőség,elvonás,szokás,napló,sorozat,naptár,egészség,vágy,rágás,zyn,nicotine,puff,stop",
+      "new": "dohány,vape,függőség,elvonás,szokás,napló,sorozat,naptár,egészség,vágy,rágás,zyn,nicotine,puff,stop",
+      "len": 99
     },
-    "description_chars": 369,
+    "description_chars": 377,
     "promotional_chars": 153,
     "release_notes_chars": 143
   },
   "id": {
     "name": {
-      "old": "Quit Zyn – Bebas Nikotin",
-      "new": "Quit Zyn – Bebas Nikotin",
-      "len": 24
+      "old": "Berhenti snus: Kantong & velo",
+      "new": "Berhenti snus: Kantong & velo",
+      "len": 29
     },
     "subtitle": {
-      "old": "Hari bebas nikotin",
-      "new": "Hari bebas nikotin",
-      "len": 18
+      "old": "Hitung hari & taman",
+      "new": "Hitung hari bebas nikotin",
+      "len": 25
     },
     "keywords": {
-      "old": "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
-      "new": "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
-      "len": 82
+      "old": "vape,kecanduan,pantang,kebiasaan,diari,rangkai,tembakau,kalender,kesehatan,pribadi,kambuh,zyn,puff",
+      "new": "vape,kecanduan,pantang,kebiasaan,diari,rangkai,tembakau,kalender,kesehatan,pribadi,kambuh,zyn,puff",
+      "len": 98
     },
     "description_chars": 366,
     "promotional_chars": 155,
@@ -441,39 +441,39 @@
   },
   "it": {
     "name": {
-      "old": "Quit Zyn – Senza nicotina",
-      "new": "Quit Zyn – Senza nicotina",
-      "len": 25
+      "old": "Smetti snus: Bustine & velo",
+      "new": "Smetti snus: Bustine & velo",
+      "len": 27
     },
     "subtitle": {
-      "old": "Giorni senza nicotina",
-      "new": "Giorni senza nicotina",
-      "len": 21
+      "old": "Contatore giorni & giardino",
+      "new": "Contatore giorni no nicotina",
+      "len": 28
     },
     "keywords": {
-      "old": "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
-      "new": "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
-      "len": 77
+      "old": "tabacco,svapo,smettere,dipendenza,astinenza,diario,serie,calendario,salute,privato,voglia,masticare",
+      "new": "tabacco,svapo,smettere,dipendenza,astinenza,diario,serie,calendario,salute,privato,voglia,masticare",
+      "len": 99
     },
-    "description_chars": 569,
+    "description_chars": 577,
     "promotional_chars": 170,
     "release_notes_chars": 140
   },
   "ja": {
     "name": {
-      "old": "クィットザン – ニコチンフリー",
-      "new": "クィットザン – ニコチンフリー",
-      "len": 16
+      "old": "禁煙ポーチ｜スヌース追跡",
+      "new": "ニコチン袋・スヌース・ポーチ禁煙追跡ZYNアプリ版",
+      "len": 25
     },
     "subtitle": {
-      "old": "ニコチンフリー日数カウンター",
-      "new": "ニコチンフリー日数カウンター",
-      "len": 14
+      "old": "禁煙日数カウンター&庭園",
+      "new": "無ニコチン日数カウンター・バーチャル庭園ZYNアプリ",
+      "len": 26
     },
     "keywords": {
-      "old": "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
-      "new": "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
-      "len": 39
+      "old": "ポーチ,ベイプ,禁煙,ニコチン,依存,離脱,渇望,習慣,日記,連続,記録,カレンダー,ウィジェット,健康,非公開,再発,velo,snus,zyn,puff,stop,streak,tobacco",
+      "new": "ポーチ,ベイプ,禁煙,依存,離脱,渇望,習慣,日記,連続,記録,カレンダー,ウィジェット,健康,非公開,再発,velo,snus,zyn,puff,stop,streak,tobacco,vape",
+      "len": 98
     },
     "description_chars": 318,
     "promotional_chars": 76,
@@ -481,19 +481,19 @@
   },
   "kn-IN": {
     "name": {
-      "old": "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
-      "new": "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
-      "len": 28
+      "old": "ಸ್ನೂಸ್ ಬಿಡಿ – ಪಾಉಚ್ ಟ್ರ್ಯಾಕರ್",
+      "new": "ಸ್ನೂಸ್ ಬಿಡಿ – ಪಾಉಚ್ ಟ್ರ್ಯಾಕರ್",
+      "len": 29
     },
     "subtitle": {
-      "old": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
-      "new": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
-      "len": 21
+      "old": "ದಿನಗಳ ಎಣಿಕೆ ಮತ್ತು ತೋಟ",
+      "new": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳ ಎಣಿಕೆ ತೋಟ",
+      "len": 30
     },
     "keywords": {
-      "old": "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
-      "new": "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
-      "len": 58
+      "old": "ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಸರಣಿ,ಹೊಗೆತಂಬಾಕು,ಕ್ಯಾಲೆಂಡರ್,ಆರೋಗ್ಯ,snus,velo,zyn,nicotine,puff,stop",
+      "new": "ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಸರಣಿ,ಹೊಗೆತಂಬಾಕು,ಕ್ಯಾಲೆಂಡರ್,ಆರೋಗ್ಯ,snus,velo,zyn,nicotine,puff,stop",
+      "len": 100
     },
     "description_chars": 338,
     "promotional_chars": 142,
@@ -501,19 +501,19 @@
   },
   "ko": {
     "name": {
-      "old": "퀴트 진 – 니코틴 프리",
-      "new": "퀴트 진 – 니코틴 프리",
-      "len": 13
+      "old": "스누스 끊기｜파우치 추적",
+      "new": "스누스 끊기 니코틴 파우치 ZYN 추적 앱 프로그램",
+      "len": 28
     },
     "subtitle": {
-      "old": "니코틴 프리 일수 카운터",
-      "new": "니코틴 프리 일수 카운터",
-      "len": 13
+      "old": "금연 일수 카운터&정원",
+      "new": "무니코틴 프리 일수 카운터 & 가상 정원 성장",
+      "len": 25
     },
     "keywords": {
-      "old": "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
-      "new": "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
-      "len": 36
+      "old": "파우치,베이프,니코틴,중독,절제,갈망,습관,일기,연속,기록,캘린더,위젯,건강,비공개,재발,velo,snus,zyn,puff,stop,streak,tobacco,withdrawal",
+      "new": "베이프,금연,중독,절제,갈망,습관,일기,연속,기록,캘린더,위젯,건강,비공개,재발,velo,snus,puff,stop,streak,tobacco,withdrawal,vape",
+      "len": 95
     },
     "description_chars": 251,
     "promotional_chars": 91,
@@ -521,19 +521,19 @@
   },
   "ml-IN": {
     "name": {
-      "old": "ക്വിറ്റ് സിൻ",
-      "new": "ക്വിറ്റ് സിൻ",
-      "len": 12
+      "old": "സ്നൂസ് നിർത്തുക – പൗച്ച്",
+      "new": "സ്നൂസ് നിർത്തുക – പൗച്ച് ആപ്പ്",
+      "len": 30
     },
     "subtitle": {
-      "old": "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
-      "new": "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
-      "len": 24
+      "old": "ദിനങ്ങൾ & തോട്ടം",
+      "new": "നികോട്ടിൻ ഫ്രീ ദിവസങ്ങൾ തോട്ടം",
+      "len": 30
     },
     "keywords": {
-      "old": "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
-      "new": "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
-      "len": 60
+      "old": "വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,സീരീസ്,പുകയില,കലണ്ടർ,ആരോഗ്യം,snus,velo,zyn,nicotine,puff,stop",
+      "new": "വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,സീരീസ്,പുകയില,കലണ്ടർ,ആരോഗ്യം,snus,velo,zyn,nicotine,puff,stop",
+      "len": 99
     },
     "description_chars": 327,
     "promotional_chars": 169,
@@ -541,19 +541,19 @@
   },
   "mr-IN": {
     "name": {
-      "old": "क्विट झिन – निकोटीन मुक्त",
-      "new": "क्विट झिन – निकोटीन मुक्त",
-      "len": 25
+      "old": "स्नूस सोडा – पाउच ट्रॅकर",
+      "new": "स्नूस सोडा – पाउच ट्रॅकर ऍप",
+      "len": 27
     },
     "subtitle": {
-      "old": "निकोटीन मुक्त दिवस मोजणी",
-      "new": "निकोटीन मुक्त दिवस मोजणी",
-      "len": 24
+      "old": "दिवस मोजणी आणि बाग",
+      "new": "निकोटीन मुक्त दिवस मोजणी बाग",
+      "len": 28
     },
     "keywords": {
-      "old": "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
-      "new": "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
-      "len": 56
+      "old": "वेप,सोडणे,व्यसन,संयम,सवय,डायरी,मालिका,तंबाखू,दिनदर्शिका,आरोग्य,snus,velo,zyn,nicotine,puff,stop,vape",
+      "new": "वेप,सोडणे,व्यसन,संयम,सवय,डायरी,मालिका,तंबाखू,दिनदर्शिका,आरोग्य,snus,velo,zyn,nicotine,puff,stop,vape",
+      "len": 100
     },
     "description_chars": 310,
     "promotional_chars": 149,
@@ -561,19 +561,19 @@
   },
   "ms": {
     "name": {
-      "old": "Quit Zyn – Bebas Nikotin",
-      "new": "Quit Zyn – Bebas Nikotin",
-      "len": 24
+      "old": "Berhenti snus: Kantung & velo",
+      "new": "Berhenti snus: Kantung & velo",
+      "len": 29
     },
     "subtitle": {
-      "old": "Hari bebas nikotin",
-      "new": "Hari bebas nikotin",
-      "len": 18
+      "old": "Kira hari & taman",
+      "new": "Hitung hari tanpa nikotin",
+      "len": 25
     },
     "keywords": {
-      "old": "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
-      "new": "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
-      "len": 79
+      "old": "vape,ketagihan,pantang,tabiat,diari,rangkai,tembakau,kalendar,kesihatan,kambuh,peribadi,nicotine,zyn",
+      "new": "vape,ketagihan,pantang,tabiat,diari,rangkai,tembakau,kalendar,kesihatan,kambuh,peribadi,nicotine,zyn",
+      "len": 100
     },
     "description_chars": 361,
     "promotional_chars": 160,
@@ -581,59 +581,59 @@
   },
   "nl-NL": {
     "name": {
-      "old": "Quit Zyn – Nikotinvrij",
-      "new": "Quit Zyn – Nikotinvrij",
-      "len": 22
+      "old": "Stop met snus: Zakjes & velo",
+      "new": "Stop met snus: Zakjes & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Dagen zonder nicotine",
-      "new": "Dagen zonder nicotine",
-      "len": 21
+      "old": "Nikotinvrije dagen & tuin",
+      "new": "Nikotinvrije dagen & tuin",
+      "len": 25
     },
     "keywords": {
-      "old": "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
-      "new": "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
-      "len": 80
+      "old": "tabak,dampen,verslaving,ontwenning,gewoonte,dagboek,serie,kalender,gezondheid,privé,verlangen,kauwen",
+      "new": "tabak,dampen,verslaving,ontwenning,gewoonte,dagboek,serie,kalender,gezondheid,privé,verlangen,kauwen",
+      "len": 100
     },
-    "description_chars": 431,
+    "description_chars": 435,
     "promotional_chars": 156,
     "release_notes_chars": 136
   },
   "no": {
     "name": {
-      "old": "Quit Zyn – Nikotinfri",
-      "new": "Quit Zyn – Nikotinfri",
-      "len": 21
+      "old": "Slutt med snus: Poser & velo",
+      "new": "Slutt med snus: Poser & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Dager uten nikotin",
-      "new": "Dager uten nikotin",
-      "len": 18
+      "old": "Nikotinfri dagteller & hage",
+      "new": "Nikotinfri dagteller & hage",
+      "len": 27
     },
     "keywords": {
-      "old": "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
-      "new": "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
-      "len": 72
+      "old": "tobakk,vape,avhengighet,avholdenhet,vanedagbok,serie,kalender,helse,privat,sug,tygge,tilbakefall,zyn",
+      "new": "tobakk,vape,avhengighet,avholdenhet,vanedagbok,serie,kalender,helse,privat,sug,tygge,tilbakefall,zyn",
+      "len": 100
     },
-    "description_chars": 347,
+    "description_chars": 359,
     "promotional_chars": 150,
     "release_notes_chars": 121
   },
   "or-IN": {
     "name": {
-      "old": "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
-      "new": "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
-      "len": 25
+      "old": "ସ୍ନସ ଛାଡ଼ – ପାଉଚ ଟ୍ରାକର",
+      "new": "ସ୍ନସ ଛାଡ଼ – ପାଉଚ ଟ୍ରାକର ଆପ୍",
+      "len": 27
     },
     "subtitle": {
-      "old": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
-      "new": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
-      "len": 22
+      "old": "ଦିନ ଗଣନା ଏବଂ ବଗିଚା",
+      "new": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା ବଗିଚା",
+      "len": 28
     },
     "keywords": {
-      "old": "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
-      "new": "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
-      "len": 55
+      "old": "ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଧାରା,ତମାଖୁ,କ୍ୟାଲେଣ୍ଡର,ସ୍ୱାସ୍ଥ୍ୟ,snus,velo,zyn,nicotine,puff",
+      "new": "ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଧାରା,ତମାଖୁ,କ୍ୟାଲେଣ୍ଡର,ସ୍ୱାସ୍ଥ୍ୟ,snus,velo,zyn,nicotine,puff",
+      "len": 96
     },
     "description_chars": 299,
     "promotional_chars": 169,
@@ -641,19 +641,19 @@
   },
   "pa-IN": {
     "name": {
-      "old": "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
-      "new": "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
-      "len": 24
+      "old": "ਸਨੂਸ ਛੱਡੋ – ਪਾਊਚ ਟ੍ਰੈਕਰ",
+      "new": "ਸਨੂਸ ਛੱਡੋ – ਪਾਊਚ ਟ੍ਰੈਕਰ ਐਪ",
+      "len": 26
     },
     "subtitle": {
-      "old": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
-      "new": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
-      "len": 22
+      "old": "ਦਿਨ ਗਿਣਤੀ ਅਤੇ ਬਾਗ",
+      "new": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ ਬਾਗ",
+      "len": 26
     },
     "keywords": {
-      "old": "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
-      "new": "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
-      "len": 50
+      "old": "ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਲੜੀ,ਤਮਾਕੂ,ਕੈਲੰਡਰ,ਸਿਹਤ,snus,velo,zyn,nicotine,puff,stop,streak,tobacco",
+      "new": "ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਲੜੀ,ਤਮਾਕੂ,ਕੈਲੰਡਰ,ਸਿਹਤ,snus,velo,zyn,nicotine,puff,stop,streak,tobacco",
+      "len": 98
     },
     "description_chars": 304,
     "promotional_chars": 143,
@@ -661,19 +661,19 @@
   },
   "pl": {
     "name": {
-      "old": "Quit Zyn – Bez nikotyny",
-      "new": "Quit Zyn – Bez nikotyny",
-      "len": 23
+      "old": "Rzuć snus: Saszetki & velo",
+      "new": "Rzuć snusa: Saszetki & velo",
+      "len": 27
     },
     "subtitle": {
-      "old": "Dni bez nikotyny",
-      "new": "Dni bez nikotyny",
-      "len": 16
+      "old": "Licznik dni & ogród",
+      "new": "Dni bez nikotyny & licznik",
+      "len": 26
     },
     "keywords": {
-      "old": "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
-      "new": "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
-      "len": 76
+      "old": "tytoń,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,seria,kalendarz,zdrowie,prywatny,głód,żuć,zyn",
+      "new": "tytoń,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,seria,kalendarz,zdrowie,prywatny,głód,żuć,zyn",
+      "len": 99
     },
     "description_chars": 425,
     "promotional_chars": 137,
@@ -681,39 +681,39 @@
   },
   "pt-BR": {
     "name": {
-      "old": "Quit Zyn – Sem Nicotina",
-      "new": "Quit Zyn – Sem Nicotina",
-      "len": 23
+      "old": "Parar snus: Saquinhos & velo",
+      "new": "Parar o snus: Saquinhos & velo",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dias sem nicotina",
-      "new": "Dias sem nicotina",
-      "len": 17
+      "old": "Contador de dias & jardim",
+      "new": "Contador de dias sem nicotina",
+      "len": 29
     },
     "keywords": {
-      "old": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-      "new": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-      "len": 83
+      "old": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "new": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "len": 98
     },
-    "description_chars": 521,
+    "description_chars": 531,
     "promotional_chars": 167,
     "release_notes_chars": 134
   },
   "pt-PT": {
     "name": {
-      "old": "Quit Zyn – Sem Nicotina",
-      "new": "Quit Zyn – Sem Nicotina",
-      "len": 23
+      "old": "Parar snus: Saquinhos & velo",
+      "new": "Parar o snus: Saquinhos & velo",
+      "len": 30
     },
     "subtitle": {
-      "old": "Dias sem nicotina",
-      "new": "Dias sem nicotina",
-      "len": 17
+      "old": "Contador de dias & jardim",
+      "new": "Contador de dias sem nicotina",
+      "len": 29
     },
     "keywords": {
-      "old": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-      "new": "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-      "len": 83
+      "old": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "new": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "len": 98
     },
     "description_chars": 369,
     "promotional_chars": 140,
@@ -721,39 +721,39 @@
   },
   "ro": {
     "name": {
-      "old": "Quit Zyn – Fără nicotină",
-      "new": "Quit Zyn – Fără nicotină",
-      "len": 24
+      "old": "Oprește snus: Plicuri & velo",
+      "new": "Oprește snus: Plicuri & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "Zile fără nicotină",
-      "new": "Zile fără nicotină",
-      "len": 18
+      "old": "Contor zile & grădină",
+      "new": "Contor zile fără nicotină",
+      "len": 25
     },
     "keywords": {
-      "old": "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
-      "new": "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
-      "len": 73
+      "old": "tutun,vape,opri,dependență,abstinență,obicei,jurnal,serie,calendar,sănătate,privat,poftă,recădere",
+      "new": "tutun,vape,opri,dependență,abstinență,obicei,jurnal,serie,calendar,sănătate,privat,poftă,recădere",
+      "len": 97
     },
-    "description_chars": 375,
+    "description_chars": 383,
     "promotional_chars": 144,
     "release_notes_chars": 128
   },
   "ru": {
     "name": {
-      "old": "Quit Zyn – Без никотина",
-      "new": "Quit Zyn – Без никотина",
-      "len": 23
+      "old": "Брось snus: Пакетики & velo",
+      "new": "Брось snus: Пакетики & velo",
+      "len": 27
     },
     "subtitle": {
-      "old": "Дни без никотина",
-      "new": "Дни без никотина",
-      "len": 16
+      "old": "Счётчик дней & сад",
+      "new": "Счётчик дней без никотина",
+      "len": 25
     },
     "keywords": {
-      "old": "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
-      "new": "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
-      "len": 76
+      "old": "табак,вейп,бросить,зависимость,воздержание,привычка,дневник,серия,календарь,здоровье,тяга,жевать,zyn",
+      "new": "табак,вейп,бросить,зависимость,воздержание,привычка,дневник,серия,календарь,здоровье,тяга,жевать,zyn",
+      "len": 100
     },
     "description_chars": 414,
     "promotional_chars": 156,
@@ -761,19 +761,19 @@
   },
   "sk": {
     "name": {
-      "old": "Quit Zyn – Bez nikotínu",
-      "new": "Quit Zyn – Bez nikotínu",
-      "len": 23
+      "old": "Prestaň snus: Vrecká & velo",
+      "new": "Prestaň snus: Vrecká & velo",
+      "len": 27
     },
     "subtitle": {
-      "old": "Dni bez nikotínu",
-      "new": "Dni bez nikotínu",
-      "len": 16
+      "old": "Počítadlo dní & záhrada",
+      "new": "Počítadlo dní bez nikotínu",
+      "len": 26
     },
     "keywords": {
-      "old": "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
-      "new": "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
-      "len": 73
+      "old": "tabak,vape,prestať,závislosť,abstinencia,zvyk,denník,séria,kalendár,zdravie,súkromie,chuť,žuť,zyn",
+      "new": "tabak,vape,prestať,závislosť,abstinencia,zvyk,denník,séria,kalendár,zdravie,súkromie,chuť,žuť,zyn",
+      "len": 97
     },
     "description_chars": 351,
     "promotional_chars": 153,
@@ -781,19 +781,19 @@
   },
   "sl-SI": {
     "name": {
-      "old": "Quit Zyn – Brez nikotina",
-      "new": "Quit Zyn – Brez nikotina",
-      "len": 24
+      "old": "Nehaj snus: Vrečke & velo",
+      "new": "Nehaj snus: Vrečke & velo",
+      "len": 25
     },
     "subtitle": {
-      "old": "Dnevi brez nikotina",
-      "new": "Dnevi brez nikotina",
-      "len": 19
+      "old": "Števec dni & vrt",
+      "new": "Števec brez nikotina & vrt",
+      "len": 26
     },
     "keywords": {
-      "old": "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
-      "new": "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
-      "len": 72
+      "old": "tobak,vape,nehati,odvisnost,abstinenca,navada,dnevnik,niz,koledar,zdravje,zasebno,želja,žvečiti,zyn",
+      "new": "tobak,vape,nehati,odvisnost,abstinenca,navada,dnevnik,niz,koledar,zdravje,zasebno,želja,žvečiti,zyn",
+      "len": 99
     },
     "description_chars": 338,
     "promotional_chars": 160,
@@ -801,19 +801,19 @@
   },
   "sv": {
     "name": {
-      "old": "Quit Zyn – Nikotinfri",
-      "new": "Quit Zyn – Nikotinfri",
-      "len": 21
+      "old": "Sluta snusa: Prillor & snus",
+      "new": "Sluta snusa: Prillor & snus",
+      "len": 27
     },
     "subtitle": {
-      "old": "Dagar utan nikotin",
-      "new": "Dagar utan nikotin",
-      "len": 18
+      "old": "Dagräknare & trädgård",
+      "new": "Fri från nikotin dagräknare",
+      "len": 27
     },
     "keywords": {
-      "old": "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
-      "new": "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
-      "len": 69
+      "old": "velo,tobak,vape,beroende,abstinens,vana,dagbok,serie,kalender,hälsa,privat,sug,tugga,återfall,zyn",
+      "new": "velo,tobak,vape,beroende,abstinens,vana,dagbok,serie,kalender,hälsa,privat,sug,tugga,återfall,zyn",
+      "len": 97
     },
     "description_chars": 379,
     "promotional_chars": 159,
@@ -821,19 +821,19 @@
   },
   "ta-IN": {
     "name": {
-      "old": "க்விட் ஸின்",
-      "new": "க்விட் ஸின்",
-      "len": 11
+      "old": "ஸ்னூஸ் விடு – பவுச் டிராக்கர்",
+      "new": "ஸ்னூஸ் விடு – பவுச் டிராக்கர்",
+      "len": 29
     },
     "subtitle": {
-      "old": "நிக்கோட்டின் இல்லா நாட்கள்",
-      "new": "நிக்கோட்டின் இல்லா நாட்கள்",
-      "len": 26
+      "old": "நாட்கள் எண்ணிக்கை & தோட்டம்",
+      "new": "நாட்கள் எண்ணிக்கை & தோட்டம்",
+      "len": 27
     },
     "keywords": {
-      "old": "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
-      "new": "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
-      "len": 67
+      "old": "வேப்,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,தொடர்,புகையிலை,நாட்காட்டி,ஆரோக்கியம்,snus,velo,zyn,nicotine,puff",
+      "new": "வேப்,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,தொடர்,புகையிலை,நாட்காட்டி,ஆரோக்கியம்,snus,velo,zyn,nicotine,puff",
+      "len": 98
     },
     "description_chars": 351,
     "promotional_chars": 169,
@@ -841,19 +841,19 @@
   },
   "te-IN": {
     "name": {
-      "old": "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
-      "new": "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
+      "old": "స్నూస్ వదులు – పౌచ్ ట్రాకర్",
+      "new": "స్నూస్ వదులు – పౌచ్ ట్రాకర్",
       "len": 27
     },
     "subtitle": {
-      "old": "నికోటిన్ ఫ్రీ రోజులు",
-      "new": "నికోటిన్ ఫ్రీ రోజులు",
-      "len": 20
+      "old": "రోజుల లెక్క & తోట",
+      "new": "నికోటిన్ లేని రోజుల లెక్క తోట",
+      "len": 29
     },
     "keywords": {
-      "old": "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
-      "new": "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
-      "len": 62
+      "old": "వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,సిరీస్,పొగాకు,క్యాలెండర్,ఆరోగ్యం,snus,velo,zyn,nicotine,puff",
+      "new": "వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,సిరీస్,పొగాకు,క్యాలెండర్,ఆరోగ్యం,snus,velo,zyn,nicotine,puff",
+      "len": 96
     },
     "description_chars": 313,
     "promotional_chars": 170,
@@ -861,19 +861,19 @@
   },
   "th": {
     "name": {
-      "old": "ควิตซิน – ปลอดนิโคติน",
-      "new": "ควิตซิน – ปลอดนิโคติน",
-      "len": 21
+      "old": "ถุงนิโคติน: Snus & velo",
+      "new": "เลิก snus: ถุงนิโคติน & velo",
+      "len": 28
     },
     "subtitle": {
-      "old": "นับวันปลอดนิโคติน",
-      "new": "นับวันปลอดนิโคติน",
-      "len": 17
+      "old": "นับวันเลิกนิโคติน & สวน",
+      "new": "นับวันไม่นิโคติน & สวนเสมือน",
+      "len": 28
     },
     "keywords": {
-      "old": "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
-      "new": "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
-      "len": 53
+      "old": "ซอง,วีป,ติด,งด,นิสัย,ไดอารี่,สตรีค,ยาสูบ,ปฏิทิน,สุขภาพ,ส่วนตัว,กลับมา,nicotine,pouch,zyn,puff,stop",
+      "new": "ซอง,วีป,ติด,งด,นิสัย,ไดอารี่,สตรีค,ยาสูบ,ปฏิทิน,สุขภาพ,ส่วนตัว,กลับมา,nicotine,pouch,zyn,puff,stop",
+      "len": 98
     },
     "description_chars": 301,
     "promotional_chars": 123,
@@ -881,19 +881,19 @@
   },
   "tr": {
     "name": {
-      "old": "Quit Zyn – Nikotinsiz",
-      "new": "Quit Zyn – Nikotinsiz",
-      "len": 21
+      "old": "Bırak snus: Poşet & velo",
+      "new": "Bırak snusu: Poşet & velo",
+      "len": 25
     },
     "subtitle": {
-      "old": "Nikotinsiz günler",
-      "new": "Nikotinsiz günler",
-      "len": 17
+      "old": "Gün sayacı & bahçe",
+      "new": "Nikotinsiz gün sayacı & bahçe",
+      "len": 29
     },
     "keywords": {
-      "old": "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
-      "new": "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
-      "len": 75
+      "old": "tütün,vape,bağımlılık,ayıklık,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine",
+      "new": "tütün,vape,bağımlılık,ayıklık,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine",
+      "len": 96
     },
     "description_chars": 370,
     "promotional_chars": 156,
@@ -901,19 +901,19 @@
   },
   "uk": {
     "name": {
-      "old": "Quit Zyn – Без нікотину",
-      "new": "Quit Zyn – Без нікотину",
-      "len": 23
+      "old": "Кинь snus: Пакетики & velo",
+      "new": "Кинь snus: Пакетики & velo",
+      "len": 26
     },
     "subtitle": {
-      "old": "Дні без нікотину",
-      "new": "Дні без нікотину",
-      "len": 16
+      "old": "Лічильник днів & сад",
+      "new": "Лічильник днів без нікотину",
+      "len": 27
     },
     "keywords": {
-      "old": "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
-      "new": "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
-      "len": 71
+      "old": "тютюн,вейп,кинути,залежність,утримання,звичка,щоденник,серія,календар,здоров'я,тяга,жувати,zyn,puff",
+      "new": "тютюн,вейп,кинути,залежність,утримання,звичка,щоденник,серія,календар,здоров'я,тяга,жувати,zyn,puff",
+      "len": 99
     },
     "description_chars": 375,
     "promotional_chars": 154,
@@ -921,19 +921,19 @@
   },
   "ur-PK": {
     "name": {
-      "old": "کوئٹ زِن – نکوٹین سے پاک",
-      "new": "کوئٹ زِن – نکوٹین سے پاک",
-      "len": 24
+      "old": "سنوس چھوڑیں – پاؤچ ٹریکر",
+      "new": "سنوس چھوڑیں – پاؤچ ٹریکر ایپ",
+      "len": 28
     },
     "subtitle": {
-      "old": "نکوٹین سے پاک دن گنتی",
-      "new": "نکوٹین سے پاک دن گنتی",
-      "len": 21
+      "old": "دن گنتی اور باغ",
+      "new": "نیکوٹین فری دن گنتی اور باغ",
+      "len": 27
     },
     "keywords": {
-      "old": "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
-      "new": "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
-      "len": 56
+      "old": "ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,سلسلہ,تمباکو,کیلنڈر,صحت,snus,velo,zyn,nicotine,puff,stop,streak,vape",
+      "new": "ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,سلسلہ,تمباکو,کیلنڈر,صحت,snus,velo,zyn,nicotine,puff,stop,streak,vape",
+      "len": 100
     },
     "description_chars": 280,
     "promotional_chars": 151,
@@ -941,19 +941,19 @@
   },
   "vi": {
     "name": {
-      "old": "Quit Zyn – Không nicotin",
-      "new": "Quit Zyn – Không nicotin",
-      "len": 24
+      "old": "Bỏ snus: Túi & velo",
+      "new": "Bỏ thuốc snus: Túi & velo",
+      "len": 25
     },
     "subtitle": {
-      "old": "Ngày không nicotin",
-      "new": "Ngày không nicotin",
-      "len": 18
+      "old": "Đếm ngày không nicotine",
+      "new": "Đếm ngày không nicotine & vườn",
+      "len": 30
     },
     "keywords": {
-      "old": "túi,vape,cai,nghiện,kiêng,thóiquen,nhậtký,ứngdụng,velo,snus,chuỗi",
-      "new": "túi,vape,cai,nghiện,kiêng,thóiquen,nhậtký,ứngdụng,velo,snus,chuỗi",
-      "len": 65
+      "old": "vape,cai,nghiện,kiêng,thóiquen,nhậtký,chuỗi,thuốc,lich,suckhoe,riengtu,talai,pouch,zyn,puff,stop",
+      "new": "vape,cai,nghiện,kiêng,thóiquen,nhậtký,chuỗi,lich,suckhoe,riengtu,talai,pouch,zyn,puff,stop,streak",
+      "len": 97
     },
     "description_chars": 335,
     "promotional_chars": 170,
@@ -961,19 +961,19 @@
   },
   "zh-Hans": {
     "name": {
-      "old": "戒瘾助手 - 无烟碱追踪",
-      "new": "戒瘾助手 - 无烟碱追踪",
-      "len": 12
+      "old": "戒瘾助手｜尼古丁袋追踪器",
+      "new": "戒瘾助手｜尼古丁袋ZYN无烟碱戒断追踪应用助手APP",
+      "len": 26
     },
     "subtitle": {
-      "old": "无烟碱日计数器",
-      "new": "无烟碱日计数器",
-      "len": 7
+      "old": "无烟碱日计数&虚拟花园",
+      "new": "无烟碱日计数器・虚拟花园成长应用助手VELOZYN",
+      "len": 25
     },
     "keywords": {
-      "old": "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
-      "new": "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
-      "len": 37
+      "old": "唇烟,电子烟,戒烟,戒断,渴望,习惯,日记,连续,记录,计数器,日历,小组件,健康,私密,复吸,咀嚼,velo,snus,zyn,puff,stop,streak,vape,nicotine",
+      "new": "唇烟,电子烟,戒烟,戒断,渴望,习惯,日记,连续,记录,计数器,日历,小组件,健康,私密,复吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
+      "len": 98
     },
     "description_chars": 234,
     "promotional_chars": 49,
@@ -981,19 +981,19 @@
   },
   "zh-Hant": {
     "name": {
-      "old": "戒癮助手 - 無菸鹼追蹤",
-      "new": "戒癮助手 - 無菸鹼追蹤",
-      "len": 12
+      "old": "戒癮助手｜尼古丁袋追蹤器",
+      "new": "戒癮助手｜尼古丁袋ZYN無菸鹼戒斷追蹤應用助手APP",
+      "len": 26
     },
     "subtitle": {
-      "old": "無菸鹼日計數器",
-      "new": "無菸鹼日計數器",
-      "len": 7
+      "old": "無菸鹼日計數&虛擬花園",
+      "new": "無菸鹼日計數器・虛擬花園成長應用助手VELOZYN",
+      "len": 25
     },
     "keywords": {
-      "old": "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
-      "new": "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
-      "len": 39
+      "old": "唇煙,電子煙,戒菸,戒斷,渴望,習慣,日記,連續,記錄,計數器,日曆,小工具,健康,私密,復吸,咀嚼,velo,snus,zyn,puff,stop,streak,vape,nicotine",
+      "new": "唇煙,電子煙,戒菸,戒斷,渴望,習慣,日記,連續,記錄,計數器,日曆,小工具,健康,私密,復吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
+      "len": 98
     },
     "description_chars": 160,
     "promotional_chars": 49,

@@ -1,0 +1,1417 @@
+{
+  "issues": [],
+  "locales": {
+    "ar-SA": {
+      "title": "إقلاع السنوس: أكياس ونيكوتين",
+      "subtitle": "عداد أيام خالية من النيكوتين",
+      "keywords": "فيب,إدمان,امتناع,عادة,يوميات,سلسلة,تبغ,تقويم,صحة,خاص,انتكاسة,velo,snus,zyn,nicotine,pouch,puff,stop",
+      "title_len": 28,
+      "subtitle_len": 28,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "أكياس",
+        "أيام",
+        "إقلاع",
+        "السنوس",
+        "النيكوتين",
+        "خالية",
+        "عداد",
+        "من",
+        "ونيكوتين"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (إقلاع السنوس…); no English Quit. Native quit title (إقلاع السنوس…); no English Quit. AR: أكياس=pouches; عداد الأي",
+      "astro_proof": [
+        "AR: إقلاع=quit native; أكياس=pouches; removed كيت زين transliteration.",
+        "AR: إقلاع=quit native; أكياس=pouches; removed كيت زين transliteration.",
+        "US pouch/snus product names"
+      ],
+      "store": "sa",
+      "ok": true
+    },
+    "bn-BD": {
+      "title": "স্নাস ছাড়ুন – পাউচ ট্র্যাকার",
+      "subtitle": "নিকোটিন মুক্ত দিন গণনা ও বাগান",
+      "keywords": "ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,ধারা,তামাক,ক্যালেন্ডার,স্বাস্থ্য,ব্যক্তিগত,snus,velo,zyn,puff",
+      "title_len": 29,
+      "subtitle_len": 30,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "গণনা",
+        "ছাড়ুন",
+        "ট্র্যাকার",
+        "দিন",
+        "নিকোটিন",
+        "পাউচ",
+        "বাগান",
+        "মুক্ত",
+        "স্নাস"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (স্নাস ছাড়ুন…); no English Quit. Native quit title (স্নাস ছাড়ুন…); no English Quit. BN: pouch tracker in title; ",
+      "astro_proof": [
+        "BN: স্নাস ছাড়ুন native quit.",
+        "BN: স্নাস ছাড়ুন native quit.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ca": {
+      "title": "Deixa el snus: Bosses & velo",
+      "subtitle": "Comptador dies sense nicotina",
+      "keywords": "tabac,vape,addicció,abstinència,recuperació,hàbit,diari,sèrie,calendari,salut,privat,gana,zyn,puff",
+      "title_len": 28,
+      "subtitle_len": 29,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "bosses",
+        "comptador",
+        "deixa",
+        "dies",
+        "el",
+        "nicotina",
+        "sense",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Deixa snus…); no English Quit. Native quit title (Deixa snus…); no English Quit. Catalan: bosses=pouches; compt",
+      "astro_proof": [
+        "Catalan deixa=quit; bosses=pouches.",
+        "Catalan deixa=quit; bosses=pouches.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "cs": {
+      "title": "Přestaň snus: Sáčky & velo",
+      "subtitle": "Počítadlo dnů bez nikotinu",
+      "keywords": "tabák,vape,přestat,závislost,abstinence,zvyk,deník,série,kalendář,zdraví,soukromí,chuť,žvýkat,zyn",
+      "title_len": 26,
+      "subtitle_len": 26,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "bez",
+        "dnů",
+        "nikotinu",
+        "počítadlo",
+        "přestaň",
+        "snus",
+        "sáčky",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Přestaň snus…); no English Quit. Native quit title (Přestaň snus…); no English Quit. CZ: sáčky=pouches; počítadlo",
+      "astro_proof": [
+        "CZ: přestaň=quit; sáčky=pouches.",
+        "CZ: přestaň=quit; sáčky=pouches.",
+        "US pouch/snus"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "da": {
+      "title": "Stop snus: Poser & prillor",
+      "subtitle": "Nikotinfri dagtæller & have",
+      "keywords": "velo,tobak,vape,afhængighed,abstinens,vane,dagbog,serie,kalender,sundhed,privat,trang,tygge,zyn,puff",
+      "title_len": 26,
+      "subtitle_len": 27,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "dagtæller",
+        "have",
+        "nikotinfri",
+        "poser",
+        "prillor",
+        "snus",
+        "stop"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Stop snus…); no English Quit. Native quit title (Stop snus…); no English Quit. DK: poser=pouches; dagtæller=da",
+      "astro_proof": [
+        "DK Nordic: stop/slut + poser/prillor; snus culture market.",
+        "DK Nordic: stop/slut + poser/prillor; snus culture market.",
+        "Nordic snus culture; US velo/tobacco anchors"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "de-DE": {
+      "title": "Snus aufhören: Beutel & Zyn",
+      "subtitle": "Nikotinfreie Tage & Garten",
+      "keywords": "velo,tabak,kauen,entzug,gewohnheit,serie,verlangen,kalender,gesundheit,privat,rückfall,dampfen,puff",
+      "title_len": 27,
+      "subtitle_len": 26,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "aufhören",
+        "beutel",
+        "garten",
+        "nikotinfreie",
+        "snus",
+        "tage",
+        "zyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Snus aufhören…); no English Quit. Native quit title (Snus aufhören…); no English Quit. DE: product words in title;",
+      "astro_proof": [
+        "DE SERP snus aufhören #1 SnusFrei, PouchOut; native aufhören beats English Quit.",
+        "DE SERP snus aufhören #1 SnusFrei, PouchOut; native aufhören beats English Quit.",
+        "US: zyn pop49 velo pop46 — loanwords valid in DE store"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "el": {
+      "title": "Σταμάτα snus: Φακελάκια & velo",
+      "subtitle": "Μετρητής ημερών χωρίς νικοτίνη",
+      "keywords": "καπνός,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,σειρά,υγεία,ιδιωτικό,λαχτάρα,μάσηση,zyn,nicotine",
+      "title_len": 30,
+      "subtitle_len": 30,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "snus",
+        "velo",
+        "ημερών",
+        "μετρητής",
+        "νικοτίνη",
+        "σταμάτα",
+        "φακελάκια",
+        "χωρίς"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Σταμάτα snus…); no English Quit. Native quit title (Σταμάτα snus…); no English Quit. EL: φακελάκια=pouches; μετρη",
+      "astro_proof": [
+        "EL: σταμάτα=stop; φακελάκια=pouches.",
+        "EL: σταμάτα=stop; φακελάκια=pouches.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "en-AU": {
+      "title": "Quit Zyn: Pouch & Snus Tracker",
+      "subtitle": "Nicotine Free Days & Garden",
+      "keywords": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "title_len": 30,
+      "subtitle_len": 27,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "days",
+        "free",
+        "garden",
+        "nicotine",
+        "pouch",
+        "quit",
+        "snus",
+        "tracker",
+        "zyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Quit Zyn…); no English Quit. Native quit title (Quit Zyn…); no English Quit. Same as en-US.",
+      "astro_proof": [
+        "Same as en-US.",
+        "Same as en-US.",
+        "zyn tracker pop28 diff42 (title indexes quit+zyn+pouch+snus+tracker)"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "en-CA": {
+      "title": "Quit Zyn: Pouch & Snus Tracker",
+      "subtitle": "Nicotine Free Days & Garden",
+      "keywords": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "title_len": 30,
+      "subtitle_len": 27,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "days",
+        "free",
+        "garden",
+        "nicotine",
+        "pouch",
+        "quit",
+        "snus",
+        "tracker",
+        "zyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Quit Zyn…); no English Quit. Native quit title (Quit Zyn…); no English Quit. Same as en-US.",
+      "astro_proof": [
+        "Same as en-US.",
+        "Same as en-US.",
+        "zyn tracker pop28 diff42 (title indexes quit+zyn+pouch+snus+tracker)"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "en-GB": {
+      "title": "Quit Zyn: Pouch & Snus Tracker",
+      "subtitle": "Nicotine Free Days & Garden",
+      "keywords": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "title_len": 30,
+      "subtitle_len": 27,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "days",
+        "free",
+        "garden",
+        "nicotine",
+        "pouch",
+        "quit",
+        "snus",
+        "tracker",
+        "zyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Quit Zyn…); no English Quit. Native quit title (Quit Zyn…); no English Quit. Same search behavior as US; pouc",
+      "astro_proof": [
+        "Same as en-US; English quit+zyn+pouch SERP validated.",
+        "Same as en-US; English quit+zyn+pouch SERP validated.",
+        "zyn tracker pop28 diff42 (title indexes quit+zyn+pouch+snus+tracker)"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "en-US": {
+      "title": "Quit Zyn: Pouch & Snus Tracker",
+      "subtitle": "Nicotine Free Days & Garden",
+      "keywords": "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
+      "title_len": 30,
+      "subtitle_len": 27,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "days",
+        "free",
+        "garden",
+        "nicotine",
+        "pouch",
+        "quit",
+        "snus",
+        "tracker",
+        "zyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Quit Zyn…); no English Quit. Native quit title (Quit Zyn…); no English Quit. US primary market; title carries",
+      "astro_proof": [
+        "US Astro: zyn tracker pop28; native English quit+zyn correct for US/UK/CA/AU only.",
+        "US Astro: zyn tracker pop28; native English quit+zyn correct for US/UK/CA/AU only.",
+        "zyn tracker pop28 diff42 (title indexes quit+zyn+pouch+snus+tracker)"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "es-ES": {
+      "title": "Dejar el snus: Bolsas & velo",
+      "subtitle": "Contador de días sin nicotina",
+      "keywords": "tabaco,vapeo,adicción,antojo,abstinencia,recuperación,habito,diario,serie,salud,masticar,privado,zyn",
+      "title_len": 28,
+      "subtitle_len": 29,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "bolsas",
+        "contador",
+        "de",
+        "dejar",
+        "días",
+        "el",
+        "nicotina",
+        "sin",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Dejar snus…); no English Quit. Native quit title (Dejar snus…); no English Quit. ES: bolsas in title; contador=",
+      "astro_proof": [
+        "ES SERP dejar snus #1 Dejar Snus; bolsas native; no English Quit.",
+        "ES SERP dejar snus #1 Dejar Snus; bolsas native; no English Quit.",
+        "US pouch pop13 nicotine pouch SERP all pouch apps"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "es-MX": {
+      "title": "Dejar el snus: Bolsas & velo",
+      "subtitle": "Contador de días sin nicotina",
+      "keywords": "tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,stop,puff,tobacco,salud",
+      "title_len": 28,
+      "subtitle_len": 29,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "bolsas",
+        "contador",
+        "de",
+        "dejar",
+        "días",
+        "el",
+        "nicotina",
+        "sin",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Dejar snus…); no English Quit. Native quit title (Dejar snus…); no English Quit. es-MX: US-adjacent market — MX",
+      "astro_proof": [
+        "MX SERP dejar snus + pouch apps; English pouch/nicotine in keywords not title.",
+        "MX SERP dejar snus + pouch apps; English pouch/nicotine in keywords not title.",
+        "MX zyn SERP #1 Snuuze Quit Zyn, #3 Zyn Tracker, #5 PouchPal, #8 Pouch Buddy"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "fi": {
+      "title": "Lopeta nuuska: Pussit & snus",
+      "subtitle": "Nikotiiniton päivälaskuri",
+      "keywords": "velo,tupakka,vape,lopettaa,riippuvuus,tottumus,päiväkirja,sarja,kalenteri,terveys,yksityinen,himo",
+      "title_len": 28,
+      "subtitle_len": 25,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "lopeta",
+        "nikotiiniton",
+        "nuuska",
+        "pussit",
+        "päivälaskuri",
+        "snus"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Lopeta nuuska…); no English Quit. Native quit title (Lopeta nuuska…); no English Quit. FI: nuuska=snus Finnish; pu",
+      "astro_proof": [
+        "FI: lopeta nuuska native; pussit=pouches Finnish.",
+        "FI: lopeta nuuska native; pussit=pouches Finnish.",
+        "US velo/tobacco anchors in keywords"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "fr-CA": {
+      "title": "Arrêter snus: Sachets & velo",
+      "subtitle": "Compteur jours sans nicotine",
+      "keywords": "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
+      "title_len": 28,
+      "subtitle_len": 28,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "arrêter",
+        "compteur",
+        "jours",
+        "nicotine",
+        "sachets",
+        "sans",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Arrêter snus…); no English Quit. Native quit title (Arrêter snus…); no English Quit. fr-CA mirrors fr-FR; bilingu",
+      "astro_proof": [
+        "fr-CA same as fr-FR; bilingual but French quit verb leads.",
+        "fr-CA same as fr-FR; bilingual but French quit verb leads.",
+        "Same as fr-FR"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "fr-FR": {
+      "title": "Arrêter snus: Sachets & velo",
+      "subtitle": "Compteur jours sans nicotine",
+      "keywords": "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
+      "title_len": 28,
+      "subtitle_len": 28,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "arrêter",
+        "compteur",
+        "jours",
+        "nicotine",
+        "sachets",
+        "sans",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Arrêter snus…); no English Quit. Native quit title (Arrêter snus…); no English Quit. FR: sachets native; snus/zyn",
+      "astro_proof": [
+        "FR SERP arrêter snus #1 Arrêter Snus; sachets native; velo pouch brand in keywords.",
+        "FR SERP arrêter snus #1 Arrêter Snus; sachets native; velo pouch brand in keywords.",
+        "US quit snus pop9; FR suivi rejected (wrong SERP)"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "gu-IN": {
+      "title": "સ્નસ છોડો – પાઉચ ટ્રેકર એપ",
+      "subtitle": "નિકોટિન મુક્ત દિવસ ગણતરી બગીચો",
+      "keywords": "વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,શ્રેણી,તમાકુ,કેલેન્ડર,આરોગ્ય,snus,velo,zyn,nicotine,puff,stop,streak",
+      "title_len": 26,
+      "subtitle_len": 30,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "એપ",
+        "ગણતરી",
+        "છોડો",
+        "ટ્રેકર",
+        "દિવસ",
+        "નિકોટિન",
+        "પાઉચ",
+        "બગીચો",
+        "મુક્ત",
+        "સ્નસ"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (સ્નસ છોડો…); no English Quit. Native quit title (સ્નસ છોડો…); no English Quit. GU: pouch tracker in title.",
+      "astro_proof": [
+        "GU: સ્નસ છોડો native quit.",
+        "GU: સ્નસ છોડો native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "he": {
+      "title": "הפסקת snus: שקיות וסנוס velo",
+      "subtitle": "מונה ימים נקיים מניקוטין וגן",
+      "keywords": "וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,רצף,טבק,לוחשנה,בריאות,zyn,nicotine,pouch,פרטי,puff,stop,streak",
+      "title_len": 28,
+      "subtitle_len": 28,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "snus",
+        "velo",
+        "הפסקת",
+        "וגן",
+        "וסנוס",
+        "ימים",
+        "מונה",
+        "מניקוטין",
+        "נקיים",
+        "שקיות"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (הפסק snus…); no English Quit. Native quit title (הפסק snus…); no English Quit. HE: שקיות=pouches; מונה ימים=da",
+      "astro_proof": [
+        "HE: הפסק=stop native; שקיות=pouches.",
+        "HE: הפסק=stop native; שקיות=pouches.",
+        "US pouch terms"
+      ],
+      "store": "il",
+      "ok": true
+    },
+    "hi": {
+      "title": "स्नूस छोड़ें – पाउच ट्रैकर",
+      "subtitle": "निकोटीन मुक्त दिन गिनती बगीचा",
+      "keywords": "वेप,छोड़ना,लत,संयम,आदत,डायरी,स्ट्रीक,तंबाकू,कैलेंडर,स्वास्थ्य,निजी,पुनरावृत्ति,snus,velo,zyn,puff",
+      "title_len": 26,
+      "subtitle_len": 29,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "गिनती",
+        "छोड़ें",
+        "ट्रैकर",
+        "दिन",
+        "निकोटीन",
+        "पाउच",
+        "बगीचा",
+        "मुक्त",
+        "स्नूस"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (स्नूस छोड़ें…); no English Quit. Native quit title (स्नूस छोड़ें…); no English Quit. IN-hi: पाउच ट्रैकर=pouch tra",
+      "astro_proof": [
+        "IN-hi: स्नूस छोड़ें native quit; पाउच ट्रैकर pouch intent.",
+        "IN-hi: स्नूस छोड़ें native quit; पाउच ट्रैकर pouch intent.",
+        "US pouch tracker; native quit terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "hr": {
+      "title": "Prestani snus: Vrećice & velo",
+      "subtitle": "Brojač dana bez nikotina & vrt",
+      "keywords": "duhan,vape,prestati,ovisnost,apstinencija,navika,dnevnik,niz,kalendar,zdravlje,privatno,želja,zyn",
+      "title_len": 29,
+      "subtitle_len": 30,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "bez",
+        "brojač",
+        "dana",
+        "nikotina",
+        "prestani",
+        "snus",
+        "velo",
+        "vrećice",
+        "vrt"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Prestani snus…); no English Quit. Native quit title (Prestani snus…); no English Quit. HR: vrećice=pouches; brojač",
+      "astro_proof": [
+        "HR: prestani=quit; vrećice=pouches.",
+        "HR: prestani=quit; vrećice=pouches.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "hu": {
+      "title": "Snus abbahagy: Tasakok & velo",
+      "subtitle": "Nikotinfüggetlen napok & kert",
+      "keywords": "dohány,vape,függőség,elvonás,szokás,napló,sorozat,naptár,egészség,vágy,rágás,zyn,nicotine,puff,stop",
+      "title_len": 29,
+      "subtitle_len": 29,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "abbahagy",
+        "kert",
+        "napok",
+        "nikotinfüggetlen",
+        "snus",
+        "tasakok",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Snus abbahagy…); no English Quit. Native quit title (Snus abbahagy…); no English Quit. HU: tasakok=pouches; napszá",
+      "astro_proof": [
+        "HU: abbahagy=quit; tasakok=pouches.",
+        "HU: abbahagy=quit; tasakok=pouches.",
+        "US velo/tobacco"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "id": {
+      "title": "Berhenti snus: Kantong & velo",
+      "subtitle": "Hitung hari bebas nikotin",
+      "keywords": "vape,kecanduan,pantang,kebiasaan,diari,rangkai,tembakau,kalender,kesehatan,pribadi,kambuh,zyn,puff",
+      "title_len": 29,
+      "subtitle_len": 25,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "bebas",
+        "berhenti",
+        "hari",
+        "hitung",
+        "kantong",
+        "nikotin",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Berhenti snus…); no English Quit. Native quit title (Berhenti snus…); no English Quit. ID: kantong=pouch; hitung h",
+      "astro_proof": [
+        "ID: berhenti=quit; kantong=pouch.",
+        "ID: berhenti=quit; kantong=pouch.",
+        "US pouch quit"
+      ],
+      "store": "id",
+      "ok": true
+    },
+    "it": {
+      "title": "Smetti snus: Bustine & velo",
+      "subtitle": "Contatore giorni no nicotina",
+      "keywords": "tabacco,svapo,smettere,dipendenza,astinenza,diario,serie,calendario,salute,privato,voglia,masticare",
+      "title_len": 27,
+      "subtitle_len": 28,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "bustine",
+        "contatore",
+        "giorni",
+        "nicotina",
+        "no",
+        "smetti",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Smetti snus…); no English Quit. Native quit title (Smetti snus…); no English Quit. IT: bustine=pouches; contator",
+      "astro_proof": [
+        "IT: smetti=quit Italian; bustine=pouches.",
+        "IT: smetti=quit Italian; bustine=pouches.",
+        "US nicotine pouch SERP relevant"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ja": {
+      "title": "ニコチン袋・スヌース・ポーチ禁煙追跡ZYNアプリ版",
+      "subtitle": "無ニコチン日数カウンター・バーチャル庭園ZYNアプリ",
+      "keywords": "ポーチ,ベイプ,禁煙,依存,離脱,渇望,習慣,日記,連続,記録,カレンダー,ウィジェット,健康,非公開,再発,velo,snus,zyn,puff,stop,streak,tobacco,vape",
+      "title_len": 25,
+      "subtitle_len": 26,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "ニコチン袋・スヌース・ポーチ禁煙追跡zynアプリ版",
+        "無ニコチン日数カウンター・バーチャル庭園zynアプリ"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (禁煙ポーチ｜スヌース追跡…); no English Quit. Native quit title (クィットザン｜ポーチ&スヌース追跡…); no English Quit. JP: 追跡=tracking in titl",
+      "astro_proof": [
+        "JP: 禁煙=native quit; ポーチ&スヌース product; 追跡=track; no クィットザン transliteration.",
+        "JP: 戒瘾/追跡 native; ポーチ&スヌース product terms; no English quit.",
+        "US zyn/pouch category; native 禁煙 quit-smoking pattern"
+      ],
+      "store": "jp",
+      "ok": true
+    },
+    "kn-IN": {
+      "title": "ಸ್ನೂಸ್ ಬಿಡಿ – ಪಾಉಚ್ ಟ್ರ್ಯಾಕರ್",
+      "subtitle": "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳ ಎಣಿಕೆ ತೋಟ",
+      "keywords": "ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಸರಣಿ,ಹೊಗೆತಂಬಾಕು,ಕ್ಯಾಲೆಂಡರ್,ಆರೋಗ್ಯ,snus,velo,zyn,nicotine,puff,stop",
+      "title_len": 29,
+      "subtitle_len": 30,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "ಎಣಿಕೆ",
+        "ಟ್ರ್ಯಾಕರ್",
+        "ತೋಟ",
+        "ದಿನಗಳ",
+        "ನಿಕೋಟಿನ್",
+        "ಪಾಉಚ್",
+        "ಬಿಡಿ",
+        "ಮುಕ್ತ",
+        "ಸ್ನೂಸ್"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (ಸ್ನೂಸ್ ಬಿಡಿ…); no English Quit. Native quit title (ಸ್ನೂಸ್ ಬಿಡಿ…); no English Quit. KN: pouch tracker in title.",
+      "astro_proof": [
+        "KN: ಸ್ನೂಸ್ ಬಿಡಿ native quit.",
+        "KN: ಸ್ನೂಸ್ ಬಿಡಿ native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "ko": {
+      "title": "스누스 끊기 니코틴 파우치 ZYN 추적 앱 프로그램",
+      "subtitle": "무니코틴 프리 일수 카운터 & 가상 정원 성장",
+      "keywords": "베이프,금연,중독,절제,갈망,습관,일기,연속,기록,캘린더,위젯,건강,비공개,재발,velo,snus,puff,stop,streak,tobacco,withdrawal,vape",
+      "title_len": 28,
+      "subtitle_len": 25,
+      "keywords_len": 95,
+      "indexed_terms": [
+        "zyn",
+        "가상",
+        "끊기",
+        "니코틴",
+        "무니코틴",
+        "성장",
+        "스누스",
+        "일수",
+        "정원",
+        "추적",
+        "카운터",
+        "파우치",
+        "프로그램",
+        "프리"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (스누스 끊기｜파우치 추적…); no English Quit. Native quit title (퀴트진｜파우치&스누스 추적…); no English Quit. KR: 파우치=pouch; 금연=quit smo",
+      "astro_proof": [
+        "KR: 스누스 끊기=native quit snus; 파우치 추적=pouch tracking; no 퀴트진 transliteration.",
+        "KR: 금연/추적 native patterns; 파우치&스누스.",
+        "US pouch keywords; Korean 금연 high-intent"
+      ],
+      "store": "kr",
+      "ok": true
+    },
+    "ml-IN": {
+      "title": "സ്നൂസ് നിർത്തുക – പൗച്ച് ആപ്പ്",
+      "subtitle": "നികോട്ടിൻ ഫ്രീ ദിവസങ്ങൾ തോട്ടം",
+      "keywords": "വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,സീരീസ്,പുകയില,കലണ്ടർ,ആരോഗ്യം,snus,velo,zyn,nicotine,puff,stop",
+      "title_len": 30,
+      "subtitle_len": 30,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "ആപ്പ്",
+        "തോട്ടം",
+        "ദിവസങ്ങൾ",
+        "നികോട്ടിൻ",
+        "നിർത്തുക",
+        "പൗച്ച്",
+        "ഫ്രീ",
+        "സ്നൂസ്"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (സ്നൂസ് നിർത്തുക…); no English Quit. Native quit title (സ്നൂസ് നിർത്തുക…); no English Quit. ML: added pouch tracker t",
+      "astro_proof": [
+        "ML: സ്നൂസ് നിർത്തുക native quit.",
+        "ML: സ്നൂസ് നിർത്തുക native quit.",
+        "US pouch tracker"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "mr-IN": {
+      "title": "स्नूस सोडा – पाउच ट्रॅकर ऍप",
+      "subtitle": "निकोटीन मुक्त दिवस मोजणी बाग",
+      "keywords": "वेप,सोडणे,व्यसन,संयम,सवय,डायरी,मालिका,तंबाखू,दिनदर्शिका,आरोग्य,snus,velo,zyn,nicotine,puff,stop,vape",
+      "title_len": 27,
+      "subtitle_len": 28,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "ऍप",
+        "ट्रॅकर",
+        "दिवस",
+        "निकोटीन",
+        "पाउच",
+        "बाग",
+        "मुक्त",
+        "मोजणी",
+        "सोडा",
+        "स्नूस"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (स्नूस सोडा…); no English Quit. Native quit title (स्नूस सोडा…); no English Quit. MR: pouch tracker in title.",
+      "astro_proof": [
+        "MR: स्नूस सोडा native quit.",
+        "MR: स्नूस सोडा native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "ms": {
+      "title": "Berhenti snus: Kantung & velo",
+      "subtitle": "Hitung hari tanpa nikotin",
+      "keywords": "vape,ketagihan,pantang,tabiat,diari,rangkai,tembakau,kalendar,kesihatan,kambuh,peribadi,nicotine,zyn",
+      "title_len": 29,
+      "subtitle_len": 25,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "berhenti",
+        "hari",
+        "hitung",
+        "kantung",
+        "nikotin",
+        "snus",
+        "tanpa",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Berhenti snus…); no English Quit. Native quit title (Berhenti snus…); no English Quit. MS: kantung=pouch; kira har",
+      "astro_proof": [
+        "MS: berhenti=quit; kantung=pouch.",
+        "MS: berhenti=quit; kantung=pouch.",
+        "US pouch quit"
+      ],
+      "store": "my",
+      "ok": true
+    },
+    "nl-NL": {
+      "title": "Stop met snus: Zakjes & velo",
+      "subtitle": "Nikotinvrije dagen & tuin",
+      "keywords": "tabak,dampen,verslaving,ontwenning,gewoonte,dagboek,serie,kalender,gezondheid,privé,verlangen,kauwen",
+      "title_len": 28,
+      "subtitle_len": 25,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "dagen",
+        "met",
+        "nikotinvrije",
+        "snus",
+        "stop",
+        "tuin",
+        "velo",
+        "zakjes"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Stop met snus…); no English Quit. Native quit title (Stop met snus…); no English Quit. NL: zakjes=pouches native; ",
+      "astro_proof": [
+        "NL: stop met snus; zakjes=pouches native.",
+        "NL: stop met snus; zakjes=pouches native.",
+        "US pouch/snus terms; native quit Dutch in keywords"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "no": {
+      "title": "Slutt med snus: Poser & velo",
+      "subtitle": "Nikotinfri dagteller & hage",
+      "keywords": "tobakk,vape,avhengighet,avholdenhet,vanedagbok,serie,kalender,helse,privat,sug,tygge,tilbakefall,zyn",
+      "title_len": 28,
+      "subtitle_len": 27,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "dagteller",
+        "hage",
+        "med",
+        "nikotinfri",
+        "poser",
+        "slutt",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Slutt med snus…); no English Quit. Native quit title (Slutt med snus…); no English Quit. NO: same Nordic pattern as",
+      "astro_proof": [
+        "NO Nordic: slutt med snus pattern; poser=pouches.",
+        "NO Nordic: slutt med snus pattern; poser=pouches.",
+        "Nordic snus culture"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "or-IN": {
+      "title": "ସ୍ନସ ଛାଡ଼ – ପାଉଚ ଟ୍ରାକର ଆପ୍",
+      "subtitle": "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା ବଗିଚା",
+      "keywords": "ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଧାରା,ତମାଖୁ,କ୍ୟାଲେଣ୍ଡର,ସ୍ୱାସ୍ଥ୍ୟ,snus,velo,zyn,nicotine,puff",
+      "title_len": 27,
+      "subtitle_len": 28,
+      "keywords_len": 96,
+      "indexed_terms": [
+        "ଆପ୍",
+        "ଗଣନା",
+        "ଛାଡ଼",
+        "ଟ୍ରାକର",
+        "ଦିନ",
+        "ନିକୋଟିନ",
+        "ପାଉଚ",
+        "ବଗିଚା",
+        "ମୁକ୍ତ",
+        "ସ୍ନସ"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (ସ୍ନସ ଛାଡ଼…); no English Quit. Native quit title (ସ୍ନସ ଛାଡ଼…); no English Quit. OR: pouch tracker in title.",
+      "astro_proof": [
+        "OR: ସ୍ନସ ଛାଡ଼ native quit.",
+        "OR: ସ୍ନସ ଛାଡ଼ native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "pa-IN": {
+      "title": "ਸਨੂਸ ਛੱਡੋ – ਪਾਊਚ ਟ੍ਰੈਕਰ ਐਪ",
+      "subtitle": "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ ਬਾਗ",
+      "keywords": "ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਲੜੀ,ਤਮਾਕੂ,ਕੈਲੰਡਰ,ਸਿਹਤ,snus,velo,zyn,nicotine,puff,stop,streak,tobacco",
+      "title_len": 26,
+      "subtitle_len": 26,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "ਐਪ",
+        "ਗਿਣਤੀ",
+        "ਛੱਡੋ",
+        "ਟ੍ਰੈਕਰ",
+        "ਦਿਨ",
+        "ਨਿਕੋਟੀਨ",
+        "ਪਾਊਚ",
+        "ਬਾਗ",
+        "ਮੁਕਤ",
+        "ਸਨੂਸ"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (ਸਨੂਸ ਛੱਡੋ…); no English Quit. Native quit title (ਸਨੂਸ ਛੱਡੋ…); no English Quit. PA: pouch tracker in title.",
+      "astro_proof": [
+        "PA: ਸਨੂਸ ਛੱਡੋ native quit.",
+        "PA: ਸਨੂਸ ਛੱਡੋ native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "pl": {
+      "title": "Rzuć snusa: Saszetki & velo",
+      "subtitle": "Dni bez nikotyny & licznik",
+      "keywords": "tytoń,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,seria,kalendarz,zdrowie,prywatny,głód,żuć,zyn",
+      "title_len": 27,
+      "subtitle_len": 26,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "bez",
+        "dni",
+        "licznik",
+        "nikotyny",
+        "rzuć",
+        "saszetki",
+        "snusa",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Rzuć snus…); no English Quit. Native quit title (Rzuć snus…); no English Quit. PL: saszetki=pouches; licznik d",
+      "astro_proof": [
+        "PL: rzuć=quit Polish; saszetki=pouches.",
+        "PL: rzuć=quit Polish; saszetki=pouches.",
+        "US velo pop46"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "pt-BR": {
+      "title": "Parar o snus: Saquinhos & velo",
+      "subtitle": "Contador de dias sem nicotina",
+      "keywords": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "title_len": 30,
+      "subtitle_len": 29,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "contador",
+        "de",
+        "dias",
+        "nicotina",
+        "parar",
+        "saquinhos",
+        "sem",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Parar snus…); no English Quit. Native quit title (Parar snus…); no English Quit. PT-BR: saquinhos=pouches; cont",
+      "astro_proof": [
+        "PT-BR: parar=stop native; saquinhos=pouches.",
+        "PT-BR: parar=stop native; saquinhos=pouches.",
+        "US pouch quit terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "pt-PT": {
+      "title": "Parar o snus: Saquinhos & velo",
+      "subtitle": "Contador de dias sem nicotina",
+      "keywords": "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+      "title_len": 30,
+      "subtitle_len": 29,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "contador",
+        "de",
+        "dias",
+        "nicotina",
+        "parar",
+        "saquinhos",
+        "sem",
+        "snus",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Parar snus…); no English Quit. Native quit title (Parar snus…); no English Quit. PT-PT same as PT-BR.",
+      "astro_proof": [
+        "PT-PT same pattern as PT-BR.",
+        "PT-PT same pattern as PT-BR.",
+        "US pouch quit terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ro": {
+      "title": "Oprește snus: Plicuri & velo",
+      "subtitle": "Contor zile fără nicotină",
+      "keywords": "tutun,vape,opri,dependență,abstinență,obicei,jurnal,serie,calendar,sănătate,privat,poftă,recădere",
+      "title_len": 28,
+      "subtitle_len": 25,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "contor",
+        "fără",
+        "nicotină",
+        "oprește",
+        "plicuri",
+        "snus",
+        "velo",
+        "zile"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Oprește snus…); no English Quit. Native quit title (Oprește snus…); no English Quit. RO: plicuri=pouches; contor ",
+      "astro_proof": [
+        "RO: oprește=stop; plicuri=pouches.",
+        "RO: oprește=stop; plicuri=pouches.",
+        "US velo/tobacco"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ru": {
+      "title": "Брось snus: Пакетики & velo",
+      "subtitle": "Счётчик дней без никотина",
+      "keywords": "табак,вейп,бросить,зависимость,воздержание,привычка,дневник,серия,календарь,здоровье,тяга,жевать,zyn",
+      "title_len": 27,
+      "subtitle_len": 25,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "snus",
+        "velo",
+        "без",
+        "брось",
+        "дней",
+        "никотина",
+        "пакетики",
+        "счётчик"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Брось snus…); no English Quit. Native quit title (Брось snus…); no English Quit. RU: пакетики=pouches; счётчик=",
+      "astro_proof": [
+        "RU: брось=quit; пакетики=pouches; snus/velo loanwords.",
+        "RU: брось=quit; пакетики=pouches; snus/velo loanwords.",
+        "US snus pop13 velo pop46"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "sk": {
+      "title": "Prestaň snus: Vrecká & velo",
+      "subtitle": "Počítadlo dní bez nikotínu",
+      "keywords": "tabak,vape,prestať,závislosť,abstinencia,zvyk,denník,séria,kalendár,zdravie,súkromie,chuť,žuť,zyn",
+      "title_len": 27,
+      "subtitle_len": 26,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "bez",
+        "dní",
+        "nikotínu",
+        "počítadlo",
+        "prestaň",
+        "snus",
+        "velo",
+        "vrecká"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Prestaň snus…); no English Quit. Native quit title (Prestaň snus…); no English Quit. SK: vrecká=pouches.",
+      "astro_proof": [
+        "SK: prestaň=quit; vrecká=pouches.",
+        "SK: prestaň=quit; vrecká=pouches.",
+        "US pouch/snus"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "sl-SI": {
+      "title": "Nehaj snus: Vrečke & velo",
+      "subtitle": "Števec brez nikotina & vrt",
+      "keywords": "tobak,vape,nehati,odvisnost,abstinenca,navada,dnevnik,niz,koledar,zdravje,zasebno,želja,žvečiti,zyn",
+      "title_len": 25,
+      "subtitle_len": 26,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "brez",
+        "nehaj",
+        "nikotina",
+        "snus",
+        "velo",
+        "vrečke",
+        "vrt",
+        "števec"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Nehaj snus…); no English Quit. Native quit title (Nehaj snus…); no English Quit. SL: vrečke=pouches; števec= co",
+      "astro_proof": [
+        "SL: nehaj=quit; vrečke=pouches.",
+        "SL: nehaj=quit; vrečke=pouches.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "sv": {
+      "title": "Sluta snusa: Prillor & snus",
+      "subtitle": "Fri från nikotin dagräknare",
+      "keywords": "velo,tobak,vape,beroende,abstinens,vana,dagbok,serie,kalender,hälsa,privat,sug,tugga,återfall,zyn",
+      "title_len": 27,
+      "subtitle_len": 27,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "dagräknare",
+        "fri",
+        "från",
+        "nikotin",
+        "prillor",
+        "sluta",
+        "snus",
+        "snusa"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Sluta snusa…); no English Quit. Native quit title (Sluta snusa…); no English Quit. SE: prillor=oral pouches (nat",
+      "astro_proof": [
+        "SE SERP sluta snusa #1-8 all native Swedish snus apps; prillor native pouch word.",
+        "SE SERP sluta snusa #1-8 all native Swedish snus apps; prillor native pouch word.",
+        "US snus pop13; SE users search prillor/snus natively"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ta-IN": {
+      "title": "ஸ்னூஸ் விடு – பவுச் டிராக்கர்",
+      "subtitle": "நாட்கள் எண்ணிக்கை & தோட்டம்",
+      "keywords": "வேப்,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,தொடர்,புகையிலை,நாட்காட்டி,ஆரோக்கியம்,snus,velo,zyn,nicotine,puff",
+      "title_len": 29,
+      "subtitle_len": 27,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "எண்ணிக்கை",
+        "டிராக்கர்",
+        "தோட்டம்",
+        "நாட்கள்",
+        "பவுச்",
+        "விடு",
+        "ஸ்னூஸ்"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (ஸ்னூஸ் விடு…); no English Quit. Native quit title (ஸ்னூஸ் விடு…); no English Quit. TA: பவுச் டிராக்கர்=pouch tra",
+      "astro_proof": [
+        "TA: ஸ்னூஸ் விடு native quit.",
+        "TA: ஸ்னூஸ் விடு native quit.",
+        "US pouch tracker"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "te-IN": {
+      "title": "స్నూస్ వదులు – పౌచ్ ట్రాకర్",
+      "subtitle": "నికోటిన్ లేని రోజుల లెక్క తోట",
+      "keywords": "వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,సిరీస్,పొగాకు,క్యాలెండర్,ఆరోగ్యం,snus,velo,zyn,nicotine,puff",
+      "title_len": 27,
+      "subtitle_len": 29,
+      "keywords_len": 96,
+      "indexed_terms": [
+        "ట్రాకర్",
+        "తోట",
+        "నికోటిన్",
+        "పౌచ్",
+        "రోజుల",
+        "లెక్క",
+        "లేని",
+        "వదులు",
+        "స్నూస్"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (స్నూస్ వదులు…); no English Quit. Native quit title (స్నూస్ వదులు…); no English Quit. TE: pouch tracker in title.",
+      "astro_proof": [
+        "TE: స్నూస్ వదులు native quit.",
+        "TE: స్నూస్ వదులు native quit.",
+        "US pouch terms"
+      ],
+      "store": "in",
+      "ok": true
+    },
+    "th": {
+      "title": "เลิก snus: ถุงนิโคติน & velo",
+      "subtitle": "นับวันไม่นิโคติน & สวนเสมือน",
+      "keywords": "ซอง,วีป,ติด,งด,นิสัย,ไดอารี่,สตรีค,ยาสูบ,ปฏิทิน,สุขภาพ,ส่วนตัว,กลับมา,nicotine,pouch,zyn,puff,stop",
+      "title_len": 28,
+      "subtitle_len": 28,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "snus",
+        "velo",
+        "ถุงนิโคติน",
+        "นับวันไม่นิโคติน",
+        "สวนเสมือน",
+        "เลิก"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (ถุงนิโคติน…); no English Quit. Native quit title (ถุงนิโคติน…); no English Quit. TH: ถุงนิโคติน=nicotine pouch ",
+      "astro_proof": [
+        "TH: เลิก=quit; ถุงนิโคติน=nicotine pouch.",
+        "TH: เลิก=quit; ถุงนิโคติน=nicotine pouch.",
+        "US pouch/nicotine terms"
+      ],
+      "store": "th",
+      "ok": true
+    },
+    "tr": {
+      "title": "Bırak snusu: Poşet & velo",
+      "subtitle": "Nikotinsiz gün sayacı & bahçe",
+      "keywords": "tütün,vape,bağımlılık,ayıklık,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine",
+      "title_len": 25,
+      "subtitle_len": 29,
+      "keywords_len": 96,
+      "indexed_terms": [
+        "bahçe",
+        "bırak",
+        "gün",
+        "nikotinsiz",
+        "poşet",
+        "sayacı",
+        "snusu",
+        "velo"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Bırak snus…); no English Quit. Native quit title (Bırak snus…); no English Quit. TR: poşet=pouch; gün sayacı=da",
+      "astro_proof": [
+        "TR: bırak=quit; poşet=pouch.",
+        "TR: bırak=quit; poşet=pouch.",
+        "US pouch terms"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "uk": {
+      "title": "Кинь snus: Пакетики & velo",
+      "subtitle": "Лічильник днів без нікотину",
+      "keywords": "тютюн,вейп,кинути,залежність,утримання,звичка,щоденник,серія,календар,здоров'я,тяга,жувати,zyn,puff",
+      "title_len": 26,
+      "subtitle_len": 27,
+      "keywords_len": 99,
+      "indexed_terms": [
+        "snus",
+        "velo",
+        "без",
+        "днів",
+        "кинь",
+        "лічильник",
+        "нікотину",
+        "пакетики"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Кинь snus…); no English Quit. Native quit title (Кинь snus…); no English Quit. UK: same pattern as RU.",
+      "astro_proof": [
+        "UK: кинь=quit; пакетики=pouches.",
+        "UK: кинь=quit; пакетики=pouches.",
+        "US pouch/snus"
+      ],
+      "store": "us",
+      "ok": true
+    },
+    "ur-PK": {
+      "title": "سنوس چھوڑیں – پاؤچ ٹریکر ایپ",
+      "subtitle": "نیکوٹین فری دن گنتی اور باغ",
+      "keywords": "ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,سلسلہ,تمباکو,کیلنڈر,صحت,snus,velo,zyn,nicotine,puff,stop,streak,vape",
+      "title_len": 28,
+      "subtitle_len": 27,
+      "keywords_len": 100,
+      "indexed_terms": [
+        "اور",
+        "ایپ",
+        "باغ",
+        "دن",
+        "سنوس",
+        "فری",
+        "نیکوٹین",
+        "ٹریکر",
+        "پاؤچ",
+        "چھوڑیں",
+        "گنتی"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (سنوس چھوڑیں…); no English Quit. Native quit title (سنوس چھوڑیں…); no English Quit. UR: pouch tracker in title.",
+      "astro_proof": [
+        "UR: سنوس چھوڑیں native quit.",
+        "UR: سنوس چھوڑیں native quit.",
+        "US pouch terms"
+      ],
+      "store": "pk",
+      "ok": true
+    },
+    "vi": {
+      "title": "Bỏ thuốc snus: Túi & velo",
+      "subtitle": "Đếm ngày không nicotine & vườn",
+      "keywords": "vape,cai,nghiện,kiêng,thóiquen,nhậtký,chuỗi,lich,suckhoe,riengtu,talai,pouch,zyn,puff,stop,streak",
+      "title_len": 25,
+      "subtitle_len": 30,
+      "keywords_len": 97,
+      "indexed_terms": [
+        "bỏ",
+        "không",
+        "ngày",
+        "nicotine",
+        "snus",
+        "thuốc",
+        "túi",
+        "velo",
+        "vườn",
+        "đếm"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (Bỏ snus…); no English Quit. Native quit title (Bỏ snus…); no English Quit. VN: túi=pouch; đếm ngày=count day",
+      "astro_proof": [
+        "VN: bỏ=quit; túi=pouch; nicotine in title for clarity.",
+        "VN: bỏ=quit; túi=pouch; nicotine in title for clarity.",
+        "US pouch terms"
+      ],
+      "store": "vn",
+      "ok": true
+    },
+    "zh-Hans": {
+      "title": "戒瘾助手｜尼古丁袋ZYN无烟碱戒断追踪应用助手APP",
+      "subtitle": "无烟碱日计数器・虚拟花园成长应用助手VELOZYN",
+      "keywords": "唇烟,电子烟,戒烟,戒断,渴望,习惯,日记,连续,记录,计数器,日历,小组件,健康,私密,复吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
+      "title_len": 26,
+      "subtitle_len": 25,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "戒瘾助手｜尼古丁袋zyn无烟碱戒断追踪应用助手app",
+        "无烟碱日计数器・虚拟花园成长应用助手velozyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (戒瘾助手｜尼古丁袋追踪器…); no English Quit. Native quit title (戒瘾助手｜尼古丁袋追踪器…); no English Quit. CN: 追踪=track in title; 无烟碱日计",
+      "astro_proof": [
+        "CN: 戒瘾/追踪 native; 尼古丁袋 product term.",
+        "CN: 戒瘾/追踪 native; 尼古丁袋 product term.",
+        "US nicotine pouch SERP; native 戒烟 quit"
+      ],
+      "store": "cn",
+      "ok": true
+    },
+    "zh-Hant": {
+      "title": "戒癮助手｜尼古丁袋ZYN無菸鹼戒斷追蹤應用助手APP",
+      "subtitle": "無菸鹼日計數器・虛擬花園成長應用助手VELOZYN",
+      "keywords": "唇煙,電子煙,戒菸,戒斷,渴望,習慣,日記,連續,記錄,計數器,日曆,小工具,健康,私密,復吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
+      "title_len": 26,
+      "subtitle_len": 25,
+      "keywords_len": 98,
+      "indexed_terms": [
+        "戒癮助手｜尼古丁袋zyn無菸鹼戒斷追蹤應用助手app",
+        "無菸鹼日計數器・虛擬花園成長應用助手velozyn"
+      ],
+      "keyword_overlaps": [],
+      "title_subtitle_overlap": [],
+      "rationale": "Native quit title (戒癮助手｜尼古丁袋追蹤器…); no English Quit. Native quit title (戒癮助手｜尼古丁袋追蹤器…); no English Quit. TW: same structure as Hans.",
+      "astro_proof": [
+        "TW: same native structure as Hans.",
+        "TW: same native structure as Hans.",
+        "US nicotine pouch SERP"
+      ],
+      "store": "tw",
+      "ok": true
+    }
+  }
+}
