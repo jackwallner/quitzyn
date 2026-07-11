@@ -19,255 +19,255 @@ EN_DESC = (ROOT / "fastlane/metadata/en-US/description.txt").read_text(encoding=
 
 # (name ≤30, subtitle ≤30, keywords ≤100) — validated before write
 CORE: dict[str, tuple[str, str, str]] = {
-    "en-US": (
-        "Quit Zyn: Pouch & Snus Tracker",
-        "Nicotine Free: Day Counter",
-        "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+    "ar-SA": (
+        "إقلاع السنوس: أكياس ونيكوتين",
+        "عداد أيام خالية من النيكوتين",
+        "فيب,إدمان,امتناع,عادة,يوميات,سلسلة,تبغ,تقويم,صحة,خاص,انتكاسة,velo,snus,zyn,nicotine,pouch,puff,stop",
     ),
-    "en-GB": (
-        "Quit Zyn: Pouch & Snus Tracker",
-        "Nicotine Free: Day Counter",
-        "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+    "bn-BD": (
+        "স্নাস ছাড়ুন – পাউচ ট্র্যাকার",
+        "নিকোটিন মুক্ত দিন গণনা ও বাগান",
+        "ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,ধারা,তামাক,ক্যালেন্ডার,স্বাস্থ্য,ব্যক্তিগত,snus,velo,zyn,puff",
+    ),
+    "ca": (
+        "Deixa el snus: Bosses & velo",
+        "Comptador dies sense nicotina",
+        "tabac,vape,addicció,abstinència,recuperació,hàbit,diari,sèrie,calendari,salut,privat,gana,zyn,puff",
+    ),
+    "cs": (
+        "Přestaň snus: Sáčky & velo",
+        "Počítadlo dnů bez nikotinu",
+        "tabák,vape,přestat,závislost,abstinence,zvyk,deník,série,kalendář,zdraví,soukromí,chuť,žvýkat,zyn",
+    ),
+    "da": (
+        "Stop snus: Poser & prillor",
+        "Nikotinfri dagtæller & have",
+        "velo,tobak,vape,afhængighed,abstinens,vane,dagbog,serie,kalender,sundhed,privat,trang,tygge,zyn,puff",
+    ),
+    "de-DE": (
+        "Snus aufhören: Beutel & Zyn",
+        "Nikotinfreie Tage & Garten",
+        "velo,tabak,kauen,entzug,gewohnheit,serie,verlangen,kalender,gesundheit,privat,rückfall,dampfen,puff",
+    ),
+    "el": (
+        "Σταμάτα snus: Φακελάκια & velo",
+        "Μετρητής ημερών χωρίς νικοτίνη",
+        "καπνός,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,σειρά,υγεία,ιδιωτικό,λαχτάρα,μάσηση,zyn,nicotine",
     ),
     "en-AU": (
         "Quit Zyn: Pouch & Snus Tracker",
-        "Nicotine Free: Day Counter",
-        "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "Nicotine Free Days & Garden",
+        "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
     ),
     "en-CA": (
         "Quit Zyn: Pouch & Snus Tracker",
-        "Nicotine Free: Day Counter",
-        "velo,zyns,vape,streak,craving,dip,quitting,habit,tin,money,saved,chew,oral",
+        "Nicotine Free Days & Garden",
+        "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
     ),
-    "de-DE": (
-        "Quit Zyn – Nikotinfrei",
-        "Tagezähler & Garten",
-        "snus,beutel,dampfen,entzug,gewohnheit,serie,tagebuch,nikotin,aufhören,kauen,velo,app",
+    "en-GB": (
+        "Quit Zyn: Pouch & Snus Tracker",
+        "Nicotine Free Days & Garden",
+        "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
     ),
-    "fr-FR": (
-        "Quit Zyn – Sans nicotine",
-        "Compteur jours sans nicotine",
-        "sachet,vape,sevrage,envie,habitude,journal,nicotine,arrêter,serie,libre,velo,app",
-    ),
-    "fr-CA": (
-        "Quit Zyn – Sans nicotine",
-        "Compteur jours sans nicotine",
-        "sachet,vape,sevrage,envie,habitude,journal,nicotine,arrêter,serie,libre,velo,app",
+    "en-US": (
+        "Quit Zyn: Pouch & Snus Tracker",
+        "Nicotine Free Days & Garden",
+        "velo,buzz,zone,tobacco,dip,chew,oral,rogue,cope,stop,streak,recovery,craving,puff,withdrawal,vape",
     ),
     "es-ES": (
-        "Quit Zyn – Sin nicotina",
-        "Días sin nicotina",
-        "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,nicotina,habito,diario,app",
+        "Dejar el snus: Bolsas & velo",
+        "Contador de días sin nicotina",
+        "tabaco,vapeo,adicción,antojo,abstinencia,recuperación,habito,diario,serie,salud,masticar,privado,zyn",
     ),
     "es-MX": (
-        "Quit Zyn – Sin nicotina",
-        "Días sin nicotina",
-        "bolsitas,vape,dejar,adicción,antojo,abstinencia,recuperación,nicotina,habito,diario,app",
-    ),
-    "ca": (
-        "Quit Zyn – Sense nicotina",
-        "Dies sense nicotina",
-        "bosses,vape,deixar,addicció,abstinència,recuperació,nicotina,hàbit,diari,app,velo",
-    ),
-    "it": (
-        "Quit Zyn – Senza nicotina",
-        "Giorni senza nicotina",
-        "bustine,vape,smettere,dipendenza,astinenza,craving,diario,app,velo,snus,serie",
-    ),
-    "pt-BR": (
-        "Quit Zyn – Sem Nicotina",
-        "Dias sem nicotina",
-        "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-    ),
-    "pt-PT": (
-        "Quit Zyn – Sem Nicotina",
-        "Dias sem nicotina",
-        "saquinhos,vape,parar,dependência,abstinência,recuperação,diário,app,velo,snus,serie",
-    ),
-    "nl-NL": (
-        "Quit Zyn – Nikotinvrij",
-        "Dagen zonder nicotine",
-        "zakjes,dampen,stoppen,verslaving,ontwenning,gewoonte,dagboek,app,velo,snus,serie",
-    ),
-    "pl": (
-        "Quit Zyn – Bez nikotyny",
-        "Dni bez nikotyny",
-        "saszetki,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,app,velo,snus,seria",
-    ),
-    "sv": (
-        "Quit Zyn – Nikotinfri",
-        "Dagar utan nikotin",
-        "prillor,vape,sluta,beroende,abstinens,vana,dagbok,app,velo,snus,serie",
-    ),
-    "da": (
-        "Quit Zyn – Nikotinfri",
-        "Dage uden nikotin",
-        "poser,vape,stoppe,afhængighed,abstinens,vane,dagbog,app,velo,snus,serie",
-    ),
-    "no": (
-        "Quit Zyn – Nikotinfri",
-        "Dager uten nikotin",
-        "poser,vape,slutte,avhengighet,avholdenhet,vanedagbok,app,velo,snus,serie",
+        "Dejar el snus: Bolsas & velo",
+        "Contador de días sin nicotina",
+        "tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,stop,puff,tobacco,salud",
     ),
     "fi": (
-        "Quit Zyn – Nikotiiniton",
-        "Päivät ilman nikotiinia",
-        "nauhat,vape,lopettaa,riippuvuus,raittius,tottumus,päiväkirja,app,velo,snus",
+        "Lopeta nuuska: Pussit & snus",
+        "Nikotiiniton päivälaskuri",
+        "velo,tupakka,vape,lopettaa,riippuvuus,tottumus,päiväkirja,sarja,kalenteri,terveys,yksityinen,himo",
     ),
-    "cs": (
-        "Quit Zyn – Bez nikotinu",
-        "Dny bez nikotinu",
-        "sáčky,vape,přestat,závislost,abstinence,zvyk,deník,app,velo,snus,série",
+    "fr-CA": (
+        "Arrêter snus: Sachets & velo",
+        "Compteur jours sans nicotine",
+        "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
     ),
-    "sk": (
-        "Quit Zyn – Bez nikotínu",
-        "Dni bez nikotínu",
-        "vrecká,vape,prestať,závislosť,abstinencia,zvyk,denník,app,velo,snus,séria",
-    ),
-    "hu": (
-        "Quit Zyn – Nikotinmentes",
-        "Nikotinmentes napok",
-        "tasak,vape,abbahagy,függőség,elvonás,szokás,napló,app,velo,snus,sorozat",
-    ),
-    "ro": (
-        "Quit Zyn – Fără nicotină",
-        "Zile fără nicotină",
-        "plicuri,vape,opri,dependență,abstinență,obicei,jurnal,app,velo,snus,serie",
-    ),
-    "hr": (
-        "Quit Zyn – Bez nikotina",
-        "Dani bez nikotina",
-        "vrećice,vape,prestati,ovisnost,apstinencija,navika,dnevnik,app,velo,snus,niz",
-    ),
-    "el": (
-        "Quit Zyn – Χωρίς νικοτίνη",
-        "Ημέρες χωρίς νικοτίνη",
-        "φακελάκια,vape,διακοπή,εξάρτηση,αποχή,συνήθεια,ημερολόγιο,app,velo,snus",
-    ),
-    "sl-SI": (
-        "Quit Zyn – Brez nikotina",
-        "Dnevi brez nikotina",
-        "vrečke,vape,nehati,odvisnost,abstinenca,navada,dnevnik,app,velo,snus,niz",
-    ),
-    "tr": (
-        "Quit Zyn – Nikotinsiz",
-        "Nikotinsiz günler",
-        "poşet,vape,bırakmak,bağımlılık,ayıklık,alışkanlık,günlük,app,velo,snus,dizi",
-    ),
-    "ru": (
-        "Quit Zyn – Без никотина",
-        "Дни без никотина",
-        "пакетики,vape,бросить,зависимость,воздержание,привычка,дневник,app,velo,snus",
-    ),
-    "uk": (
-        "Quit Zyn – Без нікотину",
-        "Дні без нікотину",
-        "пакетики,vape,кинути,залежність,утримання,звичка,щоденник,app,velo,snus",
-    ),
-    "ar-SA": (
-        "كيت زين – بلا نيكوتين",
-        "أيام بلا نيكوتين",
-        "أكياس,فيب,إقلاع,إدمان,امتناع,عادة,يوميات,تطبيق,velo,snus,سلسلة",
-    ),
-    "he": (
-        "קוויט זין – ללא ניקוטין",
-        "ימים ללא ניקוטין",
-        "שקיות,וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,אפליקציה,velo,snus,רצף",
-    ),
-    "hi": (
-        "क्विट ज़िन – निकोटीन मुक्त",
-        "निकोटीन मुक्त दिन गिनती",
-        "पाउच,वेप,छोड़ना,लत,संयम,आदत,डायरी,ऐप,velo,snus,स्ट्रीक",
-    ),
-    "bn-BD": (
-        "কুইট জিন – নিকোটিন মুক্ত",
-        "নিকোটিন মুক্ত দিন গণনা",
-        "পাউচ,ভেপ,ছাড়া,আসক্তি,সংযম,অভ্যাস,ডায়েরি,অ্যাপ,velo,snus,ধারা",
+    "fr-FR": (
+        "Arrêter snus: Sachets & velo",
+        "Compteur jours sans nicotine",
+        "tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé",
     ),
     "gu-IN": (
-        "ક્વિટ ઝિન – નિકોટિન મુક્ત",
-        "નિકોટિન મુક્ત દિવસ ગણતરી",
-        "પાઉચ,વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,એપ,velo,snus,શ્રેણી",
+        "સ્નસ છોડો – પાઉચ ટ્રેકર એપ",
+        "નિકોટિન મુક્ત દિવસ ગણતરી બગીચો",
+        "વેપ,છોડવું,વ્યસન,સંયમ,આદત,ડાયરી,શ્રેણી,તમાકુ,કેલેન્ડર,આરોગ્ય,snus,velo,zyn,nicotine,puff,stop,streak",
     ),
-    "kn-IN": (
-        "ಕ್ವಿಟ್ ಜಿನ್ – ನಿಕೋಟಿನ್ ಮುಕ್ತ",
-        "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳು",
-        "ಪಾಉಚ್,ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಆಪ್,velo,snus,ಸರಣಿ",
+    "he": (
+        "הפסקת snus: שקיות וסנוס velo",
+        "מונה ימים נקיים מניקוטין וגן",
+        "וייפ,הפסקה,התמכרות,התנזרות,הרגל,יומן,רצף,טבק,לוחשנה,בריאות,zyn,nicotine,pouch,פרטי,puff,stop,streak",
     ),
-    "ml-IN": (
-        "ക്വിറ്റ് സിൻ",
-        "നിക്കോട്ടിൻ ഫ്രീ ദിനങ്ങൾ",
-        "പൗച്ച്,വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,ആപ്പ്,velo,snus",
+    "hi": (
+        "स्नूस छोड़ें – पाउच ट्रैकर",
+        "निकोटीन मुक्त दिन गिनती बगीचा",
+        "वेप,छोड़ना,लत,संयम,आदत,डायरी,स्ट्रीक,तंबाकू,कैलेंडर,स्वास्थ्य,निजी,पुनरावृत्ति,snus,velo,zyn,puff",
     ),
-    "mr-IN": (
-        "क्विट झिन – निकोटीन मुक्त",
-        "निकोटीन मुक्त दिवस मोजणी",
-        "पाउच,वेप,सोडणे,व्यसन,संयम,सवय,डायरी,अॅप,velo,snus,मालिका",
+    "hr": (
+        "Prestani snus: Vrećice & velo",
+        "Brojač dana bez nikotina & vrt",
+        "duhan,vape,prestati,ovisnost,apstinencija,navika,dnevnik,niz,kalendar,zdravlje,privatno,želja,zyn",
     ),
-    "or-IN": (
-        "କ୍ୱିଟ ଜିନ – ନିକୋଟିନ ମୁକ୍ତ",
-        "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା",
-        "ପାଉଚ,ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଆପ୍,velo,snus",
-    ),
-    "pa-IN": (
-        "ਕਵਿਟ ਜ਼ਿਨ – ਨਿਕੋਟੀਨ ਮੁਕਤ",
-        "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ",
-        "ਪਾਊਚ,ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਐਪ,velo,snus,ਲੜੀ",
-    ),
-    "ta-IN": (
-        "க்விட் ஸின்",
-        "நிக்கோட்டின் இல்லா நாட்கள்",
-        "பவுச்,வேப்,விடுவது,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,ஆப்,velo,snus,தொடர்",
-    ),
-    "te-IN": (
-        "క్విట్ జిన్ – నికోటిన్ ఫ్రీ",
-        "నికోటిన్ ఫ్రీ రోజులు",
-        "పౌచ్,వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,యాప్,velo,snus,సిరీస్",
-    ),
-    "ur-PK": (
-        "کوئٹ زِن – نکوٹین سے پاک",
-        "نکوٹین سے پاک دن گنتی",
-        "پاؤچ,ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,ایپ,velo,snus,سلسلہ",
-    ),
-    "th": (
-        "ควิตซิน – ปลอดนิโคติน",
-        "นับวันปลอดนิโคติน",
-        "ซอง,วีป,เลิก,ติด,งด,นิสัย,ไดอารี่,แอป,velo,snus,สตรีค",
-    ),
-    "vi": (
-        "Quit Zyn – Không nicotin",
-        "Ngày không nicotin",
-        "túi,vape,cai,nghiện,kiêng,thói quen,nhật ký,ứng dụng,velo,snus,chuỗi",
+    "hu": (
+        "Snus abbahagy: Tasakok & velo",
+        "Nikotinfüggetlen napok & kert",
+        "dohány,vape,függőség,elvonás,szokás,napló,sorozat,naptár,egészség,vágy,rágás,zyn,nicotine,puff,stop",
     ),
     "id": (
-        "Quit Zyn – Bebas Nikotin",
-        "Hari bebas nikotin",
-        "kantong,vape,berhenti,kecanduan,pantang,kebiasaan,diari,aplikasi,velo,snus,rangkai",
+        "Berhenti snus: Kantong & velo",
+        "Hitung hari bebas nikotin",
+        "vape,kecanduan,pantang,kebiasaan,diari,rangkai,tembakau,kalender,kesehatan,pribadi,kambuh,zyn,puff",
     ),
-    "ms": (
-        "Quit Zyn – Bebas Nikotin",
-        "Hari bebas nikotin",
-        "kantung,vape,berhenti,ketagihan,pantang,tabiat,diari,aplikasi,velo,snus,rangkai",
+    "it": (
+        "Smetti snus: Bustine & velo",
+        "Contatore giorni no nicotina",
+        "tabacco,svapo,smettere,dipendenza,astinenza,diario,serie,calendario,salute,privato,voglia,masticare",
     ),
     "ja": (
-        "クィットザン – ニコチンフリー",
-        "ニコチンフリー日数カウンター",
-        "ポーチ,ベイプ,禁煙,依存,離脱,習慣,日記,アプリ,velo,スヌース,連続",
+        "ニコチン袋・スヌース・ポーチ禁煙追跡ZYNアプリ版",
+        "無ニコチン日数カウンター・バーチャル庭園ZYNアプリ",
+        "ポーチ,ベイプ,禁煙,依存,離脱,渇望,習慣,日記,連続,記録,カレンダー,ウィジェット,健康,非公開,再発,velo,snus,zyn,puff,stop,streak,tobacco,vape",
+    ),
+    "kn-IN": (
+        "ಸ್ನೂಸ್ ಬಿಡಿ – ಪಾಉಚ್ ಟ್ರ್ಯಾಕರ್",
+        "ನಿಕೋಟಿನ್ ಮುಕ್ತ ದಿನಗಳ ಎಣಿಕೆ ತೋಟ",
+        "ವೇಪ್,ಬಿಡುವುದು,ಚಟ,ಸಂಯಮ,ಅಭ್ಯಾಸ,ಡೈರಿ,ಸರಣಿ,ಹೊಗೆತಂಬಾಕು,ಕ್ಯಾಲೆಂಡರ್,ಆರೋಗ್ಯ,snus,velo,zyn,nicotine,puff,stop",
     ),
     "ko": (
-        "퀴트 진 – 니코틴 프리",
-        "니코틴 프리 일수 카운터",
-        "파우치,베이프,금연,중독,절제,습관,일기,앱,velo,스누스,연속",
+        "스누스 끊기 니코틴 파우치 ZYN 추적 앱 프로그램",
+        "무니코틴 프리 일수 카운터 & 가상 정원 성장",
+        "베이프,금연,중독,절제,갈망,습관,일기,연속,기록,캘린더,위젯,건강,비공개,재발,velo,snus,puff,stop,streak,tobacco,withdrawal,vape",
+    ),
+    "ml-IN": (
+        "സ്നൂസ് നിർത്തുക – പൗച്ച് ആപ്പ്",
+        "നികോട്ടിൻ ഫ്രീ ദിവസങ്ങൾ തോട്ടം",
+        "വേപ്പ്,നിർത്തൽ,ആസക്തി,വർജനം,ശീലം,ഡയറി,സീരീസ്,പുകയില,കലണ്ടർ,ആരോഗ്യം,snus,velo,zyn,nicotine,puff,stop",
+    ),
+    "mr-IN": (
+        "स्नूस सोडा – पाउच ट्रॅकर ऍप",
+        "निकोटीन मुक्त दिवस मोजणी बाग",
+        "वेप,सोडणे,व्यसन,संयम,सवय,डायरी,मालिका,तंबाखू,दिनदर्शिका,आरोग्य,snus,velo,zyn,nicotine,puff,stop,vape",
+    ),
+    "ms": (
+        "Berhenti snus: Kantung & velo",
+        "Hitung hari tanpa nikotin",
+        "vape,ketagihan,pantang,tabiat,diari,rangkai,tembakau,kalendar,kesihatan,kambuh,peribadi,nicotine,zyn",
+    ),
+    "nl-NL": (
+        "Stop met snus: Zakjes & velo",
+        "Nikotinvrije dagen & tuin",
+        "tabak,dampen,verslaving,ontwenning,gewoonte,dagboek,serie,kalender,gezondheid,privé,verlangen,kauwen",
+    ),
+    "no": (
+        "Slutt med snus: Poser & velo",
+        "Nikotinfri dagteller & hage",
+        "tobakk,vape,avhengighet,avholdenhet,vanedagbok,serie,kalender,helse,privat,sug,tygge,tilbakefall,zyn",
+    ),
+    "or-IN": (
+        "ସ୍ନସ ଛାଡ଼ – ପାଉଚ ଟ୍ରାକର ଆପ୍",
+        "ନିକୋଟିନ ମୁକ୍ତ ଦିନ ଗଣନା ବଗିଚା",
+        "ଭେପ,ଛାଡିବା,ଆସକ୍ତି,ବିରତି,ଅଭ୍ୟାସ,ଡାଇରୀ,ଧାରା,ତମାଖୁ,କ୍ୟାଲେଣ୍ଡର,ସ୍ୱାସ୍ଥ୍ୟ,snus,velo,zyn,nicotine,puff",
+    ),
+    "pa-IN": (
+        "ਸਨੂਸ ਛੱਡੋ – ਪਾਊਚ ਟ੍ਰੈਕਰ ਐਪ",
+        "ਨਿਕੋਟੀਨ ਮੁਕਤ ਦਿਨ ਗਿਣਤੀ ਬਾਗ",
+        "ਵੇਪ,ਛੱਡਣਾ,ਆਦੀ,ਸੰਜਮ,ਆਦਤ,ਡਾਇਰੀ,ਲੜੀ,ਤਮਾਕੂ,ਕੈਲੰਡਰ,ਸਿਹਤ,snus,velo,zyn,nicotine,puff,stop,streak,tobacco",
+    ),
+    "pl": (
+        "Rzuć snusa: Saszetki & velo",
+        "Dni bez nikotyny & licznik",
+        "tytoń,vape,przestać,uzależnienie,odwyk,nawyk,dziennik,seria,kalendarz,zdrowie,prywatny,głód,żuć,zyn",
+    ),
+    "pt-BR": (
+        "Parar o snus: Saquinhos & velo",
+        "Contador de dias sem nicotina",
+        "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+    ),
+    "pt-PT": (
+        "Parar o snus: Saquinhos & velo",
+        "Contador de dias sem nicotina",
+        "tabaco,vape,abstinência,recuperação,diário,serie,calendário,privado,recaída,zyn,nicotine,puff,stop",
+    ),
+    "ro": (
+        "Oprește snus: Plicuri & velo",
+        "Contor zile fără nicotină",
+        "tutun,vape,opri,dependență,abstinență,obicei,jurnal,serie,calendar,sănătate,privat,poftă,recădere",
+    ),
+    "ru": (
+        "Брось snus: Пакетики & velo",
+        "Счётчик дней без никотина",
+        "табак,вейп,бросить,зависимость,воздержание,привычка,дневник,серия,календарь,здоровье,тяга,жевать,zyn",
+    ),
+    "sk": (
+        "Prestaň snus: Vrecká & velo",
+        "Počítadlo dní bez nikotínu",
+        "tabak,vape,prestať,závislosť,abstinencia,zvyk,denník,séria,kalendár,zdravie,súkromie,chuť,žuť,zyn",
+    ),
+    "sl-SI": (
+        "Nehaj snus: Vrečke & velo",
+        "Števec brez nikotina & vrt",
+        "tobak,vape,nehati,odvisnost,abstinenca,navada,dnevnik,niz,koledar,zdravje,zasebno,želja,žvečiti,zyn",
+    ),
+    "sv": (
+        "Sluta snusa: Prillor & snus",
+        "Fri från nikotin dagräknare",
+        "velo,tobak,vape,beroende,abstinens,vana,dagbok,serie,kalender,hälsa,privat,sug,tugga,återfall,zyn",
+    ),
+    "ta-IN": (
+        "ஸ்னூஸ் விடு – பவுச் டிராக்கர்",
+        "நாட்கள் எண்ணிக்கை & தோட்டம்",
+        "வேப்,அடிமை,தவிர்ப்பு,பழக்கம்,டைரி,தொடர்,புகையிலை,நாட்காட்டி,ஆரோக்கியம்,snus,velo,zyn,nicotine,puff",
+    ),
+    "te-IN": (
+        "స్నూస్ వదులు – పౌచ్ ట్రాకర్",
+        "నికోటిన్ లేని రోజుల లెక్క తోట",
+        "వేప్,వదలడం,వ్యసనం,సంయమం,అలవాటు,డైరీ,సిరీస్,పొగాకు,క్యాలెండర్,ఆరోగ్యం,snus,velo,zyn,nicotine,puff",
+    ),
+    "th": (
+        "เลิก snus: ถุงนิโคติน & velo",
+        "นับวันไม่นิโคติน & สวนเสมือน",
+        "ซอง,วีป,ติด,งด,นิสัย,ไดอารี่,สตรีค,ยาสูบ,ปฏิทิน,สุขภาพ,ส่วนตัว,กลับมา,nicotine,pouch,zyn,puff,stop",
+    ),
+    "tr": (
+        "Bırak snusu: Poşet & velo",
+        "Nikotinsiz gün sayacı & bahçe",
+        "tütün,vape,bağımlılık,ayıklık,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine",
+    ),
+    "uk": (
+        "Кинь snus: Пакетики & velo",
+        "Лічильник днів без нікотину",
+        "тютюн,вейп,кинути,залежність,утримання,звичка,щоденник,серія,календар,здоров'я,тяга,жувати,zyn,puff",
+    ),
+    "ur-PK": (
+        "سنوس چھوڑیں – پاؤچ ٹریکر ایپ",
+        "نیکوٹین فری دن گنتی اور باغ",
+        "ویپ,چھوڑنا,نشہ,پرہیز,عادت,ڈائری,سلسلہ,تمباکو,کیلنڈر,صحت,snus,velo,zyn,nicotine,puff,stop,streak,vape",
+    ),
+    "vi": (
+        "Bỏ thuốc snus: Túi & velo",
+        "Đếm ngày không nicotine & vườn",
+        "vape,cai,nghiện,kiêng,thóiquen,nhậtký,chuỗi,lich,suckhoe,riengtu,talai,pouch,zyn,puff,stop,streak",
     ),
     "zh-Hans": (
-        "戒瘾助手 - 无烟碱追踪",
-        "无烟碱日计数器",
-        "尼古丁袋,电子烟,戒烟,戒断,渴望,习惯,日记,应用,velo,唇烟,连续",
+        "戒瘾助手｜尼古丁袋ZYN无烟碱戒断追踪应用助手APP",
+        "无烟碱日计数器・虚拟花园成长应用助手VELOZYN",
+        "唇烟,电子烟,戒烟,戒断,渴望,习惯,日记,连续,记录,计数器,日历,小组件,健康,私密,复吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
     ),
     "zh-Hant": (
-        "戒癮助手 - 無菸鹼追蹤",
-        "無菸鹼日計數器",
-        "尼古丁袋,電子煙,戒菸,戒斷,渴望,習慣,日記,應用程式,velo,唇煙,連續",
+        "戒癮助手｜尼古丁袋ZYN無菸鹼戒斷追蹤應用助手APP",
+        "無菸鹼日計數器・虛擬花園成長應用助手VELOZYN",
+        "唇煙,電子煙,戒菸,戒斷,渴望,習慣,日記,連續,記錄,計數器,日曆,小工具,健康,私密,復吸,咀嚼,snus,zyn,puff,stop,streak,vape,nicotine,tobacco",
     ),
 }
 

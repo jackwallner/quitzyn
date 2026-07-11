@@ -83,7 +83,7 @@ struct ReviewPromptSheet: View {
 
     private var navigationTitle: String {
         switch step {
-        case .enjoyment: "Enjoying Nicotine Free?"
+        case .enjoyment: "Enjoying \(AppBranding.displayName)?"
         case .reviewPitch: "Support an indie dev"
         case .feedback: "Help us improve"
         }
@@ -101,7 +101,7 @@ struct ReviewPromptSheet: View {
             }
             .padding(.top, 8)
 
-            Text("If Nicotine Free is helping your journey, a quick rating on the App Store makes a real difference.")
+            Text("If \(AppBranding.displayName) is helping your journey, a quick rating on the App Store makes a real difference.")
                 .font(Theme.subhead())
                 .foregroundStyle(Theme.textSecondary)
                 .multilineTextAlignment(.center)
@@ -130,7 +130,7 @@ struct ReviewPromptSheet: View {
 
     private var reviewPitchContent: some View {
         VStack(spacing: 18) {
-            Text("Nicotine Free is built by one indie developer. No ads, no accounts, and your data never leaves your phone.")
+            Text("\(AppBranding.displayName) is built by one indie developer. No ads, no accounts, and your data never leaves your phone.")
                 .font(Theme.subhead())
                 .foregroundStyle(Theme.textSecondary)
                 .multilineTextAlignment(.center)
@@ -168,7 +168,7 @@ struct ReviewPromptSheet: View {
 
     private var feedbackContent: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("What would make Nicotine Free work better for you?")
+            Text("What would make \(AppBranding.displayName) work better for you?")
                 .font(Theme.subhead())
                 .foregroundStyle(Theme.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -237,7 +237,7 @@ struct ReviewPromptSheet: View {
         components.scheme = "mailto"
         components.path = PaywallLinks.supportEmail
         components.queryItems = [
-            URLQueryItem(name: "subject", value: "Nicotine Free feedback"),
+            URLQueryItem(name: "subject", value: "\(AppBranding.displayName) feedback"),
             URLQueryItem(name: "body", value: body),
         ]
         return components.url

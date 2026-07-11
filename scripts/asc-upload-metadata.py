@@ -33,17 +33,18 @@ from asc_lib import (
 )
 
 
-def patch_version_loc(client: ASCClient, loc: dict, locale: str) -> None:
+def patch_version_loc(client: ASCClient, loc: dict, locale: str, *, include_whats_new: bool = False) -> None:
     attrs: dict = {}
     desc = read_meta(locale, "description")
     kw = read_meta(locale, "keywords")
-    rn = read_meta(locale, "release_notes")
     if desc:
         attrs["description"] = desc[:4000]
     if kw:
         attrs["keywords"] = kw[:100]
-    if rn:
-        attrs["whatsNew"] = rn[:4000]
+    if include_whats_new:
+        rn = read_meta(locale, "release_notes")
+        if rn:
+            attrs["whatsNew"] = rn[:4000]
     for src, dst in (
         ("support_url", "supportUrl"),
         ("marketing_url", "marketingUrl"),
@@ -90,6 +91,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--create-missing", action="store_true", help="POST version localizations missing on draft")
     parser.add_argument("--source-locale", default="en-US")
+    parser.add_argument(
+        "--include-whats-new",
+        action="store_true",
+        help="PATCH whatsNew (often locked on first release / certain version states)",
+    )
     args = parser.parse_args()
 
     version_string = os.environ.get("ASC_APP_VERSION")
@@ -169,7 +175,9 @@ def main() -> None:
                 except RuntimeError as e:
                     print(f"info-fail ({e})", end=" ")
         try:
-            patch_version_loc(client, ver_locs[locale], locale)
+            patch_version_loc(
+                client, ver_locs[locale], locale, include_whats_new=args.include_whats_new
+            )
             print("ok" + (" +info" if info_ok else ""))
             updated += 1
         except RuntimeError as e:

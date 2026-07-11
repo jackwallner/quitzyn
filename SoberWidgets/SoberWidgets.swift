@@ -50,7 +50,7 @@ struct SoberDayCounterWidget: Widget {
             SoberDayCounterView(snapshot: entry.snapshot, days: entry.days)
                 .containerBackground(Theme.brandGradient, for: .widget)
         }
-        .configurationDisplayName("Nicotine-Free Days")
+        .configurationDisplayName("Quit Zyn Days")
         .description("How long you've been nicotine-free.")
         .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular, .accessoryInline])
     }
