@@ -1,1 +1,1 @@
-Första versionen. Räkna nikotinfria dagar, låt trädgården växa och se hälsan återvända steg för steg. Tack för att du är här.
+Förbättringar bakom kulisserna och buggfixar så att Quit Zyn fungerar smidigt. Tack för att du är här.
