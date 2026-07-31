@@ -1,1 +1,1 @@
-Förbättringar bakom kulisserna och buggfixar så att Quit Zyn fungerar smidigt. Tack för att du är här.
+Din trädgård växer nu i ett enda stycke. Vi har åtgärdat ett fel som kunde få en gren och dess löv att sväva löst från stammen, och svarttallens krona beskärs inte längre på hemskärmen.

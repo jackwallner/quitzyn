@@ -1,1 +1,1 @@
-Ulepszenia w tle i poprawki błędów, aby Quit Zyn działał płynnie. Dziękujemy, że jesteś.
+Twój ogród rośnie teraz jako jedna całość. Naprawiliśmy błąd, przez który gałąź wraz z liśćmi mogła unosić się w oderwaniu od pnia, a korona sosny czarnej nie jest już przycinana na ekranie głównym.
