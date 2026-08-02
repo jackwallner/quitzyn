@@ -4,7 +4,7 @@ App Store name: **Sober Tracker - Nicotine Free**. A fork of the alcohol "Sober 
 
 Note: internal target/type names are still `Sober*` (low-churn fork). The outward identity (bundle IDs, App Group, display name, content) is nicotine.
 
-XcodeGen project/scheme: `Sober`, simulator device `agent-sober`.
+XcodeGen project/scheme: `Sober`, sim lease owner `nicfree`.
 
 ## Tech stack
 - Swift 6 strict concurrency, SwiftUI, SwiftData (App Group store).

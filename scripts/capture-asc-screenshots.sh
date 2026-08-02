@@ -8,8 +8,11 @@ mkdir -p "$SCRATCH"
 SHOTS="fastlane/screenshots/en-US"
 mkdir -p "$SHOTS"
 
-PHONE=$(agent-sim boot sober)
-WATCH="${WATCH_UDID:-07C76A18-0F4B-4D55-BB52-7A9A0827BA38}"  # Apple Watch Series 11 (46mm)
+OWNER=nicfree
+PHONE=$(agent-sim checkout "$OWNER" --watch)
+WATCH=$(agent-sim watch-udid "$OWNER")
+trap 'agent-sim checkin "$OWNER"' EXIT
+agent-sim boot "$OWNER" --watch >/dev/null
 BID=com.jackwallner.quitzyn
 WATCH_BID=com.jackwallner.quitzyn.watch
 DD=/tmp/nicfree-screenshot-dd
@@ -44,8 +47,7 @@ capture_tab() {
   shift
   xcrun simctl launch "$PHONE" "$BID" "$@" >/dev/null
   sleep 6
-  agent-sim screenshot sober >/dev/null
-  cp /tmp/agent-sober.png "$SCRATCH/$out"
+  agent-sim screenshot "$OWNER" "$SCRATCH/$out" >/dev/null
   echo "  captured $out"
 }
 
