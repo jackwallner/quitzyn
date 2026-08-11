@@ -35,7 +35,7 @@
         {
           "adHocOffers" : [],
           "codeOffers" : [],
-          "displayPrice" : "4.99",
+          "displayPrice" : "8.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "S-MONTHLY",
@@ -60,7 +60,7 @@
         {
           "adHocOffers" : [],
           "codeOffers" : [],
-          "displayPrice" : "29.99",
+          "displayPrice" : "34.99",
           "familyShareable" : false,
           "groupNumber" : 2,
           "internalID" : "S-YEARLY",

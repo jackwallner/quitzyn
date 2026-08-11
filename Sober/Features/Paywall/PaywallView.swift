@@ -323,8 +323,13 @@ struct PaywallView: View {
         )
     }
 
+    /// Yearly, then monthly, then lifetime. Monthly sits directly under yearly
+    /// on purpose: the yearly card's pitch is a discount off the monthly price,
+    /// and that only reads as a discount when the price it's discounting is the
+    /// next line down. Lifetime is a different decision (own it vs rent it) and
+    /// belongs after that comparison, not inside it.
     private var sortedPackages: [Package] {
-        let order: [SoberPackageKind: Int] = [.monthly: 0, .yearly: 1, .lifetime: 2]
+        let order: [SoberPackageKind: Int] = [.yearly: 0, .monthly: 1, .lifetime: 2]
         return subscriptions.packages.sorted {
             (order[$0.soberPackageKind] ?? 9) < (order[$1.soberPackageKind] ?? 9)
         }
@@ -478,9 +483,13 @@ struct PaywallView: View {
             return
         }
         #endif
+        // Yearly by default. The onboarding trial buys monthly (that user is
+        // reacting to a recurring number they haven't earned yet); whoever
+        // reaches this screen has already decided Bloom+ is worth paying for,
+        // so the best-value plan leads.
         guard selectedPackage == nil, !subscriptions.packages.isEmpty else { return }
-        selectedPackage = subscriptions.packages.first { $0.soberPackageKind == .monthly }
-            ?? subscriptions.packages.first { $0.soberPackageKind == .yearly }
+        selectedPackage = subscriptions.packages.first { $0.soberPackageKind == .yearly }
+            ?? subscriptions.packages.first { $0.soberPackageKind == .monthly }
             ?? subscriptions.packages.first
     }
 
@@ -536,9 +545,13 @@ struct PaywallView: View {
             VStack(spacing: 20) {
                 savingsValueHeader
                 benefitShowcase
-                Text("$4.99 / mo · $29.99 / yr · $79.99 lifetime")
+                // No amounts here. A price the store did not hand us is worse
+                // than no price at all, and a literal drifts a tier out of date
+                // the moment pricing moves.
+                Text("Prices come from the App Store and aren't available in this build.")
                     .font(Theme.caption(weight: .semibold))
                     .foregroundStyle(Theme.textSecondary)
+                    .multilineTextAlignment(.center)
                 Button {
                     subscriptions.setLocalOverride(isPro: true)
                     dismiss()
