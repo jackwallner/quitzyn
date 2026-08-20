@@ -50,6 +50,7 @@ struct OnboardingView: View {
             PaywallView(impressionId: "sober_onboarding_trial_fallback")
         }
         .task {
+            ConversionDiagnostics.record(.onboardingReached)
             #if canImport(RevenueCat)
             if subscriptions.isConfigured, subscriptions.packages.isEmpty {
                 await subscriptions.fetchProducts()
@@ -297,7 +298,10 @@ struct OnboardingView: View {
                                 .multilineTextAlignment(.center)
                             HStack(spacing: Theme.Space.l) {
                                 Button("Retry") { resolveTrialAfterCommit() }
-                                Button("Continue free") { finishOnboarding() }
+                                Button("Continue free") {
+                                    ConversionDiagnostics.record(.freeVersionChosen)
+                                    finishOnboarding()
+                                }
                             }
                             .font(Theme.subhead(weight: .semibold))
                             .foregroundStyle(.white)
@@ -359,6 +363,7 @@ struct OnboardingView: View {
             }
         }
         .onAppear {
+            ConversionDiagnostics.record(.trialOfferReached)
             #if canImport(RevenueCat)
             // The trial-first onboarding step is a paywall surface, so measure it
             // like the others (sober_bloom_tab / sober_trial_sheet) so
@@ -584,16 +589,23 @@ struct OnboardingView: View {
         }
         trialError = nil
         trialInFlight = true
+        ConversionDiagnostics.record(.trialCTATapped)
         Task { @MainActor in
             defer { trialInFlight = false }
             do {
                 switch try await subscriptions.purchase(package) {
-                case .purchased, .pending:
+                case .purchased:
+                    ConversionDiagnostics.record(.purchaseSucceeded)
+                    finishOnboarding()
+                case .pending:
+                    ConversionDiagnostics.record(.purchasePending)
                     finishOnboarding()
                 case .cancelled:
+                    ConversionDiagnostics.record(.purchaseCancelled)
                     trialError = "Trial start cancelled. Tap again to begin."
                 }
             } catch {
+                ConversionDiagnostics.record(.purchaseFailed)
                 trialError = "Couldn't start your trial. Please try again."
             }
         }
@@ -637,6 +649,7 @@ struct OnboardingView: View {
     /// lighter post-onboarding popup. That popup auto-skips when the user already
     /// started the trial here (they're Pro), so they never see it twice.
     private func finishOnboarding() {
+        ConversionDiagnostics.record(.onboardingCompleted)
         let settings = SettingsService(context: context).current()
         settings.hasCompletedOnboarding = true
         try? context.save()

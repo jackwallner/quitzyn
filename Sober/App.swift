@@ -84,8 +84,20 @@ struct RootView: View {
         // renewal, restore, or server-delayed grant flips the app to Pro
         // promptly — matches Vitals' willEnterForeground refresh.
         .onChange(of: scenePhase) { _, phase in
-            if phase == .active {
+            switch phase {
+            case .active:
                 Task { await SubscriptionService.shared.refreshFromServer() }
+            case .background:
+                // Sync on the way out, not on the way in: the funnel events that
+                // matter (trial step seen, CTA tapped, free version chosen) all
+                // happen after launch, so a foreground-only push would always be
+                // one session stale, and for a user who never comes back it
+                // would never arrive at all.
+                #if canImport(RevenueCat)
+                Task { await SubscriptionService.shared.syncConversionAttributes() }
+                #endif
+            default:
+                break
             }
         }
     }
@@ -269,18 +281,23 @@ struct MainTabView: View {
         }
         trialPurchaseError = nil
         trialPurchaseInFlight = true
+        ConversionDiagnostics.record(.trialCTATapped)
         Task { @MainActor in
             defer { trialPurchaseInFlight = false }
             do {
                 switch try await subscriptions.purchase(package) {
                 case .purchased:
+                    ConversionDiagnostics.record(.purchaseSucceeded)
                     showTrialOffer = false
                 case .pending:
+                    ConversionDiagnostics.record(.purchasePending)
                     showTrialOffer = false
                 case .cancelled:
+                    ConversionDiagnostics.record(.purchaseCancelled)
                     trialPurchaseError = "Trial start cancelled. Tap again to continue."
                 }
             } catch {
+                ConversionDiagnostics.record(.purchaseFailed)
                 trialPurchaseError = "Couldn't start your trial. Please try again."
             }
         }

@@ -110,6 +110,7 @@ struct PaywallView: View {
             if isPro && displayCloseButton { dismiss() }
         }
         .task {
+            ConversionDiagnostics.record(.trialOfferReached)
             subscriptions.trackPaywallImpression(id: impressionId)
             #if canImport(RevenueCat)
             if subscriptions.isConfigured, subscriptions.packages.isEmpty {
@@ -498,13 +499,16 @@ struct PaywallView: View {
         errorMessage = nil
         restoreMessage = nil
         isPurchasing = true
+        ConversionDiagnostics.record(.trialCTATapped)
         Task {
             defer { isPurchasing = false }
             do {
                 switch try await subscriptions.purchase(package) {
                 case .purchased:
+                    ConversionDiagnostics.record(.purchaseSucceeded)
                     break // onChange(of: isProSubscriber) dismisses the sheet
                 case .pending:
+                    ConversionDiagnostics.record(.purchasePending)
                     // Deferred (Ask to Buy / SCA / parental approval): the
                     // transaction isn't complete yet. Keep the sheet open with a
                     // confirmation so it doesn't look like nothing happened; the
@@ -512,9 +516,11 @@ struct PaywallView: View {
                     // it's approved.
                     restoreMessage = "Your purchase is awaiting approval. Bloom+ unlocks as soon as it's confirmed."
                 case .cancelled:
+                    ConversionDiagnostics.record(.purchaseCancelled)
                     errorMessage = "Purchase cancelled. Tap again to continue."
                 }
             } catch {
+                ConversionDiagnostics.record(.purchaseFailed)
                 errorMessage = "Couldn't complete the purchase. Please try again."
             }
         }
