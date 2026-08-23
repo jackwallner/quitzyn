@@ -1036,3 +1036,44 @@ The first implementation pass should produce:
 8. A refreshed agent guide and an explicit archive policy.
 
 After that, use the experiment matrix to test the paywall default, trial-first flow, first-value timing, health preview, and review timing. Judge results by first check-in, trial-to-paid conversion, renewal, retention, refunds, and support contacts, not by trial CTA taps alone.
+
+## Activity and success context, 2026-08-23
+
+Classification: **active monetizing**. Confidence: **high**. Trend: **no ASC comparison displayed**.
+
+ASC release state: `iOS 1.2.3 Ready for Distribution`. ASC evidence: [Analytics Overview](https://appstoreconnect.apple.com/apps/6784788496/analytics/overview?dateSpec=d90), selected range `dateSpec=d90`.
+RevenueCat evidence: [Project Overview](https://app.revenuecat.com/projects/8395c8fc/overview), production mode, selected range `Last 28 days, 2026-07-27 through 2026-08-23`.
+
+### Observed activity
+
+| Source | Metric | Value | Window or comparison |
+| --- | --- | ---: | --- |
+| ASC | First-time downloads | 79 | 90-day Analytics Overview |
+| ASC | Redownloads | 3 | 90-day Analytics Overview |
+| ASC | Conversion rate | 2.85% | comparison not displayed |
+| ASC | Proceeds | $18 | 90-day Analytics Overview |
+| ASC | In-app purchases | 10 | 90-day Analytics Overview |
+| RevenueCat | New customers | 63 | last 28 days |
+| RevenueCat | Active customers | 69 | last 28 days |
+| RevenueCat | Active trials | 4 | current total |
+| RevenueCat | Active subscriptions | 1 | current total |
+| RevenueCat | MRR | $2 | current total |
+| RevenueCat | Revenue | $20 | last 28 days |
+
+A missing value above means the source did not expose that metric in this read-only snapshot. It is not a zero.
+
+### Interpretation and implementation focus
+
+Quit Zyn has 79 ASC first-time downloads, 63 RevenueCat new customers, 4 active trials, 1 active subscription, and $20 of RevenueCat revenue. Acquisition is meaningful for the app's scale, while the active-trial to subscription gap makes eligibility, first check-in, and trial cancellation the immediate conversion lens. Preserve health-safe copy and instrument the first logged milestone.
+
+The deterministic classifier recommends: Protect the current paid path, then use release and cohort baselines to decide whether acquisition or conversion is the next constraint.
+
+- Join ASC first-time download, first launch, first value, paywall shown, offer loaded, trial started, trial canceled, trial converted, entitlement active, restore, and purchase failure events with the app version and build.
+- Keep ASC's 90-day acquisition and proceeds window separate from RevenueCat's 28-day customer and revenue window. Do not calculate a conversion rate by dividing values from different windows.
+- Use a mature trial cohort and a minimum sample before choosing a native paywall or onboarding A/B winner. Record the offering identifier, package, placement, experiment variant, and build.
+- Put the app's classification and the next baseline date in the release handoff so Cursor, Claude, and Codex do not optimize from an old qualitative audit.
+
+### Boundary on success or death
+
+This snapshot supports the label **active monetizing**, not a lifetime verdict. The app has current paid activity, but ASC does not expose a positive comparison for the selected window. A later decision should include a clean 28-day RevenueCat trend, ASC acquisition and conversion trend, ratings and review count, crash and hang evidence, and a release-specific cohort.
+This dated section supersedes earlier statements in this file that per-app ASC or RevenueCat activity was unavailable as of 2026-08-23. Earlier statements remain historical evidence boundaries for their original audit pass.
