@@ -47,7 +47,7 @@ struct OnboardingView: View {
             .foregroundStyle(Color.white)
         }
         .sheet(isPresented: $showPaywallFallback, onDismiss: { finishOnboarding() }) {
-            PaywallView(impressionId: "sober_onboarding_trial_fallback")
+            PaywallView(impressionId: "quitzyn_onboarding_trial_fallback")
         }
         .task {
             ConversionDiagnostics.record(.onboardingReached)
@@ -366,11 +366,11 @@ struct OnboardingView: View {
             ConversionDiagnostics.record(.trialOfferReached)
             #if canImport(RevenueCat)
             // The trial-first onboarding step is a paywall surface, so measure it
-            // like the others (sober_bloom_tab / sober_trial_sheet) so
+            // like the others (quitzyn_bloom_tab / quitzyn_trial_sheet) so
             // view->trial-start conversion for the new step shows up in RevenueCat.
             if trialEligible {
                 subscriptions.trackPaywallImpression(
-                    id: "sober_onboarding_trial",
+                    id: "quitzyn_onboarding_trial",
                     package: subscriptions.directTrialPackage,
                     oncePerSession: true
                 )
