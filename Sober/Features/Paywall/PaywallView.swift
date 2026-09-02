@@ -39,7 +39,7 @@ struct PaywallView: View {
     var focus: BloomFeature? = nil
 
     /// RevenueCat custom-paywall impression id for this entry point.
-    var impressionId: String = "sober_paywall_sheet"
+    var impressionId: String = "quitzyn_paywall_sheet"
 
     @State private var selectedPackage: Package?
     @State private var isPurchasing = false

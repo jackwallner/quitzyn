@@ -103,6 +103,21 @@ final class SubscriptionService: NSObject {
         // StoreKit Testing supplies local products on simulator. Never configure
         // the production RevenueCat project here or agent runs pollute customer
         // counts and make the real install funnel impossible to interpret.
+        #if DEBUG
+        // The one exception, behind a launch argument: the Test Store key is a
+        // separate RevenueCat app inside the same project, so a probe run cannot
+        // touch App Store customers, revenue or charts. See RevenueCatProbe.
+        if RevenueCatProbe.isEnabled {
+            Purchases.logLevel = .debug
+            Purchases.configure(
+                with: Configuration.Builder(withAPIKey: RevenueCatProbe.testStoreKey)
+                    .with(appUserID: RevenueCatProbe.appUserID)
+                    .build()
+            )
+            Purchases.shared.delegate = self
+            isConfigured = true
+        }
+        #endif
         return
         #else
         #if DEBUG
@@ -236,12 +251,19 @@ final class SubscriptionService: NSObject {
     /// Attributes stay off the charts and are readable per customer.
     func syncConversionAttributes() {
         guard isConfigured else { return }
-        let counts = ConversionDiagnostics.counts
-        guard !counts.isEmpty else { return }
         var attributes: [String: String] = [:]
-        for (event, count) in counts {
+        for (event, count) in ConversionDiagnostics.counts {
             attributes["funnel_\(event.rawValue)"] = String(count)
         }
+        // The fleet-wide paywall keys, alongside the onboarding event counters
+        // rather than replacing them: the events say where someone dropped out
+        // of onboarding, these say how often and how early they were pitched.
+        //
+        // The empty check has to come after the merge. It used to sit on the
+        // event counts alone, which meant an install with no onboarding events
+        // would never have sent the paywall keys either.
+        attributes.merge(ConversionDiagnostics.subscriberAttributes) { _, fleet in fleet }
+        guard !attributes.isEmpty else { return }
         Purchases.shared.attribution.setAttributes(attributes)
     }
 
@@ -251,6 +273,8 @@ final class SubscriptionService: NSObject {
             guard !paywallImpressionsThisSession.contains(id) else { return }
             paywallImpressionsThisSession.insert(id)
         }
+        ConversionDiagnostics.recordPitchView(impressionID: id)
+        syncConversionAttributes()
         Purchases.shared.trackCustomPaywallImpression(
             CustomPaywallImpressionParams(
                 paywallId: id,
@@ -265,12 +289,19 @@ final class SubscriptionService: NSObject {
         purchaseInFlight = true
         defer { purchaseInFlight = false }
 
+        let startedTrial = isEligibleForIntroOffer(package)
         let result = try await Purchases.shared.purchase(package: package)
         apply(customerInfo: result.customerInfo)
         if result.userCancelled {
             return .cancelled
         }
         if result.customerInfo.hasSoberProEntitlement {
+            ConversionDiagnostics.recordConversion(
+                plan: package.storeProduct.productIdentifier,
+                startedTrial: startedTrial,
+                offeringID: package.presentedOfferingContext.offeringIdentifier
+            )
+            syncConversionAttributes()
             return .purchased
         }
         return .pending
@@ -471,5 +502,34 @@ extension SubscriptionService: PurchasesDelegate {
 
 enum PurchaseError: Error {
     case notConfigured
+}
+#endif
+
+#if DEBUG
+/// Simulator-only proof path for the fleet-wide funnel attributes.
+///
+/// Under the normal rules the attributes cannot be verified on a simulator: the
+/// production key must never be configured there, so RevenueCat is never
+/// configured, so nothing is ever sent, so a physical device is the only
+/// witness. This uses the project's Test Store key instead, which is a different
+/// RevenueCat app inside the same project and cannot touch App Store customers,
+/// revenue or charts.
+///
+/// DEBUG only, and only with the launch argument, so it cannot reach a Release
+/// build or an ordinary simulator run.
+enum RevenueCatProbe {
+    static var isEnabled: Bool {
+        ProcessInfo.processInfo.arguments.contains("-rcfunnelprobe")
+    }
+
+    static let testStoreKey = "test_UeazyQDOgujIcyaxDqIUgBztEBV"
+
+    static var appUserID: String {
+        ProcessInfo.processInfo.environment["RC_PROBE_USER"] ?? "funnel-probe-quitzyn"
+    }
+
+    static var impressionID: String {
+        ProcessInfo.processInfo.environment["RC_PROBE_SURFACE"] ?? "quitzyn_bloom_tab"
+    }
 }
 #endif
