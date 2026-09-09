@@ -12,16 +12,25 @@ enum WidgetSnapshotPump {
         let active = sobriety.activeJourney()
         let days = sobriety.currentDayCount()
         let gs = garden.current()
+        // The widget draws the tree, so it follows the tree's day count
+        // (streak plus slip carryover), while the streak it prints stays
+        // the honest one.
+        let treeDays = GardenService.treeDays(streakDays: days, carryover: gs.carryoverDays)
         let snap = WidgetSnapshot(
             sobrietyStartDate: active?.startDate,
             currentStreakDays: days,
             longestStreakDays: sobriety.longestStreakDays(),
-            bonsaiStage: GardenService.stage(forDays: days).rawValue,
+            bonsaiStage: GardenService.stage(forDays: treeDays).rawValue,
             bonsaiStyleID: gs.activeBonsaiStyleID,
             gardenVitality: gs.vitality,
             placedItemIDs: gs.placedItemIDs,
             unlockedItemIDs: gs.unlockedItemIDs,
-            generatedAt: .now
+            generatedAt: .now,
+            // Carried, not just baked into `bonsaiStage`: both consumers
+            // recompute the day count at their own render time so they roll
+            // over at midnight without the app, and they need the carryover to
+            // redo the same sum.
+            carryoverDays: gs.carryoverDays
         )
         WidgetSnapshotStore.save(snap)
         #if os(iOS)
