@@ -58,7 +58,8 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   returns nil below it rather than inventing a claim. Riding out an urge routes
   to the `.patterns` pitch via the `.cravingRelief` intent.
 - **Headless verification:** `-craving` and `-slip` launch arguments (DEBUG only)
-  open those screens directly, since the pool's accessibility bridge can't tap.
+  open those screens directly. `axe describe-ui` / `axe tap` DO work on the pool
+  (verified 2026-09-08 on agent-sim-1), so the full flows can also be walked.
 
 ## Pro entitlement (`"pro"`)
 - Free: day counter, single check-in/day, calendar, basic garden, first 2 health benefits.
