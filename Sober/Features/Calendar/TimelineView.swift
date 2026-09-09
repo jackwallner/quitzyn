@@ -41,6 +41,23 @@ struct TimelineView: View {
         return DateHelpers.daysBetween(j.startDate, d) + 1
     }
 
+    /// The age the tree is drawn at for a given date, carryover included.
+    ///
+    /// Carryover describes what the current tree inherited when the last slip
+    /// started this journey, so it applies to dates inside the active journey
+    /// and to nothing before it. Reconstructing from the raw streak showed a
+    /// day-one tree here while Home showed the inherited one for the same day.
+    private func treeDays(on date: Date) -> Int {
+        let count = soberDays(on: date)
+        guard let start = activeStart,
+              DateHelpers.startOfDay(date) >= DateHelpers.startOfDay(start)
+        else { return count }
+        return GardenService.treeDays(
+            streakDays: count,
+            carryover: gardenStates.first?.carryoverDays ?? 0
+        )
+    }
+
     private var bonsaiStyle: BonsaiStyle {
         switch gardenStates.first?.activeBonsaiStyleID {
         case "cascade-bonsai": return .cascade
@@ -88,9 +105,9 @@ struct TimelineView: View {
                 presenting: pendingSlipDay
             ) { day in
                 Button("Cancel", role: .cancel) { pendingSlipDay = nil }
-                Button("Log slip & reset", role: .destructive) { confirmSlip(on: day) }
+                Button("Log slip") { confirmSlip(on: day) }
             } message: { _ in
-                Text("Logging a slip resets your day counter to start fresh. Your calendar history and grove of completed trees stay.")
+                Text("Your day counter restarts after the slip. Your tree carries some growth forward, and your calendar history and completed trees stay. Your longest streak reflects the corrected dates.")
             }
         }
     }
@@ -179,7 +196,14 @@ struct TimelineView: View {
         let firstOfMonth = cal.date(from: comps) ?? monthAnchor
         let range = cal.range(of: .day, in: .month, for: firstOfMonth) ?? 1..<31
         let leadingBlanks = (cal.component(.weekday, from: firstOfMonth) - cal.firstWeekday + 7) % 7
-        let days = Array(range)
+
+        // One flat cell array (nil = leading blank), indexed by position. Two
+        // sibling ForEachs keyed `id: \.self` — blanks over 0..<leadingBlanks and
+        // days over 1...31 — collide on Int identity inside the same grid, and
+        // SwiftUI silently drops the duplicates. That ate the first days of any
+        // month not starting on the user's firstWeekday.
+        let cells: [Date?] = Array(repeating: nil, count: leadingBlanks)
+            + range.map { cal.date(byAdding: .day, value: $0 - 1, to: firstOfMonth) }
 
         return LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 7), spacing: 6) {
             ForEach(Array(weekdaySymbols.enumerated()), id: \.offset) { _, sym in
@@ -187,9 +211,12 @@ struct TimelineView: View {
                     .font(Theme.caption(weight: .semibold))
                     .foregroundStyle(Theme.textSecondary)
             }
-            ForEach(0..<leadingBlanks, id: \.self) { _ in Color.clear.frame(height: 36) }
-            ForEach(days, id: \.self) { day in
-                dayCell(date: cal.date(byAdding: .day, value: day - 1, to: firstOfMonth) ?? firstOfMonth)
+            ForEach(Array(cells.enumerated()), id: \.offset) { _, date in
+                if let date {
+                    dayCell(date: date)
+                } else {
+                    Color.clear.frame(height: 36)
+                }
             }
         }
     }
@@ -209,11 +236,16 @@ struct TimelineView: View {
         let beforeStart = earliestStart.map { day < DateHelpers.startOfDay($0) } ?? false
         let isSelected = day == DateHelpers.startOfDay(selectedDate)
 
+        // A day the user tended reads solid; a day the app filled in on their
+        // behalf reads faint. They used to be the same block of green, which
+        // made a month of tending indistinguishable from a month of the
+        // calendar advancing by itself.
         let bg: Color
         if inFuture || beforeStart { bg = .clear }
-        else if checkIn?.wasSober == true { bg = Theme.success.opacity(0.85) }
         else if checkIn?.wasSober == false { bg = Theme.danger.opacity(0.75) }
+        else if checkIn?.wasSober == true { bg = Theme.success.opacity(checkIn?.wasLogged == true ? 0.85 : 0.3) }
         else { bg = Theme.cardSurface }
+        let readsAsFilled = checkIn?.wasSober == false || checkIn?.wasLogged == true
 
         return Text("\(Calendar.current.component(.day, from: date))")
             .font(Theme.caption(weight: .bold))
@@ -224,7 +256,7 @@ struct TimelineView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(isSelected ? Theme.brandPrimary : .clear, lineWidth: 2)
             )
-            .foregroundStyle(checkIn != nil ? .white : Theme.textPrimary)
+            .foregroundStyle(readsAsFilled ? .white : Theme.textPrimary)
             .opacity(inFuture || beforeStart ? 0.5 : 1)
             .contentShape(Rectangle())
             .onTapGesture {
@@ -236,9 +268,11 @@ struct TimelineView: View {
     // MARK: - Reconstructed tree for the selected day
 
     private var treeRow: some View {
+        // The counter line shows the honest streak; only the tree inherits.
         let dayCount = soberDays(on: selectedDate)
-        let cycle = GardenService.cycleProgress(forDays: dayCount)
-        let stage = GardenService.stage(forDays: dayCount)
+        let drawnDays = treeDays(on: selectedDate)
+        let cycle = GardenService.cycleProgress(forDays: drawnDays)
+        let stage = GardenService.stage(forDays: drawnDays)
         let isToday = DateHelpers.startOfDay(selectedDate) == DateHelpers.startOfDay()
 
         return VStack(alignment: .leading, spacing: Theme.Space.m) {
@@ -263,7 +297,7 @@ struct TimelineView: View {
             }
             .frame(height: 200)
 
-            diffNarration(dayCount: dayCount)
+            diffNarration(dayCount: drawnDays)
         }
     }
 
@@ -312,7 +346,7 @@ struct TimelineView: View {
         let day = DateHelpers.startOfDay(selectedDate)
         let existing = checkInsByDay[day]
 
-        if let checkIn = existing {
+        if let checkIn = existing, checkIn.wasLogged {
             HStack(spacing: Theme.Space.m) {
                 Image(systemName: checkIn.wasSober ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
                     .foregroundStyle(checkIn.wasSober ? Theme.success : Theme.danger)
@@ -321,6 +355,9 @@ struct TimelineView: View {
                     .foregroundStyle(Theme.textPrimary)
                 Spacer()
             }
+        } else if existing != nil {
+            Text("Counted toward your journey. Not checked in yet.")
+                .foregroundStyle(Theme.textSecondary)
         }
 
         // Mood + note appear before the log buttons too, so retroactive
@@ -328,20 +365,34 @@ struct TimelineView: View {
         moodPicker(existing: existing)
         noteField(existing: existing)
 
-        if let checkIn = existing {
-            Button(role: checkIn.wasSober ? .destructive : nil) {
-                if checkIn.wasSober { pendingSlipDay = day }
-                else { logCheckIn(on: day, wasSober: true) }
-            } label: {
-                Label(checkIn.wasSober ? "Change to slip" : "Change to nicotine-free",
-                      systemImage: "arrow.left.arrow.right")
-            }
+        if let checkIn = existing, checkIn.wasLogged {
             if checkIn.wasSober {
+                Button(role: .destructive) {
+                    pendingSlipDay = day
+                } label: {
+                    Label("Change to slip", systemImage: "arrow.left.arrow.right")
+                }
                 Button(role: .destructive) {
                     deleteCheckIn(checkIn)
                 } label: {
                     Label("Delete log", systemImage: "trash")
                 }
+            } else if SlipRecorder.canUndo(on: day, context: context) {
+                // Goes through `SlipRecorder.undo`, not a plain check-in edit.
+                // Flipping only the row turned the day green next to a counter
+                // still sitting at the reset the slip caused.
+                Button {
+                    undoSlip(on: day)
+                } label: {
+                    Label("Change to nicotine-free", systemImage: "arrow.uturn.backward")
+                }
+                Text("Puts your counter and your tree back the way they were before this slip.")
+                    .font(Theme.caption())
+                    .foregroundStyle(Theme.textSecondary)
+            } else {
+                Text("A slip can only be taken back while it's the most recent one on your record.")
+                    .font(Theme.caption())
+                    .foregroundStyle(Theme.textSecondary)
             }
         } else {
             Button {
@@ -359,15 +410,12 @@ struct TimelineView: View {
 
     private func confirmSlip(on day: Date) {
         let trimmed = draftNote.trimmingCharacters(in: .whitespacesAndNewlines)
-        CheckInService(context: context).checkIn(
-            for: day, wasSober: false, mood: draftMood, note: trimmed.isEmpty ? nil : trimmed
+        SlipRecorder.record(
+            on: day,
+            mood: draftMood,
+            note: trimmed.isEmpty ? nil : trimmed,
+            context: context
         )
-        // Slip resets the journey; a past-dated slip starts the fresh streak
-        // the day after, and Home's auto-fill makes the calendar agree.
-        let dayAfter = Calendar.current.date(byAdding: .day, value: 1, to: day) ?? day
-        SobrietyService(context: context).resetJourney(startingAt: dayAfter)
-        GardenService(context: context).resetForNewJourney()
-        WidgetSnapshotPump.push(context: context)
         pendingSlipDay = nil
     }
 
@@ -386,6 +434,7 @@ struct TimelineView: View {
                         draftMood = (draftMood == value) ? nil : value
                         if let ci = existing {
                             ci.mood = draftMood
+                            ci.wasLogged = true
                             saveCheckInEdit()
                         }
                     } label: {
@@ -408,14 +457,18 @@ struct TimelineView: View {
     private func noteField(existing: DailyCheckIn?) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("Note").font(Theme.caption(weight: .semibold)).foregroundStyle(Theme.textSecondary)
-            TextField("How did the day go?", text: $draftNote, axis: .vertical)
-                .lineLimit(1...4)
-                .onChange(of: draftNote) { _, new in
+            TextField("How did the day go?", text: Binding(
+                get: { draftNote },
+                set: { new in
+                    draftNote = new
                     if let ci = existing {
                         ci.note = new.isEmpty ? nil : new
+                        ci.wasLogged = true
                         saveCheckInEdit()
                     }
                 }
+            ), axis: .vertical)
+                .lineLimit(1...4)
         }
     }
 
@@ -433,6 +486,18 @@ struct TimelineView: View {
             note: trimmed.isEmpty ? nil : trimmed
         )
         WidgetSnapshotPump.push(context: context)
+    }
+
+    /// Reverse a slip in full: calendar row, counter, journey, and garden.
+    /// `SlipRecorder` owns the sequence so this can't drift from Home again.
+    private func undoSlip(on day: Date) {
+        let trimmed = draftNote.trimmingCharacters(in: .whitespacesAndNewlines)
+        SlipRecorder.undo(
+            on: day,
+            mood: draftMood,
+            note: trimmed.isEmpty ? nil : trimmed,
+            context: context
+        )
     }
 
     private func deleteCheckIn(_ checkIn: DailyCheckIn) {

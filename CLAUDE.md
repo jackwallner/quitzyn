@@ -27,6 +27,39 @@ All share App Group `group.com.jackwallner.quitzyn` for SwiftData container + wi
 
 Root flow: `SoberApp → RootView → (OnboardingView | MainTabView)`.
 
+## Craving mode + slips (ported from Sober 2026-09-08)
+The two features aimed at the moments the app used to have nothing to say to.
+Both cores are in `Shared/`, both are **free and ungated**, and every
+habit-specific word in them lives in `Shared/Utilities/HabitVocabulary.swift`.
+**That file is the fork point**: it is the only file that differs from Sober's
+copy of these features, so keep edits there rather than in feature code. Never
+write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
+- **Craving mode** (`Sober/Features/Craving/CravingModeView.swift`): full-screen
+  box-breathing ride-it-out session, logged as `CravingEpisode`. No paywall
+  anywhere in the flow. Intensity and trigger are captured on the way *out*, and
+  both are optional (a skipped rating stores 0 rather than inventing a 3). The
+  default session is 120s here against Sober's 180: nicotine urges run shorter.
+  Copy arc lives in `Shared/Catalogs/CravingCoachCatalog.swift`.
+- **Slips don't erase the garden.** The old "Start fresh" alert, which reset the
+  journey and the tree, is gone. `GardenService.recordSlip` banks half the
+  tree's growth into `GardenState.carryoverDays`; the tree renders at
+  `GardenService.treeDays(streakDays:carryover:)` while the counter keeps showing
+  the honest streak. Everything that logs a slip goes through `SlipRecorder`, and
+  `SlipRecorder.undo` reverses a mis-tapped one in full (row, counter, journey,
+  garden) while it is still the most recent slip on record.
+- **`DailyCheckIn.wasLogged`** separates a day the user tapped from one
+  `fillJourney` filled in. Home's week strip (`TendedWeek` + `WeekStripView`) and
+  Timeline's calendar shading both key off it, and so does
+  `daysSinceLastCheckIn`. It defaults to false for a lightweight migration, so
+  `CheckInService.migrateLegacyCheckInsIfNeeded` (called from `SoberApp.init`,
+  before any `fillJourney`) promotes pre-port rows.
+- **`BloomFeature.patterns` leads the paywall.** `CravingInsights` reads the
+  user's own logged urges back to them; every reading has a sample floor and
+  returns nil below it rather than inventing a claim. Riding out an urge routes
+  to the `.patterns` pitch via the `.cravingRelief` intent.
+- **Headless verification:** `-craving` and `-slip` launch arguments (DEBUG only)
+  open those screens directly, since the pool's accessibility bridge can't tap.
+
 ## Pro entitlement (`"pro"`)
 - Free: day counter, single check-in/day, calendar, basic garden, first 2 health benefits.
 - Pro: full health timeline + sources, journal compose, achievement unlocks, money/calories saved, additional garden species.
