@@ -127,9 +127,8 @@ struct HomeView: View {
                 refreshReminderCopy()
                 presentPostOnboardingPaywallIfNeeded()
                 #if DEBUG
-                // The pool devices' accessibility bridge is unreliable, so the
-                // screens that can't be reached by a tap get a launch argument,
-                // same as -seedDemo. DEBUG only.
+                // Opens these screens directly for headless verification,
+                // same as -seedDemo, without walking the whole flow. DEBUG only.
                 let args = ProcessInfo.processInfo.arguments
                 if args.contains("-craving") { showCraving = true }
                 if args.contains("-slip") { showSlipSheet = true }
