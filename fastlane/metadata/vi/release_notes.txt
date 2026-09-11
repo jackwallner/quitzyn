@@ -1,1 +1,4 @@
-Cải tiến phía sau và sửa lỗi để Quit Zyn chạy mượt mà. Cảm ơn bạn đã đồng hành.
+Mới: chế độ thèm. Khi cơn thèm đến, hãy bắt đầu miễn phí một bài thở ngắn có hướng dẫn.
+Một lần lỡ không còn xóa khu vườn: bộ đếm bắt đầu lại, cây giữ một nửa sự phát triển, và lần lỡ ghi nhầm có thể hoàn tác.
+Bloom+ giờ hiển thị quy luật cơn thèm của bạn.
+Widget và Apple Watch giờ khớp với cây trong ứng dụng, cùng các bản sửa lỗi khác.

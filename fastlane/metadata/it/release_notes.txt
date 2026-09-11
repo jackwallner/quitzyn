@@ -1,1 +1,4 @@
-Miglioramenti dietro le quinte e correzioni di bug per far funzionare Quit Zyn senza intoppi. Grazie di esserci.
+Novità: modalità voglia. Quando arriva l'impulso, avvia gratis una breve respirazione guidata.
+Una ricaduta non cancella più il tuo giardino: il contatore riparte, l'albero conserva metà della crescita e una ricaduta registrata per errore si può annullare.
+Bloom+ ora mostra i tuoi schemi di voglia.
+Widget e Apple Watch ora mostrano lo stesso albero dell'app, oltre ad altre correzioni.

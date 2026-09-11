@@ -1,1 +1,4 @@
-Quit Zyn'ın sorunsuz çalışması için arka planda iyileştirmeler ve hata düzeltmeleri. Burada olduğun için teşekkürler.
+Yeni: istek modu. Dürtü geldiğinde kısa bir rehberli nefes egzersizini ücretsiz başlatın.
+Bir kayma artık bahçenizi silmiyor: sayaç yeniden başlar, ağaç büyümesinin yarısını korur ve yanlışlıkla girilen bir kayma geri alınabilir.
+Bloom+ artık istek örüntülerinizi gösteriyor.
+Widget'lar ve Apple Watch artık uygulamadaki ağaçla aynı, ayrıca başka düzeltmeler.

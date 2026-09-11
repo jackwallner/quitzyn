@@ -1,1 +1,4 @@
-Peningkatan di balik layar dan perbaikan bug agar Quit Zyn berjalan lancar. Terima kasih telah hadir.
+Baru: mode ngidam. Saat dorongan datang, mulai sesi napas terpandu singkat secara gratis.
+Kambuh tidak lagi menghapus taman Anda: penghitung dimulai ulang, pohon menyimpan setengah pertumbuhannya, dan kambuh yang salah dicatat dapat dibatalkan.
+Bloom+ kini menampilkan pola ngidam Anda.
+Widget dan Apple Watch kini sesuai dengan pohon Anda, ditambah perbaikan lain.

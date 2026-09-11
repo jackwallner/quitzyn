@@ -1,1 +1,1 @@
-tütün,vape,bağımlılık,ayıklık,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine
+tütün,vape,bağımlılık,nikotinsiz,alışkanlık,dizi,takvim,sağlık,istek,çiğneme,özel,nüks,zyn,nicotine

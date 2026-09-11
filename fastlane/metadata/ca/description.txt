@@ -1,16 +1,24 @@
-Quit Zyn t'ajuda a mantenir-te sense nicotina amb comptador de dies, check-in diari i un jardí virtual que creix cada dia sense nicotina.
+Quit Zyn t'ajuda a mantenir-te sense nicotina amb un comptador de dies, un check-in diari i un jardí virtual que creix amb cada dia sense nicotina. Per deixar el Zyn, el snus, les bossetes de nicotina i el vapeig.
 
 GRATUÏT
-• Comptador de dies sense nicotina
-• Check-in diari i calendari de sense nicotinaetat
-• Jardí virtual
-• Privat al dispositiu
+• Comptador de dies sense nicotina i ratxa més llarga
+• Check-in diari i calendari
+• Jardí virtual que creix amb tu
+• Mode desig: una respiració guiada per superar l'impuls
+• Una recaiguda no esborra el teu jardí
+• Apple Watch i widgets de pantalla d'inici
+• Privat al dispositiu, sense compte
 
 BLOOM+ (OPCIONAL)
-• Salut, diari, assoliments, estalvis
-• Apple Watch i widgets
+• Els teus patrons de desig
+• Cronologia de salut completa amb fonts
+• Diari amb suggeriments
+• Assoliments i fites
+• Diners i bossetes estalviats
 
-Descarrega gratuïta. Bloom+ quan vulguis.
+Bloom+ està disponible com a subscripció mensual o anual amb renovació automàtica, totes dues amb una prova gratuïta d'1 setmana per a nous subscriptors aptes, o com a compra única de per vida. Els preus es mostren a l'app abans de comprar i varien segons la regió. El pagament es carrega al teu Apple ID en confirmar. La subscripció es renova automàticament tret que es cancel·li almenys 24 hores abans del final del període. Gestiona-la o cancel·la-la a la configuració del teu compte de l'App Store.
+
+Quit Zyn és una eina de seguiment personal, no un consell mèdic.
 
 Condicions d'ús (CLUF estàndard d'Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Política de privadesa: https://jackwallner.github.io/quitzyn/privacy-policy.html

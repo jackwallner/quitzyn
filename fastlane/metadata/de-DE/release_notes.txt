@@ -1,1 +1,4 @@
-Verbesserungen und Fehlerbehebungen im Hintergrund, damit Quit Zyn reibungslos läuft. Danke, dass du dabei bist.
+Neu: Craving-Modus. Wenn das Verlangen kommt, starte kostenlos eine kurze geführte Atemübung.
+Ein Rückfall löscht deinen Garten nicht mehr: Der Zähler beginnt neu, dein Baum behält die Hälfte seines Wachstums, und ein versehentlich eingetragener Rückfall lässt sich rückgängig machen.
+Bloom+ zeigt jetzt deine Verlangensmuster.
+Widgets und Apple Watch zeigen jetzt denselben Baum wie die App, dazu weitere Fehlerbehebungen.

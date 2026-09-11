@@ -1,1 +1,4 @@
-Améliorations en coulisses et corrections de bugs pour que Quit Zyn reste fluide. Merci d'être là.
+Nouveau : mode envie. Quand l'envie arrive, lancez gratuitement une courte respiration guidée.
+Un écart n'efface plus votre jardin : le compteur repart de zéro, votre arbre garde la moitié de sa croissance et un écart saisi par erreur peut être annulé.
+Bloom+ affiche désormais vos schémas d'envie.
+Les widgets et l'Apple Watch correspondent maintenant à votre arbre, avec d'autres corrections.

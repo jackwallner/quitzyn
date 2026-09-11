@@ -1,23 +1,24 @@
-Quit Zyn hilft dir, nikotinfrei zu bleiben, mit Tageszähler, täglichem Check-in und einem virtuellen Garten, der mit jedem nikotinfreien Tag wächst.
+Quit Zyn hilft dir, nikotinfrei zu bleiben, mit Tageszähler, täglichem Check-in und einem virtuellen Garten, der mit jedem nikotinfreien Tag wächst. Für alle, die mit Zyn, Snus, Nikotinbeuteln oder Vapes aufhören.
 
-KOSTENLOS STARTEN
-• Nikotinfreier Tageszähler, Tage, Stunden und längste Serie
-• Täglicher Check-in, ein Tippen für deinen Tag
-• Nikotinfreiheitskalender, nikotinfreie Tage auf einen Blick
-• Virtueller Garten, sieh deinen Fortschritt wachsen
+KOSTENLOS
+• Nikotinfreier Tageszähler und längste Serie
+• Täglicher Check-in und Kalender
+• Virtueller Garten, der mit dir wächst
+• Craving-Modus: eine geführte Atemübung, um das Verlangen auszusitzen
+• Ein Rückfall löscht deinen Garten nicht
+• Apple Watch und Home-Bildschirm-Widgets
 • Privat auf dem Gerät, kein Konto nötig
 
 BLOOM+ (OPTIONAL)
-• Gesundheits-Timeline mit Quellen
+• Deine Verlangensmuster
+• Vollständige Gesundheits-Timeline mit Quellen
 • Tagebuch mit Impulsen
 • Erfolge und Meilensteine
-• Geld, Beutel und Nikotin gespart
-• Mehr Gartenarten
-• Apple Watch & Widgets
+• Gespartes Geld und Beutel
 
-Ob du mit Beuteln aufhörst, weniger nutzt oder nikotinfreie Tage sammelst: Quit Zyn macht es einfach.
+Bloom+ gibt es als monatliches oder jährliches, sich automatisch verlängerndes Abo, beide mit einer 1-wöchigen Gratistestphase für berechtigte Neukunden, oder als einmaligen Lifetime-Kauf. Die Preise werden vor dem Kauf in der App angezeigt und variieren je nach Region. Die Zahlung wird bei Bestätigung über deine Apple-ID abgerechnet. Das Abo verlängert sich automatisch, wenn es nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt wird. Verwalten oder kündigen kannst du es in den Einstellungen deines App Store-Accounts.
 
-Kostenlos laden. Bloom+ jederzeit upgraden.
+Quit Zyn ist ein Werkzeug zur Selbstbeobachtung und keine medizinische Beratung.
 
 Nutzungsbedingungen (Apples Standard-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Datenschutzrichtlinie: https://jackwallner.github.io/quitzyn/privacy-policy.html

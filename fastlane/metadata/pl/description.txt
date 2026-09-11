@@ -1,17 +1,24 @@
-Quit Zyn pomaga pozostać bez nikotynyym dzięki licznikowi dni, codziennemu check-inowi i wirtualnemu ogrodowi rosnącemu z każdym dniem bez nikotyny.
+Quit Zyn pomaga pozostać bez nikotyny dzięki licznikowi dni, codziennemu check-inowi i wirtualnemu ogrodowi, który rośnie z każdym dniem bez nikotyny. Dla rzucających Zyn, snus, saszetki nikotynowe i e-papierosy.
 
 ZA DARMO
-• Licznik dni bez nikotyny
-• Codzienny check-in
-• Kalendarz bez nikotynyości
-• Wirtualny ogród
+• Licznik dni bez nikotyny i najdłuższa seria
+• Codzienny check-in i kalendarz
+• Wirtualny ogród, który rośnie razem z Tobą
+• Tryb głodu nikotynowego: prowadzone oddychanie, by przeczekać chęć
+• Potknięcie nie usuwa Twojego ogrodu
+• Apple Watch i widżety na ekran początkowy
 • Prywatnie na urządzeniu, bez konta
 
 BLOOM+ (OPCJONALNIE)
-• Oś czasu zdrowia, dziennik, osiągnięcia
-• Apple Watch i widżety
+• Wzorce Twojego głodu nikotynowego
+• Pełna oś czasu zdrowia ze źródłami
+• Dziennik z podpowiedziami
+• Osiągnięcia i kamienie milowe
+• Zaoszczędzone pieniądze i saszetki
 
-Pobierz za darmo. Bloom+ w dowolnym momencie.
+Bloom+ jest dostępny jako miesięczna lub roczna subskrypcja odnawiana automatycznie, obie z 1-tygodniowym bezpłatnym okresem próbnym dla uprawnionych nowych subskrybentów, lub jako jednorazowy zakup dożywotni. Ceny są widoczne w aplikacji przed zakupem i różnią się w zależności od regionu. Płatność jest pobierana z Twojego Apple ID po potwierdzeniu. Subskrypcja odnawia się automatycznie, jeśli nie zostanie anulowana co najmniej 24 godziny przed końcem okresu. Zarządzaj nią lub anuluj w ustawieniach konta App Store.
+
+Quit Zyn to narzędzie do śledzenia własnych postępów, a nie porada medyczna.
 
 Warunki korzystania (standardowa umowa EULA Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Polityka prywatności: https://jackwallner.github.io/quitzyn/privacy-policy.html

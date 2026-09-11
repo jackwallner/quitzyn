@@ -1,1 +1,4 @@
-Mejoras internas y correcciones de errores para que Quit Zyn funcione mejor. Gracias por estar aquí.
+Novedad: modo antojo. Cuando lleguen las ganas, empieza gratis una breve respiración guiada.
+Una recaída ya no borra tu jardín: el contador vuelve a empezar, tu árbol conserva la mitad de su crecimiento y puedes deshacer una recaída registrada por error.
+Bloom+ ahora muestra tus patrones de antojo.
+Los widgets y el Apple Watch ahora coinciden con tu árbol, además de correcciones.

@@ -1,16 +1,24 @@
-Quit Zyn auttaa pysymään nikotiinittomana päivälaskurilla, päivittäisellä kirjauksella ja virtuaalisella puutarhalla, joka kasvaa jokaisena nikotiinittomana päivänä.
+Quit Zyn auttaa pysymään nikotiinittomana päivälaskurin, päivittäisen kirjauksen ja jokaisena nikotiinittomana päivänä kasvavan virtuaalisen puutarhan avulla. Zynin, nuuskan, nikotiinipussien ja vapettamisen lopettamiseen.
 
 ILMAISEKSI
-• Nikotiiniton päivälaskuri
-• Päivittäinen kirjaus ja nikotiinittomuuskalenteri
-• Virtuaalinen puutarha
-• Yksityinen laitteella
+• Nikotiinittomien päivien laskuri ja pisin putki
+• Päivittäinen kirjaus ja kalenteri
+• Kanssasi kasvava virtuaalinen puutarha
+• Himotila: ohjattu hengitysharjoitus, jonka aikana himo menee ohi
+• Retkahdus ei pyyhi puutarhaasi
+• Apple Watch ja kotinäytön widgetit
+• Yksityinen laitteella, ei tiliä
 
 BLOOM+ (VALINNAINEN)
-• Terveysaikajana, päiväkirja, saavutukset
-• Apple Watch ja widgetit
+• Himojesi toistuvat kuviot
+• Täysi terveysaikajana lähteineen
+• Päiväkirja kysymyksineen
+• Saavutukset ja virstanpylväät
+• Säästetyt rahat ja pussit
 
-Lataa ilmaiseksi. Bloom+ milloin haluat.
+Bloom+ on saatavilla kuukausittain tai vuosittain automaattisesti uusiutuvana tilauksena, molemmissa viikon ilmainen kokeilu kelpoisille uusille tilaajille, tai kertaostona elinikäiseen käyttöön. Hinnat näytetään sovelluksessa ennen ostoa, ja ne vaihtelevat alueittain. Maksu veloitetaan Apple ID:stäsi vahvistuksen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru tilaus App Store -tilisi asetuksissa.
+
+Quit Zyn on oman edistymisen seurantatyökalu, ei lääketieteellinen neuvo.
 
 Käyttöehdot (Applen vakio-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Tietosuojakäytäntö: https://jackwallner.github.io/quitzyn/privacy-policy.html

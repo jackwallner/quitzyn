@@ -1,1 +1,4 @@
-Forbedringer bag kulisserne og fejlrettelser, så Quit Zyn kører glat. Tak fordi du er her.
+Nyt: trangtilstand. Når trangen melder sig, kan du gratis starte en kort guidet vejrtrækningsøvelse.
+Et tilbagefald sletter ikke længere din have: tælleren starter forfra, træet beholder halvdelen af sin vækst, og et fejlregistreret tilbagefald kan fortrydes.
+Bloom+ viser nu dine trangmønstre.
+Widgets og Apple Watch matcher nu dit træ, plus rettelser.

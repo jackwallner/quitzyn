@@ -1,1 +1,4 @@
-Verbeteringen achter de schermen en bugfixes zodat Quit Zyn soepel werkt. Bedankt dat je er bent.
+Nieuw: trekmodus. Als de trek opkomt, start je gratis een korte begeleide ademoefening.
+Een terugval wist je tuin niet meer: de teller begint opnieuw, je boom houdt de helft van zijn groei en een per ongeluk ingevoerde terugval kun je ongedaan maken.
+Bloom+ toont nu je trekpatronen.
+Widgets en Apple Watch tonen nu dezelfde boom als de app, plus andere verbeteringen.

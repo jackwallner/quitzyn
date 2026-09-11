@@ -1,1 +1,4 @@
-Vylepšenia na pozadí a opravy chýb, aby Quit Zyn fungoval hladko. Ďakujeme, že ste tu.
+Novinka: režim chuti. Keď príde nutkanie, spustite zadarmo krátke riadené dýchanie.
+Pošmyknutie už nevymaže vašu záhradu: počítadlo začne odznova, strom si ponechá polovicu rastu a omylom zadané pošmyknutie sa dá vrátiť.
+Bloom+ teraz ukazuje vzorce vašich chutí.
+Widgety a Apple Watch teraz zobrazujú rovnaký strom ako aplikácia, plus ďalšie opravy.

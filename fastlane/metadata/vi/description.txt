@@ -1,16 +1,24 @@
-Quit Zyn giúp bạn cai nicotin với bộ đếm ngày, check-in hàng ngày và khu vườn ảo lớn lên mỗi ngày không uống.
+Quit Zyn giúp bạn sống không nicotin với bộ đếm ngày, check-in hằng ngày và khu vườn ảo lớn lên theo mỗi ngày không nicotin. Dành cho người bỏ Zyn, snus, túi nicotin và thuốc lá điện tử.
 
 MIỄN PHÍ
-• Đếm ngày không nicotin
-• Check-in và lịch cai nicotin
-• Vườn ảo
-• Riêng tư trên thiết bị
+• Bộ đếm ngày không nicotin và chuỗi dài nhất
+• Check-in hằng ngày và lịch
+• Khu vườn ảo lớn lên cùng bạn
+• Chế độ thèm: bài thở có hướng dẫn để vượt qua cơn thèm
+• Một lần lỡ không xóa khu vườn của bạn
+• Apple Watch và widget màn hình chính
+• Riêng tư trên thiết bị, không cần tài khoản
 
 BLOOM+ (TÙY CHỌN)
-• Dòng thời gian sức khỏe, nhật ký
-• Apple Watch và widget
+• Quy luật cơn thèm của bạn
+• Dòng thời gian sức khỏe đầy đủ kèm nguồn
+• Nhật ký có câu hỏi gợi ý
+• Thành tích và cột mốc
+• Tiền và túi nicotin đã tiết kiệm
 
-Tải miễn phí. Nâng cấp Bloom+ bất cứ lúc nào.
+Bloom+ có dạng gói đăng ký hằng tháng hoặc hằng năm tự động gia hạn, cả hai đều có 1 tuần dùng thử miễn phí cho người đăng ký mới đủ điều kiện, hoặc dạng mua trọn đời một lần. Giá được hiển thị trong ứng dụng trước khi mua và khác nhau theo khu vực. Khoản thanh toán được tính vào Apple ID của bạn khi xác nhận. Gói đăng ký tự động gia hạn trừ khi được hủy ít nhất 24 giờ trước khi kết thúc kỳ. Quản lý hoặc hủy trong phần cài đặt tài khoản App Store.
+
+Quit Zyn là công cụ theo dõi tiến trình cá nhân, không phải lời khuyên y tế.
 
 Điều khoản sử dụng (EULA tiêu chuẩn của Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Chính sách quyền riêng tư: https://jackwallner.github.io/quitzyn/privacy-policy.html

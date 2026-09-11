@@ -1,1 +1,4 @@
-Háttérbeli fejlesztések és hibajavítások, hogy a Quit Zyn gördülékenyen működjön. Köszönjük, hogy itt vagy.
+Új: sóvárgás mód. Ha jön a késztetés, indíts ingyen egy rövid vezetett légzést.
+Egy visszaesés már nem törli a kertedet: a számláló újraindul, a fa megtartja növekedése felét, és a tévedésből rögzített visszaesés visszavonható.
+A Bloom+ mostantól mutatja a sóvárgásaid mintázatait.
+A widgetek és az Apple Watch mostantól ugyanazt a fát mutatják, további javításokkal.
