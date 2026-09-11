@@ -330,6 +330,16 @@ final class SubscriptionService: NSObject {
         // visible in Console instead of silently leaving a paid user locked.
         logger.info("Applied customerInfo — active entitlements: [\(activeKeys, privacy: .public)] -> isPro \(active, privacy: .public)")
         entitlementActive = active
+
+        // Detect the trial here rather than at the purchase call site: this runs
+        // on every refresh and delegate push, so a trial started in onboarding,
+        // on another device, or restored later is still tracked.
+        let entitlement = customerInfo.entitlements[Self.proEntitlement]
+            ?? customerInfo.entitlements.active.values.first
+        TrialLifecycle.sync(
+            isTrialing: entitlement?.isActive == true && entitlement?.periodType == .trial,
+            endsAt: entitlement?.expirationDate
+        )
     }
     #endif
 
@@ -445,7 +455,9 @@ final class SubscriptionService: NSObject {
             packages.filter { isEligibleForIntroOffer($0) }.map(\.soberPackageKind)
         )
         guard trialKinds.contains(.monthly) || trialKinds.contains(.yearly) else { return nil }
-        let days = trialOfferDayCount ?? 7
+        // No literal fallback: a footnote that names the wrong number is worse
+        // than no footnote, and the plan cards already carry the real label.
+        guard let days = trialOfferDayCount else { return nil }
         let label = days == 1 ? "1-day" : "\(days)-day"
         switch (trialKinds.contains(.monthly), trialKinds.contains(.yearly)) {
         case (true, true):

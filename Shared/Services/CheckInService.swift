@@ -160,12 +160,22 @@ final class CheckInService {
     static func migrateLegacyCheckInsIfNeeded(context: ModelContext) {
         let defaults = AppGroup.defaults
         guard !defaults.bool(forKey: AppGroup.legacyCheckInsMarkedLoggedKey) else { return }
-        defaults.set(true, forKey: AppGroup.legacyCheckInsMarkedLoggedKey)
 
+        // The marker is written only once the repair has actually landed. Set
+        // up front, a single failed fetch or save skipped the repair for good
+        // and left the user's tended history reading as assumed days.
         let descriptor = FetchDescriptor<DailyCheckIn>(predicate: #Predicate { !$0.wasLogged })
-        guard let legacy = try? context.fetch(descriptor), !legacy.isEmpty else { return }
-        for row in legacy { row.wasLogged = true }
-        try? context.save()
+        guard let legacy = try? context.fetch(descriptor) else { return }
+        if !legacy.isEmpty {
+            for row in legacy { row.wasLogged = true }
+            do {
+                try context.save()
+            } catch {
+                context.rollback()
+                return
+            }
+        }
+        defaults.set(true, forKey: AppGroup.legacyCheckInsMarkedLoggedKey)
     }
 
     /// Every sober day on record, across all journeys. This is the number
