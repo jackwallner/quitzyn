@@ -1,1 +1,4 @@
-Taustaparannuksia ja virhekorjauksia, jotta Quit Zyn toimii sujuvasti. Kiitos, että olet mukana.
+Uutta: himotila. Kun himo iskee, aloita maksutta lyhyt ohjattu hengitysharjoitus.
+Retkahdus ei enää pyyhi puutarhaasi: laskuri alkaa alusta, puu säilyttää puolet kasvustaan ja vahingossa kirjatun retkahduksen voi perua.
+Bloom+ näyttää nyt himojesi kuviot.
+Widgetit ja Apple Watch näyttävät nyt saman puun kuin sovellus, lisäksi korjauksia.

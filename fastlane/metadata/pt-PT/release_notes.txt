@@ -1,1 +1,4 @@
-Melhorias nos bastidores e correções de erros para o Quit Zyn funcionar melhor. Obrigado por estar aqui.
+Novo: modo desejo. Quando a vontade surgir, inicie gratuitamente uma breve respiração guiada.
+Um deslize já não apaga o seu jardim: o contador recomeça, a árvore mantém metade do crescimento e um deslize registado por engano pode ser anulado.
+O Bloom+ mostra agora os seus padrões de desejo.
+Os widgets e o Apple Watch mostram agora a mesma árvore da app, além de outras correções.

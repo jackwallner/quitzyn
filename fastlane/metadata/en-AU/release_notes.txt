@@ -1,1 +1,4 @@
-Behind-the-scenes improvements and fixes to keep Quit Zyn running smoothly. Thank you for being here.
+New: craving mode. When an urge hits, start a short guided breathing session and ride it out. It's free.
+A slip no longer wipes out your garden. Your counter restarts, your tree keeps half its growth, and a mistaken slip can be undone.
+Bloom+ now shows your craving patterns.
+Widgets and Apple Watch now match your tree, plus other fixes.

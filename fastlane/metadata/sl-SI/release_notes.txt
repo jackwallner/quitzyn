@@ -1,1 +1,4 @@
-Izboljšave v ozadju in popravki napak, da Quit Zyn deluje gladko. Hvala, da ste z nami.
+Novo: način želje. Ko pride nagon, brezplačno zaženite kratko vodeno dihanje.
+Spodrsljaj ne izbriše več vašega vrta: števec začne znova, drevo obdrži polovico rasti, pomotoma vnesen spodrsljaj pa lahko razveljavite.
+Bloom+ zdaj prikazuje vzorce vaših želja.
+Gradniki in Apple Watch zdaj prikazujejo isto drevo kot aplikacija, poleg drugih popravkov.

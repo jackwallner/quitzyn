@@ -1,1 +1,4 @@
-Millores internes i correccions d'errors perquè Quit Zyn funcioni bé. Gràcies per ser aquí.
+Novetat: mode desig. Quan arribi un impuls, comença gratis una breu respiració guiada.
+Una recaiguda ja no esborra el teu jardí: el comptador es reinicia, l'arbre conserva la meitat del creixement i pots desfer una recaiguda registrada per error.
+Bloom+ ara mostra els teus patrons de desig.
+Els widgets i l'Apple Watch ara coincideixen amb el teu arbre, i altres correccions.

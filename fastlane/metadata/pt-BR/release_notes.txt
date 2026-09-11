@@ -1,1 +1,4 @@
-Melhorias nos bastidores e correções de erros para o Quit Zyn funcionar melhor. Obrigado por estar aqui.
+Novo: modo fissura. Quando a vontade bater, comece de graça uma respiração guiada curta.
+Um deslize não apaga mais seu jardim: o contador recomeça, a árvore mantém metade do crescimento e um deslize registrado por engano pode ser desfeito.
+O Bloom+ agora mostra seus padrões de fissura.
+Widgets e Apple Watch agora mostram a mesma árvore do app, além de outras correções.

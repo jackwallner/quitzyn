@@ -1,1 +1,4 @@
-Ulepszenia w tle i poprawki błędów, aby Quit Zyn działał płynnie. Dziękujemy, że jesteś.
+Nowość: tryb głodu nikotynowego. Gdy przyjdzie chęć, uruchom za darmo krótkie prowadzone oddychanie.
+Potknięcie nie usuwa już Twojego ogrodu: licznik zaczyna od nowa, drzewo zachowuje połowę wzrostu, a potknięcie wpisane przez pomyłkę można cofnąć.
+Bloom+ pokazuje teraz wzorce Twojego głodu nikotynowego.
+Widżety i Apple Watch pokazują teraz to samo drzewo co aplikacja, plus inne poprawki.

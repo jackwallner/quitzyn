@@ -1,16 +1,24 @@
-Quit Zyn hjelper deg å holde deg nikotinfri med dagteller, daglig innsjekk og en virtuell hage som vokser for hver nikotinfri dag.
+Quit Zyn hjelper deg å holde deg nikotinfri med dagteller, daglig innsjekk og en virtuell hage som vokser for hver nikotinfri dag. For deg som slutter med Zyn, snus, nikotinposer og vape.
 
 GRATIS
-• Nikotinfri dagteller
-• Daglig innsjekk og nikotinfrikalender
-• Virtuell hage
-• Privat på enheten
+• Nikotinfri dagteller og lengste rekke
+• Daglig innsjekk og kalender
+• Virtuell hage som vokser med deg
+• Suggmodus: en veiledet pusteøvelse for å komme gjennom suget
+• Et tilbakefall sletter ikke hagen din
+• Apple Watch og widgeter for Hjem-skjermen
+• Privat på enheten, ingen konto
 
 BLOOM+ (VALGFRITT)
-• Helsetidslinje, dagbok, prestasjoner
-• Apple Watch og widgeter
+• Dine suggmønstre
+• Full helsetidslinje med kilder
+• Dagbok med spørsmål
+• Prestasjoner og milepæler
+• Sparte penger og poser
 
-Last ned gratis. Bloom+ når du vil.
+Bloom+ fås som månedlig eller årlig abonnement som fornyes automatisk, begge med 1 ukes gratis prøveperiode for kvalifiserte nye abonnenter, eller som et engangskjøp for livstid. Prisene vises i appen før du kjøper og varierer etter region. Betalingen belastes Apple-ID-en din ved bekreftelse. Abonnementet fornyes automatisk med mindre det sies opp minst 24 timer før perioden utløper. Administrer eller si opp i innstillingene for App Store-kontoen din.
+
+Quit Zyn er et verktøy for å følge din egen fremgang, ikke medisinske råd.
 
 Bruksvilkår (Apples standard-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Personvernerklæring: https://jackwallner.github.io/quitzyn/privacy-policy.html

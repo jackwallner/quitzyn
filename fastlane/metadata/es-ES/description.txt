@@ -1,23 +1,24 @@
-Quit Zyn te ayuda a mantenerte sin nicotina con contador de días, check-in diario y un jardín virtual que crece con cada día sin nicotina.
+Quit Zyn te ayuda a mantenerte sin nicotina con un contador de días, un check-in diario y un jardín virtual que crece con cada día sin nicotina. Para dejar Zyn, snus, bolsitas de nicotina y el vapeo.
 
-GRATIS PARA EMPEZAR
-• Contador de días sin nicotina, días, horas y racha más larga
-• Check-in diario, un toque para registrar el día
-• Calendario de sin nicotina, días sin nicotinas de un vistazo
-• Jardín virtual, mira crecer tu progreso
-• Privado en el dispositivo, sin cuenta
+GRATIS
+• Contador de días sin nicotina y racha más larga
+• Check-in diario y calendario
+• Jardín virtual que crece contigo
+• Modo antojo: una respiración guiada para dejar pasar las ganas
+• Una recaída no borra tu jardín
+• Apple Watch y widgets de pantalla de inicio
+• Privado en tu dispositivo, sin cuenta
 
 BLOOM+ (OPCIONAL)
-• Línea de salud completa con fuentes
+• Tus patrones de antojo
+• Cronología de salud completa con fuentes
 • Diario con sugerencias
 • Logros e hitos
-• Dinero, bolsitas y nicotina evitados
-• Más especies en el jardín
-• Apple Watch y widgets
+• Dinero y bolsitas ahorrados
 
-Deja de bolsitas, reduce o suma días sin nicotina: Quit Zyn lo hace simple.
+Bloom+ está disponible como suscripción mensual o anual con renovación automática, ambas con una prueba gratuita de 1 semana para nuevos suscriptores que cumplan los requisitos, o como compra única de por vida. Los precios se muestran en la app antes de comprar y varían según la región. El pago se carga a tu Apple ID al confirmar. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes del final del periodo. Gestiona o cancela en los ajustes de tu cuenta del App Store.
 
-Descarga gratis. Mejora a Bloom+ cuando quieras.
+Quit Zyn es una herramienta de seguimiento personal, no un consejo médico.
 
 Términos de uso (CLUF estándar de Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Política de privacidad: https://jackwallner.github.io/quitzyn/privacy-policy.html

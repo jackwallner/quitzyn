@@ -1,16 +1,24 @@
-A Quit Zyn segít nikotinmentesen maradni napszámlálóval, napi check-innel és virtuális kerttel, amely minden nikotinmentes nappal növekszik.
+A Quit Zyn napszámlálóval, napi check-innel és minden nikotinmentes nappal növekvő virtuális kerttel segít nikotinmentesen maradni. Zyn, snüssz, nikotintasak és vape elhagyásához.
 
 INGYENES
-• Nikotinmentes napszámláló
-• Napi check-in és nikotinmentes naptár
-• Virtuális kert
-• Privát az eszközön
+• Nikotinmentes napszámláló és leghosszabb sorozat
+• Napi check-in és naptár
+• Veled növekvő virtuális kert
+• Sóvárgás mód: vezetett légzés, hogy átvészeld a késztetést
+• Egy visszaesés nem törli a kertedet
+• Apple Watch és kezdőképernyő-widgetek
+• Privát az eszközön, fiók nélkül
 
 BLOOM+ (OPCIONÁLIS)
-• Egészségidővonal, napló, eredmények
-• Apple Watch és widgetek
+• Sóvárgásaid mintázatai
+• Teljes egészség-idővonal forrásokkal
+• Napló kérdésekkel
+• Eredmények és mérföldkövek
+• Megspórolt pénz és tasakok
 
-Töltsd le ingyen. Bloom+ bármikor.
+A Bloom+ havi vagy éves, automatikusan megújuló előfizetésként érhető el, mindkettő 1 hetes ingyenes próbaidőszakkal a jogosult új előfizetők számára, vagy egyszeri, élethosszig tartó vásárlásként. Az árak vásárlás előtt megjelennek az appban, és régiónként eltérnek. A fizetés megerősítéskor az Apple ID-dat terheli. Az előfizetés automatikusan megújul, hacsak nem mondod le legalább 24 órával az időszak vége előtt. Kezelés vagy lemondás az App Store-fiókod beállításaiban.
+
+A Quit Zyn saját előrehaladásod követésére szolgáló eszköz, nem orvosi tanács.
 
 Felhasználási feltételek (az Apple általános EULA-ja): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Adatvédelmi irányelvek: https://jackwallner.github.io/quitzyn/privacy-policy.html

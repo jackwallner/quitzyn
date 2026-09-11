@@ -1,1 +1,4 @@
-Forbedringer bak kulissene og feilrettinger så Quit Zyn fungerer problemfritt. Takk for at du er her.
+Nytt: suggmodus. Når suget kommer, kan du starte en kort veiledet pusteøvelse gratis.
+Et tilbakefall sletter ikke lenger hagen din: telleren starter på nytt, treet beholder halvparten av veksten, og et tilbakefall registrert ved en feil kan angres.
+Bloom+ viser nå suggmønstrene dine.
+Widgeter og Apple Watch viser nå samme tre som appen, pluss andre rettelser.

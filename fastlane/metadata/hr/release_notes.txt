@@ -1,1 +1,4 @@
-Poboljšanja u pozadini i ispravci grešaka kako bi Quit Zyn radio glatko. Hvala što ste tu.
+Novo: način žudnje. Kad poriv stigne, besplatno pokrenite kratko vođeno disanje.
+Posrtaj više ne briše vaš vrt: brojač kreće ispočetka, stablo zadržava polovicu rasta, a posrtaj unesen greškom može se poništiti.
+Bloom+ sada prikazuje obrasce vaše žudnje.
+Widgeti i Apple Watch sada prikazuju isto stablo, uz ostale ispravke.

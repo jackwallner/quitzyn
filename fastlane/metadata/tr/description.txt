@@ -1,16 +1,24 @@
-Quit Zyn, gün sayacı, günlük check-in ve her ayık günde büyüyen sanal bahçe ile nikotinsiz kalmanıza yardımcı olur.
+Quit Zyn; gün sayacı, günlük check-in ve nikotinsiz her günle büyüyen sanal bir bahçeyle nikotinsiz kalmanıza yardımcı olur. Zyn, snus, nikotin poşetleri ve vape bırakanlar için.
 
 ÜCRETSİZ
-• Alkolsüz gün sayacı
-• Günlük check-in ve ayıklık takvimi
-• Sanal bahçe
+• Nikotinsiz gün sayacı ve en uzun seri
+• Günlük check-in ve takvim
+• Sizinle büyüyen sanal bahçe
+• İstek modu: dürtüyü atlatmak için rehberli nefes egzersizi
+• Bir kayma bahçenizi silmez
+• Apple Watch ve ana ekran widget'ları
 • Cihazda gizli, hesap gerekmez
 
 BLOOM+ (İSTEĞE BAĞLI)
-• Sağlık zaman çizelgesi, günlük, başarılar
-• Apple Watch ve widget'lar
+• İstek örüntüleriniz
+• Kaynaklarıyla eksiksiz sağlık zaman çizelgesi
+• Sorulu günlük
+• Başarılar ve kilometre taşları
+• Tasarruf edilen para ve poşetler
 
-Ücretsiz indirin. Bloom+ istediğiniz zaman.
+Bloom+, otomatik yenilenen aylık veya yıllık abonelik olarak (ikisinde de uygun yeni aboneler için 1 haftalık ücretsiz deneme) ya da tek seferlik ömür boyu satın alma olarak sunulur. Fiyatlar satın almadan önce uygulamada gösterilir ve bölgeye göre değişir. Ödeme, onay sırasında Apple kimliğinizden alınır. Abonelik, dönem bitiminden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir. App Store hesap ayarlarınızdan yönetebilir veya iptal edebilirsiniz.
+
+Quit Zyn kendi ilerlemenizi takip etmeye yarayan bir araçtır, tıbbi tavsiye değildir.
 
 Kullanım Koşulları (Apple'ın standart EULA'sı): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Gizlilik Politikası: https://jackwallner.github.io/quitzyn/privacy-policy.html

@@ -1,1 +1,4 @@
-Förbättringar bakom kulisserna och buggfixar så att Quit Zyn fungerar smidigt. Tack för att du är här.
+Nytt: sugläge. När suget kommer kan du starta en kort guidad andningsövning gratis.
+Ett återfall raderar inte längre din trädgård: räknaren börjar om, trädet behåller halva sin tillväxt och ett återfall som registrerats av misstag kan ångras.
+Bloom+ visar nu dina sugmönster.
+Widgetar och Apple Watch visar nu samma träd som appen, plus andra rättningar.

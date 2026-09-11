@@ -1,17 +1,24 @@
-Quit Zyn helpt je nikotinvrij te blijven met een dagteller, dagelijkse check-in en een virtuele tuin die groeit bij elke nikotinvrije dag.
+Quit Zyn helpt je nicotinevrij te blijven met een dagteller, een dagelijkse check-in en een virtuele tuin die groeit met elke nicotinevrije dag. Om te stoppen met Zyn, snus, nicotinezakjes en vapen.
 
 GRATIS
-• Nikotinvrije dagteller, dagen, uren en langste reeks
-• Dagelijkse check-in
-• Nikotinvrijheidskalender
-• Virtuele tuin
+• Teller voor nicotinevrije dagen en langste reeks
+• Dagelijkse check-in en kalender
+• Virtuele tuin die met je meegroeit
+• Trekmodus: een begeleide ademoefening om de trek te laten zakken
+• Een terugval wist je tuin niet
+• Apple Watch en widgets voor het beginscherm
 • Privé op je apparaat, geen account
 
 BLOOM+ (OPTIONEEL)
-• Gezondheidstijdlijn, dagboek, prestaties
-• Apple Watch en widgets
+• Jouw trekpatronen
+• Volledige gezondheidstijdlijn met bronnen
+• Dagboek met vragen
+• Prestaties en mijlpalen
+• Bespaard geld en zakjes
 
-Gratis downloaden. Bloom+ wanneer je wilt.
+Bloom+ is beschikbaar als maandelijks of jaarlijks automatisch verlengd abonnement, beide met een gratis proefperiode van 1 week voor nieuwe abonnees die in aanmerking komen, of als eenmalige aankoop voor altijd. Prijzen worden vóór aankoop in de app getoond en verschillen per regio. De betaling wordt bij bevestiging via je Apple ID in rekening gebracht. Het abonnement wordt automatisch verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt. Beheer of annuleer het in de instellingen van je App Store-account.
+
+Quit Zyn is een hulpmiddel om je eigen voortgang bij te houden, geen medisch advies.
 
 Gebruiksvoorwaarden (standaard-EULA van Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Privacybeleid: https://jackwallner.github.io/quitzyn/privacy-policy.html

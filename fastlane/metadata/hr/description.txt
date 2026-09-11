@@ -1,16 +1,24 @@
-Quit Zyn pomaže ostati trijezan uz brojač dana, dnevni check-in i virtualni vrt koji raste sa svakim trijeznim danom.
+Quit Zyn pomaže vam ostati bez nikotina uz brojač dana, dnevni check-in i virtualni vrt koji raste sa svakim danom bez nikotina. Za prestanak korištenja Zyna, snusa, nikotinskih vrećica i vapea.
 
 BESPLATNO
-• Brojač dana bez nikotina
-• Dnevni check-in i kalendar triježnosti
-• Virtualni vrt
-• Privatno na uređaju
+• Brojač dana bez nikotina i najduži niz
+• Dnevni check-in i kalendar
+• Virtualni vrt koji raste s vama
+• Način žudnje: vođeno disanje da prebrodite poriv
+• Posrtaj ne briše vaš vrt
+• Apple Watch i widgeti za početni zaslon
+• Privatno na uređaju, bez računa
 
 BLOOM+ (OPCIONALNO)
-• Zdravstvena vremenska crta, dnevnik
-• Apple Watch i widgeti
+• Obrasci vaše žudnje
+• Potpuna zdravstvena vremenska crta s izvorima
+• Dnevnik s pitanjima
+• Postignuća i prekretnice
+• Ušteđeni novac i vrećice
 
-Preuzmi besplatno. Bloom+ kad želiš.
+Bloom+ je dostupan kao mjesečna ili godišnja pretplata s automatskim obnavljanjem, obje s besplatnim probnim razdobljem od 1 tjedna za nove pretplatnike koji ispunjavaju uvjete, ili kao jednokratna doživotna kupnja. Cijene su prikazane u aplikaciji prije kupnje i razlikuju se po regiji. Plaćanje se naplaćuje s vašeg Apple ID-ja pri potvrdi. Pretplata se automatski obnavlja ako se ne otkaže najmanje 24 sata prije kraja razdoblja. Upravljajte ili otkažite u postavkama računa za App Store.
+
+Quit Zyn je alat za praćenje vlastitog napretka, a ne liječnički savjet.
 
 Uvjeti korištenja (Appleov standardni EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Pravila privatnosti: https://jackwallner.github.io/quitzyn/privacy-policy.html
