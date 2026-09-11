@@ -14,12 +14,21 @@ struct TrialTimeline: View {
     private var secondary: Color { onBrand ? .white.opacity(0.8) : Theme.textSecondary }
     private var accent: Color { onBrand ? .white : Theme.brandPrimary }
 
-    private var reminderDay: Int { max(1, trialDays - 2) }
+    /// Mirrors `NotificationService.trialReminderLeadDays` rather than repeating
+    /// the number, so the day shown here can never drift from the day the
+    /// reminder actually fires. Static so a test can hold the two in step.
+    static func reminderDay(forTrialOf days: Int) -> Int {
+        max(1, days - NotificationService.trialReminderLeadDays)
+    }
+
+    private var reminderDay: Int { Self.reminderDay(forTrialOf: trialDays) }
 
     private var steps: [(icon: String, title: String, detail: String, highlight: Bool)] {
         [
             ("lock.open.fill", "Today", "Everything unlocks. Full access, $0 due now.", true),
-            ("bell.fill", "Day \(reminderDay)", "We'll remind you before the trial ends.", false),
+            // Permission is asked for when the trial starts (TrialLifecycle),
+            // so the condition is stated here rather than discovered later.
+            ("bell.fill", "Day \(reminderDay)", "We'll remind you before the trial ends, if notifications are on.", false),
             ("flag.checkered", "Day \(trialDays)",
              billingNote ?? "Cancel anytime before it ends. No surprise charges.", false),
         ]

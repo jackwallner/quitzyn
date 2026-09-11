@@ -14,7 +14,9 @@ struct SoberWatchApp: App {
 }
 
 struct WatchRootView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @State private var snapshot: WidgetSnapshot = WidgetSnapshotStore.load()
+    @State private var now = Date.now
 
     /// The stored streak is frozen at the last iPhone app launch. Derive the
     /// live count from the start date (1-based, matching
@@ -22,12 +24,17 @@ struct WatchRootView: View {
     /// calendar even when the phone app hasn't been opened.
     private var days: Int {
         guard let start = snapshot.sobrietyStartDate else { return snapshot.currentStreakDays }
-        return max(0, DateHelpers.daysBetween(start, .now)) + 1
+        return max(0, DateHelpers.daysBetween(start, now)) + 1
     }
 
+    /// The stage badge describes the tree, so it follows the garden's day count
+    /// (streak plus slip carryover) rather than the streak printed above it.
+    /// Same rule as Home and the widget.
+    private var treeDays: Int { snapshot.treeDays(streakDays: days) }
+
     private var stageTitle: String {
-        let title = GardenService.stage(forDays: days).title
-        let completed = GardenService.cycleProgress(forDays: days).completed
+        let title = GardenService.stage(forDays: treeDays).title
+        let completed = GardenService.cycleProgress(forDays: treeDays).completed
         return completed > 0 ? "Year \(completed + 1) · \(title)" : title
     }
 
@@ -60,13 +67,21 @@ struct WatchRootView: View {
             .padding(.top, 4)
         }
         .onAppear { snapshot = WidgetSnapshotStore.load() }
+        .onChange(of: scenePhase) { _, phase in
+            // The view can sit in memory across midnight; re-read the clock and
+            // the cached snapshot on activation so the count doesn't stick.
+            if phase == .active {
+                now = .now
+                snapshot = WidgetSnapshotStore.load()
+            }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .soberWatchSnapshotUpdated)) { _ in
             snapshot = WidgetSnapshotStore.load()
         }
     }
 
     private var stageIcon: String {
-        switch GardenService.stage(forDays: days).rawValue {
+        switch GardenService.stage(forDays: treeDays).rawValue {
         case 0: return "circle"
         case 1, 2: return "leaf.fill"
         case 3, 4: return "tree.fill"

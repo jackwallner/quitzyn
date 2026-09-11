@@ -331,7 +331,7 @@ struct OnboardingView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal, Theme.Space.m)
             Text(trialEligible
-                 ? "You just committed. Try every tool that keeps you nicotine-free, free for \(trialDays) days."
+                 ? trialPitchLine
                  : "Your garden is planted. Let's begin.")
                 .multilineTextAlignment(.center)
                 .font(Theme.body())
@@ -536,14 +536,22 @@ struct OnboardingView: View {
     }
 
     /// Trial length in days, parsed from the offer label ("7-day free trial").
-    private var trialDays: Int {
+    /// Nil until the store says how long the trial is. A literal fallback would
+    /// advertise an offer that no longer exists the moment App Store Connect
+    /// changes the trial length, so the copy degrades to a length-free line.
+    private var trialDays: Int? {
         #if canImport(RevenueCat)
-        if let label = subscriptions.directTrialPackage?.soberIntroOfferLabel {
-            let digits = String(label.drop { !$0.isNumber }.prefix { $0.isNumber })
-            if let n = Int(digits) { return n }
-        }
+        return subscriptions.trialOfferDayCount
+        #else
+        return nil
         #endif
-        return 7
+    }
+
+    private var trialPitchLine: String {
+        guard let trialDays else {
+            return "You just committed. Try every tool that keeps you nicotine-free, free."
+        }
+        return "You just committed. Try every tool that keeps you nicotine-free, free for \(trialDays) days."
     }
 
     /// Persist setup, then wait for a real RevenueCat eligibility decision. A

@@ -21,10 +21,19 @@ enum DataService {
             return container
         }
 
-        // Corrupt store — wipe and retry
-        let storeFiles = [url, url.appendingPathExtension("wal"), url.appendingPathExtension("shm")]
-        for file in storeFiles {
-            try? FileManager.default.removeItem(at: file)
+        // Unopenable store (corruption or a failed migration). Move it aside
+        // rather than deleting it, so a user's history is still on disk for a
+        // later build to recover instead of being destroyed by one bad launch.
+        let stamp = Int(Date.now.timeIntervalSince1970)
+        for suffix in ["", "-wal", "-shm"] {
+            let file = URL(fileURLWithPath: url.path + suffix)
+            guard FileManager.default.fileExists(atPath: file.path) else { continue }
+            let aside = URL(fileURLWithPath: url.path + ".unopenable-\(stamp)" + suffix)
+            do {
+                try FileManager.default.moveItem(at: file, to: aside)
+            } catch {
+                try? FileManager.default.removeItem(at: file)
+            }
         }
         if let container = makeContainer(schema: schema, url: url) {
             return container
