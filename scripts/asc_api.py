@@ -2,7 +2,7 @@
 """Minimal App Store Connect API client for pre-submission fixes.
 
 Usage: asc_api.py METHOD PATH [JSON_BODY]
-  asc_api.py GET /v1/apps?filter[bundleId]=com.jackwallner.sober
+  asc_api.py GET /v1/apps?filter[bundleId]=com.jackwallner.quitzyn
 Reads ASC_ISSUER_ID / ASC_API_KEY_ID / ASC_KEY_PATH from env or
 ~/.baseball_credentials.
 """
