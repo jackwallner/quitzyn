@@ -29,9 +29,12 @@ struct TrialOfferSheet: View {
     private var showsAnchor: Bool { yearlySpend >= 60 }
 
     /// Trial length in days, parsed from the offer label ("7-day free trial").
-    private var trialDays: Int {
-        guard let offerLabel, let n = offerLabel.firstMatchInt else { return 7 }
-        return n
+    /// Nil when the store's label carries no number: naming a length the offer
+    /// may not have is a 3.1.2 problem, so every line here drops the number
+    /// instead of guessing one.
+    private var trialDays: Int? {
+        guard let offerLabel else { return nil }
+        return offerLabel.firstMatchInt
     }
 
     private var hasTrial: Bool { offerLabel != nil }
@@ -39,6 +42,7 @@ struct TrialOfferSheet: View {
     /// Small billing disclosure (Apple 3.1.2) kept out of the hero.
     private var trialBillingNote: String? {
         guard hasTrial, let priceLabel else { return nil }
+        guard let trialDays else { return "When the trial ends, \(priceLabel) unless you cancel." }
         return "After \(trialDays) days, \(priceLabel) unless you cancel."
     }
 
@@ -49,7 +53,15 @@ struct TrialOfferSheet: View {
     }
 
     private var headline: String {
-        hasTrial ? "\(trialDays) days free" : (focus?.pitchHeadline ?? "Try Bloom+ free")
+        guard hasTrial else { return focus?.pitchHeadline ?? "Try Bloom+ free" }
+        guard let trialDays else { return "Bloom+, free to try" }
+        return "\(trialDays) days free"
+    }
+
+    private var ctaTitle: String {
+        guard hasTrial else { return "Continue" }
+        guard let trialDays else { return "Start My Free Trial" }
+        return "Start My \(trialDays)-Day Free Trial"
     }
 
     private var subheadline: String {
@@ -84,7 +96,7 @@ struct TrialOfferSheet: View {
                         .padding(.top, 2)
                 }
 
-                if hasTrial {
+                if hasTrial, let trialDays {
                     TrialTimeline(trialDays: trialDays, billingNote: trialBillingNote)
                         .padding(.horizontal, 4)
                 }
@@ -94,6 +106,8 @@ struct TrialOfferSheet: View {
                         yearlySpend: yearlySpend,
                         habitName: "pouches",
                         trialDays: hasTrial ? trialDays : nil,
+                        // `trialDays` is already nil when the store gave no
+                        // length, so the card falls back to the price line.
                         priceLabel: hasTrial ? nil : cleanPrice,
                         rightCaption: hasTrial ? "full Bloom+ access" : "a year of Bloom+"
                     )
@@ -161,7 +175,7 @@ struct TrialOfferSheet: View {
         VStack(spacing: 10) {
             Button(action: onStartTrial) {
                 ZStack {
-                    Text(hasTrial ? "Start My \(trialDays)-Day Free Trial" : "Continue")
+                    Text(ctaTitle)
                         .font(Theme.body(weight: .bold))
                         .foregroundStyle(.white)
                         .opacity(isPurchasing ? 0 : 1)

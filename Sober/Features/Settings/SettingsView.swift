@@ -170,7 +170,12 @@ struct SettingsView: View {
 
     private func refreshNotificationStatus() async {
         let status = await UNUserNotificationCenter.current().notificationSettings().authorizationStatus
+        let wasDenied = notificationsDenied
         notificationsDenied = (status == .denied)
+        // Scheduling is skipped while permission is missing, so granting it in
+        // the Settings app has to re-arm the reminder. Clearing the warning
+        // alone left the toggle on and nothing pending.
+        if wasDenied && !notificationsDenied { rescheduleReminder() }
     }
 
     private func openNotificationSettings() {

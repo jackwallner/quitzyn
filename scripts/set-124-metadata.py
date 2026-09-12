@@ -535,19 +535,21 @@ def build_english(current: str) -> str:
         "- Apple Watch companion to check in and see your streak.",
         "- Apple Watch companion that shows your streak.",
     )
+    # Idempotent: rerunning against copy this script already wrote has to be a
+    # no-op, or the only way to re-verify the result is to restore the backup.
     anchor = "ON YOUR HOME SCREEN & APPLE WATCH (FREE)"
-    assert anchor in out and "WHEN A CRAVING HITS" not in out
-    out = out.replace(anchor, EN_CRAVING_SECTION + anchor, 1)
+    assert anchor in out
+    if "WHEN A CRAVING HITS" not in out:
+        out = out.replace(anchor, EN_CRAVING_SECTION + anchor, 1)
     plus_anchor = "A small upgrade unlocks the full experience:\n"
+    patterns_line = "- Your craving patterns: when urges hit, what sets them off, and how long yours last\n"
     assert plus_anchor in out
-    out = out.replace(
-        plus_anchor,
-        plus_anchor + "- Your craving patterns: when urges hit, what sets them off, and how long yours last\n",
-        1,
-    )
+    if patterns_line not in out:
+        out = out.replace(plus_anchor, plus_anchor + patterns_line, 1)
     sub_anchor = "Subscription Details"
     assert sub_anchor in out
-    out = out.replace(sub_anchor, EN_DISCLAIMER + sub_anchor, 1)
+    if EN_DISCLAIMER.strip() not in out:
+        out = out.replace(sub_anchor, EN_DISCLAIMER + sub_anchor, 1)
     return out
 
 
