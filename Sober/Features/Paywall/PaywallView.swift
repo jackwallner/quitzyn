@@ -128,12 +128,28 @@ struct PaywallView: View {
 
     // MARK: - Native paywall
 
-    /// Everything fits on one page — no scrolling. Value (savings + benefits)
-    /// sits up top, the plan stack in the middle, and the purchase block anchored
-    /// at the bottom, with a single flexible Spacer absorbing device-size
-    /// differences so the CTA always lands in the same place.
+    /// One page at ordinary type sizes: value (savings + benefits) up top, the
+    /// plan stack in the middle, and the purchase block anchored at the bottom,
+    /// with a single flexible Spacer absorbing device-size differences so the
+    /// CTA always lands in the same place.
+    ///
+    /// The page is inside a scroll view that only scrolls once the blocks want
+    /// more room than the device has — a small phone at an accessibility text
+    /// size otherwise pushed the CTA, the price disclosure and the
+    /// Restore/Terms/Privacy footer off the bottom with no way to reach them,
+    /// which is a 3.1.2 problem as well as a dead end.
     #if canImport(RevenueCat)
     private var paywallContent: some View {
+        GeometryReader { geo in
+            ScrollView {
+                paywallStack
+                    .frame(minHeight: geo.size.height, alignment: .top)
+            }
+            .scrollBounceBehavior(.basedOnSize)
+        }
+    }
+
+    private var paywallStack: some View {
         VStack(spacing: 10) {
             savingsValueHeader
             benefitShowcase
@@ -148,7 +164,7 @@ struct PaywallView: View {
         .padding(.horizontal, 22)
         .padding(.top, displayCloseButton ? 40 : 12)
         .padding(.bottom, 8)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .frame(maxWidth: .infinity, alignment: .top)
     }
 
     private var loadingState: some View {

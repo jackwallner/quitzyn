@@ -62,18 +62,23 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   (verified 2026-09-08 on agent-sim-1), so the full flows can also be walked.
 
 ## Pro entitlement (`"pro"`)
-- Free: day counter, single check-in/day, calendar, basic garden, first 2 health benefits.
-- Pro: full health timeline + sources, journal compose, achievement unlocks, money/calories saved, additional garden species.
+- Free: day counter, single check-in/day, calendar, basic garden, first 5 health
+  benefits (`HealthView.freeRevealCount`), the first journal entry, craving mode,
+  slips, widgets, and the watch app.
+- Pro: full health timeline + sources, journal compose beyond the first entry,
+  achievement unlocks, money/pouches/nicotine saved, craving patterns, additional
+  garden species.
 
 ## App-specific notes
 - Enjoyment funnel triggers after **daily check-in** or **garden unlock celebration** (3.5s delay). (Shared funnel mechanics + playbook in the `ios-dev` skill.)
 - `Sober.storekit` tests the paywall in the simulator without RevenueCat dashboard config.
-- SwiftData migrations: any change to a `@Model`'s stored properties needs a schema migration (lightweight is fine for now; wipe-and-retry on corruption).
+- A started trial is tracked by `TrialLifecycle`, which asks for notification permission
+  and schedules the heads-up `TrialTimeline` promises, two days before conversion.
+- SwiftData migrations: any change to a `@Model`'s stored properties needs a schema
+  migration (lightweight is fine for now). A store that won't open is moved aside as
+  `Sober.v2.store.unopenable-<stamp>` rather than deleted, so history is recoverable.
 - Widget snapshots are decoupled from SwiftData via `WidgetSnapshotStore` so the widget doesn't need a SwiftData schema.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, RevenueCat dev tips, review funnel, gotchas):
 always-loaded global CLAUDE.md + the `ios-dev` skill.
-
-## Subagent delegation
-Follow the global CLAUDE.md subagent rules: ask Jack for the model before spawning, spawn at most one at a time unless Jack explicitly approves more, and never allow a subagent to spawn another subagent.

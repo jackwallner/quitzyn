@@ -1,4 +1,4 @@
-# Astro ASO setup — Sober (US)
+# Astro ASO setup — Quit Zyn (US)
 
 > **Repeat:** [Astro setup process](~/ios/aso/astro-setup-process.md) + **"go"**  
 > **Re-score keywords:** `./scripts/astro-fetch-metrics.sh && python3 scripts/astro-curate-keywords.py`
@@ -7,13 +7,17 @@ Last optimized: **2026-06-23** — app is **LIVE**. Migrated Astro tracking from
 
 ## App
 
+> The keyword tables below the App block were inherited from the Sober fork and
+> still name alcohol terms. `scripts/.astro-app.json` and the sync scripts are the
+> live source of truth for this app's keywords.
+
 | Field | Value |
 |-------|-------|
-| App Store name | Sober Tracker - Alcohol Free |
-| **Astro tracked app (live)** | **`6768869215`** — listed as "Sober Tracker - Alcohol Free" |
+| App Store name | Sober Tracker - Nicotine Free (listed as Quit Zyn: Pouch & Snus Tracker) |
+| **Astro tracked app (live)** | **`6784788496`** — Quit Zyn |
 | Astro pre-launch app (retired) | Temp **Sober** — ID `103` (kept for historical scores only) |
-| App Store Connect ID | `6768869215` |
-| Bundle ID | `com.jackwallner.sober` |
+| App Store Connect ID | `6784788496` |
+| Bundle ID | `com.jackwallner.quitzyn` |
 | Store | `us` |
 
 > **Live-app note:** `scripts/.astro-app.json` `appId` now points at `6768869215`; all sync/fetch scripts target the live app. The old `103` is preserved as `preLaunchAppId`. First post-launch US ranks (2026-06-23): apple watch sober **#35**, dry days **#75**, alcohol diary **#119**, sober tracker **#149**, sober days **#200**, sober streak **#206**, alcohol free **#219**, sober app **#226**; remaining terms still indexing.

@@ -29,11 +29,10 @@ enum DataService {
             let file = URL(fileURLWithPath: url.path + suffix)
             guard FileManager.default.fileExists(atPath: file.path) else { continue }
             let aside = URL(fileURLWithPath: url.path + ".unopenable-\(stamp)" + suffix)
-            do {
-                try FileManager.default.moveItem(at: file, to: aside)
-            } catch {
-                try? FileManager.default.removeItem(at: file)
-            }
+            // No delete fallback: if the move fails, the file stays where it is
+            // and the launch falls through to the in-memory container below.
+            // A session with no history beats destroying the only copy of it.
+            try? FileManager.default.moveItem(at: file, to: aside)
         }
         if let container = makeContainer(schema: schema, url: url) {
             return container

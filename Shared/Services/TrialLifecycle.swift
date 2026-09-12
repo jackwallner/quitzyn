@@ -42,6 +42,11 @@ enum TrialLifecycle {
     static var notificationScheduler: any TrialNotificationScheduling = LiveTrialNotificationScheduler()
 
     private static let endsAtKey = "trialLifecycle.endsAt"
+    /// Whether the reminder for the tracked trial actually made it into the
+    /// notification centre. Permission can be declined at trial start and
+    /// granted later, and without this the "same trial" short-circuit below
+    /// meant the reminder was never scheduled for that trial at all.
+    private static let reminderScheduledKey = "trialLifecycle.reminderScheduled"
     private static let recapSummaryKey = "trialLifecycle.recapSummary"
     private static let recapDismissedForKey = "trialLifecycle.recapDismissedForEnd"
 
@@ -86,23 +91,32 @@ enum TrialLifecycle {
             clear()
             return
         }
-        // Same trial we already know about, so leave the pending reminder alone.
-        if let current = endsAt, abs(current.timeIntervalSince(newEnd)) < 60 { return }
+        // Same trial we already know about: leave a scheduled reminder alone,
+        // but retry one that never landed (permission declined at the time and
+        // granted since).
+        let sameTrial = endsAt.map { abs($0.timeIntervalSince(newEnd)) < 60 } ?? false
+        if sameTrial, defaults.bool(forKey: reminderScheduledKey) { return }
 
         defaults.set(newEnd.timeIntervalSince1970, forKey: endsAtKey)
-        defaults.removeObject(forKey: recapDismissedForKey)
+        if !sameTrial { defaults.removeObject(forKey: recapDismissedForKey) }
         let summary = recapSummary
         let scheduler = notificationScheduler
         Task {
             // The paywall's trial timeline promises "we'll remind you before
             // your trial ends". This is the moment that promise is made good:
-            // the user has just started a trial, so asking now is expected.
-            guard await scheduler.ensureAuthorized() else { return }
+            // the user has just started a trial, so asking now is expected. A
+            // retry for a trial already under way must not re-prompt, so it
+            // only proceeds when permission is already granted.
+            let authorized = sameTrial
+                ? await NotificationService.isAuthorized()
+                : await scheduler.ensureAuthorized()
+            guard authorized else { return }
             await scheduler.scheduleTrialEndingReminder(
                 endsAt: newEnd,
                 summary: summary,
                 now: now
             )
+            defaults.set(true, forKey: reminderScheduledKey)
         }
     }
 
@@ -112,6 +126,7 @@ enum TrialLifecycle {
         guard defaults.double(forKey: endsAtKey) > 0 else { return }
         defaults.removeObject(forKey: endsAtKey)
         defaults.removeObject(forKey: recapDismissedForKey)
+        defaults.removeObject(forKey: reminderScheduledKey)
         notificationScheduler.cancelTrialEndingReminder()
     }
 
