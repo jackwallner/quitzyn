@@ -39,7 +39,7 @@ enum BloomFeature: CaseIterable {
 
     var detail: String {
         switch self {
-        case .patterns: "When they hit, what sets them off, how long yours last."
+        case .patterns: "When they hit and what sets them off."
         case .gardenSpecies: "Switch your tree as your streak grows."
         case .healthTimeline: "13 nicotine-recovery milestones with sources."
         case .journal: "Prompts and reflections on hard days."
