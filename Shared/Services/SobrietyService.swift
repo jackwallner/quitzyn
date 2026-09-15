@@ -74,6 +74,41 @@ final class SobrietyService {
         return new
     }
 
+    /// Whether `day` falls inside the run the counter is currently on.
+    func activeJourneyCovers(_ day: Date) -> Bool {
+        guard let active = activeJourney() else { return false }
+        return DateHelpers.startOfDay(day) >= DateHelpers.startOfDay(active.startDate)
+    }
+
+    /// Split the closed run that contains `day` at that day, for a slip entered
+    /// after a newer one. The run stops on the slip day and a closed run covers
+    /// the days after it, up to where the original stopped, so the longest
+    /// streak no longer measures straight through the older slip. The active
+    /// run is not touched: the counter already sits after the newer slip.
+    @discardableResult
+    func splitClosedJourney(on day: Date) -> Bool {
+        let target = DateHelpers.startOfDay(day)
+        let descriptor = FetchDescriptor<SobrietyJourney>()
+        let journeys = (try? context.fetch(descriptor)) ?? []
+        let containing = journeys.first { j in
+            guard let end = j.endDate else { return false }
+            return target >= DateHelpers.startOfDay(j.startDate)
+                && target < DateHelpers.startOfDay(end)
+        }
+        guard let containing, let originalEnd = containing.endDate,
+              let dayAfter = Calendar.current.date(byAdding: .day, value: 1, to: target)
+        else { return false }
+
+        let tail = SobrietyJourney(startDate: dayAfter)
+        tail.endDate = originalEnd
+        tail.resetReason = containing.resetReason
+        context.insert(tail)
+        containing.endDate = max(containing.startDate, target)
+        containing.resetReason = "slip"
+        try? context.save()
+        return true
+    }
+
     /// Reverse the split a slip on `day` made: delete the run the slip started
     /// and reopen the one it closed. Returns the restored current day count, or
     /// nil when no such split is on record.

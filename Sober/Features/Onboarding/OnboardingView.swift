@@ -362,6 +362,9 @@ struct OnboardingView: View {
                 bottomBar(primaryTitle: "Start growing") { finishOnboarding() }
             }
         }
+        .onChange(of: subscriptions.isProSubscriber) { _, isPro in
+            if isPro { finishOnboarding() }
+        }
         .onAppear {
             ConversionDiagnostics.record(.trialOfferReached)
             #if canImport(RevenueCat)
@@ -607,7 +610,11 @@ struct OnboardingView: View {
                     finishOnboarding()
                 case .pending:
                     ConversionDiagnostics.record(.purchasePending)
-                    finishOnboarding()
+                    // Not finished: leaving onboarding here made an Ask to Buy or
+                    // a slow entitlement look like a trial that never started.
+                    // The isProSubscriber change finishes it once approved, and
+                    // the free option stays available meanwhile.
+                    trialError = SubscriptionService.pendingApprovalMessage
                 case .cancelled:
                     ConversionDiagnostics.record(.purchaseCancelled)
                     trialError = "Trial start cancelled. Tap again to begin."
@@ -630,8 +637,14 @@ struct OnboardingView: View {
         restoreInFlight = true
         Task { @MainActor in
             defer { restoreInFlight = false }
+            trialError = nil
             await subscriptions.restorePurchases()
-            if subscriptions.isProSubscriber { finishOnboarding() }
+            if subscriptions.isProSubscriber {
+                finishOnboarding()
+            } else {
+                trialError = subscriptions.lastError
+                    ?? "No active Bloom+ purchase was found for this Apple ID."
+            }
         }
         #endif
     }
@@ -657,8 +670,11 @@ struct OnboardingView: View {
     /// lighter post-onboarding popup. That popup auto-skips when the user already
     /// started the trial here (they're Pro), so they never see it twice.
     private func finishOnboarding() {
-        ConversionDiagnostics.record(.onboardingCompleted)
         let settings = SettingsService(context: context).current()
+        // A purchase approved later arrives through isProSubscriber, which can
+        // race the purchase call's own finish.
+        guard !settings.hasCompletedOnboarding else { return }
+        ConversionDiagnostics.record(.onboardingCompleted)
         settings.hasCompletedOnboarding = true
         try? context.save()
 

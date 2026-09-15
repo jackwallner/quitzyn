@@ -290,12 +290,28 @@ final class SubscriptionService: NSObject {
         defer { purchaseInFlight = false }
 
         let startedTrial = isEligibleForIntroOffer(package)
-        let result = try await Purchases.shared.purchase(package: package)
+        let result: PurchaseResultData
+        do {
+            result = try await Purchases.shared.purchase(package: package)
+        } catch let error as RevenueCat.ErrorCode where error == .paymentPendingError {
+            // Ask to Buy, SCA, or parental approval. Not a failure: StoreKit
+            // finishes it later and the delegate flips the entitlement.
+            return .pending
+        }
         apply(customerInfo: result.customerInfo)
         if result.userCancelled {
             return .cancelled
         }
-        if result.customerInfo.hasSoberProEntitlement {
+        var info = result.customerInfo
+        if !info.hasSoberProEntitlement,
+           let fresh = try? await Purchases.shared.customerInfo(fetchPolicy: .fetchCurrent) {
+            // A completed transaction whose entitlement hasn't reached the
+            // cached info yet. One fresh fetch separates that from a real
+            // deferral instead of reporting every lag as pending.
+            apply(customerInfo: fresh)
+            info = fresh
+        }
+        if info.hasSoberProEntitlement {
             ConversionDiagnostics.recordConversion(
                 plan: package.storeProduct.productIdentifier,
                 startedTrial: startedTrial,
@@ -306,6 +322,10 @@ final class SubscriptionService: NSObject {
         }
         return .pending
     }
+
+    /// Shown wherever a purchase comes back deferred, so every surface says the same thing.
+    static let pendingApprovalMessage =
+        "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile."
 
     func restorePurchases() async {
         guard isConfigured else { return }
@@ -338,6 +358,7 @@ final class SubscriptionService: NSObject {
             ?? customerInfo.entitlements.active.values.first
         TrialLifecycle.sync(
             isTrialing: entitlement?.isActive == true && entitlement?.periodType == .trial,
+            willRenew: entitlement?.willRenew ?? true,
             endsAt: entitlement?.expirationDate
         )
     }

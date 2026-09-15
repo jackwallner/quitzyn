@@ -60,8 +60,22 @@ enum SlipRecorder {
         }
 
         let previousStreak = streakDays(endingOn: day, context: context)
+        let laterSlipOnRecord = checkIns.lastSlipDate().map {
+            DateHelpers.startOfDay($0) > DateHelpers.startOfDay(day)
+        } ?? false
 
         checkIns.checkIn(for: day, wasSober: false, mood: mood, note: note)
+
+        // A slip entered after a newer one is a correction to history, not a new
+        // event for the counter or the tree. It splits the older run so the best
+        // streak stops at it, and leaves the garden alone: re-running the 50% rule
+        // here overwrote the undo baseline and replayed stage celebrations, and a
+        // later undo of the newer slip then drew the tree bigger than any run.
+        if laterSlipOnRecord && !sobriety.activeJourneyCovers(day) {
+            sobriety.splitClosedJourney(on: day)
+            WidgetSnapshotPump.push(context: context)
+            return Outcome(previousStreakDays: previousStreak, carryoverDays: garden.current().carryoverDays)
+        }
 
         // The fresh run begins the day after the *latest* slip on record, not
         // necessarily the day after this one. Entering an older slip after a

@@ -70,6 +70,61 @@ struct SlipJourneyBoundaryTests {
         #expect(sobriety.currentDayCount() == 10)
     }
 
+    /// The caudit914 P1-B repro: back-filling an older slip rewrote the garden,
+    /// and undoing the newer slip then drew the tree bigger than any run.
+    @Test func anOutOfOrderSlipLeavesTheGardenAndSplitsTheOldRun() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(110))
+        SlipRecorder.record(on: DateHelpers.daysAgo(10), context: context)
+        #expect(garden.current().carryoverDays == 50)
+        #expect(sobriety.longestStreakDays() == 101)
+        let vitality = garden.current().vitality
+        let watermark = garden.current().lastUnlockNotifiedAtDays
+
+        SlipRecorder.record(on: DateHelpers.daysAgo(70), context: context)
+        #expect(sobriety.currentDayCount() == 10)
+        #expect(garden.current().carryoverDays == 50)
+        #expect(garden.current().vitality == vitality)
+        #expect(garden.current().lastUnlockNotifiedAtDays == watermark)
+        // 110 days ago through 70 days ago is 41 days, then 69 through 10 is 60.
+        #expect(sobriety.longestStreakDays() == 60)
+
+        #expect(SlipRecorder.undo(on: DateHelpers.daysAgo(10), context: context))
+        // The run reopens only back to the older slip, and the tree gets back
+        // what it had before the newer slip: nothing.
+        #expect(sobriety.currentDayCount() == 70)
+        #expect(garden.current().carryoverDays == 0)
+        #expect(garden.treeDays(streakDays: sobriety.currentDayCount()) == 70)
+        for (earlier, later) in zip(journeys(), journeys().dropFirst()) {
+            #expect((earlier.endDate ?? .now) < later.startDate)
+        }
+    }
+
+    /// The caudit914 P1-C repro: a slip today, then one back-dated to
+    /// yesterday, grew the tree and left a zero-length run.
+    @Test func aSlipYesterdayAfterOneTodayDoesNotGrowTheTree() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        SlipRecorder.record(on: .now, context: context)
+        #expect(garden.current().carryoverDays == 20)
+
+        SlipRecorder.record(on: DateHelpers.daysAgo(1), context: context)
+        #expect(garden.current().carryoverDays == 20)
+        #expect(sobriety.currentDayCount() == 1)
+        #expect(journeys().allSatisfy { j in
+            guard let end = j.endDate else { return true }
+            return end > j.startDate
+        })
+
+        // Undo today's slip: the counter comes back to the day since yesterday's.
+        #expect(SlipRecorder.canUndo(on: .now, context: context))
+        #expect(SlipRecorder.undo(on: .now, context: context))
+        #expect(sobriety.currentDayCount() == 1)
+        #expect(garden.current().carryoverDays == 0)
+    }
+
     /// Every recorded run still describes a distinct stretch of days.
     @Test func repeatedSlipsLeaveNoOverlap() {
         SobrietyService(context: context).startJourney(at: DateHelpers.daysAgo(40))

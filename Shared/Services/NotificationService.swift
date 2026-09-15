@@ -103,16 +103,17 @@ enum NotificationService {
     /// Heads-up before a free trial converts. This is the reminder the trial
     /// timeline promises on its middle step, so it has to exist: states the
     /// date plainly, because a surprise bill is how you earn a one-star review.
+    @discardableResult
     static func scheduleTrialEndingReminder(
         endsAt: Date,
         summary: String?,
         now: Date = .now
-    ) async {
-        guard await isAuthorized() else { return }
+    ) async -> Bool {
+        guard await isAuthorized() else { return false }
         let center = UNUserNotificationCenter.current()
         cancelTrialEndingReminder()
 
-        guard let fireDate = trialReminderFireDate(endsAt: endsAt, now: now) else { return }
+        guard let fireDate = trialReminderFireDate(endsAt: endsAt, now: now) else { return false }
 
         let content = UNMutableNotificationContent()
         content.title = "Your Bloom+ trial ends soon"
@@ -129,7 +130,12 @@ enum NotificationService {
             repeats: false
         )
         let request = UNNotificationRequest(identifier: trialEndingID, content: content, trigger: trigger)
-        try? await center.add(request)
+        do {
+            try await center.add(request)
+            return true
+        } catch {
+            return false
+        }
     }
 
     /// Two days before conversion, or the midpoint for trials too short for that.

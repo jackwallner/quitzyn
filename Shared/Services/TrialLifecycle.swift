@@ -3,7 +3,8 @@ import Foundation
 @MainActor
 protocol TrialNotificationScheduling {
     func ensureAuthorized() async -> Bool
-    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async
+    /// True only when the reminder is actually pending in the notification centre.
+    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async -> Bool
     func cancelTrialEndingReminder()
 }
 
@@ -13,7 +14,7 @@ private struct LiveTrialNotificationScheduler: TrialNotificationScheduling {
         await NotificationService.ensureAuthorized()
     }
 
-    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async {
+    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async -> Bool {
         await NotificationService.scheduleTrialEndingReminder(
             endsAt: endsAt,
             summary: summary,
@@ -86,8 +87,12 @@ enum TrialLifecycle {
     /// Idempotent: called on every entitlement refresh, only does work when the
     /// trial's end date actually changes, so foregrounding doesn't respam the
     /// notification center.
-    static func sync(isTrialing: Bool, endsAt newEnd: Date?, now: Date = .now) {
-        guard isTrialing, let newEnd, newEnd > now else {
+    ///
+    /// `willRenew` false means the user already turned off auto-renew, so a
+    /// reminder to "cancel any time before it renews" would be about a charge
+    /// that is never coming.
+    static func sync(isTrialing: Bool, willRenew: Bool = true, endsAt newEnd: Date?, now: Date = .now) {
+        guard isTrialing, willRenew, let newEnd, newEnd > now else {
             clear()
             return
         }
@@ -111,12 +116,13 @@ enum TrialLifecycle {
                 ? await NotificationService.isAuthorized()
                 : await scheduler.ensureAuthorized()
             guard authorized else { return }
-            await scheduler.scheduleTrialEndingReminder(
+            // Only a reminder that actually landed stops later syncs retrying.
+            let scheduled = await scheduler.scheduleTrialEndingReminder(
                 endsAt: newEnd,
                 summary: summary,
                 now: now
             )
-            defaults.set(true, forKey: reminderScheduledKey)
+            defaults.set(scheduled, forKey: reminderScheduledKey)
         }
     }
 
