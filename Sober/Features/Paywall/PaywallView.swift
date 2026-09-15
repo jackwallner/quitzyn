@@ -530,7 +530,7 @@ struct PaywallView: View {
                     // confirmation so it doesn't look like nothing happened; the
                     // PurchasesDelegate flips isProSubscriber and dismisses once
                     // it's approved.
-                    restoreMessage = "Your purchase is awaiting approval. Bloom+ unlocks as soon as it's confirmed."
+                    restoreMessage = SubscriptionService.pendingApprovalMessage
                 case .cancelled:
                     ConversionDiagnostics.record(.purchaseCancelled)
                     errorMessage = "Purchase cancelled. Tap again to continue."

@@ -222,6 +222,9 @@ struct MainTabView: View {
         .onReceive(NotificationCenter.default.publisher(for: .soberOpenBloomPlus)) { _ in
             tab = 4
         }
+        .onChange(of: subscriptions.isProSubscriber) { _, isPro in
+            if isPro { showTrialOffer = false }
+        }
         .onChange(of: tab) { _, newTab in
             if newTab == 4, !subscriptions.isProSubscriber {
                 subscriptions.trackPaywallImpression(id: "quitzyn_bloom_tab", oncePerSession: true)
@@ -331,7 +334,9 @@ struct MainTabView: View {
                     showTrialOffer = false
                 case .pending:
                     ConversionDiagnostics.record(.purchasePending)
-                    showTrialOffer = false
+                    // Keep the sheet up so the tap has a visible answer. The
+                    // isProSubscriber change below closes it once approved.
+                    trialPurchaseError = SubscriptionService.pendingApprovalMessage
                 case .cancelled:
                     ConversionDiagnostics.record(.purchaseCancelled)
                     trialPurchaseError = "Trial start cancelled. Tap again to continue."

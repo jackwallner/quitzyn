@@ -350,6 +350,11 @@ struct CravingModeView: View {
         guard !hasFinished else { return }
         hasFinished = true
         let service = CravingService(context: context)
+        guard CravingService.isWorthLogging(outcome: outcome, secondsElapsed: elapsed) else {
+            onFinish(outcome)
+            dismiss()
+            return
+        }
         service.record(
             startedAt: startedAt,
             secondsElapsed: elapsed,

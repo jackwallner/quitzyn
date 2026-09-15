@@ -12,6 +12,15 @@ final class CravingService {
         self.context = context
     }
 
+    /// An unresolved session shorter than this was an accidental open, not an
+    /// urge. Counting it put a craving on the Patterns hour chart for every
+    /// stray tap on the button.
+    nonisolated static let minimumUnresolvedSeconds = 8
+
+    nonisolated static func isWorthLogging(outcome: CravingOutcome, secondsElapsed: Int) -> Bool {
+        outcome != .unresolved || secondsElapsed >= minimumUnresolvedSeconds
+    }
+
     /// Persist a finished session. The episode is written once, at the end,
     /// rather than opened at the start and updated: a session the user
     /// abandons by force-quitting mid-urge should not leave a dangling row
@@ -46,8 +55,11 @@ final class CravingService {
     }
 
     /// Detached from SwiftData so `CravingInsights` can stay pure.
+    /// Rows from before the accidental-open filter are dropped here too.
     func facts() -> [CravingFacts] {
-        all().map {
+        all().filter {
+            Self.isWorthLogging(outcome: $0.outcome, secondsElapsed: $0.secondsElapsed)
+        }.map {
             CravingFacts(
                 startedAt: $0.startedAt,
                 secondsElapsed: $0.secondsElapsed,

@@ -152,6 +152,22 @@ struct SlipSheet: View {
                     .background(Theme.brandPrimary, in: Capsule())
             }
             .buttonStyle(.plain)
+            // The What's New promises a mistaken slip can be taken back, and the
+            // moment someone realises they mis-tapped is right here.
+            if SlipRecorder.canUndo(on: day, context: context) {
+                Button {
+                    SlipRecorder.undo(on: day, context: context)
+                    onRecorded()
+                    dismiss()
+                } label: {
+                    Text("Undo, I didn't slip")
+                        .font(Theme.body(weight: .medium))
+                        .foregroundStyle(Theme.textSecondary)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                }
+                .buttonStyle(.plain)
+            }
         }
         .padding(Theme.Space.xl)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -48,6 +48,13 @@ struct HomeView: View {
     private var treeDays: Int {
         GardenService.treeDays(streakDays: days, carryover: gardenState?.carryoverDays ?? 0)
     }
+    /// The slip keeps half the tree, and nothing on a day-one slip, so the card
+    /// names the real number rather than promising all of it.
+    private var slipCardDetail: String {
+        let kept = gardenState?.carryoverDays ?? 0
+        guard kept > 0 else { return "Day one starts now." }
+        return "Your tree kept \(kept) day\(kept == 1 ? "" : "s") of growth. Day one starts now."
+    }
     private var dayInCycle: Int { GardenService.cycleProgress(forDays: treeDays).dayInCycle }
     private var stage: BonsaiStage { GardenService.stage(forDays: treeDays) }
 
@@ -323,11 +330,19 @@ struct HomeView: View {
                     Text("Today is logged as a slip")
                         .font(Theme.subhead(weight: .semibold))
                         .foregroundStyle(Theme.textPrimary)
-                    Text("Your tree kept its growth. Day one starts now.")
+                    Text(slipCardDetail)
                         .font(Theme.caption())
                         .foregroundStyle(Theme.textSecondary)
                 }
                 Spacer(minLength: 0)
+                if SlipRecorder.canUndo(on: .now, context: context) {
+                    Button("Undo") {
+                        SlipRecorder.undo(on: .now, context: context)
+                        refreshCheckInState()
+                    }
+                    .font(Theme.subhead(weight: .medium))
+                    .buttonStyle(.bordered)
+                }
             }
             .padding(14)
             .background(Theme.cardSurface, in: RoundedRectangle(cornerRadius: 18))

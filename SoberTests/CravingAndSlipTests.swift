@@ -143,6 +143,17 @@ struct CravingServiceTests {
         episode.outcome = .rodeItOut
         #expect(episode.outcomeRaw == CravingOutcome.rodeItOut.rawValue)
     }
+
+    /// A stray tap on the craving button, closed straight away, is not an urge
+    /// and must not reach the Patterns timing charts.
+    @Test func anAccidentalOpenIsNotAPattern() throws {
+        let svc = service()
+        svc.record(startedAt: .now, secondsElapsed: 1, outcome: .unresolved, intensity: nil)
+        svc.record(startedAt: .now, secondsElapsed: 2, outcome: .gaveIn, intensity: nil)
+        #expect(CravingService.isWorthLogging(outcome: .unresolved, secondsElapsed: 1) == false)
+        #expect(CravingService.isWorthLogging(outcome: .gaveIn, secondsElapsed: 2))
+        #expect(svc.facts().map(\.outcome) == [.gaveIn])
+    }
 }
 
 @Suite("Craving coach copy")

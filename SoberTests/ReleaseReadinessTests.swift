@@ -18,8 +18,11 @@ private final class RecordingTrialNotificationScheduler: TrialNotificationSchedu
         return true
     }
 
-    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async {
+    var scheduleSucceeds = true
+
+    func scheduleTrialEndingReminder(endsAt: Date, summary: String?, now: Date) async -> Bool {
         scheduledEnd = endsAt
+        return scheduleSucceeds
     }
 
     func cancelTrialEndingReminder() {
@@ -52,6 +55,29 @@ struct TrialEndingReminderTests {
         #expect(TrialLifecycle.endsAt == endsAt)
 
         TrialLifecycle.sync(isTrialing: false, endsAt: nil, now: now)
+        #expect(scheduler.cancellations == 1)
+        #expect(TrialLifecycle.endsAt == nil)
+    }
+
+    /// Someone who already turned off auto-renew must not be told to cancel
+    /// before a renewal that is never coming.
+    @Test func aCancelledTrialGetsNoReminder() async {
+        let scheduler = RecordingTrialNotificationScheduler()
+        let previous = TrialLifecycle.notificationScheduler
+        TrialLifecycle.notificationScheduler = scheduler
+        defer {
+            TrialLifecycle.clear()
+            TrialLifecycle.notificationScheduler = previous
+        }
+        TrialLifecycle.clear()
+
+        let now = Date(timeIntervalSince1970: 1_700_000_000)
+        let endsAt = now.addingTimeInterval(7 * 86_400)
+        TrialLifecycle.sync(isTrialing: true, endsAt: endsAt, now: now)
+        for _ in 0..<5 { await Task.yield() }
+        #expect(scheduler.scheduledEnd == endsAt)
+
+        TrialLifecycle.sync(isTrialing: true, willRenew: false, endsAt: endsAt, now: now)
         #expect(scheduler.cancellations == 1)
         #expect(TrialLifecycle.endsAt == nil)
     }
