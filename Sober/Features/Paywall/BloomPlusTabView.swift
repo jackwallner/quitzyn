@@ -80,7 +80,7 @@ private struct BloomPlusHubView: View {
                 .padding(Theme.Space.l)
             }
             .themedScrollBackground()
-            .navigationTitle("Bloom+")
+            .navigationTitle(QuitZynScreenshotMode.isEnabled ? "Support" : "Bloom+")
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(
