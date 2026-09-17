@@ -18,33 +18,35 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Bloom+") {
-                    HStack {
-                        Image(systemName: subscriptions.isProSubscriber ? "crown.fill" : "crown")
-                        Text(subscriptions.isProSubscriber ? "Bloom+ active" : "Bloom+")
-                        Spacer()
-                        if !subscriptions.isProSubscriber {
-                            Button("Upgrade") { TrialOfferCoordinator.shared.request(.settings, policy: .explicitUpgrade) }
-                                .buttonStyle(.borderedProminent)
-                        }
-                    }
-                    Button(isRestoring ? "Restoring…" : "Restore Purchases") {
-                        restoreMessage = nil
-                        isRestoring = true
-                        Task {
-                            defer { isRestoring = false }
-                            await subscriptions.restorePurchases()
+                if !QuitZynScreenshotMode.isEnabled {
+                    Section("Bloom+") {
+                        HStack {
+                            Image(systemName: subscriptions.isProSubscriber ? "crown.fill" : "crown")
+                            Text(subscriptions.isProSubscriber ? "Bloom+ active" : "Bloom+")
+                            Spacer()
                             if !subscriptions.isProSubscriber {
-                                restoreMessage = subscriptions.lastError
-                                    ?? "No active Bloom+ purchase found for this Apple ID."
+                                Button("Upgrade") { TrialOfferCoordinator.shared.request(.settings, policy: .explicitUpgrade) }
+                                    .buttonStyle(.borderedProminent)
                             }
                         }
-                    }
-                    .disabled(isRestoring)
-                    if let restoreMessage {
-                        Text(restoreMessage)
-                            .font(Theme.caption())
-                            .foregroundStyle(Theme.textSecondary)
+                        Button(isRestoring ? "Restoring…" : "Restore Purchases") {
+                            restoreMessage = nil
+                            isRestoring = true
+                            Task {
+                                defer { isRestoring = false }
+                                await subscriptions.restorePurchases()
+                                if !subscriptions.isProSubscriber {
+                                    restoreMessage = subscriptions.lastError
+                                        ?? "No active Bloom+ purchase found for this Apple ID."
+                                }
+                            }
+                        }
+                        .disabled(isRestoring)
+                        if let restoreMessage {
+                            Text(restoreMessage)
+                                .font(Theme.caption())
+                                .foregroundStyle(Theme.textSecondary)
+                        }
                     }
                 }
                 if let journey = activeJourney {
@@ -145,9 +147,11 @@ struct SettingsView: View {
                     Link("Terms of Use (EULA)", destination: PaywallLinks.standardEULA)
                 }
                 #if DEBUG
-                Section("Developer") {
-                    Button(subscriptions.isProSubscriber ? "Disable Bloom+ override" : "Enable Bloom+ override") {
-                        subscriptions.setLocalOverride(isPro: !subscriptions.isProSubscriber)
+                if !QuitZynScreenshotMode.isEnabled {
+                    Section("Developer") {
+                        Button(subscriptions.isProSubscriber ? "Disable Bloom+ override" : "Enable Bloom+ override") {
+                            subscriptions.setLocalOverride(isPro: !subscriptions.isProSubscriber)
+                        }
                     }
                 }
                 #endif

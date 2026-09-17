@@ -2,6 +2,16 @@ import SwiftData
 import SwiftUI
 import UserNotifications
 
+enum QuitZynScreenshotMode {
+    static var isEnabled: Bool {
+        #if DEBUG
+        return ProcessInfo.processInfo.arguments.contains("-QuitZynScreenshot")
+        #else
+        return false
+        #endif
+    }
+}
+
 extension Notification.Name {
     /// Posted when the user taps the daily-reminder notification — MainTabView
     /// switches to Home so the check-in button is right there.
@@ -150,25 +160,49 @@ struct RootView: View {
         if args.contains("-demoPro") {
             SubscriptionService.shared.setLocalOverride(isPro: true)
         }
-        guard args.contains("-seedDemo"),
-              !(settingsRows.first?.hasCompletedOnboarding ?? false) else { return }
+        guard args.contains("-seedDemo") else { return }
 
         let settings = SettingsService(context: context).current()
-        settings.costPerDayCents = 320
-        settings.pouchesPerDay = 8
-        settings.madeCommitment = true
-        settings.hasCompletedOnboarding = true
+        if !settings.hasCompletedOnboarding {
+            settings.costPerDayCents = 320
+            settings.pouchesPerDay = 8
+            settings.madeCommitment = true
+            settings.hasCompletedOnboarding = true
 
-        // Optional "-seedDays N" controls the journey length (default ~3.5 weeks);
-        // screenshots use a longer run for a mature tree and bigger numbers.
-        var seedDays = 24
-        if let i = args.firstIndex(of: "-seedDays"), i + 1 < args.count, let n = Int(args[i + 1]) {
-            seedDays = max(1, n)
+            // Optional "-seedDays N" controls the journey length (default ~3.5 weeks);
+            // screenshots use a longer run for a mature tree and bigger numbers.
+            var seedDays = 24
+            if let i = args.firstIndex(of: "-seedDays"), i + 1 < args.count, let n = Int(args[i + 1]) {
+                seedDays = max(1, n)
+            }
+            let start = Calendar.current.date(byAdding: .day, value: -seedDays, to: .now) ?? .now
+            _ = SobrietyService(context: context).startJourney(at: start)
+            _ = GardenService(context: context).current()
+            CheckInService(context: context).fillJourney(start: start, through: .now)
         }
-        let start = Calendar.current.date(byAdding: .day, value: -seedDays, to: .now) ?? .now
-        _ = SobrietyService(context: context).startJourney(at: start)
-        _ = GardenService(context: context).current()
-        CheckInService(context: context).fillJourney(start: start, through: .now)
+
+        if args.contains("-QuitZynScreenshot"), (try? context.fetch(FetchDescriptor<CravingEpisode>()))?.isEmpty ?? true {
+            let calendar = Calendar.current
+            let service = CravingService(context: context)
+            let samples: [(daysAgo: Int, hour: Int, seconds: Int, trigger: String)] = [
+                (14, 11, 70, "Stress"),
+                (10, 16, 95, "Stress"),
+                (6, 12, 60, "Boredom"),
+                (3, 16, 80, "Stress")
+            ]
+            for sample in samples {
+                let day = calendar.date(byAdding: .day, value: -sample.daysAgo, to: .now) ?? .now
+                let startedAt = calendar.date(bySettingHour: sample.hour, minute: 0, second: 0, of: day) ?? day
+                service.record(
+                    startedAt: startedAt,
+                    secondsElapsed: sample.seconds,
+                    outcome: .rodeItOut,
+                    intensity: 3,
+                    trigger: sample.trigger
+                )
+            }
+        }
+
         try? context.save()
         WidgetSnapshotPump.push(context: context)
     }
@@ -203,8 +237,12 @@ struct MainTabView: View {
             BloomPlusTabView()
                 .tabItem {
                     Label(
-                        subscriptions.isProSubscriber ? "Bloom+" : "Upgrade",
-                        systemImage: subscriptions.isProSubscriber ? "sparkles" : "lock.fill"
+                        QuitZynScreenshotMode.isEnabled
+                            ? "Support"
+                            : (subscriptions.isProSubscriber ? "Bloom+" : "Upgrade"),
+                        systemImage: QuitZynScreenshotMode.isEnabled
+                            ? "sparkles"
+                            : (subscriptions.isProSubscriber ? "sparkles" : "lock.fill")
                     )
                 }
                 .tag(4)
