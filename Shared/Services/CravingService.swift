@@ -43,7 +43,7 @@ final class CravingService {
             secondsElapsed: max(0, secondsElapsed)
         )
         context.insert(episode)
-        try? context.save()
+        context.saveOrReport()
         return episode
     }
 

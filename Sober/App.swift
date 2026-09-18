@@ -105,6 +105,7 @@ struct SoberApp: App {
 
 struct RootView: View {
     @Environment(\.modelContext) private var context
+    @State private var saveFailures = SaveFailureReporter.shared
     @Environment(\.scenePhase) private var scenePhase
     @Query private var settingsRows: [UserSettings]
 
@@ -123,6 +124,17 @@ struct RootView: View {
         // hardcoded cream/ink, so system dark mode only darkens the chrome
         // (lists, pickers, sheets, tab bar) and clashes. Lock to light.
         .preferredColorScheme(.light)
+        .alert(
+            "Not saved",
+            isPresented: Binding(
+                get: { saveFailures.message != nil },
+                set: { if !$0 { saveFailures.message = nil } }
+            )
+        ) {
+            Button("OK", role: .cancel) { saveFailures.message = nil }
+        } message: {
+            Text(saveFailures.message ?? "")
+        }
         .task { WidgetSnapshotPump.push(context: context) }
         #if DEBUG
         .task { seedDemoIfRequested() }

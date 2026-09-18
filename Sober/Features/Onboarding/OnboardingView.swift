@@ -663,7 +663,7 @@ struct OnboardingView: View {
 
         _ = SobrietyService(context: context).startJourney(at: min(startDate, .now))
         _ = GardenService(context: context).current()
-        try? context.save()
+        context.saveOrReport()
     }
 
     /// Flip onboarding complete (swaps RootView to the main app) and queue the
@@ -676,7 +676,7 @@ struct OnboardingView: View {
         guard !settings.hasCompletedOnboarding else { return }
         ConversionDiagnostics.record(.onboardingCompleted)
         settings.hasCompletedOnboarding = true
-        try? context.save()
+        context.saveOrReport()
 
         Task {
             _ = await NotificationService.requestAuthorization()
