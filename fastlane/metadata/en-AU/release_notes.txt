@@ -1,4 +1,5 @@
-New: craving mode. When an urge hits, start a short guided breathing session and ride it out. It's free.
-A slip no longer wipes out your garden. Your counter restarts, your tree keeps half its growth, and a mistaken slip can be undone.
-Bloom+ now shows your craving patterns.
-Widgets and Apple Watch now match your tree, plus other fixes.
+• Adding a past slip no longer changes your current streak or your tree.
+• Undo a mistaken slip right from the slip screen or Home.
+• Ask to Buy purchases unlock once approved, and Restore tells you if nothing was found.
+• Opening craving mode by accident no longer logs a craving.
+• The app now tells you if something couldn't be saved.

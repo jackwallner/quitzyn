@@ -1,4 +1,5 @@
-Uutta: himotila. Kun himo iskee, aloita maksutta lyhyt ohjattu hengitysharjoitus.
-Retkahdus ei enää pyyhi puutarhaasi: laskuri alkaa alusta, puu säilyttää puolet kasvustaan ja vahingossa kirjatun retkahduksen voi perua.
-Bloom+ näyttää nyt himojesi kuviot.
-Widgetit ja Apple Watch näyttävät nyt saman puun kuin sovellus, lisäksi korjauksia.
+• Aiemman retkahduksen lisääminen ei enää muuta nykyistä putkeasi tai puutasi.
+• Peru vahingossa kirjattu retkahdus suoraan retkahdusnäkymästä tai Kotoa.
+• Kysy lupaa -ostot avautuvat hyväksynnän jälkeen, ja Palauta kertoo, jos mitään ei löytynyt.
+• Himotilan avaaminen vahingossa ei enää kirjaa himoa.
+• Sovellus kertoo nyt, jos jotain ei voitu tallentaa.

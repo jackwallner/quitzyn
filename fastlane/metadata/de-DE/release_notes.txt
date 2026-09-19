@@ -1,4 +1,5 @@
-Neu: Craving-Modus. Wenn das Verlangen kommt, starte kostenlos eine kurze geführte Atemübung.
-Ein Rückfall löscht deinen Garten nicht mehr: Der Zähler beginnt neu, dein Baum behält die Hälfte seines Wachstums, und ein versehentlich eingetragener Rückfall lässt sich rückgängig machen.
-Bloom+ zeigt jetzt deine Verlangensmuster.
-Widgets und Apple Watch zeigen jetzt denselben Baum wie die App, dazu weitere Fehlerbehebungen.
+• Ein nachgetragener früherer Rückfall ändert deine aktuelle Serie und deinen Baum nicht mehr.
+• Mach einen versehentlichen Rückfall direkt im Rückfall-Bildschirm oder auf Home rückgängig.
+• Käufe über „Kaufanfrage“ werden nach der Genehmigung freigeschaltet, und „Wiederherstellen“ sagt dir, wenn nichts gefunden wurde.
+• Wer den Craving-Modus versehentlich öffnet, protokolliert kein Verlangen mehr.
+• Die App sagt dir jetzt, wenn etwas nicht gespeichert werden konnte.

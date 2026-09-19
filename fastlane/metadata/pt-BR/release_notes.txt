@@ -1,4 +1,5 @@
-Novo: modo fissura. Quando a vontade bater, comece de graça uma respiração guiada curta.
-Um deslize não apaga mais seu jardim: o contador recomeça, a árvore mantém metade do crescimento e um deslize registrado por engano pode ser desfeito.
-O Bloom+ agora mostra seus padrões de fissura.
-Widgets e Apple Watch agora mostram a mesma árvore do app, além de outras correções.
+• Adicionar uma recaída passada não muda mais sua sequência atual nem sua árvore.
+• Desfaça uma recaída registrada por engano direto da tela de recaída ou do Início.
+• Compras com Pedir para Comprar são liberadas após a aprovação, e Restaurar avisa se nada foi encontrado.
+• Abrir o modo vontade sem querer não registra mais uma vontade.
+• O app agora avisa se algo não pôde ser salvo.

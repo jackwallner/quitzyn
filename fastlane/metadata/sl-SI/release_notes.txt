@@ -1,4 +1,5 @@
-Novo: način želje. Ko pride nagon, brezplačno zaženite kratko vodeno dihanje.
-Spodrsljaj ne izbriše več vašega vrta: števec začne znova, drevo obdrži polovico rasti, pomotoma vnesen spodrsljaj pa lahko razveljavite.
-Bloom+ zdaj prikazuje vzorce vaših želja.
-Gradniki in Apple Watch zdaj prikazujejo isto drevo kot aplikacija, poleg drugih popravkov.
+• Dodajanje preteklega zdrsa ne spremeni več vašega trenutnega niza ali drevesa.
+• Pomotoma vnesen zdrs razveljavite neposredno z zaslona zdrsa ali z Domov.
+• Nakupi z »Prosi za nakup« se odklenejo po odobritvi, Obnovi pa vam pove, če ni ničesar našel.
+• Nenamerno odpiranje načina želje ne beleži več želje.
+• Aplikacija vas zdaj obvesti, če nečesa ni bilo mogoče shraniti.
