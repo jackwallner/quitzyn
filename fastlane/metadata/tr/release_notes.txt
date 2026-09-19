@@ -1,4 +1,5 @@
-Yeni: istek modu. Dürtü geldiğinde kısa bir rehberli nefes egzersizini ücretsiz başlatın.
-Bir kayma artık bahçenizi silmiyor: sayaç yeniden başlar, ağaç büyümesinin yarısını korur ve yanlışlıkla girilen bir kayma geri alınabilir.
-Bloom+ artık istek örüntülerinizi gösteriyor.
-Widget'lar ve Apple Watch artık uygulamadaki ağaçla aynı, ayrıca başka düzeltmeler.
+• Geçmiş bir kaymayı eklemek artık mevcut serini veya ağacını değiştirmiyor.
+• Yanlışlıkla kaydedilen bir kaymayı doğrudan kayma ekranından veya Ana Sayfa'dan geri al.
+• Satın Alma İsteği ile yapılan satın almalar onaylanınca açılır, Geri Yükle ise hiçbir şey bulunamazsa haber verir.
+• İsteme modunu yanlışlıkla açmak artık bir istek olarak kaydedilmiyor.
+• Bir şey kaydedilemezse uygulama artık sana haber veriyor.

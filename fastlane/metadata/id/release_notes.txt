@@ -1,4 +1,5 @@
-Baru: mode ngidam. Saat dorongan datang, mulai sesi napas terpandu singkat secara gratis.
-Kambuh tidak lagi menghapus taman Anda: penghitung dimulai ulang, pohon menyimpan setengah pertumbuhannya, dan kambuh yang salah dicatat dapat dibatalkan.
-Bloom+ kini menampilkan pola ngidam Anda.
-Widget dan Apple Watch kini sesuai dengan pohon Anda, ditambah perbaikan lain.
+• Menambahkan kekambuhan lama tidak lagi mengubah rentetan atau pohon Anda saat ini.
+• Batalkan kekambuhan yang salah dicatat langsung dari layar kekambuhan atau Beranda.
+• Pembelian lewat Minta Izin Beli terbuka setelah disetujui, dan Pulihkan memberi tahu jika tidak ada yang ditemukan.
+• Membuka mode keinginan secara tidak sengaja tidak lagi dicatat sebagai keinginan.
+• Aplikasi kini memberi tahu jika ada yang gagal disimpan.

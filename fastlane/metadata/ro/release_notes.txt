@@ -1,4 +1,5 @@
-Nou: modul poftă. Când vine impulsul, pornește gratuit o respirație ghidată scurtă.
-O recădere nu îți mai șterge grădina: contorul o ia de la capăt, copacul își păstrează jumătate din creștere, iar o recădere înregistrată din greșeală poate fi anulată.
-Bloom+ arată acum tiparele poftelor tale.
-Widgeturile și Apple Watch arată acum același copac ca aplicația, plus alte remedieri.
+• Adăugarea unei recăderi din trecut nu mai schimbă seria actuală sau copacul tău.
+• Anulează o recădere introdusă din greșeală direct din ecranul recăderii sau din Acasă.
+• Achizițiile prin „Solicitare de cumpărare” se deblochează după aprobare, iar Restaurare îți spune dacă nu a găsit nimic.
+• Deschiderea din greșeală a modului poftă nu mai înregistrează o poftă.
+• Aplicația îți spune acum dacă ceva nu a putut fi salvat.

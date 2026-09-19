@@ -1,4 +1,5 @@
-Nieuw: trekmodus. Als de trek opkomt, start je gratis een korte begeleide ademoefening.
-Een terugval wist je tuin niet meer: de teller begint opnieuw, je boom houdt de helft van zijn groei en een per ongeluk ingevoerde terugval kun je ongedaan maken.
-Bloom+ toont nu je trekpatronen.
-Widgets en Apple Watch tonen nu dezelfde boom als de app, plus andere verbeteringen.
+• Een eerdere terugval toevoegen verandert je huidige reeks of je boom niet meer.
+• Maak een per ongeluk ingevoerde terugval direct ongedaan vanuit het terugvalscherm of Home.
+• Aankopen via Vraag om te kopen worden ontgrendeld zodra ze zijn goedgekeurd, en Herstel laat weten als er niets is gevonden.
+• De hunkermodus per ongeluk openen legt geen hunkering meer vast.
+• De app laat je nu weten als iets niet kon worden bewaard.

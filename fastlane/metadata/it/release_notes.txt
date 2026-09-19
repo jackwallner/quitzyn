@@ -1,4 +1,5 @@
-Novità: modalità voglia. Quando arriva l'impulso, avvia gratis una breve respirazione guidata.
-Una ricaduta non cancella più il tuo giardino: il contatore riparte, l'albero conserva metà della crescita e una ricaduta registrata per errore si può annullare.
-Bloom+ ora mostra i tuoi schemi di voglia.
-Widget e Apple Watch ora mostrano lo stesso albero dell'app, oltre ad altre correzioni.
+• Aggiungere una ricaduta passata non cambia più la tua serie attuale né il tuo albero.
+• Annulla una ricaduta inserita per errore direttamente dalla schermata ricaduta o dalla Home.
+• Gli acquisti con «Chiedi di acquistare» si sbloccano una volta approvati, e Ripristina ti dice se non ha trovato nulla.
+• Aprire per sbaglio la modalità voglia non registra più una voglia.
+• L'app ora ti avvisa se qualcosa non è stato salvato.

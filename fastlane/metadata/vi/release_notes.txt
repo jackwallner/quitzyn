@@ -1,4 +1,5 @@
-Mới: chế độ thèm. Khi cơn thèm đến, hãy bắt đầu miễn phí một bài thở ngắn có hướng dẫn.
-Một lần lỡ không còn xóa khu vườn: bộ đếm bắt đầu lại, cây giữ một nửa sự phát triển, và lần lỡ ghi nhầm có thể hoàn tác.
-Bloom+ giờ hiển thị quy luật cơn thèm của bạn.
-Widget và Apple Watch giờ khớp với cây trong ứng dụng, cùng các bản sửa lỗi khác.
+• Thêm một lần tái nghiện trong quá khứ không còn làm thay đổi chuỗi hiện tại hay cái cây của bạn.
+• Hoàn tác lần tái nghiện ghi nhầm ngay từ màn hình tái nghiện hoặc Trang chủ.
+• Giao dịch qua Yêu cầu mua sẽ mở khóa khi được duyệt, và Khôi phục sẽ báo nếu không tìm thấy gì.
+• Vô tình mở chế độ thèm sẽ không còn bị ghi là một cơn thèm.
+• Ứng dụng giờ sẽ báo cho bạn nếu có gì đó không lưu được.

@@ -1,4 +1,5 @@
-Novetat: mode desig. Quan arribi un impuls, comença gratis una breu respiració guiada.
-Una recaiguda ja no esborra el teu jardí: el comptador es reinicia, l'arbre conserva la meitat del creixement i pots desfer una recaiguda registrada per error.
-Bloom+ ara mostra els teus patrons de desig.
-Els widgets i l'Apple Watch ara coincideixen amb el teu arbre, i altres correccions.
+• Afegir una recaiguda passada ja no canvia la teva ratxa actual ni el teu arbre.
+• Desfés una recaiguda errònia des de la pantalla de recaiguda o des de l'inici.
+• Les compres amb «Demanar la compra» s'activen quan s'aproven, i Restaurar t'avisa si no troba res.
+• Obrir el mode desig per error ja no registra cap desig.
+• L'app ara t'avisa si alguna cosa no s'ha pogut desar.

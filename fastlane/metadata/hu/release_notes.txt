@@ -1,4 +1,5 @@
-Új: sóvárgás mód. Ha jön a késztetés, indíts ingyen egy rövid vezetett légzést.
-Egy visszaesés már nem törli a kertedet: a számláló újraindul, a fa megtartja növekedése felét, és a tévedésből rögzített visszaesés visszavonható.
-A Bloom+ mostantól mutatja a sóvárgásaid mintázatait.
-A widgetek és az Apple Watch mostantól ugyanazt a fát mutatják, további javításokkal.
+• Egy korábbi visszaesés utólagos rögzítése már nem változtatja meg a jelenlegi sorozatodat és a fádat.
+• Egy tévesen rögzített visszaesést közvetlenül a visszaesés képernyőn vagy a Kezdőlapon vonhatsz vissza.
+• A Vásárlási engedély kérésével indított vásárlások jóváhagyás után feloldódnak, a Visszaállítás pedig jelzi, ha nem talált semmit.
+• A sóvárgás mód véletlen megnyitása már nem rögzít sóvárgást.
+• Az app most szól, ha valamit nem sikerült menteni.

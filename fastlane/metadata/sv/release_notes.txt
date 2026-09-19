@@ -1,4 +1,5 @@
-Nytt: sugläge. När suget kommer kan du starta en kort guidad andningsövning gratis.
-Ett återfall raderar inte längre din trädgård: räknaren börjar om, trädet behåller halva sin tillväxt och ett återfall som registrerats av misstag kan ångras.
-Bloom+ visar nu dina sugmönster.
-Widgetar och Apple Watch visar nu samma träd som appen, plus andra rättningar.
+• Att lägga till ett tidigare återfall ändrar inte längre din nuvarande svit eller ditt träd.
+• Ångra ett felregistrerat återfall direkt från återfallsskärmen eller Hem.
+• Köp via Be om köp låses upp när de godkänts, och Återställ meddelar om inget hittades.
+• Att öppna suget-läget av misstag loggar inte längre ett sug.
+• Appen meddelar nu om något inte kunde sparas.

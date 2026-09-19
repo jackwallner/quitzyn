@@ -1,4 +1,5 @@
-Novo: način žudnje. Kad poriv stigne, besplatno pokrenite kratko vođeno disanje.
-Posrtaj više ne briše vaš vrt: brojač kreće ispočetka, stablo zadržava polovicu rasta, a posrtaj unesen greškom može se poništiti.
-Bloom+ sada prikazuje obrasce vaše žudnje.
-Widgeti i Apple Watch sada prikazuju isto stablo, uz ostale ispravke.
+• Dodavanje ranijeg posrtaja više ne mijenja vaš trenutni niz ni stablo.
+• Poništite pogrešno uneseni posrtaj izravno sa zaslona posrtaja ili s Početne.
+• Kupnje putem opcije „Zatraži kupnju“ otključavaju se nakon odobrenja, a Vrati vam kaže ako ništa nije pronađeno.
+• Slučajno otvaranje načina žudnje više ne bilježi žudnju.
+• Aplikacija vam sada javlja ako se nešto nije moglo spremiti.

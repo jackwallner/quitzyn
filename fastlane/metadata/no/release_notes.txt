@@ -1,4 +1,5 @@
-Nytt: suggmodus. Når suget kommer, kan du starte en kort veiledet pusteøvelse gratis.
-Et tilbakefall sletter ikke lenger hagen din: telleren starter på nytt, treet beholder halvparten av veksten, og et tilbakefall registrert ved en feil kan angres.
-Bloom+ viser nå suggmønstrene dine.
-Widgeter og Apple Watch viser nå samme tre som appen, pluss andre rettelser.
+• Å legge til et tidligere tilbakefall endrer ikke lenger den nåværende rekken eller treet ditt.
+• Angre et feilregistrert tilbakefall rett fra tilbakefallsskjermen eller Hjem.
+• Kjøp med Spør om kjøp låses opp når de er godkjent, og Gjenopprett sier fra hvis ingenting ble funnet.
+• Å åpne suget-modus ved et uhell logger ikke lenger et sug.
+• Appen sier nå fra hvis noe ikke kunne lagres.

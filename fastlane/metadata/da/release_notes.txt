@@ -1,4 +1,5 @@
-Nyt: trangtilstand. Når trangen melder sig, kan du gratis starte en kort guidet vejrtrækningsøvelse.
-Et tilbagefald sletter ikke længere din have: tælleren starter forfra, træet beholder halvdelen af sin vækst, og et fejlregistreret tilbagefald kan fortrydes.
-Bloom+ viser nu dine trangmønstre.
-Widgets og Apple Watch matcher nu dit træ, plus rettelser.
+• Et tidligere tilbagefald ændrer ikke længere din nuværende stime eller dit træ.
+• Fortryd et fejlagtigt tilbagefald direkte fra tilbagefaldsskærmen eller Hjem.
+• Køb via Spørg om køb låses op, når de er godkendt, og Gendan fortæller dig, hvis intet blev fundet.
+• Åbner du trangtilstand ved et uheld, logges der ikke længere en trang.
+• Appen fortæller dig nu, hvis noget ikke kunne gemmes.

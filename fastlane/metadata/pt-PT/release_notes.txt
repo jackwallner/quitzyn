@@ -1,4 +1,5 @@
-Novo: modo desejo. Quando a vontade surgir, inicie gratuitamente uma breve respiração guiada.
-Um deslize já não apaga o seu jardim: o contador recomeça, a árvore mantém metade do crescimento e um deslize registado por engano pode ser anulado.
-O Bloom+ mostra agora os seus padrões de desejo.
-Os widgets e o Apple Watch mostram agora a mesma árvore da app, além de outras correções.
+• Adicionar uma recaída passada já não altera a sua série atual nem a sua árvore.
+• Anule uma recaída registada por engano diretamente no ecrã de recaída ou no Início.
+• As compras com Pedir para comprar são desbloqueadas após aprovação, e Restaurar avisa se nada foi encontrado.
+• Abrir o modo vontade por engano já não regista uma vontade.
+• A app avisa agora se algo não pôde ser guardado.

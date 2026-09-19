@@ -1,4 +1,5 @@
-Novinka: režim chuti. Keď príde nutkanie, spustite zadarmo krátke riadené dýchanie.
-Pošmyknutie už nevymaže vašu záhradu: počítadlo začne odznova, strom si ponechá polovicu rastu a omylom zadané pošmyknutie sa dá vrátiť.
-Bloom+ teraz ukazuje vzorce vašich chutí.
-Widgety a Apple Watch teraz zobrazujú rovnaký strom ako aplikácia, plus ďalšie opravy.
+• Pridanie skoršieho zakolísania už nemení vašu aktuálnu sériu ani strom.
+• Omylom zadané zakolísanie vrátite priamo z obrazovky zakolísania alebo z Domov.
+• Nákupy cez „Žiadosť o kúpu“ sa odomknú po schválení a Obnoviť vám povie, keď nič nenájde.
+• Náhodné otvorenie režimu chúťky už chúťku nezaznamená.
+• Aplikácia vám teraz povie, keď sa niečo nepodarilo uložiť.
