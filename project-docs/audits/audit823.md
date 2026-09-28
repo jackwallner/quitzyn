@@ -830,7 +830,7 @@ Recommendation:
 
 | File | Evidence | Risk | Later disposition |
 | --- | --- | --- | --- |
-| aso-plan.md:1-3 | Says Sober Tracker ASO Plan, Alcohol Free, app ID 6768869215, repo ~/sober | An agent can update the wrong app or wrong listing | Move to an archive outside the active instruction path or replace with a Quit Zyn plan |
+| ../marketing/aso-plan.md:1-3 | Says Sober Tracker ASO Plan, Alcohol Free, app ID 6768869215, repo ~/sober | An agent can update the wrong app or wrong listing | Move to an archive outside the active instruction path or replace with a Quit Zyn plan |
 | ios27QuitZyn.md:1-26 | August 5 audit says a deprecated RevenueCat initializer exists at SubscriptionService.swift:236; current source uses CustomPaywallImpressionParams and the deprecated text appears only in the old audit | Agents may fix a resolved issue or spend time on a false regression | Mark superseded or archive after preserving history |
 | scripts/.asc-state.json | Reports live version 1.0 and stale timestamps | Release automation can target the wrong version | Regenerate from a read-only ASC state command or mark derived |
 | scripts/aso_native_metadata.py | Metadata source differs from Fastlane subtitle | Future regeneration can undo a listing decision | Choose one canonical source |
