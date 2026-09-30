@@ -1,5 +1,1 @@
-• Agregar una recaída pasada ya no cambia tu racha actual ni tu árbol.
-• Deshaz una recaída registrada por error desde la pantalla de recaída o desde Inicio.
-• Las compras con «Solicitar compra» se activan al aprobarse, y Restaurar te avisa si no encuentra nada.
-• Abrir el modo antojo por error ya no registra un antojo.
-• La app ahora te avisa si algo no se pudo guardar.
+Mejoras internas y correcciones de errores para que Quit Zyn funcione mejor. Gracias por estar aquí.

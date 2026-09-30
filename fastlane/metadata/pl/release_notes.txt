@@ -1,5 +1,1 @@
-• Dodanie wcześniejszego potknięcia nie zmienia już bieżącej serii ani drzewa.
-• Cofnij omyłkowo zapisane potknięcie prosto z ekranu potknięcia lub ekranu głównego.
-• Zakupy przez „Zapytaj o zakup” odblokowują się po zatwierdzeniu, a Przywróć informuje, gdy nic nie znaleziono.
-• Przypadkowe otwarcie trybu głodu nie zapisuje już głodu nikotynowego.
-• Aplikacja informuje teraz, gdy czegoś nie udało się zapisać.
+Ulepszenia w tle i poprawki błędów, aby Quit Zyn działał płynnie. Dziękujemy, że jesteś.

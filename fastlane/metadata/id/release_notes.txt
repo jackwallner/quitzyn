@@ -1,5 +1,1 @@
-• Menambahkan kekambuhan lama tidak lagi mengubah rentetan atau pohon Anda saat ini.
-• Batalkan kekambuhan yang salah dicatat langsung dari layar kekambuhan atau Beranda.
-• Pembelian lewat Minta Izin Beli terbuka setelah disetujui, dan Pulihkan memberi tahu jika tidak ada yang ditemukan.
-• Membuka mode keinginan secara tidak sengaja tidak lagi dicatat sebagai keinginan.
-• Aplikasi kini memberi tahu jika ada yang gagal disimpan.
+Peningkatan di balik layar dan perbaikan bug agar Quit Zyn berjalan lancar. Terima kasih telah hadir.

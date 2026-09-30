@@ -1,5 +1,1 @@
-• Aiemman retkahduksen lisääminen ei enää muuta nykyistä putkeasi tai puutasi.
-• Peru vahingossa kirjattu retkahdus suoraan retkahdusnäkymästä tai Kotoa.
-• Kysy lupaa -ostot avautuvat hyväksynnän jälkeen, ja Palauta kertoo, jos mitään ei löytynyt.
-• Himotilan avaaminen vahingossa ei enää kirjaa himoa.
-• Sovellus kertoo nyt, jos jotain ei voitu tallentaa.
+Taustaparannuksia ja virhekorjauksia, jotta Quit Zyn toimii sujuvasti. Kiitos, että olet mukana.

@@ -1,5 +1,1 @@
-• Adăugarea unei recăderi din trecut nu mai schimbă seria actuală sau copacul tău.
-• Anulează o recădere introdusă din greșeală direct din ecranul recăderii sau din Acasă.
-• Achizițiile prin „Solicitare de cumpărare” se deblochează după aprobare, iar Restaurare îți spune dacă nu a găsit nimic.
-• Deschiderea din greșeală a modului poftă nu mai înregistrează o poftă.
-• Aplicația îți spune acum dacă ceva nu a putut fi salvat.
+Îmbunătățiri și remedieri pentru ca Quit Zyn să funcționeze mai bine. Mulțumim că ești aici.

@@ -1,5 +1,1 @@
-• Dodavanje ranijeg posrtaja više ne mijenja vaš trenutni niz ni stablo.
-• Poništite pogrešno uneseni posrtaj izravno sa zaslona posrtaja ili s Početne.
-• Kupnje putem opcije „Zatraži kupnju“ otključavaju se nakon odobrenja, a Vrati vam kaže ako ništa nije pronađeno.
-• Slučajno otvaranje načina žudnje više ne bilježi žudnju.
-• Aplikacija vam sada javlja ako se nešto nije moglo spremiti.
+Poboljšanja u pozadini i ispravci grešaka kako bi Quit Zyn radio glatko. Hvala što ste tu.

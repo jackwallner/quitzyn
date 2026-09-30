@@ -1,5 +1,1 @@
-• Adding a past slip no longer changes your current streak or your tree.
-• Undo a mistaken slip right from the slip screen or Home.
-• Ask to Buy purchases unlock once approved, and Restore tells you if nothing was found.
-• Opening craving mode by accident no longer logs a craving.
-• The app now tells you if something couldn't be saved.
+Behind-the-scenes improvements and fixes to keep Quit Zyn running smoothly. Thank you for being here.

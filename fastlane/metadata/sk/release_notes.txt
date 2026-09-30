@@ -1,5 +1,1 @@
-• Pridanie skoršieho zakolísania už nemení vašu aktuálnu sériu ani strom.
-• Omylom zadané zakolísanie vrátite priamo z obrazovky zakolísania alebo z Domov.
-• Nákupy cez „Žiadosť o kúpu“ sa odomknú po schválení a Obnoviť vám povie, keď nič nenájde.
-• Náhodné otvorenie režimu chúťky už chúťku nezaznamená.
-• Aplikácia vám teraz povie, keď sa niečo nepodarilo uložiť.
+Vylepšenia na pozadí a opravy chýb, aby Quit Zyn fungoval hladko. Ďakujeme, že ste tu.

@@ -1,5 +1,1 @@
-• Adicionar uma recaída passada não muda mais sua sequência atual nem sua árvore.
-• Desfaça uma recaída registrada por engano direto da tela de recaída ou do Início.
-• Compras com Pedir para Comprar são liberadas após a aprovação, e Restaurar avisa se nada foi encontrado.
-• Abrir o modo vontade sem querer não registra mais uma vontade.
-• O app agora avisa se algo não pôde ser salvo.
+Melhorias nos bastidores e correções de erros para o Quit Zyn funcionar melhor. Obrigado por estar aqui.

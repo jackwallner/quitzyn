@@ -1,5 +1,1 @@
-• Dodajanje preteklega zdrsa ne spremeni več vašega trenutnega niza ali drevesa.
-• Pomotoma vnesen zdrs razveljavite neposredno z zaslona zdrsa ali z Domov.
-• Nakupi z »Prosi za nakup« se odklenejo po odobritvi, Obnovi pa vam pove, če ni ničesar našel.
-• Nenamerno odpiranje načina želje ne beleži več želje.
-• Aplikacija vas zdaj obvesti, če nečesa ni bilo mogoče shraniti.
+Izboljšave v ozadju in popravki napak, da Quit Zyn deluje gladko. Hvala, da ste z nami.

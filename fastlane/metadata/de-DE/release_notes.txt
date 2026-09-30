@@ -1,5 +1,1 @@
-• Ein nachgetragener früherer Rückfall ändert deine aktuelle Serie und deinen Baum nicht mehr.
-• Mach einen versehentlichen Rückfall direkt im Rückfall-Bildschirm oder auf Home rückgängig.
-• Käufe über „Kaufanfrage“ werden nach der Genehmigung freigeschaltet, und „Wiederherstellen“ sagt dir, wenn nichts gefunden wurde.
-• Wer den Craving-Modus versehentlich öffnet, protokolliert kein Verlangen mehr.
-• Die App sagt dir jetzt, wenn etwas nicht gespeichert werden konnte.
+Verbesserungen und Fehlerbehebungen im Hintergrund, damit Quit Zyn reibungslos läuft. Danke, dass du dabei bist.

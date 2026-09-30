@@ -1,5 +1,1 @@
-• Att lägga till ett tidigare återfall ändrar inte längre din nuvarande svit eller ditt träd.
-• Ångra ett felregistrerat återfall direkt från återfallsskärmen eller Hem.
-• Köp via Be om köp låses upp när de godkänts, och Återställ meddelar om inget hittades.
-• Att öppna suget-läget av misstag loggar inte längre ett sug.
-• Appen meddelar nu om något inte kunde sparas.
+Förbättringar bakom kulisserna och buggfixar så att Quit Zyn fungerar smidigt. Tack för att du är här.

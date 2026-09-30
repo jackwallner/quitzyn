@@ -1,5 +1,1 @@
-• Ajouter une rechute passée ne modifie plus votre série actuelle ni votre arbre.
-• Annulez une rechute saisie par erreur directement depuis l'écran de rechute ou l'accueil.
-• Les achats via « Demander l'achat » se débloquent une fois approuvés, et Restaurer vous indique si rien n'a été trouvé.
-• Ouvrir le mode envie par erreur n'enregistre plus d'envie.
-• L'app vous prévient désormais si quelque chose n'a pas pu être enregistré.
+Améliorations en coulisses et corrections de bugs pour que Quit Zyn reste fluide. Merci d'être là.

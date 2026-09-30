@@ -1,5 +1,1 @@
-• Een eerdere terugval toevoegen verandert je huidige reeks of je boom niet meer.
-• Maak een per ongeluk ingevoerde terugval direct ongedaan vanuit het terugvalscherm of Home.
-• Aankopen via Vraag om te kopen worden ontgrendeld zodra ze zijn goedgekeurd, en Herstel laat weten als er niets is gevonden.
-• De hunkermodus per ongeluk openen legt geen hunkering meer vast.
-• De app laat je nu weten als iets niet kon worden bewaard.
+Verbeteringen achter de schermen en bugfixes zodat Quit Zyn soepel werkt. Bedankt dat je er bent.

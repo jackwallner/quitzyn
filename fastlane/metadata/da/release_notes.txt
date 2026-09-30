@@ -1,5 +1,1 @@
-• Et tidligere tilbagefald ændrer ikke længere din nuværende stime eller dit træ.
-• Fortryd et fejlagtigt tilbagefald direkte fra tilbagefaldsskærmen eller Hjem.
-• Køb via Spørg om køb låses op, når de er godkendt, og Gendan fortæller dig, hvis intet blev fundet.
-• Åbner du trangtilstand ved et uheld, logges der ikke længere en trang.
-• Appen fortæller dig nu, hvis noget ikke kunne gemmes.
+Forbedringer bag kulisserne og fejlrettelser, så Quit Zyn kører glat. Tak fordi du er her.

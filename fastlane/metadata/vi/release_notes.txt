@@ -1,5 +1,1 @@
-• Thêm một lần tái nghiện trong quá khứ không còn làm thay đổi chuỗi hiện tại hay cái cây của bạn.
-• Hoàn tác lần tái nghiện ghi nhầm ngay từ màn hình tái nghiện hoặc Trang chủ.
-• Giao dịch qua Yêu cầu mua sẽ mở khóa khi được duyệt, và Khôi phục sẽ báo nếu không tìm thấy gì.
-• Vô tình mở chế độ thèm sẽ không còn bị ghi là một cơn thèm.
-• Ứng dụng giờ sẽ báo cho bạn nếu có gì đó không lưu được.
+Cải tiến phía sau và sửa lỗi để Quit Zyn chạy mượt mà. Cảm ơn bạn đã đồng hành.

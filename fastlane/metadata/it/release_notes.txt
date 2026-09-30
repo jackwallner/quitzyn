@@ -1,5 +1,1 @@
-• Aggiungere una ricaduta passata non cambia più la tua serie attuale né il tuo albero.
-• Annulla una ricaduta inserita per errore direttamente dalla schermata ricaduta o dalla Home.
-• Gli acquisti con «Chiedi di acquistare» si sbloccano una volta approvati, e Ripristina ti dice se non ha trovato nulla.
-• Aprire per sbaglio la modalità voglia non registra più una voglia.
-• L'app ora ti avvisa se qualcosa non è stato salvato.
+Miglioramenti dietro le quinte e correzioni di bug per far funzionare Quit Zyn senza intoppi. Grazie di esserci.

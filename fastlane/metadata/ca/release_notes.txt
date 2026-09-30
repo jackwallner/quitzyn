@@ -1,5 +1,1 @@
-• Afegir una recaiguda passada ja no canvia la teva ratxa actual ni el teu arbre.
-• Desfés una recaiguda errònia des de la pantalla de recaiguda o des de l'inici.
-• Les compres amb «Demanar la compra» s'activen quan s'aproven, i Restaurar t'avisa si no troba res.
-• Obrir el mode desig per error ja no registra cap desig.
-• L'app ara t'avisa si alguna cosa no s'ha pogut desar.
+Millores internes i correccions d'errors perquè Quit Zyn funcioni bé. Gràcies per ser aquí.

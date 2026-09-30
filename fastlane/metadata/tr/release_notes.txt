@@ -1,5 +1,1 @@
-• Geçmiş bir kaymayı eklemek artık mevcut serini veya ağacını değiştirmiyor.
-• Yanlışlıkla kaydedilen bir kaymayı doğrudan kayma ekranından veya Ana Sayfa'dan geri al.
-• Satın Alma İsteği ile yapılan satın almalar onaylanınca açılır, Geri Yükle ise hiçbir şey bulunamazsa haber verir.
-• İsteme modunu yanlışlıkla açmak artık bir istek olarak kaydedilmiyor.
-• Bir şey kaydedilemezse uygulama artık sana haber veriyor.
+Quit Zyn'ın sorunsuz çalışması için arka planda iyileştirmeler ve hata düzeltmeleri. Burada olduğun için teşekkürler.
