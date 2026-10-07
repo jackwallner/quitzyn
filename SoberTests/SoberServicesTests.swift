@@ -6,12 +6,12 @@ import SwiftData
 #if canImport(RevenueCat)
 @Suite("Trial package preference")
 struct TrialPackagePreferenceTests {
-    @Test func monthlyWinsWhenBothTrialsExist() {
-        #expect(SubscriptionService.preferredTrialKind(from: [.monthly, .yearly]) == .monthly)
+    @Test func yearlyWinsWhenBothTrialsExist() {
+        #expect(SubscriptionService.preferredTrialKind(from: [.monthly, .yearly]) == .yearly)
     }
 
-    @Test func yearlyIsTheFallback() {
-        #expect(SubscriptionService.preferredTrialKind(from: [.yearly]) == .yearly)
+    @Test func monthlyIsTheFallback() {
+        #expect(SubscriptionService.preferredTrialKind(from: [.monthly]) == .monthly)
     }
 
     @Test func unknownPackageIsStillUsable() {
@@ -20,6 +20,10 @@ struct TrialPackagePreferenceTests {
 
     @Test func emptyPackagesStayUnavailable() {
         #expect(SubscriptionService.preferredTrialKind(from: []) == nil)
+    }
+
+    @Test func yearlyWinsRegardlessOfPackageOrder() {
+        #expect(SubscriptionService.preferredTrialKind(from: [.other, .monthly, .yearly]) == .yearly)
     }
 }
 #endif
@@ -183,5 +187,39 @@ struct SobrietyServiceTests {
         let now = Date()
         let weekAgo = Calendar.current.date(byAdding: .day, value: -7, to: now)!
         #expect(SobrietyService.daysSinceStart(weekAgo, asOf: now) == 8)
+    }
+}
+
+@Suite("Habit price comparison")
+struct HabitPriceComparisonTests {
+    @Test func defaultPouchUserGetsTheYearlyComparison() {
+        // The onboarding defaults: 8 pouches a day from a $6, 15-pouch can is
+        // $3.20 a day, so a $34.99 year is about 11 days of pouches.
+        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 3.2) == "about 11 days of pouches")
+    }
+
+    @Test func heavyUserGetsAShorterComparison() {
+        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 9) == "about 4 days of pouches")
+    }
+
+    @Test func lightSpendersGetNoComparison() {
+        // $34.99 at $1/day is 35 habit-days, past the point where the
+        // comparison flatters the price, so it is suppressed entirely.
+        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 1) == nil)
+    }
+
+    @Test func missingSpendDataProducesNothing() {
+        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 0) == nil)
+        #expect(HabitPriceComparison.daysOfHabit(price: 0, costPerDay: 3) == nil)
+    }
+
+    @Test func exactlyAtTheCeilingStillRenders() {
+        #expect(HabitPriceComparison.phrase(price: 42, costPerDay: 2) == "about 21 days of pouches")
+    }
+
+    @Test func halfDaysAreSpelledOut() {
+        #expect(HabitPriceComparison.dayCount(0.5) == "less than a day")
+        #expect(HabitPriceComparison.dayCount(1.5) == "about a day and a half")
+        #expect(HabitPriceComparison.dayCount(2.4) == "about 2 and a half days")
     }
 }

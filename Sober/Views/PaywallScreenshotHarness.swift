@@ -39,7 +39,7 @@ struct PaywallScreenshotHarness: View {
     /// Mirrors what the onboarding CTA actually buys (see `preferredTrialKind`),
     /// so a screenshot can't advertise a plan the button doesn't purchase.
     private var trialPackage: Package? {
-        subscriptions.packages.first { $0.soberPackageKind == .monthly } ?? subscriptions.packages.first
+        subscriptions.packages.first { $0.soberPackageKind == .yearly } ?? subscriptions.packages.first
     }
     #endif
 

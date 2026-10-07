@@ -1,10 +1,24 @@
 import SwiftData
 import SwiftUI
+#if canImport(RevenueCat)
+import RevenueCat
+#endif
 
 struct OnboardingView: View {
     @Environment(\.modelContext) private var context
     @Environment(SubscriptionService.self) private var subscriptions
     @State private var step: Int = 0
+    #if DEBUG
+    /// `-onboardingStep N` jumps straight to a step. The start-date picker
+    /// wedges the accessibility bridge, so this is the only way to inspect the
+    /// trial screen on a headless simulator.
+    private static var launchStep: Int? {
+        let args = ProcessInfo.processInfo.arguments
+        guard let index = args.firstIndex(of: "-onboardingStep"),
+              index + 1 < args.count else { return nil }
+        return Int(args[index + 1])
+    }
+    #endif
     @State private var startDate: Date = .now
     @State private var pouchesPerDay: Double = 8
     @State private var costPerCan: Double = 6
@@ -18,6 +32,11 @@ struct OnboardingView: View {
     @State private var showPaywallFallback = false
     @State private var didShowOnboardingTrial = false
     @State private var madeCommitment = false
+    /// False once the store confirms this Apple ID has already used its intro
+    /// offer. The offer step still runs; it just sells the plan instead of a
+    /// trial, and never says the word "free".
+    @State private var offerIncludesTrial = true
+    @State private var showSkipTrialConfirm = false
 
     /// Cost is *derived* from real-world purchase units (a can/tin has a fixed
     /// pouch count at a fixed price) so the dollars and pouches the user sees can
@@ -36,9 +55,9 @@ struct OnboardingView: View {
                 case 0: welcome
                 case 1: startDateStep
                 case 2: spendStep
-                case 3: reminderStep
-                case 4: commitStep
-                case 5: trialStep
+                case 3: trialStep
+                case 4: reminderStep
+                case 5: commitStep
                 default: welcome
                 }
             }
@@ -46,7 +65,7 @@ struct OnboardingView: View {
             .padding(.vertical, Theme.Space.l)
             .foregroundStyle(Color.white)
         }
-        .sheet(isPresented: $showPaywallFallback, onDismiss: { finishOnboarding() }) {
+        .sheet(isPresented: $showPaywallFallback, onDismiss: { finishOfferStep() }) {
             PaywallView(impressionId: "quitzyn_onboarding_trial_fallback")
         }
         .task {
@@ -54,6 +73,14 @@ struct OnboardingView: View {
             #if canImport(RevenueCat)
             if subscriptions.isConfigured, subscriptions.packages.isEmpty {
                 await subscriptions.fetchProducts()
+            }
+            #endif
+            #if DEBUG
+            if let launchStep = Self.launchStep {
+                #if canImport(RevenueCat)
+                offerIncludesTrial = subscriptions.directTrialPackage != nil
+                #endif
+                step = launchStep
             }
             #endif
         }
@@ -71,7 +98,7 @@ struct OnboardingView: View {
                 .font(Theme.body())
                 .padding(.horizontal, Theme.Space.m)
             Spacer()
-            bottomBar(primaryTitle: "Get Started") { step = 1 }
+            bottomBar(primaryTitle: "Get Started") { withAnimation { step = 1 } }
         }
     }
 
@@ -87,7 +114,7 @@ struct OnboardingView: View {
                 .colorScheme(.dark)
                 .tint(.white)
             Spacer()
-            bottomBar(primaryTitle: "Continue") { step = 2 }
+            bottomBar(primaryTitle: "Continue") { withAnimation { step = 2 } }
         }
     }
 
@@ -95,11 +122,32 @@ struct OnboardingView: View {
     /// and one compact "can" card (price + count) that defines the unit. The old
     /// triple-slider scroll was the clunky part — folding the can's price and
     /// count into a single card keeps the math exact while reading as one step.
+    ///
+    /// The cards scroll rather than compress: the dock below reserves the offer
+    /// step's disclosure height on every step, which leaves less room here than
+    /// three cards need on a small phone or with a resolution error showing.
     private var spendStep: some View {
+        VStack(spacing: Theme.Space.l) {
+            ScrollView {
+                spendCards
+            }
+            .scrollBounceBehavior(.basedOnSize)
+            .scrollIndicators(.hidden)
+
+            bottomBar(
+                primaryTitle: trialResolutionInFlight ? "Checking trial availability…" : "Continue",
+                busy: trialResolutionInFlight,
+                above: { resolutionError }
+            ) { resolveTrialAndContinue() }
+        }
+    }
+
+    private var spendCards: some View {
         VStack(spacing: Theme.Space.l) {
             Text("How much were you using?")
                 .font(Theme.display())
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
 
             VStack(spacing: Theme.Space.s) {
                 Text("\(Int(pouchesPerDay))")
@@ -119,10 +167,6 @@ struct OnboardingView: View {
             canCard
 
             savingsProjection
-
-            Spacer(minLength: 0)
-
-            bottomBar(primaryTitle: "Continue") { step = 3 }
         }
     }
 
@@ -207,6 +251,7 @@ struct OnboardingView: View {
                         .font(Theme.caption())
                         .foregroundStyle(.white.opacity(0.75))
                         .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -234,6 +279,273 @@ struct OnboardingView: View {
         return f.string(from: NSNumber(value: amount)) ?? "$\(amount)"
     }
 
+    @ViewBuilder
+    private var resolutionError: some View {
+        if let trialResolutionError {
+            VStack(spacing: Theme.Space.s) {
+                Text(trialResolutionError)
+                    .font(Theme.caption(weight: .semibold))
+                    .foregroundStyle(Color(red: 1.0, green: 0.78, blue: 0.68))
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                Button("Continue free") {
+                    ConversionDiagnostics.record(.freeVersionChosen)
+                    finishOfferStep()
+                }
+                .font(Theme.subhead(weight: .semibold))
+                .foregroundStyle(.white)
+            }
+        }
+    }
+
+    // MARK: - Offer step (ported from Sober 2026-10-06)
+
+    /// Sober's offer step, carried over whole: the trial is pitched straight
+    /// after the spend step, while the numbers the user just entered are on
+    /// screen, and the reminder and pledge steps follow it. Same layout and copy
+    /// structure as Sober so the two forks can be compared on audience alone.
+    private var trialStep: some View {
+        VStack(spacing: Theme.Space.l) {
+            Spacer(minLength: Theme.Space.s)
+            Image(systemName: "sparkles")
+                .font(.system(size: 64, weight: .semibold))
+            VStack(spacing: Theme.Space.s) {
+                Text(trialHeadline)
+                    .font(Theme.display(42, weight: .bold))
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(trialSubhead)
+                    .font(Theme.body())
+                    .foregroundStyle(.white.opacity(0.88))
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                trialBenefit(icon: "tree.fill", text: "Grow and switch every bonsai species")
+                trialBenefit(icon: "heart.text.square.fill", text: "Follow 13 sourced nicotine-recovery milestones")
+                trialBenefit(icon: "chart.line.uptrend.xyaxis", text: trialSavingsText)
+                trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
+            }
+            .padding(Theme.Space.m)
+            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
+
+            Spacer(minLength: Theme.Space.s)
+            bottomBar(
+                primaryTitle: trialCTATitle,
+                busy: trialInFlight,
+                showLegalFooter: true,
+                above: { trialAboveButton },
+                below: { trialRenewalDisclosure }
+            ) { startOnboardingTrial() }
+        }
+        .animation(nil, value: trialInFlight)
+        .animation(nil, value: trialError)
+        // Cancel role sits on "stay", not on "skip": an alert dismissed by
+        // gesture resolves to the cancel action, and that must not be the path
+        // that silently gives up the trial.
+        .alert("Keep the free version?", isPresented: $showSkipTrialConfirm) {
+            Button("Get started") {
+                ConversionDiagnostics.record(.freeVersionChosen)
+                finishOfferStep()
+            }
+            Button(offerIncludesTrial ? "Keep my free trial" : "Go back", role: .cancel) {}
+        } message: {
+            Text("You'll keep the day counter, the calendar, craving mode, and your tree. Your year-ahead projection, the full health timeline, the journal, and the other species stay locked.")
+        }
+        .onChange(of: subscriptions.isProSubscriber) { _, isPro in
+            // An Ask to Buy approval lands here after the purchase call returned.
+            if isPro { finishOfferStep() }
+        }
+        .onAppear {
+            didShowOnboardingTrial = true
+            ConversionDiagnostics.record(.trialOfferReached)
+            #if canImport(RevenueCat)
+            subscriptions.trackPaywallImpression(
+                id: offerIncludesTrial
+                    ? "quitzyn_onboarding_trial_v2"
+                    : "quitzyn_onboarding_offer_no_trial",
+                package: subscriptions.directOfferPackage,
+                oncePerSession: true
+            )
+            #endif
+            // Start the passive-nudge cooldown at this pitch, so Home does not
+            // re-pitch the trial seconds after the user declined it here.
+            TrialNudgeGate.markShown()
+        }
+    }
+
+    /// The objection at this moment is "am I about to be charged", not "what do
+    /// I get"; the benefit card already answers the second one.
+    private var trialSubhead: String {
+        guard offerIncludesTrial else {
+            return "Every tool that keeps the streak visible, unlocked today."
+        }
+        guard let trialDays else {
+            return "Every tool that keeps the streak visible. Nothing is charged today."
+        }
+        return "Every tool that keeps the streak visible. Nothing is charged for \(trialDays) days."
+    }
+
+    /// A real date beats a duration: "free until 13 Oct" is checkable in a way
+    /// that "7 days free" is not. `TrialLifecycle` schedules the reminder this
+    /// promises once the trial starts.
+    private var trialChargeDateLine: String? {
+        guard offerIncludesTrial,
+              let trialDays,
+              let end = Calendar.current.date(byAdding: .day, value: trialDays, to: .now) else {
+            return nil
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(
+            fromTemplate: "MMMd", options: 0, locale: .current
+        )
+        return "Free until \(formatter.string(from: end)). We'll remind you before it ends."
+    }
+
+    /// Notification permission is asked when the trial starts, not here, so the
+    /// promise above is made before the user has had the chance to decline it.
+    private var trialReminderCaveat: String? {
+        trialChargeDateLine == nil ? nil : "Reminder needs notifications turned on."
+    }
+
+    private func trialBenefit(icon: String, text: String) -> some View {
+        HStack(alignment: .top, spacing: Theme.Space.m) {
+            Image(systemName: icon)
+                .font(Theme.body(weight: .semibold))
+                .frame(width: 24)
+            Text(text)
+                .font(Theme.body())
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+        }
+    }
+
+    private var trialSavingsText: String {
+        let yearlyDollars = Int((derivedCostPerDay * 365).rounded())
+        guard yearlyDollars > 0 else { return "Project the year ahead, not just the days behind" }
+        return "Project the \(formatCurrency(yearlyDollars)) you'd keep over the next year"
+    }
+
+    /// Quiet opt-out directly above the trial button. Same weight as the other
+    /// small links so it stays the alternative, not a second CTA.
+    private var skipTrialLink: some View {
+        Button { showSkipTrialConfirm = true } label: {
+            Text("Get started")
+                .font(Theme.caption(weight: .semibold))
+                .foregroundStyle(.white.opacity(0.7))
+                .padding(.vertical, 2)
+        }
+        .disabled(trialInFlight)
+    }
+
+    /// Dock order, top to bottom: the habit argument, the price, the reminder,
+    /// then Get started, then the trial CTA.
+    private var trialAboveButton: some View {
+        VStack(spacing: Theme.Space.s) {
+            if let habitLine = habitComparisonText {
+                HStack(spacing: 7) {
+                    Image(systemName: "arrow.left.arrow.right")
+                        .font(.system(size: 11, weight: .bold))
+                    Text(habitLine)
+                        .font(Theme.subhead(weight: .semibold))
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 0)
+                }
+                .foregroundStyle(.white)
+                .padding(.horizontal, 13)
+                .padding(.vertical, 10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(.white.opacity(0.16), in: RoundedRectangle(cornerRadius: 12))
+            }
+
+            // The billed amount, the most conspicuous price on the screen
+            // (3.1.2(c)). Nil until the package loads: never a placeholder price.
+            if let priceHeadline = trialPriceHeadline {
+                Text(priceHeadline)
+                    .font(Theme.body(weight: .bold))
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity)
+            }
+
+            trialStatusSlot
+            skipTrialLink
+        }
+    }
+
+    /// Reminder copy and a purchase error share one slot, sized to whichever is
+    /// taller, so an error never shoves the hero up and back down again.
+    @ViewBuilder
+    private var trialStatusSlot: some View {
+        if let reassurance = trialReassuranceText {
+            ZStack(alignment: .top) {
+                reassuranceLine(reassurance).hidden()
+                errorLine(Self.trialFailureCopy).hidden()
+                if let trialError {
+                    errorLine(trialError)
+                } else {
+                    reassuranceLine(reassurance)
+                }
+            }
+        } else if let trialError {
+            errorLine(trialError)
+        }
+    }
+
+    private static let trialFailureCopy = "Couldn't start your trial. Please try again."
+
+    private var trialReassuranceText: String? {
+        guard let reassurance = trialChargeDateLine else { return nil }
+        return trialReminderCaveat.map { "\(reassurance) \($0)" } ?? reassurance
+    }
+
+    private func reassuranceLine(_ text: String) -> some View {
+        HStack(alignment: .top, spacing: 6) {
+            Image(systemName: "bell.badge.fill")
+                .font(.system(size: 10, weight: .bold))
+            Text(text)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+        }
+        .font(Theme.caption())
+        .foregroundStyle(.white.opacity(0.72))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 4)
+    }
+
+    private func errorLine(_ text: String) -> some View {
+        Text(text)
+            .font(Theme.caption(weight: .semibold))
+            .foregroundStyle(Color(red: 1.0, green: 0.78, blue: 0.68))
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+    }
+
+    /// Auto-renew terms sit under the button, between the CTA and the legal
+    /// footer, so the price above is not swallowed by the boilerplate.
+    @ViewBuilder
+    private var trialRenewalDisclosure: some View {
+        if let renewal = trialRenewalText {
+            disclosureLine(renewal)
+        }
+    }
+
+    private func disclosureLine(_ text: String) -> some View {
+        Text(text)
+            .font(Theme.caption())
+            .foregroundStyle(.white.opacity(0.7))
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal, Theme.Space.s)
+    }
+
+    // MARK: - Reminder and pledge (after the offer)
+
     private var reminderStep: some View {
         VStack(spacing: Theme.Space.xl) {
             Spacer()
@@ -248,16 +560,14 @@ struct OnboardingView: View {
             .pickerStyle(.wheel)
             .colorScheme(.dark)
             Spacer()
-            bottomBar(primaryTitle: "Continue") { step = 4 }
+            bottomBar(primaryTitle: "Continue") { withAnimation { step = 5 } }
         }
     }
 
-    /// Final step: a deliberate commitment. Recovery starts with a decision —
-    /// asking the user to actively pledge (rather than tap a neutral "Done")
-    /// gives them a moment to lock in before the journey begins. A quieter
-    /// "Not now" path lets reluctant users continue without forcing a pledge
-    /// they don't mean — the answer is also a signal we use to tune the tone
-    /// of nudges throughout the app.
+    /// Final step: a deliberate commitment. Recovery starts with a decision, so
+    /// the user actively pledges rather than tapping a neutral "Done". A quieter
+    /// "Not now" path lets reluctant users finish without a pledge they don't
+    /// mean; the answer also tunes the tone of nudges throughout the app.
     private var commitStep: some View {
         VStack(spacing: Theme.Space.l) {
             Spacer()
@@ -274,199 +584,64 @@ struct OnboardingView: View {
                 .padding(.horizontal, Theme.Space.m)
             Spacer()
             bottomBar(
-                primaryTitle: trialResolutionInFlight ? "Checking trial availability…" : "I commit to getting better",
-                busy: trialResolutionInFlight,
+                primaryTitle: "I commit to getting better",
                 above: {
                     VStack(spacing: Theme.Space.s) {
-                        Button { commit(committed: false) } label: {
+                        Button { completeOnboarding(committed: false) } label: {
                             Text("Not now")
                                 .font(Theme.subhead(weight: .medium))
                                 .foregroundStyle(.white.opacity(0.8))
                                 .underline()
                                 .padding(.vertical, 6)
                         }
-                        .disabled(trialResolutionInFlight)
                         Text("Either way is fine. You can revisit this any time in Settings.")
                             .font(Theme.caption())
                             .foregroundStyle(.white.opacity(0.7))
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, Theme.Space.m)
-                        if let trialResolutionError {
-                            Text(trialResolutionError)
-                                .font(Theme.caption(weight: .semibold))
-                                .foregroundStyle(Color(red: 1.0, green: 0.78, blue: 0.68))
-                                .multilineTextAlignment(.center)
-                            HStack(spacing: Theme.Space.l) {
-                                Button("Retry") { resolveTrialAfterCommit() }
-                                Button("Continue free") {
-                                    ConversionDiagnostics.record(.freeVersionChosen)
-                                    finishOnboarding()
-                                }
-                            }
-                            .font(Theme.subhead(weight: .semibold))
-                            .foregroundStyle(.white)
-                        }
                     }
                 }
-            ) { commit(committed: true) }
+            ) { completeOnboarding(committed: true) }
         }
     }
 
-    /// Trial step — shown right after the commitment while motivation (and the
-    /// just-entered spend numbers) peak. Styled as the next onboarding step
-    /// (same moss chrome, type scale, and CTA slot as steps 0-4), not a
-    /// paywall: short pitch + three benefit bullets, soft "Get Started" free
-    /// exit above the primary, and the Apple 3.1.2 disclosure adjacent to the
-    /// button. Only reached when a free trial is actually on the table;
-    /// otherwise we skip straight to finishing onboarding.
-    private var trialStep: some View {
-        VStack(spacing: Theme.Space.l) {
-            Spacer(minLength: Theme.Space.s)
-            Image(systemName: trialEligible ? "gift.fill" : "checkmark.circle.fill")
-                .font(.system(size: 72))
-                .opacity(0.92)
-            Text(trialEligible ? "Make your commitment count" : "You're all set")
-                .font(Theme.display())
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, Theme.Space.m)
-            Text(trialEligible
-                 ? trialPitchLine
-                 : "Your garden is planted. Let's begin.")
-                .multilineTextAlignment(.center)
-                .font(Theme.body())
-                .foregroundStyle(.white.opacity(0.9))
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, Theme.Space.m)
+    // MARK: - Dock
 
-            if trialEligible {
-                VStack(alignment: .leading, spacing: Theme.Space.m) {
-                    trialBullet(icon: "heart.text.square.fill", text: "Full health timeline with 13 nicotine-recovery milestones")
-                    trialBullet(icon: "book.closed.fill", text: "Daily journal prompts for the hard days")
-                    trialBullet(icon: "dollarsign.circle.fill", text: savingsBulletText)
-                }
-                .padding(.horizontal, Theme.Space.m)
-                .padding(.top, Theme.Space.s)
-            }
-
-            Spacer(minLength: Theme.Space.s)
-
-            if trialEligible {
-                bottomBar(
-                    primaryTitle: trialCTATitle,
-                    busy: trialInFlight,
-                    showLegalFooter: true,
-                    above: { trialAboveButton }
-                ) { startOnboardingTrial() }
-            } else {
-                bottomBar(primaryTitle: "Start growing") { finishOnboarding() }
-            }
-        }
-        .onChange(of: subscriptions.isProSubscriber) { _, isPro in
-            if isPro { finishOnboarding() }
-        }
-        .onAppear {
-            ConversionDiagnostics.record(.trialOfferReached)
-            #if canImport(RevenueCat)
-            // The trial-first onboarding step is a paywall surface, so measure it
-            // like the others (quitzyn_bloom_tab / quitzyn_trial_sheet) so
-            // view->trial-start conversion for the new step shows up in RevenueCat.
-            if trialEligible {
-                subscriptions.trackPaywallImpression(
-                    id: "quitzyn_onboarding_trial",
-                    package: subscriptions.directTrialPackage,
-                    oncePerSession: true
-                )
-                // Start the passive-nudge cooldown at this pitch. Without it the
-                // gate is empty on first run and the Home passive nudge could
-                // re-pitch TrialOfferSheet ~6s after the user just declined here.
-                TrialNudgeGate.markShown()
-            }
-            #endif
-        }
-    }
-
-    private func trialBullet(icon: String, text: String) -> some View {
-        HStack(alignment: .top, spacing: Theme.Space.m) {
-            Image(systemName: icon)
-                .font(Theme.body(weight: .semibold))
-                .frame(width: 24)
-                .opacity(0.92)
-            Text(text)
-                .font(Theme.body())
-                .foregroundStyle(.white.opacity(0.9))
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 0)
-        }
-    }
-
-    /// One small savings mention inside a benefit bullet (the timeline hero and
-    /// savings card read too paywall-ish for an onboarding step).
-    private var savingsBulletText: String {
-        let dollars = Int((derivedCostPerDay * 365).rounded())
-        if dollars > 0 {
-            return "Money and pouches avoided, on pace for \(formatCurrency(dollars)) a year"
-        }
-        return "Money and pouches avoided, tracked automatically"
-    }
-
-    /// Trial-only content that sits ABOVE the primary CTA (absorbed by the
-    /// Spacer so it never shifts the button): soft free exit, billing
-    /// disclosure, error.
-    @ViewBuilder
-    private var trialAboveButton: some View {
+    /// The tallest thing any step puts under its primary button: the offer
+    /// step's auto-renew disclosure and legal footer. Laid out hidden on every
+    /// step so the button itself never moves between taps. Built from the real
+    /// views and string, so it cannot drift when the copy or type size changes.
+    private var subDockReserve: some View {
         VStack(spacing: Theme.Space.s) {
-            // Soft free exit sits ABOVE the primary so the trial button lands in
-            // the exact spot the user has been tapping Continue. Rev A: labeled
-            // "Get Started" (StatScout soft-exit label), visually secondary.
-            Button { finishOnboarding() } label: {
-                Text("Get Started")
-                    .font(Theme.caption())
-                    .foregroundStyle(.white.opacity(0.62))
-                    .padding(.vertical, 4)
-            }
-            .disabled(trialInFlight)
-
-            // No disclosure until the package (and its real price) loads, never
-            // a placeholder price (Apple 3.1.2).
-            if let disclosure = trialDisclosureText {
-                Text(disclosure)
-                    .font(Theme.caption())
-                    .foregroundStyle(.white.opacity(0.75))
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, Theme.Space.m)
-            }
-
-            if let trialError {
-                Text(trialError)
-                    .font(Theme.caption(weight: .semibold))
-                    .foregroundStyle(Color(red: 1.0, green: 0.78, blue: 0.68))
-                    .multilineTextAlignment(.center)
-            }
+            disclosureLine(SubscriptionService.autoRenewDisclosure)
+            legalFooter
         }
+        .hidden()
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
     }
 
-    /// Shared bottom CTA bar rendered on EVERY step so the primary button's
-    /// frame is pixel-identical across the whole flow (Rev A zero-shift bar):
-    /// variable content goes ABOVE the button, and a fixed-height legal-footer
-    /// slot below it is rendered on every step (real Terms/Privacy/Restore on
-    /// the trial step, the exact same view invisible elsewhere) so the
-    /// distance from the button to the screen bottom never changes.
-    private func bottomBar<Above: View>(
+    /// Every step docks its primary button on the same pixel: variable content
+    /// goes above it, and `subDockReserve` holds the space below it. Purchase
+    /// taps are not wrapped in `withAnimation`, which used to animate the error
+    /// line in and out and slide the whole screen.
+    private func bottomBar<Above: View, Below: View>(
         primaryTitle: String,
         busy: Bool = false,
         showLegalFooter: Bool = false,
         @ViewBuilder above: () -> Above = { EmptyView() },
+        @ViewBuilder below: () -> Below = { EmptyView() },
         action: @escaping () -> Void
     ) -> some View {
         VStack(spacing: Theme.Space.s) {
             above()
-            Button(action: { withAnimation { action() } }) {
+            Button(action: action) {
                 ZStack {
                     Text(primaryTitle)
                         .font(Theme.body(weight: .semibold))
                         .opacity(busy ? 0 : 1)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
                     if busy { ProgressView().tint(.white) }
                 }
                 .frame(maxWidth: .infinity)
@@ -475,15 +650,16 @@ struct OnboardingView: View {
             .background(.white.opacity(0.25), in: RoundedRectangle(cornerRadius: 18))
             .disabled(busy)
 
-            legalFooter
-                .opacity(showLegalFooter ? 1 : 0)
-                .allowsHitTesting(showLegalFooter)
-                .accessibilityHidden(!showLegalFooter)
+            ZStack(alignment: .top) {
+                subDockReserve
+                VStack(spacing: Theme.Space.s) {
+                    below()
+                    if showLegalFooter { legalFooter }
+                }
+            }
         }
     }
 
-    /// Terms / Privacy / Restore. Rendered on every onboarding step (invisible
-    /// off the trial step) so its height reserves the same space under the CTA.
     private var legalFooter: some View {
         HStack(spacing: 12) {
             Button { restorePurchasesFromOnboarding() } label: {
@@ -509,83 +685,48 @@ struct OnboardingView: View {
         return f.string(from: d)
     }
 
-    // MARK: - Trial step plumbing
+    // MARK: - Offer plumbing
 
-    private var trialEligible: Bool {
-        #if canImport(RevenueCat)
-        return !subscriptions.isProSubscriber && subscriptions.hasTrialOfferAvailable
-        #else
-        return false
-        #endif
-    }
-
-    /// Apple 3.1.2 disclosure adjacent to the primary CTA: trial length, real
-    /// loaded price, auto-renew + cancel path. Nil until the package loads.
-    private var trialDisclosureText: String? {
-        #if canImport(RevenueCat)
-        return subscriptions.directTrialCTADisclosureText
-        #else
-        return nil
-        #endif
-    }
-
-    private var trialCTATitle: String {
-        #if canImport(RevenueCat)
-        if let label = subscriptions.directTrialPackage?.soberIntroOfferLabel {
-            return "Start my \(label)"
-        }
-        #endif
-        return "Start my free trial"
-    }
-
-    /// Trial length in days, parsed from the offer label ("7-day free trial").
-    /// Nil until the store says how long the trial is. A literal fallback would
-    /// advertise an offer that no longer exists the moment App Store Connect
-    /// changes the trial length, so the copy degrades to a length-free line.
-    private var trialDays: Int? {
-        #if canImport(RevenueCat)
-        return subscriptions.trialOfferDayCount
-        #else
-        return nil
-        #endif
-    }
-
-    private var trialPitchLine: String {
-        guard let trialDays else {
-            return "You just committed. Try every tool that keeps you nicotine-free, free."
-        }
-        return "You just committed. Try every tool that keeps you nicotine-free, free for \(trialDays) days."
-    }
-
-    /// Persist setup, then wait for a real RevenueCat eligibility decision. A
-    /// loading or network failure is never treated as a consumed trial.
-    private func commit(committed: Bool) {
-        persistSetup(committed: committed)
-        resolveTrialAfterCommit()
-    }
-
-    private func resolveTrialAfterCommit() {
+    /// Persist the setup, then wait for a real RevenueCat eligibility decision.
+    /// A loading or network failure is never treated as a consumed trial.
+    private func resolveTrialAndContinue() {
         guard !trialResolutionInFlight else { return }
+        persistSetup()
         trialResolutionError = nil
         trialResolutionInFlight = true
         Task { @MainActor in
             defer { trialResolutionInFlight = false }
             #if canImport(RevenueCat)
             guard subscriptions.isConfigured else {
-                trialResolutionError = "Couldn't check trial availability. Retry, or continue with the free version."
+                trialResolutionError = "Bloom+ plans are temporarily unavailable. You can retry or continue free."
                 return
             }
-            switch await subscriptions.resolveOnboardingTrial() {
+            var resolution = await subscriptions.resolveOnboardingTrial()
+            if resolution == .failed || resolution == .unavailable {
+                // Give the network a beat: retrying in the same tick against a
+                // flaky connection just reproduces the failure.
+                try? await Task.sleep(nanoseconds: 1_200_000_000)
+                resolution = await subscriptions.resolveOnboardingTrial()
+            }
+            switch resolution {
             case .eligible:
-                didShowOnboardingTrial = true
-                withAnimation { step = 5 }
+                offerIncludesTrial = true
+                withAnimation { step = 3 }
             case .ineligible:
-                finishOnboarding()
+                // Mostly "already used the trial on this Apple ID", not "has
+                // nothing to buy": show the same step without trial language.
+                // Only a real subscriber, or a store with no plan, skips it.
+                if subscriptions.isProSubscriber || subscriptions.directOfferPackage == nil {
+                    finishOfferStep()
+                } else {
+                    offerIncludesTrial = false
+                    withAnimation { step = 3 }
+                }
             case .unavailable, .failed:
-                trialResolutionError = "Couldn't check trial availability. Retry, or continue with the free version."
+                trialResolutionError = "Bloom+ plans are temporarily unavailable. You can retry or continue free."
             }
             #else
-            finishOnboarding()
+            finishOfferStep()
             #endif
         }
     }
@@ -593,44 +734,43 @@ struct OnboardingView: View {
     private func startOnboardingTrial() {
         #if canImport(RevenueCat)
         // Products failing to load falls back to the full paywall rather than a
-        // dead button; dismissing that paywall finishes onboarding.
-        guard let package = subscriptions.directTrialPackage else {
+        // dead button; dismissing that paywall moves on.
+        guard let package = subscriptions.directOfferPackage else {
             showPaywallFallback = true
             return
         }
+        ConversionDiagnostics.record(.trialCTATapped)
         trialError = nil
         trialInFlight = true
-        ConversionDiagnostics.record(.trialCTATapped)
         Task { @MainActor in
             defer { trialInFlight = false }
             do {
                 switch try await subscriptions.purchase(package) {
                 case .purchased:
                     ConversionDiagnostics.record(.purchaseSucceeded)
-                    finishOnboarding()
+                    finishOfferStep()
                 case .pending:
                     ConversionDiagnostics.record(.purchasePending)
-                    // Not finished: leaving onboarding here made an Ask to Buy or
-                    // a slow entitlement look like a trial that never started.
-                    // The isProSubscriber change finishes it once approved, and
-                    // the free option stays available meanwhile.
+                    // Not moving on: leaving here made an Ask to Buy look like a
+                    // trial that never started. The isProSubscriber change moves
+                    // on once approved, and the free option stays available.
                     trialError = SubscriptionService.pendingApprovalMessage
                 case .cancelled:
+                    // Backing out of Apple's sheet returns the same screen.
                     ConversionDiagnostics.record(.purchaseCancelled)
-                    trialError = "Trial start cancelled. Tap again to begin."
                 }
             } catch {
                 ConversionDiagnostics.record(.purchaseFailed)
-                trialError = "Couldn't start your trial. Please try again."
+                trialError = Self.trialFailureCopy
             }
         }
         #else
-        finishOnboarding()
+        finishOfferStep()
         #endif
     }
 
-    /// Restore from the trial step's legal footer. Success (an active
-    /// entitlement) finishes onboarding (the user is already Pro).
+    /// Restore from the offer step's legal footer. An active entitlement moves
+    /// on (the user is already a member).
     private func restorePurchasesFromOnboarding() {
         #if canImport(RevenueCat)
         guard !restoreInFlight else { return }
@@ -640,7 +780,7 @@ struct OnboardingView: View {
             trialError = nil
             await subscriptions.restorePurchases()
             if subscriptions.isProSubscriber {
-                finishOnboarding()
+                finishOfferStep()
             } else {
                 trialError = subscriptions.lastError
                     ?? "No active Bloom+ purchase was found for this Apple ID."
@@ -649,47 +789,112 @@ struct OnboardingView: View {
         #endif
     }
 
-    /// Save everything except the onboarding-complete flag, so the trial step can
-    /// still render before RootView swaps to the main app. Notifications are
-    /// requested after the trial step so the permission prompt doesn't interrupt
-    /// the paywall flow.
-    private func persistSetup(committed: Bool) {
-        madeCommitment = committed
+    /// Save everything except the onboarding-complete flag. Runs more than once
+    /// (before the offer and again at the pledge), so the journey is started
+    /// once and only moved after that: a second `startJourney` would close the
+    /// first as a zero-length journey.
+    private func persistSetup() {
         let settings = SettingsService(context: context).current()
         settings.costPerDayCents = Int((derivedCostPerDay * 100).rounded())
         settings.pouchesPerDay = Int(pouchesPerDay)
         settings.dailyReminderHour = reminderHour
-        settings.madeCommitment = committed
+        settings.madeCommitment = madeCommitment
 
-        _ = SobrietyService(context: context).startJourney(at: min(startDate, .now))
+        let sobriety = SobrietyService(context: context)
+        if sobriety.activeJourney() == nil {
+            _ = sobriety.startJourney(at: min(startDate, .now))
+        } else {
+            sobriety.updateStartDate(startDate)
+        }
         _ = GardenService(context: context).current()
         context.saveOrReport()
     }
 
-    /// Flip onboarding complete (swaps RootView to the main app) and queue the
-    /// lighter post-onboarding popup. That popup auto-skips when the user already
-    /// started the trial here (they're Pro), so they never see it twice.
-    private func finishOnboarding() {
+    /// Every exit from the offer step lands here: purchased, skipped, restored,
+    /// or the store never answered. It advances to the reminder step; the
+    /// pledge is what completes onboarding.
+    private func finishOfferStep() {
+        guard step < 4 else { return }
+        persistSetup()
+        withAnimation { step = 4 }
+    }
+
+    /// Flip onboarding complete (swaps RootView to the main app), then ask for
+    /// notifications. The permission prompt comes after the offer so it never
+    /// interrupts the paid decision.
+    private func completeOnboarding(committed: Bool) {
+        madeCommitment = committed
+        persistSetup()
         let settings = SettingsService(context: context).current()
-        // A purchase approved later arrives through isProSubscriber, which can
-        // race the purchase call's own finish.
         guard !settings.hasCompletedOnboarding else { return }
         ConversionDiagnostics.record(.onboardingCompleted)
         settings.hasCompletedOnboarding = true
         context.saveOrReport()
 
+        let hour = reminderHour
         Task {
             _ = await NotificationService.requestAuthorization()
-            await NotificationService.scheduleDailyReminder(hour: reminderHour, committed: madeCommitment)
+            await NotificationService.scheduleDailyReminder(hour: hour, committed: committed)
         }
 
-        // Only queue the immediate Home popup when we *didn't* already pitch the
-        // trial in onboarding — otherwise the user would see the same sheet twice
-        // within a second. When the onboarding step ran, the "quick popup later"
-        // is the cooldown-gated Health nudge instead.
+        // Only queue the Home popup when the offer step never ran, or the user
+        // would see the same pitch twice within a second.
         if !didShowOnboardingTrial {
             AppGroup.defaults.set(true, forKey: AppGroup.postOnboardingPaywallKey)
         }
         WidgetSnapshotPump.push(context: context)
+    }
+
+    /// The closing argument, in the units the user set one screen ago: what the
+    /// plan costs measured against what they were spending on pouches. Never
+    /// quotes an amount; the price line right below it carries the real one.
+    private var habitComparisonText: String? {
+        #if canImport(RevenueCat)
+        guard let package = subscriptions.directOfferPackage else { return nil }
+        return package.soberHabitComparisonSentence(
+            costPerDayCents: Int((derivedCostPerDay * 100).rounded())
+        )
+        #else
+        return nil
+        #endif
+    }
+
+    private var trialPriceHeadline: String? {
+        #if canImport(RevenueCat)
+        subscriptions.directTrialPriceHeadline
+        #else
+        nil
+        #endif
+    }
+
+    private var trialRenewalText: String? {
+        #if canImport(RevenueCat)
+        subscriptions.directTrialRenewalDisclosure
+        #else
+        nil
+        #endif
+    }
+
+    private var trialCTATitle: String {
+        guard offerIncludesTrial else { return "Unlock Bloom+" }
+        guard let trialDays else { return "Start my free trial" }
+        return "Start my \(trialDays)-day free trial"
+    }
+
+    /// Nil until the store says how long the trial is. A literal fallback would
+    /// advertise an offer that no longer exists the moment App Store Connect
+    /// changes the trial length, so the copy degrades to a length-free line.
+    private var trialDays: Int? {
+        #if canImport(RevenueCat)
+        subscriptions.trialOfferDayCount
+        #else
+        nil
+        #endif
+    }
+
+    private var trialHeadline: String {
+        guard offerIncludesTrial else { return "Unlock Bloom+" }
+        guard let trialDays else { return "Bloom+, free to try" }
+        return "\(trialDays) days of Bloom+ free"
     }
 }

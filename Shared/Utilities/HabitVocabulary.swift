@@ -66,6 +66,13 @@ enum HabitVocabulary {
         "Tired",
     ]
 
+    /// Past this many habit-days a "A year of Bloom+ costs about N days of ___"
+    /// line stops flattering the price, so it is suppressed. Sober uses 10,
+    /// where a drinking day is expensive. Pouches cost a few dollars a day, so a
+    /// typical user's year of Bloom+ lands around 11 days, which is still a
+    /// small share of a year's spend; 21 keeps the line for them.
+    static let priceComparisonMaxDays: Double = 21
+
     /// Example shown in the "why you started" reasons editor.
     static let reasonPlaceholder = "So I stop planning my day around a can"
 }

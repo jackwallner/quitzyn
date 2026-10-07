@@ -376,12 +376,29 @@ final class SubscriptionService: NSObject {
         #endif
     }
 
+    /// Auto-renew terms and the cancel path. Stays caption-sized wherever it is
+    /// shown: Apple wants it present and legible, not competing with the price.
+    ///
+    /// Outside the RevenueCat guard because onboarding reserves this string's
+    /// height on every step, including the ones that never touch the store.
+    nonisolated static let autoRenewDisclosure = "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings › Apple ID › Subscriptions."
+
     #if canImport(RevenueCat)
-    /// The plan the one-tap onboarding trial actually buys: monthly when it
-    /// carries a free-trial intro offer, yearly as the fallback.
+    /// The plan the one-tap onboarding trial actually buys: yearly when it
+    /// carries a free-trial intro offer this Apple ID is still eligible for,
+    /// monthly as the fallback.
     var directTrialPackage: Package? {
         let trialPackages = packages.filter { isEligibleForIntroOffer($0) }
         return Self.preferredTrialPackage(from: trialPackages)
+    }
+
+    /// What the one-tap onboarding CTA actually buys, trial or not.
+    ///
+    /// `directTrialPackage` is nil for an Apple ID that has already used its
+    /// intro offer. Same preference order, minus the eligibility filter, so a
+    /// returning user still gets an offer in place instead of no offer at all.
+    var directOfferPackage: Package? {
+        directTrialPackage ?? Self.preferredTrialPackage(from: packages)
     }
 
     static func preferredTrialPackage(from trialPackages: [Package]) -> Package? {
@@ -391,15 +408,13 @@ final class SubscriptionService: NSObject {
         return trialPackages.first { $0.soberPackageKind == preferredKind }
     }
 
-    /// Monthly first, and that is deliberate. Onboarding and the paywall serve
-    /// two different people: whoever taps through onboarding has not used the
-    /// app yet and is reacting to the recurring number on Apple's sheet, while
-    /// whoever opens the paywall later has already decided Bloom+ is worth
-    /// paying for. The paywall still leads with yearly; the onboarding trial
-    /// leads with the smaller recurring figure.
+    /// Yearly first, everywhere, matching Sober's onboarding (2026-10-06). Sober
+    /// leads with yearly and starts trials at a higher rate than this app did
+    /// on monthly, so the two forks now sell the same plan from the same screen
+    /// and any remaining gap between them reads as audience, not design.
     nonisolated static func preferredTrialKind(from kinds: [SoberPackageKind]) -> SoberPackageKind? {
-        if kinds.contains(.monthly) { return .monthly }
         if kinds.contains(.yearly) { return .yearly }
+        if kinds.contains(.monthly) { return .monthly }
         return kinds.first
     }
 
@@ -449,17 +464,31 @@ final class SubscriptionService: NSObject {
     /// shows a placeholder price. Falls back to a price-only variant when the
     /// intro offer isn't available to this Apple ID.
     ///
-    /// The fallback package must stay in step with `preferredTrialKind`, or the
-    /// line quotes a plan the CTA does not buy (3.1.2, and a refund magnet).
+    /// The fallback runs the same `preferredTrialKind` selection over every
+    /// loaded package rather than naming a plan literally, so it cannot drift
+    /// out of step with the CTA and quote a plan the button does not buy (3.1.2,
+    /// and a refund magnet).
     var directTrialCTADisclosureText: String? {
-        guard let package = directTrialPackage ?? packages.first(where: { $0.soberPackageKind == .monthly }) else {
-            return nil
-        }
-        let renew = "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings › Apple ID › Subscriptions."
+        guard let headline = directTrialPriceHeadline else { return nil }
+        return "\(headline) \(Self.autoRenewDisclosure)"
+    }
+
+    /// The price half of the 3.1.2 disclosure, on its own so onboarding can give
+    /// it real visual weight next to the CTA. The billed amount has to be the
+    /// most conspicuous pricing element on the screen (3.1.2(c)), and a
+    /// caption-sized paragraph that also carries the auto-renew boilerplate
+    /// does not meet that.
+    var directTrialPriceHeadline: String? {
+        guard let package = directOfferPackage else { return nil }
         if isEligibleForIntroOffer(package), let trial = package.soberIntroOfferLabel {
-            return "\(trial.capitalized), then \(package.soberPriceLabel). \(renew)"
+            return "\(trial.capitalized), then \(package.soberPriceLabel)."
         }
-        return "\(package.soberPriceLabel). \(renew)"
+        return "\(package.soberPriceLabel)."
+    }
+
+    /// Auto-renew terms and the cancel path, shown under the CTA once a price is.
+    var directTrialRenewalDisclosure: String? {
+        directTrialPriceHeadline == nil ? nil : Self.autoRenewDisclosure
     }
 
     /// Parsed trial length for hero and plan-stack footnotes.
