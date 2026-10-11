@@ -63,7 +63,17 @@ paths:
   for policy answers and Data safety.
 - Bundles: `PLAY_SERVICE_ACCOUNT_JSON=~/.config/google-play/mahj-service-account.json
   ./scripts/play-upload.sh internal-draft`. Bump `versionCode` before every upload.
-- Play Console: E3 Apps account `8314164911785412040`.
+- Play Console: E3 Apps account `8314164911785412040`, app `4973378888882968817`.
+  Managed publishing is OFF. The shared `revenuecat-service-account` has
+  app-level access to Quit Zyn (same nine permissions as Sober) and is the
+  RevenueCat Play credential (validated 2026-10-11).
+- State 2026-10-11: versionCode 1 (1.2.7) live on internal testing (tester list
+  "IM Iron Splits internal testers"), store listing in 13 locales, every App
+  content declaration, IARC rating (Teen / PEGI 12-class tobacco reference),
+  products active. 20 changes sit unsubmitted in Publishing overview: nothing
+  has been sent for review. Before production review, Jack pastes the reviewer
+  code into App content > Sign in details (Password field; the instructions
+  entry is already saved) and sends the changes from Publishing overview.
 
 ## Emulator (remote Pro only)
 

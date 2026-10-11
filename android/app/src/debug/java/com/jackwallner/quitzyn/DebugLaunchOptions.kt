@@ -52,7 +52,7 @@ object DebugLaunchOptions {
             graph.store.update { it.copy(garden = it.garden.copy(watermark = mark)) }
         }
         if (extras.containsKey("testReminderIn")) {
-            graph.notifications.scheduleForTesting(extras.getString("testReminderId") ?: NotificationService.DAILY_ID, extras.getInt("testReminderIn"))
+            graph.notifications.scheduleForTesting(extras.getString("testReminderId") ?: NotificationService.TRIAL_ENDING_ID, extras.getInt("testReminderIn"))
         }
         if (extras.containsKey("tab")) launchTab = extras.getInt("tab")
         showProgress = extras.getBoolean("showProgress")
