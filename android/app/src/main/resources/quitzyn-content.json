@@ -1,0 +1,452 @@
+{
+  "achievements" : [
+    {
+      "dayThreshold" : 0,
+      "description" : "Begin your nicotine-free journey.",
+      "icon" : "leaf.fill",
+      "id" : "first-step",
+      "kind" : "timeMilestone",
+      "title" : "First Step"
+    },
+    {
+      "dayThreshold" : 7,
+      "description" : "Complete your first week.",
+      "icon" : "shield.lefthalf.filled",
+      "id" : "strong-foundation",
+      "kind" : "timeMilestone",
+      "title" : "Strong Foundation"
+    },
+    {
+      "dayThreshold" : 30,
+      "description" : "One month milestone reached.",
+      "icon" : "star.fill",
+      "id" : "rising-star",
+      "kind" : "timeMilestone",
+      "title" : "Rising Star"
+    },
+    {
+      "dayThreshold" : 90,
+      "description" : "Three months strong.",
+      "icon" : "medal.fill",
+      "id" : "quarter-master",
+      "kind" : "timeMilestone",
+      "title" : "Quarter Master"
+    },
+    {
+      "dayThreshold" : 180,
+      "description" : "Six months nicotine-free.",
+      "icon" : "trophy.fill",
+      "id" : "half-year-hero",
+      "kind" : "timeMilestone",
+      "title" : "Half-Year Hero"
+    },
+    {
+      "dayThreshold" : 365,
+      "description" : "A full year. Incredible.",
+      "icon" : "crown.fill",
+      "id" : "year-one",
+      "kind" : "timeMilestone",
+      "title" : "Year One"
+    },
+    {
+      "dayThreshold" : 7,
+      "description" : "Daily check-ins for 7 days straight.",
+      "icon" : "flame.fill",
+      "id" : "perfect-week",
+      "kind" : "streak",
+      "title" : "Perfect Week"
+    },
+    {
+      "dayThreshold" : 30,
+      "description" : "30 consecutive check-ins.",
+      "icon" : "flame.fill",
+      "id" : "consistency-champion",
+      "kind" : "streak",
+      "title" : "Consistency Champion"
+    },
+    {
+      "dayThreshold" : 100,
+      "description" : "100 consecutive check-ins.",
+      "icon" : "diamond.fill",
+      "id" : "diamond-discipline",
+      "kind" : "streak",
+      "title" : "Diamond Discipline"
+    }
+  ],
+  "coachLines" : [
+    "You don't have to do anything else right now. Just stay here and breathe.",
+    "This is near the top of it. Cravings climb fast and then they stop climbing.",
+    "Notice it without arguing with it. You're not trying to win, you're waiting it out.",
+    "It's already smaller than it was a minute ago, even if it doesn't feel finished.",
+    "Almost through. Whatever's left of it is on its way out."
+  ],
+  "healthBenefits" : [
+    {
+      "detail" : "Nicotine can raise heart rate and blood pressure for a while after each dose. This app does not measure your pulse or tell you when it has changed.",
+      "hoursRequired" : 2,
+      "id" : "heart-rate-steadies",
+      "sourceLabel" : "American Cancer Society",
+      "sourceURL" : "https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html",
+      "summary" : "Learn how nicotine affects your pulse.",
+      "title" : "Heart rate and nicotine"
+    },
+    {
+      "detail" : "Nicotine has a short half-life, but how fast it clears varies with dose and individual factors. A timer cannot measure the nicotine in your body.",
+      "hoursRequired" : 8,
+      "id" : "nicotine-falling",
+      "sourceLabel" : "NCI · Nicotine Withdrawal",
+      "sourceURL" : "https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco/withdrawal-fact-sheet",
+      "summary" : "Learn how the body processes nicotine.",
+      "title" : "Nicotine levels"
+    },
+    {
+      "detail" : "The body breaks nicotine down into cotinine, which lingers longer. Your day count is not a test result and does not show when either has cleared.",
+      "hoursRequired" : 24,
+      "id" : "nicotine-cleared",
+      "sourceLabel" : "NCI · Nicotine Withdrawal",
+      "sourceURL" : "https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco/withdrawal-fact-sheet",
+      "summary" : "Learn about nicotine and cotinine.",
+      "title" : "Clearing nicotine"
+    },
+    {
+      "detail" : "Some people notice food tasting fuller or smells seeming sharper after they stop. The timing and experience vary, and this milestone does not promise a change.",
+      "hoursRequired" : 48,
+      "id" : "taste-smell",
+      "sourceLabel" : "American Cancer Society",
+      "sourceURL" : "https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html",
+      "summary" : "Notice your own senses.",
+      "title" : "Taste and smell"
+    },
+    {
+      "detail" : "Many people find the first several days the hardest, and cravings often get shorter and less frequent after that. Experiences vary; speak with a clinician if withdrawal worries you.",
+      "hoursRequired" : 72,
+      "id" : "cravings-peak",
+      "sourceLabel" : "Truth Initiative",
+      "sourceURL" : "https://truthinitiative.org/research-resources/quitting-smoking-vaping",
+      "summary" : "Withdrawal often feels strongest early.",
+      "title" : "The first few days"
+    },
+    {
+      "detail" : "Sleep and concentration can shift while your routine adjusts to life without nicotine. Individual experiences vary; this app does not assess sleep or cognitive function.",
+      "hoursRequired" : 168,
+      "id" : "sleep-focus",
+      "sourceLabel" : "NCI · Nicotine Withdrawal",
+      "sourceURL" : "https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco/withdrawal-fact-sheet",
+      "summary" : "Reflect on your own experience.",
+      "title" : "Sleep and focus"
+    },
+    {
+      "detail" : "Research links holding pouches against the gums with irritation in the mouth. Your elapsed time does not establish a change in your gums. Ask a dentist about any concerns.",
+      "hoursRequired" : 336,
+      "id" : "gums-healing",
+      "sourceLabel" : "NIH · Oral Health & Tobacco",
+      "sourceURL" : "https://www.nidcr.nih.gov/health-info/smoking-tobacco",
+      "summary" : "Learn about pouches and oral health.",
+      "title" : "Your mouth and pouches"
+    },
+    {
+      "detail" : "Irritability and anxiety are common in early nicotine withdrawal and often ease with time. This app does not assess or treat mood. Speak with a qualified clinician about symptoms.",
+      "hoursRequired" : 720,
+      "id" : "mood-stabilizes",
+      "sourceLabel" : "Truth Initiative",
+      "sourceURL" : "https://truthinitiative.org/research-resources/quitting-smoking-vaping",
+      "summary" : "Information, not a diagnosis.",
+      "title" : "Mood and withdrawal"
+    },
+    {
+      "detail" : "Nicotine can raise blood pressure, but responses and timing vary. This app does not measure blood pressure or predict when it will change.",
+      "hoursRequired" : 1440,
+      "id" : "blood-pressure",
+      "sourceLabel" : "American Heart Association",
+      "sourceURL" : "https://www.heart.org/en/healthy-living/healthy-lifestyle/quit-smoking-tobacco",
+      "summary" : "Learn about nicotine and heart health.",
+      "title" : "Blood pressure information"
+    },
+    {
+      "detail" : "Nicotine narrows blood vessels while it is active. Your counter is not a measurement of circulation, energy, or cardiovascular recovery.",
+      "hoursRequired" : 2160,
+      "id" : "circulation",
+      "sourceLabel" : "American Cancer Society",
+      "sourceURL" : "https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html",
+      "summary" : "Read the cited background information.",
+      "title" : "Circulation information"
+    },
+    {
+      "detail" : "Around six months, take stock of the routines and personal progress that brought you here. Ask a dentist about your own oral health.",
+      "hoursRequired" : 4320,
+      "id" : "oral-health",
+      "sourceLabel" : "NIH · Oral Health & Tobacco",
+      "sourceURL" : "https://www.nidcr.nih.gov/health-info/smoking-tobacco",
+      "summary" : "A longer-term progress marker.",
+      "title" : "Six-Month Milestone"
+    },
+    {
+      "detail" : "Many people expect nicotine to relieve stress, and some find stress feels different months after stopping. Changes vary, and this milestone does not measure stress.",
+      "hoursRequired" : 6480,
+      "id" : "stress-resilience",
+      "sourceLabel" : "Truth Initiative",
+      "sourceURL" : "https://truthinitiative.org/research-resources/quitting-smoking-vaping",
+      "summary" : "Notice changes without a promised timeline.",
+      "title" : "Stress and nicotine"
+    },
+    {
+      "detail" : "A year is a meaningful progress marker, not a declaration of full recovery. Discuss your individual health and risks with a qualified clinician.",
+      "hoursRequired" : 8760,
+      "id" : "heart-risk-drops",
+      "sourceLabel" : "American Heart Association",
+      "sourceURL" : "https://www.heart.org/en/healthy-living/healthy-lifestyle/quit-smoking-tobacco",
+      "summary" : "A year of personal progress.",
+      "title" : "One-Year Milestone"
+    }
+  ],
+  "journalPrompts" : [
+    {
+      "id" : "p1",
+      "kind" : "daily",
+      "text" : "How has my daily life changed since I quit nicotine?"
+    },
+    {
+      "id" : "p2",
+      "kind" : "daily",
+      "text" : "What's one thing I'm grateful for today?"
+    },
+    {
+      "id" : "p3",
+      "kind" : "daily",
+      "text" : "Where did I feel strongest today?"
+    },
+    {
+      "id" : "p4",
+      "kind" : "challenge",
+      "text" : "What triggers came up today, and how did I respond?"
+    },
+    {
+      "id" : "p5",
+      "kind" : "daily",
+      "text" : "Describe a moment of peace I experienced recently."
+    },
+    {
+      "id" : "p6",
+      "kind" : "daily",
+      "text" : "What's going well today? How can I keep this momentum?"
+    },
+    {
+      "id" : "p7",
+      "kind" : "challenge",
+      "text" : "If I had a pouch today, what would I lose?"
+    },
+    {
+      "id" : "p8",
+      "kind" : "daily",
+      "text" : "Who supported me today, even in a small way?"
+    },
+    {
+      "id" : "p9",
+      "kind" : "daily",
+      "text" : "What did my body thank me for today?"
+    },
+    {
+      "id" : "p10",
+      "kind" : "daily",
+      "text" : "What am I looking forward to this week?"
+    },
+    {
+      "id" : "p11",
+      "kind" : "challenge",
+      "text" : "Name a situation where I used to reach for a pouch. How did I navigate it?"
+    },
+    {
+      "id" : "p12",
+      "kind" : "daily",
+      "text" : "What's one healthy habit I'd like to build next?"
+    },
+    {
+      "id" : "p13",
+      "kind" : "daily",
+      "text" : "How is my sleep different now?"
+    },
+    {
+      "id" : "p14",
+      "kind" : "daily",
+      "text" : "What did I do today that my future self will thank me for?"
+    },
+    {
+      "id" : "p15",
+      "kind" : "challenge",
+      "text" : "Where do I notice cravings hide?"
+    },
+    {
+      "id" : "p16",
+      "kind" : "daily",
+      "text" : "What does being nicotine-free give me that nicotine never could?"
+    },
+    {
+      "id" : "p17",
+      "kind" : "daily",
+      "text" : "Describe a small win from today."
+    },
+    {
+      "id" : "p18",
+      "kind" : "daily",
+      "text" : "What's a relationship that's improving since I quit?"
+    },
+    {
+      "id" : "p19",
+      "kind" : "challenge",
+      "text" : "What would a 'reset' actually cost me, in days and dollars?"
+    },
+    {
+      "id" : "p20",
+      "kind" : "daily",
+      "text" : "Three words to describe how I feel right now."
+    }
+  ],
+  "schemaVersion" : 1,
+  "species" : [
+    {
+      "colors" : [
+        "#528547",
+        "#73471F"
+      ],
+      "description" : "A timeless upright bonsai. Symmetrical, balanced, serene.",
+      "displayName" : "Traditional Bonsai",
+      "icon" : "leaf.fill",
+      "id" : "traditional-bonsai",
+      "order" : 0
+    },
+    {
+      "colors" : [
+        "#477A38",
+        "#663D19"
+      ],
+      "description" : "The cascade style mimics a tree growing on a cliff, plunging downward.",
+      "displayName" : "Cascading Bonsai",
+      "icon" : "arrow.down.to.line.compact",
+      "id" : "cascade-bonsai",
+      "order" : 1
+    },
+    {
+      "colors" : [
+        "#F2B2CC",
+        "#7D5C45"
+      ],
+      "description" : "A flowering sakura wrapped in soft pink bloom. Petals drift down as your streak grows.",
+      "displayName" : "Cherry Blossom",
+      "icon" : "camera.macro",
+      "id" : "sakura-bonsai",
+      "order" : 2
+    },
+    {
+      "colors" : [
+        "#C74729",
+        "#6E594A"
+      ],
+      "description" : "A lacy maple in warm autumn red and gold. Star-shaped leaves drift down as the days add up.",
+      "displayName" : "Japanese Maple",
+      "icon" : "leaf.fill",
+      "id" : "maple-bonsai",
+      "order" : 3
+    },
+    {
+      "colors" : [
+        "#2E614A",
+        "#594536"
+      ],
+      "description" : "An evergreen pine with cloud-like needle tiers and a gnarled, weathered trunk.",
+      "displayName" : "Black Pine",
+      "icon" : "tree.fill",
+      "id" : "pine-bonsai",
+      "order" : 4
+    },
+    {
+      "colors" : [
+        "#386129",
+        "#804C1F"
+      ],
+      "description" : "Shaped by a lifetime of wind. Every branch tells a story of endurance.",
+      "displayName" : "Windswept Bonsai",
+      "icon" : "wind",
+      "id" : "windswept-bonsai",
+      "order" : 5
+    }
+  ],
+  "stages" : [
+    {
+      "dayThreshold" : 0,
+      "growthMessage" : "A seed is planted. Every great tree starts here.",
+      "id" : 0,
+      "title" : "Seed"
+    },
+    {
+      "dayThreshold" : 3,
+      "growthMessage" : "Your first sprout has broken the soil.",
+      "id" : 1,
+      "title" : "Sprout"
+    },
+    {
+      "dayThreshold" : 7,
+      "growthMessage" : "A seedling stands tall. Roots are taking hold.",
+      "id" : 2,
+      "title" : "Seedling"
+    },
+    {
+      "dayThreshold" : 14,
+      "growthMessage" : "Your bonsai is filling out into a young tree.",
+      "id" : 3,
+      "title" : "Young Bonsai"
+    },
+    {
+      "dayThreshold" : 30,
+      "growthMessage" : "Branches are reaching wider. The shape is emerging.",
+      "id" : 4,
+      "title" : "Adolescent"
+    },
+    {
+      "dayThreshold" : 60,
+      "growthMessage" : "Your bonsai has matured into a full, leafy canopy.",
+      "id" : 5,
+      "title" : "Mature"
+    },
+    {
+      "dayThreshold" : 90,
+      "growthMessage" : "Refined and dense. The work of real patience.",
+      "id" : 6,
+      "title" : "Refined"
+    },
+    {
+      "dayThreshold" : 180,
+      "growthMessage" : "Ancient and weathered. This tree has seen a lot.",
+      "id" : 7,
+      "title" : "Ancient"
+    },
+    {
+      "dayThreshold" : 365,
+      "growthMessage" : "A legendary bonsai. A full year of growth made visible.",
+      "id" : 8,
+      "title" : "Legendary"
+    }
+  ],
+  "vocabulary" : {
+    "cleanDayAdjective" : "nicotine-free",
+    "habitGerund" : "pouches",
+    "habitInstance" : "a pouch",
+    "maxUrgeSeconds" : 600,
+    "minUrgeSeconds" : 60,
+    "priceComparisonMaxDays" : 21,
+    "reasonPlaceholder" : "So I stop planning my day around a can",
+    "substance" : "nicotine",
+    "triggers" : [
+      "After a meal",
+      "Stress",
+      "Boredom",
+      "Driving",
+      "Coffee",
+      "Work break",
+      "Drinking",
+      "Tired"
+    ],
+    "typicalUrgeSeconds" : 120,
+    "urgeNoun" : "craving",
+    "urgeNounPlural" : "cravings"
+  }
+}
