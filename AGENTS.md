@@ -79,6 +79,13 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   `Sober.v2.store.unopenable-<stamp>` rather than deleted, so history is recoverable.
 - Widget snapshots are decoupled from SwiftData via `WidgetSnapshotStore` so the widget doesn't need a SwiftData schema.
 
+## Android port
+Native Kotlin/Compose port in `android/`, built from Sober's Android port. Rules,
+billing, release state and the remote-Pro emulator recipe: `.claude/rules/android.md`.
+
+## Rules index
+- `.claude/rules/android.md`: Android port (paths `android/**`, Play scripts).
+
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, RevenueCat dev tips, review funnel, gotchas):
 the global agent rules + the `ios-dev` skill.
