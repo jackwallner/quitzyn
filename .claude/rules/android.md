@@ -69,11 +69,20 @@ paths:
   RevenueCat Play credential (validated 2026-10-11).
 - State 2026-10-11: versionCode 1 (1.2.7) live on internal testing (tester list
   "IM Iron Splits internal testers"), store listing in 13 locales, every App
-  content declaration, IARC rating (Teen / PEGI 12-class tobacco reference),
+  content declaration, IARC rating (ESRB Teen for the tobacco references, 3+ in most other regions),
   products active. 20 changes sit unsubmitted in Publishing overview: nothing
   has been sent for review. Before production review, Jack pastes the reviewer
   code into App content > Sign in details (Password field; the instructions
   entry is already saved) and sends the changes from Publishing overview.
+- Verified 2026-10-11 on the Play AVD (`small_phone`, Jack's license-tester
+  account): Play-installed 1.2.7 showed the real 7-day trial at $27.99 / year,
+  the Play sheet offered the test card ("You will not be charged"), the yearly
+  trial started and unlocked Bloom+, RevenueCat shows a `play_store` sandbox
+  `trialing` subscription with `pro` active, and after clearing app data the
+  entitlement came back and Restore Purchases kept it. That account now owns a
+  test yearly subscription; do not buy it again. Pre-launch reports are not
+  generated for the internal track. Google developer notifications (RTDN) are
+  not connected in RevenueCat.
 
 ## Emulator (remote Pro only)
 
