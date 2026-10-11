@@ -157,7 +157,8 @@ fun OnboardingScreen() {
         store.completeOnboarding()
         val hour = reminderHour
         val streak = JourneyDays.since(startInstant(), graph.clock.now(), graph.clock.zone())
-        scope.launch {
+        // The app scope, not this screen's: onboarding leaves composition the moment it completes.
+        graph.scope.launch {
             graph.notifications.ensureAuthorized()
             graph.notifications.scheduleDailyReminder(hour, committed, streak)
         }

@@ -209,7 +209,7 @@ fun SettingsScreen(onClose: () -> Unit) {
                     StepperRow(
                         label = {
                             Text("Cost per day", style = SoberType.body(), color = SoberColors.textPrimary, modifier = Modifier.weight(1f))
-                            Text(Format.currencyFromCents(settings.costPerDayCents), style = SoberType.body(), color = SoberColors.textSecondary)
+                            Text(Format.currencyDecimal(settings.costPerDayCents / 100.0), style = SoberType.body(), color = SoberColors.textSecondary)
                         },
                         canDecrement = settings.costPerDayCents > 0,
                         canIncrement = settings.costPerDayCents < 20_000,

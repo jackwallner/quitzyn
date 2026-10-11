@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
@@ -30,9 +31,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -168,9 +169,10 @@ fun TrialOfferSheet(
 private fun Hero(glow: Float, icon: String) {
     val sparkles = rememberInfiniteTransition(label = "sparkles")
     Box(Modifier.fillMaxWidth().height(116.dp), contentAlignment = Alignment.Center) {
+        // A soft radial glow (a blur would clip to a hard square and needs API 31).
         Box(
-            Modifier.size(200.dp).scale(0.85f + 0.2f * glow).blur(60.dp).alpha(0.3f + 0.25f * glow)
-                .clip(CircleShape).background(SoberBrushes.brand),
+            Modifier.requiredSize(240.dp).scale(0.85f + 0.2f * glow).alpha(0.45f + 0.35f * glow)
+                .background(Brush.radialGradient(listOf(SoberColors.brandPrimary.copy(alpha = 0.55f), SoberColors.brandPrimary.copy(alpha = 0f)))),
         )
         Box(
             Modifier.size(72.dp).softShadow(SoberColors.brandPrimary.copy(alpha = 0.5f), 16.dp, 6.dp, 36.dp).clip(CircleShape).background(SoberBrushes.brand),
