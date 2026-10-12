@@ -13,12 +13,20 @@ Title, short and full description per locale live in
       --metadata_path android/play-assets/metadata/android --track internal \
       --skip_upload_apk true --skip_upload_aab true --skip_upload_changelogs true --sync_image_upload true
 
-Locales: en-US (default), en-GB/AU/CA, sv-SE, no-NO, da-DK, fi-FI, de-DE,
-nl-NL, pl-PL, fr-FR, es-419. Nordic titles follow the iOS snus titles; other
-localized titles use generic "nicotine pouches" terms, never another brand.
+Text only, staged without sending for review (how the 50-locale listing went up):
+add `--skip_upload_images true --skip_upload_screenshots true
+--changes_not_sent_for_review true` and drop `--track`/`--sync_image_upload`.
+
+Locales (50): en-US (default), en-GB/AU/CA/IN, de-DE, fr-FR/CA, es-ES/419/US,
+pt-BR/PT, it-IT, nl-NL, sv-SE, no-NO, da-DK, fi-FI, pl-PL, cs-CZ, sk, sl, hr,
+hu-HU, ro, el-GR, tr-TR, ru-RU, uk, ar, iw-IL, hi-IN, bn-BD, mr-IN, ta-IN,
+te-IN, kn-IN, ml-IN, id, ms/ms-MY, th, vi, ja-JP, ko-KR, zh-CN/TW/HK, ca.
+Nordic titles follow the iOS snus titles; other localized titles use generic
+"snus" and "nicotine pouches" terms, never another brand.
 Every localized description says the app is in English. Every description ends
 with the not-medical-advice line and the ZYN non-affiliation line. No prices,
-no em dashes, no medical claims. Graphics are en-US only.
+no em dashes, no medical claims. `scripts/validate-play-listing.py --app quitzyn`
+checks limits and these rules before any upload. Graphics are en-US only.
 
 ## Graphics
 

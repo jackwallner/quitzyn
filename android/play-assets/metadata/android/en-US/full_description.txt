@@ -1,9 +1,9 @@
-Quit Zyn makes going nicotine-free simple and calm. Count every day off the pouches, check in once a day, and watch a bonsai grow as your streak builds. Whether you're quitting Zyn, snus, nicotine pouches, dip or vaping, everything stays private on your phone. No account needed.
+Quit Zyn makes going nicotine-free simple and calm. Count every day off the pouches, check in once a day, and watch a bonsai grow as your streak builds. Whether you're quitting Zyn, snus, nicotine pouches, dip, chewing tobacco or vaping, everything stays private on your phone. No account needed.
 
-If you want one quiet place to see how far you've come and keep going, this is that app.
+If you want one quiet place to see how far you've come, ride out cravings and keep your nicotine-free streak going, this is that app.
 
 YOUR PROGRESS AT A GLANCE (FREE)
-- A day counter, your longest streak and every nicotine-free day on a calendar.
+- A quit day counter, your longest streak and every nicotine-free day on a calendar.
 - One-tap daily check-in, with an optional mood and note.
 - A week strip that fills in as you show up.
 - A daily reminder at the hour you choose.
@@ -35,6 +35,9 @@ An upgrade unlocks the full experience:
 - Five more bonsai species to grow
 New subscribers can start with a free trial.
 
+WHO IT'S FOR
+Anyone quitting nicotine pouches, snus, dip or a vape, cutting back on smokeless tobacco, or getting through the first weeks of nicotine withdrawal and cravings. Set the day you quit (or start today) and the app keeps count of every nicotine-free day. With Bloom+, it also tallies the money kept and pouches skipped, based on how many you used.
+
 Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
 Quit Zyn is a self-tracking tool for general wellness. It is not medical advice and does not diagnose or treat any condition. Talk to a healthcare professional about quitting nicotine.
@@ -43,3 +46,5 @@ Quit Zyn is an independent app. It is not affiliated with, sponsored by or endor
 
 Subscription details
 Bloom+ is available as an auto-renewing subscription (monthly or yearly, each with a free trial for new subscribers) or as a one-time lifetime purchase. Prices are shown in the app before you buy and vary by country. Payment is charged to your Google Play account. Subscriptions renew automatically unless cancelled before the end of the current period. Manage or cancel any time in Google Play > Payments & subscriptions.
+
+Privacy Policy: https://jackwallner.github.io/quitzyn/android-privacy.html

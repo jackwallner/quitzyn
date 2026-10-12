@@ -59,7 +59,7 @@ paths:
 ## Release
 
 - Listing text and graphics: `android/play-assets/metadata/android/<locale>/`
-  (fastlane supply layout, 13 locales); see `android/play-assets/listing-en-US.md`
+  (fastlane supply layout, 50 locales, checked by `scripts/validate-play-listing.py --app quitzyn`); see `android/play-assets/listing-en-US.md`
   for policy answers and Data safety.
 - Bundles: `PLAY_SERVICE_ACCOUNT_JSON=~/.config/google-play/mahj-service-account.json
   ./scripts/play-upload.sh internal-draft`. Bump `versionCode` before every upload.
@@ -70,7 +70,8 @@ paths:
 - State 2026-10-11: versionCode 1 (1.2.7) live on internal testing (tester list
   "IM Iron Splits internal testers"), store listing in 13 locales, every App
   content declaration, IARC rating (ESRB Teen for the tobacco references, 3+ in most other regions),
-  products active. 20 changes sit unsubmitted in Publishing overview: nothing
+  products active. 2026-10-11: listing text expanded to 50 locales and staged
+  over the API (changes not sent for review). 20+ changes sit unsubmitted in Publishing overview: nothing
   has been sent for review. Before production review, Jack pastes the reviewer
   code into App content > Sign in details (Password field; the instructions
   entry is already saved) and sends the changes from Publishing overview.
