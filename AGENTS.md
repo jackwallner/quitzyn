@@ -70,7 +70,12 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   garden species.
 
 ## App-specific notes
-- Enjoyment funnel triggers after **daily check-in** or **garden unlock celebration** (3.5s delay). (Shared funnel mechanics + playbook in the `ios-dev` skill.)
+- Ratings: no in-app rating question (App Review 5.6.1). After a **daily
+  check-in**, a **ridden-out craving** or a **garden growth celebration**, Home
+  calls the system `requestReview()` about 3.5s later if nothing is over it
+  (from the 2nd launch, 30-day cooldown). Settings has separate "Send Feedback"
+  and "Rate Quit Zyn" rows. App Store ID `6784788496`. (Shared rules in the
+  `ios-dev` skill.)
 - `Sober.storekit` tests the paywall in the simulator without RevenueCat dashboard config.
 - A started trial is tracked by `TrialLifecycle`, which asks for notification permission
   and schedules the heads-up `TrialTimeline` promises, two days before conversion.

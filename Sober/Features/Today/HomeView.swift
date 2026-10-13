@@ -28,11 +28,7 @@ struct HomeView: View {
     @State private var growthEvent: GardenGrowthEvent?
     @State private var showGrowth = false
     @State private var showCheckInDetail = false
-    @State private var showReviewPrompt = false
-    @State private var reviewPromptInitialStep: ReviewPromptSheet.Step = .enjoyment
     @State private var reviewPromptShownThisSession = false
-    @State private var pendingNativeReviewAfterDismiss = false
-    @StateObject private var reviewPromptCoordinator = ReviewPromptCoordinator.shared
     @Environment(\.requestReview) private var requestReview
 
     private var activeJourney: SobrietyJourney? { journeys.first { $0.isActive } }
@@ -161,7 +157,7 @@ struct HomeView: View {
                     .zIndex(100)
                 }
             }
-            .sheet(isPresented: $showCheckInDetail) {
+            .sheet(isPresented: $showCheckInDetail, onDismiss: scheduleReviewRequestAfterPositiveMoment) {
                 CheckInDetailSheet()
                     .presentationDetents([.height(320)])
             }
@@ -187,31 +183,8 @@ struct HomeView: View {
                 ProgressSheet(days: days, gardenState: gardenState, isPro: isPro)
                     .presentationDetents([.medium, .large])
             }
-            .sheet(isPresented: $showReviewPrompt, onDismiss: {
-                if pendingNativeReviewAfterDismiss {
-                    pendingNativeReviewAfterDismiss = false
-                    requestReview()
-                }
-            }) {
-                ReviewPromptSheet(initialStep: reviewPromptInitialStep, onFinish: handleReviewPromptFinish)
-            }
             .onReceive(NotificationCenter.default.publisher(for: .soberPositiveMomentForReview)) { _ in
-                scheduleReviewPromptAfterPositiveMoment()
-            }
-            .onChange(of: showReviewPrompt) { _, presented in
-                ReviewPromptCoordinator.shared.isPresentingSheet = presented
-            }
-            .onChange(of: reviewPromptCoordinator.pendingPresentation) { _, presentation in
-                guard let presentation else { return }
-                defer { reviewPromptCoordinator.clear() }
-                guard !showGrowth else { return }
-                showSettings = false
-                switch presentation {
-                case .enjoymentPrompt:
-                    presentReviewPrompt(step: .enjoyment)
-                case .feedbackOnly:
-                    presentReviewPrompt(step: .feedback)
-                }
+                scheduleReviewRequestAfterPositiveMoment()
             }
         }
     }
@@ -532,8 +505,7 @@ struct HomeView: View {
             // the delay window. Leaving it set retries on the next Home arrival.
             // MainTabView drops a pitch while a review sheet is up, so the flag
             // is only spent once the request can actually be honoured.
-            guard !showGrowth, !showReviewPrompt,
-                  !ReviewPromptCoordinator.shared.isPresentingSheet else { return }
+            guard !showGrowth else { return }
             AppGroup.defaults.set(false, forKey: AppGroup.postOnboardingPaywallKey)
             // Start the passive-nudge cooldown here so the day-0 popup and the
             // Home/Timeline/Health passive nudges don't fire back-to-back.
@@ -559,44 +531,36 @@ struct HomeView: View {
         NotificationCenter.default.post(name: .soberPositiveMomentForReview, object: nil)
     }
 
-    private func scheduleReviewPromptAfterPositiveMoment() {
-        guard ReviewPromptTracker.shouldShowAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding),
+    /// Home is on screen with nothing of ours over it: no celebration, sheet,
+    /// cover or alert.
+    private var isHomeClear: Bool {
+        !showGrowth && !showCheckInDetail && !showSlipSheet && !showCraving
+            && !showSettings && !showCustomize && !showProgress && !showResetAlert
+    }
+
+    /// The rating ask after a positive moment: Apple's own prompt, no question
+    /// in front of it. Waits for celebrations to finish, then asks only if
+    /// Home is still clear. A blocked ask keeps the moment pending in the
+    /// tracker; the check-in note sheet's dismissal or the next moment asks.
+    private func scheduleReviewRequestAfterPositiveMoment() {
+        guard ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding),
               !reviewPromptShownThisSession,
-              !showGrowth,
-              !showCheckInDetail,
-              !showReviewPrompt
+              isHomeClear
         else { return }
 
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 3_500_000_000)
-            guard !showGrowth,
-                  !showCheckInDetail,
-                  !showReviewPrompt,
+            guard isHomeClear,
                   // A trial pitch may have been scheduled from the same moment
-                  // (e.g. a growth-celebration dismiss) and already be on
-                  // screen from MainTabView's layer — never stack on top of it.
+                  // (e.g. a growth-celebration dismiss); never ask over it.
                   !TrialOfferCoordinator.shared.isPresentingSheet,
                   TrialOfferCoordinator.shared.pendingRequest == nil,
-                  ReviewPromptTracker.shouldShowAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
+                  ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
             else { return }
-            ReviewPromptTracker.consumePendingPositiveMoment()
-            reviewPromptInitialStep = .enjoyment
             reviewPromptShownThisSession = true
-            showReviewPrompt = true
+            ReviewPromptTracker.markShown()
+            requestReview()
         }
-    }
-
-    private func handleReviewPromptFinish(_ outcome: ReviewPromptDismissOutcome) {
-        showReviewPrompt = false
-        if outcome == .enjoyedMaybeLater {
-            pendingNativeReviewAfterDismiss = true
-        }
-    }
-
-    private func presentReviewPrompt(step: ReviewPromptSheet.Step) {
-        reviewPromptInitialStep = step
-        reviewPromptShownThisSession = true
-        showReviewPrompt = true
     }
 
     private func recordCheckInForTrialPitch() {

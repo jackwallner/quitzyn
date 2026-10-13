@@ -349,9 +349,6 @@ struct MainTabView: View {
 
     private func handleTrialPitch(_ request: TrialOfferCoordinator.PendingRequest) {
         guard !subscriptions.isProSubscriber else { return }
-        // A review prompt on screen wins; drop the pitch rather than stacking
-        // two sheet presentations from different view layers.
-        guard !ReviewPromptCoordinator.shared.isPresentingSheet else { return }
         let focus = request.intent.focusFeature
 
         switch request.policy {

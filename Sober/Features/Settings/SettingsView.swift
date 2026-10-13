@@ -134,12 +134,18 @@ struct SettingsView: View {
                     Text("Free, confidential help is available any time. Reaching out is a strength, not a setback.")
                 }
                 Section("Help") {
+                    // One mail row for questions, ideas and problems, and a
+                    // separate review row. No question in front of either
+                    // (App Review 5.6.1).
                     resourceLink(url: PaywallLinks.supportMailto.absoluteString,
                                  icon: "envelope.fill",
-                                 title: "Contact Support",
-                                 subtitle: "Questions or trouble? Reach out.")
-                    Button("Rate or Send Feedback") {
-                        ReviewPromptCoordinator.shared.requestEnjoymentPrompt()
+                                 title: "Send Feedback",
+                                 subtitle: "Questions, ideas, or trouble? Reach out.")
+                    Button {
+                        ReviewPromptTracker.markOpenedWriteReview()
+                        UIApplication.shared.open(AppStoreReviewLinks.writeReviewURL)
+                    } label: {
+                        helpRow(icon: "star.fill", title: "Rate Quit Zyn", subtitle: "On the App Store")
                     }
                 }
                 Section("Legal") {
@@ -187,6 +193,24 @@ struct SettingsView: View {
         if let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }
+    }
+
+    private func helpRow(icon: String, title: String, subtitle: String) -> some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .font(Theme.body())
+                .foregroundStyle(Theme.brandPrimary)
+                .frame(width: 26)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(title)
+                    .foregroundStyle(Theme.textPrimary)
+                Text(subtitle)
+                    .font(Theme.caption())
+                    .foregroundStyle(Theme.textSecondary)
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(Text("\(title). \(subtitle)"))
     }
 
     /// A Form row that deep-links to a phone/web resource. Skips rendering if the

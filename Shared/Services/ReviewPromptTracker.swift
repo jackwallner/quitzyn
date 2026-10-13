@@ -1,13 +1,16 @@
 import Foundation
 
 extension Notification.Name {
-    /// Posted after a satisfaction moment on Home — host may present the enjoyment funnel after a short delay.
+    /// Posted after a satisfaction moment on Home. Home may request the system
+    /// rating prompt after a short delay, with no question in front of it.
     static let soberPositiveMomentForReview = Notification.Name("com.jackwallner.sober.positiveMomentForReview")
 }
 
-/// How the user last resolved the in-app review / feedback prompt.
+/// What the user did about a review. Only opening the review page ends the
+/// passive asks: someone who sent feedback can still rate.
 enum ReviewPromptOutcome: String, Sendable {
     case openedWriteReview
+    /// Sent feedback by mail. Never stops the asks.
     case submittedFeedback
 }
 
@@ -23,16 +26,14 @@ enum ReviewPromptTracker {
     private static let positiveMomentCountKey = "reviewPrompt.positiveMomentCount"
     private static let pendingPositiveMomentKey = "reviewPrompt.pendingPositiveMoment"
 
-    /// Minimum cold starts before passive prompts are considered.
-    #if DEBUG
+    /// Ask early. Most installs are gone within a week, and a rating from
+    /// someone who checked in twice beats no rating at all. The only tenure
+    /// gate is "not the first session": a second cold start.
     static let minimumLaunchCount = 2
-    #else
-    static let minimumLaunchCount = 5
-    #endif
-    static let minimumDaysSinceFirstOpen = 7
-    /// Minimum cumulative positive moments before the passive enjoyment funnel surfaces.
-    static let minimumPositiveMoments = 3
-    static let cooldownDays = 120
+    /// Days between our calls. Apple shows the prompt at most three times a
+    /// year per device and decides each time, so this paces the asks rather
+    /// than the user's answers.
+    static let cooldownDays = 30
 
     static var appLaunchCount: Int {
         get { max(defaults.integer(forKey: launchCountKey), 0) }
@@ -102,33 +103,25 @@ enum ReviewPromptTracker {
     }
 
     static func passivePromptAllowed(now: Date = .now) -> Bool {
-        guard outcome == nil else { return false }
+        guard outcome != .openedWriteReview else { return false }
         guard let last = lastShownDate else { return true }
         let cooldown = TimeInterval(cooldownDays) * 86_400
         return now.timeIntervalSince(last) >= cooldown
     }
 
-    static func canPresentEnjoymentPrompt(
-        hasCompletedSetup: Bool,
-        now: Date = .now
-    ) -> Bool {
+    static func canRequestReview(hasCompletedSetup: Bool, now: Date = .now) -> Bool {
         guard !ScreenshotConfig.isEnabled else { return false }
         guard hasCompletedSetup else { return false }
         guard passivePromptAllowed(now: now) else { return false }
-        guard appLaunchCount >= minimumLaunchCount else { return false }
-        guard positiveMomentCount >= minimumPositiveMoments else { return false }
-        guard let first = firstAppOpenDate else { return false }
-        let minInterval = TimeInterval(minimumDaysSinceFirstOpen) * 86_400
-        guard now.timeIntervalSince(first) >= minInterval else { return false }
-        return true
+        return appLaunchCount >= minimumLaunchCount
     }
 
-    static func shouldShowAfterPositiveMoment(
+    static func shouldRequestAfterPositiveMoment(
         hasCompletedSetup: Bool,
         now: Date = .now
     ) -> Bool {
         guard hasPendingPositiveMoment else { return false }
-        return canPresentEnjoymentPrompt(hasCompletedSetup: hasCompletedSetup, now: now)
+        return canRequestReview(hasCompletedSetup: hasCompletedSetup, now: now)
     }
 
     static func markShown(now: Date = .now) {
@@ -141,8 +134,11 @@ enum ReviewPromptTracker {
         markShown()
     }
 
+    /// Never overwrites `.openedWriteReview`: feedback sent after the review
+    /// page must not reopen the asks that page ended.
     static func markFeedbackSubmitted() {
-        outcome = .submittedFeedback
-        markShown()
+        if outcome != .openedWriteReview {
+            outcome = .submittedFeedback
+        }
     }
 }
