@@ -439,9 +439,9 @@ final class SubscriptionService: NSObject {
     nonisolated static let autoRenewDisclosure = "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings › Apple ID › Subscriptions."
 
     #if canImport(RevenueCat)
-    /// The plan the one-tap onboarding trial actually buys: yearly when it
+    /// The plan the one-tap onboarding trial actually buys: monthly when it
     /// carries a free-trial intro offer this Apple ID is still eligible for,
-    /// monthly as the fallback.
+    /// yearly as the fallback.
     var directTrialPackage: Package? {
         let trialPackages = packages.filter { isEligibleForIntroOffer($0) }
         return Self.preferredTrialPackage(from: trialPackages)
@@ -463,13 +463,14 @@ final class SubscriptionService: NSObject {
         return trialPackages.first { $0.soberPackageKind == preferredKind }
     }
 
-    /// Yearly first, everywhere, matching Sober's onboarding (2026-10-06). Sober
-    /// leads with yearly and starts trials at a higher rate than this app did
-    /// on monthly, so the two forks now sell the same plan from the same screen
-    /// and any remaining gap between them reads as audience, not design.
+    /// Monthly first for the one-tap onboarding trial (2026-10-16), matching
+    /// Sober. A yearly CTA sends Apple's sheet to the full year's price, and
+    /// fleet-wide the onboarding pages that sell a monthly trial convert best
+    /// (Mahj, 129 of 130 trials monthly, 43% of viewers). The paywall keeps
+    /// its own default; this only picks what the onboarding button buys.
     nonisolated static func preferredTrialKind(from kinds: [SoberPackageKind]) -> SoberPackageKind? {
-        if kinds.contains(.yearly) { return .yearly }
         if kinds.contains(.monthly) { return .monthly }
+        if kinds.contains(.yearly) { return .yearly }
         return kinds.first
     }
 

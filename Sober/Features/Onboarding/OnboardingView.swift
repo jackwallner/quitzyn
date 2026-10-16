@@ -323,8 +323,12 @@ struct OnboardingView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
+            // The free row leads: on the v2 page two in three viewers closed
+            // the app here without tapping anything, as if the trial were the
+            // price of entry. Mahj's page opens with what stays free and
+            // converts 43% of viewers.
             VStack(alignment: .leading, spacing: Theme.Space.m) {
-                trialBenefit(icon: "tree.fill", text: "Grow and switch every bonsai species")
+                trialBenefit(icon: "checkmark.seal.fill", text: "Your day counter, craving mode, widget and Watch stay free, forever")
                 trialBenefit(icon: "heart.text.square.fill", text: "Follow 13 sourced nicotine-recovery milestones")
                 trialBenefit(icon: "chart.line.uptrend.xyaxis", text: trialSavingsText)
                 trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
@@ -365,7 +369,7 @@ struct OnboardingView: View {
             #if canImport(RevenueCat)
             subscriptions.trackPaywallImpression(
                 id: offerIncludesTrial
-                    ? "quitzyn_onboarding_trial_v2"
+                    ? "quitzyn_onboarding_trial_v3"
                     : "quitzyn_onboarding_offer_no_trial",
                 package: subscriptions.directOfferPackage,
                 oncePerSession: true
