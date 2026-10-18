@@ -306,37 +306,22 @@ struct OnboardingView: View {
     /// structure as Sober so the two forks can be compared on audience alone.
     private var trialStep: some View {
         VStack(spacing: Theme.Space.l) {
-            Spacer(minLength: Theme.Space.s)
-            Image(systemName: "sparkles")
-                .font(.system(size: 64, weight: .semibold))
-            VStack(spacing: Theme.Space.s) {
-                Text(trialHeadline)
-                    .font(Theme.display(42, weight: .bold))
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.7)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(trialSubhead)
-                    .font(Theme.body())
-                    .foregroundStyle(.white.opacity(0.88))
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+            // The pitch gives way so the dock never moves: the sparkles go
+            // first, then the pitch scrolls. On a 375x667 SE the full page ran
+            // the CTA half off-screen and hid Restore, Terms and Privacy.
+            ViewThatFits(in: .vertical) {
+                trialPitch(showsGlyph: true)
+                trialPitch(showsGlyph: false)
+                ScrollView {
+                    trialPitch(showsGlyph: false)
+                        .padding(.bottom, Self.scrollFadeHeight)
+                }
+                .scrollBounceBehavior(.basedOnSize)
+                .scrollIndicatorsFlash(onAppear: true)
+                .mask(scrollFadeMask)
             }
+            .frame(maxHeight: .infinity)
 
-            // The free row leads: on the v2 page two in three viewers closed
-            // the app here without tapping anything, as if the trial were the
-            // price of entry. Mahj's page opens with what stays free and
-            // converts 43% of viewers.
-            VStack(alignment: .leading, spacing: Theme.Space.m) {
-                trialBenefit(icon: "checkmark.seal.fill", text: "Your day counter, craving mode, widget and Watch stay free, forever")
-                trialBenefit(icon: "heart.text.square.fill", text: "Follow 13 sourced nicotine-recovery milestones")
-                trialBenefit(icon: "chart.line.uptrend.xyaxis", text: trialSavingsText)
-                trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
-            }
-            .padding(Theme.Space.m)
-            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
-
-            Spacer(minLength: Theme.Space.s)
             bottomBar(
                 primaryTitle: trialCTATitle,
                 busy: trialInFlight,
@@ -378,6 +363,53 @@ struct OnboardingView: View {
             // Start the passive-nudge cooldown at this pitch, so Home does not
             // re-pitch the trial seconds after the user declined it here.
             TrialNudgeGate.markShown()
+        }
+    }
+
+    private func trialPitch(showsGlyph: Bool) -> some View {
+        VStack(spacing: Theme.Space.l) {
+            if showsGlyph {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 64, weight: .semibold))
+            }
+            VStack(spacing: Theme.Space.s) {
+                Text(trialHeadline)
+                    .font(Theme.display(42, weight: .bold))
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(trialSubhead)
+                    .font(Theme.body())
+                    .foregroundStyle(.white.opacity(0.88))
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            // The free row leads: on the v2 page two in three viewers closed
+            // the app here without tapping anything, as if the trial were the
+            // price of entry. Mahj's page opens with what stays free and
+            // converts 43% of viewers.
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                trialBenefit(icon: "checkmark.seal.fill", text: "Your day counter, craving mode, widget and Watch stay free, forever")
+                trialBenefit(icon: "heart.text.square.fill", text: "Follow 13 sourced nicotine-recovery milestones")
+                trialBenefit(icon: "chart.line.uptrend.xyaxis", text: trialSavingsText)
+                trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
+            }
+            .padding(Theme.Space.m)
+            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
+        }
+    }
+
+    private static let scrollFadeHeight: CGFloat = 28
+
+    /// Fades the scrolled pitch into the dock instead of slicing a row in half,
+    /// so it reads as "there is more" on the phones where it scrolls.
+    private var scrollFadeMask: some View {
+        VStack(spacing: 0) {
+            Rectangle()
+            LinearGradient(colors: [.black, .clear], startPoint: .top, endPoint: .bottom)
+                .frame(height: Self.scrollFadeHeight)
         }
     }
 
