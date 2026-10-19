@@ -95,11 +95,11 @@ paths:
   `~/ironman/.claude/rules/android.md`, then set to 1080 x 2400 at 420 dpi so
   captures match the Play compositor. Stop it with `adb -s emulator-5560 emu kill`
   on Pro, then delete only `~/.android/avd/quitzyn_agent_test.avd` and `.ini`.
-- Connected tests: `scripts/android-connected-tests.sh` builds, installs on
-  Pro (its build step still calls local `./gradlew`, which the Air's Gradle
-  guard blocks: it must use `fm-gradle` before it runs again), and runs each UI Automator test with `pm clear` between (the orchestrator
-  cannot reach its service on the API 36.1 image, and Compose's test rule fails
-  there). It fails on any failure or a zero executed count.
+- Connected tests: `scripts/android-connected-tests.sh` builds with
+  `fm-gradle`, installs on Pro, and runs each UI Automator test with
+  `pm clear` between (the orchestrator cannot reach its service on the API 36.1
+  image, and Compose's test rule fails there). It fails on any failure or a
+  zero executed count.
 - Debug launch extras (debug build only): `resetAll`, `seedDemo`, `seedDays`,
   `demoPro`, `previewStore`, `previewTrialDays`, `previewTrialUsed`,
   `seedCravings`, `tab`, `onboardingStep`, `craving`, `slip`, `showProgress`,

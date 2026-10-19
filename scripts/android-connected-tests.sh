@@ -1,10 +1,11 @@
 #!/bin/bash
 # Run the Android instrumented smoke tests on the remote Pro's temporary AVD.
 #
-# Builds the debug app and test APKs here, installs them on the Pro emulator
-# over SSH, and runs each test in a fresh process with cleared app data (the
-# test orchestrator cannot reach its service on the API 36.1 image). Prints a
-# per-test result and exits non-zero on any failure or a zero executed count.
+# Builds the debug app and test APKs on the Pro with fm-gradle (outputs copy
+# back here), installs them on the Pro emulator over SSH, and runs each test in
+# a fresh process with cleared app data (the test orchestrator cannot reach its
+# service on the API 36.1 image). Prints a per-test result and exits non-zero
+# on any failure or a zero executed count.
 set -euo pipefail
 
 repo="$(cd "$(dirname "$0")/.." && pwd)"
@@ -17,7 +18,7 @@ test_class="com.jackwallner.quitzyn.SmokeTest"
 
 remote() { ssh "${ssh_opts[@]}" "$host" "$@"; }
 
-"$repo/android/gradlew" -p "$repo/android" -q assembleDebug assembleDebugAndroidTest
+fm-gradle -p "$repo/android" -q assembleDebug assembleDebugAndroidTest
 apk="$repo/android/app/build/outputs/apk/debug/app-debug.apk"
 test_apk="$repo/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
 
