@@ -104,3 +104,29 @@ paths:
   `demoPro`, `previewStore`, `previewTrialDays`, `previewTrialUsed`,
   `seedCravings`, `tab`, `onboardingStep`, `craving`, `slip`, `showProgress`,
   `gallery`, `testReminderIn`, `uiTest` (see `DebugLaunchOptions.kt`).
+
+## Fleet acceptance run 2026-10-20 (jmbp, run shift-android-nicfree-1-1792493839)
+
+- Port was already complete and shipped (see State above); this run only
+  re-verified it. Lint was failing (2 errors) and is now clean: the
+  `windowLightNavigationBar` style item moved to `values-v27/styles.xml`, and
+  the Timeline week start reads the locale through `LocalConfiguration`.
+  These source changes are NOT in the uploaded vc1 bundle: bump `versionCode`
+  before the next upload.
+- On jmbp itself (an Intel i7-5557U, 4 threads) run the checked-in wrapper
+  directly: `JAVA_HOME=~/jdks/temurin-17/Contents/Home ./gradlew --no-daemon
+  <tasks>` from `android/`. For connected tests use
+  `ANDROID_TEST_HOST=local ANDROID_SERIAL=emulator-5560
+  scripts/android-connected-tests.sh`; it now also writes a JUnit XML
+  (`app/build/outputs/androidTest-results/connected/`) via
+  `scripts/android-instrument-junit.py`.
+- That Mac is slow for emulators: the 1080x2400 temp AVD ANRed in System UI.
+  A 720x1280 / 320 dpi temp AVD booted with `-gpu host -cores 3` works. Wait
+  for the emulator's CPU to fall below ~35% after first boot before testing.
+  Measured native video cadence there is about 16 fps, so 60 fps is NOT
+  proven on this host; record motion on faster hardware if it is required.
+- Smoke tests scroll (`findScrolling`) because the slip sheet and the milestone
+  list start below the fold on a 1280 px screen.
+- Network: only RevenueCat (INTERNET). No Health Connect in this app. Release
+  signing, AAB verification and Play Console steps stay with the Air release
+  worker; production send remains Jack's paced action.

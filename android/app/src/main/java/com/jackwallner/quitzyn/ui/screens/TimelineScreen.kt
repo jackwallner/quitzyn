@@ -187,7 +187,9 @@ private fun MonthGrid(
     byDay: Map<LocalDate, com.jackwallner.quitzyn.model.CheckIn>,
     onSelect: (LocalDate) -> Unit,
 ) {
-    val firstDay = WeekFields.of(Locale.getDefault()).firstDayOfWeek
+    val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+    @Suppress("NonObservableLocale")
+    val firstDay = androidx.compose.runtime.remember(configuration) { WeekFields.of(Locale.getDefault()).firstDayOfWeek }
     val leading = ((month.dayOfWeek.value - firstDay.value) + 7) % 7
     val cells: List<LocalDate?> = List(leading) { null } + (1..month.lengthOfMonth()).map { month.withDayOfMonth(it) }
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {

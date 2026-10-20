@@ -39,6 +39,15 @@ class SmokeTest {
     private fun find(selector: BySelector, timeout: Long = 8_000): UiObject2 =
         assertNotNull("Not on screen: $selector", device.wait(Until.findObject(selector), timeout)).let { device.findObject(selector) }
 
+    /** Like [find], but scrolls the screen's scrollable down first when the target starts below the fold. */
+    private fun findScrolling(selector: BySelector): UiObject2 {
+        repeat(6) {
+            device.wait(Until.findObject(selector), 1_500)?.let { return it }
+            device.findObject(By.scrollable(true))?.scroll(androidx.test.uiautomator.Direction.DOWN, 0.8f)
+        }
+        return find(selector)
+    }
+
     private fun tag(id: String) = By.res(id)
 
     @Test fun onboardingWithTheTrialReachesHomeUnlocked() {
@@ -80,9 +89,8 @@ class SmokeTest {
     @Test fun freeUsersSeeLockedMilestonesPastTheFirstFive() {
         launch { putBoolean("seedDemo", true); putInt("seedDays", 45); putInt("tab", 2) }
         find(By.text("Heart rate and nicotine"))
-        device.findObject(By.scrollable(true))?.scroll(androidx.test.uiautomator.Direction.DOWN, 1f)
-        find(By.text("A future milestone"))
-        find(By.text("Unlock with Bloom+"))
+        findScrolling(By.text("A future milestone"))
+        findScrolling(By.text("Unlock with Bloom+"))
     }
 
     @Test fun subscribersSeePouchAndNicotineSavings() {
@@ -95,7 +103,7 @@ class SmokeTest {
 
     @Test fun aSlipCanBeLoggedAndTakenBack() {
         launch { putBoolean("seedDemo", true); putInt("seedDays", 45); putBoolean("slip", true) }
-        find(By.text("Log it and keep going"))
+        findScrolling(By.text("Log it and keep going"))
         find(tag("slip.log")).click()
         find(By.text("Logged. You're still on the journey."))
         find(tag("slip.undo")).click()
