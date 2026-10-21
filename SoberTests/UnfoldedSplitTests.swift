@@ -58,3 +58,27 @@ struct TimelineSelectionTests {
         #expect(paneTimeline.selection.draftNote == "half-typed")
     }
 }
+
+@Suite("Home stack space")
+struct StackSpaceTests {
+    @Test func unmeasuredLeavesTheFloorAlone() {
+        #expect(StackSpace().gardenRoom == nil)
+    }
+
+    @Test func roomIsWhatTheRestOfTheStackLeaves() {
+        // The unfolded pane: 549 pt under the bars, 250 pt of other content.
+        let space = StackSpace(available: 549, stack: 610, garden: 360)
+        #expect(space.gardenRoom == 299)
+    }
+
+    @Test func roomIsStableOnceTheGardenFits() {
+        // The same pane after the floor drops to 299: the answer doesn't move.
+        let space = StackSpace(available: 549, stack: 549, garden: 299)
+        #expect(space.gardenRoom == 299)
+    }
+
+    @Test func roomOnAPhoneThatFitsIsTheGardensOwnHeight() {
+        let space = StackSpace(available: 640, stack: 640, garden: 390)
+        #expect(space.gardenRoom == 390)
+    }
+}

@@ -294,8 +294,8 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch. Unfolded, iOS 27.1 still draws a bottom bar here, and Home's
-    /// last card sits under it (open: see .claude/rules/iphone-duo.md).
+    /// tab switch. Unfolded, iOS 27.1 draws a bottom bar here instead, so the
+    /// shorter pane is handled in `HomeView.fittedGardenMinHeight`.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -328,20 +328,24 @@ struct MainTabView: View {
     #if DEBUG
     /// `-screenshotTour`: walks Home, Health, Journal, Bloom+ and Timeline for
     /// headless capture runs, which can't tap and whose `simctl openurl` stops
-    /// on a confirmation alert. Each tab holds 22s and the first switch comes
-    /// at 31s, so gh-sim's `--wait 20` shots (one per --url, about 22s apart)
-    /// land mid-hold with 11s of slack either side. gh-sim's unfolded pass
-    /// shoots about 18s later after relaunch, so the tour starts 15s later
-    /// there. Unfolded, the Timeline step stays on Home, which sits beside it.
+    /// on a confirmation alert. Timed for gh-sim's `--wait 30`: its shots land
+    /// about 31 to 43s after launch and then every 30 to 31.5s, in both the
+    /// folded and unfolded pass, so each switch sits midway between two shots
+    /// with at least 6s of slack. The early round trip gives the recording
+    /// (its first 40s) real transitions; it is back on Home by the first shot.
+    /// Unfolded, the Timeline step stays on Home, which sits beside it.
     private func runScreenshotTour() async {
         guard ProcessInfo.processInfo.arguments.contains("-screenshotTour") else { return }
-        try? await Task.sleep(for: .seconds(9))
-        if split != nil { try? await Task.sleep(for: .seconds(15)) }
-        for next in [2, 3, 4, 1] {
-            try? await Task.sleep(for: .seconds(22))
+        let start = ContinuousClock.now
+        let steps: [(at: Double, tab: Int)] = [
+            (10, 2), (15, 3), (20, 0),
+            (52.4, 2), (83.1, 3), (113.9, 4), (144.6, 1)
+        ]
+        for step in steps {
+            try? await Task.sleep(until: start + .milliseconds(Int(step.at * 1000)), clock: .continuous)
             guard !Task.isCancelled else { return }
             withAnimation(.easeInOut(duration: 0.3)) {
-                tab = (next == 1 && split != nil) ? 0 : next
+                tab = (step.tab == 1 && split != nil) ? 0 : step.tab
             }
         }
     }

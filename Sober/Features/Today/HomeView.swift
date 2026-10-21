@@ -29,6 +29,9 @@ struct HomeView: View {
     @State private var showGrowth = false
     @State private var showCheckInDetail = false
     @State private var reviewPromptShownThisSession = false
+    /// Measured to keep the garden's floor from pushing the stack past its
+    /// space (see `fittedGardenMinHeight`).
+    @State private var stackSpace = StackSpace()
     @Environment(\.requestReview) private var requestReview
 
     private var activeJourney: SobrietyJourney? { journeys.first { $0.isActive } }
@@ -58,17 +61,28 @@ struct HomeView: View {
         NavigationStack {
             ZStack {
                 Theme.background.ignoresSafeArea()
+                // A Color takes the full proposal even when the stack overflows it.
+                Color.clear
+                    .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.available = $0 }
+                    #if DEBUG
+                    .onChange(of: stackSpace) { _, space in
+                        guard QuitZynScreenshotMode.isEnabled else { return }
+                        NSLog("HOMELAYOUT %@", String(describing: space))
+                    }
+                    #endif
 
                 if !showGrowth {
                     VStack(spacing: Theme.Space.l) {
                         counterHeader
                         gardenCard
+                            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.garden = $0 }
                         checkInControl
                         cravingControl
                     }
                     .padding(.horizontal, Theme.Space.l)
                     .padding(.top, Theme.Space.s)
                     .padding(.bottom, Theme.Space.m)
+                    .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.stack = $0 }
                 }
             }
             .navigationTitle("")
@@ -227,7 +241,7 @@ struct HomeView: View {
             completedTreeStyles: gardenState?.completedTreeStyles ?? [],
             onSwapBonsai: { showCustomize = true }
         )
-        .frame(maxWidth: .infinity, minHeight: gardenMinHeight, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, minHeight: fittedGardenMinHeight, maxHeight: .infinity)
         .layoutPriority(1)
         .clipShape(RoundedRectangle(cornerRadius: Theme.cardRadius))
         .overlay(
@@ -246,6 +260,16 @@ struct HomeView: View {
     private var gardenMinHeight: CGFloat {
         let stageBoost: CGFloat = stage == .seed ? 0 : 60
         return 300 + stageBoost + min(120, CGFloat(gardenContentScore) * 16)
+    }
+
+    /// The floor, lowered only as far as the space requires. Where everything
+    /// fits (any phone, the folded Duo) the garden is already taller than its
+    /// floor and nothing changes; a short pane such as the unfolded Duo's,
+    /// under a nav bar and a bottom tab bar, would otherwise push the craving
+    /// card beneath the bar.
+    private var fittedGardenMinHeight: CGFloat {
+        guard let room = stackSpace.gardenRoom else { return gardenMinHeight }
+        return min(gardenMinHeight, max(200, room))
     }
 
     @ViewBuilder
@@ -873,4 +897,18 @@ struct ProgressSheet: View {
         f.maximumFractionDigits = 0
         return f
     }()
+}
+
+/// Home's vertical space, split into what the garden card can claim.
+struct StackSpace: Equatable {
+    var available: CGFloat = 0
+    var stack: CGFloat = 0
+    var garden: CGFloat = 0
+
+    /// Height left for the garden once the rest of the stack is laid out.
+    /// The rest doesn't depend on the garden, so this settles in one pass.
+    var gardenRoom: CGFloat? {
+        guard available > 0, stack > 0 else { return nil }
+        return available - (stack - garden)
+    }
 }
