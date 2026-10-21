@@ -24,7 +24,8 @@ paths:
   (can card, reminder hour, pledge), the older paywall plus the small
   `TrialOfferSheet` for pitches, pouch/nicotine savings, no milestone-eve or
   lapse nudges, no history line or trial-recap banner on Home, review prompt
-  gates 5 launches / 7 days / 3 moments, nudge cooldown 20h/28h/44h/4d/7d.
+  from the 2nd launch with a 30-day cooldown (feedback never stops it), nudge
+  cooldown 20h/28h/44h/4d/7d.
 - Content is exported from Swift, never retyped: `scripts/sync-android-content.sh`
   (`scripts/android-export/main.swift` -> `quitzyn-content.json`). The exporter
   replaces each nicotine milestone's copy with non-medical Play wording keyed by

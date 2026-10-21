@@ -128,18 +128,27 @@ class PortParityTest {
     @Test fun reviewPromptKeepsTheIosGates() {
         val defaults = InMemoryStore()
         val tracker = ReviewPromptTracker(defaults, clock)
-        repeat(5) { tracker.recordAppLaunch() }
-        repeat(3) { tracker.recordPositiveMoment() }
-        // Seven days since first open, as Quit Zyn's tracker requires.
+        tracker.recordAppLaunch()
+        tracker.recordPositiveMoment()
+        // First session never asks; the second cold start does.
         assertFalse(tracker.shouldShowAfterPositiveMoment(true))
-        clock.instant = clock.instant.plus(Duration.ofDays(7))
+        tracker.recordAppLaunch()
         assertTrue(tracker.shouldShowAfterPositiveMoment(true))
         assertFalse(tracker.shouldShowAfterPositiveMoment(false))
         tracker.markShown()
         tracker.recordPositiveMoment()
         assertFalse(tracker.shouldShowAfterPositiveMoment(true))
-        clock.instant = clock.instant.plus(Duration.ofDays(121))
+        clock.instant = clock.instant.plus(Duration.ofDays(30))
         assertTrue(tracker.shouldShowAfterPositiveMoment(true))
+        // Feedback keeps rating asks alive; opening the write-review page ends them.
+        tracker.markFeedbackSubmitted()
+        tracker.recordPositiveMoment()
+        clock.instant = clock.instant.plus(Duration.ofDays(30))
+        assertTrue(tracker.shouldShowAfterPositiveMoment(true))
+        tracker.markOpenedWriteReview()
+        tracker.recordPositiveMoment()
+        clock.instant = clock.instant.plus(Duration.ofDays(30))
+        assertFalse(tracker.shouldShowAfterPositiveMoment(true))
     }
 
     @Test fun passiveNudgesBackOffOnTheIosSchedule() {

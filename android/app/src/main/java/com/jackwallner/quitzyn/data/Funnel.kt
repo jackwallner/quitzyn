@@ -51,17 +51,16 @@ class ReviewPromptTracker(private val defaults: KeyValueStore, private val clock
         defaults.putBoolean(PENDING, false)
     }
 
+    /** Sending feedback never stops rating asks; only opening the write-review page does. */
     private fun passivePromptAllowed(): Boolean {
-        if (outcome != null) return false
+        if (outcome == "openedWriteReview") return false
         if (!defaults.contains(LAST_SHOWN)) return true
         return clock.now().toEpochMilli() - defaults.getLong(LAST_SHOWN) >= COOLDOWN_DAYS * DAY_MS
     }
 
     fun canPresent(hasCompletedSetup: Boolean): Boolean {
         if (isAutomationRun || !hasCompletedSetup || !passivePromptAllowed()) return false
-        if (appLaunchCount < MINIMUM_LAUNCH_COUNT || positiveMomentCount < MINIMUM_POSITIVE_MOMENTS) return false
-        if (!defaults.contains(FIRST_OPEN)) return false
-        return clock.now().toEpochMilli() - defaults.getLong(FIRST_OPEN) >= MINIMUM_DAYS_SINCE_FIRST_OPEN * DAY_MS
+        return appLaunchCount >= MINIMUM_LAUNCH_COUNT
     }
 
     fun shouldShowAfterPositiveMoment(hasCompletedSetup: Boolean): Boolean =
@@ -84,10 +83,10 @@ class ReviewPromptTracker(private val defaults: KeyValueStore, private val clock
     }
 
     companion object {
-        const val MINIMUM_LAUNCH_COUNT = 5
-        const val MINIMUM_DAYS_SINCE_FIRST_OPEN = 7L
-        const val MINIMUM_POSITIVE_MOMENTS = 3
-        const val COOLDOWN_DAYS = 120L
+        /** Ask early: the only tenure gate is a second cold start. */
+        const val MINIMUM_LAUNCH_COUNT = 2
+        /** Paces our calls; Play decides whether the card shows. */
+        const val COOLDOWN_DAYS = 30L
 
         private const val LAUNCH_COUNT = "reviewPrompt.appLaunchCount"
         private const val FIRST_OPEN = "reviewPrompt.firstAppOpenDate"
