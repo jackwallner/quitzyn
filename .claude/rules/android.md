@@ -67,6 +67,8 @@ paths:
   Managed publishing is OFF. The shared `revenuecat-service-account` has
   app-level access to Quit Zyn (same nine permissions as Sober) and is the
   RevenueCat Play credential (validated 2026-10-11).
+- Live in Play production since 2026-10-20 (public page 200). The next bullet is the
+  2026-10-11 internal-testing history, kept for the checks it records.
 - State 2026-10-11: versionCode 1 (1.2.7) live on internal testing (tester list
   "IM Iron Splits internal testers"), store listing in 13 locales, every App
   content declaration, IARC rating (ESRB Teen for the tobacco references, 3+ in most other regions),
