@@ -21,9 +21,13 @@ paths:
 - Each pane gets `horizontalSizeClass = .compact`, so it lays out as on a phone
   and the tab bar stays a bottom bar inside the left pane.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
-- Screenshot runs: `quitzyn://home|timeline|health|journal|bloom` selects a tab
-  (unfolded, `timeline` lands on Home since Timeline is always showing).
-  `-QuitZynScreenshot` seeds journal entries, moods and cravings and suppresses
-  launch trial pitches and the growth celebration overlay. gh-sim recipe:
-  `gh-sim all --device 'iPhone Duo' --env SOBER_SCREENSHOT_MODE=1 --args
-  "-seedDemo -demoPro -seedDays 129 -QuitZynScreenshot" --url quitzyn://health ...`
+- Screenshot runs: `-screenshotTour` (DEBUG) walks Home, Health, Journal,
+  Bloom+ and Timeline on a timer (unfolded, the last step stays on Home). On
+  iOS 27, `simctl openurl` to the app's own scheme stops on an "Open in?"
+  alert, so gh-sim's `--url` is only a shot trigger: pass four URLs with an
+  unregistered scheme and `--wait 20`. `-QuitZynScreenshot` seeds journal
+  entries, moods and cravings and suppresses launch trial pitches and the
+  growth celebration overlay. Recipe: `gh-sim all --device 'iPhone Duo'
+  --wait 20 --env SOBER_SCREENSHOT_MODE=1 --args "-seedDemo -demoPro
+  -seedDays 129 -QuitZynScreenshot -screenshotTour" --url noop://1
+  ... --url noop://4`.

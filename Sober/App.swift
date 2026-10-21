@@ -317,13 +317,30 @@ struct MainTabView: View {
         .onChange(of: split != nil) { _, isSplit in
             if isSplit, tab == 1 { tab = 0 }
         }
-        .onOpenURL { url in
-            // `quitzyn://<tab>`, also how headless screenshot runs move between tabs.
-            let routes = ["home": 0, "timeline": 1, "health": 2, "journal": 3, "bloom": 4]
-            guard let target = routes[url.host() ?? ""] else { return }
-            tab = (target == 1 && split != nil) ? 0 : target
+        #if DEBUG
+        .task { await runScreenshotTour() }
+        #endif
+    }
+
+    #if DEBUG
+    /// `-screenshotTour`: walks Home, Health, Journal, Bloom+ and Timeline for
+    /// headless capture runs, which can't tap and whose `simctl openurl` stops
+    /// on a confirmation alert. Each tab holds 22s and the first switch comes
+    /// at 31s, so gh-sim's `--wait 20` shots (one per --url, about 22s apart)
+    /// land mid-hold with 11s of slack either side. Unfolded, the Timeline
+    /// step stays on Home, since Timeline already has its own pane.
+    private func runScreenshotTour() async {
+        guard ProcessInfo.processInfo.arguments.contains("-screenshotTour") else { return }
+        try? await Task.sleep(for: .seconds(9))
+        for next in [2, 3, 4, 1] {
+            try? await Task.sleep(for: .seconds(22))
+            guard !Task.isCancelled else { return }
+            withAnimation(.easeInOut(duration: 0.3)) {
+                tab = (next == 1 && split != nil) ? 0 : next
+            }
         }
     }
+    #endif
 
     private var tabs: some View {
         TabView(selection: $tab) {
