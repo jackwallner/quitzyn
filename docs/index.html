@@ -33,12 +33,21 @@
       "name": "Quit Zyn: Pouch & Snus Tracker",
       "description": "Quit Zyn: Pouch & Snus Tracker is a free quit Zyn app for iPhone with an Apple Watch companion. It counts your nicotine-free days after Zyn, nicotine pouches, snus, dip or vaping, adds a daily check-in with a bonsai garden that grows with your streak, and a craving mode with a short breathing session. No account is needed and your data stays on your device.",
       "applicationCategory": "HealthApplication",
-      "operatingSystem": "iOS 17+, watchOS 10+",
+      "operatingSystem": "iOS 17+, watchOS 10+, Android",
       "url": "https://jackwallner.com/ios/quitzyn/",
       "alternateName": "Quit Zyn",
-      "downloadUrl": "https://apps.apple.com/us/app/id6784788496",
-      "installUrl": "https://apps.apple.com/us/app/id6784788496",
-      "sameAs": "https://apps.apple.com/us/app/id6784788496",
+      "downloadUrl": [
+        "https://apps.apple.com/us/app/id6784788496",
+        "https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn"
+      ],
+      "installUrl": [
+        "https://apps.apple.com/us/app/id6784788496",
+        "https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/us/app/id6784788496",
+        "https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn"
+      ],
       "screenshot": [
         "https://jackwallner.github.io/quitzyn/screenshot-1-counter.png",
         "https://jackwallner.github.io/quitzyn/screenshot-2-calendar.png",
@@ -279,6 +288,21 @@
         }
 
         .download-btn:hover { opacity: 0.85; }
+
+        .store-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .play-badge { display: inline-flex; transition: opacity 0.15s; }
+        .play-badge:hover { opacity: 0.85; }
+        .play-badge img { display: block; width: auto; }
+        .nav-actions { display: flex; align-items: center; gap: 8px; }
+        .nav-brand { white-space: nowrap; }
+        @media (max-width: 480px) { .nav-play img { height: 32px; width: auto; } .nav-link { padding: 8px 14px; } }
 
         /* Screenshot showcase */
         .showcase {
@@ -609,7 +633,10 @@
                 </svg>
                 <span>Quit Zyn</span>
             </a>
-            <a class="nav-link" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download</a>
+            <div class="nav-actions">
+                <a class="nav-link" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download</a>
+                <a class="play-badge nav-play" href="https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn" rel="noopener"><img src="google-play-badge.png" alt="Get it on Google Play" width="135" height="40"></a>
+            </div>
         </div>
     </nav>
 
@@ -617,7 +644,10 @@
         <h1>A quit Zyn app <span>with a garden that grows</span></h1>
         <p class="tagline">Quit Zyn is a free quit Zyn app for iPhone that counts your nicotine-free days after Zyn, pouches, or snus, with a virtual garden, health milestones, a journal, and more. All private, all on your device.</p>
         <p class="platforms">iPhone &middot; Apple Watch &middot; Widgets</p>
-        <a class="download-btn" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download for free</a>
+        <div class="store-links">
+            <a class="download-btn" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download for free</a>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn" rel="noopener"><img src="google-play-badge.png" alt="Get it on Google Play" width="189" height="56"></a>
+        </div>
     </section>
 
     <section class="showcase">
@@ -796,7 +826,10 @@
     <section class="cta">
         <h2>Start your count</h2>
         <p>Free on the App Store. No account required. Upgrade to Bloom+ anytime.</p>
-        <a class="download-btn" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download for free</a>
+        <div class="store-links">
+            <a class="download-btn" href="https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&amp;ct=jw-quitzyn-home&amp;mt=8">Download for free</a>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.jackwallner.quitzyn" rel="noopener"><img src="google-play-badge.png" alt="Get it on Google Play" width="189" height="56"></a>
+        </div>
     </section>
 
     <footer>
