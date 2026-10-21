@@ -292,6 +292,9 @@ struct MainTabView: View {
     }
 
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
+    /// Applied to the tab contents, not the `TabView`: overriding the bar's own
+    /// size class flipped the Duo's vertical bar to a bottom bar on the first
+    /// tab switch, without the safe-area inset, so it covered Home's last card.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -301,7 +304,6 @@ struct MainTabView: View {
         // never rebuilt; Timeline's state lives in `timeline` for its move.
         ZStack(alignment: .topLeading) {
             tabs
-                .environment(\.horizontalSizeClass, paneSizeClass)
                 .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
             if let split {
                 TimelineView(selection: timeline)
@@ -327,11 +329,13 @@ struct MainTabView: View {
     /// headless capture runs, which can't tap and whose `simctl openurl` stops
     /// on a confirmation alert. Each tab holds 22s and the first switch comes
     /// at 31s, so gh-sim's `--wait 20` shots (one per --url, about 22s apart)
-    /// land mid-hold with 11s of slack either side. Unfolded, the Timeline
-    /// step stays on Home, since Timeline already has its own pane.
+    /// land mid-hold with 11s of slack either side. gh-sim's unfolded pass
+    /// shoots about 18s later after relaunch, so the tour starts 15s later
+    /// there. Unfolded, the Timeline step stays on Home, which sits beside it.
     private func runScreenshotTour() async {
         guard ProcessInfo.processInfo.arguments.contains("-screenshotTour") else { return }
         try? await Task.sleep(for: .seconds(9))
+        if split != nil { try? await Task.sleep(for: .seconds(15)) }
         for next in [2, 3, 4, 1] {
             try? await Task.sleep(for: .seconds(22))
             guard !Task.isCancelled else { return }
@@ -345,20 +349,25 @@ struct MainTabView: View {
     private var tabs: some View {
         TabView(selection: $tab) {
             HomeView()
+                .environment(\.horizontalSizeClass, paneSizeClass)
                 .tabItem { Label("Home", systemImage: "leaf.fill") }
                 .tag(0)
             if split == nil {
                 TimelineView(selection: timeline)
+                    .environment(\.horizontalSizeClass, paneSizeClass)
                     .tabItem { Label("Timeline", systemImage: "calendar") }
                     .tag(1)
             }
             HealthView()
+                .environment(\.horizontalSizeClass, paneSizeClass)
                 .tabItem { Label("Health", systemImage: "heart.fill") }
                 .tag(2)
             JournalView()
+                .environment(\.horizontalSizeClass, paneSizeClass)
                 .tabItem { Label("Journal", systemImage: "book.fill") }
                 .tag(3)
             BloomPlusTabView()
+                .environment(\.horizontalSizeClass, paneSizeClass)
                 .tabItem {
                     Label(
                         QuitZynScreenshotMode.isEnabled

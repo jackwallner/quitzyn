@@ -18,8 +18,10 @@ paths:
 - Folding only moves frames: the `TabView` is never rebuilt. Timeline moves
   between the tab and the pane, so its month, day and unsaved draft live in
   `TimelineSelection`, owned by `MainTabView`. Keep new Timeline state there.
-- Each pane gets `horizontalSizeClass = .compact`, so it lays out as on a phone
-  and the tab bar stays a bottom bar inside the left pane.
+- Each pane's screens get `horizontalSizeClass = .compact`, so they lay out as
+  on a phone. Set it on each tab's content, never on the `TabView`: there it
+  flipped the Duo's vertical bar to a bottom bar on the first tab switch, with
+  no safe-area inset, covering Home's craving card.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
 - Screenshot runs: `-screenshotTour` (DEBUG) walks Home, Health, Journal,
   Bloom+ and Timeline on a timer (unfolded, the last step stays on Home). On
