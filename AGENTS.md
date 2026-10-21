@@ -90,6 +90,7 @@ billing, release state and the remote-Pro emulator recipe: `.claude/rules/androi
 
 ## Rules index
 - `.claude/rules/android.md`: Android port (paths `android/**`, Play scripts).
+- `.claude/rules/iphone-duo.md`: unfolded iPhone Duo split (Home | Timeline), screenshot routes.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, RevenueCat dev tips, review funnel, gotchas):
