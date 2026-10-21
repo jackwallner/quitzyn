@@ -8,6 +8,8 @@ struct OnboardingView: View {
     @Environment(\.modelContext) private var context
     @Environment(SubscriptionService.self) private var subscriptions
     @State private var step: Int = 0
+    @State private var paneGeometry = PaneGeometry()
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #if DEBUG
     /// `-onboardingStep N` jumps straight to a step. The start-date picker
     /// wedges the accessibility bridge, so this is the only way to inspect the
@@ -48,8 +50,13 @@ struct OnboardingView: View {
     }
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .topLeading) {
             Theme.brandGradient.ignoresSafeArea()
+            if let split {
+                gardenPreview
+                    .frame(width: split.primaryWidth)
+                    .frame(maxHeight: .infinity)
+            }
             VStack {
                 switch step {
                 case 0: welcome
@@ -64,7 +71,14 @@ struct OnboardingView: View {
             .padding(.horizontal, Theme.Space.l)
             .padding(.vertical, Theme.Space.l)
             .foregroundStyle(Color.white)
+            .environment(\.horizontalSizeClass, split == nil ? horizontalSizeClass : .compact)
+            // Unfolded, the steps keep to the pane right of the fold.
+            .frame(maxWidth: split?.secondaryWidth ?? .infinity, maxHeight: .infinity)
+            .padding(.leading, split?.secondaryX ?? 0)
         }
+        .onGeometryChange(for: PaneGeometry.self) { proxy in
+            PaneGeometry(width: proxy.size.width, fold: proxy.verticalFold())
+        } action: { paneGeometry = $0 }
         .sheet(isPresented: $showPaywallFallback, onDismiss: { finishOfferStep() }) {
             PaywallView(impressionId: "quitzyn_onboarding_trial_fallback")
         }
@@ -84,6 +98,34 @@ struct OnboardingView: View {
             }
             #endif
         }
+    }
+
+    private var split: UnfoldedSplit? {
+        UnfoldedSplit.make(
+            width: paneGeometry.width,
+            isRegularWidth: horizontalSizeClass == .regular,
+            fold: paneGeometry.fold
+        )
+    }
+
+    /// The pane left of the fold shows where the steps lead: a grown tree.
+    private var gardenPreview: some View {
+        VStack(spacing: Theme.Space.m) {
+            GardenSceneView(
+                days: 120,
+                vitality: 1.0,
+                activeBonsaiStyleID: GardenItemCatalog.freeSpeciesID,
+                isPro: false
+            )
+            .clipShape(RoundedRectangle(cornerRadius: Theme.cardRadius))
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            Text("Every nicotine-free day grows your tree.")
+                .font(Theme.body(weight: .semibold))
+                .foregroundStyle(Color.white)
+                .multilineTextAlignment(.center)
+        }
+        .padding(Theme.Space.l)
     }
 
     private var welcome: some View {

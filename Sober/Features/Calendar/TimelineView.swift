@@ -11,11 +11,27 @@ struct TimelineView: View {
     @Query(sort: \SobrietyJourney.startDate, order: .reverse) private var journeys: [SobrietyJourney]
     @Query private var gardenStates: [GardenState]
 
-    @State private var monthAnchor: Date = DateHelpers.startOfDay()
-    @State private var selectedDate: Date = DateHelpers.startOfDay()
-    @State private var draftMood: Int?
-    @State private var draftNote: String = ""
+    /// Owned by MainTabView: unfolding the Duo moves Timeline from its tab to
+    /// its own pane, and the month, day and unsaved note have to come along.
+    var selection: TimelineSelection
     @State private var pendingSlipDay: Date?
+
+    private var monthAnchor: Date {
+        get { selection.monthAnchor }
+        nonmutating set { selection.monthAnchor = newValue }
+    }
+    private var selectedDate: Date {
+        get { selection.selectedDate }
+        nonmutating set { selection.selectedDate = newValue }
+    }
+    private var draftMood: Int? {
+        get { selection.draftMood }
+        nonmutating set { selection.draftMood = newValue }
+    }
+    private var draftNote: String {
+        get { selection.draftNote }
+        nonmutating set { selection.draftNote = newValue }
+    }
 
     private var checkInsByDay: [Date: DailyCheckIn] {
         Dictionary(checkIns.map { (DateHelpers.startOfDay($0.day), $0) }, uniquingKeysWith: { a, _ in a })
@@ -97,7 +113,14 @@ struct TimelineView: View {
             .listStyle(.insetGrouped)
             .navigationTitle("Timeline")
             .task { await presentPassiveTrialNudge(subscriptions, intent: .progressSheet) }
-            .onAppear { loadDraft() }
+            .onAppear {
+                // A logged day reloads (Home may have changed it); an unlogged
+                // day keeps the note typed before the view was remounted.
+                if selection.draftDay != DateHelpers.startOfDay(selectedDate)
+                    || checkInsByDay[DateHelpers.startOfDay(selectedDate)] != nil {
+                    loadDraft()
+                }
+            }
             .onChange(of: selectedDate) { _, _ in loadDraft() }
             .alert(
                 "Log a slip?",
@@ -113,7 +136,9 @@ struct TimelineView: View {
     }
 
     private func loadDraft() {
-        let checkIn = checkInsByDay[DateHelpers.startOfDay(selectedDate)]
+        let day = DateHelpers.startOfDay(selectedDate)
+        let checkIn = checkInsByDay[day]
+        selection.draftDay = day
         draftMood = checkIn?.mood
         draftNote = checkIn?.note ?? ""
     }
@@ -505,4 +530,17 @@ struct TimelineView: View {
         context.saveOrReport()
         WidgetSnapshotPump.push(context: context)
     }
+}
+
+/// Timeline's month, selected day and check-in draft, held above the view.
+@MainActor
+@Observable
+final class TimelineSelection {
+    var monthAnchor: Date = DateHelpers.startOfDay()
+    var selectedDate: Date = DateHelpers.startOfDay()
+    var draftMood: Int?
+    var draftNote: String = ""
+    /// The day the draft was loaded for, so a remount can tell a stale draft
+    /// from one still being typed.
+    var draftDay: Date?
 }

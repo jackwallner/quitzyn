@@ -218,6 +218,28 @@ struct RootView: View {
             CheckInService(context: context).fillJourney(start: start, through: .now)
         }
 
+        if args.contains("-QuitZynScreenshot"), (try? context.fetch(FetchDescriptor<JournalEntry>()))?.isEmpty ?? true {
+            let entries: [(daysAgo: Int, hour: Int, feeling: String, text: String)] = [
+                (1, 21, "excellent", "Went a full workday without reaching for my pocket once. The afternoon slump is shorter now."),
+                (4, 20, "good", "Craving hit after lunch. Walked around the block and it passed before I got back."),
+                (9, 22, "good", "Sleeping through the night again. Mornings feel clearer than they have in years."),
+                (17, 19, "neutral", "Rough start to the week, but I didn't use. Counting that as a win.")
+            ]
+            for entry in entries {
+                let day = Calendar.current.date(byAdding: .day, value: -entry.daysAgo, to: .now) ?? .now
+                let createdAt = Calendar.current.date(bySettingHour: entry.hour, minute: 10, second: 0, of: day) ?? day
+                context.insert(JournalEntry(createdAt: createdAt, kind: .freeform, text: entry.text, feeling: entry.feeling))
+            }
+            let moods: [(daysAgo: Int, mood: Int, note: String?)] = [
+                (0, 5, "Feeling steady. Garden keeps growing."), (1, 4, nil), (2, 4, nil),
+                (3, 5, nil), (5, 3, nil), (6, 4, nil), (8, 5, nil)
+            ]
+            let checkIns = CheckInService(context: context)
+            for item in moods {
+                checkIns.checkIn(for: DateHelpers.daysAgo(item.daysAgo), wasSober: true, mood: item.mood, note: item.note)
+            }
+        }
+
         if args.contains("-QuitZynScreenshot"), (try? context.fetch(FetchDescriptor<CravingEpisode>()))?.isEmpty ?? true {
             let calendar = Calendar.current
             let service = CravingService(context: context)
@@ -256,15 +278,63 @@ struct MainTabView: View {
     @State private var trialOfferFocus: BloomFeature?
     @State private var trialPurchaseInFlight = false
     @State private var trialPurchaseError: String?
+    @State private var timeline = TimelineSelection()
+    @State private var paneGeometry = PaneGeometry()
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
+    /// Unfolded, Timeline has its own pane beside the tabs, so it is never a tab.
+    private var split: UnfoldedSplit? {
+        UnfoldedSplit.make(
+            width: paneGeometry.width,
+            isRegularWidth: horizontalSizeClass == .regular,
+            fold: paneGeometry.fold
+        )
+    }
+
+    /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
+    private var paneSizeClass: UserInterfaceSizeClass? {
+        split == nil ? horizontalSizeClass : .compact
+    }
 
     var body: some View {
+        // Opening or closing the Duo only moves these frames, so the tabs are
+        // never rebuilt; Timeline's state lives in `timeline` for its move.
+        ZStack(alignment: .topLeading) {
+            tabs
+                .environment(\.horizontalSizeClass, paneSizeClass)
+                .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
+            if let split {
+                TimelineView(selection: timeline)
+                    .environment(\.horizontalSizeClass, .compact)
+                    .frame(width: split.secondaryWidth)
+                    .frame(maxHeight: .infinity)
+                    .padding(.leading, split.secondaryX)
+            }
+        }
+        .onGeometryChange(for: PaneGeometry.self) { proxy in
+            PaneGeometry(width: proxy.size.width, fold: proxy.verticalFold())
+        } action: { paneGeometry = $0 }
+        .onChange(of: split != nil) { _, isSplit in
+            if isSplit, tab == 1 { tab = 0 }
+        }
+        .onOpenURL { url in
+            // `quitzyn://<tab>`, also how headless screenshot runs move between tabs.
+            let routes = ["home": 0, "timeline": 1, "health": 2, "journal": 3, "bloom": 4]
+            guard let target = routes[url.host() ?? ""] else { return }
+            tab = (target == 1 && split != nil) ? 0 : target
+        }
+    }
+
+    private var tabs: some View {
         TabView(selection: $tab) {
             HomeView()
                 .tabItem { Label("Home", systemImage: "leaf.fill") }
                 .tag(0)
-            TimelineView()
-                .tabItem { Label("Timeline", systemImage: "calendar") }
-                .tag(1)
+            if split == nil {
+                TimelineView(selection: timeline)
+                    .tabItem { Label("Timeline", systemImage: "calendar") }
+                    .tag(1)
+            }
             HealthView()
                 .tabItem { Label("Health", systemImage: "heart.fill") }
                 .tag(2)
@@ -348,7 +418,7 @@ struct MainTabView: View {
     private var trialOfferPriceText: String? { subscriptions.directTrialPackage?.soberPriceLabel }
 
     private func handleTrialPitch(_ request: TrialOfferCoordinator.PendingRequest) {
-        guard !subscriptions.isProSubscriber else { return }
+        guard !subscriptions.isProSubscriber, !QuitZynScreenshotMode.isEnabled else { return }
         let focus = request.intent.focusFeature
 
         switch request.policy {

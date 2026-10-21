@@ -472,7 +472,8 @@ struct HomeView: View {
         svc.processCycleCompletions(days: days)
         var event = svc.processGrowthEvents(days: treeDays)
         AchievementService(context: context).processUnlocks(currentDays: days)
-        guard event != nil else { return }
+        // A seeded screenshot run would open on the celebration, not the garden.
+        guard event != nil, !QuitZynScreenshotMode.isEnabled else { return }
         if case .treeCompleted = event {
             // The event counts this journey's cycles; the grove also holds
             // trees from before any reset. Celebrate the lifetime total so
