@@ -294,7 +294,8 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch, without the safe-area inset, so it covered Home's last card.
+    /// tab switch. Unfolded, iOS 27.1 still draws a bottom bar here, and Home's
+    /// last card sits under it (open: see .claude/rules/iphone-duo.md).
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
