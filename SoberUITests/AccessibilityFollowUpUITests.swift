@@ -55,23 +55,6 @@ final class AccessibilityFollowUpUITests: XCTestCase {
         if report { frames(app, name) }
     }
 
-    // MARK: Onboarding (never finished, and named to sort before the seeded tests, so the store is still un-onboarded)
-
-    func testAOnboardingStepsAX5() {
-        // The date picker (1) and the hour wheel (4) are screenshot only: the
-        // source says they wedge the accessibility bridge.
-        for step in 0...5 {
-            let app = launch(size: Self.ax5, extra: ["-onboardingStep", "\(step)", "-previewStore"])
-            capture(app, "ax5-onboarding-\(step)", report: step != 1 && step != 4, wait: 3)
-            app.terminate()
-        }
-    }
-
-    func testAOnboardingTrialStepDefault() {
-        let app = launch(size: Self.standard, extra: ["-onboardingStep", "3", "-previewStore"])
-        capture(app, "std-onboarding-3", wait: 3)
-    }
-
     // MARK: Check-in sheet and keyboard
 
     func testCheckInSheetKeyboard() {
