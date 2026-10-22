@@ -54,6 +54,7 @@ struct HealthView: View {
             }
             .listStyle(.insetGrouped)
             .themedScrollBackground()
+            .paneTabBarClearance()
             .navigationTitle("Health")
         }
         .task { await presentPassiveTrialNudge(subscriptions, intent: .healthTimeline) }

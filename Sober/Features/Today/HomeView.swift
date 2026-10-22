@@ -85,6 +85,7 @@ struct HomeView: View {
                     .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.stack = $0 }
                 }
             }
+            .paneTabBarClearance()
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

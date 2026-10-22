@@ -5,6 +5,9 @@ paths:
   - "Sober/Features/Calendar/TimelineView.swift"
   - "Sober/Features/Today/HomeView.swift"
   - "Sober/Features/Onboarding/OnboardingView.swift"
+  - "Sober/Features/Health/HealthView.swift"
+  - "Sober/Features/Journal/JournalView.swift"
+  - "Sober/Features/Paywall/BloomPlusTabView.swift"
 ---
 
 # Quit Zyn: iPhone Duo (2026-10-21)
@@ -22,27 +25,27 @@ paths:
 - Each pane's screens get `horizontalSizeClass = .compact`, so they lay out as
   on a phone. It is set on each tab's content, not the `TabView` (there it
   flipped the vertical bar to a bottom bar on the first tab switch).
-- Unfolded, iOS 27.1 draws the pane's tab bar as a bottom floating bar (63 pt,
-  20 pt above the edge) that adds no safe area, unlike the folded vertical
-  bar. `PaneTabBarClearance` pads each tab's bottom safe area by
-  `UnfoldedSplit.tabBarClearance` less any inset the system gives, only while
-  split. Home is a non-scrolling stack, so `HomeView.fittedGardenMinHeight`
-  also lowers the garden's floor as far as the measured space needs
-  (`StackSpace`); layouts that already fit are unchanged. DEBUG screenshot
-  runs log `HOMELAYOUT` with the measured heights. The bar's placement is not
-  stable: the 5c5c2a1 capture run got the system vertical bar beside the fold
-  on every tab (Home then matches the phone exactly), while 3404c50 got the
-  bottom bar. Check `launch-inner.png` after any change to the tab view.
+- Unfolded, iOS 27.1 sometimes moved the pane's toolbars and tab bar into a
+  vertical bar beside the fold and sometimes drew a bottom floating bar
+  (63 pt, 20 pt above the edge, no safe area), from one launch to the next.
+  While split, `horizontalBarsInPane` (`toolbarVerticalBehavior(.disabled)`)
+  keeps every bar horizontal so the layout is the same each time; folded
+  stays `.automatic`. Each tab screen applies `.paneTabBarClearance()`
+  *inside* its `NavigationStack` (driven by the `clearsPaneTabBar`
+  environment value): the same padding outside the stack never reached Home's
+  content, and the bar covered the craving card. It pads by
+  `UnfoldedSplit.tabBarClearance` less any inset the system gives. Home is a
+  non-scrolling stack, so `HomeView.fittedGardenMinHeight` lowers the
+  garden's floor as far as the measured space needs (`StackSpace`). DEBUG
+  screenshot runs log `HOMELAYOUT` and `PANECLEAR`.
 - gh-sim marks `--wait 30` runs `crashed` (exit 1) because the app is gone by
   its end check, though app.log has no crash and the last shot shows the app
   alive. Both `--wait 20` runs before it ended clean, so captures use 20.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
-- Screenshot runs: `-screenshotTour` (DEBUG) briefly visits Health and
-  Journal (so the recording opens with transitions), returns to Home,
-  then walks Health, Journal, Bloom+ and Timeline on a schedule timed for
-  `--wait 20` (unfolded, the last step stays on Home). Shots land 26 to 33s
-  after launch and then 20 to 21.5s apart, so drift, not the hold, is the
-  risk. On iOS 27, `simctl openurl` to
+- Screenshot runs: `-screenshotTour` (DEBUG) walks Health, Journal, Bloom+
+  and Timeline on a per-pose schedule timed for `--wait 20` (unfolded, the
+  last step stays on Home). Measured: folded shots start 15 to 18s after the
+  tour starts, unfolded 24 to 28s, then 22.5 to 24s apart. On iOS 27, `simctl openurl` to
   the app's own scheme stops on an "Open in?" alert, so gh-sim's `--url` is
   only a shot trigger: pass four URLs with an unregistered scheme.
   `-QuitZynScreenshot` seeds journal entries, moods and cravings and

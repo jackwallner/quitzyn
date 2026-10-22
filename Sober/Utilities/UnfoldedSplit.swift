@@ -46,9 +46,23 @@ extension UnfoldedSplit {
     }
 }
 
-/// Keeps a pane's tab content clear of the bottom tab bar while split.
+/// Whether a screen sits in the unfolded tab pane, under its bottom tab bar.
+private struct ClearsPaneTabBarKey: EnvironmentKey {
+    static let defaultValue = false
+}
+
+extension EnvironmentValues {
+    var clearsPaneTabBar: Bool {
+        get { self[ClearsPaneTabBarKey.self] }
+        set { self[ClearsPaneTabBarKey.self] = newValue }
+    }
+}
+
+/// Keeps a screen clear of the pane's bottom tab bar while split. Apply it
+/// inside the screen's `NavigationStack`: padding applied outside the stack
+/// never reached its content.
 struct PaneTabBarClearance: ViewModifier {
-    var isSplit: Bool
+    @Environment(\.clearsPaneTabBar) private var isSplit
     @State private var systemInset: CGFloat = 0
 
     func body(content: Content) -> some View {
@@ -56,6 +70,31 @@ struct PaneTabBarClearance: ViewModifier {
             .safeAreaPadding(.bottom, isSplit ? UnfoldedSplit.tabBarPadding(systemInset: systemInset) : 0)
             // Read outside the padding, so the padding never feeds back into it.
             .onGeometryChange(for: CGFloat.self) { $0.safeAreaInsets.bottom } action: { systemInset = $0 }
+            #if DEBUG
+            .onChange(of: isSplit, initial: true) { _, split in
+                guard QuitZynScreenshotMode.isEnabled else { return }
+                NSLog("PANECLEAR split=%d systemInset=%.1f", split ? 1 : 0, systemInset)
+            }
+            #endif
+    }
+}
+
+extension View {
+    func paneTabBarClearance() -> some View {
+        modifier(PaneTabBarClearance())
+    }
+
+    /// iOS 27.1 may move the pane's toolbars, and the tab bar with them, into
+    /// a vertical bar beside the fold, or may not, from one launch to the
+    /// next. While split, bars stay horizontal so the layout is the same every
+    /// time. Folded, the system default is unchanged.
+    @ViewBuilder
+    func horizontalBarsInPane(_ isSplit: Bool) -> some View {
+        if #available(iOS 27.1, *) {
+            toolbarVerticalBehavior(isSplit ? .disabled : .automatic)
+        } else {
+            self
+        }
     }
 }
 

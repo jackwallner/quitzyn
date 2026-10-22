@@ -294,8 +294,9 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch. Unfolded, iOS 27.1 draws a bottom bar here instead, with no
-    /// safe area for it, so each tab gets `PaneTabBarClearance`.
+    /// tab switch. While split the bars are kept horizontal, and the pane's
+    /// bottom bar adds no safe area, so each screen applies
+    /// `PaneTabBarClearance` inside its stack.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -309,6 +310,7 @@ struct MainTabView: View {
             if let split {
                 TimelineView(selection: timeline)
                     .environment(\.horizontalSizeClass, .compact)
+                    .horizontalBarsInPane(true)
                     .frame(width: split.secondaryWidth)
                     .frame(maxHeight: .infinity)
                     .padding(.leading, split.secondaryX)
@@ -328,22 +330,20 @@ struct MainTabView: View {
     #if DEBUG
     /// `-screenshotTour`: walks Home, Health, Journal, Bloom+ and Timeline for
     /// headless capture runs, which can't tap and whose `simctl openurl` stops
-    /// on a confirmation alert. Timed for gh-sim's `--wait 20`: its shots land
-    /// about 26 to 33s after launch and then every 20 to 21.5s, in both the
-    /// folded and unfolded pass, so each switch sits midway between two shots.
-    /// (`--wait 30` runs end with the app gone at gh-sim's end check.) The
-    /// early round trip gives the recording real transitions; it is back on
-    /// Home by the first shot. Unfolded, the Timeline step stays on Home,
-    /// which sits beside it.
+    /// on a confirmation alert. Timed for gh-sim's `--wait 20`, from where its
+    /// shots landed: folded the first one comes 15 to 18s in, unfolded (after
+    /// a relaunch and a draw probe) 24 to 28s in, then every 22.5 to 24s. Each
+    /// switch sits midway between two shots of the pose it runs in. Unfolded,
+    /// the Timeline step stays on Home, which sits beside it.
     private func runScreenshotTour() async {
         guard ProcessInfo.processInfo.arguments.contains("-screenshotTour") else { return }
         let start = ContinuousClock.now
-        let steps: [(at: Double, tab: Int)] = [
-            (8, 2), (13, 3), (18, 0),
-            (39.5, 2), (60, 3), (81, 4), (101.5, 1)
+        let steps: [(folded: Double, unfolded: Double, tab: Int)] = [
+            (27.5, 37, 2), (51, 60.5, 3), (74, 84, 4), (97.5, 107, 1)
         ]
         for step in steps {
-            try? await Task.sleep(until: start + .milliseconds(Int(step.at * 1000)), clock: .continuous)
+            let at = split == nil ? step.folded : step.unfolded
+            try? await Task.sleep(until: start + .milliseconds(Int(at * 1000)), clock: .continuous)
             guard !Task.isCancelled else { return }
             withAnimation(.easeInOut(duration: 0.3)) {
                 tab = (step.tab == 1 && split != nil) ? 0 : step.tab
@@ -355,29 +355,25 @@ struct MainTabView: View {
     private var tabs: some View {
         TabView(selection: $tab) {
             HomeView()
-                .environment(\.horizontalSizeClass, paneSizeClass)
-                .modifier(PaneTabBarClearance(isSplit: split != nil))
+                .paneTab(sizeClass: paneSizeClass, isSplit: split != nil)
                 .tabItem { Label("Home", systemImage: "leaf.fill") }
                 .tag(0)
             if split == nil {
                 TimelineView(selection: timeline)
-                    .environment(\.horizontalSizeClass, paneSizeClass)
+                    .paneTab(sizeClass: paneSizeClass, isSplit: false)
                     .tabItem { Label("Timeline", systemImage: "calendar") }
                     .tag(1)
             }
             HealthView()
-                .environment(\.horizontalSizeClass, paneSizeClass)
-                .modifier(PaneTabBarClearance(isSplit: split != nil))
+                .paneTab(sizeClass: paneSizeClass, isSplit: split != nil)
                 .tabItem { Label("Health", systemImage: "heart.fill") }
                 .tag(2)
             JournalView()
-                .environment(\.horizontalSizeClass, paneSizeClass)
-                .modifier(PaneTabBarClearance(isSplit: split != nil))
+                .paneTab(sizeClass: paneSizeClass, isSplit: split != nil)
                 .tabItem { Label("Journal", systemImage: "book.fill") }
                 .tag(3)
             BloomPlusTabView()
-                .environment(\.horizontalSizeClass, paneSizeClass)
-                .modifier(PaneTabBarClearance(isSplit: split != nil))
+                .paneTab(sizeClass: paneSizeClass, isSplit: split != nil)
                 .tabItem {
                     Label(
                         QuitZynScreenshotMode.isEnabled
@@ -390,6 +386,7 @@ struct MainTabView: View {
                 }
                 .tag(4)
         }
+        .horizontalBarsInPane(split != nil)
         .onChange(of: trialCoordinator.pendingRequest) { _, request in
             guard let request else { return }
             trialCoordinator.clear()
@@ -542,4 +539,14 @@ struct MainTabView: View {
 
     private func startDirectTrialPurchase() {}
     #endif
+}
+
+private extension View {
+    /// One tab's screen: the phone layout in a pane, bars kept horizontal and
+    /// clear of the pane's bottom tab bar while split.
+    func paneTab(sizeClass: UserInterfaceSizeClass?, isSplit: Bool) -> some View {
+        environment(\.horizontalSizeClass, sizeClass)
+            .environment(\.clearsPaneTabBar, isSplit)
+            .horizontalBarsInPane(isSplit)
+    }
 }
