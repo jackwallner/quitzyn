@@ -294,9 +294,9 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch. While split the bars are kept horizontal, and the pane's
-    /// bottom bar adds no safe area, so each screen applies
-    /// `PaneTabBarClearance` inside its stack.
+    /// tab switch. Unfolded, iOS 27.1 may draw a bottom bar here with no safe
+    /// area for it, so each screen applies `PaneTabBarClearance` inside its
+    /// stack.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -310,7 +310,6 @@ struct MainTabView: View {
             if let split {
                 TimelineView(selection: timeline)
                     .environment(\.horizontalSizeClass, .compact)
-                    .horizontalBarsInPane(true)
                     .frame(width: split.secondaryWidth)
                     .frame(maxHeight: .infinity)
                     .padding(.leading, split.secondaryX)
@@ -328,26 +327,23 @@ struct MainTabView: View {
     }
 
     #if DEBUG
-    /// `-screenshotTour`: walks Home, Health, Journal, Bloom+ and Timeline for
-    /// headless capture runs, which can't tap and whose `simctl openurl` stops
-    /// on a confirmation alert. Timed for gh-sim's `--wait 20`, from where its
-    /// shots landed: folded the first one comes 15 to 18s in, unfolded (after
-    /// a relaunch and a draw probe) 24 to 28s in, then every 22.5 to 24s. Each
-    /// switch sits midway between two shots of the pose it runs in. Unfolded,
-    /// the Timeline step stays on Home, which sits beside it.
+    /// `-screenshotTour`: cycles Home, Health, Journal, Bloom+ and (folded)
+    /// Timeline, 16s each, for headless capture runs, which can't tap and
+    /// whose `simctl openurl` stops on a confirmation alert. gh-sim's shot
+    /// times vary by tens of seconds between runners, so rather than aim at
+    /// them the tour keeps cycling and the run takes a shot about every 8 to
+    /// 12s (`--wait 5` and a dozen `--url` triggers): every screen gets at
+    /// least one. Unfolded, Timeline is the right pane, so it skips that step.
     private func runScreenshotTour() async {
         guard ProcessInfo.processInfo.arguments.contains("-screenshotTour") else { return }
-        let start = ContinuousClock.now
-        let steps: [(folded: Double, unfolded: Double, tab: Int)] = [
-            (27.5, 37, 2), (51, 60.5, 3), (74, 84, 4), (97.5, 107, 1)
-        ]
-        for step in steps {
-            let at = split == nil ? step.folded : step.unfolded
-            try? await Task.sleep(until: start + .milliseconds(Int(at * 1000)), clock: .continuous)
+        let order = [0, 2, 3, 4, 1]
+        var index = 0
+        while !Task.isCancelled {
+            try? await Task.sleep(for: .seconds(16))
             guard !Task.isCancelled else { return }
-            withAnimation(.easeInOut(duration: 0.3)) {
-                tab = (step.tab == 1 && split != nil) ? 0 : step.tab
-            }
+            index = (index + 1) % order.count
+            if order[index] == 1, split != nil { index = 0 }
+            withAnimation(.easeInOut(duration: 0.3)) { tab = order[index] }
         }
     }
     #endif
@@ -386,7 +382,6 @@ struct MainTabView: View {
                 }
                 .tag(4)
         }
-        .horizontalBarsInPane(split != nil)
         .onChange(of: trialCoordinator.pendingRequest) { _, request in
             guard let request else { return }
             trialCoordinator.clear()
@@ -542,11 +537,10 @@ struct MainTabView: View {
 }
 
 private extension View {
-    /// One tab's screen: the phone layout in a pane, bars kept horizontal and
-    /// clear of the pane's bottom tab bar while split.
+    /// One tab's screen: the phone layout in a pane, clear of the pane's
+    /// bottom tab bar while split.
     func paneTab(sizeClass: UserInterfaceSizeClass?, isSplit: Bool) -> some View {
         environment(\.horizontalSizeClass, sizeClass)
             .environment(\.clearsPaneTabBar, isSplit)
-            .horizontalBarsInPane(isSplit)
     }
 }

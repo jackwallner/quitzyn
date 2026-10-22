@@ -96,4 +96,12 @@ struct PaneTabBarClearanceTests {
     @Test func aSystemInsetForTheBarAddsNothing() {
         #expect(UnfoldedSplit.tabBarPadding(systemInset: 100) == 0)
     }
+
+    @Test func aBottomBarPaneGetsTheClearance() {
+        #expect(UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 0) == UnfoldedSplit.tabBarClearance)
+    }
+
+    @Test func aVerticalBarBesideTheContentNeedsNoBottomPadding() {
+        #expect(UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 96) == 0)
+    }
 }

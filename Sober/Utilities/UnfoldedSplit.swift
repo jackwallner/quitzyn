@@ -44,6 +44,14 @@ extension UnfoldedSplit {
     static func tabBarPadding(systemInset: CGFloat) -> CGFloat {
         max(0, tabBarClearance - systemInset)
     }
+
+    /// Side insets wider than this mean the system put the pane's bars in a
+    /// vertical bar beside the content, so there is no bottom bar to clear.
+    static let verticalBarInset: CGFloat = 40
+
+    static func tabBarPadding(bottomInset: CGFloat, sideInsets: CGFloat) -> CGFloat {
+        sideInsets > verticalBarInset ? 0 : tabBarPadding(systemInset: bottomInset)
+    }
 }
 
 /// Whether a screen sits in the unfolded tab pane, under its bottom tab bar.
@@ -60,41 +68,44 @@ extension EnvironmentValues {
 
 /// Keeps a screen clear of the pane's bottom tab bar while split. Apply it
 /// inside the screen's `NavigationStack`: padding applied outside the stack
-/// never reached its content.
+/// never reached its content. iOS 27.1 picks the pane's bar placement itself,
+/// from one launch to the next: a bottom floating bar that adds no safe area,
+/// or a vertical bar beside the content that does (as side insets), which
+/// needs nothing more.
 struct PaneTabBarClearance: ViewModifier {
     @Environment(\.clearsPaneTabBar) private var isSplit
-    @State private var systemInset: CGFloat = 0
+    @State private var insets = PaneInsets()
+
+    private var padding: CGFloat {
+        guard isSplit else { return 0 }
+        return UnfoldedSplit.tabBarPadding(bottomInset: insets.bottom, sideInsets: insets.sides)
+    }
 
     func body(content: Content) -> some View {
         content
-            .safeAreaPadding(.bottom, isSplit ? UnfoldedSplit.tabBarPadding(systemInset: systemInset) : 0)
+            .safeAreaPadding(.bottom, padding)
             // Read outside the padding, so the padding never feeds back into it.
-            .onGeometryChange(for: CGFloat.self) { $0.safeAreaInsets.bottom } action: { systemInset = $0 }
+            .onGeometryChange(for: PaneInsets.self) { proxy in
+                let safe = proxy.safeAreaInsets
+                return PaneInsets(bottom: safe.bottom, sides: safe.leading + safe.trailing)
+            } action: { insets = $0 }
             #if DEBUG
-            .onChange(of: isSplit, initial: true) { _, split in
+            .onChange(of: padding, initial: true) { _, padding in
                 guard QuitZynScreenshotMode.isEnabled else { return }
-                NSLog("PANECLEAR split=%d systemInset=%.1f", split ? 1 : 0, systemInset)
+                NSLog("PANECLEAR split=%d bottom=%.1f sides=%.1f padding=%.1f", isSplit ? 1 : 0, insets.bottom, insets.sides, padding)
             }
             #endif
     }
 }
 
+struct PaneInsets: Equatable, Sendable {
+    var bottom: CGFloat = 0
+    var sides: CGFloat = 0
+}
+
 extension View {
     func paneTabBarClearance() -> some View {
         modifier(PaneTabBarClearance())
-    }
-
-    /// iOS 27.1 may move the pane's toolbars, and the tab bar with them, into
-    /// a vertical bar beside the fold, or may not, from one launch to the
-    /// next. While split, bars stay horizontal so the layout is the same every
-    /// time. Folded, the system default is unchanged.
-    @ViewBuilder
-    func horizontalBarsInPane(_ isSplit: Bool) -> some View {
-        if #available(iOS 27.1, *) {
-            toolbarVerticalBehavior(isSplit ? .disabled : .automatic)
-        } else {
-            self
-        }
     }
 }
 
