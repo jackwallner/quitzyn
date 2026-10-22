@@ -91,12 +91,12 @@ final class ExperiencedAuditUITests: XCTestCase {
 
     private func labels(containing needle: String) -> [String] {
         app.staticTexts.allElementsBoundByIndex
-            .map(\.label)
+            .map { $0.label }
             .filter { $0.contains(needle) }
     }
 
     private func allLabels() -> String {
-        app.staticTexts.allElementsBoundByIndex.map(\.label).joined(separator: " | ")
+        app.staticTexts.allElementsBoundByIndex.map { $0.label }.joined(separator: " | ")
     }
 
     private var checkInButton: XCUIElement {
@@ -393,7 +393,7 @@ final class ExperiencedAuditUITests: XCTestCase {
         openMore("Reset counter")
         sleep(1)
         shot("61-reset-alert")
-        note("reset alert text: \(app.alerts.firstMatch.label) / \(app.alerts.firstMatch.staticTexts.allElementsBoundByIndex.map(\.label))")
+        note("reset alert text: \(app.alerts.firstMatch.label) / \(app.alerts.firstMatch.staticTexts.allElementsBoundByIndex.map { $0.label })")
         tapIf(app.alerts.buttons["Reset"], "Reset")
         sleep(2)
         shot("62-home-after-reset")
