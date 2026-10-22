@@ -44,13 +44,50 @@ final class NewcomerAuditUITests: XCTestCase {
         let back = app.buttons["Back to the garden"]
         if back.waitForExistence(timeout: 10) { back.tap() }
         sleep(1)
+        dismissRatingSheetIfPresent(app)
         let tabs = app.tabBars.buttons
         for i in 0..<tabs.count {
             let t = tabs.element(boundBy: i)
+            let label = t.label
             t.tap(); sleep(2)
-            shot("20-tab-\(i)-\(t.label)")
-            if !t.isHittable { XCTFail("tab \(t.label) unhittable") }
-            if t.frame.height < 44 { XCTFail("tab \(t.label) height \(t.frame.height)") }
+            shot("20-tab-\(i)-\(label)")
+            if !t.isHittable { XCTFail("tab \(label) unhittable") }
+            if t.frame.height < 44 { XCTFail("tab \(label) height \(t.frame.height)") }
+        }
+    }
+
+    /// Return visit plus the exit paths a newcomer looks for: the Home menu
+    /// (settings, restore purchases) from a cold relaunch of a seeded journey.
+    func testReturnVisitSettingsAndRestore() {
+        let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
+        app.launchArguments += ["-seedDemo"]
+        app.launch()
+        XCTAssertTrue(app.buttons["Check in for today"].waitForExistence(timeout: 20)
+            || app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in")).firstMatch.exists)
+        app.terminate()
+        app.launch()
+        sleep(3); shot("30-return-visit")
+        let menu = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'more' OR label CONTAINS[c] 'settings'")).firstMatch
+        if menu.waitForExistence(timeout: 5) {
+            menu.tap(); sleep(2); shot("31-menu")
+            let settings = app.buttons["Settings"]
+            if settings.waitForExistence(timeout: 3) { settings.tap(); sleep(2); shot("32-settings") }
+        } else {
+            shot("31-menu-not-found")
+            XCTFail("Home menu button not found by label")
+        }
+        let upgrade = app.tabBars.buttons.element(boundBy: 4)
+        if upgrade.exists { upgrade.tap(); sleep(2); shot("33-upgrade-tab") }
+    }
+
+    private func dismissRatingSheetIfPresent(_ app: XCUIApplication) {
+        // The system review prompt (SKStoreReviewController) lives in the app
+        // process on the simulator, so its buttons are queryable.
+        let notNow = app.buttons["Not Now"]
+        if notNow.waitForExistence(timeout: 6) {
+            shot("14-rating-sheet-over-home")
+            notNow.tap()
+            sleep(1)
         }
     }
 }
