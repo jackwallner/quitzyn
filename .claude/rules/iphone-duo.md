@@ -22,13 +22,14 @@ paths:
 - Each pane's screens get `horizontalSizeClass = .compact`, so they lay out as
   on a phone. It is set on each tab's content, not the `TabView` (there it
   flipped the vertical bar to a bottom bar on the first tab switch).
-- Unfolded, iOS 27.1 draws the pane's tab bar as a bottom floating bar, so
-  Home (a non-scrolling stack) has about 60 pt less height than folded, where
-  the bar is vertical. Its garden floor overflowed and the bar covered the
-  craving card. `HomeView.fittedGardenMinHeight` lowers the floor only as far
-  as the measured space needs (`StackSpace`), so layouts that already fit,
-  including the folded Duo, are unchanged. DEBUG screenshot runs log
-  `HOMELAYOUT` with the measured heights.
+- Unfolded, iOS 27.1 draws the pane's tab bar as a bottom floating bar (63 pt,
+  20 pt above the edge) that adds no safe area, unlike the folded vertical
+  bar. `PaneTabBarClearance` pads each tab's bottom safe area by
+  `UnfoldedSplit.tabBarClearance` less any inset the system gives, only while
+  split. Home is a non-scrolling stack, so `HomeView.fittedGardenMinHeight`
+  also lowers the garden's floor as far as the measured space needs
+  (`StackSpace`); layouts that already fit are unchanged. DEBUG screenshot
+  runs log `HOMELAYOUT` with the measured heights.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
 - Screenshot runs: `-screenshotTour` (DEBUG) briefly visits Health and
   Journal (so the first 40s of recording has transitions), returns to Home,

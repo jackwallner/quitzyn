@@ -294,8 +294,8 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch. Unfolded, iOS 27.1 draws a bottom bar here instead, so the
-    /// shorter pane is handled in `HomeView.fittedGardenMinHeight`.
+    /// tab switch. Unfolded, iOS 27.1 draws a bottom bar here instead, with no
+    /// safe area for it, so each tab gets `PaneTabBarClearance`.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -355,6 +355,7 @@ struct MainTabView: View {
         TabView(selection: $tab) {
             HomeView()
                 .environment(\.horizontalSizeClass, paneSizeClass)
+                .modifier(PaneTabBarClearance(isSplit: split != nil))
                 .tabItem { Label("Home", systemImage: "leaf.fill") }
                 .tag(0)
             if split == nil {
@@ -365,14 +366,17 @@ struct MainTabView: View {
             }
             HealthView()
                 .environment(\.horizontalSizeClass, paneSizeClass)
+                .modifier(PaneTabBarClearance(isSplit: split != nil))
                 .tabItem { Label("Health", systemImage: "heart.fill") }
                 .tag(2)
             JournalView()
                 .environment(\.horizontalSizeClass, paneSizeClass)
+                .modifier(PaneTabBarClearance(isSplit: split != nil))
                 .tabItem { Label("Journal", systemImage: "book.fill") }
                 .tag(3)
             BloomPlusTabView()
                 .environment(\.horizontalSizeClass, paneSizeClass)
+                .modifier(PaneTabBarClearance(isSplit: split != nil))
                 .tabItem {
                     Label(
                         QuitZynScreenshotMode.isEnabled

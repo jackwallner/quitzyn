@@ -82,3 +82,18 @@ struct StackSpaceTests {
         #expect(space.gardenRoom == 390)
     }
 }
+
+@Suite("Pane tab bar clearance")
+struct PaneTabBarClearanceTests {
+    @Test func noSystemInsetGetsTheFullClearance() {
+        #expect(UnfoldedSplit.tabBarPadding(systemInset: 0) == UnfoldedSplit.tabBarClearance)
+    }
+
+    @Test func aHomeIndicatorInsetCountsTowardIt() {
+        #expect(UnfoldedSplit.tabBarPadding(systemInset: 20) == UnfoldedSplit.tabBarClearance - 20)
+    }
+
+    @Test func aSystemInsetForTheBarAddsNothing() {
+        #expect(UnfoldedSplit.tabBarPadding(systemInset: 100) == 0)
+    }
+}
