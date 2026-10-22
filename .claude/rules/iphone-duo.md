@@ -33,19 +33,20 @@ paths:
   stable: the 5c5c2a1 capture run got the system vertical bar beside the fold
   on every tab (Home then matches the phone exactly), while 3404c50 got the
   bottom bar. Check `launch-inner.png` after any change to the tab view.
-- gh-sim marks `--wait 30` runs `crashed` because the app is gone by its end
-  check, though app.log has no crash and the last shot shows the app alive.
+- gh-sim marks `--wait 30` runs `crashed` (exit 1) because the app is gone by
+  its end check, though app.log has no crash and the last shot shows the app
+  alive. Both `--wait 20` runs before it ended clean, so captures use 20.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
 - Screenshot runs: `-screenshotTour` (DEBUG) briefly visits Health and
-  Journal (so the first 40s of recording has transitions), returns to Home,
+  Journal (so the recording opens with transitions), returns to Home,
   then walks Health, Journal, Bloom+ and Timeline on a schedule timed for
-  `--wait 30` (unfolded, the last step stays on Home). The previous run
-  showed shots land 26 to 33s after launch at `--wait 20` and about 20s
-  apart, so drift, not the hold, was the risk. On iOS 27, `simctl openurl` to
+  `--wait 20` (unfolded, the last step stays on Home). Shots land 26 to 33s
+  after launch and then 20 to 21.5s apart, so drift, not the hold, is the
+  risk. On iOS 27, `simctl openurl` to
   the app's own scheme stops on an "Open in?" alert, so gh-sim's `--url` is
   only a shot trigger: pass four URLs with an unregistered scheme.
   `-QuitZynScreenshot` seeds journal entries, moods and cravings and
   suppresses launch trial pitches and the growth celebration overlay. Recipe:
-  `gh-sim all --device 'iPhone Duo' --wait 30 --record-seconds 60 --env
+  `gh-sim all --device 'iPhone Duo' --wait 20 --record-seconds 60 --env
   SOBER_SCREENSHOT_MODE=1 --args "-seedDemo -demoPro -seedDays 129
   -QuitZynScreenshot -screenshotTour" --url noop://1 ... --url noop://4`.
