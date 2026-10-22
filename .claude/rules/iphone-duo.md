@@ -29,7 +29,12 @@ paths:
   split. Home is a non-scrolling stack, so `HomeView.fittedGardenMinHeight`
   also lowers the garden's floor as far as the measured space needs
   (`StackSpace`); layouts that already fit are unchanged. DEBUG screenshot
-  runs log `HOMELAYOUT` with the measured heights.
+  runs log `HOMELAYOUT` with the measured heights. The bar's placement is not
+  stable: the 5c5c2a1 capture run got the system vertical bar beside the fold
+  on every tab (Home then matches the phone exactly), while 3404c50 got the
+  bottom bar. Check `launch-inner.png` after any change to the tab view.
+- gh-sim marks `--wait 30` runs `crashed` because the app is gone by its end
+  check, though app.log has no crash and the last shot shows the app alive.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
 - Screenshot runs: `-screenshotTour` (DEBUG) briefly visits Health and
   Journal (so the first 40s of recording has transitions), returns to Home,
