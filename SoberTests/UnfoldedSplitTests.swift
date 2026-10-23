@@ -105,3 +105,20 @@ struct PaneTabBarClearanceTests {
         #expect(UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 96) == 0)
     }
 }
+
+@Suite("Duo screen launch argument")
+struct DuoScreenTests {
+    @Test func eachScreenOpensItsTab() {
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "home"]) == 0)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "timeline"]) == 1)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "health"]) == 2)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "journal"]) == 3)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-seedDemo", "-DuoScreen", "Bloom"]) == 4)
+    }
+
+    @Test func missingOrUnknownScreenOpensNothing() {
+        #expect(DuoScreen.launchTab(arguments: ["app"]) == nil)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen"]) == nil)
+        #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "settings"]) == nil)
+    }
+}

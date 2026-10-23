@@ -12,6 +12,39 @@ enum QuitZynScreenshotMode {
     }
 }
 
+/// `-DuoScreen home|timeline|health|journal|bloom` (DEBUG) opens that tab at
+/// launch, so a capture run can relaunch once per surface with gh-sim's
+/// `--screen` instead of timing shots against a tour. Read once at launch.
+enum DuoScreen: String, CaseIterable {
+    case home, timeline, health, journal, bloom
+
+    var tab: Int {
+        switch self {
+        case .home: 0
+        case .timeline: 1
+        case .health: 2
+        case .journal: 3
+        case .bloom: 4
+        }
+    }
+
+    static func launchTab(arguments: [String]) -> Int? {
+        guard let index = arguments.firstIndex(of: "-DuoScreen"),
+              index + 1 < arguments.count,
+              let screen = DuoScreen(rawValue: arguments[index + 1].lowercased())
+        else { return nil }
+        return screen.tab
+    }
+
+    static var launchTab: Int {
+        #if DEBUG
+        return launchTab(arguments: ProcessInfo.processInfo.arguments) ?? 0
+        #else
+        return 0
+        #endif
+    }
+}
+
 extension Notification.Name {
     /// Posted when the user taps the daily-reminder notification — MainTabView
     /// switches to Home so the check-in button is right there.
@@ -271,7 +304,7 @@ struct RootView: View {
 struct MainTabView: View {
     @Environment(SubscriptionService.self) private var subscriptions
     @StateObject private var trialCoordinator = TrialOfferCoordinator.shared
-    @State private var tab = 0
+    @State private var tab = DuoScreen.launchTab
     @State private var showTrialOffer = false
     @State private var showTrialPaywall = false
     @State private var pendingPaywallAfterTrialDismiss = false

@@ -42,15 +42,17 @@ paths:
   its end check, though app.log has no crash and the last shot shows the app
   alive. Shorter passes ended clean; keep each pass under about 150 s.
 - Onboarding unfolded: steps in the right pane, a grown-tree preview on the left.
-- Screenshot runs: `-screenshotTour` (DEBUG) cycles Home, Health, Journal,
-  Bloom+ and (folded) Timeline, 16 s each. gh-sim's shot times varied by
-  30 s and more between runners, so timed schedules missed; run with
-  `--wait 5` and twelve `--url` triggers (a shot every 8 to 12 s) and pick
-  each screen's frame from the set. On iOS 27, `simctl openurl` to
-  the app's own scheme stops on an "Open in?" alert, so gh-sim's `--url` is
-  only a shot trigger: pass URLs with an unregistered scheme.
-  `-QuitZynScreenshot` seeds journal entries, moods and cravings and
-  suppresses launch trial pitches and the growth celebration overlay. Recipe:
-  `gh-sim all --device 'iPhone Duo' --wait 5 --record-seconds 60 --env
-  SOBER_SCREENSHOT_MODE=1 --args "-seedDemo -demoPro -seedDays 129
-  -QuitZynScreenshot -screenshotTour" --url noop://1 ... --url noop://12`.
+- Screenshot runs: `-DuoScreen home|timeline|health|journal|bloom` (DEBUG)
+  opens that tab at launch, so gh-sim relaunches once per surface with
+  `--screen` and shoots it folded and unfolded. Unfolded, `timeline` lands on
+  Home, since Timeline is the right pane. Never use `--url`: on iOS 27.1 any
+  custom-scheme openurl raises an "Open in?" alert, and made-up schemes fail
+  the run. `-QuitZynScreenshot` seeds journal entries, moods and cravings and
+  suppresses launch trial pitches and the growth celebration overlay. Every
+  tab root keeps the large title (Health, Journal, Bloom+/Support, Timeline),
+  so the panes' headers match. Recipe: `gh-sim all --device 'iPhone Duo'
+  --record-seconds 20 --env SOBER_SCREENSHOT_MODE=1 --args "-seedDemo -demoPro
+  -seedDays 129 -QuitZynScreenshot" --screen "-DuoScreen home" --screen
+  "-DuoScreen health" --screen "-DuoScreen journal" --screen "-DuoScreen
+  bloom" --screen "-DuoScreen timeline"`. The older `-screenshotTour` still
+  cycles tabs every 16 s for recordings.
