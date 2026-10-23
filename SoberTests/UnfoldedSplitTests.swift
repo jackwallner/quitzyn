@@ -140,3 +140,46 @@ struct PaneEdgeFadeTests {
         #expect(UnfoldedSplit.edgeFade(padding: 84, scrolls: false) == 0)
     }
 }
+
+@Suite("Pane row fit")
+struct PaneRowFitTests {
+    @Test func rowsStopAboveTheFade() {
+        // The leading pane's clip edge on the unfolded Duo: 669 - 84.
+        #expect(UnfoldedSplit.rowLimit(clipEdge: 585, fade: 28) == 557)
+    }
+
+    @Test func noLimitFoldedOrBeforeTheEdgeIsMeasured() {
+        #expect(UnfoldedSplit.rowLimit(clipEdge: 585, fade: 0) == nil)
+        #expect(UnfoldedSplit.rowLimit(clipEdge: 0, fade: 28) == nil)
+    }
+
+    @Test func aRowTheEdgeWouldCutHides() {
+        #expect(!UnfoldedSplit.rowFits(rowBottom: 580, limit: 557))
+        #expect(!UnfoldedSplit.rowFits(rowBottom: 700, limit: 557))
+    }
+
+    @Test func aRowEndingAboveTheFadeShows() {
+        #expect(UnfoldedSplit.rowFits(rowBottom: 540, limit: 557))
+        #expect(UnfoldedSplit.rowFits(rowBottom: 557.3, limit: 557))
+    }
+
+    @Test func everyRowShowsWithoutALimit() {
+        #expect(UnfoldedSplit.rowFits(rowBottom: 5_000, limit: nil))
+    }
+}
+
+@Suite("Trailing pane")
+struct TrailingPaneTests {
+    @Test func firstCardClearsTheStatusItems() {
+        // The pane's list starts at 83 pt; the clock and battery ring end near 100 pt.
+        #expect(83 + UnfoldedSplit.trailingPaneTopClearance >= 104)
+    }
+
+    @Test func runsToTheDisplayEdgeCentredOnItsHalf() throws {
+        // Laid out over the whole 951 pt display, the trailing pane spans the
+        // fold edge to the display edge, as wide as the leading pane.
+        let split = try #require(UnfoldedSplit.make(width: 951, isRegularWidth: true, fold: 455.7...495.7))
+        #expect(abs(split.secondaryX + split.secondaryWidth - 951) < 0.001)
+        #expect(abs(split.secondaryWidth - split.primaryWidth) < 1)
+    }
+}

@@ -19,6 +19,7 @@ struct JournalView: View {
             List {
                 Section("Prompt of the day") {
                     promptRow
+                        .fitsAbovePaneEdge()
                 }
 
                 Section("Entries") {
@@ -32,6 +33,7 @@ struct JournalView: View {
                     } else {
                         ForEach(entries) { entry in
                             EntryRow(entry: entry)
+                                .fitsAbovePaneEdge()
                                 .contentShape(Rectangle())
                                 .onTapGesture { selectedEntry = entry }
                         }

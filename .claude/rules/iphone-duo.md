@@ -19,6 +19,13 @@ paths:
   `reservedRegions(.division)`), else an even split. Portrait unfolded (669 pt)
   and every compact width keep the single column. Split math: `UnfoldedSplit`,
   tested in `SoberTests/UnfoldedSplitTests.swift`.
+- Split, `MainTabView` lays the panes out over the whole display (it ignores
+  the horizontal safe area) and Timeline ignores the trailing one: iOS 27.1
+  puts the clock and battery ring around the camera in the top trailing
+  corner with a 64 pt trailing inset down the whole height, which left the
+  right pane's content 180 px off-centre (review 2026-10-23). The pane starts
+  `UnfoldedSplit.trailingPaneTopClearance` lower instead, so its first card
+  clears the ring.
 - Folding only moves frames: the `TabView` is never rebuilt. Timeline moves
   between the tab and the pane, so its month, day and unsaved draft live in
   `TimelineSelection`, owned by `MainTabView`. Keep new Timeline state there.
@@ -42,6 +49,11 @@ paths:
   stack, so `HomeView.fittedGardenMinHeight` lowers the garden's floor as far
   as the measured space needs (`StackSpace`). DEBUG screenshot runs log
   `HOMELAYOUT` and `PANECLEAR`.
+- Rows the pane's bottom edge would cut hide (`.fitsAbovePaneEdge()` on each
+  row or card, `PaneRowFit`): a row reaching into the edge fade is invisible
+  until it scrolls clear, so a resting screen never ends on a sliced line or
+  a card's top sliver (review 2026-10-23 flagged both through the fade).
+  Give every row of a new tab screen the modifier. VoiceOver shows all rows.
 - gh-sim marks `--wait 30` runs `crashed` (exit 1) because the app is gone by
   its end check, though app.log has no crash and the last shot shows the app
   alive. Shorter passes ended clean; keep each pass under about 150 s.

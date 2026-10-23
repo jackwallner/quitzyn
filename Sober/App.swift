@@ -337,17 +337,24 @@ struct MainTabView: View {
     var body: some View {
         // Opening or closing the Duo only moves these frames, so the tabs are
         // never rebuilt; Timeline's state lives in `timeline` for its move.
+        // Split, the panes are laid out across the whole display, the fold's
+        // own coordinates, and Timeline runs to the trailing edge past the
+        // safe area there (the status items' column), centring its content
+        // in its half; it starts lower to clear those items instead.
         ZStack(alignment: .topLeading) {
             tabs
                 .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
             if let split {
                 TimelineView(selection: timeline)
                     .environment(\.horizontalSizeClass, .compact)
+                    .environment(\.paneTopClearance, UnfoldedSplit.trailingPaneTopClearance)
+                    .ignoresSafeArea(.container, edges: .trailing)
                     .frame(width: split.secondaryWidth)
                     .frame(maxHeight: .infinity)
                     .padding(.leading, split.secondaryX)
             }
         }
+        .ignoresSafeArea(.container, edges: split == nil ? Edge.Set() : .horizontal)
         .onGeometryChange(for: PaneGeometry.self) { proxy in
             PaneGeometry(width: proxy.size.width, fold: proxy.verticalFold())
         } action: { paneGeometry = $0 }

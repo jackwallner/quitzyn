@@ -21,11 +21,14 @@ struct HealthView: View {
             List {
                 Section {
                     recoveryHeaderRow
+                        .fitsAbovePaneEdge()
                     if let n = HealthBenefitCatalog.next(after: hours) {
                         if subscriptions.isProSubscriber {
                             nextUpRow(n)
+                                .fitsAbovePaneEdge()
                         } else {
                             nextUpLockedRow
+                                .fitsAbovePaneEdge()
                         }
                     }
                 }
@@ -39,6 +42,7 @@ struct HealthView: View {
                         // not-yet-earned) are part of the Bloom+ value prop and
                         // render as a Pro tease rather than revealing the title.
                         BenefitRow(benefit: benefit, unlocked: visible, blurred: !visible && !inFreeWindow)
+                            .fitsAbovePaneEdge()
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 if !subscriptions.isProSubscriber && idx >= freeRevealCount {
@@ -50,6 +54,7 @@ struct HealthView: View {
                     Text("Benefits")
                 } footer: {
                     Text("General wellness information, not medical advice. Timelines vary from person to person. For medical concerns, talk to a healthcare professional.")
+                        .fitsAbovePaneEdge()
                 }
             }
             .listStyle(.insetGrouped)
@@ -170,10 +175,15 @@ private struct BenefitRow: View {
                         .foregroundStyle(Theme.textSecondary)
                         .padding(.top, 2)
                     if let url = benefit.sourceURL {
+                        // Not a Label: in a List row its icon gets the row's
+                        // icon column, pushing the text off the body's edge.
                         Link(destination: url) {
-                            Label(benefit.sourceLabel, systemImage: "link")
-                                .font(Theme.caption())
-                                .foregroundStyle(Theme.brandPrimary)
+                            HStack(spacing: 4) {
+                                Image(systemName: "link")
+                                Text(benefit.sourceLabel)
+                            }
+                            .font(Theme.caption())
+                            .foregroundStyle(Theme.brandPrimary)
                         }
                         .padding(.top, 2)
                     }

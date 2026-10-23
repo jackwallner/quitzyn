@@ -63,9 +63,13 @@ struct GardenSceneView: View {
                     y: groundLineY(s) - centerHeight(container: s) / 2
                 )
 
-                // ── Overlays: stage info + grove count (top-right), species switcher ──
+                // ── Overlays: species switcher (top-left), stage info + grove
+                // count (top-right). The sky's corners are always clear; at
+                // the bottom-left the switcher sat on the pot whenever the
+                // card was short enough to widen it.
                 VStack {
-                    HStack {
+                    HStack(alignment: .top) {
+                        speciesSwitcher
                         Spacer()
                         VStack(alignment: .trailing, spacing: 6) {
                             stageBadge
@@ -73,10 +77,6 @@ struct GardenSceneView: View {
                         }
                     }
                     Spacer()
-                    HStack {
-                        speciesSwitcher
-                        Spacer()
-                    }
                 }
                 .padding(12)
             }

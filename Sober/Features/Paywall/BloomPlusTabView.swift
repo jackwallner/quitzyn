@@ -59,11 +59,11 @@ private struct BloomPlusHubView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: Theme.Space.l) {
-                    moneyHero
-                    statRow
-                    if yearlyProjection > 0 { projectionCard }
-                    patternsCard
-                    milestonesCard
+                    moneyHero.fitsAbovePaneEdge()
+                    statRow.fitsAbovePaneEdge()
+                    if yearlyProjection > 0 { projectionCard.fitsAbovePaneEdge() }
+                    patternsCard.fitsAbovePaneEdge()
+                    milestonesCard.fitsAbovePaneEdge()
                     Button { showProgress = true } label: {
                         HStack {
                             Label("See full progress", systemImage: "chart.bar.fill")
@@ -77,6 +77,7 @@ private struct BloomPlusHubView: View {
                         .background(Theme.brandPrimary.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
                     }
                     .buttonStyle(.plain)
+                    .fitsAbovePaneEdge()
                 }
                 .padding(Theme.Space.l)
             }
