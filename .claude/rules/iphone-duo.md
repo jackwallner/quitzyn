@@ -33,7 +33,9 @@ paths:
   same padding never reached Home, and the bar covered the craving card. It
   ends the screen's frame `UnfoldedSplit.tabBarClearance` (less any bottom
   inset) above the edge, so scroll rows never show through the glass bar
-  (inset-only padding let them; independent review 2026-10-23), and not at
+  (inset-only padding let them; independent review 2026-10-23). Scrolling
+  screens fade out over `UnfoldedSplit.edgeFadeHeight` at that edge so the
+  cut row never reads as sliced; Home passes `fadesEdge: false`. Not at
   all when side insets show a vertical bar. Don't force the placement with
   `toolbarVerticalBehavior(.disabled)`: it inset the root about 42 pt on both
   sides, leaving blank strips at the display edges. Home is a non-scrolling

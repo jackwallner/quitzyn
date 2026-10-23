@@ -52,6 +52,13 @@ extension UnfoldedSplit {
     static func tabBarPadding(bottomInset: CGFloat, sideInsets: CGFloat) -> CGFloat {
         sideInsets > verticalBarInset ? 0 : tabBarPadding(systemInset: bottomInset)
     }
+
+    /// Height of the fade where a scrolling screen ends above the bottom bar.
+    static let edgeFadeHeight: CGFloat = 28
+
+    static func edgeFade(padding: CGFloat, scrolls: Bool) -> CGFloat {
+        scrolls && padding > 0 ? edgeFadeHeight : 0
+    }
 }
 
 /// Whether a screen sits in the unfolded tab pane, under its bottom tab bar.
@@ -73,8 +80,11 @@ extension EnvironmentValues {
 /// or a vertical bar beside the content that does (as side insets), which
 /// needs nothing more. The screen's frame ends above the bottom bar, rather
 /// than insetting its scroll content, so no row ever shows through the glass;
-/// the strip behind the bar keeps the screen's background.
+/// the strip behind the bar keeps the screen's background. A scrolling
+/// screen fades out over its last few points there, as under a phone's bar,
+/// so the row cut at that edge never reads as sliced.
 struct PaneTabBarClearance: ViewModifier {
+    var fadesEdge: Bool
     @Environment(\.clearsPaneTabBar) private var isSplit
     @State private var insets = PaneInsets()
 
@@ -85,6 +95,11 @@ struct PaneTabBarClearance: ViewModifier {
 
     func body(content: Content) -> some View {
         content
+            .overlay(alignment: .bottom) {
+                LinearGradient(colors: [Theme.background.opacity(0), Theme.background], startPoint: .top, endPoint: .bottom)
+                    .frame(height: UnfoldedSplit.edgeFade(padding: padding, scrolls: fadesEdge))
+                    .allowsHitTesting(false)
+            }
             .padding(.bottom, padding)
             .background(Theme.background.ignoresSafeArea())
             // Read outside the padding, so the padding never feeds back into it.
@@ -107,8 +122,10 @@ struct PaneInsets: Equatable, Sendable {
 }
 
 extension View {
-    func paneTabBarClearance() -> some View {
-        modifier(PaneTabBarClearance())
+    /// - Parameter fadesEdge: false for a screen that doesn't scroll, whose
+    ///   last card ends clear of the bar on its own.
+    func paneTabBarClearance(fadesEdge: Bool = true) -> some View {
+        modifier(PaneTabBarClearance(fadesEdge: fadesEdge))
     }
 }
 

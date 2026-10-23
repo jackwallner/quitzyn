@@ -122,3 +122,21 @@ struct DuoScreenTests {
         #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "settings"]) == nil)
     }
 }
+
+@Suite("Pane edge fade")
+struct PaneEdgeFadeTests {
+    @Test func scrollingScreenFadesAboveTheBottomBar() {
+        let padding = UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 0)
+        #expect(UnfoldedSplit.edgeFade(padding: padding, scrolls: true) == UnfoldedSplit.edgeFadeHeight)
+    }
+
+    @Test func noFadeWithoutABottomBar() {
+        let padding = UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 84)
+        #expect(UnfoldedSplit.edgeFade(padding: padding, scrolls: true) == 0)
+        #expect(UnfoldedSplit.edgeFade(padding: 0, scrolls: true) == 0)
+    }
+
+    @Test func fixedScreenNeverFades() {
+        #expect(UnfoldedSplit.edgeFade(padding: 84, scrolls: false) == 0)
+    }
+}
