@@ -320,7 +320,8 @@ struct MainTabView: View {
         UnfoldedSplit.make(
             width: paneGeometry.width,
             isRegularWidth: horizontalSizeClass == .regular,
-            fold: paneGeometry.fold
+            fold: paneGeometry.fold,
+            trailingInset: paneGeometry.trailingInset
         )
     }
 
@@ -338,17 +339,18 @@ struct MainTabView: View {
         // Opening or closing the Duo only moves these frames, so the tabs are
         // never rebuilt; Timeline's state lives in `timeline` for its move.
         // Split, the panes are laid out across the whole display, the fold's
-        // own coordinates, and Timeline runs to the trailing edge past the
-        // safe area there (the status items' column), centring its content
-        // in its half; it starts lower to clear those items instead.
+        // own coordinates. Timeline's content keeps clear of the trailing
+        // safe area (the column holding the clock and battery ring), so it is
+        // inset as far from the fold, centred in its half; its List keeps
+        // that inset even when told to ignore it.
         ZStack(alignment: .topLeading) {
             tabs
                 .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
             if let split {
                 TimelineView(selection: timeline)
                     .environment(\.horizontalSizeClass, .compact)
-                    .environment(\.paneTopClearance, UnfoldedSplit.trailingPaneTopClearance)
-                    .ignoresSafeArea(.container, edges: .trailing)
+                    .padding(.leading, split.secondaryLeadingInset)
+                    .background(Color(.systemGroupedBackground).ignoresSafeArea())
                     .frame(width: split.secondaryWidth)
                     .frame(maxHeight: .infinity)
                     .padding(.leading, split.secondaryX)
@@ -356,7 +358,11 @@ struct MainTabView: View {
         }
         .ignoresSafeArea(.container, edges: split == nil ? Edge.Set() : .horizontal)
         .onGeometryChange(for: PaneGeometry.self) { proxy in
-            PaneGeometry(width: proxy.size.width, fold: proxy.verticalFold())
+            PaneGeometry(
+                width: proxy.size.width,
+                fold: proxy.verticalFold(),
+                trailingInset: proxy.safeAreaInsets.trailing
+            )
         } action: { paneGeometry = $0 }
         .onChange(of: split != nil) { _, isSplit in
             if isSplit, tab == 1 { tab = 0 }

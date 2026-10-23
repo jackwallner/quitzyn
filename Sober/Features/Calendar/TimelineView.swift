@@ -15,7 +15,6 @@ struct TimelineView: View {
     /// its own pane, and the month, day and unsaved note have to come along.
     var selection: TimelineSelection
     @State private var pendingSlipDay: Date?
-    @Environment(\.paneTopClearance) private var paneTopClearance
 
     private var monthAnchor: Date {
         get { selection.monthAnchor }
@@ -112,7 +111,6 @@ struct TimelineView: View {
                 }
             }
             .listStyle(.insetGrouped)
-            .safeAreaPadding(.top, paneTopClearance)
             .navigationTitle("Timeline")
             .task { await presentPassiveTrialNudge(subscriptions, intent: .progressSheet) }
             .onAppear {

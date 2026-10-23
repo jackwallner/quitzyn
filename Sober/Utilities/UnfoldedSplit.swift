@@ -8,6 +8,9 @@ struct UnfoldedSplit: Equatable, Sendable {
     var primaryWidth: CGFloat
     var secondaryX: CGFloat
     var secondaryWidth: CGFloat
+    /// Matches the trailing safe area on the secondary pane's fold side, so
+    /// its content sits centred in the pane rather than hard against the fold.
+    var secondaryLeadingInset: CGFloat = 0
 
     /// Narrowest pane that still fits the compact Home and Timeline layouts.
     static let minimumPaneWidth: CGFloat = 360
@@ -16,19 +19,37 @@ struct UnfoldedSplit: Equatable, Sendable {
     ///   - width: the container's width.
     ///   - fold: the vertical fold's leading and trailing edge in the same
     ///     coordinate space, or `nil` when the system reports none.
-    static func make(width: CGFloat, isRegularWidth: Bool, fold: ClosedRange<CGFloat>?) -> UnfoldedSplit? {
+    /// Narrowest content the secondary pane keeps once balanced; below it the
+    /// pane gives up centring rather than squeeze Timeline's calendar.
+    static let minimumBalancedContent: CGFloat = 280
+
+    ///   - trailingInset: the display's trailing safe area, which the
+    ///     secondary pane's content stays clear of: on the unfolded Duo, the
+    ///     column holding the clock and battery ring around the camera.
+    static func make(
+        width: CGFloat,
+        isRegularWidth: Bool,
+        fold: ClosedRange<CGFloat>?,
+        trailingInset: CGFloat = 0
+    ) -> UnfoldedSplit? {
         guard isRegularWidth, width >= minimumPaneWidth * 2 else { return nil }
+        var split: UnfoldedSplit
         if let fold,
            fold.lowerBound >= minimumPaneWidth,
            width - fold.upperBound >= minimumPaneWidth {
-            return UnfoldedSplit(
+            split = UnfoldedSplit(
                 primaryWidth: fold.lowerBound,
                 secondaryX: fold.upperBound,
                 secondaryWidth: width - fold.upperBound
             )
+        } else {
+            let half = (width / 2).rounded(.down)
+            split = UnfoldedSplit(primaryWidth: half, secondaryX: half, secondaryWidth: width - half)
         }
-        let half = (width / 2).rounded(.down)
-        return UnfoldedSplit(primaryWidth: half, secondaryX: half, secondaryWidth: width - half)
+        if split.secondaryWidth - trailingInset * 2 >= minimumBalancedContent {
+            split.secondaryLeadingInset = max(0, trailingInset)
+        }
+        return split
     }
 }
 
@@ -74,12 +95,6 @@ extension UnfoldedSplit {
         guard let limit else { return true }
         return rowBottom <= limit + 0.5
     }
-
-    /// Extra top inset for the trailing pane, which runs to the display edge
-    /// past the trailing safe area: iOS 27.1 stacks the clock and the battery
-    /// ring around the camera in that corner, down to about 100 pt, and the
-    /// pane's first card would otherwise start at 83 pt beneath them.
-    static let trailingPaneTopClearance: CGFloat = 28
 }
 
 /// Whether a screen sits in the unfolded tab pane, under its bottom tab bar.
@@ -150,21 +165,11 @@ private struct PaneRowLimitKey: EnvironmentKey {
     static let defaultValue: CGFloat? = nil
 }
 
-private struct PaneTopClearanceKey: EnvironmentKey {
-    static let defaultValue: CGFloat = 0
-}
-
 extension EnvironmentValues {
     /// Set by `PaneTabBarClearance`: rows reaching below this hide.
     var paneRowLimit: CGFloat? {
         get { self[PaneRowLimitKey.self] }
         set { self[PaneRowLimitKey.self] = newValue }
-    }
-
-    /// Extra top inset for a pane's scroll content, clear of the status items.
-    var paneTopClearance: CGFloat {
-        get { self[PaneTopClearanceKey.self] }
-        set { self[PaneTopClearanceKey.self] = newValue }
     }
 }
 
@@ -210,6 +215,7 @@ extension View {
 struct PaneGeometry: Equatable, Sendable {
     var width: CGFloat = 0
     var fold: ClosedRange<CGFloat>?
+    var trailingInset: CGFloat = 0
 }
 
 extension GeometryProxy {

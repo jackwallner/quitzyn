@@ -20,12 +20,13 @@ paths:
   and every compact width keep the single column. Split math: `UnfoldedSplit`,
   tested in `SoberTests/UnfoldedSplitTests.swift`.
 - Split, `MainTabView` lays the panes out over the whole display (it ignores
-  the horizontal safe area) and Timeline ignores the trailing one: iOS 27.1
-  puts the clock and battery ring around the camera in the top trailing
-  corner with a 64 pt trailing inset down the whole height, which left the
-  right pane's content 180 px off-centre (review 2026-10-23). The pane starts
-  `UnfoldedSplit.trailingPaneTopClearance` lower instead, so its first card
-  clears the ring.
+  the horizontal safe area) and reads the trailing safe area: iOS 27.1 puts
+  the clock and battery ring around the camera in the top trailing corner
+  with a 64 pt trailing inset down the whole height. Timeline's List keeps
+  that inset even under `ignoresSafeArea` (UIKit cell margins follow the real
+  safe area; tried 2026-10-23), which left its content 180 px off-centre. So
+  the pane is padded as far on the fold side
+  (`UnfoldedSplit.secondaryLeadingInset`, tested) and its content sits centred.
 - Folding only moves frames: the `TabView` is never rebuilt. Timeline moves
   between the tab and the pane, so its month, day and unsaved draft live in
   `TimelineSelection`, owned by `MainTabView`. Keep new Timeline state there.

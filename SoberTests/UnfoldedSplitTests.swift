@@ -170,16 +170,34 @@ struct PaneRowFitTests {
 
 @Suite("Trailing pane")
 struct TrailingPaneTests {
-    @Test func firstCardClearsTheStatusItems() {
-        // The pane's list starts at 83 pt; the clock and battery ring end near 100 pt.
-        #expect(83 + UnfoldedSplit.trailingPaneTopClearance >= 104)
+    @Test func contentSitsCentredBesideTheStatusColumn() throws {
+        // The unfolded Duo: fold 455.7...495.7, a 64 pt trailing safe area.
+        let split = try #require(UnfoldedSplit.make(
+            width: 951, isRegularWidth: true, fold: 455.7...495.7, trailingInset: 64
+        ))
+        #expect(split.secondaryLeadingInset == 64)
+        // Equal space from the fold and from the display edge.
+        let fromFold = split.secondaryLeadingInset
+        let fromEdge = 951 - (split.secondaryX + split.secondaryWidth) + 64
+        #expect(abs(fromFold - fromEdge) < 0.001)
     }
 
-    @Test func runsToTheDisplayEdgeCentredOnItsHalf() throws {
-        // Laid out over the whole 951 pt display, the trailing pane spans the
-        // fold edge to the display edge, as wide as the leading pane.
-        let split = try #require(UnfoldedSplit.make(width: 951, isRegularWidth: true, fold: 455.7...495.7))
+    @Test func runsToTheDisplayEdgeAsWideAsTheLeadingPane() throws {
+        let split = try #require(UnfoldedSplit.make(
+            width: 951, isRegularWidth: true, fold: 455.7...495.7, trailingInset: 64
+        ))
         #expect(abs(split.secondaryX + split.secondaryWidth - 951) < 0.001)
         #expect(abs(split.secondaryWidth - split.primaryWidth) < 1)
+    }
+
+    @Test func noTrailingInsetNeedsNoBalance() {
+        let split = UnfoldedSplit.make(width: 951, isRegularWidth: true, fold: 455.7...495.7)
+        #expect(split?.secondaryLeadingInset == 0)
+    }
+
+    @Test func aPaneTooNarrowToBalanceKeepsItsWidth() {
+        // 360 pt panes less 2 x 64 would leave the calendar 232 pt.
+        let split = UnfoldedSplit.make(width: 720, isRegularWidth: true, fold: nil, trailingInset: 64)
+        #expect(split?.secondaryLeadingInset == 0)
     }
 }
