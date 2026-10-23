@@ -27,6 +27,9 @@ paths:
   safe area; tried 2026-10-23), which left its content 180 px off-centre. So
   the pane is padded as far on the fold side
   (`UnfoldedSplit.secondaryLeadingInset`, tested) and its content sits centred.
+- In its pane (`\.isTimelinePane`), Timeline draws the selected day's tree
+  as a 96 pt thumbnail beside its caption: the 200 pt scene started near the
+  display's bottom edge and showed only empty sky.
 - Folding only moves frames: the `TabView` is never rebuilt. Timeline moves
   between the tab and the pane, so its month, day and unsaved draft live in
   `TimelineSelection`, owned by `MainTabView`. Keep new Timeline state there.

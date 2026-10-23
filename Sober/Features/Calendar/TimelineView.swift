@@ -15,6 +15,7 @@ struct TimelineView: View {
     /// its own pane, and the month, day and unsaved note have to come along.
     var selection: TimelineSelection
     @State private var pendingSlipDay: Date?
+    @Environment(\.isTimelinePane) private var isPane
 
     private var monthAnchor: Date {
         get { selection.monthAnchor }
@@ -292,6 +293,7 @@ struct TimelineView: View {
 
     // MARK: - Reconstructed tree for the selected day
 
+    @ViewBuilder
     private var treeRow: some View {
         // The counter line shows the honest streak; only the tree inherits.
         let dayCount = soberDays(on: selectedDate)
@@ -300,29 +302,49 @@ struct TimelineView: View {
         let stage = GardenService.stage(forDays: drawnDays)
         let isToday = DateHelpers.startOfDay(selectedDate) == DateHelpers.startOfDay()
 
-        return VStack(alignment: .leading, spacing: Theme.Space.m) {
-            HStack(alignment: .firstTextBaseline) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(isToday ? "Today" : DateHelpers.mediumDate(selectedDate))
-                        .font(Theme.body())
-                        .foregroundStyle(Theme.textPrimary)
-                    Text("Day \(dayCount) · \(stage.title)")
-                        .font(Theme.subhead())
-                        .foregroundStyle(Theme.textSecondary)
+        let caption = VStack(alignment: .leading, spacing: 2) {
+            Text(isToday ? "Today" : DateHelpers.mediumDate(selectedDate))
+                .font(Theme.body())
+                .foregroundStyle(Theme.textPrimary)
+            Text("Day \(dayCount) · \(stage.title)")
+                .font(Theme.subhead())
+                .foregroundStyle(Theme.textSecondary)
+        }
+
+        // The unfolded Duo's Timeline pane is a phone's height under a
+        // calendar, so the 200 pt tree started near the display's bottom edge
+        // and showed only empty sky. There the tree sits beside its caption.
+        if isPane {
+            HStack(alignment: .top, spacing: Theme.Space.m) {
+                treeScene(dayInCycle: cycle.dayInCycle, fill: true, padding: 6)
+                    .frame(width: 96, height: 96)
+                VStack(alignment: .leading, spacing: Theme.Space.s) {
+                    caption
+                    diffNarration(dayCount: drawnDays)
                 }
-                Spacer()
             }
+        } else {
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                HStack(alignment: .firstTextBaseline) {
+                    caption
+                    Spacer()
+                }
 
-            ZStack {
-                RoundedRectangle(cornerRadius: 14).fill(Theme.skyGradient)
-                BonsaiView(day: cycle.dayInCycle, style: bonsaiStyle, vitality: 1.0)
-                    .padding(8)
-                    .id(cycle.dayInCycle)
-                    .transition(.opacity)
+                treeScene(dayInCycle: cycle.dayInCycle, fill: false, padding: 8)
+                    .frame(height: 200)
+
+                diffNarration(dayCount: drawnDays)
             }
-            .frame(height: 200)
+        }
+    }
 
-            diffNarration(dayCount: drawnDays)
+    private func treeScene(dayInCycle: Int, fill: Bool, padding: CGFloat) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 14).fill(Theme.skyGradient)
+            BonsaiView(day: dayInCycle, style: bonsaiStyle, vitality: 1.0, fill: fill)
+                .padding(padding)
+                .id(dayInCycle)
+                .transition(.opacity)
         }
     }
 

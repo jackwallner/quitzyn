@@ -164,11 +164,21 @@ struct PaneTabBarClearance: ViewModifier {
     }
 }
 
+private struct IsTimelinePaneKey: EnvironmentKey {
+    static let defaultValue = false
+}
+
 private struct PaneRowLimitKey: EnvironmentKey {
     static let defaultValue: CGFloat? = nil
 }
 
 extension EnvironmentValues {
+    /// True for the Timeline in its own unfolded pane, not its tab.
+    var isTimelinePane: Bool {
+        get { self[IsTimelinePaneKey.self] }
+        set { self[IsTimelinePaneKey.self] = newValue }
+    }
+
     /// Set by `PaneTabBarClearance`: rows reaching below this hide.
     var paneRowLimit: CGFloat? {
         get { self[PaneRowLimitKey.self] }

@@ -349,6 +349,7 @@ struct MainTabView: View {
             if let split {
                 TimelineView(selection: timeline)
                     .environment(\.horizontalSizeClass, .compact)
+                    .environment(\.isTimelinePane, true)
                     .padding(.leading, split.secondaryLeadingInset)
                     .background(Color(.systemGroupedBackground).ignoresSafeArea())
                     .frame(width: split.secondaryWidth)
