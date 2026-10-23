@@ -31,7 +31,9 @@ paths:
   screen applies `.paneTabBarClearance()` *inside* its `NavigationStack`
   (driven by the `clearsPaneTabBar` environment value); outside the stack the
   same padding never reached Home, and the bar covered the craving card. It
-  pads by `UnfoldedSplit.tabBarClearance` less any bottom inset, and not at
+  ends the screen's frame `UnfoldedSplit.tabBarClearance` (less any bottom
+  inset) above the edge, so scroll rows never show through the glass bar
+  (inset-only padding let them; independent review 2026-10-23), and not at
   all when side insets show a vertical bar. Don't force the placement with
   `toolbarVerticalBehavior(.disabled)`: it inset the root about 42 pt on both
   sides, leaving blank strips at the display edges. Home is a non-scrolling

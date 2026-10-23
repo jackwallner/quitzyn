@@ -71,7 +71,9 @@ extension EnvironmentValues {
 /// never reached its content. iOS 27.1 picks the pane's bar placement itself,
 /// from one launch to the next: a bottom floating bar that adds no safe area,
 /// or a vertical bar beside the content that does (as side insets), which
-/// needs nothing more.
+/// needs nothing more. The screen's frame ends above the bottom bar, rather
+/// than insetting its scroll content, so no row ever shows through the glass;
+/// the strip behind the bar keeps the screen's background.
 struct PaneTabBarClearance: ViewModifier {
     @Environment(\.clearsPaneTabBar) private var isSplit
     @State private var insets = PaneInsets()
@@ -83,7 +85,8 @@ struct PaneTabBarClearance: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .safeAreaPadding(.bottom, padding)
+            .padding(.bottom, padding)
+            .background(Theme.background.ignoresSafeArea())
             // Read outside the padding, so the padding never feeds back into it.
             .onGeometryChange(for: PaneInsets.self) { proxy in
                 let safe = proxy.safeAreaInsets
