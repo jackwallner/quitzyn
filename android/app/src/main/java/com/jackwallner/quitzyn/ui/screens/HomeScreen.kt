@@ -1,5 +1,9 @@
 package com.jackwallner.quitzyn.ui.screens
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -25,6 +29,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -44,6 +49,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.jackwallner.quitzyn.DebugLaunchOptions
 import com.jackwallner.quitzyn.data.PitchIntent
 import com.jackwallner.quitzyn.data.PitchPolicy
@@ -88,6 +97,7 @@ fun HomeScreen() {
     val store = graph.store
     val subscriptions = graph.subscriptions
     val context = LocalContext.current
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
     val scope = rememberCoroutineScope()
     val state = store.state
     val isPro = subscriptions.isPro
@@ -112,7 +122,7 @@ fun HomeScreen() {
     val checkedInToday = store.hasCheckedIn()
     val todayWasSlip = store.loggedSlip()
     val daysMissed = store.daysSinceLastCheckIn()
-    val week = TendedWeek.days(store.today, state.checkIns)
+    val week = TendedWeek.days(store.currentDay, state.checkIns)
     val showGrowth = growthEvent != null
 
     fun scheduleReviewAfterPositiveMoment() {
@@ -167,11 +177,35 @@ fun HomeScreen() {
         scope.launch { graph.pitches.usageBased(PitchIntent.CRAVING_RELIEF, count, threshold = 2, delaySeconds = 3.0) }
     }
 
-    LaunchedEffect(Unit) {
-        store.refresh()
-        growthEvent = store.processGrowth()
+    fun refreshDailyState(applyDecay: Boolean = false) {
+        store.refresh(applyDecay = applyDecay)
+        store.processGrowth()?.let { growthEvent = it }
+        graph.refreshWidgets()
         val settings = store.settings
         if (settings.dailyReminderEnabled) graph.notifications.refreshDailyReminder(settings.dailyReminderHour, settings.madeCommitment, store.days)
+    }
+
+    DisposableEffect(lifecycle, context) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) refreshDailyState()
+        }
+        val receiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context?, intent: Intent?) { refreshDailyState() }
+        }
+        val filter = IntentFilter().apply {
+            addAction(Intent.ACTION_DATE_CHANGED)
+            addAction(Intent.ACTION_TIME_CHANGED)
+            addAction(Intent.ACTION_TIMEZONE_CHANGED)
+        }
+        lifecycle.addObserver(observer)
+        ContextCompat.registerReceiver(context, receiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
+        onDispose {
+            lifecycle.removeObserver(observer)
+            context.unregisterReceiver(receiver)
+        }
+    }
+    LaunchedEffect(Unit) {
+        refreshDailyState(applyDecay = true)
         presentPostOnboardingPaywallIfNeeded()
     }
     LaunchedEffect(Unit) { graph.pitches.passiveNudge(PitchIntent.POST_ONBOARDING, delaySeconds = 6.0) }

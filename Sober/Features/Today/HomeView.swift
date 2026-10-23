@@ -7,6 +7,7 @@ import SwiftUI
 /// the old separate Today + Garden tabs.
 struct HomeView: View {
     @Environment(\.modelContext) private var context
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(SubscriptionService.self) private var subscriptions
     @Query(sort: \SobrietyJourney.startDate, order: .reverse) private var journeys: [SobrietyJourney]
     @Query private var gardenStates: [GardenState]
@@ -118,17 +119,7 @@ struct HomeView: View {
             }
             .onAppear {
                 GardenService(context: context).applyVitalityDecay()
-                if let j = activeJourney {
-                    // Backfill only through yesterday so today stays unlogged and
-                    // the active "Check in for today" control is reachable (auto-
-                    // filling today would always render the "Today is logged"
-                    // state before the user ever taps).
-                    CheckInService(context: context).fillJourney(start: j.startDate, through: DateHelpers.daysAgo(1))
-                }
-                refreshCheckInState()
-                checkForGrowth()
-                WidgetSnapshotPump.push(context: context)
-                refreshReminderCopy()
+                refreshDailyState()
                 presentPostOnboardingPaywallIfNeeded()
                 #if DEBUG
                 // Opens these screens directly for headless verification,
@@ -137,6 +128,18 @@ struct HomeView: View {
                 if args.contains("-craving") { showCraving = true }
                 if args.contains("-slip") { showSlipSheet = true }
                 #endif
+            }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .active { refreshDailyState() }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged)) { _ in
+                refreshDailyState()
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { _ in
+                refreshDailyState()
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .soberOpenCheckIn)) { _ in
+                refreshDailyState()
             }
             .task { await presentPassiveTrialNudge(subscriptions, intent: .postOnboarding, delay: 6) }
             .overlay {
@@ -426,6 +429,17 @@ struct HomeView: View {
     }
 
     // MARK: - State
+
+    private func refreshDailyState() {
+        if let j = activeJourney {
+            // Leave today unlogged until the user checks in.
+            CheckInService(context: context).fillJourney(start: j.startDate, through: DateHelpers.daysAgo(1))
+        }
+        refreshCheckInState()
+        checkForGrowth()
+        WidgetSnapshotPump.push(context: context)
+        refreshReminderCopy()
+    }
 
     private func refreshCheckInState() {
         let svc = CheckInService(context: context)

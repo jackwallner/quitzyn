@@ -125,6 +125,8 @@ class SoberStore(
     val activeStart: Instant? get() = JourneyDays.active(state)?.start
     val longestStreakDays: Int get() = JourneyDays.longest(state, clock)
     val lifetimeSoberDays: Int get() = SoberEngine.lifetimeSoberDays(state)
+    var currentDay by mutableStateOf(clock.today())
+        private set
     val today: LocalDate get() = clock.today()
     fun checkIn(day: LocalDate): CheckIn? = state.checkIns.firstOrNull { it.day == day }
     fun hasCheckedIn(day: LocalDate = today): Boolean = SoberEngine.hasCheckedIn(state, day)
@@ -165,16 +167,19 @@ class SoberStore(
     // MARK: - Home
 
     /** Home's onAppear: decay, backfill through yesterday, grove and badges. */
-    fun refresh(): Boolean = update { old ->
-        var next = SoberEngine.decayVitality(old, clock)
-        next = SoberEngine.fillJourney(next, clock.today().minusDays(1), clock)
-        val current = JourneyDays.current(next, clock)
-        next = SoberEngine.completeCycles(next, current)
-        val longest = SoberEngine.longestSoberStreak(next)
-        val earned = content.achievements.filter {
-            if (it.kind == "timeMilestone") current >= it.dayThreshold else longest >= it.dayThreshold
-        }.map { it.id }
-        next.copy(earnedAchievementIds = next.earnedAchievementIds + earned)
+    fun refresh(applyDecay: Boolean = true): Boolean {
+        currentDay = clock.today()
+        return update { old ->
+            var next = if (applyDecay) SoberEngine.decayVitality(old, clock) else old
+            next = SoberEngine.fillJourney(next, clock.today().minusDays(1), clock)
+            val current = JourneyDays.current(next, clock)
+            next = SoberEngine.completeCycles(next, current)
+            val longest = SoberEngine.longestSoberStreak(next)
+            val earned = content.achievements.filter {
+                if (it.kind == "timeMilestone") current >= it.dayThreshold else longest >= it.dayThreshold
+            }.map { it.id }
+            next.copy(earnedAchievementIds = next.earnedAchievementIds + earned)
+        }
     }
 
     /** `processGrowthEvents`: advances the watermark and returns what to celebrate. */

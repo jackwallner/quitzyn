@@ -1,5 +1,7 @@
 package com.jackwallner.quitzyn
 
+import androidx.compose.runtime.snapshots.Snapshot
+import androidx.compose.runtime.snapshots.SnapshotStateObserver
 import com.jackwallner.quitzyn.content.SoberContent
 import com.jackwallner.quitzyn.data.ConversionDiagnostics
 import com.jackwallner.quitzyn.data.InMemoryStore
@@ -19,9 +21,11 @@ import com.jackwallner.quitzyn.data.TrialNudgeGate
 import com.jackwallner.quitzyn.model.CravingEpisode
 import com.jackwallner.quitzyn.model.CravingOutcome
 import com.jackwallner.quitzyn.model.DailyGrowth
+import com.jackwallner.quitzyn.model.DayMark
 import com.jackwallner.quitzyn.model.HabitPriceComparison
 import com.jackwallner.quitzyn.model.InsightCopy
 import com.jackwallner.quitzyn.model.JourneyDays
+import com.jackwallner.quitzyn.model.TendedWeek
 import java.io.IOException
 import java.time.Duration
 import com.jackwallner.quitzyn.ui.screens.displayWait
@@ -236,6 +240,53 @@ class PortParityTest {
         assertFalse(store.resetCounter())
         assertEquals(SoberStore.SAVE_FAILED, store.message)
         assertEquals(10, store.days)
+    }
+
+    @Test fun midnightRefreshInvalidatesHomeEvenWhenNoRecordChanges() {
+        val store = SoberStore(MemoryFile(), clock, SoberContent.shared)
+        store.refresh(applyDecay = false)
+        Snapshot.sendApplyNotifications()
+        val observer = SnapshotStateObserver { it() }
+        var invalidations = 0
+        observer.start()
+        try {
+            observer.observeReads(Unit, { invalidations++ }) {
+                TendedWeek.days(store.currentDay, store.state.checkIns)
+            }
+            val before = store.state
+            clock.instant = clock.today().plusDays(1).atStartOfDay(clock.zone()).toInstant()
+            store.refresh(applyDecay = false)
+            Snapshot.sendApplyNotifications()
+            assertEquals(before, store.state)
+            assertEquals(1, invalidations)
+            assertEquals(clock.today(), store.currentDay)
+        } finally {
+            observer.stop()
+            observer.clear()
+        }
+    }
+
+    @Test fun nextDayRefreshClearsYesterdayCheckInAndSlipWithoutRepeatingDecay() {
+        for (wasSlip in listOf(false, true)) {
+            val store = SoberStore(MemoryFile(), clock, SoberContent.shared)
+            store.persistSetup(clock.now(), 320, 8, 9, false)
+            if (wasSlip) store.recordSlip(store.today) else store.checkInToday()
+            val yesterday = store.today
+            val vitality = store.state.garden.vitality
+            assertTrue(store.hasCheckedIn())
+            assertEquals(wasSlip, store.loggedSlip())
+
+            clock.instant = yesterday.plusDays(1).atStartOfDay(clock.zone()).toInstant()
+            repeat(2) { store.refresh(applyDecay = false) }
+
+            assertFalse(store.hasCheckedIn())
+            assertFalse(store.loggedSlip())
+            assertEquals(1, store.daysSinceLastCheckIn())
+            val week = TendedWeek.days(store.currentDay, store.state.checkIns)
+            assertEquals(DayMark.BLANK, week.last().mark)
+            assertEquals(if (wasSlip) DayMark.SLIP else DayMark.TENDED, week[5].mark)
+            assertEquals(vitality, store.state.garden.vitality, 0.0)
+        }
     }
 
     @Test fun unreadableRecordsAreKeptAndBlockWrites() {
