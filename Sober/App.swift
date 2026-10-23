@@ -358,18 +358,34 @@ struct MainTabView: View {
         }
         .ignoresSafeArea(.container, edges: split == nil ? Edge.Set() : .horizontal)
         .onGeometryChange(for: PaneGeometry.self) { proxy in
-            PaneGeometry(
-                width: proxy.size.width,
-                fold: proxy.verticalFold(),
-                trailingInset: proxy.safeAreaInsets.trailing
-            )
-        } action: { paneGeometry = $0 }
+            PaneGeometry(width: proxy.size.width, fold: proxy.verticalFold())
+        } action: { geometry in
+            // Read off the window: once this stack ignores the horizontal safe
+            // area, its own proxy reports none (R2, 2026-10-23).
+            var geometry = geometry
+            geometry.trailingInset = Self.windowTrailingInset()
+            paneGeometry = geometry
+        }
         .onChange(of: split != nil) { _, isSplit in
             if isSplit, tab == 1 { tab = 0 }
+            // The window may not have been key at the first layout.
+            paneGeometry.trailingInset = Self.windowTrailingInset()
         }
         #if DEBUG
         .task { await runScreenshotTour() }
         #endif
+    }
+
+    /// The key window's trailing safe area. The unfolded Duo reports 64 pt
+    /// there, for the clock and battery ring around the camera.
+    @MainActor
+    private static func windowTrailingInset() -> CGFloat {
+        let windows = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+        guard let window = windows.first(where: \.isKeyWindow) ?? windows.first else { return 0 }
+        let insets = window.safeAreaInsets
+        return window.effectiveUserInterfaceLayoutDirection == .rightToLeft ? insets.left : insets.right
     }
 
     #if DEBUG

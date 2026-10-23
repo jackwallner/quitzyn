@@ -19,9 +19,12 @@ struct UnfoldedSplit: Equatable, Sendable {
     ///   - width: the container's width.
     ///   - fold: the vertical fold's leading and trailing edge in the same
     ///     coordinate space, or `nil` when the system reports none.
-    /// Narrowest content the secondary pane keeps once balanced; below it the
-    /// pane gives up centring rather than squeeze Timeline's calendar.
-    static let minimumBalancedContent: CGFloat = 280
+    /// Narrowest secondary pane, less the inset on both sides, that still
+    /// balances; below it the pane gives up centring rather than squeeze
+    /// Timeline's calendar. Low enough to hold whether `width` runs to the
+    /// display edge (455 pt pane) or stops at the safe area (391 pt pane):
+    /// either way the content ends up 287 pt wide.
+    static let minimumBalancedContent: CGFloat = 240
 
     ///   - trailingInset: the display's trailing safe area, which the
     ///     secondary pane's content stays clear of: on the unfolded Duo, the

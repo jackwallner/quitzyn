@@ -190,6 +190,14 @@ struct TrailingPaneTests {
         #expect(abs(split.secondaryWidth - split.primaryWidth) < 1)
     }
 
+    @Test func balancesWhenTheWidthStopsAtTheSafeArea() throws {
+        // The same display laid out inside the safe area: 887 pt wide.
+        let split = try #require(UnfoldedSplit.make(
+            width: 887, isRegularWidth: true, fold: 455.7...495.7, trailingInset: 64
+        ))
+        #expect(split.secondaryLeadingInset == 64)
+    }
+
     @Test func noTrailingInsetNeedsNoBalance() {
         let split = UnfoldedSplit.make(width: 951, isRegularWidth: true, fold: 455.7...495.7)
         #expect(split?.secondaryLeadingInset == 0)
