@@ -296,6 +296,33 @@ struct CravingModeView: View {
     // MARK: - Done
 
     private var doneStep: some View {
+        VStack(spacing: 0) {
+            doneMessage
+                .padding(.horizontal, Theme.Space.xl)
+            // Docked exactly like the session's buttons, with the same reserve
+            // below, so the main button does not move when the step changes.
+            VStack(spacing: Theme.Space.m) {
+                Button { dismiss() } label: {
+                    Text("Back to the garden")
+                        .font(Theme.body(weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Theme.brandPrimary, in: Capsule())
+                }
+                .buttonStyle(.plain)
+                Text("Give me another minute")
+                    .font(Theme.subhead(weight: .semibold))
+                    .hidden()
+                    .accessibilityHidden(true)
+            }
+            .padding(.horizontal, Theme.Space.xl)
+            .padding(.bottom, Theme.Space.xl)
+        }
+        .padding(.top, Theme.Space.s)
+    }
+
+    private var doneMessage: some View {
         VStack(spacing: Theme.Space.l) {
             Spacer()
             Image(systemName: "wind")
@@ -319,20 +346,8 @@ struct CravingModeView: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            Spacer()
-            Button { dismiss() } label: {
-                Text("Back to the garden")
-                    .font(Theme.body(weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(Theme.brandPrimary, in: Capsule())
-            }
-            .buttonStyle(.plain)
-            .padding(.horizontal, Theme.Space.xl)
-            .padding(.bottom, Theme.Space.xl)
+            Spacer(minLength: 0)
         }
-        .padding(Theme.Space.xl)
     }
 
     /// Bloom+ closes the loop: the session the user just logged changes the

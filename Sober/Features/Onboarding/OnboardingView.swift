@@ -736,6 +736,7 @@ struct OnboardingView: View {
                 }
             }
         }
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     private var legalFooter: some View {
