@@ -14,7 +14,6 @@ struct BloomPlusTabView: View {
                 BloomPlusHubView()
             } else {
                 PaywallView(displayCloseButton: false, impressionId: "quitzyn_bloom_tab")
-                    .paneTabBarClearance()
             }
         }
     }
@@ -80,8 +79,8 @@ private struct BloomPlusHubView: View {
                 }
                 .padding(Theme.Space.l)
             }
+            .leadingPaneEdge()
             .themedScrollBackground()
-            .paneTabBarClearance()
             .navigationTitle(QuitZynScreenshotMode.isEnabled ? "Support" : "Bloom+")
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(

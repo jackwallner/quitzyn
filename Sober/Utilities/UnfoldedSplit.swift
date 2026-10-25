@@ -33,91 +33,8 @@ struct UnfoldedSplit: Equatable, Sendable {
 }
 
 extension UnfoldedSplit {
-    /// From the pane's bottom edge to the top of the floating tab bar iOS 27.1
-    /// draws in the unfolded pane: a 63 pt bar 20 pt above the edge, measured
-    /// on the simulator, plus a hairline.
-    static let tabBarClearance: CGFloat = 84
-
-    /// The pane's bar adds no safe area, so its tabs need this much more. Any
-    /// inset the system does supply counts toward it, so a later fix to the
-    /// bar can't double the gap.
-    static func tabBarPadding(systemInset: CGFloat) -> CGFloat {
-        max(0, tabBarClearance - systemInset)
-    }
-
-    /// Side insets wider than this mean the system put the pane's bars in a
-    /// vertical bar beside the content, so there is no bottom bar to clear.
-    static let verticalBarInset: CGFloat = 40
-
-    static func tabBarPadding(bottomInset: CGFloat, sideInsets: CGFloat) -> CGFloat {
-        sideInsets > verticalBarInset ? 0 : tabBarPadding(systemInset: bottomInset)
-    }
-
-    /// Height of the fade where a scrolling screen ends above the bottom bar.
-    static let edgeFadeHeight: CGFloat = 28
-
-    static func edgeFade(padding: CGFloat, scrolls: Bool) -> CGFloat {
-        scrolls && padding > 0 ? edgeFadeHeight : 0
-    }
-}
-
-/// Whether a screen sits in the unfolded tab pane, under its bottom tab bar.
-private struct ClearsPaneTabBarKey: EnvironmentKey {
-    static let defaultValue = false
-}
-
-extension EnvironmentValues {
-    var clearsPaneTabBar: Bool {
-        get { self[ClearsPaneTabBarKey.self] }
-        set { self[ClearsPaneTabBarKey.self] = newValue }
-    }
-}
-
-/// Keeps a screen clear of the pane's bottom tab bar while split. Apply it
-/// inside the screen's `NavigationStack`: padding applied outside the stack
-/// never reached its content. iOS 27.1 picks the pane's bar placement itself,
-/// from one launch to the next: a bottom floating bar that adds no safe area,
-/// or a vertical bar beside the content that does (as side insets), which
-/// needs nothing more. The screen's frame ends above the bottom bar, rather
-/// than insetting its scroll content, so no row ever shows through the glass;
-/// the strip behind the bar keeps the screen's background. A scrolling
-/// screen fades out over its last few points there, as under a phone's bar,
-/// so the row cut at that edge never reads as sliced.
-struct PaneTabBarClearance: ViewModifier {
-    var fadesEdge: Bool
-    @Environment(\.clearsPaneTabBar) private var isSplit
-    @State private var insets = PaneInsets()
-
-    private var padding: CGFloat {
-        guard isSplit else { return 0 }
-        return UnfoldedSplit.tabBarPadding(bottomInset: insets.bottom, sideInsets: insets.sides)
-    }
-
-    private var fade: CGFloat {
-        UnfoldedSplit.edgeFade(padding: padding, scrolls: fadesEdge)
-    }
-
-    func body(content: Content) -> some View {
-        content
-            .overlay(alignment: .bottom) {
-                LinearGradient(colors: [Theme.background.opacity(0), Theme.background], startPoint: .top, endPoint: .bottom)
-                    .frame(height: fade)
-                    .allowsHitTesting(false)
-            }
-            .padding(.bottom, padding)
-            .background(Theme.background.ignoresSafeArea())
-            // Read outside the padding, so the padding never feeds back into it.
-            .onGeometryChange(for: PaneInsets.self) { proxy in
-                let safe = proxy.safeAreaInsets
-                return PaneInsets(bottom: safe.bottom, sides: safe.leading + safe.trailing)
-            } action: { insets = $0 }
-            #if DEBUG
-            .onChange(of: padding, initial: true) { _, padding in
-                guard QuitZynScreenshotMode.isEnabled else { return }
-                NSLog("PANECLEAR split=%d bottom=%.1f sides=%.1f padding=%.1f", isSplit ? 1 : 0, insets.bottom, insets.sides, padding)
-            }
-            #endif
-    }
+    /// Height of the tab strip that heads the leading pane while split.
+    static let paneTabStripHeight: CGFloat = 60
 }
 
 private struct IsTimelinePaneKey: EnvironmentKey {
@@ -132,16 +49,37 @@ extension EnvironmentValues {
     }
 }
 
-struct PaneInsets: Equatable, Sendable {
-    var bottom: CGFloat = 0
-    var sides: CGFloat = 0
+private struct IsLeadingPaneKey: EnvironmentKey {
+    static let defaultValue = false
+}
+
+extension EnvironmentValues {
+    /// True for the tabs while they hold the leading pane.
+    var isLeadingPane: Bool {
+        get { self[IsLeadingPaneKey.self] }
+        set { self[IsLeadingPaneKey.self] = newValue }
+    }
+}
+
+/// The system's 84pt status column inset reaches the leading pane's
+/// NavigationStacks too, though the column sits past the fold, so a tab's
+/// root drops it there. Home keeps it: its toolbar stands in that column.
+/// An inset-grouped List left without the inset has no trailing margin, so
+/// a list root sets both margins itself.
+private struct LeadingPaneEdge: ViewModifier {
+    let isList: Bool
+    @Environment(\.isLeadingPane) private var isLeadingPane
+
+    func body(content: Content) -> some View {
+        content
+            .ignoresSafeArea(.container, edges: isLeadingPane ? .trailing : [])
+            .contentMargins(.horizontal, isLeadingPane && isList ? 20 : nil, for: .scrollContent)
+    }
 }
 
 extension View {
-    /// - Parameter fadesEdge: false for a screen that doesn't scroll, whose
-    ///   last card ends clear of the bar on its own.
-    func paneTabBarClearance(fadesEdge: Bool = true) -> some View {
-        modifier(PaneTabBarClearance(fadesEdge: fadesEdge))
+    func leadingPaneEdge(isList: Bool = false) -> some View {
+        modifier(LeadingPaneEdge(isList: isList))
     }
 }
 
@@ -161,5 +99,72 @@ extension GeometryProxy {
             .first { $0.height > $0.width && $0.minX > 0 && $0.maxX < size.width }
         guard let fold else { return nil }
         return fold.minX...fold.maxX
+    }
+}
+
+/// The leading pane's tabs while split, in place of the system tab bar.
+struct PaneTabStrip: View {
+    struct Item: Identifiable {
+        let tag: Int
+        let title: String
+        let systemImage: String
+        var id: Int { tag }
+    }
+
+    @Binding var selection: Int
+    let items: [Item]
+
+    var body: some View {
+        // Every tab named when they all fit; else only the open tab is.
+        ViewThatFits(in: .horizontal) {
+            row(namesAll: true)
+            row(namesAll: false)
+        }
+        .padding(.horizontal, 16)
+        .padding(.top, 8)
+        .frame(height: UnfoldedSplit.paneTabStripHeight, alignment: .top)
+    }
+
+    private func row(namesAll: Bool) -> some View {
+        HStack(spacing: 2) {
+            ForEach(items) { item in
+                button(item, showsTitle: namesAll || selection == item.tag)
+            }
+        }
+        .padding(3)
+        .background(.ultraThinMaterial, in: Capsule())
+        .overlay(Capsule().stroke(Theme.textPrimary.opacity(0.08), lineWidth: 1))
+        .fixedSize()
+    }
+
+    private func button(_ item: Item, showsTitle: Bool) -> some View {
+        let isSelected = selection == item.tag
+        return Button {
+            withAnimation(.easeInOut(duration: 0.2)) { selection = item.tag }
+        } label: {
+            Label(item.title, systemImage: item.systemImage)
+                .labelStyle(PaneTabLabelStyle(showsTitle: showsTitle))
+                .font(.subheadline.weight(.semibold))
+                .lineLimit(1)
+                .foregroundStyle(isSelected ? Theme.brandPrimary : Theme.textSecondary)
+                .padding(.horizontal, 12)
+                .frame(height: 40)
+                .background(isSelected ? Theme.brandPrimary.opacity(0.12) : .clear, in: Capsule())
+                .contentShape(Capsule())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(item.title)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
+    }
+}
+
+private struct PaneTabLabelStyle: LabelStyle {
+    let showsTitle: Bool
+
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 6) {
+            configuration.icon
+            if showsTitle { configuration.title }
+        }
     }
 }

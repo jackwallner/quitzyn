@@ -83,29 +83,6 @@ struct StackSpaceTests {
     }
 }
 
-@Suite("Pane tab bar clearance")
-struct PaneTabBarClearanceTests {
-    @Test func noSystemInsetGetsTheFullClearance() {
-        #expect(UnfoldedSplit.tabBarPadding(systemInset: 0) == UnfoldedSplit.tabBarClearance)
-    }
-
-    @Test func aHomeIndicatorInsetCountsTowardIt() {
-        #expect(UnfoldedSplit.tabBarPadding(systemInset: 20) == UnfoldedSplit.tabBarClearance - 20)
-    }
-
-    @Test func aSystemInsetForTheBarAddsNothing() {
-        #expect(UnfoldedSplit.tabBarPadding(systemInset: 100) == 0)
-    }
-
-    @Test func aBottomBarPaneGetsTheClearance() {
-        #expect(UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 0) == UnfoldedSplit.tabBarClearance)
-    }
-
-    @Test func aVerticalBarBesideTheContentNeedsNoBottomPadding() {
-        #expect(UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 96) == 0)
-    }
-}
-
 @Suite("Duo screen launch argument")
 struct DuoScreenTests {
     @Test func eachScreenOpensItsTab() {
@@ -120,23 +97,5 @@ struct DuoScreenTests {
         #expect(DuoScreen.launchTab(arguments: ["app"]) == nil)
         #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen"]) == nil)
         #expect(DuoScreen.launchTab(arguments: ["app", "-DuoScreen", "settings"]) == nil)
-    }
-}
-
-@Suite("Pane edge fade")
-struct PaneEdgeFadeTests {
-    @Test func scrollingScreenFadesAboveTheBottomBar() {
-        let padding = UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 0)
-        #expect(UnfoldedSplit.edgeFade(padding: padding, scrolls: true) == UnfoldedSplit.edgeFadeHeight)
-    }
-
-    @Test func noFadeWithoutABottomBar() {
-        let padding = UnfoldedSplit.tabBarPadding(bottomInset: 0, sideInsets: 84)
-        #expect(UnfoldedSplit.edgeFade(padding: padding, scrolls: true) == 0)
-        #expect(UnfoldedSplit.edgeFade(padding: 0, scrolls: true) == 0)
-    }
-
-    @Test func fixedScreenNeverFades() {
-        #expect(UnfoldedSplit.edgeFade(padding: 84, scrolls: false) == 0)
     }
 }

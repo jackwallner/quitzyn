@@ -39,9 +39,9 @@ struct JournalView: View {
                     }
                 }
             }
+            .leadingPaneEdge(isList: true)
             .listStyle(.insetGrouped)
             .themedScrollBackground()
-            .paneTabBarClearance()
             .navigationTitle("Journal")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

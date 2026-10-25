@@ -334,9 +334,7 @@ struct MainTabView: View {
     /// Each unfolded pane is phone-width, so its screen lays out as on a phone.
     /// Applied to the tab contents, not the `TabView`: overriding the bar's own
     /// size class flipped the Duo's vertical bar to a bottom bar on the first
-    /// tab switch. Unfolded, iOS 27.1 may draw a bottom bar here with no safe
-    /// area for it, so each screen applies `PaneTabBarClearance` inside its
-    /// stack.
+    /// tab switch.
     private var paneSizeClass: UserInterfaceSizeClass? {
         split == nil ? horizontalSizeClass : .compact
     }
@@ -345,7 +343,16 @@ struct MainTabView: View {
         // Opening or closing the Duo only moves these frames, so the tabs are
         // never rebuilt; Timeline's state lives in `timeline` for its move.
         ZStack(alignment: .topLeading) {
+            // Unfolded, the tabs head the leading pane in place of the system
+            // bar, so both panes run to the display's bottom edge. Above a
+            // floating bottom bar the pane's last row was always cut (review
+            // 2026-10-24).
             tabs
+                .padding(.top, split == nil ? 0 : UnfoldedSplit.paneTabStripHeight)
+                .overlay(alignment: .top) {
+                    if split != nil { PaneTabStrip(selection: $tab, items: paneTabItems) }
+                }
+                .background(Theme.background.ignoresSafeArea())
                 .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
             if let split {
                 TimelineView(selection: timeline)
@@ -389,6 +396,24 @@ struct MainTabView: View {
     }
     #endif
 
+    private var bloomTabTitle: String {
+        QuitZynScreenshotMode.isEnabled ? "Support" : (subscriptions.isProSubscriber ? "Bloom+" : "Upgrade")
+    }
+
+    private var bloomTabSymbol: String {
+        QuitZynScreenshotMode.isEnabled || subscriptions.isProSubscriber ? "sparkles" : "lock.fill"
+    }
+
+    /// The leading pane's tabs while Timeline has a pane of its own.
+    private var paneTabItems: [PaneTabStrip.Item] {
+        [
+            .init(tag: 0, title: "Home", systemImage: "leaf.fill"),
+            .init(tag: 2, title: "Health", systemImage: "heart.fill"),
+            .init(tag: 3, title: "Journal", systemImage: "book.fill"),
+            .init(tag: 4, title: bloomTabTitle, systemImage: bloomTabSymbol),
+        ]
+    }
+
     private var tabs: some View {
         TabView(selection: $tab) {
             HomeView()
@@ -411,16 +436,7 @@ struct MainTabView: View {
                 .tag(3)
             BloomPlusTabView()
                 .paneTab(sizeClass: paneSizeClass, isSplit: split != nil)
-                .tabItem {
-                    Label(
-                        QuitZynScreenshotMode.isEnabled
-                            ? "Support"
-                            : (subscriptions.isProSubscriber ? "Bloom+" : "Upgrade"),
-                        systemImage: QuitZynScreenshotMode.isEnabled
-                            ? "sparkles"
-                            : (subscriptions.isProSubscriber ? "sparkles" : "lock.fill")
-                    )
-                }
+                .tabItem { Label(bloomTabTitle, systemImage: bloomTabSymbol) }
                 .tag(4)
         }
         .onChange(of: trialCoordinator.pendingRequest) { _, request in
@@ -578,10 +594,15 @@ struct MainTabView: View {
 }
 
 private extension View {
-    /// One tab's screen: the phone layout in a pane, clear of the pane's
-    /// bottom tab bar while split.
+    /// One tab's screen: the phone layout in a pane. While split the system
+    /// tab bar is hidden (`PaneTabStrip` heads the pane instead). The hide
+    /// request comes from a background layer, so only that layer is rebuilt
+    /// on fold.
     func paneTab(sizeClass: UserInterfaceSizeClass?, isSplit: Bool) -> some View {
         environment(\.horizontalSizeClass, sizeClass)
-            .environment(\.clearsPaneTabBar, isSplit)
+            .environment(\.isLeadingPane, isSplit)
+            .background {
+                if isSplit { Color.clear.toolbar(.hidden, for: .tabBar) }
+            }
     }
 }

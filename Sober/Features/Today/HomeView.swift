@@ -34,6 +34,7 @@ struct HomeView: View {
     /// space (see `fittedGardenMinHeight`).
     @State private var stackSpace = StackSpace()
     @Environment(\.requestReview) private var requestReview
+    @Environment(\.isLeadingPane) private var isLeadingPane
 
     private var activeJourney: SobrietyJourney? { journeys.first { $0.isActive } }
     private var hasCompletedOnboarding: Bool { settingsRows.first?.hasCompletedOnboarding ?? false }
@@ -81,45 +82,21 @@ struct HomeView: View {
                         cravingControl
                     }
                     .padding(.horizontal, Theme.Space.l)
-                    .padding(.top, Theme.Space.s)
+                    .padding(.top, isLeadingPane ? Theme.Space.l : Theme.Space.s)
                     .padding(.bottom, Theme.Space.m)
                     .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.stack = $0 }
                 }
             }
-            .paneTabBarClearance(fadesEdge: false)
+            .leadingPaneEdge()
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+            // In the Duo's leading pane the system stands the bar's items in
+            // a column down the trailing edge, squeezing the garden; there
+            // they flank the counter instead.
+            .toolbar(isLeadingPane ? .hidden : .automatic, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button { showProgress = true } label: {
-                        Image(systemName: "chart.line.uptrend.xyaxis")
-                    }
-                    .accessibilityLabel("Progress")
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu {
-                        Button { showCustomize = true } label: {
-                            Label("Customize garden", systemImage: "paintbrush.pointed")
-                        }
-                        Button { showSettings = true } label: {
-                            Label("Settings", systemImage: "gearshape")
-                        }
-                        Divider()
-                        // A slip is an ordinary, non-destructive entry: it is
-                        // logged, and the tree and the history survive it. The
-                        // destructive item below is the other thing entirely,
-                        // for someone who set the counter up wrong.
-                        Button { showSlipSheet = true } label: {
-                            Label("I slipped", systemImage: "arrow.uturn.backward")
-                        }
-                        Button(role: .destructive) { showResetAlert = true } label: {
-                            Label("Reset counter", systemImage: "arrow.counterclockwise")
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis.circle")
-                    }
-                    .accessibilityLabel("More")
-                }
+                ToolbarItem(placement: .topBarLeading) { progressButton }
+                ToolbarItem(placement: .topBarTrailing) { moreMenu }
             }
             .alert("Reset your counter?", isPresented: $showResetAlert) {
                 Button("Cancel", role: .cancel) {}
@@ -209,6 +186,47 @@ struct HomeView: View {
 
     // MARK: - Counter + garden
 
+    private var progressButton: some View {
+        Button { showProgress = true } label: {
+            Image(systemName: "chart.line.uptrend.xyaxis")
+        }
+        .accessibilityLabel("Progress")
+    }
+
+    private var moreMenu: some View {
+        Menu {
+            Button { showCustomize = true } label: {
+                Label("Customize garden", systemImage: "paintbrush.pointed")
+            }
+            Button { showSettings = true } label: {
+                Label("Settings", systemImage: "gearshape")
+            }
+            Divider()
+            // A slip is an ordinary, non-destructive entry: it is
+            // logged, and the tree and the history survive it. The
+            // destructive item below is the other thing entirely,
+            // for someone who set the counter up wrong.
+            Button { showSlipSheet = true } label: {
+                Label("I slipped", systemImage: "arrow.uturn.backward")
+            }
+            Button(role: .destructive) { showResetAlert = true } label: {
+                Label("Reset counter", systemImage: "arrow.counterclockwise")
+            }
+        } label: {
+            Image(systemName: isLeadingPane ? "ellipsis" : "ellipsis.circle")
+        }
+        .accessibilityLabel("More")
+    }
+
+    /// The bar's two buttons beside the counter, for the Duo's leading pane.
+    private var paneHeaderButtons: some View {
+        HStack {
+            progressButton.modifier(PaneHeaderButton())
+            Spacer()
+            moreMenu.modifier(PaneHeaderButton())
+        }
+    }
+
     /// Day counter on the cream chrome — ink/moss text on the app background,
     /// not white-on-garden. Sits above the garden card so the big numeral is
     /// always legible regardless of the scene's brightness.
@@ -228,6 +246,9 @@ struct HomeView: View {
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
+        .overlay(alignment: .top) {
+            if isLeadingPane { paneHeaderButtons }
+        }
     }
 
     /// The garden, framed as a card that claims all the vertical space between
@@ -925,5 +946,19 @@ struct StackSpace: Equatable {
     var gardenRoom: CGFloat? {
         guard available > 0, stack > 0 else { return nil }
         return available - (stack - garden)
+    }
+}
+
+/// A 44pt round button in the material of the pane's tab strip.
+private struct PaneHeaderButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .buttonStyle(.plain)
+            .font(.body.weight(.semibold))
+            .foregroundStyle(Theme.brandPrimary)
+            .frame(width: 44, height: 44)
+            .background(.ultraThinMaterial, in: Circle())
+            .overlay(Circle().stroke(Theme.textPrimary.opacity(0.08), lineWidth: 1))
+            .contentShape(Circle())
     }
 }

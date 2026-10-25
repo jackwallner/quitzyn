@@ -10,12 +10,11 @@ paths:
   - "Sober/Features/Paywall/BloomPlusTabView.swift"
 ---
 
-# Quit Zyn: iPhone Duo (2026-10-21)
+# Quit Zyn: iPhone Duo (2026-10-21, strip 2026-10-25)
 
 - Unfolded (regular width, at least 720 pt), `MainTabView` puts the tab view
-  (Home, Health, Journal, Bloom+ and its tab bar) left of the fold and Timeline
-  in its own pane on the right; the Timeline tab drops out of the bar while
-  split. Pane edges come from `GeometryProxy.verticalFold()` (iOS 27.1
+  (Home, Health, Journal, Bloom+) left of the fold and Timeline in its own
+  pane on the right; the Timeline tab drops out while split. Pane edges come from `GeometryProxy.verticalFold()` (iOS 27.1
   `reservedRegions(.division)`), else an even split. Portrait unfolded (669 pt)
   and every compact width keep the single column. Split math: `UnfoldedSplit`,
   tested in `SoberTests/UnfoldedSplitTests.swift`.
@@ -36,26 +35,27 @@ paths:
 - Each pane's screens get `horizontalSizeClass = .compact`, so they lay out as
   on a phone. It is set on each tab's content, not the `TabView` (there it
   flipped the vertical bar to a bottom bar on the first tab switch).
-- Unfolded, iOS 27.1 picks the pane's bar placement itself, from one launch
-  to the next: a bottom floating bar (63 pt, 20 pt above the edge, no safe
-  area) or a vertical bar beside the content (as side safe area). Each tab
-  screen applies `.paneTabBarClearance()` *inside* its `NavigationStack`
-  (driven by the `clearsPaneTabBar` environment value); outside the stack the
-  same padding never reached Home, and the bar covered the craving card. It
-  ends the screen's frame `UnfoldedSplit.tabBarClearance` (less any bottom
-  inset) above the edge, so scroll rows never show through the glass bar
-  (inset-only padding let them; independent review 2026-10-23). Scrolling
-  screens fade out over `UnfoldedSplit.edgeFadeHeight` at that edge so the
-  cut row never reads as sliced; Home passes `fadesEdge: false`. Not at
-  all when side insets show a vertical bar. Don't force the placement with
+- Unfolded, the system tab bar is hidden and `PaneTabStrip` heads the
+  leading pane (`UnfoldedSplit.paneTabStripHeight`), so both panes run to the
+  display's bottom edge. iOS 27.1 picked a floating bottom bar or a vertical
+  bar per launch, and review rejected every bottom bar layout: the pane's last
+  row was always cut above the glass, faded or not (2026-10-23 to 10-24). The
+  strip names every tab when they fit, else only the open one
+  (`ViewThatFits`). Don't force the bar with
   `toolbarVerticalBehavior(.disabled)`: it inset the root about 42 pt on both
-  sides, leaving blank strips at the display edges. Home is a non-scrolling
-  stack, so `HomeView.fittedGardenMinHeight` lowers the garden's floor as far
-  as the measured space needs (`StackSpace`). DEBUG screenshot runs log
-  `HOMELAYOUT` and `PANECLEAR`.
-- Don't hide rows the pane's bottom edge would cut: the 2026-10-23
-  `PaneRowFit` did, and review flagged the blank card areas it left on Health
-  and Journal (2026-10-24). The edge fade alone carries the cut row.
+  sides.
+- The status column's 84 pt trailing inset reaches the leading pane's
+  `NavigationStack`s too, though the column sits past the fold, so content
+  stopped short of the fold. Each tab root applies `.leadingPaneEdge()`
+  *inside* its stack (on the `TabView` or outside the stack it did nothing).
+  An inset-grouped List under it loses its trailing margin, so list roots
+  pass `isList: true` for 20 pt content margins on both sides.
+- Home's bar items stand in a vertical column down the leading pane's
+  trailing edge, squeezing the garden. In the leading pane Home hides its
+  navigation bar and draws Progress and More as 44 pt circles flanking the
+  counter. `HomeView.fittedGardenMinHeight` lowers the garden's floor as far
+  as the measured space needs (`StackSpace`); DEBUG screenshot runs log
+  `HOMELAYOUT`.
 - gh-sim marks `--wait 30` runs `crashed` (exit 1) because the app is gone by
   its end check, though app.log has no crash and the last shot shows the app
   alive. Shorter passes ended clean; keep each pass under about 150 s.

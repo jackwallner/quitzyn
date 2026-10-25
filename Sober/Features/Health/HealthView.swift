@@ -52,9 +52,9 @@ struct HealthView: View {
                     Text("General wellness information, not medical advice. Timelines vary from person to person. For medical concerns, talk to a healthcare professional.")
                 }
             }
+            .leadingPaneEdge(isList: true)
             .listStyle(.insetGrouped)
             .themedScrollBackground()
-            .paneTabBarClearance()
             .navigationTitle("Health")
         }
         .task { await presentPassiveTrialNudge(subscriptions, intent: .healthTimeline) }
