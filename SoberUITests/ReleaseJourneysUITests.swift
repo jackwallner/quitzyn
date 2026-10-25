@@ -1,5 +1,6 @@
 import XCTest
 
+@MainActor
 final class ReleaseJourneysUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
