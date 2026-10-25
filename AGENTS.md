@@ -92,6 +92,7 @@ billing, release state and the remote-Pro emulator recipe: `.claude/rules/androi
 - `.claude/rules/android.md`: Android port (paths `android/**`, Play scripts).
 - `.claude/rules/garden-motion.md`: bonsai sway and falling petals (paths `Shared/Bonsai/**`, `Sober/Features/Garden/**`).
 - `.claude/rules/bonsai-art.md`: how the bonsai is painted and how to prove a change (paths `Shared/Bonsai/**`, `Tools/BonsaiAudit/**`).
+- `.claude/rules/iphone-duo.md`: unfolded iPhone Duo split (Home | Timeline), screenshot routes.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, RevenueCat dev tips, review funnel, gotchas):

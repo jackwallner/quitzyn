@@ -11,11 +11,28 @@ struct TimelineView: View {
     @Query(sort: \SobrietyJourney.startDate, order: .reverse) private var journeys: [SobrietyJourney]
     @Query private var gardenStates: [GardenState]
 
-    @State private var monthAnchor: Date = DateHelpers.startOfDay()
-    @State private var selectedDate: Date = DateHelpers.startOfDay()
-    @State private var draftMood: Int?
-    @State private var draftNote: String = ""
+    /// Owned by MainTabView: unfolding the Duo moves Timeline from its tab to
+    /// its own pane, and the month, day and unsaved note have to come along.
+    var selection: TimelineSelection
     @State private var pendingSlipDay: Date?
+    @Environment(\.isTimelinePane) private var isPane
+
+    private var monthAnchor: Date {
+        get { selection.monthAnchor }
+        nonmutating set { selection.monthAnchor = newValue }
+    }
+    private var selectedDate: Date {
+        get { selection.selectedDate }
+        nonmutating set { selection.selectedDate = newValue }
+    }
+    private var draftMood: Int? {
+        get { selection.draftMood }
+        nonmutating set { selection.draftMood = newValue }
+    }
+    private var draftNote: String {
+        get { selection.draftNote }
+        nonmutating set { selection.draftNote = newValue }
+    }
 
     private var checkInsByDay: [Date: DailyCheckIn] {
         Dictionary(checkIns.map { (DateHelpers.startOfDay($0.day), $0) }, uniquingKeysWith: { a, _ in a })
@@ -71,33 +88,19 @@ struct TimelineView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    summaryRow
-                        .listRowInsets(EdgeInsets(top: Theme.Space.m, leading: Theme.Space.l, bottom: Theme.Space.m, trailing: Theme.Space.l))
-                }
-
-                Section {
-                    monthNav
-                    monthGrid
-                        .listRowInsets(EdgeInsets(top: 0, leading: Theme.Space.s, bottom: Theme.Space.s, trailing: Theme.Space.s))
-                }
-
-                Section("Selected day") {
-                    treeRow
-                        .listRowInsets(EdgeInsets(top: Theme.Space.s, leading: Theme.Space.l, bottom: Theme.Space.m, trailing: Theme.Space.l))
-                }
-
-                if !selectedIsFuture {
-                    Section("Check-in") {
-                        checkInEditor
-                    }
-                }
+            Group {
+                if isPane { paneScroll } else { list }
             }
-            .listStyle(.insetGrouped)
             .navigationTitle("Timeline")
             .task { await presentPassiveTrialNudge(subscriptions, intent: .progressSheet) }
-            .onAppear { loadDraft() }
+            .onAppear {
+                // A logged day reloads (Home may have changed it); an unlogged
+                // day keeps the note typed before the view was remounted.
+                if selection.draftDay != DateHelpers.startOfDay(selectedDate)
+                    || checkInsByDay[DateHelpers.startOfDay(selectedDate)] != nil {
+                    loadDraft()
+                }
+            }
             .onChange(of: selectedDate) { _, _ in loadDraft() }
             .alert(
                 "Log a slip?",
@@ -110,10 +113,87 @@ struct TimelineView: View {
                 Text("Your day counter restarts after the slip. Your tree carries some growth forward, and your calendar history and completed trees stay. Your longest streak reflects the corrected dates.")
             }
         }
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
+    }
+
+    private var list: some View {
+        List {
+            Section {
+                summaryRow
+                    .listRowInsets(EdgeInsets(top: Theme.Space.m, leading: Theme.Space.l, bottom: Theme.Space.m, trailing: Theme.Space.l))
+            }
+
+            Section {
+                monthNav
+                monthGrid
+                    .listRowInsets(EdgeInsets(top: 0, leading: Theme.Space.s, bottom: Theme.Space.s, trailing: Theme.Space.s))
+            }
+
+            Section("Selected day") {
+                treeRow
+                    .listRowInsets(EdgeInsets(top: Theme.Space.s, leading: Theme.Space.l, bottom: Theme.Space.m, trailing: Theme.Space.l))
+            }
+
+            if !selectedIsFuture {
+                Section("Check-in") {
+                    checkInEditor
+                }
+            }
+        }
+        .listStyle(.insetGrouped)
+    }
+
+    /// The unfolded Duo's pane. iOS 27.1 reserves about 64 pt down the inner
+    /// display's trailing edge for the clock and battery ring, and a List
+    /// keeps clear of it even under `ignoresSafeArea`, which left a wide
+    /// empty strip on that side and a narrow one at the fold. The same
+    /// sections as cards in a scroll view run into it, so the pane's margins
+    /// match on both sides.
+    private var paneScroll: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: Theme.Space.xl) {
+                paneCard { summaryRow }
+                paneCard {
+                    monthNav
+                    monthGrid
+                }
+                paneCard(title: "Selected day") { treeRow }
+                if !selectedIsFuture {
+                    paneCard(title: "Check-in") {
+                        checkInEditor
+                            .buttonStyle(.borderless)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+            }
+            .padding(.horizontal, Theme.Space.l)
+            .padding(.bottom, Theme.Space.l)
+        }
+        .scrollDismissesKeyboard(.interactively)
+        .ignoresSafeArea(.container, edges: .trailing)
+    }
+
+    private func paneCard<Content: View>(title: String? = nil, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: Theme.Space.s) {
+            if let title {
+                Text(title)
+                    .font(Theme.subhead())
+                    .foregroundStyle(Theme.textSecondary)
+                    .padding(.horizontal, Theme.Space.l)
+            }
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                content()
+            }
+            .padding(Theme.Space.l)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        }
     }
 
     private func loadDraft() {
-        let checkIn = checkInsByDay[DateHelpers.startOfDay(selectedDate)]
+        let day = DateHelpers.startOfDay(selectedDate)
+        let checkIn = checkInsByDay[day]
+        selection.draftDay = day
         draftMood = checkIn?.mood
         draftNote = checkIn?.note ?? ""
     }
@@ -267,6 +347,7 @@ struct TimelineView: View {
 
     // MARK: - Reconstructed tree for the selected day
 
+    @ViewBuilder
     private var treeRow: some View {
         // The counter line shows the honest streak; only the tree inherits.
         let dayCount = soberDays(on: selectedDate)
@@ -275,29 +356,49 @@ struct TimelineView: View {
         let stage = GardenService.stage(forDays: drawnDays)
         let isToday = DateHelpers.startOfDay(selectedDate) == DateHelpers.startOfDay()
 
-        return VStack(alignment: .leading, spacing: Theme.Space.m) {
-            HStack(alignment: .firstTextBaseline) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(isToday ? "Today" : DateHelpers.mediumDate(selectedDate))
-                        .font(Theme.body())
-                        .foregroundStyle(Theme.textPrimary)
-                    Text("Day \(dayCount) · \(stage.title)")
-                        .font(Theme.subhead())
-                        .foregroundStyle(Theme.textSecondary)
+        let caption = VStack(alignment: .leading, spacing: 2) {
+            Text(isToday ? "Today" : DateHelpers.mediumDate(selectedDate))
+                .font(Theme.body())
+                .foregroundStyle(Theme.textPrimary)
+            Text("Day \(dayCount) · \(stage.title)")
+                .font(Theme.subhead())
+                .foregroundStyle(Theme.textSecondary)
+        }
+
+        // The unfolded Duo's Timeline pane is a phone's height under a
+        // calendar, so the 200 pt tree started near the display's bottom edge
+        // and showed only empty sky. There the tree sits beside its caption.
+        if isPane {
+            HStack(alignment: .top, spacing: Theme.Space.m) {
+                treeScene(dayInCycle: cycle.dayInCycle, fill: true, padding: 6)
+                    .frame(width: 96, height: 96)
+                VStack(alignment: .leading, spacing: Theme.Space.s) {
+                    caption
+                    diffNarration(dayCount: drawnDays)
                 }
-                Spacer()
             }
+        } else {
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                HStack(alignment: .firstTextBaseline) {
+                    caption
+                    Spacer()
+                }
 
-            ZStack {
-                RoundedRectangle(cornerRadius: 14).fill(Theme.skyGradient)
-                BonsaiView(day: cycle.dayInCycle, style: bonsaiStyle, vitality: 1.0)
-                    .padding(8)
-                    .id(cycle.dayInCycle)
-                    .transition(.opacity)
+                treeScene(dayInCycle: cycle.dayInCycle, fill: false, padding: 8)
+                    .frame(height: 200)
+
+                diffNarration(dayCount: drawnDays)
             }
-            .frame(height: 200)
+        }
+    }
 
-            diffNarration(dayCount: drawnDays)
+    private func treeScene(dayInCycle: Int, fill: Bool, padding: CGFloat) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 14).fill(Theme.skyGradient)
+            BonsaiView(day: dayInCycle, style: bonsaiStyle, vitality: 1.0, fill: fill)
+                .padding(padding)
+                .id(dayInCycle)
+                .transition(.opacity)
         }
     }
 
@@ -505,4 +606,17 @@ struct TimelineView: View {
         context.saveOrReport()
         WidgetSnapshotPump.push(context: context)
     }
+}
+
+/// Timeline's month, selected day and check-in draft, held above the view.
+@MainActor
+@Observable
+final class TimelineSelection {
+    var monthAnchor: Date = DateHelpers.startOfDay()
+    var selectedDate: Date = DateHelpers.startOfDay()
+    var draftMood: Int?
+    var draftNote: String = ""
+    /// The day the draft was loaded for, so a remount can tell a stale draft
+    /// from one still being typed.
+    var draftDay: Date?
 }

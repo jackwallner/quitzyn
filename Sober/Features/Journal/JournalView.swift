@@ -41,6 +41,7 @@ struct JournalView: View {
             }
             .listStyle(.insetGrouped)
             .themedScrollBackground()
+            .paneTabBarClearance()
             .navigationTitle("Journal")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

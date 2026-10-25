@@ -54,6 +54,7 @@ struct HealthView: View {
             }
             .listStyle(.insetGrouped)
             .themedScrollBackground()
+            .paneTabBarClearance()
             .navigationTitle("Health")
         }
         .task { await presentPassiveTrialNudge(subscriptions, intent: .healthTimeline) }
@@ -169,10 +170,15 @@ private struct BenefitRow: View {
                         .foregroundStyle(Theme.textSecondary)
                         .padding(.top, 2)
                     if let url = benefit.sourceURL {
+                        // Not a Label: in a List row its icon gets the row's
+                        // icon column, pushing the text off the body's edge.
                         Link(destination: url) {
-                            Label(benefit.sourceLabel, systemImage: "link")
-                                .font(Theme.caption())
-                                .foregroundStyle(Theme.brandPrimary)
+                            HStack(spacing: 4) {
+                                Image(systemName: "link")
+                                Text(benefit.sourceLabel)
+                            }
+                            .font(Theme.caption())
+                            .foregroundStyle(Theme.brandPrimary)
                         }
                         .padding(.top, 2)
                     }
