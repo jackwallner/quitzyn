@@ -28,6 +28,7 @@ enum DuoScreen: String, CaseIterable {
         }
     }
 
+    #if DEBUG
     static func launchTab(arguments: [String]) -> Int? {
         guard let index = arguments.firstIndex(of: "-DuoScreen"),
               index + 1 < arguments.count,
@@ -35,6 +36,7 @@ enum DuoScreen: String, CaseIterable {
         else { return nil }
         return screen.tab
     }
+    #endif
 
     static var launchTab: Int {
         #if DEBUG
