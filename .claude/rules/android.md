@@ -41,6 +41,7 @@ paths:
 
 ## Billing
 
+- Moving into the iOS project (2026-10-27): Play app `appadb46ee842` in `proj8395c8fc` has the Play products on entitlement `Quit Zyn Pro` and a non-current `android` offering. The next release swaps `REVENUECAT_PLAY_KEY` to that app's `goog_` key, and the code syncs existing Play purchases once (`SYNCED_TO_SHARED_PROJECT`) so old-project trials keep access. Upload the service-account JSON to that app first. Until then the release ships the old key below.
 - RevenueCat project `proj42f37ce2` "Quit Zyn Android" (separate from iOS
   `proj8395c8fc`). Play app `appe15e6cbf94`, Test Store app `app4f5a8ab85b`.
   Entitlement `pro` (`entl427e85db88`), offering `android` (`ofrng671e306bb3`)
