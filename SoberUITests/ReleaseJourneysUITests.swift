@@ -94,15 +94,23 @@ final class ReleaseJourneysUITests: XCTestCase {
         // A tab on a phone, a pane beside Home on the unfolded Duo.
         let timelineTab = app.buttons["Timeline"].firstMatch
         if timelineTab.waitForExistence(timeout: 3) && timelineTab.isHittable { timelineTab.tap() }
-        XCTAssertTrue(app.staticTexts["Logged nicotine-free"].waitForExistence(timeout: 10),
-                      "Timeline does not show today as logged")
-        let saved = app.textFields.matching(NSPredicate(format: "value == %@", note)).firstMatch
-        XCTAssertTrue(saved.waitForExistence(timeout: 10), "The note did not survive relaunch")
+        let logged = app.staticTexts["Logged nicotine-free"]
+        scrollTo(logged, in: app)
+        XCTAssertTrue(logged.exists, "Timeline does not show today as logged")
+        let saved = app.descendants(matching: .any).matching(NSPredicate(format: "value == %@", note)).firstMatch
+        scrollTo(saved, in: app)
+        XCTAssertTrue(saved.exists, "The note did not survive relaunch")
         QA.checkpoint(app, "timeline-after-relaunch")
     }
 
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {
         app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "I'm having a")).firstMatch
+    }
+
+    private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
+        _ = element.waitForExistence(timeout: 5)
+        var swipes = 0
+        while !element.exists && swipes < 4 { app.swipeUp(); swipes += 1 }
     }
 
     private func tap(_ label: String, in app: XCUIApplication) {
