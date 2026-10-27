@@ -53,6 +53,55 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "garden-after-relaunch")
     }
 
+    func testCoreLoopCheckInAndCravingPersist() {
+        let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
+        let note = "Walked past the shop and kept going"
+        QA.launch(app, arguments: ["-seedDemo", "-previewStore", "-QuitZynScreenshot"])
+        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
+        XCTAssertFalse(app.staticTexts["Today is logged"].exists, "Today starts unlogged")
+        QA.checkpoint(app, "home-unlogged")
+
+        // Daily check-in with a mood and a note.
+        let checkIn = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Check in for today")).firstMatch
+        XCTAssertTrue(checkIn.waitForExistence(timeout: 15))
+        checkIn.tap()
+        XCTAssertTrue(app.navigationBars["Checked in"].waitForExistence(timeout: 10))
+        tap("Good", in: app)
+        let field = app.textFields["Anything you want to remember about today?"]
+        XCTAssertTrue(field.waitForExistence(timeout: 10))
+        field.tap()
+        field.typeText(note)
+        QA.checkpoint(app, "check-in-note")
+        tap("Save", in: app)
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
+        QA.checkpoint(app, "home-logged")
+
+        // Ride out a craving.
+        cravingButton(in: app).tap()
+        tap("I'm through it", in: app)
+        tap("It passed", in: app)
+        XCTAssertTrue(app.staticTexts["Logged."].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.alerts["Not saved"].exists)
+        QA.checkpoint(app, "craving-saved")
+        tap("Back to the garden", in: app)
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
+
+        // Everything is still there after a cold start.
+        QA.relaunch(app)
+        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10),
+                      "The check-in was gone after relaunch")
+        QA.checkpoint(app, "home-after-relaunch")
+        // A tab on a phone, a pane beside Home on the unfolded Duo.
+        let timelineTab = app.buttons["Timeline"].firstMatch
+        if timelineTab.waitForExistence(timeout: 3) && timelineTab.isHittable { timelineTab.tap() }
+        XCTAssertTrue(app.staticTexts["Logged nicotine-free"].waitForExistence(timeout: 10),
+                      "Timeline does not show today as logged")
+        let saved = app.textFields.matching(NSPredicate(format: "value == %@", note)).firstMatch
+        XCTAssertTrue(saved.waitForExistence(timeout: 10), "The note did not survive relaunch")
+        QA.checkpoint(app, "timeline-after-relaunch")
+    }
+
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {
         app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "I'm having a")).firstMatch
     }
