@@ -58,13 +58,12 @@ final class ReleaseJourneysUITests: XCTestCase {
         let note = "Walked past the shop and kept going"
         QA.launch(app, arguments: ["-seedDemo", "-previewStore", "-QuitZynScreenshot"])
         XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
-        XCTAssertFalse(app.staticTexts["Today is logged"].exists, "Today starts unlogged")
-        QA.checkpoint(app, "home-unlogged")
+        // The demo seed already logged today, so the loop starts from Home's logged card.
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 15))
+        QA.checkpoint(app, "home-logged")
 
-        // Daily check-in with a mood and a note.
-        let checkIn = app.buttons.containing(NSPredicate(format: "label CONTAINS %@", "Check in for today")).firstMatch
-        XCTAssertTrue(checkIn.waitForExistence(timeout: 15))
-        checkIn.tap()
+        // Add a mood and a note to today.
+        tap("Add note", in: app)
         XCTAssertTrue(app.navigationBars["Checked in"].waitForExistence(timeout: 10))
         tap("Good", in: app)
         let field = app.textFields["Anything you want to remember about today?"]
@@ -74,7 +73,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "check-in-note")
         tap("Save", in: app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
-        QA.checkpoint(app, "home-logged")
+        QA.checkpoint(app, "home-after-note")
 
         // Ride out a craving.
         cravingButton(in: app).tap()
