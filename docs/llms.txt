@@ -1,0 +1,20 @@
+# Quit Zyn: Pouch & Snus Tracker
+
+> Quit Zyn is a free quit Zyn app for iPhone. Count nicotine-free days after pouches or snus, ride out cravings, and grow a bonsai with each check-in. Private.
+
+## App
+
+- [Quit Zyn App for iPhone | Quit Zyn: Pouch & Snus Tracker](https://jackwallner.com/ios/quitzyn/index.html.md): Quit Zyn is a free quit Zyn app for iPhone. Count nicotine-free days after pouches or snus, ride out cravings, and grow a bonsai with each check-in. Private.
+
+## Guides
+
+- [Best Quit Zyn App: 5 Pouch Quit Apps Compared](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html.md): Five iPhone apps for quitting Zyn and nicotine pouches compared: Pace, Pouch Buddy, Pouched, Quit Vaping and Quit Zyn. Facts as of October 2026.
+- [How to Quit Zyn: Withdrawal Timeline and What to Expect](https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html.md): How to quit Zyn and nicotine pouches: a sourced withdrawal timeline, common symptoms, practical steps, and free quitline support from the NCI, CDC and FDA.
+
+## Optional
+
+- [Quit Zyn for Android Privacy Policy](https://jackwallner.github.io/quitzyn/android-privacy.html.md): Quit Zyn (listed on Google Play as Quit Zyn: Pouch & Snus Tracker, published by E3 Apps) is a personal tracker for quitting nicotine on Android. It does...
+- [Quit Zyn for Android Terms of Use](https://jackwallner.github.io/quitzyn/android-terms.html.md): By using Quit Zyn on Android, you agree to these Terms of Use and to the Google Play Terms of Service.
+- [Quit Zyn Privacy Policy](https://jackwallner.com/ios/quitzyn/privacy-policy.html.md): Quit Zyn is a personal nicotine-free tracking app for iPhone and Apple Watch. It does not require an account and does not read or write Apple Health.
+- [Quit Zyn - Support](https://jackwallner.com/ios/quitzyn/support.html.md): Quit Zyn is a nicotine-free tracking app for iPhone and Apple Watch. It helps you track your journey with a day counter, virtual garden, health benefit...
+- [Quit Zyn Terms of Use](https://jackwallner.com/ios/quitzyn/terms.html.md): By using Quit Zyn, you agree to these Terms of Use and Apple's Standard Licensed Application End User License Agreement.

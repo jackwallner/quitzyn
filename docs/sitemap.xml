@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://jackwallner.github.io/quitzyn/</loc>
-        <lastmod>2026-05-13</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://jackwallner.github.io/quitzyn/privacy-policy.html</loc>
-        <lastmod>2026-05-13</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://jackwallner.github.io/quitzyn/support.html</loc>
-        <lastmod>2026-05-13</lastmod>
-        <priority>0.3</priority>
-    </url>
+  <url><loc>https://jackwallner.github.io/quitzyn/android-privacy.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jackwallner.github.io/quitzyn/android-terms.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/privacy-policy.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/support.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://jackwallner.com/ios/quitzyn/terms.html</loc><lastmod>2026-10-21</lastmod></url>
 </urlset>
