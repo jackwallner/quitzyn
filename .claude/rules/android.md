@@ -30,14 +30,47 @@ paths:
   (`scripts/android-export/main.swift` -> `quitzyn-content.json`). The exporter
   replaces each nicotine milestone's copy with non-medical Play wording keyed by
   id; a new milestone id fails the export until it gets reviewed copy. The bonsai
-  renderer is identical to Sober's; `scripts/sync-android-bonsai.py` refreshes
-  its fixtures. `PortParityTest`, `SoberEngineTest` and `BonsaiParityTest` pin parity.
+  renderer is identical to Sober's (see Bonsai parity); `scripts/sync-android-bonsai.py`
+  refreshes its fixtures. `PortParityTest`, `SoberEngineTest` and `BonsaiParityTest` pin parity.
 - Intentional Android differences: Play In-App Review with no enjoyment question
   (Settings has separate Rate and Send Feedback rows); Settings shows cost per
   day with cents; Play cancellation wording; no Watch app; Glance widget.
 - Reminders: `AlarmManager.setWindow` (15 min) re-armed on delivery. Onboarding
   schedules the daily reminder from `graph.scope`, because the screen leaves
   composition the moment onboarding completes.
+
+## Bonsai parity
+
+- The garden's bonsai is a Kotlin port of `Shared/Bonsai/{BonsaiRenderer,BonsaiPaint,BonsaiScene,BonsaiWind}.swift`
+  in `android/app/src/main/java/com/jackwallner/quitzyn/ui/bonsai/`
+  (`BonsaiRenderer.kt`, `BonsaiPaint.kt`, `BonsaiScene.kt`, `BonsaiWind.kt`, `BonsaiMath.kt`,
+  `BonsaiGraphics.kt` geometry, `BonsaiView.kt` Compose). Keep the Swift operation order. Math goes
+  through the StrictMath wrappers in `BonsaiMath.kt` and Swift's `.rounded()` is `swiftRounded()`.
+  Path booleans (`union`, `intersection`, `subtracting`) stay lazy in `BonsaiPath` and are combined
+  once per scene with Compose `PathOperation`. The scene is recorded once per (style, day, detail,
+  vitality) and replayed each frame; only the wind (bend, drift, limb stretch, petals) is per frame.
+  The scene is built off the main thread in `BonsaiView`; the wind clock is `rememberWindClock()`.
+- Parity guard. `scripts/sync-android-bonsai.py` (macOS, Xcode) compiles the real Swift with
+  `scripts/android-bonsai/export-main.swift` and records, per scene, each layer's ink, clip chain,
+  wind motion and coverage of a 2 unit sampling grid (count and centroid), plus the wind math, into
+  `android/app/src/test/resources/bonsai/` with a manifest of the SHA-256 of every
+  `Shared/Bonsai/*.swift` file. `BonsaiParityTest` fails when any of those Swift files changes
+  (`swiftBonsaiFilesMatchManifest`), compares the Kotlin scenes to the recording within a small tolerance
+  (`scenesMatchSwift`), and compares the wind math tightly (`windMathMatchesSwift`).
+- When Swift bonsai changes: 1. port it to Kotlin, 2. run `scripts/sync-android-bonsai.py`,
+  3. `fm-gradle -p android testDebugUnitTest`, 4. look at the compare images below. Re-recording
+  without porting fails `scenesMatchSwift`; do not loosen the tolerance or re-pin the manifest to
+  get green.
+- Not in the fixtures: airborne petals and leaves (their paths move every frame, only the wind math
+  is pinned) and anti-aliasing. Check them by eye. Debug launch extras
+  `--ez gallery true --es galleryStyle sakura --ei galleryDay 365 [--ei galleryWindMs 1400]` draw one
+  320 dp tree on white, framed like `Tools/BonsaiAudit --mode=render --config=home320 --days=365
+  [--wind=1400]`. Screenshot it on the emulator, scale the iOS render to the same size and put them
+  side by side in `android/build/bonsai-compare/` (gitignored). The 2026-10-27 port matched iOS at
+  ink overlap 0.977 or better on every style at days 7, 30, 90 and 365.
+- GitHub-built debug APKs use a new debug keystore each run, so `adb uninstall` before
+  reinstalling. The software-GL emulator needs 20 to 45 s after launch to draw the first frame; take
+  the screenshot late, and retake a blank one.
 
 ## Billing
 
@@ -107,4 +140,10 @@ paths:
 - Debug launch extras (debug build only): `resetAll`, `seedDemo`, `seedDays`,
   `demoPro`, `previewStore`, `previewTrialDays`, `previewTrialUsed`,
   `seedCravings`, `tab`, `onboardingStep`, `craving`, `slip`, `showProgress`,
-  `gallery`, `testReminderIn`, `uiTest` (see `DebugLaunchOptions.kt`).
+  `gallery`, `galleryStyle`, `galleryDay`, `galleryWindMs`, `testReminderIn`, `uiTest` (see `DebugLaunchOptions.kt`).
+- When Pro is overloaded (load above 10, the emulator's watchdog kills it) the iMac (`ssh imac`,
+  Ubuntu, KVM) has the idle `agent-emu-1` AVD: start it on port 5560 with
+  `$HOME/Android/sdk/emulator/emulator -avd agent-emu-1 -port 5560 -no-window -no-audio
+  -no-boot-anim -no-snapshot-save -gpu swiftshader_indirect` under `setsid nohup`, drive it with
+  `$HOME/Android/sdk/platform-tools/adb` over ssh, and stop it with `adb -s emulator-5560 emu kill`.
+  Leave `mahj-live` (port 5556) alone.

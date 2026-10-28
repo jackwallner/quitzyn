@@ -11,6 +11,9 @@ object DebugLaunchOptions {
     val showProgress: Boolean = false
     val onboardingStep: Int? = null
     val gallery: Boolean = false
+    val galleryStyle: String? = null
+    val galleryDay: Int? = null
+    val galleryWindMs: Double? = null
     val openCraving: Boolean = false
     val openSlip: Boolean = false
 }
