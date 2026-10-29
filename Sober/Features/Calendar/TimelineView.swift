@@ -157,9 +157,9 @@ struct TimelineView: View {
                     monthNav
                     monthGrid
                 }
-                paneCard(title: "Selected day") { treeRow }
+                paneCard(title: String(localized: "Selected day")) { treeRow }
                 if !selectedIsFuture {
-                    paneCard(title: "Check-in") {
+                    paneCard(title: String(localized: "Check-in")) {
                         checkInEditor
                             .buttonStyle(.borderless)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -206,11 +206,11 @@ struct TimelineView: View {
         let totalSober = checkIns.filter { $0.wasSober }.count
         return Grid(horizontalSpacing: 0) {
             GridRow {
-                statCell(value: "\(days)", label: "Current")
+                statCell(value: "\(days)", label: String(localized: "Current"))
                 Divider()
-                statCell(value: "\(longestStreak)", label: "Longest")
+                statCell(value: "\(longestStreak)", label: String(localized: "Longest"))
                 Divider()
-                statCell(value: "\(totalSober)", label: "Total")
+                statCell(value: "\(totalSober)", label: String(localized: "Total"))
             }
         }
     }
@@ -221,7 +221,7 @@ struct TimelineView: View {
                 .font(Theme.title(weight: .semibold))
                 .foregroundStyle(Theme.brandPrimary)
                 .monospacedDigit()
-            Text(label.uppercased())
+            Text(label).textCase(.uppercase)
                 .font(Theme.caption(weight: .semibold))
                 .tracking(0.6)
                 .foregroundStyle(Theme.textSecondary)
@@ -242,7 +242,7 @@ struct TimelineView: View {
     private var monthNav: some View {
         HStack {
             Button { shift(months: -1) } label: {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.backward")
                     .frame(width: 32, height: 32)
                     .contentShape(Rectangle())
             }
@@ -251,7 +251,7 @@ struct TimelineView: View {
             Text(monthTitle).font(Theme.heading(weight: .semibold))
             Spacer()
             Button { shift(months: 1) } label: {
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .frame(width: 32, height: 32)
                     .contentShape(Rectangle())
             }
@@ -357,7 +357,7 @@ struct TimelineView: View {
         let isToday = DateHelpers.startOfDay(selectedDate) == DateHelpers.startOfDay()
 
         let caption = VStack(alignment: .leading, spacing: 2) {
-            Text(isToday ? "Today" : DateHelpers.mediumDate(selectedDate))
+            Text(isToday ? String(localized: "Today") : DateHelpers.mediumDate(selectedDate))
                 .font(Theme.body())
                 .foregroundStyle(Theme.textPrimary)
             Text("Day \(dayCount) · \(stage.title)")
@@ -411,13 +411,13 @@ struct TimelineView: View {
 
         VStack(alignment: .leading, spacing: 6) {
             if dayCount <= 1 {
-                growthLine(icon: "sparkle", text: "The seed is settling in. Your journey starts here.")
+                growthLine(icon: "sparkle", text: String(localized: "The seed is settling in. Your journey starts here."))
             } else {
                 growthLine(icon: "arrow.up.forward",
-                           text: "vs. yesterday: \(DailyGrowth.note(forDayInCycle: todayCycle))")
+                           text: DailyGrowth.note(forDayInCycle: todayCycle))
                 if curStage != prevStage {
                     growthLine(icon: "leaf.fill",
-                               text: "Stage advanced: \(prevStage.title) → \(curStage.title)")
+                           text: String(localized: "Stage advanced: \(prevStage.title) → \(curStage.title)"))
                 }
             }
         }
@@ -452,7 +452,7 @@ struct TimelineView: View {
                 Image(systemName: checkIn.wasSober ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
                     .foregroundStyle(checkIn.wasSober ? Theme.success : Theme.danger)
                     .frame(width: 28)
-                Text(checkIn.wasSober ? "Logged nicotine-free" : "Logged a slip")
+                Text(checkIn.wasSober ? String(localized: "Logged nicotine-free") : String(localized: "Logged a slip"))
                     .foregroundStyle(Theme.textPrimary)
                 Spacer()
             }
@@ -526,7 +526,7 @@ struct TimelineView: View {
     /// the existing check-in immediately).
     private func moodPicker(existing: DailyCheckIn?) -> some View {
         let symbols = ["cloud.rain.fill", "cloud.fill", "cloud.sun.fill", "sun.max.fill", "sparkles"]
-        let labels = ["Rough", "Low", "OK", "Good", "Great"]
+        let labels = TendedWeek.moodLabels
         return VStack(alignment: .leading, spacing: 4) {
             Text("Mood").font(Theme.caption(weight: .semibold)).foregroundStyle(Theme.textSecondary)
             HStack(spacing: Theme.Space.m) {
@@ -543,7 +543,7 @@ struct TimelineView: View {
                             Image(systemName: symbols[value - 1])
                                 .font(.title3)
                                 .foregroundStyle(draftMood == value ? Theme.brandPrimary : Theme.textTertiary)
-                            Text(labels[value - 1])
+                            Text(JournalEntry.feelingLabel(labels[value - 1]))
                                 .font(Theme.caption(weight: .semibold))
                                 .foregroundStyle(draftMood == value ? Theme.brandPrimary : Theme.textTertiary)
                         }

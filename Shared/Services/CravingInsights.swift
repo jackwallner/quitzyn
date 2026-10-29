@@ -170,8 +170,8 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "rate",
                 icon: "wind",
-                headline: "\(rate.rode) of \(rate.resolved) ridden out",
-                detail: "Every one of those was a \(HabitVocabulary.urgeNoun) that ended without \(HabitVocabulary.habitInstance)."
+                headline: String(localized: "Ridden out: \(rate.rode) of \(rate.resolved)"),
+                detail: HabitVocabulary.rideOutInsightDetail
             ))
         }
 
@@ -179,8 +179,8 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "window",
                 icon: "clock.fill",
-                headline: "Hardest between \(hourLabel(window.startHour, calendar: calendar)) and \(hourLabel(window.startHour + 3, calendar: calendar))",
-                detail: "\(window.count) of your \(cravings.count) logged \(HabitVocabulary.urgeNounPlural) land in that stretch."
+                headline: String(localized: "Hardest between \(hourLabel(window.startHour, calendar: calendar)) and \(hourLabel(window.startHour + 3, calendar: calendar))"),
+                detail: HabitVocabulary.peakWindowDetail(count: window.count, total: cravings.count)
             ))
         }
 
@@ -188,8 +188,8 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "length",
                 icon: "hourglass",
-                headline: "Yours usually pass in \(spokenDuration(seconds))",
-                detail: "Measured from the sessions you stayed with, not an average of everyone."
+                headline: HabitVocabulary.usualCravingDuration(spokenDuration(seconds)),
+                detail: String(localized: "Based on sessions you rode out, not an average across everyone.")
             ))
         }
 
@@ -197,8 +197,8 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "trigger",
                 icon: "tag.fill",
-                headline: "\(trigger.name) comes up most",
-                detail: "You've tagged it \(trigger.count) times."
+                headline: String(localized: "Most common trigger: \(HabitVocabulary.triggerLabel(trigger.name))"),
+                detail: String(localized: "This trigger came up \(trigger.count) times.")
             ))
         }
 
@@ -206,25 +206,25 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "weekday",
                 icon: "calendar",
-                headline: "\(weekdayLabel(day.weekday, calendar: calendar)) is your heaviest day",
-                detail: "\(day.count) logged so far."
+                headline: String(localized: "Your busiest day is \(weekdayLabel(day.weekday, calendar: calendar))."),
+                detail: String(localized: "Logged so far: \(day.count).")
             ))
         }
 
         if let change = weeklyChange(cravings, asOf: now, calendar: calendar) {
             let headline: String
             if change.thisWeek < change.lastWeek {
-                headline = "Fewer this week than last"
+                headline = String(localized: "Fewer in the last 7 days")
             } else if change.thisWeek > change.lastWeek {
-                headline = "More this week than last"
+                headline = String(localized: "More in the last 7 days")
             } else {
-                headline = "Level with last week"
+                headline = String(localized: "Same as the previous 7 days")
             }
             result.append(CravingInsight(
                 id: "weekly",
                 icon: "chart.line.uptrend.xyaxis",
                 headline: headline,
-                detail: "\(change.thisWeek) in the last seven days, \(change.lastWeek) the week before."
+                detail: String(localized: "Last 7 days: \(change.thisWeek). Previous 7 days: \(change.lastWeek).")
             ))
         }
 
@@ -232,8 +232,8 @@ enum CravingInsights {
             result.append(CravingInsight(
                 id: "mood",
                 icon: "cloud.sun.fill",
-                headline: "Your mood tends to dip before a slip",
-                detail: "The days leading up to one read lower than your usual. Worth noticing early."
+                headline: String(localized: "Your mood tends to dip before a slip"),
+                detail: String(localized: "Your mood was lower in the two days before a slip than on other logged days. It may help to notice this pattern early.")
             ))
         }
 
@@ -256,10 +256,7 @@ enum CravingInsights {
         let remaining = needed - usable
         // Timing readings need only a start time, so a screen can already be
         // showing something when the ones that need an outcome are still short.
-        let verb = insightCount > 0 ? "keep filling in" : "start filling in"
-        return remaining == 1
-            ? "One more logged \(HabitVocabulary.urgeNoun) and your patterns \(verb)."
-            : "\(remaining) more logged \(HabitVocabulary.urgeNounPlural) and your patterns \(verb)."
+        return HabitVocabulary.nextPatternUnlock(remaining: remaining, building: insightCount > 0)
     }
 
     /// The one personal line the ride-it-out screen can show mid-session.
@@ -267,15 +264,20 @@ enum CravingInsights {
     /// session identical to what it always was rather than a nagged version.
     static func coachLine(_ facts: [CravingFacts]) -> String? {
         guard let seconds = medianRideOutSeconds(facts) else { return nil }
-        return "Yours usually pass in \(spokenDuration(seconds))."
+        return HabitVocabulary.usualCravingDuration(spokenDuration(seconds))
     }
 
     // MARK: - Formatting
 
     static func spokenDuration(_ seconds: Int) -> String {
-        if seconds < 90 { return "about a minute" }
-        let minutes = Int((Double(seconds) / 60).rounded())
-        return "about \(minutes) minutes"
+        let minutes = max(1, Int((Double(seconds) / 60).rounded()))
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute]
+        formatter.unitsStyle = .full
+        let duration = minutes == 1
+            ? String(localized: "a minute")
+            : formatter.string(from: TimeInterval(minutes * 60)) ?? String(localized: "a minute")
+        return duration
     }
 
     static func hourLabel(_ hour: Int, calendar: Calendar = .current) -> String {
@@ -297,6 +299,6 @@ enum CravingInsights {
         let symbols = formatter.standaloneWeekdaySymbols ?? []
         let index = weekday - 1
         guard symbols.indices.contains(index) else { return "" }
-        return symbols[index] + "s"
+        return symbols[index]
     }
 }

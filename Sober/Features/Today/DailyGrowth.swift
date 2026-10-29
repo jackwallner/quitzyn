@@ -5,23 +5,23 @@ import Foundation
 /// so something does change every day — this surfaces it in copy.
 enum DailyGrowth {
     private static let phrases: [String] = [
-        "a new leaf unfurled",
-        "the trunk gained a hair of girth",
-        "a fresh shoot pushed out",
-        "the canopy filled in a touch",
-        "bark hardened another shade",
-        "a tiny bud appeared",
-        "roots spread a fingerwidth",
-        "the silhouette sharpened",
-        "moss crept a little further",
-        "needles deepened in color",
-        "a branch tip lengthened",
-        "the crown stretched higher",
+        String(localized: "Since yesterday, a new leaf unfurled."),
+        String(localized: "Since yesterday, the trunk gained a little girth."),
+        String(localized: "Since yesterday, a fresh shoot pushed out."),
+        String(localized: "Since yesterday, the canopy filled in a little."),
+        String(localized: "Since yesterday, the bark hardened another shade."),
+        String(localized: "Since yesterday, a tiny bud appeared."),
+        String(localized: "Since yesterday, the roots spread a little further."),
+        String(localized: "Since yesterday, the silhouette sharpened."),
+        String(localized: "Since yesterday, the moss crept a little further."),
+        String(localized: "Since yesterday, the needles deepened in color."),
+        String(localized: "Since yesterday, a branch tip lengthened."),
+        String(localized: "Since yesterday, the crown stretched higher."),
     ]
 
     static func note(forDayInCycle day: Int) -> String {
-        guard day > 0 else { return "the seed is settling in" }
-        if day >= 365 { return "the tree is complete, and the next cycle begins" }
+        guard day > 0 else { return String(localized: "Since yesterday, the seed is settling in.") }
+        if day >= 365 { return String(localized: "Since yesterday, the tree is complete and the next cycle begins.") }
         let idx = abs(day) % phrases.count
         return phrases[idx]
     }

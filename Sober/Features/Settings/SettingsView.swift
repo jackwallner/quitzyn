@@ -37,7 +37,7 @@ struct SettingsView: View {
                                 await subscriptions.restorePurchases()
                                 if !subscriptions.isProSubscriber {
                                     restoreMessage = subscriptions.lastError
-                                        ?? "No active Bloom+ purchase found for this Apple ID."
+                                        ?? String(localized: "No active Bloom+ purchase found for this Apple ID.")
                                 }
                             }
                         }
@@ -75,7 +75,15 @@ struct SettingsView: View {
                     }
                     Section {
                         Toggle("Enabled", isOn: bind(\.dailyReminderEnabled, on: s))
-                        Stepper("Hour: \(s.dailyReminderHour):00", value: bind(\.dailyReminderHour, on: s), in: 0...23)
+                        Stepper(value: bind(\.dailyReminderHour, on: s), in: 0...23) {
+                            HStack {
+                                Text("Reminder time")
+                                Spacer()
+                                Text(formattedHour(s.dailyReminderHour))
+                                    .foregroundStyle(Theme.textSecondary)
+                                    .monospacedDigit()
+                            }
+                        }
                         if s.dailyReminderEnabled && notificationsDenied {
                             Button {
                                 openNotificationSettings()
@@ -95,7 +103,7 @@ struct SettingsView: View {
                             HStack {
                                 Text("Cost per day")
                                 Spacer()
-                                Text("$\(s.costPerDayCents / 100)")
+                                Text(Decimal(s.costPerDayCents) / 100, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                                     .foregroundStyle(Theme.textSecondary)
                                     .monospacedDigit()
                             }
@@ -104,7 +112,7 @@ struct SettingsView: View {
                             HStack {
                                 Text("Pouches per day")
                                 Spacer()
-                                Text("\(s.pouchesPerDay) / day")
+                                Text("\(s.pouchesPerDay) pouches per day")
                                     .foregroundStyle(Theme.textSecondary)
                                     .monospacedDigit()
                             }
@@ -118,16 +126,16 @@ struct SettingsView: View {
                 Section {
                     resourceLink(url: "tel:988",
                                  icon: "phone.fill",
-                                 title: "988 Suicide & Crisis Lifeline",
-                                 subtitle: "Call or text 988 · 24/7 · US")
+                                 title: String(localized: "988 Suicide & Crisis Lifeline"),
+                                 subtitle: String(localized: "Call or text 988 · 24/7 · US"))
                     resourceLink(url: "tel:18006624357",
                                  icon: "cross.case.fill",
-                                 title: "SAMHSA National Helpline",
-                                 subtitle: "1-800-662-HELP · Free, confidential, 24/7")
+                                 title: String(localized: "SAMHSA National Helpline"),
+                                 subtitle: String(localized: "1-800-662-HELP · Free, confidential, 24/7"))
                     resourceLink(url: "https://findtreatment.gov",
                                  icon: "magnifyingglass",
-                                 title: "Find Treatment",
-                                 subtitle: "findtreatment.gov")
+                                 title: String(localized: "Find Treatment"),
+                                 subtitle: String(localized: "findtreatment.gov"))
                 } header: {
                     Text("If you need support")
                 } footer: {
@@ -139,13 +147,13 @@ struct SettingsView: View {
                     // (App Review 5.6.1).
                     resourceLink(url: PaywallLinks.supportMailto.absoluteString,
                                  icon: "envelope.fill",
-                                 title: "Send Feedback",
-                                 subtitle: "Questions, ideas, or trouble? Reach out.")
+                                 title: String(localized: "Send Feedback"),
+                                 subtitle: String(localized: "Questions, ideas, or trouble? Reach out."))
                     Button {
                         ReviewPromptTracker.markOpenedWriteReview()
                         UIApplication.shared.open(AppStoreReviewLinks.writeReviewURL)
                     } label: {
-                        helpRow(icon: "star.fill", title: "Rate Quit Zyn", subtitle: "On the App Store")
+                        helpRow(icon: "star.fill", title: String(localized: "Rate Quit Zyn"), subtitle: String(localized: "On the App Store"))
                     }
                 }
                 Section("Legal") {
@@ -195,6 +203,14 @@ struct SettingsView: View {
         }
     }
 
+    private func formattedHour(_ hour: Int) -> String {
+        var components = DateComponents()
+        components.calendar = Calendar.current
+        components.timeZone = .current
+        components.hour = hour
+        return (components.date ?? .now).formatted(date: .omitted, time: .shortened)
+    }
+
     private func helpRow(icon: String, title: String, subtitle: String) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
@@ -210,7 +226,6 @@ struct SettingsView: View {
             }
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(Text("\(title). \(subtitle)"))
     }
 
     /// A Form row that deep-links to a phone/web resource. Skips rendering if the
@@ -234,7 +249,6 @@ struct SettingsView: View {
                 }
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel(Text("\(title). \(subtitle)"))
         }
     }
 

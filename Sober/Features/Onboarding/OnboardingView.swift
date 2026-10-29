@@ -133,14 +133,14 @@ struct OnboardingView: View {
             Spacer()
             Image(systemName: "leaf.fill")
                 .font(.system(size: 96))
-            Text("Quit Zyn").font(Theme.display(52, weight: .semibold))
+            Text(AppBranding.displayName).font(Theme.display(52, weight: .semibold))
                 .multilineTextAlignment(.center)
             Text("Track your nicotine-free days, grow your garden, watch your health return.")
                 .multilineTextAlignment(.center)
                 .font(Theme.body())
                 .padding(.horizontal, Theme.Space.m)
             Spacer()
-            bottomBar(primaryTitle: "Get Started") { withAnimation { step = 1 } }
+            bottomBar(primaryTitle: String(localized: "Get Started")) { withAnimation { step = 1 } }
         }
     }
 
@@ -156,7 +156,7 @@ struct OnboardingView: View {
                 .colorScheme(.dark)
                 .tint(.white)
             Spacer()
-            bottomBar(primaryTitle: "Continue") { withAnimation { step = 2 } }
+            bottomBar(primaryTitle: String(localized: "Continue")) { withAnimation { step = 2 } }
         }
     }
 
@@ -177,7 +177,7 @@ struct OnboardingView: View {
             .scrollIndicators(.hidden)
 
             bottomBar(
-                primaryTitle: trialResolutionInFlight ? "Checking trial availability…" : "Continue",
+                primaryTitle: trialResolutionInFlight ? String(localized: "Checking trial availability…") : String(localized: "Continue"),
                 busy: trialResolutionInFlight,
                 above: { resolutionError }
             ) { resolveTrialAndContinue() }
@@ -288,8 +288,8 @@ struct OnboardingView: View {
                 }
                 if pouches > 0 {
                     Text(yearlyDollars > 0
-                         ? "plus \(yearlyPouches.formatted()) pouches you won't put in. That's the nicotine your body never has to process."
-                         : "\(yearlyPouches.formatted()) pouches you won't put in. That's nicotine your body never has to process.")
+                         ? String(localized: "Plus \(yearlyPouches.formatted()) pouches you won't put in. That's the nicotine your body never has to process.")
+                         : String(localized: "\(yearlyPouches.formatted()) pouches you won't put in. That's nicotine your body never has to process."))
                         .font(Theme.caption())
                         .foregroundStyle(.white.opacity(0.75))
                         .multilineTextAlignment(.center)
@@ -306,8 +306,9 @@ struct OnboardingView: View {
     private func formatCurrency(_ amount: Int) -> String {
         let f = NumberFormatter()
         f.numberStyle = .currency
+        f.locale = .current
         f.maximumFractionDigits = 0
-        return f.string(from: NSNumber(value: amount)) ?? "$\(amount)"
+        return f.string(from: NSNumber(value: amount)) ?? Decimal(amount).formatted(.currency(code: Locale.current.currency?.identifier ?? "USD"))
     }
 
     /// Currency with cents only when needed (e.g. "$6" vs "$6.50" vs "$0.40"),
@@ -316,9 +317,10 @@ struct OnboardingView: View {
         let isWhole = amount == amount.rounded()
         let f = NumberFormatter()
         f.numberStyle = .currency
+        f.locale = .current
         f.minimumFractionDigits = isWhole ? 0 : 2
         f.maximumFractionDigits = isWhole ? 0 : 2
-        return f.string(from: NSNumber(value: amount)) ?? "$\(amount)"
+        return f.string(from: NSNumber(value: amount)) ?? Decimal(amount).formatted(.currency(code: Locale.current.currency?.identifier ?? "USD"))
     }
 
     @ViewBuilder
@@ -382,7 +384,7 @@ struct OnboardingView: View {
                 ConversionDiagnostics.record(.freeVersionChosen)
                 finishOfferStep()
             }
-            Button(offerIncludesTrial ? "Keep my free trial" : "Go back", role: .cancel) {}
+            Button(offerIncludesTrial ? String(localized: "Keep my free trial") : String(localized: "Go back"), role: .cancel) {}
         } message: {
             Text("You'll keep the day counter, the calendar, craving mode, and your tree. Your year-ahead projection, the full health timeline, the journal, and the other species stay locked.")
         }
@@ -433,10 +435,10 @@ struct OnboardingView: View {
             // price of entry. Mahj's page opens with what stays free and
             // converts 43% of viewers.
             VStack(alignment: .leading, spacing: Theme.Space.m) {
-                trialBenefit(icon: "checkmark.seal.fill", text: "Your day counter, craving mode, widget and Watch stay free, forever")
-                trialBenefit(icon: "heart.text.square.fill", text: "Follow 13 sourced nicotine-recovery milestones")
+                trialBenefit(icon: "checkmark.seal.fill", text: String(localized: "Your day counter, craving mode, widget and Watch stay free, forever"))
+                trialBenefit(icon: "heart.text.square.fill", text: String(localized: "Follow 13 sourced nicotine-recovery milestones"))
                 trialBenefit(icon: "chart.line.uptrend.xyaxis", text: trialSavingsText)
-                trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
+                trialBenefit(icon: "book.closed.fill", text: String(localized: "Journal privately through the hard days"))
             }
             .padding(Theme.Space.m)
             .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
@@ -459,12 +461,12 @@ struct OnboardingView: View {
     /// I get"; the benefit card already answers the second one.
     private var trialSubhead: String {
         guard offerIncludesTrial else {
-            return "Every tool that keeps the streak visible, unlocked today."
+            return String(localized: "Every tool that keeps the streak visible, unlocked today.")
         }
         guard let trialDays else {
-            return "Every tool that keeps the streak visible. Nothing is charged today."
+            return String(localized: "Every tool that keeps the streak visible. Nothing is charged today.")
         }
-        return "Every tool that keeps the streak visible. Nothing is charged for \(trialDays) days."
+        return String(localized: "Every tool that keeps the streak visible. Nothing is charged for \(trialDays) days.")
     }
 
     /// A real date beats a duration: "free until 13 Oct" is checkable in a way
@@ -477,16 +479,10 @@ struct OnboardingView: View {
             return nil
         }
         let formatter = DateFormatter()
-        formatter.dateFormat = DateFormatter.dateFormat(
-            fromTemplate: "MMMd", options: 0, locale: .current
-        )
-        return "Free until \(formatter.string(from: end)). We'll remind you before it ends."
-    }
-
-    /// Notification permission is asked when the trial starts, not here, so the
-    /// promise above is made before the user has had the chance to decline it.
-    private var trialReminderCaveat: String? {
-        trialChargeDateLine == nil ? nil : "Reminder needs notifications turned on."
+        formatter.locale = .current
+        formatter.calendar = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMd")
+        return String(localized: "Free until \(formatter.string(from: end)). Turn on notifications and we'll remind you before your trial ends.")
     }
 
     private func trialBenefit(icon: String, text: String) -> some View {
@@ -503,8 +499,8 @@ struct OnboardingView: View {
 
     private var trialSavingsText: String {
         let yearlyDollars = Int((derivedCostPerDay * 365).rounded())
-        guard yearlyDollars > 0 else { return "Project the year ahead, not just the days behind" }
-        return "Project the \(formatCurrency(yearlyDollars)) you'd keep over the next year"
+        guard yearlyDollars > 0 else { return String(localized: "Project the year ahead, not just the days behind") }
+        return String(localized: "Project the \(formatCurrency(yearlyDollars)) you'd keep over the next year")
     }
 
     /// Quiet opt-out directly above the trial button. Same weight as the other
@@ -574,11 +570,10 @@ struct OnboardingView: View {
         }
     }
 
-    private static let trialFailureCopy = "Couldn't start your trial. Please try again."
+    private static let trialFailureCopy = String(localized: "Couldn't start your trial. Please try again.")
 
     private var trialReassuranceText: String? {
-        guard let reassurance = trialChargeDateLine else { return nil }
-        return trialReminderCaveat.map { "\(reassurance) \($0)" } ?? reassurance
+        trialChargeDateLine
     }
 
     private func reassuranceLine(_ text: String) -> some View {
@@ -638,7 +633,7 @@ struct OnboardingView: View {
             .pickerStyle(.wheel)
             .colorScheme(.dark)
             Spacer()
-            bottomBar(primaryTitle: "Continue") { withAnimation { step = 5 } }
+            bottomBar(primaryTitle: String(localized: "Continue")) { withAnimation { step = 5 } }
         }
     }
 
@@ -662,7 +657,7 @@ struct OnboardingView: View {
                 .padding(.horizontal, Theme.Space.m)
             Spacer()
             bottomBar(
-                primaryTitle: "I commit to getting better",
+                primaryTitle: String(localized: "I commit to getting better"),
                 above: {
                     VStack(spacing: Theme.Space.s) {
                         Button { completeOnboarding(committed: false) } label: {
@@ -758,7 +753,9 @@ struct OnboardingView: View {
 
     private func formatHour(_ h: Int) -> String {
         let f = DateFormatter()
-        f.dateFormat = "h a"
+        f.locale = .current
+        f.calendar = .current
+        f.setLocalizedDateFormatFromTemplate("j")
         var comps = DateComponents(); comps.hour = h
         let d = Calendar.current.date(from: comps) ?? .now
         return f.string(from: d)
@@ -777,7 +774,7 @@ struct OnboardingView: View {
             defer { trialResolutionInFlight = false }
             #if canImport(RevenueCat)
             guard subscriptions.isConfigured else {
-                trialResolutionError = "Bloom+ plans are temporarily unavailable. You can retry or continue free."
+                trialResolutionError = String(localized: "Bloom+ plans are temporarily unavailable. You can retry or continue free.")
                 return
             }
             var resolution = await subscriptions.resolveOnboardingTrial()
@@ -802,7 +799,7 @@ struct OnboardingView: View {
                     withAnimation { step = 3 }
                 }
             case .unavailable, .failed:
-                trialResolutionError = "Bloom+ plans are temporarily unavailable. You can retry or continue free."
+                trialResolutionError = String(localized: "Bloom+ plans are temporarily unavailable. You can retry or continue free.")
             }
             #else
             finishOfferStep()
@@ -862,7 +859,7 @@ struct OnboardingView: View {
                 finishOfferStep()
             } else {
                 trialError = subscriptions.lastError
-                    ?? "No active Bloom+ purchase was found for this Apple ID."
+                    ?? String(localized: "No active Bloom+ purchase was found for this Apple ID.")
             }
         }
         #endif
@@ -955,9 +952,9 @@ struct OnboardingView: View {
     }
 
     private var trialCTATitle: String {
-        guard offerIncludesTrial else { return "Unlock Bloom+" }
-        guard let trialDays else { return "Start my free trial" }
-        return "Start my \(trialDays)-day free trial"
+        guard offerIncludesTrial else { return String(localized: "Unlock Bloom+") }
+        guard let trialDays else { return String(localized: "Start my free trial") }
+        return String(localized: "Start my \(trialDays)-day free trial")
     }
 
     /// Nil until the store says how long the trial is. A literal fallback would
@@ -972,8 +969,8 @@ struct OnboardingView: View {
     }
 
     private var trialHeadline: String {
-        guard offerIncludesTrial else { return "Unlock Bloom+" }
-        guard let trialDays else { return "Bloom+, free to try" }
-        return "\(trialDays) days of Bloom+ free"
+        guard offerIncludesTrial else { return String(localized: "Unlock Bloom+") }
+        guard let trialDays else { return String(localized: "Bloom+, free to try") }
+        return String(localized: "\(trialDays) days of Bloom+ free")
     }
 }

@@ -63,15 +63,15 @@ enum NotificationService {
         // schedule is refreshed on every check-in/app-open so it stays current.
         let content = UNMutableNotificationContent()
         if streakDays > 1 {
-            content.title = "Day \(streakDays + 1) is waiting"
+            content.title = String(localized: "Day \(streakDays + 1) is waiting")
             content.body = committed
-                ? "You're \(streakDays) days in. Log today and water your bonsai."
-                : "\(streakDays) days and growing. If today's nicotine-free, log it."
+                ? String(localized: "You're \(streakDays) days in. Log today and water your bonsai.")
+                : String(localized: "Your garden is growing. Check in today if you're nicotine-free.")
         } else {
-            content.title = committed ? "Showing up today" : "Daily check-in"
+            content.title = committed ? String(localized: "Showing up today") : String(localized: "Daily check-in")
             content.body = committed
-                ? "Log today and water your garden. You've got this."
-                : "If today's nicotine-free, log it and water your garden."
+                ? String(localized: "Log today and water your garden. You've got this.")
+                : String(localized: "If today's nicotine-free, log it and water your garden.")
         }
         content.sound = .default
         content.userInfo = [deepLinkKey: deepLinkCheckIn]
@@ -116,11 +116,11 @@ enum NotificationService {
         guard let fireDate = trialReminderFireDate(endsAt: endsAt, now: now) else { return false }
 
         let content = UNMutableNotificationContent()
-        content.title = "Your Bloom+ trial ends soon"
+        content.title = String(localized: "Your Bloom+ trial ends soon")
         if let summary, !summary.isEmpty {
-            content.body = "\(summary) Keep the full garden, or cancel any time before it renews."
+            content.body = String(localized: "\(summary) Keep the full garden, or cancel any time before it renews.")
         } else {
-            content.body = "Keep your full garden, journal, and savings, or cancel any time before it renews."
+            content.body = String(localized: "Keep your full garden, journal, and savings, or cancel any time before it renews.")
         }
         content.sound = .default
         content.userInfo = [deepLinkKey: deepLinkBloomPlus]

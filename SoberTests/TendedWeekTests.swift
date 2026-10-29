@@ -50,9 +50,9 @@ struct TendedWeekTests {
 
     @Test func summaryNeverScolds() {
         let empty = TendedWeek.days(endingOn: today, facts: [])
-        #expect(TendedWeek.summary(empty) == "Tend a day to start your week")
+        #expect(TendedWeek.summary(empty) == "Check in once to start your week.")
         let full = TendedWeek.days(endingOn: today, facts: (0..<7).map { fact($0, logged: true) })
-        #expect(TendedWeek.summary(full) == "All 7 days tended")
+        #expect(TendedWeek.summary(full) == "Days logged this week: 7 of 7.")
     }
 
     @Test func moodSummaryNeedsAtLeastOneMood() {
@@ -65,7 +65,7 @@ struct TendedWeekTests {
             fact(1, logged: true, mood: 4),
             fact(2, logged: true, mood: 5),
         ])
-        #expect(TendedWeek.moodSummary(week) == "mostly good")
+        #expect(TendedWeek.moodSummary(week) == "Mostly Good")
     }
 
     @Test func outOfRangeMoodsAreDiscardedRatherThanSkewing() {
@@ -73,7 +73,7 @@ struct TendedWeekTests {
             fact(0, logged: true, mood: 99),
             fact(1, logged: true, mood: 1),
         ])
-        #expect(TendedWeek.moodSummary(week) == "mostly rough")
+        #expect(TendedWeek.moodSummary(week) == "Mostly Rough")
     }
 }
 
@@ -195,7 +195,7 @@ struct SlipDayDisplayTests {
     /// clipped to "Tend a day to start..." there.
     @Test func compactSummaryStaysShortEnoughForTheHomeCard() {
         let week = TendedWeek.days(facts: [])
-        #expect(TendedWeek.compactSummary(week) == "0/7 tended")
+        #expect(TendedWeek.compactSummary(week) == "0/7")
         #expect(TendedWeek.compactSummary(week).count < 15)
     }
 }
@@ -206,13 +206,13 @@ struct WeekLineTests {
 
     /// A user who checks in with a mood and then logs a slip that same day
     /// leaves the week with zero tended days but a recorded mood, which read
-    /// as "Tend a day to start your week - felt mostly good".
+    /// reads "Check in once to start your week."
     @Test func theMoodClauseNeedsACountToHangOff() {
         let week = TendedWeek.days(endingOn: today, facts: [
             CheckInFacts(day: today, wasSober: false, wasLogged: true, mood: 4)
         ])
         #expect(TendedWeek.tendedCount(week) == 0)
-        #expect(TendedWeek.moodSummary(week) == "mostly good")
-        #expect(TendedWeek.summary(week) == "Tend a day to start your week")
+        #expect(TendedWeek.moodSummary(week) == "Mostly Good")
+        #expect(TendedWeek.summary(week) == "Check in once to start your week.")
     }
 }

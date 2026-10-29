@@ -192,34 +192,37 @@ struct SobrietyServiceTests {
 
 @Suite("Habit price comparison")
 struct HabitPriceComparisonTests {
-    @Test func defaultPouchUserGetsTheYearlyComparison() {
+    @Test func defaultPouchUserGetsTheYearlyComparison() throws {
         // The onboarding defaults: 8 pouches a day from a $6, 15-pouch can is
         // $3.20 a day, so a $34.99 year is about 11 days of pouches.
-        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 3.2) == "about 11 days of pouches")
+        let days = try #require(HabitPriceComparison.daysOfHabit(price: 34.99, costPerDay: 3.2))
+        #expect(HabitPriceComparison.span(days) == .aboutDays(11))
     }
 
-    @Test func heavyUserGetsAShorterComparison() {
-        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 9) == "about 4 days of pouches")
+    @Test func heavyUserGetsAShorterComparison() throws {
+        let days = try #require(HabitPriceComparison.daysOfHabit(price: 34.99, costPerDay: 9))
+        #expect(HabitPriceComparison.span(days) == .aboutDays(4))
     }
 
     @Test func lightSpendersGetNoComparison() {
         // $34.99 at $1/day is 35 habit-days, past the point where the
         // comparison flatters the price, so it is suppressed entirely.
-        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 1) == nil)
+        #expect(HabitPriceComparison.daysOfHabit(price: 34.99, costPerDay: 1) == nil)
     }
 
     @Test func missingSpendDataProducesNothing() {
-        #expect(HabitPriceComparison.phrase(price: 34.99, costPerDay: 0) == nil)
+        #expect(HabitPriceComparison.daysOfHabit(price: 34.99, costPerDay: 0) == nil)
         #expect(HabitPriceComparison.daysOfHabit(price: 0, costPerDay: 3) == nil)
     }
 
-    @Test func exactlyAtTheCeilingStillRenders() {
-        #expect(HabitPriceComparison.phrase(price: 42, costPerDay: 2) == "about 21 days of pouches")
+    @Test func exactlyAtTheCeilingStillRenders() throws {
+        let days = try #require(HabitPriceComparison.daysOfHabit(price: 42, costPerDay: 2))
+        #expect(HabitPriceComparison.span(days) == .aboutDays(21))
     }
 
     @Test func halfDaysAreSpelledOut() {
-        #expect(HabitPriceComparison.dayCount(0.5) == "less than a day")
-        #expect(HabitPriceComparison.dayCount(1.5) == "about a day and a half")
-        #expect(HabitPriceComparison.dayCount(2.4) == "about 2 and a half days")
+        #expect(HabitPriceComparison.span(0.5) == .underADay)
+        #expect(HabitPriceComparison.span(1.5) == .aboutADayAndAHalf)
+        #expect(HabitPriceComparison.span(2.4) == .aboutDaysAndAHalf(2))
     }
 }

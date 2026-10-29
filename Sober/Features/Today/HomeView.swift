@@ -53,8 +53,8 @@ struct HomeView: View {
     /// names the real number rather than promising all of it.
     private var slipCardDetail: String {
         let kept = gardenState?.carryoverDays ?? 0
-        guard kept > 0 else { return "Day one starts now." }
-        return "Your tree kept \(kept) day\(kept == 1 ? "" : "s") of growth. Day one starts now."
+        guard kept > 0 else { return String(localized: "Day one starts now.") }
+        return String(localized: "Your tree kept \(kept) days of growth. Day one starts now.")
     }
     private var dayInCycle: Int { GardenService.cycleProgress(forDays: treeDays).dayInCycle }
     private var stage: BonsaiStage { GardenService.stage(forDays: treeDays) }
@@ -237,8 +237,8 @@ struct HomeView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 .foregroundStyle(Theme.brandPrimary)
-                .accessibilityLabel("\(days) \(days == 1 ? "day" : "days") nicotine-free")
-            Text(days == 1 ? "Day Nicotine-Free" : "Days Nicotine-Free")
+                .accessibilityLabel("\(days) days nicotine-free")
+            Text("\(days) days nicotine-free label")
                 .font(.system(size: 13, weight: .semibold, design: .serif))
                 .tracking(2.0)
                 .textCase(.uppercase)
@@ -453,7 +453,7 @@ struct HomeView: View {
                     .font(Theme.body(weight: .semibold))
                     .foregroundStyle(Theme.brandPrimary)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("I'm having a \(HabitVocabulary.urgeNoun)")
+                    Text("I'm having a craving")
                         .font(Theme.subhead(weight: .semibold))
                         .foregroundStyle(Theme.textPrimary)
                     Text(CravingCoach.buttonSubtitle)
@@ -677,7 +677,7 @@ private struct CheckInDetailSheet: View {
                                     Image(systemName: symbols[value - 1])
                                         .font(.title2)
                                         .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
-                                    Text(moodLabels[value - 1])
+                        Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
                                         .font(Theme.caption(weight: .semibold))
                                         .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
                                 }
@@ -752,9 +752,9 @@ struct ProgressSheet: View {
 
                 if isPro {
                     Section {
-                        savedRow(label: "Money", streak: moneySaved, lifetime: lifetimeMoneySaved, sub: "$\((settings?.costPerDayCents ?? 0) / 100) / day", icon: "dollarsign.circle.fill")
-                        savedRow(label: "Pouches", streak: pouchesAvoided.formatted(), lifetime: lifetimePouchesAvoided.formatted(), sub: "\(settings?.pouchesPerDay ?? 0) / day", icon: "nosign")
-                        savedRow(label: "Nicotine", streak: nicotineMg(pouchesAvoided), lifetime: nicotineMg(lifetimePouchesAvoided), sub: "~6 mg per pouch", icon: "drop.fill")
+                        savedRow(label: String(localized: "Money"), streak: moneySaved, lifetime: lifetimeMoneySaved, sub: dailyCostLabel, icon: "dollarsign.circle.fill")
+                        savedRow(label: String(localized: "Pouches"), streak: pouchesAvoided.formatted(), lifetime: lifetimePouchesAvoided.formatted(), sub: String(localized: "\(settings?.pouchesPerDay ?? 0) pouches per day"), icon: "nosign")
+                        savedRow(label: String(localized: "Nicotine"), streak: nicotineMg(pouchesAvoided), lifetime: nicotineMg(lifetimePouchesAvoided), sub: String(localized: "About 6 mg per pouch"), icon: "drop.fill")
                     } header: {
                         Text("Saved")
                     } footer: {
@@ -819,8 +819,8 @@ struct ProgressSheet: View {
         let next = AchievementCatalog.nextTimeMilestone(after: days)
         return progressRow(
             icon: "flag.fill",
-            title: next?.title ?? "Year One",
-            detail: next.map { "in \(max(1, $0.dayThreshold - days)) days" } ?? "Crushed it"
+            title: next?.title ?? String(localized: "Year One"),
+            detail: next.map { String(localized: "in \(max(1, $0.dayThreshold - days)) days") } ?? String(localized: "Crushed it")
         )
     }
 
@@ -830,8 +830,8 @@ struct ProgressSheet: View {
         let next = HealthBenefitCatalog.next(after: hours)
         return progressRow(
             icon: "heart.fill",
-            title: next?.title ?? "All unlocked",
-            detail: next.map { "at \($0.displayWait)" } ?? ""
+            title: next?.title ?? String(localized: "All unlocked"),
+            detail: next.map { String(localized: "at \($0.displayWait)") } ?? ""
         )
     }
 
@@ -864,12 +864,17 @@ struct ProgressSheet: View {
                     .font(Theme.heading(weight: .semibold))
                     .foregroundStyle(Theme.brandPrimary)
                     .monospacedDigit()
-                Text("\(lifetime) lifetime")
+                Text(String(localized: "Lifetime: \(lifetime)"))
                     .font(Theme.caption())
                     .foregroundStyle(Theme.textSecondary)
                     .monospacedDigit()
             }
         }
+    }
+
+    private var dailyCostLabel: String {
+        let amount = Decimal(settingsRows.first?.costPerDayCents ?? 0) / 100
+        return String(localized: "\(amount.formatted(.currency(code: settingsRows.first?.currencyCode ?? "USD"))) per day")
     }
 
     /// Every sober day ever recorded — the basis for lifetime savings so a
@@ -878,16 +883,14 @@ struct ProgressSheet: View {
 
     private var lifetimeMoneySaved: String {
         let cents = lifetimeSoberDays * (settings?.costPerDayCents ?? 0)
-        let dollars = Double(cents) / 100
-        return Self.currencyFormatter.string(from: NSNumber(value: dollars)) ?? "$\(Int(dollars))"
+        return formattedCurrency(cents: cents)
     }
 
     private var lifetimePouchesAvoided: Int { lifetimeSoberDays * (settings?.pouchesPerDay ?? 0) }
 
     private var savedSoFar: String {
         let cents = days * (settings?.costPerDayCents ?? 0)
-        let dollars = Double(cents) / 100
-        return Self.currencyFormatter.string(from: NSNumber(value: dollars)) ?? "$\(Int(dollars))"
+        return formattedCurrency(cents: cents)
     }
 
     private var moneySaved: String { savedSoFar }
@@ -895,7 +898,20 @@ struct ProgressSheet: View {
 
     /// Pouches expressed as milligrams of nicotine never absorbed (~6 mg per pouch).
     private func nicotineMg(_ pouches: Int) -> String {
-        "\((pouches * 6).formatted()) mg"
+        Measurement(value: Double(pouches * 6), unit: UnitMass.milligrams)
+            .formatted(.measurement(width: .abbreviated, usage: .asProvided))
+    }
+
+    private func formattedCurrency(cents: Int) -> String {
+        let code = settings?.currencyCode ?? Locale.current.currency?.identifier ?? "USD"
+        let amount = Decimal(cents) / 100
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = .current
+        formatter.currencyCode = code
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: amount as NSDecimalNumber)
+            ?? amount.formatted(.currency(code: code))
     }
 
     private func achievementRow(_ a: Achievement) -> some View {
@@ -927,12 +943,6 @@ struct ProgressSheet: View {
         .onTapGesture { if !unlocked && !isPro { requestSubsequentLockedFeaturePitch(.progressSheet) } }
     }
 
-    private static let currencyFormatter: NumberFormatter = {
-        let f = NumberFormatter()
-        f.numberStyle = .currency
-        f.maximumFractionDigits = 0
-        return f
-    }()
 }
 
 /// Home's vertical space, split into what the garden card can claim.

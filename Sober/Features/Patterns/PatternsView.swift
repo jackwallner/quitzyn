@@ -64,7 +64,7 @@ struct PatternsView: View {
             Text("Nothing to read yet")
                 .font(Theme.title())
                 .foregroundStyle(Theme.textPrimary)
-            Text("Every time you ride out a \(HabitVocabulary.urgeNoun), this page learns something about yours: when they hit, what sets them off, and how long they actually last.")
+            Text("Every time you ride out an urge, this page learns when they hit, what sets them off, and how long they last.")
                 .font(Theme.body())
                 .foregroundStyle(Theme.textSecondary)
                 .multilineTextAlignment(.center)
@@ -89,16 +89,14 @@ struct PatternsView: View {
                 .font(Theme.bigNumber(56))
                 .foregroundStyle(Theme.brandPrimary)
                 .monospacedDigit()
-            Text(rodeOut == 1
-                 ? "\(HabitVocabulary.urgeNoun) ridden out"
-                 : "\(HabitVocabulary.urgeNounPlural) ridden out")
+            Text(rodeOut == 1 ? "urge ridden out" : "urges ridden out")
                 .font(Theme.caption(weight: .semibold))
                 .tracking(1.2)
                 .textCase(.uppercase)
                 .foregroundStyle(Theme.textSecondary)
             Text(openEnded > 0
-                 ? "out of \(answered.count) you saw through · \(openEnded) left open"
-                 : "out of \(answered.count) logged")
+                 ? String(localized: "Answered: \(answered.count.formatted()) · Left open: \(openEnded.formatted())")
+                 : String(localized: "Answered: \(answered.count.formatted())"))
                 .font(Theme.caption())
                 .foregroundStyle(Theme.textTertiary)
                 .multilineTextAlignment(.center)

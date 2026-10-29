@@ -17,26 +17,61 @@ import Foundation
 enum HabitVocabulary {
     /// What the user is abstaining from, lowercase, used mid-sentence.
     /// Sober: "alcohol". Quit Zyn: "nicotine".
-    static let substance = "nicotine"
+    static let substance = String(localized: "nicotine")
 
     /// The activity as a gerund, for phrases like "a day and a half of ___".
     /// Sober: "drinking". Quit Zyn: "pouches".
-    static let habitGerund = "pouches"
+    static let habitGerund = String(localized: "pouches")
 
     /// A single instance of the habit, with its article.
     /// Sober: "a drink". Quit Zyn: "a pouch".
-    static let habitInstance = "a pouch"
+    static let habitInstance = String(localized: "a pouch")
 
     /// How the app describes a day on the right side of the line, used as an
     /// adjective: "every ___ day you've counted". Sober says "sober"; this app
     /// has never used that word for a nicotine user.
-    static let cleanDayAdjective = "nicotine-free"
+    static let cleanDayAdjective = String(localized: "nicotine-free")
+
+    /// Full standalone sentence avoids adjective inflection problems when the
+    /// user is told that previously counted days still matter after a slip.
+    static let countedDayStillCounts = String(localized: "Every nicotine-free day you've counted still counts")
 
     /// What the app calls an urge, lowercase. Both current apps say "craving";
     /// it stays configurable because it is the most-repeated noun in the
     /// feature and a fork may prefer "urge".
-    static let urgeNoun = "craving"
-    static let urgeNounPlural = "cravings"
+    static let urgeNoun = String(localized: "craving")
+    static let urgeNounPlural = String(localized: "cravings")
+
+    /// Complete pattern prompts keep the urge noun in this fork point, where
+    /// the sentence can be translated with natural case and word order.
+    static func nextPatternUnlock(remaining: Int, building: Bool) -> String {
+        if remaining == 1 {
+            return building
+                ? String(localized: "Record one more craving to reveal more of your patterns.")
+                : String(localized: "Record one more craving to start seeing your patterns.")
+        }
+        return building
+            ? String(localized: "Record \(remaining) more cravings to reveal more of your patterns.")
+            : String(localized: "Record \(remaining) more cravings to start seeing your patterns.")
+    }
+
+    static func rodeOutMessage(count: Int) -> String {
+        count == 1
+            ? String(localized: "You rode out one craving.")
+            : String(localized: "You rode out \(count) cravings.")
+    }
+
+    static func peakWindowDetail(count: Int, total: Int) -> String {
+        String(localized: "Most logged cravings land in this window: \(count) of \(total).")
+    }
+
+    static func usualCravingDuration(_ duration: String) -> String {
+        String(localized: "Your cravings usually pass in about \(duration).")
+    }
+
+    /// A complete insight sentence avoids forcing the pouch term into a
+    /// language-specific case from the shared craving analysis.
+    static let rideOutInsightDetail = String(localized: "Every craving you rode out ended without a pouch.")
 
     /// How long a typical urge takes to crest and fade. Drives the default
     /// ride-it-out session length and the coaching copy. Nicotine urges run
@@ -55,7 +90,7 @@ enum HabitVocabulary {
     /// Pouches are an all-day habit rather than an evening one, so these lean
     /// on the ordinary hours a can used to fill: the commute, the desk, the
     /// gap after a meal.
-    static let triggers = [
+    private static let storedTriggers = [
         "After a meal",
         "Stress",
         "Boredom",
@@ -66,6 +101,23 @@ enum HabitVocabulary {
         "Tired",
     ]
 
+    static var triggers: [String] { storedTriggers }
+
+    /// Trigger values remain stable in saved episodes and playbook identifiers.
+    static func triggerLabel(_ tag: String) -> String {
+        switch tag {
+        case "After a meal": String(localized: "After a meal")
+        case "Stress": String(localized: "Stress")
+        case "Boredom": String(localized: "Boredom")
+        case "Driving": String(localized: "Driving")
+        case "Coffee": String(localized: "Coffee")
+        case "Work break": String(localized: "Work break")
+        case "Drinking": String(localized: "Drinking")
+        case "Tired": String(localized: "Tired")
+        default: tag
+        }
+    }
+
     /// Past this many habit-days a "A year of Bloom+ costs about N days of ___"
     /// line stops flattering the price, so it is suppressed. Sober uses 10,
     /// where a drinking day is expensive. Pouches cost a few dollars a day, so a
@@ -74,5 +126,5 @@ enum HabitVocabulary {
     static let priceComparisonMaxDays: Double = 21
 
     /// Example shown in the "why you started" reasons editor.
-    static let reasonPlaceholder = "So I stop planning my day around a can"
+    static let reasonPlaceholder = String(localized: "So I stop planning my day around a can")
 }

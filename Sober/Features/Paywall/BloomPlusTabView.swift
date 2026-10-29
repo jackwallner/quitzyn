@@ -38,6 +38,7 @@ private struct BloomPlusHubView: View {
     private var settings: UserSettings? { settingsRows.first }
     private var costPerDayCents: Int { settings?.costPerDayCents ?? 0 }
     private var pouchesPerDay: Int { settings?.pouchesPerDay ?? 0 }
+    private var currencyCode: String { settings?.currencyCode ?? Locale.current.currency?.identifier ?? "USD" }
 
     private var days: Int {
         guard let j = journeys.first(where: { $0.isActive }) else { return 0 }
@@ -81,7 +82,7 @@ private struct BloomPlusHubView: View {
             }
             .leadingPaneEdge()
             .themedScrollBackground()
-            .navigationTitle(QuitZynScreenshotMode.isEnabled ? "Support" : "Bloom+")
+            .navigationTitle(QuitZynScreenshotMode.isEnabled ? String(localized: "Support") : String(localized: "Bloom+"))
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(
                     days: days,
@@ -96,18 +97,18 @@ private struct BloomPlusHubView: View {
         VStack(spacing: 4) {
             HStack(spacing: 6) {
                 Image(systemName: "sparkles").font(Theme.caption(weight: .semibold))
-                Text("BLOOM+ ACTIVE")
+                Text("Bloom+ active")
                     .font(Theme.caption(weight: .bold))
                     .tracking(1.4)
             }
             .foregroundStyle(Theme.brandPrimary)
 
-            Text(Self.currency.string(from: NSNumber(value: lifetimeMoneySaved)) ?? "$0")
+            Text(formatCurrency(lifetimeMoneySaved))
                 .font(.system(size: 54, weight: .bold, design: .rounded))
                 .foregroundStyle(Theme.textPrimary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
-            Text("kept in your pocket across \(heroDays) nicotine-free day\(heroDays == 1 ? "" : "s")")
+            Text("Saved over \(heroDays) nicotine-free days.")
                 .font(Theme.caption())
                 .foregroundStyle(Theme.textSecondary)
                 .multilineTextAlignment(.center)
@@ -119,8 +120,10 @@ private struct BloomPlusHubView: View {
 
     private var statRow: some View {
         HStack(spacing: Theme.Space.m) {
-            statTile("nosign", lifetimePouches.formatted(), "pouches avoided")
-            statTile("drop.fill", "\(lifetimeNicotineMg.formatted()) mg", "nicotine never absorbed")
+            statTile("nosign", lifetimePouches.formatted(), String(localized: "Pouches avoided"))
+            let nicotineAmount = Measurement(value: Double(lifetimeNicotineMg), unit: UnitMass.milligrams)
+                .formatted(.measurement(width: .abbreviated, usage: .asProvided))
+            statTile("drop.fill", nicotineAmount, String(localized: "Nicotine never absorbed"))
         }
     }
 
@@ -145,6 +148,16 @@ private struct BloomPlusHubView: View {
         .background(Theme.cardSurface, in: RoundedRectangle(cornerRadius: 16))
     }
 
+    private func formatCurrency(_ amount: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = .current
+        formatter.currencyCode = currencyCode
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: NSNumber(value: amount))
+            ?? Decimal(amount).formatted(.currency(code: currencyCode))
+    }
+
     private var projectionCard: some View {
         HStack(spacing: Theme.Space.m) {
             Image(systemName: "chart.line.uptrend.xyaxis")
@@ -155,7 +168,7 @@ private struct BloomPlusHubView: View {
                 Text("On track to save")
                     .font(Theme.caption())
                     .foregroundStyle(Theme.textSecondary)
-                Text("\(Self.currency.string(from: NSNumber(value: yearlyProjection)) ?? "$0") a year")
+                Text(String(localized: "\(formatCurrency(yearlyProjection)) a year"))
                     .font(Theme.body(weight: .semibold))
                     .foregroundStyle(Theme.textPrimary)
             }
@@ -201,11 +214,11 @@ private struct BloomPlusHubView: View {
     private var patternsSubtitle: String {
         let rodeOut = episodes.filter { $0.outcome == .rodeItOut }.count
         guard rodeOut > 0 else {
-            return "When your \(HabitVocabulary.urgeNounPlural) hit and what sets them off"
+            return String(localized: "When your \(HabitVocabulary.urgeNounPlural) hit and what sets them off")
         }
         return rodeOut == 1
-            ? "1 \(HabitVocabulary.urgeNoun) ridden out so far"
-            : "\(rodeOut) \(HabitVocabulary.urgeNounPlural) ridden out so far"
+            ? String(localized: "\(rodeOut) \(HabitVocabulary.urgeNoun) ridden out so far")
+            : String(localized: "\(rodeOut) \(HabitVocabulary.urgeNounPlural) ridden out so far")
     }
 
     private var milestonesCard: some View {
@@ -216,19 +229,19 @@ private struct BloomPlusHubView: View {
         return VStack(spacing: 0) {
             milestoneRow(
                 icon: "flag.fill",
-                title: nextMilestone?.title ?? "Year One",
-                trailing: nextMilestone.map { "in \(max(1, $0.dayThreshold - days)) days" } ?? "Crushed it"
+                title: nextMilestone?.title ?? String(localized: "Year One"),
+                trailing: nextMilestone.map { String(localized: "in \(max(1, $0.dayThreshold - days)) days") } ?? String(localized: "Crushed it")
             )
             Divider().padding(.leading, 48)
             milestoneRow(
                 icon: "heart.fill",
-                title: nextBenefit?.title ?? "All benefits unlocked",
-                trailing: nextBenefit.map { "at \($0.displayWait)" } ?? ""
+                title: nextBenefit?.title ?? String(localized: "All benefits unlocked"),
+                trailing: nextBenefit.map { String(localized: "at \($0.displayWait)") } ?? ""
             )
             Divider().padding(.leading, 48)
             milestoneRow(
                 icon: "checkmark.seal.fill",
-                title: "Achievements earned",
+                title: String(localized: "Achievements earned"),
                 trailing: "\(earned)"
             )
         }
@@ -252,10 +265,4 @@ private struct BloomPlusHubView: View {
         .padding(Theme.Space.m)
     }
 
-    private static let currency: NumberFormatter = {
-        let f = NumberFormatter()
-        f.numberStyle = .currency
-        f.maximumFractionDigits = 0
-        return f
-    }()
 }
