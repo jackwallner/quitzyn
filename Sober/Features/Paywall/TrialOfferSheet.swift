@@ -12,8 +12,10 @@ import RevenueCat
 /// secondary ("See all plans").
 struct TrialOfferSheet: View {
     let focus: BloomFeature?
-    let offerLabel: String?
-    let priceLabel: String?
+    let hasTrial: Bool
+    let trialDays: Int?
+    let trialPriceSentence: String?
+    let priceOnlyLabel: String?
     let directPurchase: Bool
     let isPurchasing: Bool
     let errorMessage: String?
@@ -28,47 +30,30 @@ struct TrialOfferSheet: View {
     private var yearlySpend: Int { Int((Double(costPerDayCents) * 365 / 100).rounded()) }
     private var showsAnchor: Bool { yearlySpend >= 60 }
 
-    /// Trial length in days, parsed from the offer label ("7-day free trial").
-    /// Nil when the store's label carries no number: naming a length the offer
-    /// may not have is a 3.1.2 problem, so every line here drops the number
-    /// instead of guessing one.
-    private var trialDays: Int? {
-        guard let offerLabel else { return nil }
-        return offerLabel.firstMatchInt
-    }
-
-    private var hasTrial: Bool { offerLabel != nil }
-
     /// Small billing disclosure (Apple 3.1.2) kept out of the hero.
     private var trialBillingNote: String? {
-        guard hasTrial, let priceLabel else { return nil }
-        guard let trialDays else { return "When the trial ends, \(priceLabel) unless you cancel." }
-        return "After \(trialDays) days, \(priceLabel) unless you cancel."
-    }
-
-    /// Strip the period suffix ("$29.99 / year" -> "$29.99").
-    private var cleanPrice: String? {
-        guard let priceLabel else { return nil }
-        return priceLabel.components(separatedBy: " /").first?.trimmingCharacters(in: .whitespaces)
+        guard hasTrial else { return nil }
+        guard let trialPriceSentence else { return String(localized: "Apple will show the billing details before you confirm.") }
+        return String(localized: "\(trialPriceSentence) \(SubscriptionService.autoRenewDisclosure)")
     }
 
     private var headline: String {
-        guard hasTrial else { return focus?.pitchHeadline ?? "Try Bloom+ free" }
-        guard let trialDays else { return "Bloom+, free to try" }
-        return "\(trialDays) days free"
+        guard hasTrial else { return focus?.pitchHeadline ?? String(localized: "Try Bloom+ free") }
+        guard let trialDays else { return String(localized: "Bloom+, free to try") }
+        return String(localized: "\(trialDays) days free")
     }
 
     private var ctaTitle: String {
-        guard hasTrial else { return "Continue" }
-        guard let trialDays else { return "Start My Free Trial" }
-        return "Start My \(trialDays)-Day Free Trial"
+        guard hasTrial else { return String(localized: "Continue") }
+        guard let trialDays else { return String(localized: "Start My Free Trial") }
+        return String(localized: "Start My \(trialDays)-Day Free Trial")
     }
 
     private var subheadline: String {
         if let focus {
             return focus.pitchSubheadline
         }
-        return "Full access to your garden, journal, health timeline, and savings. Free until your trial ends."
+        return String(localized: "Full access to your garden, journal, health timeline, and savings. Free until your trial ends.")
     }
 
     var body: some View {
@@ -97,19 +82,19 @@ struct TrialOfferSheet: View {
                 }
 
                 if hasTrial, let trialDays {
-                    TrialTimeline(trialDays: trialDays, billingNote: trialBillingNote)
+                    TrialTimeline(trialDays: trialDays)
                         .padding(.horizontal, 4)
                 }
 
                 if showsAnchor {
                     SavingsAnchorCard(
                         yearlySpend: yearlySpend,
-                        habitName: "pouches",
+                        habitName: HabitVocabulary.habitGerund,
                         trialDays: hasTrial ? trialDays : nil,
                         // `trialDays` is already nil when the store gave no
                         // length, so the card falls back to the price line.
-                        priceLabel: hasTrial ? nil : cleanPrice,
-                        rightCaption: hasTrial ? "full Bloom+ access" : "a year of Bloom+"
+                        priceLabel: hasTrial ? nil : priceOnlyLabel,
+                        rightCaption: hasTrial ? String(localized: "full Bloom+ access") : String(localized: "a year of Bloom+")
                     )
                 }
 
@@ -172,7 +157,7 @@ struct TrialOfferSheet: View {
     // MARK: - CTA
 
     private var ctaStack: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 6) {
             Button(action: onStartTrial) {
                 ZStack {
                     Text(ctaTitle)
@@ -186,7 +171,7 @@ struct TrialOfferSheet: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 16)
+                .padding(.vertical, 12)
             }
             .background(Theme.brandGradient, in: RoundedRectangle(cornerRadius: 16))
             .shadow(color: Theme.brandPrimary.opacity(glowPulse ? 0.45 : 0.25), radius: glowPulse ? 18 : 10, y: 6)
@@ -195,8 +180,8 @@ struct TrialOfferSheet: View {
             .disabled(isPurchasing)
 
             HStack(spacing: 16) {
-                reassurancePill("checkmark.shield.fill", "No payment now")
-                reassurancePill("bell.fill", "Reminder before billing")
+                reassurancePill("checkmark.shield.fill", String(localized: "No payment now"))
+                reassurancePill("bell.fill", String(localized: "Reminder before billing"))
             }
 
             Button("See all plans", action: onSeeAllPlans)
@@ -212,12 +197,12 @@ struct TrialOfferSheet: View {
                     .font(.system(size: 11))
                     .foregroundStyle(Theme.textTertiary)
                     .multilineTextAlignment(.center)
-                    .padding(.top, 2)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
         .padding(.horizontal, 24)
-        .padding(.top, 12)
-        .padding(.bottom, 16)
+        .padding(.top, 6)
+        .padding(.bottom, 8)
         .background(.ultraThinMaterial)
     }
 
@@ -231,17 +216,5 @@ struct TrialOfferSheet: View {
                 .foregroundStyle(Theme.textSecondary)
         }
         .frame(maxWidth: .infinity)
-    }
-}
-
-private extension String {
-    /// First run of digits in the string as an Int ("7-day free trial" -> 7).
-    var firstMatchInt: Int? {
-        var digits = ""
-        for ch in self {
-            if ch.isNumber { digits.append(ch) }
-            else if !digits.isEmpty { break }
-        }
-        return Int(digits)
     }
 }

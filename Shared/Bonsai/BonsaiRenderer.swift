@@ -1916,7 +1916,7 @@ struct BonsaiView: View {
                             BonsaiView(day: d, style: s, vitality: 1)
                                 .frame(width: 80, height: 80)
                                 .background(Color(hex: 0xEBF5DB))
-                            Text("d\(d)").font(Theme.caption())
+                            Text(verbatim: "d\(d)").font(Theme.caption())
                         }
                     }
                 }

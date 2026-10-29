@@ -72,14 +72,13 @@ enum TendedWeek {
         guard !moods.isEmpty else { return nil }
         let mean = Double(moods.reduce(0, +)) / Double(moods.count)
         let index = min(4, max(0, Int(mean.rounded()) - 1))
-        return "mostly \(moodLabels[index])"
+        return String(localized: "Mostly \(JournalEntry.feelingLabel(moodLabels[index]))")
     }
 
-    /// The Home card sits between a checkmark and a button, and the full
-    /// sentence does not fit there: it clipped to "Tend a day to start...".
-    /// The sentence stays on the Progress sheet, which has the width for it.
+    /// The seven-dot strip already shows the days. Keep only the localized
+    /// numeric ratio beside it so the Home card's narrow row does not truncate.
     static func compactSummary(_ days: [TendedDay]) -> String {
-        "\(tendedCount(days))/\(length) tended"
+        "\(tendedCount(days).formatted())/\(length.formatted())"
     }
 
     /// The line under the strip. Deliberately never scolds: a low count is
@@ -88,9 +87,8 @@ enum TendedWeek {
     static func summary(_ days: [TendedDay]) -> String {
         let tended = tendedCount(days)
         switch tended {
-        case 0: return "Tend a day to start your week"
-        case length: return "All \(length) days tended"
-        default: return "\(tended) of \(length) days tended"
+        case 0: return String(localized: "Check in once to start your week.")
+        default: return String(localized: "Days logged this week: \(tended) of \(length).")
         }
     }
 }

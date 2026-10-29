@@ -76,9 +76,9 @@ struct CravingModeView: View {
 
         var label: String {
             switch self {
-            case .inhale: return "Breathe in"
-            case .holdFull, .holdEmpty: return "Hold"
-            case .exhale: return "Breathe out"
+            case .inhale: return String(localized: "Breathe in")
+            case .holdFull, .holdEmpty: return String(localized: "Hold")
+            case .exhale: return String(localized: "Breathe out")
             }
         }
     }
@@ -197,7 +197,11 @@ struct CravingModeView: View {
 
     private var timeRemaining: String {
         let left = max(0, targetSeconds - elapsed)
-        return String(format: "%d:%02d", left / 60, left % 60)
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+        return formatter.string(from: TimeInterval(left)) ?? String(localized: "0:00")
     }
 
     private func advanceToReflect() {
@@ -286,11 +290,13 @@ struct CravingModeView: View {
     }
 
     private var spokenElapsed: String {
-        if elapsed < 60 { return "\(max(1, elapsed)) seconds" }
-        let minutes = elapsed / 60
-        let seconds = elapsed % 60
-        if seconds == 0 { return minutes == 1 ? "a minute" : "\(minutes) minutes" }
-        return "\(minutes)m \(seconds)s"
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.unitsStyle = .full
+        formatter.maximumUnitCount = 2
+        formatter.zeroFormattingBehavior = .dropAll
+        return formatter.string(from: TimeInterval(max(1, elapsed)))
+            ?? String(localized: "\(max(1, elapsed)) seconds")
     }
 
     // MARK: - Done
@@ -332,9 +338,7 @@ struct CravingModeView: View {
                 .font(Theme.title())
                 .foregroundStyle(Theme.textPrimary)
             if rodeOutTotal > 0 {
-                Text(rodeOutTotal == 1
-                     ? "That's one \(HabitVocabulary.urgeNoun) you've ridden out."
-                     : "That's \(rodeOutTotal) \(HabitVocabulary.urgeNounPlural) you've ridden out.")
+                Text(HabitVocabulary.rodeOutMessage(count: rodeOutTotal))
                     .font(Theme.body())
                     .foregroundStyle(Theme.textSecondary)
                     .multilineTextAlignment(.center)
@@ -356,7 +360,7 @@ struct CravingModeView: View {
         guard subscriptions.isProSubscriber,
               let rate = CravingInsights.rideOutRate(CravingService(context: context).facts())
         else { return nil }
-        return "\(rate.rode) of your last \(rate.resolved) ended this way."
+        return String(localized: "\(rate.rode) of your last \(rate.resolved) ended this way.")
     }
 
     // MARK: - Persistence
@@ -399,7 +403,7 @@ private struct TriggerChips: View {
                 Button {
                     selected = (selected == tag) ? nil : tag
                 } label: {
-                    Text(tag)
+                    Text(HabitVocabulary.triggerLabel(tag))
                         .font(Theme.subhead(weight: .semibold))
                         .foregroundStyle(selected == tag ? .white : Theme.textSecondary)
                         .padding(.horizontal, 14)

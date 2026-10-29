@@ -24,13 +24,15 @@ struct TrialTimeline: View {
     private var reminderDay: Int { Self.reminderDay(forTrialOf: trialDays) }
 
     private var steps: [(icon: String, title: String, detail: String, highlight: Bool)] {
-        [
-            ("lock.open.fill", "Today", "Everything unlocks. Full access, $0 due now.", true),
+        let currencyCode = Locale.current.currency?.identifier ?? "USD"
+        let zeroDueNow = Decimal.zero.formatted(.currency(code: currencyCode))
+        return [
+            ("lock.open.fill", String(localized: "Today"), String(localized: "Everything unlocks. Full access, \(zeroDueNow) due now."), true),
             // Permission is asked for when the trial starts (TrialLifecycle),
             // so the condition is stated here rather than discovered later.
-            ("bell.fill", "Day \(reminderDay)", "We'll remind you before the trial ends, if notifications are on.", false),
-            ("flag.checkered", "Day \(trialDays)",
-             billingNote ?? "Cancel anytime before it ends. No surprise charges.", false),
+            ("bell.fill", String(localized: "Day \(reminderDay)"), String(localized: "With notifications on, we'll remind you before the trial ends."), false),
+            ("flag.checkered", String(localized: "Day \(trialDays)"),
+             billingNote ?? String(localized: "Cancel anytime before it ends. No surprise charges."), false),
         ]
     }
 

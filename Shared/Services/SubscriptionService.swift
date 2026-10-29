@@ -239,7 +239,7 @@ final class SubscriptionService: NSObject {
                 // it so the dead-end is visible in TestFlight/review instead of
                 // masquerading as an offline error the user can never clear.
                 logger.error("Offerings loaded but the paywall offering has no packages. Check the RevenueCat \"default\" offering and product attachment.")
-                lastError = "Plans are temporarily unavailable. Please try again in a moment."
+                lastError = String(localized: "Plans are temporarily unavailable. Please try again in a moment.")
             } else {
                 let kinds = packages.map { String(describing: $0.soberPackageKind) }.joined(separator: ",")
                 logger.info("Loaded \(self.packages.count) packages [\(kinds, privacy: .public)]")
@@ -251,7 +251,7 @@ final class SubscriptionService: NSObject {
             introEligibility = [:]
             introEligibilityResolved = false
             logger.error("Product fetch failed: \(String(describing: error), privacy: .public)")
-            lastError = "Couldn't load subscription options. Check your connection and try again."
+            lastError = String(localized: "Couldn't load subscription options. Check your connection and try again.")
         }
     }
     #endif
@@ -380,7 +380,7 @@ final class SubscriptionService: NSObject {
 
     /// Shown wherever a purchase comes back deferred, so every surface says the same thing.
     static let pendingApprovalMessage =
-        "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile."
+        String(localized: "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile.")
 
     func restorePurchases() async {
         guard storeIsLive else { return }
@@ -389,11 +389,11 @@ final class SubscriptionService: NSObject {
             let info = try await Purchases.shared.restorePurchases()
             apply(customerInfo: info)
             if !entitlementActive {
-                lastError = "No active Bloom+ purchase was found for this Apple ID."
+                lastError = String(localized: "No active Bloom+ purchase was found for this Apple ID.")
             }
         } catch {
             logger.error("Restore failed: \(String(describing: error), privacy: .public)")
-            lastError = "Couldn't restore purchases. Try again."
+            lastError = String(localized: "Couldn't restore purchases. Try again.")
         }
     }
 
@@ -436,7 +436,9 @@ final class SubscriptionService: NSObject {
     ///
     /// Outside the RevenueCat guard because onboarding reserves this string's
     /// height on every step, including the ones that never touch the store.
-    nonisolated static let autoRenewDisclosure = "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings › Apple ID › Subscriptions."
+    nonisolated static var autoRenewDisclosure: String {
+        String(localized: "Renews automatically. Cancel at least 24 hours before the current period ends. Manage in Settings › Apple ID › Subscriptions.")
+    }
 
     #if canImport(RevenueCat)
     /// The plan the one-tap onboarding trial actually buys: monthly when it
@@ -526,7 +528,7 @@ final class SubscriptionService: NSObject {
     /// and a refund magnet).
     var directTrialCTADisclosureText: String? {
         guard let headline = directTrialPriceHeadline else { return nil }
-        return "\(headline) \(Self.autoRenewDisclosure)"
+        return String(localized: "\(headline) \(Self.autoRenewDisclosure)")
     }
 
     /// The price half of the 3.1.2 disclosure, on its own so onboarding can give
@@ -536,10 +538,10 @@ final class SubscriptionService: NSObject {
     /// does not meet that.
     var directTrialPriceHeadline: String? {
         guard let package = directOfferPackage else { return nil }
-        if isEligibleForIntroOffer(package), let trial = package.soberIntroOfferLabel {
-            return "\(trial.capitalized), then \(package.soberPriceLabel)."
+        if isEligibleForIntroOffer(package), let sentence = package.soberTrialThenPriceSentence {
+            return sentence
         }
-        return "\(package.soberPriceLabel)."
+        return String(localized: "\(package.soberPriceLabel).")
     }
 
     /// Auto-renew terms and the cancel path, shown under the CTA once a price is.
@@ -547,11 +549,9 @@ final class SubscriptionService: NSObject {
         directTrialPriceHeadline == nil ? nil : Self.autoRenewDisclosure
     }
 
-    /// Parsed trial length for hero and plan-stack footnotes.
+    /// Trial length supplied by StoreKit for hero and plan-stack footnotes.
     var trialOfferDayCount: Int? {
-        guard let label = trialOfferHeadlineLabel else { return nil }
-        let digits = String(label.drop { !$0.isNumber }.prefix { $0.isNumber })
-        return Int(digits)
+        directTrialPackage?.soberIntroOfferDays
     }
 
     /// Footnote under the plan stack — makes it explicit which tiers include
@@ -564,14 +564,13 @@ final class SubscriptionService: NSObject {
         // No literal fallback: a footnote that names the wrong number is worse
         // than no footnote, and the plan cards already carry the real label.
         guard let days = trialOfferDayCount else { return nil }
-        let label = days == 1 ? "1-day" : "\(days)-day"
         switch (trialKinds.contains(.monthly), trialKinds.contains(.yearly)) {
         case (true, true):
-            return "\(label.capitalized) free trial on Monthly and Yearly."
+            return String(localized: "\(days)-day free trial on Monthly and Yearly.")
         case (true, false):
-            return "\(label.capitalized) free trial on Monthly."
+            return String(localized: "\(days)-day free trial on Monthly.")
         case (false, true):
-            return "\(label.capitalized) free trial on Yearly."
+            return String(localized: "\(days)-day free trial on Yearly.")
         default:
             return nil
         }

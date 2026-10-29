@@ -157,7 +157,9 @@ struct SoberApp: App {
     var body: some Scene {
         WindowGroup {
             #if DEBUG
-            if let mode = PaywallScreenshotMode.current {
+            if ProcessInfo.processInfo.arguments.contains("-WidgetSnapshot") {
+                WidgetScreenshotHarness()
+            } else if let mode = PaywallScreenshotMode.current {
                 PaywallScreenshotHarness(mode: mode)
                     .environment(subscriptions)
             } else {
@@ -182,8 +184,13 @@ struct RootView: View {
     var body: some View {
         let settings = settingsRows.first
         let onboarded = settings?.hasCompletedOnboarding ?? false
+        #if DEBUG
+        let showingOnboardingSnapshot = ProcessInfo.processInfo.arguments.contains("-onboardingStep")
+        #else
+        let showingOnboardingSnapshot = false
+        #endif
         Group {
-            if onboarded {
+            if onboarded && !showingOnboardingSnapshot {
                 MainTabView()
             } else {
                 OnboardingView()
@@ -402,7 +409,9 @@ struct MainTabView: View {
     #endif
 
     private var bloomTabTitle: String {
-        QuitZynScreenshotMode.isEnabled ? "Support" : (subscriptions.isProSubscriber ? "Bloom+" : "Upgrade")
+        QuitZynScreenshotMode.isEnabled
+            ? String(localized: "Support")
+            : (subscriptions.isProSubscriber ? String(localized: "Bloom+") : String(localized: "Upgrade"))
     }
 
     private var bloomTabSymbol: String {
@@ -412,9 +421,9 @@ struct MainTabView: View {
     /// The leading pane's tabs while Timeline has a pane of its own.
     private var paneTabItems: [PaneTabStrip.Item] {
         [
-            .init(tag: 0, title: "Home", systemImage: "leaf.fill"),
-            .init(tag: 2, title: "Health", systemImage: "heart.fill"),
-            .init(tag: 3, title: "Journal", systemImage: "book.fill"),
+            .init(tag: 0, title: String(localized: "Home"), systemImage: "leaf.fill"),
+            .init(tag: 2, title: String(localized: "Health"), systemImage: "heart.fill"),
+            .init(tag: 3, title: String(localized: "Journal"), systemImage: "book.fill"),
             .init(tag: 4, title: bloomTabTitle, systemImage: bloomTabSymbol),
         ]
     }
@@ -475,8 +484,10 @@ struct MainTabView: View {
         }) {
             TrialOfferSheet(
                 focus: trialOfferFocus,
-                offerLabel: trialOfferLabelText,
-                priceLabel: trialOfferPriceText,
+                hasTrial: trialOfferLabelText != nil,
+                trialDays: subscriptions.trialOfferDayCount,
+                trialPriceSentence: subscriptions.directTrialPackage?.soberTrialThenPriceSentence,
+                priceOnlyLabel: subscriptions.directTrialPackage?.storeProduct.localizedPriceString,
                 directPurchase: hasDirectTrialPackage,
                 isPurchasing: trialPurchaseInFlight,
                 errorMessage: trialPurchaseError,
@@ -505,7 +516,6 @@ struct MainTabView: View {
     #if canImport(RevenueCat)
     private var hasDirectTrialPackage: Bool { subscriptions.directTrialPackage != nil }
     private var trialOfferLabelText: String? { subscriptions.directTrialPackage?.soberIntroOfferLabel }
-    private var trialOfferPriceText: String? { subscriptions.directTrialPackage?.soberPriceLabel }
 
     private func handleTrialPitch(_ request: TrialOfferCoordinator.PendingRequest) {
         guard !subscriptions.isProSubscriber, !QuitZynScreenshotMode.isEnabled else { return }
@@ -582,7 +592,6 @@ struct MainTabView: View {
     #else
     private var hasDirectTrialPackage: Bool { false }
     private var trialOfferLabelText: String? { nil }
-    private var trialOfferPriceText: String? { nil }
 
     private func handleTrialPitch(_ request: TrialOfferCoordinator.PendingRequest) {
         trialOfferFocus = request.intent.focusFeature

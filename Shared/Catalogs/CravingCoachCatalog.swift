@@ -17,21 +17,21 @@ enum CravingCoach {
         let progress = target > 0 ? Double(elapsed) / Double(target) : 1
         switch progress {
         case ..<0.15:
-            return "You don't have to do anything else right now. Just stay here and breathe."
+            return String(localized: "You don't have to do anything else right now. Just stay here and breathe.")
         case ..<0.35:
-            return "This is near the top of it. \(HabitVocabulary.urgeNounPlural.capitalized) climb fast and then they stop climbing."
+            return String(localized: "This is near the top of it. These \(HabitVocabulary.urgeNounPlural) climb fast and then they stop climbing.")
         case ..<0.6:
-            return "Notice it without arguing with it. You're not trying to win, you're waiting it out."
+            return String(localized: "Notice it without arguing with it. You're not trying to win, you're waiting it out.")
         case ..<0.85:
-            return "It's already smaller than it was a minute ago, even if it doesn't feel finished."
+            return String(localized: "It's already smaller than it was a minute ago, even if it doesn't feel finished.")
         default:
-            return "Almost through. Whatever's left of it is on its way out."
+            return String(localized: "Almost through. Whatever's left of it is on its way out.")
         }
     }
 
     /// One line for the Home button's subtitle, so the affordance says what it
     /// does rather than only naming the feeling.
     static var buttonSubtitle: String {
-        "Ride it out with a few minutes of breathing"
+        String(localized: "Ride it out with a few minutes of breathing")
     }
 }

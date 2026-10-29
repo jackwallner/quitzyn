@@ -110,17 +110,17 @@ enum NotificationService {
         let daysIn = day - 1
         if daysIn > 1 {
             return (
-                "Day \(day) is waiting",
+                String(localized: "Day \(day) is waiting"),
                 committed
-                    ? "You're \(daysIn) days in. Log today and water your bonsai."
-                    : "\(daysIn) days and growing. If today's nicotine-free, log it."
+                    ? String(localized: "You're \(daysIn) days in. Log today and water your bonsai.")
+                    : String(localized: "\(daysIn) days and growing. If today's nicotine-free, log it.")
             )
         }
         return (
-            committed ? "Showing up today" : "Daily check-in",
+            committed ? String(localized: "Showing up today") : String(localized: "Daily check-in"),
             committed
-                ? "Log today and water your garden. You've got this."
-                : "If today's nicotine-free, log it and water your garden."
+                ? String(localized: "Log today and water your garden. You've got this.")
+                : String(localized: "If today's nicotine-free, log it and water your garden.")
         )
     }
 
@@ -202,11 +202,11 @@ enum NotificationService {
         guard let fireDate = trialReminderFireDate(endsAt: endsAt, now: now) else { return false }
 
         let content = UNMutableNotificationContent()
-        content.title = "Your Bloom+ trial ends soon"
+        content.title = String(localized: "Your Bloom+ trial ends soon")
         if let summary, !summary.isEmpty {
-            content.body = "\(summary) Keep the full garden, or cancel any time before it renews."
+            content.body = String(localized: "\(summary) Keep the full garden, or cancel any time before it renews.")
         } else {
-            content.body = "Keep your full garden, journal, and savings, or cancel any time before it renews."
+            content.body = String(localized: "Keep your full garden, journal, and savings, or cancel any time before it renews.")
         }
         content.sound = .default
         content.userInfo = [deepLinkKey: deepLinkBloomPlus]

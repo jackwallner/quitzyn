@@ -23,25 +23,23 @@ enum HabitPriceComparison {
         return days
     }
 
-    /// "about a day and a half of drinking", or nil when the comparison doesn't
-    /// help. `habitNoun` keeps this reusable across the fork (Quit Zyn spends
-    /// on pouches, not drinks).
-    static func phrase(price: Double, costPerDay: Double, habitNoun: String = HabitVocabulary.habitGerund) -> String? {
-        guard let days = daysOfHabit(price: price, costPerDay: costPerDay) else { return nil }
-        return "\(dayCount(days)) of \(habitNoun)"
+    enum Span: Equatable {
+        case underADay
+        case aboutADay
+        case aboutADayAndAHalf
+        case aboutDays(Int)
+        case aboutDaysAndAHalf(Int)
     }
 
-    /// Rounds to the nearest half day and spells it out. Half-day granularity is
-    /// deliberate: "1.4 days" reads like a calculation, "about a day and a half"
-    /// reads like something a person would say.
-    static func dayCount(_ days: Double) -> String {
-        if days < 0.75 { return "less than a day" }
-        if days < 1.25 { return "about a day" }
-        if days < 1.75 { return "about a day and a half" }
+    static func span(_ days: Double) -> Span {
+        if days < 0.75 { return .underADay }
+        if days < 1.25 { return .aboutADay }
+        if days < 1.75 { return .aboutADayAndAHalf }
         let halves = (days * 2).rounded()
         let whole = Int(halves / 2)
         return halves.truncatingRemainder(dividingBy: 2) == 0
-            ? "about \(whole) days"
-            : "about \(whole) and a half days"
+            ? .aboutDays(whole)
+            : .aboutDaysAndAHalf(whole)
     }
+
 }

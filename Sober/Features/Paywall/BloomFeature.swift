@@ -29,41 +29,41 @@ enum BloomFeature: CaseIterable {
 
     var title: String {
         switch self {
-        case .patterns: "Your \(HabitVocabulary.urgeNoun) patterns"
-        case .gardenSpecies: "All 6 bonsai species"
-        case .healthTimeline: "Full health timeline"
-        case .journal: "Daily journal"
-        case .savingsTracking: "Money & pouch tracking"
+        case .patterns: String(localized: "Your \(HabitVocabulary.urgeNoun) patterns")
+        case .gardenSpecies: String(localized: "All 6 bonsai species")
+        case .healthTimeline: String(localized: "Full health timeline")
+        case .journal: String(localized: "Daily journal")
+        case .savingsTracking: String(localized: "Money & pouch tracking")
         }
     }
 
     var detail: String {
         switch self {
-        case .patterns: "When they hit and what sets them off."
-        case .gardenSpecies: "Switch your tree as your streak grows."
-        case .healthTimeline: "13 nicotine-recovery milestones with sources."
-        case .journal: "Prompts and reflections on hard days."
-        case .savingsTracking: "Every dollar and pouch you avoid, tracked."
+        case .patterns: String(localized: "When they hit and what sets them off.")
+        case .gardenSpecies: String(localized: "Switch your tree as your streak grows.")
+        case .healthTimeline: String(localized: "13 nicotine-recovery milestones with sources.")
+        case .journal: String(localized: "Prompts and reflections on hard days.")
+        case .savingsTracking: String(localized: "Every dollar and pouch you avoid, tracked.")
         }
     }
 
     var pitchHeadline: String {
         switch self {
-        case .patterns: "Learn your own pattern."
-        case .gardenSpecies: "Grow every species."
-        case .healthTimeline: "See what's coming back."
-        case .journal: "Write through the cravings."
-        case .savingsTracking: "Watch your savings add up."
+        case .patterns: String(localized: "Learn your own pattern.")
+        case .gardenSpecies: String(localized: "Grow every species.")
+        case .healthTimeline: String(localized: "See what's coming back.")
+        case .journal: String(localized: "Write through the cravings.")
+        case .savingsTracking: String(localized: "Watch your savings add up.")
         }
     }
 
     var pitchSubheadline: String {
         switch self {
-        case .patterns: "See when your \(HabitVocabulary.urgeNounPlural) hit, what sets them off, and how long yours actually last, plus the rest of Bloom+."
-        case .gardenSpecies: "Unlock every bonsai species and switch whenever you like, plus the rest of Bloom+."
-        case .healthTimeline: "Unlock the full 13-milestone recovery timeline, plus the rest of Bloom+."
-        case .journal: "Daily journal prompts when you need them most, plus the rest of Bloom+."
-        case .savingsTracking: "Track every dollar and pouch you avoid, plus the rest of Bloom+."
+        case .patterns: String(localized: "See when your \(HabitVocabulary.urgeNounPlural) hit, what sets them off, and how long yours actually last, plus the rest of Bloom+.")
+        case .gardenSpecies: String(localized: "Unlock every bonsai species and switch whenever you like, plus the rest of Bloom+.")
+        case .healthTimeline: String(localized: "Unlock the full 13-milestone recovery timeline, plus the rest of Bloom+.")
+        case .journal: String(localized: "Daily journal prompts when you need them most, plus the rest of Bloom+.")
+        case .savingsTracking: String(localized: "Track every dollar and pouch you avoid, plus the rest of Bloom+.")
         }
     }
 }

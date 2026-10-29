@@ -14,8 +14,10 @@ struct PaywallScreenshotHarness: View {
                 trialBackdrop {
                     TrialOfferSheet(
                         focus: nil,
-                        offerLabel: trialPackage?.soberIntroOfferLabel ?? "7-day free trial",
-                        priceLabel: trialPackage?.soberPriceLabel,
+                        hasTrial: trialPackage?.soberIntroOfferLabel != nil,
+                        trialDays: trialPackage?.soberIntroOfferDays,
+                        trialPriceSentence: trialPackage?.soberTrialThenPriceSentence,
+                        priceOnlyLabel: trialPackage?.storeProduct.localizedPriceString,
                         directPurchase: true,
                         isPurchasing: false,
                         errorMessage: nil,
@@ -56,6 +58,34 @@ struct PaywallScreenshotHarness: View {
                     .padding(.bottom, 6)
             }
         }
+    }
+}
+
+struct WidgetScreenshotHarness: View {
+    private let startDate = Calendar.current.date(byAdding: .day, value: -35, to: .now) ?? .now
+    private var snapshot: WidgetSnapshot {
+        WidgetSnapshot(
+            sobrietyStartDate: startDate,
+            currentStreakDays: 35,
+            longestStreakDays: 35,
+            bonsaiStage: 3,
+            bonsaiStyleID: "traditional",
+            gardenVitality: 0.85,
+            placedItemIDs: [],
+            unlockedItemIDs: [],
+            generatedAt: .now
+        )
+    }
+
+    var body: some View {
+        ZStack {
+            Theme.brandGradient.ignoresSafeArea()
+            SoberDayCounterView(snapshot: snapshot, days: 35, familyOverride: .systemMedium)
+                .frame(width: 350, height: 160)
+                .background(Theme.brandGradient)
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        }
+        .preferredColorScheme(.light)
     }
 }
 #endif

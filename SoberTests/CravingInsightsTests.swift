@@ -187,7 +187,7 @@ struct CravingInsightsTests {
     @Test func nextUnlockCountsDownAndThenStopsAsking() {
         #expect(CravingInsights.nextUnlock([]) != nil)
         // The last one before the floor reads as a word, not a numeral.
-        #expect(CravingInsights.nextUnlock(Array(repeating: craving(), count: 3))?.hasPrefix("One more") == true)
+        #expect(CravingInsights.nextUnlock(Array(repeating: craving(), count: 3))?.contains("one more") == true)
         #expect(CravingInsights.nextUnlock(Array(repeating: craving(), count: 4)) == nil)
     }
 
@@ -197,7 +197,7 @@ struct CravingInsightsTests {
     }
 
     @Test func durationRoundsToWordsNotDecimals() {
-        #expect(CravingInsights.spokenDuration(45) == "about a minute")
-        #expect(CravingInsights.spokenDuration(200) == "about 3 minutes")
+        #expect(CravingInsights.spokenDuration(45) == "a minute")
+        #expect(CravingInsights.spokenDuration(200) == "3 minutes")
     }
 }

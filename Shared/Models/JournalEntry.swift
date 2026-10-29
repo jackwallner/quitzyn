@@ -34,3 +34,18 @@ final class JournalEntry {
 
     var kind: JournalKind { JournalKind(rawValue: kindRaw) ?? .daily }
 }
+
+extension JournalEntry {
+    /// Stored feeling tags stay stable while their labels follow the app language.
+    static func feelingLabel(_ feeling: String) -> String {
+        switch feeling {
+        case "excellent": String(localized: "Excellent")
+        case "good": String(localized: "Good")
+        case "neutral": String(localized: "Neutral")
+        case "okay": String(localized: "OK")
+        case "tough": String(localized: "Tough")
+        case "rough": String(localized: "Rough")
+        default: feeling
+        }
+    }
+}

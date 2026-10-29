@@ -25,7 +25,7 @@ struct JournalView: View {
                     if entries.isEmpty {
                         Text(subscriptions.isProSubscriber
                              ? "No entries yet. Use the pencil to write your first."
-                             : "No entries yet. Your first entry is free — use the pencil to write it.")
+                             : "No entries yet. Your first entry is free. Use the pencil to write it.")
                             .font(Theme.subhead())
                             .foregroundStyle(Theme.textSecondary)
                             .padding(.vertical, Theme.Space.s)
@@ -125,7 +125,7 @@ private struct JournalEntryDetailSheet: View {
                             .foregroundStyle(Theme.textSecondary)
                         Spacer()
                         if let feeling = entry.feeling {
-                            Text(feeling.capitalized)
+                            Text(JournalEntry.feelingLabel(feeling))
                                 .font(Theme.caption(weight: .semibold))
                                 .foregroundStyle(Theme.brandPrimary)
                         }
@@ -209,7 +209,7 @@ private struct EntryRow: View {
                     .foregroundStyle(Theme.textSecondary)
                 Spacer()
                 if let feeling = entry.feeling {
-                    Text(feeling.capitalized)
+                    Text(JournalEntry.feelingLabel(feeling))
                         .font(Theme.caption(weight: .semibold))
                         .foregroundStyle(Theme.brandPrimary)
                 }
@@ -251,7 +251,7 @@ private struct ComposeEntrySheet: View {
                 Section("Feeling") {
                     Picker("Feeling", selection: $feeling) {
                         ForEach(["excellent", "good", "neutral", "tough", "rough"], id: \.self) {
-                            Text($0.capitalized).tag($0)
+                            Text(JournalEntry.feelingLabel($0)).tag($0)
                         }
                     }
                     .pickerStyle(.segmented)
