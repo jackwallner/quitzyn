@@ -12,6 +12,25 @@
 	<string>6.0</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcon</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>de</string>
+		<string>ru</string>
+		<string>cs</string>
+		<string>sv</string>
+		<string>fi</string>
+		<string>nl</string>
+		<string>es</string>
+		<string>da</string>
+		<string>pl</string>
+		<string>sk</string>
+		<string>nb</string>
+		<string>ro</string>
+		<string>uk</string>
+		<string>it</string>
+		<string>zh-Hans</string>
+	</array>
 	<key>CFBundleName</key>
 	<string>Sober</string>
 	<key>CFBundleDisplayName</key>
