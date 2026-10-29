@@ -10,22 +10,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 METADATA = ROOT / "fastlane" / "metadata"
-DEFAULT_LOCALES = (
-    "en-US",
-    "de-DE",
-    "en-GB",
-    "sv",
-    "cs",
-    "fi",
-    "ru",
-    "da",
-    "nl-NL",
-    "ar-SA",
-    "es-MX",
-    "en-CA",
-    "en-AU",
-    "fr-CA",
-)
 LIMITS = {
     "name": 30,
     "subtitle": 30,
@@ -62,6 +46,8 @@ def validate_locale(locale: str) -> list[str]:
             errors.append(f"{locale}: missing {field}.txt")
             continue
         fields[field] = value
+        if not value.strip():
+            errors.append(f"{locale}: {field} is empty")
         if value != value.strip():
             errors.append(f"{locale}: {field} has leading or trailing whitespace")
         if len(value) > limit:
@@ -98,7 +84,10 @@ def validate_locale(locale: str) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("locales", nargs="*", default=list(DEFAULT_LOCALES))
+    parser.add_argument("locales", nargs="*", default=sorted(
+        path.name for path in METADATA.iterdir()
+        if path.is_dir() and path.name != "review_information"
+    ))
     args = parser.parse_args()
 
     errors = [error for locale in args.locales for error in validate_locale(locale)]
