@@ -1,1 +1,1 @@
-tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,stop,puff,tobacco,salud
+tabaco,adicción,antojo,abstinencia,habito,diario,serie,vape,pouch,nicotine,craving,tracker,salud

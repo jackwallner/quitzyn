@@ -1,24 +1,53 @@
-Quit Zyn helpt je nicotinevrij te blijven met een dagteller, een dagelijkse check-in en een virtuele tuin die groeit met elke nicotinevrije dag. Om te stoppen met Zyn, snus, nicotinezakjes en vapen.
+Quit Zyn helpt je de tijd bij te houden zonder nicotinezakjes, snus, pruimtabak, sigaretten of vapes. Tel nicotinevrije dagen, doe dagelijks een check-in en zie een virtuele tuin groeien. Als je trek krijgt, kun je een korte begeleide ademhalingsoefening starten. Je gegevens blijven op je apparaat, een account is niet nodig.
 
-GRATIS
-• Teller voor nicotinevrije dagen en langste reeks
-• Dagelijkse check-in en kalender
-• Virtuele tuin die met je meegroeit
-• Trekmodus: een begeleide ademoefening om de trek te laten zakken
-• Een terugval wist je tuin niet
-• Apple Watch en widgets voor het beginscherm
-• Privé op je apparaat, geen account
+JE VOORTGANG IN ÉÉN OOGOPSLAG (GRATIS)
+- Dagenteller met dagen, uren en je langste reeks.
+- Eén dagelijkse check-in om vast te leggen hoe je dag voelt.
+- Kalender met al je nicotinevrije dagen.
+- Mijlpalen die verschijnen naarmate de dagen tellen.
+
+EEN TUIN DIE MET JE MEEGROEIT (GRATIS)
+- Een virtuele tuin die bloeit met elke nicotinevrije dag.
+- Nieuwe groei verschijnt als je reeks langer wordt.
+- Een zichtbaar teken van hoe ver je bent gekomen.
+
+ALS JE TREK KRIJGT (GRATIS)
+- Trekmodus met een korte begeleide ademhalingsoefening.
+- Noteer desgewenst waardoor de trek ontstond.
+- Een uitglijder wist je tuin niet. De teller begint eerlijk opnieuw, terwijl je boom de helft van zijn groei behoudt. Een verkeerd geregistreerde uitglijder kun je ongedaan maken.
+
+OP JE BEGINSCHERM EN APPLE WATCH (GRATIS)
+- Widgets op het begin- en vergrendelscherm tonen je dagenteller.
+- De Apple Watch-app toont je reeks.
+- Je voortgang is zichtbaar zonder de app te openen.
+
+PRIVÉ OP JE APPARAAT (GRATIS)
+- Je reis, dagboek en trekregistraties blijven op je apparaat.
+- Geen account, advertenties of tracking tussen apps.
+- Je gegevens blijven van jou.
+
+DAGBOEK EN MIJLPALEN (GRATIS)
+- Je eerste dagboeknotitie.
+- De eerste vijf mijlpalen na het stoppen met nicotine.
 
 BLOOM+ (OPTIONEEL)
-• Jouw trekpatronen
-• Volledige gezondheidstijdlijn met bronnen
-• Dagboek met vragen
-• Prestaties en mijlpalen
-• Bespaard geld en zakjes
+Bloom+ ontgrendelt:
+- Je trekpatronen: wanneer de trek komt, waardoor die ontstaat en hoe lang die duurt.
+- De volledige tijdlijn van herstel na nicotine, met bronnen.
+- Meer dagboeknotities met begeleide vragen.
+- Prestaties en mijlpalen.
+- Geld, zakjes en nicotine die je sinds de start hebt vermeden.
+- Meer plantensoorten voor je tuin.
+Nieuwe abonnees kunnen een gratis proefperiode krijgen.
 
-Bloom+ is beschikbaar als maandelijks of jaarlijks automatisch verlengd abonnement, beide met een gratis proefperiode van 1 week voor nieuwe abonnees die in aanmerking komen, of als eenmalige aankoop voor altijd. Prijzen worden vóór aankoop in de app getoond en verschillen per regio. De betaling wordt bij bevestiging via je Apple ID in rekening gebracht. Het abonnement wordt automatisch verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt. Beheer of annuleer het in de instellingen van je App Store-account.
+Of je nu stopt met Zyn, nicotinezakjes, snus, pruimtabak of vapen, Quit Zyn houdt je voortgang overzichtelijk bij. Tel de tijd zonder nicotine, doe je check-in en zie je tuin groeien.
 
-Quit Zyn is een hulpmiddel om je eigen voortgang bij te houden, geen medisch advies.
+Download gratis.
 
-Gebruiksvoorwaarden (standaard-EULA van Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Quit Zyn is een hulpmiddel om je eigen voortgang bij te houden en geen medisch advies.
+
+Abonnementsinformatie
+Bloom+ is verkrijgbaar als maandelijks of jaarlijks abonnement met automatische verlenging. Beide bieden nieuwe abonnees die aan de voorwaarden voldoen een gratis proefperiode van 7 dagen. Je kunt ook een eenmalige aankoop voor levenslange toegang doen. De prijzen worden vóór aankoop in de app getoond en verschillen per regio. Bij bevestiging wordt het bedrag via je Apple ID afgeschreven. Het abonnement wordt automatisch verlengd tenzij je het minstens 24 uur voor het einde van de periode opzegt. Beheer of zeg het op via Instellingen > Apple ID > Abonnementen.
+
 Privacybeleid: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Gebruiksvoorwaarden (standaard-EULA van Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

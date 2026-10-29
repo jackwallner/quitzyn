@@ -1,24 +1,53 @@
-Quit Zyn hjælper dig med at forblive nikotinfri med en dagtæller, en daglig check-in og en virtuel have, der vokser for hver nikotinfri dag. Til dig, der stopper med Zyn, snus, nikotinposer og vape.
+Quit Zyn hjælper dig med at følge tiden uden nikotinposer, snus, skrå, cigaretter eller vape. Tæl nikotinfrie dage, lav et dagligt check-in, og se en virtuel have vokse. Når trangen rammer, kan du starte en kort guidet vejrtrækning. Dine data bliver på enheden, og du behøver ingen konto.
 
-GRATIS
-• Nikotinfri dagtæller og længste stime
-• Daglig check-in og kalender
-• Virtuel have, der vokser med dig
-• Trangtilstand: en guidet vejrtrækningsøvelse til at komme gennem trangen
-• Et tilbagefald sletter ikke din have
-• Apple Watch og widgets til hjemmeskærmen
-• Privat på enheden, ingen konto
+DIT FREMSKRIDT PÅ ET ØJEBLIK (GRATIS)
+- Dagstæller med dage, timer og din længste serie.
+- Et dagligt check-in, hvor du kan notere, hvordan dagen føles.
+- Kalender med alle nikotinfrie dage.
+- Milepæle, der følger med dagene.
+
+EN HAVE, DER VOKSER MED DIG (GRATIS)
+- En virtuel have, der blomstrer for hver nikotinfri dag.
+- Nye planter kommer til, når din serie vokser.
+- En synlig påmindelse om, hvor langt du er nået.
+
+NÅR TRANGEN RAMMER (GRATIS)
+- Trangtilstand med en kort guidet vejrtrækningsøvelse.
+- Notér gerne, hvad der udløste trangen.
+- Et tilbagefald sletter ikke haven. Tælleren starter ærligt forfra, mens træet beholder halvdelen af sin vækst. En forkert registrering kan fortrydes.
+
+PÅ HJEMMESKÆRMEN OG APPLE WATCH (GRATIS)
+- Widgets på hjemmeskærm og låseskærm viser din dagstæller.
+- Apple Watch-appen viser din serie.
+- Følg dine fremskridt uden at åbne appen.
+
+PRIVAT PÅ DIN ENHED (GRATIS)
+- Din rejse, dagbog og dine trangregistreringer bliver på enheden.
+- Ingen konto, reklamer eller sporing på tværs af apps.
+- Dine data forbliver dine.
+
+DAGBOG OG MILEPÆLE (GRATIS)
+- Din første dagbogsregistrering.
+- De første fem milepæle efter nikotinstop.
 
 BLOOM+ (VALGFRIT)
-• Dine trangmønstre
-• Fuld sundhedstidslinje med kilder
-• Dagbog med spørgsmål
-• Præstationer og milepæle
-• Sparede penge og poser
+Bloom+ låser op for:
+- Dine trangmønstre: hvornår trangen kommer, hvad der udløser den, og hvor længe den varer.
+- Den komplette tidslinje for nikotinrestitution med kilder.
+- Flere dagbogsindlæg med vejledende spørgsmål.
+- Præstationer og milepæle.
+- Penge, poser og nikotin, du har undgået siden start.
+- Flere plantearter til haven.
+Nye abonnenter kan få en gratis prøveperiode.
 
-Bloom+ fås som et månedligt eller årligt abonnement med automatisk fornyelse, begge med en gratis prøveperiode på 1 uge for kvalificerede nye abonnenter, eller som et engangskøb for livstid. Priserne vises i appen, før du køber, og varierer efter område. Betalingen trækkes på dit Apple-id ved bekræftelse. Abonnementet fornyes automatisk, medmindre det opsiges mindst 24 timer før periodens udløb. Administrer eller opsig i indstillingerne for din App Store-konto.
+Uanset om du stopper med Zyn, nikotinposer, snus, skrå eller vape, samler Quit Zyn dine fremskridt ét sted. Tæl tiden uden nikotin, lav dit check-in, og se haven vokse.
+
+Hent appen gratis.
 
 Quit Zyn er et værktøj til at følge dine egne fremskridt, ikke medicinsk rådgivning.
 
-Vilkår for brug (Apples standard-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Abonnementsoplysninger
+Bloom+ fås som et månedligt eller årligt abonnement med automatisk fornyelse. Begge har en gratis prøveperiode på 7 dage for nye abonnenter, der opfylder betingelserne. Du kan også vælge et engangskøb med livstidsadgang. Priserne vises i appen før køb og varierer efter region. Betalingen trækkes på dit Apple-id, når du bekræfter købet. Abonnementet fornyes automatisk, medmindre du opsiger det mindst 24 timer før periodens udløb. Administrer eller opsig under Indstillinger > Apple-id > Abonnementer.
+
 Privatlivspolitik: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Brugsvilkår (Apples standard-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

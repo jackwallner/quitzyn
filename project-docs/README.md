@@ -12,3 +12,4 @@ Developer notes and historical audits for this repository. The published site re
 ## Marketing
 
 - [aso-plan.md](marketing/aso-plan.md): aso-plan.md: Sober Tracker ASO Plan
+- [Quit Zyn ASO](aso/README.md): App Store metadata research and decisions for the nicotine app.

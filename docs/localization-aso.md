@@ -11,8 +11,17 @@ Apply after edits:
 
 ```bash
 python3 scripts/aso-apply-locale-optimizations.py
-python3 scripts/validate-asc-metadata.py   # en-US limits
+python3 scripts/validate-asc-metadata.py
 ```
+
+For a focused pass, list only the locale folders to update:
+
+```bash
+python3 scripts/aso-apply-locale-optimizations.py en-US de-DE
+python3 scripts/validate-asc-metadata.py en-US de-DE
+```
+
+Keyword cleanup removes repeated tokens and tokens already present in the name or subtitle. Keep distinct inflections when Apple autocomplete or live search supports them.
 
 Upload draft:
 

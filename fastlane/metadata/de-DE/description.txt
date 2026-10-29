@@ -1,24 +1,53 @@
-Quit Zyn hilft dir, nikotinfrei zu bleiben, mit Tageszähler, täglichem Check-in und einem virtuellen Garten, der mit jedem nikotinfreien Tag wächst. Für alle, die mit Zyn, Snus, Nikotinbeuteln oder Vapes aufhören.
+Quit Zyn hilft dir, deine Zeit ohne Nikotinbeutel, Snus, Dip, Zigaretten oder Vapes im Blick zu behalten. Zähle nikotinfreie Tage, mach täglich einen Check-in und beobachte, wie ein virtueller Garten mit deiner Serie wächst. Wenn Verlangen aufkommt, kannst du eine kurze Atemübung starten. Deine Daten bleiben auf deinem Gerät, ein Konto ist nicht nötig.
 
-KOSTENLOS
-• Nikotinfreier Tageszähler und längste Serie
-• Täglicher Check-in und Kalender
-• Virtueller Garten, der mit dir wächst
-• Craving-Modus: eine geführte Atemübung, um das Verlangen auszusitzen
-• Ein Rückfall löscht deinen Garten nicht
-• Apple Watch und Home-Bildschirm-Widgets
-• Privat auf dem Gerät, kein Konto nötig
+DEIN FORTSCHRITT AUF EINEN BLICK (KOSTENLOS)
+- Tageszähler mit Tagen, Stunden und deiner längsten Serie.
+- Check-in mit einem Tipp pro Tag, um festzuhalten, wie es dir geht.
+- Kalender mit allen nikotinfreien Tagen.
+- Meilensteine, die du mit jedem weiteren Tag erreichst.
+
+EIN GARTEN, DER MIT DIR WÄCHST (KOSTENLOS)
+- Ein virtueller Garten, der an jedem nikotinfreien Tag aufblüht.
+- Mit wachsender Serie kommt neues Wachstum hinzu.
+- Ein sichtbarer Rückblick auf deinen Weg.
+
+WENN VERLANGEN AUFKOMMT (KOSTENLOS)
+- Verlangensmodus mit einer kurzen geführten Atemübung.
+- Halte bei Bedarf fest, was den Impuls ausgelöst hat.
+- Ein Ausrutscher löscht deinen Garten nicht. Der Zähler beginnt ehrlich von vorn, dein Baum behält die Hälfte seines Wachstums. Einen versehentlichen Eintrag kannst du rückgängig machen.
+
+AUF DEM HOME-BILDSCHIRM UND DER APPLE WATCH (KOSTENLOS)
+- Home- und Sperrbildschirm-Widgets mit deinem Tageszähler.
+- Eine Apple-Watch-App zeigt deine Serie.
+- Dein Fortschritt ist sichtbar, ohne die App zu öffnen.
+
+PRIVAT UND DIREKT AUF DEINEM GERÄT (KOSTENLOS)
+- Deine Reise, dein Tagebuch und deine Verlangen bleiben auf deinem Gerät.
+- Kein Konto, keine Werbung und kein Tracking über Apps hinweg.
+- Deine Daten bleiben bei dir.
+
+TAGEBUCH UND MEILENSTEINE (KOSTENLOS)
+- Dein erster Tagebucheintrag.
+- Die ersten fünf Meilensteine nach dem Nikotinstopp.
 
 BLOOM+ (OPTIONAL)
-• Deine Verlangensmuster
-• Vollständige Gesundheits-Timeline mit Quellen
-• Tagebuch mit Impulsen
-• Erfolge und Meilensteine
-• Gespartes Geld und Beutel
+Mit Bloom+ erhältst du:
+- Deine Verlangensmuster: wann Impulse auftreten, wodurch sie ausgelöst werden und wie lange sie dauern.
+- Die vollständige Zeitleiste zur Nikotinerholung mit Quellen.
+- Weitere Tagebucheinträge mit geführten Impulsen.
+- Erfolge und Meilensteine.
+- Geld, Beutel und Nikotin, die du seit deinem Start vermieden hast.
+- Weitere Pflanzenarten für deinen Garten.
+Neue Abonnenten können einen kostenlosen Testzeitraum erhalten.
 
-Bloom+ gibt es als monatliches oder jährliches, sich automatisch verlängerndes Abo, beide mit einer 1-wöchigen Gratistestphase für berechtigte Neukunden, oder als einmaligen Lifetime-Kauf. Die Preise werden vor dem Kauf in der App angezeigt und variieren je nach Region. Die Zahlung wird bei Bestätigung über deine Apple-ID abgerechnet. Das Abo verlängert sich automatisch, wenn es nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt wird. Verwalten oder kündigen kannst du es in den Einstellungen deines App Store-Accounts.
+Ob du Zyn, Nikotinbeutel, Snus, Dip oder Vapes aufgibst: Quit Zyn hält deinen Fortschritt an einem Ort fest. Zähle die nikotinfreie Zeit, mach deinen Check-in und sieh deinen Garten wachsen.
 
-Quit Zyn ist ein Werkzeug zur Selbstbeobachtung und keine medizinische Beratung.
+Kostenlos laden.
 
+Quit Zyn dient der Selbstbeobachtung und ersetzt keine medizinische Beratung.
+
+Abo-Details
+Bloom+ ist als automatisch verlängerbares Monats- oder Jahresabo verfügbar. Beide Abos bieten berechtigten neuen Abonnenten einen kostenlosen Testzeitraum von 7 Tagen. Alternativ gibt es einen einmaligen Lifetime-Kauf. Die Preise werden vor dem Kauf in der App angezeigt und unterscheiden sich je nach Region. Bei Bestätigung wird deine Apple-ID belastet. Das Abo verlängert sich automatisch, wenn du es nicht mindestens 24 Stunden vor Ende des Zeitraums kündigst. Verwalten oder kündigen kannst du es unter Einstellungen > Apple-ID > Abonnements.
+
+Datenschutz: https://jackwallner.github.io/quitzyn/privacy-policy.html
 Nutzungsbedingungen (Apples Standard-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-Datenschutzrichtlinie: https://jackwallner.github.io/quitzyn/privacy-policy.html

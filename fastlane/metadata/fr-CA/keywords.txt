@@ -1,1 +1,1 @@
-tabac,vapotage,sevrage,envie,habitude,journal,série,dépendance,abstinence,récupération,chiquer,privé
+tabac,vapotage,sevrage,envie,journal,série,dépendance,abstinence,récupération,chiquer,privé,vapoter

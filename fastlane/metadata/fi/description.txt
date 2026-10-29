@@ -1,24 +1,53 @@
-Quit Zyn auttaa pysymään nikotiinittomana päivälaskurin, päivittäisen kirjauksen ja jokaisena nikotiinittomana päivänä kasvavan virtuaalisen puutarhan avulla. Zynin, nuuskan, nikotiinipussien ja vapettamisen lopettamiseen.
+Quit Zyn auttaa seuraamaan aikaa ilman nikotiinipusseja, nuuskaa, purutupakkaa, savukkeita tai vapettamista. Kirjaa vointisi kerran päivässä ja seuraa virtuaalisen puutarhan kasvua. Kun tekee mieli, voit käynnistää lyhyen ohjatun hengitysharjoituksen. Tietosi pysyvät laitteellasi, et tarvitse tiliä.
 
-ILMAISEKSI
-• Nikotiinittomien päivien laskuri ja pisin putki
-• Päivittäinen kirjaus ja kalenteri
-• Kanssasi kasvava virtuaalinen puutarha
-• Himotila: ohjattu hengitysharjoitus, jonka aikana himo menee ohi
-• Retkahdus ei pyyhi puutarhaasi
-• Apple Watch ja kotinäytön widgetit
-• Yksityinen laitteella, ei tiliä
+EDISTYMISESI YHDELLÄ SILMÄYKSELLÄ (MAKSUTON)
+- Päivälaskuri näyttää päivät, tunnit ja pisimmän putkesi.
+- Päivittäinen kuittaus kertoo, miltä päivä tuntuu.
+- Kalenteri näyttää nikotiinittomat päivät.
+- Virstanpylväät tulevat vastaan päivien karttuessa.
+
+KASVAVA PUUTARHA (MAKSUTON)
+- Virtuaalinen puutarha kukkii jokaisena nikotiinittomana päivänä.
+- Putken kasvaessa puutarhaan ilmestyy uutta kasvua.
+- Näet yhdellä silmäyksellä, kuinka pitkälle olet päässyt.
+
+KUN HIMO ISKEE (MAKSUTON)
+- Himotila tarjoaa lyhyen ohjatun hengitysharjoituksen.
+- Voit halutessasi kirjata, mikä laukaisi himon.
+- Retkahdus ei pyyhi puutarhaasi. Laskuri alkaa rehellisesti alusta, mutta puun kasvusta säilyy puolet. Vahingossa lisätyn retkahduksen voi kumota.
+
+KOTINÄYTÖLLÄ JA APPLE WATCHISSA (MAKSUTON)
+- Koti- ja lukitusnäytön widgetit näyttävät päivälaskurin.
+- Apple Watch -sovellus näyttää putkesi.
+- Edistymisesi näkyy avaamatta sovellusta.
+
+YKSITYINEN JA LAITTEESSASI (MAKSUTON)
+- Matkasi, päiväkirjasi ja himomerkintäsi pysyvät laitteella.
+- Ei tiliä, mainoksia tai seurantaa sovellusten välillä.
+- Tietosi pysyvät sinun hallinnassasi.
+
+PÄIVÄKIRJA JA VIRSTANPYLVÄÄT (MAKSUTON)
+- Ensimmäinen päiväkirjamerkintäsi.
+- Viisi ensimmäistä virstanpylvästä nikotiinin käytön lopettamisen jälkeen.
 
 BLOOM+ (VALINNAINEN)
-• Himojesi toistuvat kuviot
-• Täysi terveysaikajana lähteineen
-• Päiväkirja kysymyksineen
-• Saavutukset ja virstanpylväät
-• Säästetyt rahat ja pussit
+Bloom+ avaa lisää:
+- Himokuviosi: milloin himo tulee, mikä sen laukaisee ja kuinka kauan se kestää.
+- Täydellinen nikotiinista toipumisen aikajana lähteineen.
+- Lisää päiväkirjamerkintöjä ohjaavilla kysymyksillä.
+- Saavutukset ja virstanpylväät.
+- Säästyneet rahat, pussit ja nikotiini aloituspäivästä lähtien.
+- Lisää kasvilajeja puutarhaan.
+Uudet tilaajat voivat saada maksuttoman kokeilujakson.
 
-Bloom+ on saatavilla kuukausittain tai vuosittain automaattisesti uusiutuvana tilauksena, molemmissa viikon ilmainen kokeilu kelpoisille uusille tilaajille, tai kertaostona elinikäiseen käyttöön. Hinnat näytetään sovelluksessa ennen ostoa, ja ne vaihtelevat alueittain. Maksu veloitetaan Apple ID:stäsi vahvistuksen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru tilaus App Store -tilisi asetuksissa.
+Olitpa lopettamassa Zynin, nikotiinipussien, nuuskan, purutupakan tai vapen käytön, Quit Zyn kokoaa edistymisesi yhteen paikkaan. Laske nikotiiniton aika, tee kuittaus ja seuraa puutarhan kasvua.
+
+Lataa maksutta.
 
 Quit Zyn on oman edistymisen seurantatyökalu, ei lääketieteellinen neuvo.
 
-Käyttöehdot (Applen vakio-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tilaustiedot
+Bloom+ on saatavilla kuukausi- tai vuositilauksena, jotka uusiutuvat automaattisesti. Molempiin kuuluu ehdot täyttäville uusille tilaajille 7 päivän maksuton kokeilujakso. Saatavilla on myös kertamaksullinen elinikäinen käyttöoikeus. Hinnat näytetään sovelluksessa ennen ostoa, ja ne vaihtelevat alueittain. Maksu veloitetaan Apple ID:ltäsi, kun vahvistat ostoksen. Tilaus uusiutuu automaattisesti, ellei sitä peruta vähintään 24 tuntia ennen kauden päättymistä. Hallitse tai peru tilaus kohdassa Asetukset > Apple ID > Tilaukset.
+
 Tietosuojakäytäntö: https://jackwallner.github.io/quitzyn/privacy-policy.html
+Käyttöehdot (Applen vakio-EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

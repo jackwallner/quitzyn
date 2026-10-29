@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Apply native name, subtitle, keywords, description for all fastlane locales."""
+"""Apply native metadata to all fastlane locales or a selected locale set."""
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -14,23 +16,23 @@ from aso_native_metadata import LOCALES  # noqa: E402
 
 
 def indexed_terms(name: str, subtitle: str) -> set[str]:
-    text = f"{name} {subtitle}".lower()
+    text = f"{name} {subtitle}"
     terms: set[str] = set()
     for w in re.findall(r"[a-z0-9\u0080-\uffff]+", text, flags=re.I):
         if len(w) >= 2:
-            terms.add(w)
+            terms.add(unicodedata.normalize("NFKC", w).casefold())
     return terms
 
 
 def dedupe_keywords(name: str, subtitle: str, keywords_csv: str) -> str:
     indexed = indexed_terms(name, subtitle)
     kept: list[str] = []
+    seen: set[str] = set()
     for raw in keywords_csv.replace(" ", "").split(","):
-        kw = raw.strip().lower()
-        if not kw or kw in indexed:
+        kw = unicodedata.normalize("NFKC", raw.strip()).casefold()
+        if not kw or kw in indexed or kw in seen:
             continue
-        if any(kw == t or (len(kw) >= 4 and kw in t) or (len(t) >= 4 and t in kw) for t in indexed):
-            continue
+        seen.add(kw)
         kept.append(kw)
     return ",".join(kept)
 
@@ -41,12 +43,26 @@ def trim_field(s: str, limit: int) -> str:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("locales", nargs="*", help="locale folders to update, defaults to all")
+    args = parser.parse_args()
+    requested = set(args.locales)
+    unknown = sorted(requested - LOCALES.keys())
+    if unknown:
+        parser.error(f"unknown locale(s): {', '.join(unknown)}")
+
     report: dict[str, dict] = {}
     errors: list[str] = []
 
-    for loc_dir in sorted(META.iterdir()):
-        if not loc_dir.is_dir() or loc_dir.name == "review_information":
-            continue
+    locale_dirs = sorted(
+        loc_dir
+        for loc_dir in META.iterdir()
+        if loc_dir.is_dir()
+        and loc_dir.name != "review_information"
+        and loc_dir.name in LOCALES
+        and (not requested or loc_dir.name in requested)
+    )
+    for loc_dir in locale_dirs:
         loc = loc_dir.name
         if loc not in LOCALES:
             continue

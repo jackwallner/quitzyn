@@ -1,6 +1,4 @@
-Quit Zyn makes going nicotine-free simple and motivating. Count every day off the pouches, check in once a day, and watch a virtual garden bloom as your streak grows. Whether you're quitting Zyn, snus, nicotine pouches, dip, or vaping, everything stays private on your device. No account needed.
-
-If you want one calm place to see how far you've come and keep going, this is that app.
+Quit Zyn helps you track your time away from nicotine pouches, snus, dip, cigarettes, and vaping. Check in once a day, use a short guided breathing session when a craving hits, and watch your virtual garden grow with each nicotine-free day. Your journey, journal, and cravings stay on your device. No account needed.
 
 YOUR PROGRESS AT A GLANCE (FREE)
 - Day counter showing days, hours, and your longest streak.
@@ -25,18 +23,22 @@ ON YOUR HOME SCREEN & APPLE WATCH (FREE)
 
 PRIVATE BY DESIGN (FREE)
 - Your journey, journal, and cravings stay on your device.
-- No account required. No ads. No tracking.
+- No account or ads, and no cross-app tracking.
 - Your journey stays yours.
+
+JOURNAL & RECOVERY (FREE)
+- Your first journal entry.
+- The first five nicotine recovery milestones.
 
 BLOOM+ (OPTIONAL)
 A small upgrade unlocks the full experience:
 - Your craving patterns: when urges hit, what sets them off, and how long yours last
-- Complete nicotine recovery timeline with sources
-- Journaling with guided prompts
+- Complete nicotine recovery timeline with sources (the first five milestones are free)
+- More journaling with guided prompts after your free first entry
 - Achievements and milestone unlocks
 - Money, pouches, and nicotine avoided since day one
 - More garden species to grow
-A free trial is offered to new subscribers.
+Eligible new subscribers may get a free trial.
 
 Whether you're quitting Zyn, cutting back on pouches, or done with snus for good, Quit Zyn keeps it simple: count your nicotine-free time, check in, and watch your garden grow.
 
@@ -45,7 +47,7 @@ Download free today.
 Quit Zyn is a self-tracking tool, not medical advice.
 
 Subscription Details
-Bloom+ is available as an auto-renewing subscription (Monthly or Yearly, both with a 7-day free trial) or as a one-time Lifetime purchase. Prices are shown in the app before you buy and vary by region. Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
+Bloom+ is available as an auto-renewing subscription (Monthly or Yearly, with a 7-day free trial for eligible new subscribers) or as a one-time Lifetime purchase. Prices are shown in the app before you buy and vary by region. Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
 
 Privacy Policy: https://jackwallner.github.io/quitzyn/privacy-policy.html
 Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

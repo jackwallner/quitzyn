@@ -1,24 +1,53 @@
-Quit Zyn vám pomůže zůstat bez nikotinu díky počítadlu dní, dennímu check-inu a virtuální zahradě, která roste s každým dnem bez nikotinu. Pro odvykání Zynu, snusu, nikotinových sáčků a vapování.
+Quit Zyn vám pomůže sledovat čas bez nikotinových sáčků, snusu, žvýkacího tabáku, cigaret nebo vapování. Každý den si zaznamenejte, jak se cítíte, a sledujte růst virtuální zahrady. Když přijde chuť, můžete spustit krátké vedené dechové cvičení. Vaše data zůstávají v zařízení, účet není potřeba.
 
-ZDARMA
-• Počítadlo dní bez nikotinu a nejdelší série
-• Denní check-in a kalendář
-• Virtuální zahrada, která roste s vámi
-• Režim chuti: řízené dýchání k překonání nutkání
-• Uklouznutí nesmaže vaši zahradu
-• Apple Watch a widgety na plochu
-• Soukromě v zařízení, bez účtu
+POKROK NA JEDNOM MÍSTĚ (ZDARMA)
+- Počítadlo dnů a hodin bez nikotinu i nejdelší série.
+- Jedno denní zaznamenání toho, jak se dnes cítíte.
+- Kalendář všech dnů bez nikotinu.
+- Milníky, které přibývají s každým dnem.
 
-BLOOM+ (VOLITELNÉ)
-• Vzorce vašich chutí
-• Úplná zdravotní časová osa se zdroji
-• Deník s podněty
-• Úspěchy a milníky
-• Ušetřené peníze a sáčky
+ZAHRADA, KTERÁ ROSTE S VÁMI (ZDARMA)
+- Virtuální zahrada rozkvétá s každým dnem bez nikotinu.
+- S rostoucí sérií přibývají nové rostliny.
+- Viditelná připomínka toho, co už máte za sebou.
 
-Bloom+ je k dispozici jako měsíční nebo roční automaticky obnovované předplatné, obě s týdenní zkušební verzí zdarma pro nové oprávněné předplatitele, nebo jako jednorázový doživotní nákup. Ceny se zobrazují v aplikaci před nákupem a liší se podle regionu. Platba se strhne z vašeho Apple ID při potvrzení. Předplatné se automaticky obnoví, pokud jej nezrušíte alespoň 24 hodin před koncem období. Spravovat nebo zrušit jej můžete v nastavení účtu App Store.
+KDYŽ PŘIJDE CHUŤ (ZDARMA)
+- Režim chuti s krátkým vedeným dechovým cvičením.
+- Pokud chcete, zaznamenejte, co chuť spustilo.
+- Uklouznutí zahradu nesmaže. Počítadlo se poctivě vrátí na začátek, stromu zůstane polovina růstu a omylem zadaný záznam lze vrátit.
 
-Quit Zyn je nástroj pro sledování vlastního pokroku, nikoli lékařská rada.
+NA PLOŠE A APPLE WATCH (ZDARMA)
+- Widgety na ploše a zamčené obrazovce ukazují počet dnů.
+- Aplikace pro Apple Watch zobrazuje vaši sérii.
+- Pokrok vidíte i bez otevření aplikace.
 
+SOUKROMÍ PŘÍMO V ZAŘÍZENÍ (ZDARMA)
+- Vaše cesta, deník a záznamy chutí zůstávají v zařízení.
+- Bez účtu a reklam, bez sledování napříč aplikacemi.
+- Vaše data zůstávají vaše.
+
+DENÍK A MILNÍKY (ZDARMA)
+- Váš první záznam do deníku.
+- Prvních pět milníků po ukončení užívání nikotinu.
+
+BLOOM+ (VOLITELNĚ)
+Bloom+ odemyká:
+- Vzorce vašich chutí: kdy přicházejí, co je spouští a jak dlouho trvají.
+- Úplnou časovou osu obnovy po nikotinu se zdroji.
+- Další zápisy do deníku s vedenými podněty.
+- Úspěchy a milníky.
+- Peníze, sáčky a nikotin, kterým jste se od začátku vyhnuli.
+- Další druhy rostlin do zahrady.
+Noví předplatitelé mohou získat bezplatné zkušební období.
+
+Ať přestáváte se Zynem, nikotinovými sáčky, snusem, žvýkacím tabákem nebo vapováním, Quit Zyn vám přehledně ukáže váš pokrok. Počítejte čas bez nikotinu, zaznamenávejte den a sledujte růst zahrady.
+
+Stáhněte si aplikaci zdarma.
+
+Quit Zyn slouží ke sledování vlastního pokroku a nenahrazuje lékařskou radu.
+
+Informace o předplatném
+Bloom+ je dostupné jako měsíční nebo roční předplatné s automatickým obnovením. Obě varianty nabízejí oprávněným novým předplatitelům 7denní bezplatné zkušební období. K dispozici je také jednorázový doživotní nákup. Ceny se zobrazí v aplikaci před nákupem a liší se podle oblasti. Platba se po potvrzení strhne z vašeho Apple ID. Předplatné se automaticky obnoví, pokud ho nezrušíte alespoň 24 hodin před koncem období. Spravovat nebo zrušit ho můžete v Nastavení > Apple ID > Předplatná.
+
+Zásady ochrany soukromí: https://jackwallner.github.io/quitzyn/privacy-policy.html
 Podmínky použití (standardní EULA Applu): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-Zásady ochrany osobních údajů: https://jackwallner.github.io/quitzyn/privacy-policy.html
