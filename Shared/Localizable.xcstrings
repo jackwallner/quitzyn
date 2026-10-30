@@ -97,7 +97,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "(原始内容存档于2019-09-28) (中文(简体) ).%1$@%2$@"
+            "value": "%1$@ %2$@"
           }
         }
       }
@@ -594,7 +594,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@/%2$lld天_时间"
+            "value": "%1$@ / %2$lld 天"
           }
         }
       }
@@ -1091,7 +1091,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@/%2$lld个月"
+            "value": "%1$@ / %2$lld 个月"
           }
         }
       }
@@ -1588,7 +1588,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "*%1$@/%2$lld周数"
+            "value": "%1$@ / %2$lld 周"
           }
         }
       }
@@ -2085,7 +2085,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "*%1$@/%2$lld年份"
+            "value": "%1$@ / %2$lld 年"
           }
         }
       }
@@ -2186,7 +2186,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@/ 天数"
+            "value": "%1$@ / 天"
           }
         }
       }
@@ -2287,7 +2287,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@/ 个月"
+            "value": "%1$@ / 月"
           }
         }
       }
@@ -2388,7 +2388,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "*%1$@/ 星期"
+            "value": "%1$@ / 周"
           }
         }
       }
@@ -2489,7 +2489,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@/ 年份"
+            "value": "%1$@ / 年"
           }
         }
       }
@@ -2590,7 +2590,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@保留整所花园,或在续约前取消任何时间."
+            "value": "%1$@保留完整花园，也可在续订前随时取消。"
           }
         }
       }
@@ -2786,7 +2786,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ 的费用约等于 %2$lld 天半的尼古丁袋开销。"
+            "value": "%1$@约相当于%2$lld天半的尼古丁袋费用。"
           }
         }
       }
@@ -3255,7 +3255,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ 的费用约等于尼古丁袋用量 %#@n@ 天的开销。"
+            "value": "%1$@约相当于 %#@n@ 的尼古丁袋费用。"
           },
           "substitutions": {
             "n": {
@@ -3366,7 +3366,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ 的费用约等于一天半的尼古丁袋开销。"
+            "value": "%1$@约相当于一天半的尼古丁袋费用。"
           }
         }
       }
@@ -3461,7 +3461,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ 的费用约等于一天的尼古丁袋开销。"
+            "value": "%1$@约相当于一天的尼古丁袋费用。"
           }
         }
       }
@@ -3556,7 +3556,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ 的费用低于一天的尼古丁袋开销。"
+            "value": "%1$@约相当于不到一天的尼古丁袋费用。"
           }
         }
       }
@@ -3657,7 +3657,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每日的%1$@时间"
+            "value": "%1$@ / 天"
           }
         }
       }
@@ -3758,7 +3758,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每月%1$@"
+            "value": "%1$@ / 月"
           }
         }
       }
@@ -3859,7 +3859,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你将避免使用%1$@袋尼古丁，身体也就不必处理这些尼古丁。"
+            "value": "少用%1$@袋尼古丁，身体也就不必代谢这些尼古丁。"
           }
         }
       }
@@ -3960,7 +3960,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "*%1$@%2$@·."
+            "value": "%1$@ · %2$@"
           }
         }
       }
@@ -4061,7 +4061,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "(原始内容存档于2018-10-12).%1$@."
+            "value": "%1$@。"
           }
         }
       }
@@ -4162,7 +4162,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "-%1$@. ^%2$@(中文(简体) )."
+            "value": "%1$@。%2$@"
           }
         }
       }
@@ -4263,7 +4263,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@. 一次性购买,终身接入,不订阅."
+            "value": "%1$@。一次性购买，终身使用，无需订阅。"
           }
         }
       }
@@ -4465,7 +4465,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "到目前为止已挺过%1$lld次%2$@"
+            "value": "到目前为止，你已挺过 %1$lld 次%2$@"
           }
         }
       }
@@ -4815,7 +4815,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld天"
+                  "value": "%1$lld 天"
                 }
               }
             }
@@ -5165,7 +5165,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "免费%1$lld天"
+            "value": "免费 %1$lld 天"
           }
         }
       }
@@ -5862,7 +5862,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld天无尼古丁"
+                  "value": "%1$lld 天未摄入尼古丁"
                 }
               }
             }
@@ -6215,7 +6215,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld天无尼古丁"
+                  "value": "%1$lld 天"
                 }
               }
             }
@@ -6565,7 +6565,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": ",%1$lld天 Bloom+免费"
+            "value": "Bloom+ 免费 %1$lld 天"
           }
         }
       }
@@ -6666,7 +6666,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你最近%2$lld次中，有%1$lld次以此告终。"
+            "value": "最近 %2$lld 次中，有 %1$lld 次是这样结束的。"
           }
         }
       }
@@ -7016,7 +7016,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "每天%1$lld袋尼古丁"
+                  "value": "每天 %1$lld 袋尼古丁"
                 }
               }
             }
@@ -7369,7 +7369,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld 秒钟"
+                  "value": "%1$lld 秒"
                 }
               }
             }
@@ -7722,7 +7722,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "种植了%1$lld棵树"
+                  "value": "已种成 %1$lld 棵树"
                 }
               }
             }
@@ -8075,7 +8075,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld trees grown in your grove"
+                  "value": "你的树林里已有 %1$lld 棵树"
                 }
               }
             }
@@ -8781,7 +8781,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "月度和年度方案均可免费试用 %1$lld 天。"
+                  "value": "月度和年度订阅均可免费试用 %1$lld 天。"
                 }
               }
             }
@@ -9134,7 +9134,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "月度方案可免费试用 %1$lld 天。"
+                  "value": "月度订阅可免费试用 %1$lld 天。"
                 }
               }
             }
@@ -9487,7 +9487,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "年度方案可免费试用 %1$lld 天。"
+                  "value": "年度订阅可免费试用 %1$lld 天。"
                 }
               }
             }
@@ -9828,7 +9828,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "免费试用 %1$lld 天，之后 %2$@。"
+                  "value": "免费试用 %1$lld 天，之后为 %2$@。"
                 }
               }
             }
@@ -10522,7 +10522,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "免费试用 %1$lld 个月，之后 %2$@。"
+                  "value": "免费试用 %1$lld 个月，之后为 %2$@。"
                 }
               }
             }
@@ -11216,7 +11216,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "免费试用 %1$lld 年，之后 %2$@。"
+                  "value": "免费试用 %1$lld 年，之后为 %2$@。"
                 }
               }
             }
@@ -11566,7 +11566,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "/%1$lld福利"
+            "value": "/ %1$lld 项健康益处"
           }
         }
       }
@@ -11667,7 +11667,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "零点"
+            "value": "0:00"
           }
         }
       }
@@ -11768,7 +11768,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "1-800-662-HELP 免费、保密、24/7"
+            "value": "1-800-662-HELP · 全天候免费保密支持"
           }
         }
       }
@@ -11869,7 +11869,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "连续100次报到"
+            "value": "连续打卡 100 天。"
           }
         }
       }
@@ -11970,7 +11970,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "13个尼古丁复原里程碑,有来源。"
+            "value": "13 个有来源支持的戒除尼古丁健康里程碑。"
           }
         }
       }
@@ -12071,7 +12071,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "连续30次报到"
+            "value": "连续打卡 30 天。"
           }
         }
       }
@@ -12172,7 +12172,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "988 自杀和危机生命线"
+            "value": "988 Suicide & Crisis Lifeline"
           }
         }
       }
@@ -12273,7 +12273,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "全年时间"
+            "value": "一整年"
           }
         }
       }
@@ -12374,7 +12374,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "鲜花樱花被软粉色花朵所包裹 花瓣随花朵的花朵而飘来"
+            "value": "樱花盛开，花色柔粉。随着连续天数增加，花瓣缓缓飘落。"
           }
         }
       }
@@ -12475,7 +12475,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "整整一年 不可思议"
+            "value": "整整一年，太了不起了。"
           }
         }
       }
@@ -12677,7 +12677,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "暖秋红出一花花枫,相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去相去"
+            "value": "枫树枝叶细密，秋色金红。星形叶片随着日子累积缓缓飘落。"
           }
         }
       }
@@ -12778,7 +12778,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一个传奇的邦赛 整整一年的成长"
+            "value": "传奇盆景，整整一年的成长清晰可见。"
           }
         }
       }
@@ -12879,7 +12879,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ 月度方案"
+            "value": "一个月的 Bloom+"
           }
         }
       }
@@ -12980,7 +12980,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "种出种子,每棵大树都从这里开始"
+            "value": "种下一颗种子。每棵大树都始于此。"
           }
         }
       }
@@ -13081,7 +13081,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "树苗高高起 有根在生"
+            "value": "树苗挺立起来，根系开始扎稳。"
           }
         }
       }
@@ -13182,7 +13182,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "只有最新记录的失手才能撤销。"
+            "value": "只有记录中最新的一次失手可以撤销。"
           }
         }
       }
@@ -13283,7 +13283,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一个永恒的直立邦赛,对称的,平衡的,安静的。"
+            "value": "经典直干盆景，形态对称、平衡而宁静。"
           }
         }
       }
@@ -13384,7 +13384,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ 年度方案"
+            "value": "一年的 Bloom+"
           }
         }
       }
@@ -13586,7 +13586,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所得成绩"
+            "value": "已获得的成就"
           }
         }
       }
@@ -13687,7 +13687,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "添加注释"
+            "value": "添加备注"
           }
         }
       }
@@ -13788,7 +13788,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "调整您的行程开始日期 。"
+            "value": "调整你开始这段旅程的日期。"
           }
         }
       }
@@ -13889,7 +13889,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "成长期"
+            "value": "幼树"
           }
         }
       }
@@ -13990,7 +13990,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "青少年阶段"
+            "value": "幼树阶段"
           }
         }
       }
@@ -14192,7 +14192,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "研究显示，戒烟草并保持一年无尼古丁与心血管风险显著降低有关。请向医生咨询个人健康问题。"
+            "value": "研究发现，持续一年不使用烟草与心血管风险明显降低有关。请咨询医生，了解个人健康情况。"
           }
         }
       }
@@ -14293,7 +14293,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "几个月不再经历尼古丁带来的起伏后，许多人发现日常压力水平较低，也更容易平静下来。"
+            "value": "几个月不再经历尼古丁水平骤升骤降后，许多人发现日常压力较低，也更容易平静下来。"
           }
         }
       }
@@ -14394,7 +14394,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "两天后，受尼古丁影响的神经末梢开始恢复。许多人会感觉食物味道更丰富、气味更清晰。"
+            "value": "两天后，受尼古丁影响而迟钝的神经末梢开始再生。许多人会发现食物味道更丰富，嗅觉也更敏锐。"
           }
         }
       }
@@ -14495,7 +14495,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所有6个邦赛物种"
+            "value": "全部 6 种盆景"
           }
         }
       }
@@ -14596,7 +14596,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所有好处已解锁"
+            "value": "已解锁全部健康益处"
           }
         }
       }
@@ -14798,7 +14798,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "允许设置中的通知"
+            "value": "在“设置”中允许通知"
           }
         }
       }
@@ -14899,7 +14899,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "差不多了 剩下的东西都出来了"
+            "value": "快到头了，剩下的尼古丁也快代谢完了。"
           }
         }
       }
@@ -15000,7 +15000,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "美国癌症协会"
+            "value": "American Cancer Society"
           }
         }
       }
@@ -15101,7 +15101,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "美国心脏协会"
+            "value": "American Heart Association"
           }
         }
       }
@@ -15202,7 +15202,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "有云状针叶的常绿松 和被咬的风化树干"
+            "value": "常青松树，针叶层层如云，树干盘曲苍劲、饱经风霜。"
           }
         }
       }
@@ -15303,7 +15303,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "古老"
+            "value": "苍劲"
           }
         }
       }
@@ -15404,7 +15404,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "古老而风化,这棵树见过很多次"
+            "value": "古老而沧桑，这棵树见证了许多岁月。"
           }
         }
       }
@@ -15505,7 +15505,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "古老阶段"
+            "value": "苍劲阶段"
           }
         }
       }
@@ -15606,7 +15606,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "答:%1$@"
+            "value": "已回答：%1$@"
           }
         }
       }
@@ -15808,7 +15808,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "任何你想记住的"
+            "value": "任何想记下的事"
           }
         }
       }
@@ -15909,7 +15909,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你想记住今天的事吗?"
+            "value": "今天有什么事想记下来吗？"
           }
         }
       }
@@ -16010,7 +16010,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "苹果会在确认前显示账单细节."
+            "value": "Apple 会在你确认前显示账单详情。"
           }
         }
       }
@@ -16111,7 +16111,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约第三天，随着最后的尼古丁离开身体，身体戒断反应通常达到高峰。之后，渴求往往会变得更短、强度更低。"
+            "value": "大约到第三天，随着体内最后的尼古丁逐渐代谢，身体戒断反应通常达到高峰。之后，渴求通常会逐渐缩短、减轻。"
           }
         }
       }
@@ -16212,7 +16212,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约两周不再让尼古丁袋贴着牙龈后，口腔刺激和炎症开始减轻，组织也开始愈合。"
+            "value": "大约两周不再将尼古丁袋贴在牙龈上后，口腔刺激和炎症开始减轻，组织也开始恢复。"
           }
         }
       }
@@ -16313,7 +16313,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最佳交易"
+            "value": "超值优惠"
           }
         }
       }
@@ -16414,7 +16414,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "BLOOM + (英语)."
+            "value": "BLOOM+"
           }
         }
       }
@@ -16515,7 +16515,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "回花园去"
+            "value": "返回花园"
           }
         }
       }
@@ -16616,7 +16616,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "基于你挺过的冲动记录，而非所有人的平均值。"
+            "value": "根据你挺过渴求的记录，而非所有用户的平均值。"
           }
         }
       }
@@ -16717,7 +16717,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "日常压力水平降低。"
+            "value": "日常压力有所降低。"
           }
         }
       }
@@ -16818,7 +16818,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开始你的无尼古丁之行"
+            "value": "开启无尼古丁新生活。"
           }
         }
       }
@@ -16919,7 +16919,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "福利"
+            "value": "健康益处"
           }
         }
       }
@@ -17020,7 +17020,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "睡眠和专注力改善"
+            "value": "睡眠与专注力改善"
           }
         }
       }
@@ -17121,7 +17121,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "黑松树"
+            "value": "黑松"
           }
         }
       }
@@ -17323,7 +17323,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "血流和精力有所改善。"
+            "value": "血液循环和精力有所提升。"
           }
         }
       }
@@ -17424,7 +17424,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "血液中的尼古丁明显减少。"
+            "value": "血液中的尼古丁大幅下降。"
           }
         }
       }
@@ -17626,7 +17626,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ 活动"
+            "value": "Bloom+ 已生效"
           }
         }
       }
@@ -17828,7 +17828,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ 计划暂时无法使用。 您可以重试或免费继续 。"
+            "value": "Bloom+ 方案暂时不可用。你可以重试，或继续使用免费版。"
           }
         }
       }
@@ -17929,7 +17929,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ 解锁每个物种, 这样您可以在您喜欢的时候切换您的树。 您的花序会长出您所选的树 。"
+            "value": "Bloom+ 解锁所有盆景品种，你可以随时更换。无论选择哪棵树，你的连续天数都会继续累积。"
           }
         }
       }
@@ -18030,7 +18030,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+, 自由尝试"
+            "value": "Bloom+ 免费试用"
           }
         }
       }
@@ -18131,7 +18131,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "邦赛物种"
+            "value": "盆景品种"
           }
         }
       }
@@ -18232,7 +18232,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai 样式"
+            "value": "盆景造型"
           }
         }
       }
@@ -18333,7 +18333,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai 物种"
+            "value": "盆景品种"
           }
         }
       }
@@ -18434,7 +18434,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "邦赛,一天,%1$lld"
+            "value": "第 %1$lld 天的盆景"
           }
         }
       }
@@ -18636,7 +18636,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "树枝伸向更宽的地道,形状正在出现."
+            "value": "枝条向外舒展，树形渐渐显现。"
           }
         }
       }
@@ -18737,7 +18737,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "吸进去"
+            "value": "吸气"
           }
         }
       }
@@ -18838,7 +18838,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "呼吸出来"
+            "value": "呼气"
           }
         }
       }
@@ -18939,7 +18939,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约一个月后，早期戒断带来的焦虑和烦躁通常会减轻，同时大脑中的多巴胺信号逐渐重新平衡。每个人的体验不同。"
+            "value": "大约一个月后，早期戒断引起的焦虑和烦躁通常会减轻，大脑的多巴胺信号也逐渐恢复平衡。每个人的体验不同。"
           }
         }
       }
@@ -19040,7 +19040,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约六个月不再使用尼古丁袋后，牙龈退缩和口腔损伤的风险会降低，口腔组织也会继续恢复。"
+            "value": "大约六个月不再使用尼古丁袋后，牙龈萎缩和口腔病变的风险会降低，口腔组织也会继续恢复。"
           }
         }
       }
@@ -19141,7 +19141,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约两个月不再受到尼古丁反复引起的血压升高影响后，许多人的静息血压和心率会降低。效果因人而异。"
+            "value": "大约两个月不再反复受到尼古丁导致的血压升高影响后，许多人的静息血压和心率趋于较低水平。效果因人而异。"
           }
         }
       }
@@ -19242,7 +19242,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一周左右，睡眠和专注力通常会改善，大脑也在适应没有规律尼古丁摄入的状态。每个人的体验不同。"
+            "value": "大约一周后，睡眠和专注力通常会改善，大脑也逐渐适应没有规律摄入尼古丁的状态。每个人的体验不同。"
           }
         }
       }
@@ -19444,7 +19444,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "电话或短信:988 24/7"
+            "value": "拨打或发短信至 988 · 全天候 · 美国"
           }
         }
       }
@@ -19646,7 +19646,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "试用期结束前可随时取消，不会产生意外扣费。"
+            "value": "试用结束前可随时取消，不会有意外扣费。"
           }
         }
       }
@@ -19848,7 +19848,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "分层"
+            "value": "悬崖式"
           }
         }
       }
@@ -19949,7 +19949,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "连结邦赛"
+            "value": "悬崖式盆景"
           }
         }
       }
@@ -20050,7 +20050,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "改为无尼古丁"
+            "value": "改为无尼古丁记录"
           }
         }
       }
@@ -20151,7 +20151,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "改为“失手”记录"
+            "value": "改为失手记录"
           }
         }
       }
@@ -20252,7 +20252,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天报到"
+            "value": "记录今天"
           }
         }
       }
@@ -20353,7 +20353,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录一天，开启新的一周。"
+            "value": "打卡一天，开启新的一周。"
           }
         }
       }
@@ -20454,7 +20454,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "检查你的连接,再试一次。"
+            "value": "检查网络连接后重试。"
           }
         }
       }
@@ -20555,7 +20555,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "报到"
+            "value": "每日打卡"
           }
         }
       }
@@ -20656,7 +20656,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已登记"
+            "value": "已打卡"
           }
         }
       }
@@ -20858,7 +20858,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "樱桃花花"
+            "value": "樱花"
           }
         }
       }
@@ -21262,7 +21262,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "配套植物"
+            "value": "伴生植物"
           }
         }
       }
@@ -21363,7 +21363,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "完成你的第一个星期。"
+            "value": "完成第一个星期。"
           }
         }
       }
@@ -21565,7 +21565,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一致性冠军"
+            "value": "连续打卡达人"
           }
         }
       }
@@ -21767,7 +21767,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "继续( dev)"
+            "value": "继续（开发）"
           }
         }
       }
@@ -21868,7 +21868,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "继续免费"
+            "value": "继续使用免费版"
           }
         }
       }
@@ -21969,7 +21969,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "继续 Bloom+"
+            "value": "继续使用 Bloom+"
           }
         }
       }
@@ -22070,7 +22070,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "成本和使用"
+            "value": "费用与用量"
           }
         }
       }
@@ -22272,7 +22272,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法装入计划"
+            "value": "无法加载方案"
           }
         }
       }
@@ -22373,7 +22373,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "买不完 请再试一次"
+            "value": "购买未能完成，请重试。"
           }
         }
       }
@@ -22474,7 +22474,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法装入订阅选项。 请检查您的连接并再次尝试 。"
+            "value": "无法加载订阅方案。请检查网络连接后重试。"
           }
         }
       }
@@ -22575,7 +22575,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法恢复购买,再试一次"
+            "value": "无法恢复购买项目，请重试。"
           }
         }
       }
@@ -22676,7 +22676,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无法开始试用。请重试。"
+            "value": "无法开始试用，请重试。"
           }
         }
       }
@@ -22777,7 +22777,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "数着你的旅程,还没登记"
+            "value": "已计入你的旅程，今天还未打卡。"
           }
         }
       }
@@ -22878,7 +22878,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "渴求达到高峰后减弱"
+            "value": "渴求达到高峰后逐渐减轻"
           }
         }
       }
@@ -22979,7 +22979,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁渴求的时段"
+            "value": "按时段查看渴求"
           }
         }
       }
@@ -23080,7 +23080,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "砸烂了"
+            "value": "太棒了"
           }
         }
       }
@@ -23282,7 +23282,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "目前正在增长"
+            "value": "正在生长"
           }
         }
       }
@@ -23585,7 +23585,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每日报到"
+            "value": "每日打卡"
           }
         }
       }
@@ -23686,7 +23686,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每日报到7天"
+            "value": "连续 7 天每日打卡。"
           }
         }
       }
@@ -23888,7 +23888,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每天的日记都会提示你最需要的时候, 再加上Bloom+的其余部分."
+            "value": "每天在你需要时提供日记提示，并解锁 Bloom+ 的其他功能。"
           }
         }
       }
@@ -23989,7 +23989,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每天提醒时间"
+            "value": "每日提醒时间"
           }
         }
       }
@@ -24090,7 +24090,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "阴暗"
+            "value": "深色"
           }
         }
       }
@@ -24191,7 +24191,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "天数"
+            "value": "天"
           }
         }
       }
@@ -24292,7 +24292,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当天%1$lld"
+            "value": "第 %1$lld 天"
           }
         }
       }
@@ -24393,7 +24393,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "第%1$lld天等着你"
+            "value": "第 %1$lld 天等你回来"
           }
         }
       }
@@ -24494,7 +24494,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "日%1$lld%2$@"
+            "value": "第 %1$lld 天 · %2$@"
           }
         }
       }
@@ -24595,7 +24595,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "第一天开始"
+            "value": "从今天开始第一天。"
           }
         }
       }
@@ -24696,7 +24696,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "本周已记录：%1$lld 天，共 %2$lld 天。"
+            "value": "本周打卡：%1$lld / %2$lld 天。"
           }
         }
       }
@@ -25100,7 +25100,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "描述一下我最近经历的片刻的和平。"
+            "value": "描述最近一次感到平静的时刻。"
           }
         }
       }
@@ -25201,7 +25201,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "描述从今天起一个小小的胜利。"
+            "value": "写下今天的一件小小的进步。"
           }
         }
       }
@@ -25403,7 +25403,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "钻石纪律"
+            "value": "坚韧达人"
           }
         }
       }
@@ -25504,7 +25504,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "禁用 Bloom+ 覆盖"
+            "value": "关闭 Bloom+ 测试状态"
           }
         }
       }
@@ -25706,7 +25706,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "饮酒"
+            "value": "饮酒时"
           }
         }
       }
@@ -26009,7 +26009,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无论哪种方式都是好的。 您可以在设置中随时重温 。"
+            "value": "怎么选都可以。你随时可以在“设置”中更改。"
           }
         }
       }
@@ -26110,7 +26110,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "启用 Bloom+ 覆盖"
+            "value": "开启 Bloom+ 测试状态"
           }
         }
       }
@@ -26211,7 +26211,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已启用"
+            "value": "已开启"
           }
         }
       }
@@ -26312,7 +26312,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "条目"
+            "value": "篇日记"
           }
         }
       }
@@ -26413,7 +26413,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "条目"
+            "value": "日记"
           }
         }
       }
@@ -26514,7 +26514,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每次你挺过冲动，都没有使用尼古丁袋。"
+            "value": "每次挺过渴求，都没有使用尼古丁袋。"
           }
         }
       }
@@ -26615,7 +26615,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你所避免的每一个美元和邮袋,跟踪。"
+            "value": "每一笔省下的钱、每一袋少用的尼古丁袋，都帮你记录下来。"
           }
         }
       }
@@ -26716,7 +26716,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每一天无尼古丁会长出你的树"
+            "value": "每个无尼古丁的日子都会让你的树继续生长。"
           }
         }
       }
@@ -26817,7 +26817,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你记录过的每一个无尼古丁日，依然都算数。"
+            "value": "你记录过的每个无尼古丁日，依然算数。"
           }
         }
       }
@@ -26918,7 +26918,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每次你挺过一次渴求，这个页面就会记录它何时出现、由什么引发，以及持续多久。"
+            "value": "每次你挺过渴求，这里都会记录它何时出现、由什么引发，以及持续多久。"
           }
         }
       }
@@ -27019,7 +27019,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每一个工具 保持记录可见, 今天解锁。"
+            "value": "所有帮助你查看连续天数的工具，今天都已解锁。"
           }
         }
       }
@@ -27369,7 +27369,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Every tool that keeps the streak visible. Nothing is charged for %1$lld days."
+                  "value": "所有帮助你查看连续天数的工具都已解锁。未来 %1$lld 天不会扣费。"
                 }
               }
             }
@@ -27473,7 +27473,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每一件工具都清晰可见 今天什么也没有充电"
+            "value": "所有帮助你查看连续天数的工具都已解锁，今天不会扣费。"
           }
         }
       }
@@ -27574,7 +27574,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁全部功能，立即享有完整访问权限，现需支付%@。"
+            "value": "全部功能已解锁，可完整使用。现在需支付 %1$@。"
           }
         }
       }
@@ -27675,7 +27675,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "所有你解锁的东西"
+            "value": "你解锁的全部功能"
           }
         }
       }
@@ -27776,7 +27776,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "不错"
+            "value": "太好了"
           }
         }
       }
@@ -27978,7 +27978,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "感觉"
+            "value": "感受"
           }
         }
       }
@@ -28079,7 +28079,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "少于前 7 天"
+            "value": "近 7 天次数较少"
           }
         }
       }
@@ -28180,7 +28180,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "查找治疗"
+            "value": "寻找专业帮助"
           }
         }
       }
@@ -28281,7 +28281,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "第一步"
+            "value": "迈出第一步"
           }
         }
       }
@@ -28382,7 +28382,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "遵循13个来源尼古丁回收里程碑"
+            "value": "查看 13 个有来源支持的戒除尼古丁健康里程碑"
           }
         }
       }
@@ -28483,7 +28483,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自由写入"
+            "value": "自由书写"
           }
         }
       }
@@ -28685,7 +28685,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "免费至%1$@。开启通知后，我们会在试用期结束前提醒你。"
+            "value": "免费使用至 %1$@。开启通知后，我们会在试用结束前提醒你。"
           }
         }
       }
@@ -28786,7 +28786,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自由写入"
+            "value": "自由书写"
           }
         }
       }
@@ -28887,7 +28887,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "随时都可以获得免费,保密的帮助,接触是一种力量,而不是挫折."
+            "value": "你随时都能获得免费、保密的帮助。主动求助是勇气，不是退步。"
           }
         }
       }
@@ -28988,7 +28988,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "试用期间可完整使用花园、日记、健康追踪和储蓄功能。"
+            "value": "试用期内可完整使用花园、日记、健康时间线和省钱统计。"
           }
         }
       }
@@ -29089,7 +29089,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "全面保健时间表"
+            "value": "完整健康时间线"
           }
         }
       }
@@ -29190,7 +29190,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "花园地物"
+            "value": "花园功能"
           }
         }
       }
@@ -29291,7 +29291,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一般健康与身心状态信息，不构成医疗建议。每个人的变化时间不同。如有医疗问题，请咨询医疗专业人员。"
+            "value": "一般健康信息，不构成医疗建议。每个人的变化进程不同。如有健康问题，请咨询医疗专业人员。"
           }
         }
       }
@@ -29392,7 +29392,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开始"
+            "value": "开始使用"
           }
         }
       }
@@ -29695,7 +29695,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "回来"
+            "value": "返回"
           }
         }
       }
@@ -29897,7 +29897,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "地面覆盖"
+            "value": "地被植物"
           }
         }
       }
@@ -29998,7 +29998,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "各种种增长."
+            "value": "培育全部盆景品种。"
           }
         }
       }
@@ -30099,7 +30099,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "增长"
+            "value": "生长中"
           }
         }
       }
@@ -30402,7 +30402,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "半年级英雄"
+            "value": "半年坚持达人"
           }
         }
       }
@@ -30503,7 +30503,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "硬度介于%1$@和%2$@之间"
+            "value": "最难熬的时段：%1$@ 到 %2$@"
           }
         }
       }
@@ -30604,7 +30604,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "卫生"
+            "value": "健康"
           }
         }
       }
@@ -31008,7 +31008,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "别动"
+            "value": "屏息"
           }
         }
       }
@@ -31109,7 +31109,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "首页"
+            "value": "主页"
           }
         }
       }
@@ -31311,7 +31311,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天过得怎么样?"
+            "value": "今天过得怎么样？"
           }
         }
       }
@@ -31412,7 +31412,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自从我戒了尼古丁之后,我的日常生活有什么变化?"
+            "value": "戒掉尼古丁后，我的日常生活有什么变化？"
           }
         }
       }
@@ -31513,7 +31513,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我现在睡得怎么样?"
+            "value": "我现在的睡眠有什么变化？"
           }
         }
       }
@@ -31614,7 +31614,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你从尼古丁开始有多久了?"
+            "value": "你已经多久没摄入尼古丁了？"
           }
         }
       }
@@ -31715,7 +31715,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你用了多少钱?"
+            "value": "你之前每天使用多少？"
           }
         }
       }
@@ -31816,7 +31816,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "有多强?"
+            "value": "每袋的尼古丁含量是多少？"
           }
         }
       }
@@ -31917,7 +31917,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我承诺要好起来"
+            "value": "我愿意努力变得更好"
           }
         }
       }
@@ -32018,7 +32018,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我放弃了"
+            "value": "我没忍住"
           }
         }
       }
@@ -32119,7 +32119,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我又使用了尼古丁"
+            "value": "我失手了"
           }
         }
       }
@@ -32220,7 +32220,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我答应你"
+            "value": "我决定坚持下去"
           }
         }
       }
@@ -32321,7 +32321,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我现在很想摄入尼古丁。"
+            "value": "我现在很想用尼古丁"
           }
         }
       }
@@ -32422,7 +32422,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我受够了"
+            "value": "我挺过来了"
           }
         }
       }
@@ -32624,7 +32624,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "如果今天的尼古丁是无尼古丁的, 记录它和给您的花园取水。"
+            "value": "如果今天没有摄入尼古丁，就记录下来并给花园浇水。"
           }
         }
       }
@@ -32826,7 +32826,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一年之内,就是"
+            "value": "一年下来，你将省下："
           }
         }
       }
@@ -32927,7 +32927,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "强度%1$lld5"
+            "value": "强度：%1$lld / 5"
           }
         }
       }
@@ -33028,7 +33028,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "烦躁和焦虑减轻。"
+            "value": "烦躁和焦虑有所减轻。"
           }
         }
       }
@@ -33230,7 +33230,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "它已经比一分钟前小, 即使它没有感觉完成。"
+            "value": "即使你还觉得它没结束，这阵渴求也已比一分钟前减轻。"
           }
         }
       }
@@ -33432,7 +33432,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "日本枫花"
+            "value": "日本红枫"
           }
         }
       }
@@ -33634,7 +33634,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在艰难的岁月里私自出版"
+            "value": "在难熬的日子里，写下心里话"
           }
         }
       }
@@ -33735,7 +33735,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "继续免费试用"
+            "value": "保留免费试用"
           }
         }
       }
@@ -33836,7 +33836,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保持免费版本?"
+            "value": "继续使用免费版？"
           }
         }
       }
@@ -33937,7 +33937,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保留你的花园、日记和积蓄 或在续约前取消任何时间"
+            "value": "保留完整花园、日记和省钱记录，也可在续订前随时取消。"
           }
         }
       }
@@ -34038,7 +34038,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最近 7 天：%1$lld。之前 7 天：%2$lld。"
+            "value": "最近 7 天：%1$lld。前 7 天：%2$lld。"
           }
         }
       }
@@ -34139,7 +34139,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "学习自己的模式。"
+            "value": "了解自己的规律。"
           }
         }
       }
@@ -34240,7 +34240,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "法律"
+            "value": "法律信息"
           }
         }
       }
@@ -34442,7 +34442,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "传奇舞台"
+            "value": "传奇阶段"
           }
         }
       }
@@ -34644,7 +34644,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "寿命:%1$@"
+            "value": "终身：%1$@"
           }
         }
       }
@@ -34745,7 +34745,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "光线"
+            "value": "浅色"
           }
         }
       }
@@ -34846,7 +34846,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "正在装入计划..."
+            "value": "正在加载方案…"
           }
         }
       }
@@ -34947,7 +34947,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "锁定。 要学习 Bloom+ 的磁带行"
+            "value": "已锁定。点按此行了解 Bloom+"
           }
         }
       }
@@ -35048,7 +35048,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录一次失手"
+            "value": "记录失手"
           }
         }
       }
@@ -35351,7 +35351,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "继续记录"
+            "value": "记录并继续"
           }
         }
       }
@@ -35553,7 +35553,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天记录一下,给花园浇水,你可以的"
+            "value": "记录今天，给花园浇水。你可以做到。"
           }
         }
       }
@@ -35654,7 +35654,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录今天未使用尼古丁，并给盆景浇水。"
+            "value": "记录今天未摄入尼古丁，并给盆景浇水"
           }
         }
       }
@@ -35755,7 +35755,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已记录失手"
+            "value": "已记录一次失手"
           }
         }
       }
@@ -35856,7 +35856,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无尼古丁记录"
+            "value": "已记录为无尼古丁"
           }
         }
       }
@@ -35957,7 +35957,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "目前已记录：%1$lld。"
+            "value": "目前已记录 %1$lld 次。"
           }
         }
       }
@@ -36058,7 +36058,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已登录。"
+            "value": "已记录。"
           }
         }
       }
@@ -36159,7 +36159,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录了 你还在路上"
+            "value": "已记录。你仍在继续这段旅程。"
           }
         }
       }
@@ -36462,7 +36462,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "正式点"
+            "value": "确认记录"
           }
         }
       }
@@ -36563,7 +36563,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "性质"
+            "value": "成熟"
           }
         }
       }
@@ -36866,7 +36866,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "钱"
+            "value": "省钱"
           }
         }
       }
@@ -36967,7 +36967,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "资金和邮袋跟踪"
+            "value": "省钱和尼古丁袋记录"
           }
         }
       }
@@ -37068,7 +37068,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每月"
+            "value": "月度"
           }
         }
       }
@@ -37169,7 +37169,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "雾"
+            "value": "情绪"
           }
         }
       }
@@ -37371,7 +37371,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "再来"
+            "value": "更多"
           }
         }
       }
@@ -37472,7 +37472,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "多于前 7 天"
+            "value": "近 7 天次数较多"
           }
         }
       }
@@ -37674,7 +37674,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录的冲动大多集中在这个时段：%1$lld/%2$lld。"
+            "value": "大多数渴求出现在这个时段：%1$lld / %2$lld。"
           }
         }
       }
@@ -37775,7 +37775,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大部分尼古丁已离开身体。"
+            "value": "体内大部分尼古丁已代谢。"
           }
         }
       }
@@ -38280,7 +38280,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "说说以前我找过邮袋的情况 我怎么找到的?"
+            "value": "想想过去会拿起尼古丁袋的一个情境。我是怎么应对的？"
           }
         }
       }
@@ -38482,7 +38482,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "中立"
+            "value": "平静"
           }
         }
       }
@@ -38583,7 +38583,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新条目"
+            "value": "新建日记"
           }
         }
       }
@@ -38684,7 +38684,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新增长"
+            "value": "新生长"
           }
         }
       }
@@ -38785,7 +38785,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新条目"
+            "value": "新建日记"
           }
         }
       }
@@ -38987,7 +38987,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "下一个"
+            "value": "接下来"
           }
         }
       }
@@ -39088,7 +39088,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁岛"
+            "value": "尼古丁"
           }
         }
       }
@@ -39189,7 +39189,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁逐渐排出"
+            "value": "尼古丁逐渐代谢"
           }
         }
       }
@@ -39391,7 +39391,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁的半衰期较短，身体代谢最后一剂时，血液中的尼古丁水平会在几小时内下降一半以上。"
+            "value": "尼古丁在体内停留的时间较短。身体代谢最后一次摄入的尼古丁时，血液中的含量会在几小时内下降一半以上。"
           }
         }
       }
@@ -39492,7 +39492,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁从未被吸收过"
+            "value": "避免摄入的尼古丁"
           }
         }
       }
@@ -39593,7 +39593,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自无尼古丁以来"
+            "value": "无尼古丁开始于"
           }
         }
       }
@@ -39694,7 +39694,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有找到此 Apple ID 的活性 Bloom+ 购买 。"
+            "value": "未找到此 Apple ID 对应的有效 Bloom+ 购买项目。"
           }
         }
       }
@@ -39795,7 +39795,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未找到此 Apple ID 的活性 Bloom+ 购买 。"
+            "value": "未找到此 Apple ID 对应的有效 Bloom+ 购买项目。"
           }
         }
       }
@@ -39896,7 +39896,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "还没有输入,用铅笔写第一个"
+            "value": "还没有日记。点按铅笔图标写下第一篇。"
           }
         }
       }
@@ -39997,7 +39997,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "还没有条目, 您的第一个条目是免费的, 用铅笔来写 。"
+            "value": "还没有日记。第一篇免费，点按铅笔图标开始写。"
           }
         }
       }
@@ -40098,7 +40098,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "现在不付了"
+            "value": "暂不扣费"
           }
         }
       }
@@ -40199,7 +40199,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "现在无需付款 · Apple 会在扣费前提醒 · 数据留在设备上"
+            "value": "现在不会扣费 · Apple 会在扣费前提醒你 · 数据保留在设备上"
           }
         }
       }
@@ -40300,7 +40300,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "现在不行"
+            "value": "暂不"
           }
         }
       }
@@ -40395,7 +40395,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未节省"
+            "value": "未保存"
           }
         }
       }
@@ -40496,7 +40496,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没花在尼古丁袋上"
+            "value": "没有花在尼古丁袋上"
           }
         }
       }
@@ -40597,7 +40597,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "说不定"
+            "value": "不确定"
           }
         }
       }
@@ -40698,7 +40698,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "还不确定 闭会"
+            "value": "还不确定，结束本次练习"
           }
         }
       }
@@ -40799,7 +40799,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "说明"
+            "value": "备注"
           }
         }
       }
@@ -40900,7 +40900,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "还没有数据"
+            "value": "暂无内容"
           }
         }
       }
@@ -41001,7 +41001,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "注意不要争吵,你不是想赢 而是在等它出来"
+            "value": "留意这种感觉，不必和它较劲。你不需要战胜它，只要等它过去。"
           }
         }
       }
@@ -41102,7 +41102,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "为 Quit Zyn 关闭通知, 因此无法发送提醒。 上方的 Tap 以在 Setting app 中启用 。"
+            "value": "Quit Zyn 的通知已关闭，因此无法发送提醒。点按上方按钮，在“设置”中开启通知。"
           }
         }
       }
@@ -41203,7 +41203,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": ""
+            "value": "好"
           }
         }
       }
@@ -41304,7 +41304,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 App 存储器上"
+            "value": "在 App Store 上"
           }
         }
       }
@@ -41405,7 +41405,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在要保存的轨道上"
+            "value": "预计可省下"
           }
         }
       }
@@ -41506,7 +41506,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "达到一个月的里程碑。"
+            "value": "已达到一个月里程碑。"
           }
         }
       }
@@ -41607,7 +41607,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "· 不订阅"
+            "value": "一次性购买 · 无需订阅"
           }
         }
       }
@@ -41708,7 +41708,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "口腔健康逐渐恢复"
+            "value": "口腔健康持续改善"
           }
         }
       }
@@ -41809,7 +41809,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "过度拥挤"
+            "value": "难以承受"
           }
         }
       }
@@ -41910,7 +41910,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "完美的礼拜"
+            "value": "完美一周"
           }
         }
       }
@@ -42011,7 +42011,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "暂时没有计划 请稍候再试一次"
+            "value": "方案暂时不可用，请稍后重试。"
           }
         }
       }
@@ -42112,7 +42112,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "另外，你会少用%1$@袋尼古丁，身体也就不必处理这些尼古丁。"
+            "value": "另外，你将少用%1$@袋尼古丁，身体也就不必代谢这些尼古丁。"
           }
         }
       }
@@ -42314,7 +42314,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "避免使用的尼古丁袋"
+            "value": "少用的尼古丁袋"
           }
         }
       }
@@ -42516,7 +42516,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁袋/天"
+            "value": "每日尼古丁袋数"
           }
         }
       }
@@ -42819,7 +42819,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "价格来自App Store,在这栋楼里没有."
+            "value": "本版本无法获取 App Store 价格。"
           }
         }
       }
@@ -43021,7 +43021,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "进展"
+            "value": "进度"
           }
         }
       }
@@ -43122,7 +43122,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "预测你明年会留下的...%1$@..."
+            "value": "预计未来一年可省下的%1$@"
           }
         }
       }
@@ -43223,7 +43223,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "预测未来一年, 不只是后天"
+            "value": "展望未来一年，不只回顾过去的日子"
           }
         }
       }
@@ -43324,7 +43324,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当天的到来"
+            "value": "今日提示"
           }
         }
       }
@@ -43425,7 +43425,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "苦日子的提示和思考。"
+            "value": "在难熬的日子里，借助提示写下感受。"
           }
         }
       }
@@ -43526,7 +43526,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "脉搏和血压开始回落。"
+            "value": "脉搏和血压趋于平稳。"
           }
         }
       }
@@ -43627,7 +43627,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "采购取消,再打下去"
+            "value": "购买已取消。再次点按以继续。"
           }
         }
       }
@@ -43829,7 +43829,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大师"
+            "value": "季度达人"
           }
         }
       }
@@ -43930,7 +43930,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "问题、想法或麻烦?"
+            "value": "有问题、建议或需要帮助？联系我们。"
           }
         }
       }
@@ -44031,7 +44031,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit Zyn 无尼古丁天数"
+            "value": "Quit Zyn 天数"
           }
         }
       }
@@ -44132,7 +44132,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "速率退出 Zyn"
+            "value": "为 Quit Zyn 评分"
           }
         }
       }
@@ -44482,7 +44482,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "再记录 %1$lld 次冲动，了解更多自己的规律。"
+                  "value": "再记录 %1$lld 次渴求，了解更多自己的规律。"
                 }
               }
             }
@@ -44835,7 +44835,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "再记录 %1$lld 次冲动，开始看清自己的规律。"
+                  "value": "再记录 %1$lld 次渴求，开始看清自己的规律。"
                 }
               }
             }
@@ -44939,7 +44939,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "再记录一次冲动，了解更多自己的规律。"
+            "value": "再记录一次渴求，了解更多自己的规律。"
           }
         }
       }
@@ -45040,7 +45040,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "再记录一次冲动，开始看清自己的规律。"
+            "value": "再记录一次渴求，开始看清自己的规律。"
           }
         }
       }
@@ -45141,7 +45141,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "恢复从决定开始 今天和之后的日子 这是你的"
+            "value": "改变始于一个决定。今天以及今后的日子，都由你来选择。"
           }
         }
       }
@@ -45242,7 +45242,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "改良"
+            "value": "精致"
           }
         }
       }
@@ -45343,7 +45343,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "精细而密集 真正耐心的工作"
+            "value": "枝叶细密，形态精致，尽显耐心。"
           }
         }
       }
@@ -45444,7 +45444,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "改良阶段"
+            "value": "精致阶段"
           }
         }
       }
@@ -45747,7 +45747,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "提醒是围绕着你的誓言的"
+            "value": "提醒内容会围绕你的承诺。"
           }
         }
       }
@@ -46050,7 +46050,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重设"
+            "value": "重置"
           }
         }
       }
@@ -46151,7 +46151,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置计数器"
+            "value": "重置计数"
           }
         }
       }
@@ -46252,7 +46252,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重置你的计数器?"
+            "value": "要重置天数计数吗？"
           }
         }
       }
@@ -46454,7 +46454,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "恢复购买"
+            "value": "恢复购买项目"
           }
         }
       }
@@ -46555,7 +46555,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "恢复时..."
+            "value": "正在恢复…"
           }
         }
       }
@@ -46656,7 +46656,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已挺过：%1$lld/%2$lld"
+            "value": "已挺过：%1$lld / %2$lld"
           }
         }
       }
@@ -46757,7 +46757,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "平静地呼吸几分钟。"
+            "value": "用几分钟呼吸练习，陪自己度过这阵渴求"
           }
         }
       }
@@ -46858,7 +46858,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "上升之星"
+            "value": "冉冉新星"
           }
         }
       }
@@ -46959,7 +46959,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "粗鲁"
+            "value": "难熬"
           }
         }
       }
@@ -47060,7 +47060,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "SAMHSA 国家帮助热线"
+            "value": "SAMHSA National Helpline"
           }
         }
       }
@@ -47161,7 +47161,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存%1$lld"
+            "value": "省下 %1$lld%%"
           }
         }
       }
@@ -47363,7 +47363,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "保存"
+            "value": "省下"
           }
         }
       }
@@ -47458,7 +47458,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "已节省"
+            "value": "已省下"
           }
         }
       }
@@ -47790,7 +47790,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld 个无尼古丁日累计节省。"
+                  "value": "在 %1$lld 个无尼古丁日里累计省下的钱。"
                 }
               }
             }
@@ -47894,7 +47894,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "看所有计划"
+            "value": "查看全部方案"
           }
         }
       }
@@ -47995,7 +47995,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "见全部进展"
+            "value": "查看全部进度"
           }
         }
       }
@@ -48096,7 +48096,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "见所回向."
+            "value": "看看身体正在恢复的变化。"
           }
         }
       }
@@ -48197,7 +48197,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "查看你的%1$@何时出现、由什么引发、通常持续多久，以及 Bloom+ 的其他功能。"
+            "value": "了解你的%1$@何时出现、由什么引发、通常持续多久，以及 Bloom+ 的其他功能。"
           }
         }
       }
@@ -48500,7 +48500,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "种子"
+            "value": "树苗"
           }
         }
       }
@@ -48601,7 +48601,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "播种阶段"
+            "value": "树苗阶段"
           }
         }
       }
@@ -48702,7 +48702,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "选中天数"
+            "value": "所选日期"
           }
         }
       }
@@ -49005,7 +49005,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "被一生一世的风所塑造,每个分支都讲述了耐力的故事."
+            "value": "经年风吹塑出独特树形，每根枝条都诉说着坚韧。"
           }
         }
       }
@@ -49106,7 +49106,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天出现"
+            "value": "今天的打卡"
           }
         }
       }
@@ -49207,7 +49207,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "洗牌提示"
+            "value": "换一条提示"
           }
         }
       }
@@ -49308,7 +49308,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自%1$@起"
+            "value": "自 %1$@ 起"
           }
         }
       }
@@ -50823,7 +50823,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "六个月无尼古丁."
+            "value": "无尼古丁生活满六个月。"
           }
         }
       }
@@ -51025,7 +51025,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "不再围着一罐尼古丁袋安排一天"
+            "value": "不再为了买一罐尼古丁袋安排一天"
           }
         }
       }
@@ -51126,7 +51126,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "物种"
+            "value": "品种"
           }
         }
       }
@@ -51227,7 +51227,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "发芽"
+            "value": "新芽"
           }
         }
       }
@@ -51328,7 +51328,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "发芽阶段"
+            "value": "萌芽阶段"
           }
         }
       }
@@ -51429,7 +51429,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "高级阶段:%1$@%2$@"
+            "value": "阶段提升：%1$@ → %2$@"
           }
         }
       }
@@ -51880,7 +51880,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "开始%1$lld 天免费试用"
+                  "value": "开始 %1$lld 天免费试用"
                 }
               }
             }
@@ -52233,7 +52233,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "开始%1$lld 个月免费试用"
+                  "value": "开始 %1$lld 个月免费试用"
                 }
               }
             }
@@ -52586,7 +52586,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "开始%1$lld 年免费试用"
+                  "value": "开始 %1$lld 年免费试用"
                 }
               }
             }
@@ -53028,7 +53028,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "开始%1$lld 天免费试用"
+                  "value": "开始我的 %1$lld 天免费试用"
                 }
               }
             }
@@ -53132,7 +53132,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开始免费试用"
+            "value": "开始我的免费试用"
           }
         }
       }
@@ -53470,7 +53470,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "开始%1$lld 天免费试用"
+                  "value": "开始我的 %1$lld 天免费试用"
                 }
               }
             }
@@ -53574,7 +53574,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开始免费试用"
+            "value": "开始我的免费试用"
           }
         }
       }
@@ -53675,7 +53675,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "开始 Bloom+ 免费试用"
+            "value": "开始免费试用 Bloom+"
           }
         }
       }
@@ -53770,7 +53770,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "钱留在你手里，而不是花在尼古丁袋上。Bloom+ 帮你延续这份坚持。"
+            "value": "钱留在你口袋里，不再花在尼古丁袋上。Bloom+ 帮你延续这份坚持。"
           }
         }
       }
@@ -53871,7 +53871,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "还是没有尼古丁"
+            "value": "仍未摄入尼古丁"
           }
         }
       }
@@ -53972,7 +53972,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Streak)计算了您目前的运行情况,终生计算了您记录过的每一个没有尼古丁的一天,所以过去的进展不会因为重置而丢失."
+            "value": "连续天数显示你当前坚持了多久。终身累计会统计你记录过的所有无尼古丁日，所以重置后也不会丢失过去的进度。"
           }
         }
       }
@@ -54073,7 +54073,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "断层"
+            "value": "连续天数"
           }
         }
       }
@@ -54275,7 +54275,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "抗压能力增强"
+            "value": "抗压能力"
           }
         }
       }
@@ -54376,7 +54376,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "强大基金会"
+            "value": "稳固根基"
           }
         }
       }
@@ -54477,7 +54477,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "支助"
+            "value": "支持"
           }
         }
       }
@@ -54578,7 +54578,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "* 随时交换任何物种 *"
+            "value": "随时更换盆景品种 · 连续天数照常累积"
           }
         }
       }
@@ -54679,7 +54679,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "切换"
+            "value": "更换"
           }
         }
       }
@@ -54780,7 +54780,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "随时切换,你的一天数和成长 都延续到你选择的树上"
+            "value": "随时更换。你的天数和成长进度都会保留在新选的树上。"
           }
         }
       }
@@ -54881,7 +54881,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "切换 Bonsai 物种,目前为%1$@"
+            "value": "更换盆景品种，当前：%1$@"
           }
         }
       }
@@ -54982,7 +54982,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "随着你的树苗生长 切换你的树"
+            "value": "连续天数增加时，也可随时更换盆景。"
           }
         }
       }
@@ -55285,7 +55285,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "术语"
+            "value": "法律条款"
           }
         }
       }
@@ -55386,7 +55386,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用条件"
+            "value": "使用条款"
           }
         }
       }
@@ -55487,7 +55487,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用条件(欧盟法)"
+            "value": "使用条款（EULA）"
           }
         }
       }
@@ -55588,7 +55588,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约是...%1$@/天"
+            "value": "约为 %1$@ / 天"
           }
         }
       }
@@ -55689,7 +55689,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "级联风格模仿了在悬崖上生长出一棵树,向下倾斜."
+            "value": "悬崖式造型模仿生长在峭壁上的树木，枝干向下延伸。"
           }
         }
       }
@@ -55891,7 +55891,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "种子落地了 你的旅程从这里开始"
+            "value": "种子正在扎根。你的旅程从这里开始。"
           }
         }
       }
@@ -55992,7 +55992,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这通常接近高峰。%1$@会迅速增强，随后逐渐减弱。"
+            "value": "这通常接近高峰。你的%1$@会迅速增强，之后便不再加剧。"
           }
         }
       }
@@ -56446,7 +56446,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三个月左右，随着尼古丁不再收缩血管，血液循环往往会改善。许多人表示精力更加稳定。"
+            "value": "大约三个月后，尼古丁不再收缩血管，血液循环通常会改善。许多人表示精力也更加稳定。"
           }
         }
       }
@@ -56547,7 +56547,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三个月强."
+            "value": "坚持三个月了。"
           }
         }
       }
@@ -56648,7 +56648,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "三个词来形容我现在的感受"
+            "value": "用三个词形容我此刻的感受。"
           }
         }
       }
@@ -57355,7 +57355,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "共计"
+            "value": "总计"
           }
         }
       }
@@ -57456,7 +57456,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "很难"
+            "value": "困难"
           }
         }
       }
@@ -57557,7 +57557,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "追踪你所避免的每一美元和邮袋,加上Bloom+的其余部分."
+            "value": "记录每一笔省下的钱和每一袋少用的尼古丁袋，以及 Bloom+ 的其他功能。"
           }
         }
       }
@@ -57658,7 +57658,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "记录无尼古丁的日子，培育花园，关注健康的恢复。"
+            "value": "记录无尼古丁天数，培育花园，关注身体变化。"
           }
         }
       }
@@ -57860,7 +57860,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "传统邦赛"
+            "value": "传统盆景"
           }
         }
       }
@@ -57961,7 +57961,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "真相倡议"
+            "value": "Truth Initiative"
           }
         }
       }
@@ -58062,7 +58062,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "再试一次"
+            "value": "重试"
           }
         }
       }
@@ -58163,7 +58163,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尝试 Bloom+"
+            "value": "试试 Bloom+"
           }
         }
       }
@@ -58264,7 +58264,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尝试 Bloom+ 免费"
+            "value": "免费试用 Bloom+"
           }
         }
       }
@@ -58365,7 +58365,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "两个快速的问题同时是新鲜的 两个都可以选择的"
+            "value": "趁现在记下两个简短问题的回答，都可以跳过。"
           }
         }
       }
@@ -58567,7 +58567,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "撤销，我没有使用尼古丁"
+            "value": "撤销，我没有失手"
           }
         }
       }
@@ -58914,7 +58914,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁%1$lld树"
+            "value": "解锁 %1$lld 棵树"
           }
         }
       }
@@ -59116,7 +59116,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁生命"
+            "value": "解锁终身使用权"
           }
         }
       }
@@ -59463,7 +59463,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁所有%1$lld树"
+            "value": "解锁全部 %1$lld 棵树"
           }
         }
       }
@@ -59564,7 +59564,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁每个邦赛物种 并随时切换,加上其余的 Bloom+."
+            "value": "解锁所有盆景品种，随时更换，还可使用 Bloom+ 的其他功能。"
           }
         }
       }
@@ -59665,7 +59665,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "与 Bloom+ 一起解锁更多 Bonsai 物种"
+            "value": "用 Bloom+ 解锁更多盆景品种"
           }
         }
       }
@@ -59766,7 +59766,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁完整的13英里石复原时间表,外加Bloom+的其余部分."
+            "value": "解锁完整的 13 个健康里程碑时间线，以及 Bloom+ 的其他功能。"
           }
         }
       }
@@ -59867,7 +59867,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁完整的工具包"
+            "value": "解锁全部工具"
           }
         }
       }
@@ -59968,7 +59968,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解开与 Bloom+ 的关联"
+            "value": "解锁 Bloom+ 的更多功能"
           }
         }
       }
@@ -60069,7 +60069,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "与 Bloom+ 解锁"
+            "value": "用 Bloom+ 解锁"
           }
         }
       }
@@ -60170,7 +60170,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每年最高%1$@"
+            "value": "每年最高 %1$@"
           }
         }
       }
@@ -60467,7 +60467,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "小心你的积蓄"
+            "value": "看着省下的钱一点点累积。"
           }
         }
       }
@@ -60817,7 +60817,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welcome back. You haven't checked in for %1$lld days. Still going strong?"
+                  "value": "欢迎回来。你已有 %1$lld 天没有打卡了。还在坚持吗？"
                 }
               }
             }
@@ -60921,7 +60921,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我期待这周做什么?"
+            "value": "这周我期待什么？"
           }
         }
       }
@@ -61022,7 +61022,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我今天做了什么,我的未来会感谢我?"
+            "value": "今天我做了什么，让未来的自己会感谢我？"
           }
         }
       }
@@ -61123,7 +61123,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我的身体今天感谢我什么?"
+            "value": "今天我做了什么，让身体受益？"
           }
         }
       }
@@ -61325,7 +61325,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "是什么引发的?"
+            "value": "是什么引发的？"
           }
         }
       }
@@ -61426,7 +61426,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天出现了什么触发因素,我是如何回应的?"
+            "value": "今天出现了哪些诱因？我当时如何应对？"
           }
         }
       }
@@ -61527,7 +61527,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "发生什么事了?"
+            "value": "当时发生了什么？"
           }
         }
       }
@@ -61628,7 +61628,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "\"重置\"会花我多少时间?"
+            "value": "如果重置，我会失去多少天和多少钱？"
           }
         }
       }
@@ -61729,7 +61729,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你留着的"
+            "value": "你保住了什么"
           }
         }
       }
@@ -61830,7 +61830,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自从我戒烟以来,什么关系在改善?"
+            "value": "戒掉尼古丁后，我和谁的关系有所改善？"
           }
         }
       }
@@ -61931,7 +61931,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天怎么样,我怎么保持这个势头?"
+            "value": "今天哪些事情进展顺利？我怎样保持势头？"
           }
         }
       }
@@ -62032,7 +62032,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "接下来我要建立的健康习惯是什么?"
+            "value": "接下来我想培养哪一种健康习惯？"
           }
         }
       }
@@ -62133,7 +62133,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天我感激的一件事是什么?"
+            "value": "今天有什么事让我心怀感激？"
           }
         }
       }
@@ -62234,7 +62234,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "何时"
+            "value": "时间"
           }
         }
       }
@@ -62335,7 +62335,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的无尼古丁之行什么时候开始的?"
+            "value": "你从什么时候开始无尼古丁生活？"
           }
         }
       }
@@ -62436,7 +62436,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "当他们被击中,什么触发他们。"
+            "value": "它们何时出现，是什么引发的。"
           }
         }
       }
@@ -62638,7 +62638,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "今天我哪里感觉最强?"
+            "value": "今天我在哪件事上最有底气？"
           }
         }
       }
@@ -62739,7 +62739,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "我从哪里注意到渴望的藏?"
+            "value": "我会在什么情况下特别想用尼古丁？"
           }
         }
       }
@@ -62840,7 +62840,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "谁今天支持我,哪怕是一点点?"
+            "value": "今天谁给过我支持，哪怕只是一点点？"
           }
         }
       }
@@ -62941,7 +62941,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "风吹起"
+            "value": "迎风"
           }
         }
       }
@@ -63042,7 +63042,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "风吹出邦赛"
+            "value": "迎风式盆景"
           }
         }
       }
@@ -63244,7 +63244,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最后一次使用尼古丁袋后的几小时内，尼古丁带来的短暂升高会减弱，心率和血压开始回落至个人基线。"
+            "value": "最后一次使用尼古丁袋后几小时内，尼古丁带来的短暂升高会减退，心率和血压开始回落至个人基线。"
           }
         }
       }
@@ -63345,7 +63345,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "大约一天后，大部分尼古丁已离开身体。可替宁的代谢和排出时间更长，接下来几天还会继续排出。"
+            "value": "大约一天后，大部分尼古丁已离开身体。代谢产物可替宁在体内停留更久，接下来几天还会继续代谢。"
           }
         }
       }
@@ -63547,7 +63547,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "写入条目"
+            "value": "写日记"
           }
         }
       }
@@ -63648,7 +63648,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "写下冲动出现时你的感受。"
+            "value": "把渴求时的感受写下来。"
           }
         }
       }
@@ -63743,7 +63743,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "累计已节省"
+            "value": "目前已省下"
           }
         }
       }
@@ -63844,7 +63844,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的钱,凯普"
+            "value": "留在你口袋里的钱"
           }
         }
       }
@@ -63945,7 +63945,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的储蓄"
+            "value": "你的省钱金额"
           }
         }
       }
@@ -64046,7 +64046,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "年份%1$lld%2$@"
+            "value": "第 %1$lld 年 · %2$@"
           }
         }
       }
@@ -64147,7 +64147,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "第%1$lld年 · 第%2$lld天"
+            "value": "第 %1$lld 年 · 第 %2$lld 天"
           }
         }
       }
@@ -64349,7 +64349,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每年"
+            "value": "年度"
           }
         }
       }
@@ -64450,7 +64450,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你现在不用再做别的事了 待在这里呼吸"
+            "value": "你现在不必做别的，只要留在这里，慢慢呼吸。"
           }
         }
       }
@@ -64551,7 +64551,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你留着"
+            "value": "你能省下"
           }
         }
       }
@@ -65026,7 +65026,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每年可省下%1$@，不用花在%2$@上。免费试用 Bloom+ %#@n@。"
+            "value": "每年有 %1$@ 留在你口袋里，不再花在%2$@上。免费试用 Bloom+ %#@n@。"
           },
           "substitutions": {
             "n": {
@@ -65143,7 +65143,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "每年可省下%1$@。Bloom+ 价格为%2$@ %3$@。"
+            "value": "每年有 %1$@ 留在你口袋里。Bloom+ 价格为 %2$@ %3$@。"
           }
         }
       }
@@ -65493,7 +65493,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "你已经挺过了 %1$lld 次冲动。"
+                  "value": "你已挺过 %1$lld 次渴求。"
                 }
               }
             }
@@ -65597,7 +65597,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你已经挺过了一次冲动。"
+            "value": "你已挺过一次渴求。"
           }
         }
       }
@@ -65698,7 +65698,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你坚持了%1$@。"
+            "value": "你坚持了 %1$@。"
           }
         }
       }
@@ -65799,7 +65799,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你会保留日记、日历、渴望模式和树。你一年前的投影、完整的健康时间表、日记和其他物种都保持锁定。"
+            "value": "你仍可使用天数计数、日历、渴求模式和盆景。年度预测、完整健康时间线、日记及其他盆景品种仍处于锁定状态。"
           }
         }
       }
@@ -66149,7 +66149,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "You're %1$lld days in. Log today and water your bonsai."
+                  "value": "你已坚持 %1$lld 天。记录今天，给盆景浇水。"
                 }
               }
             }
@@ -66253,7 +66253,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "到目前为止，你已省下%1$@。"
+            "value": "目前已省下 %1$@"
           }
         }
       }
@@ -66348,7 +66348,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "坚持无尼古丁生活，你已省下%1$@。Bloom+ 助你继续前进。"
+            "value": "坚持无尼古丁生活期间，你已省下 %1$@。用支持你保持进展的工具，让成果继续累积。"
           }
         }
       }
@@ -66449,7 +66449,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "年轻的邦赛"
+            "value": "年轻盆景"
           }
         }
       }
@@ -66550,7 +66550,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "年轻的邦赛阶段"
+            "value": "幼树阶段"
           }
         }
       }
@@ -66651,7 +66651,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的 {%1$@} 模式"
+            "value": "你的%1$@规律"
           }
         }
       }
@@ -66752,7 +66752,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的 Bloom+ 试用期即将结束"
+            "value": "你的 Bloom+ 试用即将结束"
           }
         }
       }
@@ -66853,7 +66853,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的树"
+            "value": "你的树"
           }
         }
       }
@@ -66954,7 +66954,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的邦赛已经成熟成一个满满的花冠了"
+            "value": "你的盆景已长成枝叶繁茂的树冠。"
           }
         }
       }
@@ -67055,7 +67055,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的邦赛正在灌入一棵年轻的树"
+            "value": "你的盆景正长成一棵小树。"
           }
         }
       }
@@ -67156,7 +67156,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你在%1$@最容易出现冲动。"
+            "value": "你最常在%1$@感到渴求。"
           }
         }
       }
@@ -67358,7 +67358,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的计数器又开动了 你记录的所有东西都还在数"
+            "value": "计数会重新开始，但你记录过的一切都会保留。"
           }
         }
       }
@@ -67708,7 +67708,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "计数器重新开始。树木保留了%1$lld天的生长。"
+                  "value": "你的计数重新开始，树保留了 %1$lld 天的成长进度。"
                 }
               }
             }
@@ -67812,7 +67812,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "渴求通常会在约 %1$@ 后过去。"
+            "value": "你的渴求通常会在约 %1$@ 后过去。"
           }
         }
       }
@@ -67913,7 +67913,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的数据保留在这个设备上"
+            "value": "你的数据保留在此设备上"
           }
         }
       }
@@ -68014,7 +68014,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "失手后，天数计数会重新开始。树会保留部分成长，日历记录和已完成的树也会保留。最长连续天数会按修正后的日期更新。"
+            "value": "失手后，天数计数会重新开始。树会保留部分成长，日历记录和已完成的树也会保留。最长连续天数会根据更正后的日期更新。"
           }
         }
       }
@@ -68115,7 +68115,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的日间计数器将在零点重新开始。 您的历史被保存 。"
+            "value": "失手后，天数会从 0 重新计算。你的历史记录会保留。"
           }
         }
       }
@@ -68216,7 +68216,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "天数计数器、应对尼古丁渴求的支持、小组件和 Apple Watch 应用始终免费。"
+            "value": "天数计数、渴求模式、小组件和 Apple Watch 版始终免费"
           }
         }
       }
@@ -68317,7 +68317,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的条目"
+            "value": "你的日记"
           }
         }
       }
@@ -68418,7 +68418,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "汝初发芽已破出土."
+            "value": "第一株新芽破土而出。"
           }
         }
       }
@@ -68519,7 +68519,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的花园、日记、健康时间线和储蓄。所有帮助你保持无尼古丁生活的功能。"
+            "value": "花园、日记、健康时间线和省钱记录。所有帮助你保持无尼古丁生活的功能。"
           }
         }
       }
@@ -68620,7 +68620,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的上一个更改无法保存在此设备上, 因此关闭应用程序后可能会丢失。 这通常是因为存储已满。 请腾出一些空格, 然后检查并再次尝试 。"
+            "value": "无法将你刚才的更改保存在此设备上，关闭应用后可能会丢失。通常是因为存储空间不足。请腾出一些空间，检查后重试。"
           }
         }
       }
@@ -68721,7 +68721,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "情绪往往会在失手前变低。"
+            "value": "失手前，你的情绪往往会有所低落"
           }
         }
       }
@@ -68822,7 +68822,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "失手前两天，你的心情比其他记录的日子更低落。及早留意这一规律可能会有帮助。"
+            "value": "失手前两天，你的情绪比其他有记录的日子更低落。及早留意这一规律可能会有帮助。"
           }
         }
       }
@@ -68917,7 +68917,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "无尼古丁的日子积少成多。用部分积蓄换取能支持你继续前进的工具。"
+            "value": "无尼古丁的日子不断累积。你可以用部分省下的钱，购买支持你继续前进的工具。"
           }
         }
       }
@@ -69018,7 +69018,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的过去记录"
+            "value": "过去的连续记录会保留"
           }
         }
       }
@@ -69321,7 +69321,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的进步"
+            "value": "你的进度"
           }
         }
       }
@@ -69422,7 +69422,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "您的购买正在等待批准。 Bloom+ 一旦确认即可自动解锁, 您可以同时继续使用免费版本 。"
+            "value": "购买正在等待批准。确认后，Bloom+ 会自动解锁；在此期间，你仍可使用免费版。"
           }
         }
       }
@@ -69523,7 +69523,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的树会加入树林"
+            "value": "你的树将加入树林"
           }
         }
       }
@@ -69873,7 +69873,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "树木将保留%1$lld天的生长"
+                  "value": "你的树将保留 %1$lld 天的成长进度"
                 }
               }
             }
@@ -70226,7 +70226,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "树木保留了%1$lld天的生长。现在开始第一天。"
+                  "value": "你的树保留了 %1$lld 天的成长。第一天从现在开始。"
                 }
               }
             }
@@ -70330,7 +70330,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你平常可以这样"
+            "value": "你常买的那罐尼古丁袋"
           }
         }
       }
@@ -70532,7 +70532,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "一个尼古丁袋"
+            "value": "一袋尼古丁"
           }
         }
       }
@@ -70633,7 +70633,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+一年"
+            "value": "一年的 Bloom+"
           }
         }
       }
@@ -70734,7 +70734,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在%1$@时"
+            "value": "%1$@ 时"
           }
         }
       }
@@ -71138,7 +71138,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "发现治疗。"
+            "value": "findtreatment.gov"
           }
         }
       }
@@ -71239,7 +71239,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "全部功能"
+            "value": "Bloom+ 全部功能"
           }
         }
       }
@@ -71340,7 +71340,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在%1$@中输入"
+            "value": "%1$@ 后"
           }
         }
       }
@@ -71687,7 +71687,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在%1$lld天内"
+            "value": "%1$lld 天后"
           }
         }
       }
@@ -72091,7 +72091,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "尼古丁袋/天"
+            "value": "袋/天"
           }
         }
       }
@@ -72192,7 +72192,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "挺过一次渴求"
+            "value": "挺过的渴求"
           }
         }
       }
@@ -72394,7 +72394,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "• 妇女"
+            "value": "·"
           }
         }
       }
@@ -72495,7 +72495,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的花园正在生长。如果今天没有摄入尼古丁，就记录这一天。"
+            "value": "你的花园正在生长。如果今天没有摄入尼古丁，就记录下来。"
           }
         }
       }
@@ -72596,7 +72596,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "你的树加入树林，一株新树苗开始生长。"
+            "value": "你的树将加入树林，一株新树苗开始生长。"
           }
         }
       }
@@ -72946,7 +72946,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "你的树林现在有%1$lld棵树。一株新树苗开始生长。"
+                  "value": "你的树林现在有 %1$lld 棵树。新树苗即将开始生长。"
                 }
               }
             }
