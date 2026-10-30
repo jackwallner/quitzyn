@@ -13,7 +13,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ %2$@"
           }
         },
         "ru": {
@@ -2702,7 +2702,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kostet etwa so viel wie %2$lld½ Tagesvorräte an Nikotinbeuteln."
+            "value": "%1$@ kostet etwa so viel wie Nikotinbeutel für %2$lld½ Tage."
           }
         },
         "ru": {
@@ -3282,7 +3282,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kostet etwa so viel wie eineinhalb Tagesvorräte an Nikotinbeuteln."
+            "value": "%1$@ kostet etwa so viel wie Nikotinbeutel für anderthalb Tage."
           }
         },
         "ru": {
@@ -3377,7 +3377,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kostet etwa so viel wie ein Tagesvorrat an Nikotinbeuteln."
+            "value": "%1$@ kostet etwa so viel wie Nikotinbeutel für einen Tag."
           }
         },
         "ru": {
@@ -3472,7 +3472,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kostet weniger als einen Tagesvorrat an Nikotinbeuteln."
+            "value": "%1$@ kostet weniger als Nikotinbeutel für einen Tag."
           }
         },
         "ru": {
@@ -3775,7 +3775,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du sparst %1$@ Nikotinbeutel. Dieses Nikotin muss dein Körper nicht verarbeiten."
+            "value": "Du vermeidest %1$@ Nikotinbeutel. Dieses Nikotin muss dein Körper nicht verarbeiten."
           }
         },
         "ru": {
@@ -4179,7 +4179,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Einmalkauf. Dauerhafter Zugriff, kein Abo."
+            "value": "%@. Einmalkauf. Lebenslanger Zugang, kein Abo."
           }
         },
         "ru": {
@@ -4381,7 +4381,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ bisher ausgereift"
+            "value": "%1$lld %2$@ bisher überstanden"
           }
         },
         "ru": {
@@ -6250,13 +6250,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Tag Bloom+ gratis"
+                  "value": "%1$lld Tag Bloom+ gratis"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Tage Bloom+ gratis"
+                  "value": "%1$lld Tage Bloom+ gratis"
                 }
               }
             }
@@ -7404,13 +7404,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Baum gewachsen"
+                  "value": "%1$lld gewachsener Baum"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Bäume gewachsen"
+                  "value": "%1$lld gewachsene Bäume"
                 }
               }
             }
@@ -7757,13 +7757,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Baum in deinem Hain gewachsen"
+                  "value": "Im Hain gewachsen: %1$lld Baum"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld Bäume in deinem Hain gewachsen"
+                  "value": "Im Hain gewachsen: %1$lld Bäume"
                 }
               }
             }
@@ -8110,13 +8110,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tag kostenlos testen"
+                  "value": "Kostenlose Testphase für %1$lld Tag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tage kostenlos testen"
+                  "value": "Kostenlose Testphase für %1$lld Tage"
                 }
               }
             }
@@ -8463,13 +8463,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tag gratis im Monats- und Jahresabo."
+                  "value": "Kostenlose Testphase für %1$lld Tag im Monats- und Jahresabo."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tage gratis im Monats- und Jahresabo."
+                  "value": "Kostenlose Testphase für %1$lld Tage im Monats- und Jahresabo."
                 }
               }
             }
@@ -8816,13 +8816,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tag gratis im Monatsabo."
+                  "value": "Kostenlose Testphase für %1$lld Tag im Monatsabo."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tage gratis im Monatsabo."
+                  "value": "Kostenlose Testphase für %1$lld Tage im Monatsabo."
                 }
               }
             }
@@ -9169,13 +9169,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tag gratis im Jahresabo."
+                  "value": "Kostenlose Testphase für %1$lld Tag im Jahresabo."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Tage gratis im Jahresabo."
+                  "value": "Kostenlose Testphase für %1$lld Tage im Jahresabo."
                 }
               }
             }
@@ -9510,13 +9510,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Tag, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Tag, danach %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Tage, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Tage, danach %2$@."
                 }
               }
             }
@@ -9863,13 +9863,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Monat gratis"
+                  "value": "Kostenlose Testphase für %1$lld Monat"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Monate gratis"
+                  "value": "Kostenlose Testphase für %1$lld Monate"
                 }
               }
             }
@@ -10204,13 +10204,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Monat, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Monat, danach %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Monate, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Monate, danach %2$@."
                 }
               }
             }
@@ -10557,13 +10557,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Jahr gratis"
+                  "value": "Kostenlose Testphase für %1$lld Jahr"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld Jahre gratis"
+                  "value": "Kostenlose Testphase für %1$lld Jahre"
                 }
               }
             }
@@ -10898,13 +10898,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Jahr, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Jahr, danach %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis für %1$lld Jahre, danach %2$@."
+                  "value": "Kostenlos testen: %1$lld Jahre, danach %2$@."
                 }
               }
             }
@@ -11257,7 +11257,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld Vorteilen"
+                  "value": "/ %lld Vorteile"
                 }
               }
             }
@@ -11785,7 +11785,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 Check-ins am Stück."
+            "value": "100 Check-ins in Folge."
           }
         },
         "ru": {
@@ -11886,7 +11886,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 Nikotin-Wiederherstellung Meilensteine mit Quellen."
+            "value": "13 mit Quellen belegte Meilensteine zur Erholung nach dem Nikotinstopp."
           }
         },
         "ru": {
@@ -11987,7 +11987,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 Check-ins am Stück."
+            "value": "30 Check-ins in Folge."
           }
         },
         "ru": {
@@ -13906,7 +13906,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jugendstadium"
+            "value": "Jungbaumstufe"
           }
         },
         "ru": {
@@ -14209,7 +14209,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nach mehreren Monaten ohne den Nikotinzyklus aus Anstieg und Abfall empfinden viele Menschen ihren Grundstress als niedriger und finden leichter zur Ruhe."
+            "value": "Nach mehreren Monaten ohne das ständige Auf und Ab durch Nikotin empfinden viele Menschen weniger Grundstress und finden leichter zur Ruhe."
           }
         },
         "ru": {
@@ -14310,7 +14310,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nach zwei Tagen beginnen sich durch Nikotin beeinträchtigte Nervenenden zu erholen. Viele Menschen nehmen Essen intensiver wahr und Gerüche deutlicher."
+            "value": "Nach zwei Tagen beginnen Nervenenden, die durch Nikotin weniger empfindlich geworden sind, nachzuwachsen. Viele Menschen nehmen Essen intensiver wahr und Gerüche deutlicher."
           }
         },
         "ru": {
@@ -14714,7 +14714,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mitteilungen in Einstellungen erlauben"
+            "value": "Mitteilungen in den Einstellungen erlauben"
           }
         },
         "ru": {
@@ -14916,7 +14916,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amerikanische Krebsgesellschaft"
+            "value": "American Cancer Society"
           }
         },
         "ru": {
@@ -15118,7 +15118,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eine immergrüne Kiefer mit wolkenartigen Nadelstufen und knorrigem, verwittertem Stamm."
+            "value": "Eine immergrüne Kiefer mit etagenweise angeordneten, wolkenförmigen Nadelpolstern und einem knorrigen, verwitterten Stamm."
           }
         },
         "ru": {
@@ -15421,7 +15421,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Altes Stadium"
+            "value": "Uralte Stufe"
           }
         },
         "ru": {
@@ -16229,7 +16229,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "BESTE ANGABEN"
+            "value": "TOP-ANGEBOT"
           }
         },
         "ru": {
@@ -16532,7 +16532,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Beruht auf den Verlangen, die du überstanden hast, nicht auf einem Durchschnitt aller."
+            "value": "Basiert auf den Sitzungen, die du durchgestanden hast, nicht auf einem allgemeinen Durchschnitt."
           }
         },
         "ru": {
@@ -17643,7 +17643,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ auf Lebenszeit"
+            "value": "Bloom+ lebenslang"
           }
         },
         "ru": {
@@ -17744,7 +17744,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ pläne sind vorübergehend nicht verfügbar sie können es versuchen oder kostenlos fortfahren."
+            "value": "Bloom+-Pläne sind vorübergehend nicht verfügbar. Versuch es noch einmal oder nutze die kostenlose Version."
           }
         },
         "ru": {
@@ -17845,7 +17845,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ schaltet jede Art frei, damit du deinen Baum wechseln kannst, wann du willst. Deine Serie wächst bei jedem."
+            "value": "Bloom+ schaltet jede Baumart frei, damit du deinen Baum jederzeit wechseln kannst. Deine Serie wächst unabhängig von deiner Wahl weiter."
           }
         },
         "ru": {
@@ -18855,7 +18855,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nach etwa einem Monat lassen Angst und Reizbarkeit der frühen Entzugsphase meist nach, während sich die Dopamin-Signalübertragung im Gehirn neu ausgleicht. Die Erfahrungen sind unterschiedlich."
+            "value": "Nach etwa einem Monat lassen Angst und Reizbarkeit der frühen Entzugsphase meist nach, während sich die Dopaminregulation im Gehirn neu einpendelt. Die Erfahrungen sind unterschiedlich."
           }
         },
         "ru": {
@@ -19057,7 +19057,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nach etwa zwei Monaten ohne wiederholte nikotinbedingte Blutdruckspitzen beobachten viele Menschen niedrigere Werte bei Blutdruck und Herzfrequenz in Ruhe. Die Wirkung ist unterschiedlich."
+            "value": "Nach etwa zwei Monaten ohne die wiederholten Blutdruckspitzen durch Nikotin sinken bei vielen Menschen Blutdruck und Puls in Ruhe. Das kann unterschiedlich ausfallen."
           }
         },
         "ru": {
@@ -20168,7 +20168,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heute einchecken"
+            "value": "Mach den heutigen Check-in"
           }
         },
         "ru": {
@@ -20269,7 +20269,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Erfasse einen Tag, um deine Woche zu beginnen."
+            "value": "Mach einen Check-in, um deine Woche zu beginnen."
           }
         },
         "ru": {
@@ -20471,7 +20471,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tagesprotokoll"
+            "value": "Check-in"
           }
         },
         "ru": {
@@ -21279,7 +21279,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schaffe deine erste Woche."
+            "value": "Schließe deine erste Woche ab."
           }
         },
         "ru": {
@@ -21784,7 +21784,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weiter frei"
+            "value": "Gratis fortfahren"
           }
         },
         "ru": {
@@ -22693,7 +22693,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zählt für deinen Weg. Noch nicht eingecheckt."
+            "value": "Dein Tag zählt bereits. Du hast ihn noch nicht erfasst."
           }
         },
         "ru": {
@@ -22794,7 +22794,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verlangen erreicht den Höhepunkt und lässt nach"
+            "value": "Verlauf des Verlangens"
           }
         },
         "ru": {
@@ -23501,7 +23501,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Täglicher Check-in"
+            "value": "Tagescheck-in"
           }
         },
         "ru": {
@@ -23602,7 +23602,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tägliches Einchecken 7 Tage am Stück."
+            "value": "7 Tage in Folge jeden Tag eingecheckt."
           }
         },
         "ru": {
@@ -23804,7 +23804,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tägliche Tagebuch-Impulse, wenn du sie am meisten brauchst, plus alles Weitere von Bloom+."
+            "value": "Tägliche Tagebuchimpulse, wenn du sie am meisten brauchst, und alle weiteren Bloom+-Funktionen."
           }
         },
         "ru": {
@@ -25622,7 +25622,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alkohol"
+            "value": "Trinken"
           }
         },
         "ru": {
@@ -26834,7 +26834,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jedes Mal, wenn du einem Verlangen standhältst, lernt diese Seite, wann es auftritt, wodurch es ausgelöst wird und wie lange es anhält."
+            "value": "Mit jedem Verlangen, das du überstehst, zeigt dir diese Seite, wann es auftritt, wodurch es ausgelöst wird und wie lange es anhält."
           }
         },
         "ru": {
@@ -27692,7 +27692,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Großartig"
+            "value": "Ausgezeichnet"
           }
         },
         "ru": {
@@ -27793,7 +27793,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kostenlose Testphase"
+            "value": "GRATISTEST"
           }
         },
         "ru": {
@@ -28096,7 +28096,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Behandlung finden"
+            "value": "Hilfe finden"
           }
         },
         "ru": {
@@ -28500,7 +28500,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kostenlose Testphase"
+            "value": "Gratis-Test"
           }
         },
         "ru": {
@@ -28803,7 +28803,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kostenlose, vertrauliche Hilfe gibt es jederzeit. Sich zu melden ist Stärke, kein Rückschritt."
+            "value": "Kostenlose, vertrauliche Hilfe gibt es jederzeit. Hilfe anzunehmen zeigt Stärke und ist kein Rückschritt."
           }
         },
         "ru": {
@@ -28904,7 +28904,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volle Funktionen für Garten, Tagebuch, Gesundheit und Ersparnisse während der Testphase."
+            "value": "Voller Zugriff auf Garten, Tagebuch, Gesundheitsverlauf und Ersparnisse. Bis zum Ende deiner Testphase kostenlos."
           }
         },
         "ru": {
@@ -29005,7 +29005,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ganzer Gesundheitsverlauf"
+            "value": "Vollständiger Gesundheitsverlauf"
           }
         },
         "ru": {
@@ -29914,7 +29914,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lass jede Art wachsen."
+            "value": "Lass jede Baumart wachsen."
           }
         },
         "ru": {
@@ -30217,7 +30217,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zahnfleisch beginnt sich zu erholen"
+            "value": "Zahnfleisch erholt sich"
           }
         },
         "ru": {
@@ -31833,7 +31833,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ich verpflichte mich, besser zu werden"
+            "value": "Ich nehme mir vor, es besser zu machen"
           }
         },
         "ru": {
@@ -32136,7 +32136,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ich verpflichte mich"
+            "value": "Ich ziehe das durch"
           }
         },
         "ru": {
@@ -32237,7 +32237,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ich habe gerade Suchtdruck."
+            "value": "Ich verspüre gerade Verlangen"
           }
         },
         "ru": {
@@ -32742,7 +32742,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "In einem Jahr, das ist"
+            "value": "In einem Jahr sind das"
           }
         },
         "ru": {
@@ -33146,7 +33146,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Es ist schon kleiner als vor einer Minute, auch wenn es sich nicht vorbei anfühlt."
+            "value": "Das Verlangen ist schon schwächer als vor einer Minute, auch wenn es sich noch nicht so anfühlt."
           }
         },
         "ru": {
@@ -33247,7 +33247,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Das ist okay. Ein Ausrutscher gehört zu vielen Wegen, und ihn einzutragen hält den Rest deiner Aufzeichnung ehrlich."
+            "value": "Das ist in Ordnung. Viele erleben auf ihrem Weg Ausrutscher. Wenn du ihn einträgst, bleibt dein Verlauf ehrlich."
           }
         },
         "ru": {
@@ -33550,7 +33550,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Journal privat durch die harten Tage"
+            "value": "Führe auch an schweren Tagen in Ruhe Tagebuch"
           }
         },
         "ru": {
@@ -33853,7 +33853,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Behalte Garten, Tagebuch und Ersparnisse oder kündige jederzeit vor der Verlängerung."
+            "value": "Behalte deinen ganzen Garten, dein Tagebuch und deine Ersparnisse oder kündige jederzeit vor der Verlängerung."
           }
         },
         "ru": {
@@ -34358,7 +34358,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Legendäre Bühne"
+            "value": "Legendäre Stufe"
           }
         },
         "ru": {
@@ -34459,7 +34459,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dauerhaft"
+            "value": "Lebenslang"
           }
         },
         "ru": {
@@ -34560,7 +34560,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lebensdauer: %1$@"
+            "value": "Insgesamt: %1$@"
           }
         },
         "ru": {
@@ -34863,7 +34863,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gesperrt. Tippe für mehr zu Bloom+"
+            "value": "Gesperrt. Tippe auf die Zeile, um mehr über Bloom+ zu erfahren."
           }
         },
         "ru": {
@@ -35772,7 +35772,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Protokolliert nikotinfrei"
+            "value": "Nikotinfrei eingetragen"
           }
         },
         "ru": {
@@ -36580,7 +36580,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reifes Stadium"
+            "value": "Ausgewachsene Stufe"
           }
         },
         "ru": {
@@ -37590,7 +37590,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Die meisten erfassten Verlangen fallen in dieses Zeitfenster: %1$lld von %2$lld."
+            "value": "Die meisten deiner erfassten Verlangen treten in diesem Zeitfenster auf: %1$lld von %2$lld."
           }
         },
         "ru": {
@@ -38196,7 +38196,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Denk an eine Situation, in der du früher zu einem Nikotinbeutel gegriffen hättest. Wie bist du damit umgegangen?"
+            "value": "In welcher Situation hätte ich früher zu einem Nikotinbeutel gegriffen? Wie bin ich damit umgegangen?"
           }
         },
         "ru": {
@@ -39206,7 +39206,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotinspiegel sinkt"
+            "value": "Nikotinspiegel fällt"
           }
         },
         "ru": {
@@ -39408,7 +39408,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin nie absorbiert"
+            "value": "Nikotin nicht aufgenommen"
           }
         },
         "ru": {
@@ -39610,7 +39610,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Für diese Apple-ID wurde kein aktiver Bloom+ Kauf gefunden."
+            "value": "Für diese Apple-ID wurde kein aktiver Bloom+-Kauf gefunden."
           }
         },
         "ru": {
@@ -39711,7 +39711,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Für diese Apple-ID wurde kein aktiver Bloom+ Kauf gefunden."
+            "value": "Für diese Apple-ID wurde kein aktiver Bloom+-Kauf gefunden."
           }
         },
         "ru": {
@@ -39913,7 +39913,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noch keine Einträge. Dein erster ist kostenlos. Tippe auf den Stift."
+            "value": "Noch keine Einträge. Dein erster Eintrag ist kostenlos. Tippe auf den Stift, um ihn zu schreiben."
           }
         },
         "ru": {
@@ -40412,7 +40412,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Für Snus gespart"
+            "value": "Nicht für Nikotinbeutel"
           }
         },
         "ru": {
@@ -40614,7 +40614,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noch unsicher. Sitzung schließen"
+            "value": "Noch unsicher. Sitzung beenden"
           }
         },
         "ru": {
@@ -40917,7 +40917,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nimm es wahr, ohne mit ihm zu streiten. Du willst nicht gewinnen, du wartest es ab."
+            "value": "Nimm das Verlangen wahr, ohne dagegen anzukämpfen. Du musst nichts gewinnen, sondern kannst abwarten."
           }
         },
         "ru": {
@@ -41018,7 +41018,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Benachrichtigungen sind für Quit Zyn deaktiviert, so dass die Erinnerung nicht zugestellt werden kann."
+            "value": "Mitteilungen für Quit Zyn sind ausgeschaltet, daher kann die Erinnerung nicht zugestellt werden. Tippe oben, um sie in den Einstellungen zu aktivieren."
           }
         },
         "ru": {
@@ -41321,7 +41321,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Auf Kurs zu sparen"
+            "value": "Erwartete Ersparnis"
           }
         },
         "ru": {
@@ -42028,7 +42028,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zusätzlich %1$@ Nikotinbeutel, die du nicht nutzt. So viel Nikotin muss dein Körper nicht verarbeiten."
+            "value": "Außerdem vermeidest du %1$@ Nikotinbeutel. So muss dein Körper dieses Nikotin nicht verarbeiten."
           }
         },
         "ru": {
@@ -43038,7 +43038,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sieh die %@, die du im nächsten Jahr behältst"
+            "value": "So viel %1$@ könntest du im nächsten Jahr behalten."
           }
         },
         "ru": {
@@ -43139,7 +43139,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Das Jahr voraus sehen, nicht nur die Tage zurück"
+            "value": "Blicke aufs kommende Jahr, nicht nur auf die vergangenen Tage."
           }
         },
         "ru": {
@@ -43442,7 +43442,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puls und Blutdruck beruhigen sich."
+            "value": "Die Belastung für Puls und Blutdruck nimmt ab."
           }
         },
         "ru": {
@@ -45360,7 +45360,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Raffinierte Stufe"
+            "value": "Ausgeformte Stufe"
           }
         },
         "ru": {
@@ -46673,7 +46673,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Atme ein paar Minuten ruhig."
+            "value": "Überstehe das Verlangen mit ein paar Minuten Atemübungen"
           }
         },
         "ru": {
@@ -47472,13 +47472,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Über %1$lld nikotinfreien Tag gespart."
+                  "value": "Über %1$lld nikotinfreien Tag hinweg gespart."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Über %1$lld nikotinfreie Tage gespart."
+                  "value": "Über %1$lld nikotinfreie Tage hinweg gespart."
                 }
               }
             }
@@ -48113,7 +48113,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sieh dir an, wann deine %1$@ auftreten, was sie auslöst und wie lange sie anhalten. Das und mehr gibt es in Bloom+."
+            "value": "Sieh, wann deine %1$@ auftreten, was sie auslöst und wie lange sie wirklich dauern, dazu alle weiteren Bloom+-Funktionen."
           }
         },
         "ru": {
@@ -48517,7 +48517,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Setzphase"
+            "value": "Sämlingsphase"
           }
         },
         "ru": {
@@ -51244,7 +51244,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sprossenstufe"
+            "value": "Keimlingsstufe"
           }
         },
         "ru": {
@@ -53686,7 +53686,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Das Geld bleibt bei dir, statt in Nikotinbeutel zu fließen. Bloom+ hält dich auf Kurs."
+            "value": "Das Geld bleibt bei dir, statt in Nikotinbeutel zu fließen. Bloom+ hilft dir, deine Serie im Blick zu behalten."
           }
         },
         "ru": {
@@ -53888,7 +53888,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deine Serie zeigt deinen aktuellen Lauf. Lebenszeit zählt alle nikotinfreien Tage, die du je eingetragen hast. So bleibt dein Fortschritt auch nach einem Neustart erhalten."
+            "value": "Deine Serie zählt deinen aktuellen Lauf. Die Gesamtzahl umfasst alle nikotinfreien Tage, die du je eingetragen hast. So bleibt dein früherer Fortschritt nach einem Neustart erhalten."
           }
         },
         "ru": {
@@ -54191,7 +54191,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stressresilienz"
+            "value": "Stressfestigkeit"
           }
         },
         "ru": {
@@ -54494,7 +54494,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Arten jederzeit tauschen · deine Serie wächst weiter"
+            "value": "Art jederzeit wechseln · deine Serie wächst weiter"
           }
         },
         "ru": {
@@ -54696,7 +54696,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jederzeit wechselbar. Tage und Wachstum gehen auf jeden Baum über, den du wählst."
+            "value": "Du kannst jederzeit wechseln. Deine Tage und dein Wachstum gehen auf den gewählten Baum über."
           }
         },
         "ru": {
@@ -54797,7 +54797,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai-Art wechseln, aktuell %@"
+            "value": "Bonsai-Art wechseln, aktuell: %@"
           }
         },
         "ru": {
@@ -55504,7 +55504,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Das ist über %1$@ / Tag"
+            "value": "Das sind etwa %1$@ pro Tag"
           }
         },
         "ru": {
@@ -55605,7 +55605,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Der Kaskadenstil ahmt einen Baum an einer Klippe nach, der nach unten stürzt."
+            "value": "Der Kaskadenstil zeigt einen Baum, der an einer Klippe wächst und nach unten hängt."
           }
         },
         "ru": {
@@ -56463,7 +56463,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Drei Monate stark."
+            "value": "Drei Monate geschafft."
           }
         },
         "ru": {
@@ -57473,7 +57473,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verfolge jeden gesparten Euro und jeden vermiedenen Nikotinbeutel, plus die weiteren Bloom+ Funktionen."
+            "value": "Verfolge jeden gesparten Euro und jeden vermiedenen Nikotinbeutel, dazu alle weiteren Bloom+-Funktionen."
           }
         },
         "ru": {
@@ -57877,7 +57877,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wahrheitsinitiative"
+            "value": "Truth Initiative"
           }
         },
         "ru": {
@@ -58079,7 +58079,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teste Bloom+"
+            "value": "Bloom+ testen"
           }
         },
         "ru": {
@@ -58483,7 +58483,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rückgängig, ich hatte keinen Ausrutscher"
+            "value": "Kein Ausrutscher"
           }
         },
         "ru": {
@@ -59032,7 +59032,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dauerhaft freischalten"
+            "value": "Lebenslang freischalten"
           }
         },
         "ru": {
@@ -59148,13 +59148,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Alle %lld Bäume freischalten"
+                  "value": "%1$lld Baum freischalten"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Alle %lld Bäume freischalten"
+                  "value": "%1$lld Bäume freischalten"
                 }
               }
             }
@@ -59480,7 +59480,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schalte jede Bonsai-Art frei und wechsle, wann du willst, plus alles Weitere von Bloom+."
+            "value": "Schalte jede Bonsai-Art frei und wechsle, wann du willst, sowie alle weiteren Bloom+-Funktionen."
           }
         },
         "ru": {
@@ -59682,7 +59682,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schalte den ganzen Erholungsverlauf mit 13 Meilensteinen frei, plus alles Weitere von Bloom+."
+            "value": "Schalte den vollständigen Gesundheitsverlauf mit 13 Meilensteinen und alle weiteren Bloom+-Funktionen frei."
           }
         },
         "ru": {
@@ -59884,7 +59884,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schalte mit Bloom+ frei, was kommt"
+            "value": "Hol dir mit Bloom+, was noch kommt"
           }
         },
         "ru": {
@@ -60187,7 +60187,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pro freischalten"
+            "value": "Upgrade"
           }
         },
         "ru": {
@@ -60282,7 +60282,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dient dazu, Geld, Nikotinbeutel und Nikotin zu schätzen, die du während deiner nikotinfreien Zeit einsparst oder nicht konsumierst."
+            "value": "Diese Angaben helfen dabei, deine Ersparnisse sowie vermiedene Nikotinbeutel und Nikotinmengen zu schätzen, solange du nikotinfrei bleibst."
           }
         },
         "ru": {
@@ -60499,13 +60499,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Willkommen zurück. Du hast dich %lld Tag nicht eingetragen. Läuft es weiter gut?"
+                  "value": "Willkommen zurück. Du hast seit %1$lld Tag keinen Check-in gemacht. Geht es dir weiterhin gut?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Willkommen zurück. Du hast dich %lld Tage nicht eingetragen. Läuft es weiter gut?"
+                  "value": "Willkommen zurück. Du hast seit %1$lld Tagen keinen Check-in gemacht. Geht es dir weiterhin gut?"
                 }
               }
             }
@@ -62352,7 +62352,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wenn sie zuschlagen und was sie auslöst."
+            "value": "Wann das Verlangen aufkommt und wodurch es ausgelöst wird."
           }
         },
         "ru": {
@@ -62453,7 +62453,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wann deine %1$@ auftreten und was sie auslöst"
+            "value": "Wann deine %1$@ auftreten und wodurch sie ausgelöst werden"
           }
         },
         "ru": {
@@ -62655,7 +62655,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wo merke ich, dass sich Verlangen versteckt?"
+            "value": "In welchen Momenten taucht mein Verlangen auf?"
           }
         },
         "ru": {
@@ -65059,7 +65059,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dir bleiben jedes Jahr %@. Bloom+ kostet %2$@ %3$@."
+            "value": "Jedes Jahr bleiben dir %1$@. Bloom+ kostet %2$@ %3$@."
           }
         },
         "ru": {
@@ -65614,7 +65614,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du bist dabei geblieben für %1$@."
+            "value": "Du hast %1$@ durchgehalten."
           }
         },
         "ru": {
@@ -65715,7 +65715,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tageszähler, Kalender, Drangmodus und Bonsai bleiben kostenlos. Deine Jahresprognose, die vollständige Gesundheitstimeline, dein Tagebuch und die anderen Arten bleiben gesperrt."
+            "value": "Tageszähler, Kalender, Craving-Modus und dein Baum bleiben kostenlos. Deine Jahresprognose, der vollständige Gesundheitsverlauf, dein Tagebuch und die anderen Arten bleiben gesperrt."
           }
         },
         "ru": {
@@ -65831,13 +65831,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du bist bei Tag %lld. Trag heute ein und gieß deinen Bonsai."
+                  "value": "Du bist seit %1$lld Tag dabei. Trag den heutigen Tag ein und gieß deinen Bonsai."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du hast %lld Tage geschafft. Trag heute ein und gieß deinen Bonsai."
+                  "value": "Du bist seit %1$lld Tagen dabei. Trag den heutigen Tag ein und gieß deinen Bonsai."
                 }
               }
             }
@@ -66466,7 +66466,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Junge Bonsai Bühne"
+            "value": "Jungbaumphase"
           }
         },
         "ru": {
@@ -66567,7 +66567,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deine %1$@ -Muster"
+            "value": "Muster zu %1$@"
           }
         },
         "ru": {
@@ -67072,7 +67072,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Am meisten Verlangen hast du am %1$@."
+            "value": "Am häufigsten tritt dein Verlangen am %1$@ auf."
           }
         },
         "ru": {
@@ -67390,13 +67390,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Dein Zähler startet neu. Dein Baum hat %1$lld Wachstumstag behalten."
+                  "value": "Dein Zähler beginnt neu. Dein Baum behält %1$lld Wachstumstag."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Dein Zähler startet neu. Dein Baum hat %1$lld Wachstumstage behalten."
+                  "value": "Dein Zähler beginnt neu. Dein Baum behält %1$lld Tage seines Wachstums."
                 }
               }
             }
@@ -67930,7 +67930,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dein Tageszähler beginnt nach dem Ausrutscher neu. Dein Baum behält einen Teil seines Wachstums, Kalenderverlauf und fertige Bäume bleiben. Deine längste Serie richtet sich nach den korrigierten Daten."
+            "value": "Dein Tageszähler beginnt nach dem Ausrutscher neu. Dein Baum nimmt einen Teil seines Wachstums mit. Dein Kalenderverlauf und deine fertigen Bäume bleiben erhalten. Deine längste Serie berücksichtigt die korrigierten Daten."
           }
         },
         "ru": {
@@ -68132,7 +68132,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tageszähler, Craving-Modus, Widget und Apple-Watch-App bleiben dauerhaft kostenlos."
+            "value": "Tageszähler, Craving-Modus, Widget und Apple Watch bleiben dauerhaft kostenlos."
           }
         },
         "ru": {
@@ -68435,7 +68435,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dein Garten, dein Tagebuch, dein Gesundheitsverlauf und deine Ersparnisse. Alles, was dich dabei unterstützt, nikotinfrei zu bleiben."
+            "value": "Dein Garten, dein Tagebuch, dein Gesundheitsverlauf und deine Ersparnisse. Alles, was dich auf deinem Weg ohne Nikotin unterstützt."
           }
         },
         "ru": {
@@ -68833,7 +68833,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deine nikotinfreien Tage haben sich ausgezahlt. Nutze einen Teil deiner Ersparnis für Tools, die dich weiter unterstützen."
+            "value": "Deine nikotinfreien Tage summieren sich. Nutze einen Teil deiner Ersparnisse für Funktionen, die dich auf deinem Weg unterstützen."
           }
         },
         "ru": {
@@ -69338,7 +69338,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ entsperrt sich von selbst, sobald es bestätigt ist, und sie können die kostenlose version in der zwischenzeit weiter verwenden."
+            "value": "Dein Kauf wartet auf die Genehmigung. Bloom+ wird automatisch freigeschaltet, sobald der Kauf bestätigt ist. In der Zwischenzeit kannst du die kostenlose Version weiter nutzen."
           }
         },
         "ru": {
@@ -69908,13 +69908,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Dein Baum hat %1$lld Wachstumstag bewahrt. Jetzt beginnt Tag eins."
+                  "value": "Dein Baum behält %1$lld Wachstumstag. Jetzt beginnt Tag eins."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Dein Baum hat %1$lld Wachstumstage bewahrt. Jetzt beginnt Tag eins."
+                  "value": "Dein Baum behält %1$lld Tage seines Wachstums. Jetzt beginnt Tag eins."
                 }
               }
             }
@@ -71054,7 +71054,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Findtreatment.gov"
+            "value": "findtreatment.gov"
           }
         },
         "ru": {
@@ -71155,7 +71155,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle Funktionen"
+            "value": "Voller Zugriff auf Bloom+"
           }
         },
         "ru": {
@@ -71372,13 +71372,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "in %lld Tag"
+                  "value": "in %1$lld Tag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "in %lld Tagen"
+                  "value": "in %1$lld Tagen"
                 }
               }
             }
@@ -72108,7 +72108,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verlangen überstanden"
+            "value": "überstandenes Verlangen"
           }
         },
         "ru": {
@@ -72209,7 +72209,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verlangen überstanden"
+            "value": "überstandene Verlangen"
           }
         },
         "ru": {
@@ -72411,7 +72411,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dein Garten wächst. Trag den heutigen Tag ein, wenn du nikotinfrei bist."
+            "value": "Dein Garten wächst. Mach heute einen Check-in, wenn du nikotinfrei bist."
           }
         },
         "ru": {
