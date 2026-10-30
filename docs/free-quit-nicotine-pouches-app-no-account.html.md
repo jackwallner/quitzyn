@@ -89,7 +89,7 @@ No. Quit Zyn has no ads and no cross-app tracking.
 
 Yes. Your data is stored on the phone, so tracking works without a connection.
 
-Related: [App that counts days since you quit Zyn](https://jackwallner.com/ios/quitzyn/app-to-count-days-since-quitting-zyn.html), [Zyn craving app with guided breathing](https://jackwallner.com/ios/quitzyn/zyn-craving-breathing-app.html), [Quit pouches app where a slip keeps your progress](https://jackwallner.com/ios/quitzyn/quit-pouches-app-slip.html), [Best Quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html), [How to quit Zyn](https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html).
+Related: [App that counts days since you quit Zyn](https://jackwallner.com/ios/quitzyn/app-to-count-days-since-quitting-zyn.html), [Zyn craving app with guided breathing](https://jackwallner.com/ios/quitzyn/zyn-craving-breathing-app.html), [Quit pouches app where a slip keeps your progress](https://jackwallner.com/ios/quitzyn/quit-pouches-app-slip.html), [Best Quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html), [How to quit Zyn](https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html), [Quit Zyn app for Android](https://jackwallner.com/ios/quitzyn/quit-zyn-app-android.html), [App for quitting snus](https://jackwallner.com/ios/quitzyn/quit-snus-app.html), [Quit Zyn counter on Apple Watch and the Lock Screen](https://jackwallner.com/ios/quitzyn/quit-zyn-counter-apple-watch-lock-screen.html), [App that tracks money saved after quitting Zyn](https://jackwallner.com/ios/quitzyn/zyn-money-saved-tracker-app.html).
 
 ## Sources
 
