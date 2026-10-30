@@ -25,7 +25,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ %2$@"
           }
         },
         "sv": {
@@ -2518,7 +2518,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ Ponech si celou zahradu, nebo předplatné kdykoli před obnovením zruš."
+            "value": "%@ Zachovejte si celou zahradu nebo předplatné kdykoli před obnovením zrušte."
           }
         },
         "sv": {
@@ -2714,7 +2714,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ stojí přibližně jako spotřeba nikotinových sáčků za %2$lld a půl dne."
+            "value": "%1$@ stojí přibližně tolik co nikotinové sáčky na %2$lld a půl dne."
           }
         },
         "sv": {
@@ -2865,7 +2865,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ stojí přibližně jako nikotinové sáčky na %#@n@."
+            "value": "%1$@ stojí přibližně tolik co nikotinové sáčky na %#@n@."
           },
           "substitutions": {
             "n": {
@@ -2894,7 +2894,7 @@
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dní"
+                      "value": "%arg dne"
                     }
                   }
                 }
@@ -3294,7 +3294,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ stojí přibližně jako spotřeba nikotinových sáčků za den a půl."
+            "value": "%1$@ stojí přibližně tolik co nikotinové sáčky na den a půl."
           }
         },
         "sv": {
@@ -3389,7 +3389,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ stojí přibližně jako denní spotřeba nikotinových sáčků."
+            "value": "%1$@ stojí přibližně tolik co nikotinové sáčky na jeden den."
           }
         },
         "sv": {
@@ -3484,7 +3484,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ stojí méně než denní spotřeba nikotinových sáčků."
+            "value": "%1$@ stojí méně než nikotinové sáčky na jeden den."
           }
         },
         "sv": {
@@ -3787,7 +3787,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyhneš se použití %1$@ nikotinových sáčků. Tvoje tělo tak nemusí zpracovat tento nikotin."
+            "value": "Vyhnete se použití %1$@ nikotinových sáčků. Vaše tělo nebude muset tento nikotin zpracovávat."
           }
         },
         "sv": {
@@ -4191,7 +4191,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Jednorázový nákup. Přístup navždy, bez předplatného."
+            "value": "%@. Jednorázový nákup. Doživotní přístup bez předplatného."
           }
         },
         "sv": {
@@ -4393,7 +4393,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ ridden až dosud"
+            "value": "%1$lld %2$@ jste už překonali"
           }
         },
         "sv": {
@@ -4563,7 +4563,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dní"
+                  "value": "%1$lld dne"
                 }
               }
             }
@@ -4916,7 +4916,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dní zdarma"
+                  "value": "%1$lld dne zdarma"
                 }
               }
             }
@@ -5257,13 +5257,13 @@
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "dne"
+                  "value": "dní"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "dní"
+                  "value": "dne"
                 }
               }
             }
@@ -5610,7 +5610,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dní bez nikotinu"
+                  "value": "%1$lld dne bez nikotinu"
                 }
               }
             }
@@ -5963,7 +5963,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dní bez nikotinu"
+                  "value": "%1$lld dne bez nikotinu"
                 }
               }
             }
@@ -6298,25 +6298,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld den Bloom+ zdarma"
+                  "value": "%1$lld den Bloom+ zdarma"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dny Bloom+ zdarma"
+                  "value": "%1$lld dny Bloom+ zdarma"
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dne Bloom+ zdarma"
+                  "value": "%1$lld dní Bloom+ zdarma"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dní Bloom+ zdarma"
+                  "value": "%1$lld dne Bloom+ zdarma"
                 }
               }
             }
@@ -6764,7 +6764,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nikotinových sáčků denně"
+                  "value": "%1$lld nikotinového sáčku denně"
                 }
               }
             }
@@ -7099,7 +7099,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld sekundy"
+                  "value": "%1$lld sekunda"
                 }
               },
               "few": {
@@ -7117,7 +7117,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld sekund"
+                  "value": "%1$lld sekundy"
                 }
               }
             }
@@ -7452,25 +7452,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld vypěstovaný strom"
+                  "value": "%1$lld vypěstovaný strom"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld vypěstované stromy"
+                  "value": "%1$lld vypěstované stromy"
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld vypěstovaného stromu"
+                  "value": "%1$lld vypěstovaných stromů"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld vypěstovaných stromů"
+                  "value": "%1$lld vypěstovaného stromu"
                 }
               }
             }
@@ -7805,25 +7805,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji máš %lld vypěstovaný strom"
+                  "value": "V háji máte %1$lld strom"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji máš %lld vypěstované stromy"
+                  "value": "V háji máte %1$lld stromy"
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji máš %lld vypěstovaného stromu"
+                  "value": "V háji máte %1$lld stromů"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji máš %lld vypěstovaných stromů"
+                  "value": "V háji máte %1$lld stromu"
                 }
               }
             }
@@ -8176,7 +8176,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zdarma na %1$lld dní"
+                  "value": "Zdarma na %1$lld dne"
                 }
               }
             }
@@ -8511,25 +8511,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční i roční plán s %1$lld den zdarma."
+                  "value": "Zkušební období zdarma na %1$lld den pro měsíční i roční předplatné."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční i roční plán s %1$lld dny zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dny pro měsíční i roční předplatné."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční i roční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dní pro měsíční i roční předplatné."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční i roční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dne pro měsíční i roční předplatné."
                 }
               }
             }
@@ -8864,25 +8864,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční plán s %1$lld den zdarma."
+                  "value": "Zkušební období zdarma na %1$lld den pro měsíční předplatné."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční plán s %1$lld dny zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dny pro měsíční předplatné."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dní pro měsíční předplatné."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Měsíční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dne pro měsíční předplatné."
                 }
               }
             }
@@ -9217,25 +9217,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Roční plán s %1$lld den zdarma."
+                  "value": "Zkušební období zdarma na %1$lld den pro roční předplatné."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Roční plán s %1$lld dny zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dny pro roční předplatné."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Roční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dní pro roční předplatné."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Roční plán s %1$lld dní zdarma."
+                  "value": "Zkušební období zdarma na %1$lld dne pro roční předplatné."
                 }
               }
             }
@@ -9558,25 +9558,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld den zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld den, poté %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld dny zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld dny, poté %2$@."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld dní zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld dní, poté %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld dní zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld dne, poté %2$@."
                 }
               }
             }
@@ -9929,7 +9929,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zdarma na %1$lld měsíců"
+                  "value": "Zdarma na %1$lld měsíce"
                 }
               }
             }
@@ -10252,25 +10252,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld měsíc zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld měsíc, poté %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld měsíce zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld měsíce, poté %2$@."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld měsíců zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld měsíců, poté %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld měsíců zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld měsíce, poté %2$@."
                 }
               }
             }
@@ -10623,7 +10623,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zdarma na %1$lld let"
+                  "value": "Zdarma na %1$lld roku"
                 }
               }
             }
@@ -10946,25 +10946,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld rok zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld rok, poté %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld roky zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld roky, poté %2$@."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld let zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld let, poté %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zkušební období na %1$lld let zdarma, poté %2$@."
+                  "value": "Zkušební období zdarma na %1$lld roku, poté %2$@."
                 }
               }
             }
@@ -11311,13 +11311,13 @@
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld přínosu"
+                  "value": "/ %lld přínosů"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld přínosů"
+                  "value": "/ %lld přínosu"
                 }
               }
             }
@@ -11595,7 +11595,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "0: 00"
+            "value": "0:00"
           }
         },
         "sv": {
@@ -11898,7 +11898,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 milníků na obnovu nikotinu se zdroji."
+            "value": "13 milníků zotavování po nikotinu s uvedenými zdroji."
           }
         },
         "sv": {
@@ -12302,7 +12302,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kvetoucí sakura zahalená do jemně růžových květů. S tvou sérií padají okvětní lístky."
+            "value": "Kvetoucí sakura v jemně růžových odstínech. Jak vaše série roste, okvětní lístky pomalu opadávají."
           }
         },
         "sv": {
@@ -12605,7 +12605,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Krajkový javor v teplé podzimní červené a zlaté. Hvězdicovité listy padají, jak přibývají dny."
+            "value": "Jemně tvarovaný javor v teplých podzimních odstínech červené a zlaté. Jak přibývají dny, opadávají jeho hvězdicovité listy."
           }
         },
         "sv": {
@@ -12706,7 +12706,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Legendární bonsaj. Celý rok růstu, který je vidět."
+            "value": "Legendární bonsaj. Viditelný výsledek celého roku růstu."
           }
         },
         "sv": {
@@ -12908,7 +12908,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Semínko je zasazené. Každý velký strom začíná tady."
+            "value": "Semínko je zasazeno. Tady začíná každý velký strom."
           }
         },
         "sv": {
@@ -13009,7 +13009,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sazenice stojí zpříma. Kořeny se uchycují."
+            "value": "Sazenice se tyčí vzhůru a její kořeny se ujímají."
           }
         },
         "sv": {
@@ -13110,7 +13110,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uklouznutí jde vrátit jen tehdy, když je ve tvém záznamu nejnovější."
+            "value": "Uklouznutí lze vrátit jen tehdy, pokud je ve vašem záznamu nejnovější."
           }
         },
         "sv": {
@@ -13211,7 +13211,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nadčasová vzpřímená bonsaj. Souměrná, vyvážená, klidná."
+            "value": "Vzpřímená bonsaj s nadčasovým vzhledem. Souměrná, vyvážená a klidná."
           }
         },
         "sv": {
@@ -13413,7 +13413,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Asi 6 mg na sáček"
+            "value": "Asi 6 mg na nikotinový sáček"
           }
         },
         "sv": {
@@ -13716,7 +13716,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uprav datum, kdy tvoje cesta začala."
+            "value": "Upravte datum, kdy začala vaše cesta."
           }
         },
         "sv": {
@@ -13918,7 +13918,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dospívající fáze"
+            "value": "Fáze mladého stromu"
           }
         },
         "sv": {
@@ -14120,7 +14120,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Výzkum spojuje rok bez nikotinu s významně nižším kardiovaskulárním rizikem při vynechání tabáku. O svém zdraví se poraď s lékařem."
+            "value": "Výzkumy spojují rok bez nikotinu a další vynechání tabáku s výrazně nižším kardiovaskulárním rizikem. O svém zdraví se poraďte s lékařem."
           }
         },
         "sv": {
@@ -14322,7 +14322,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Po dvou dnech se nervová zakončení ovlivněná nikotinem začínají obnovovat. Mnoho lidí vnímá plnější chuť jídla a výraznější vůně."
+            "value": "Po dvou dnech se nervová zakončení, jejichž citlivost nikotin otupil, začínají obnovovat. Mnoho lidí vnímá plnější chuť jídla a výraznější vůně."
           }
         },
         "sv": {
@@ -14726,7 +14726,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Povol oznámení v Nastavení"
+            "value": "Povolte oznámení v aplikaci Nastavení"
           }
         },
         "sv": {
@@ -15433,7 +15433,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Starověké stádium"
+            "value": "Fáze prastarého stromu"
           }
         },
         "sv": {
@@ -15938,7 +15938,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple zobrazí fakturační údaje před potvrzením."
+            "value": "Apple před potvrzením zobrazí cenu a podrobnosti platby."
           }
         },
         "sv": {
@@ -16140,7 +16140,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Asi po dvou týdnech bez nikotinových sáčků přitisknutých k dásním začíná ustupovat podráždění a zánět v ústech a tkáň se začíná hojit."
+            "value": "Zhruba po dvou týdnech bez nikotinových sáčků přitisknutých k dásním začíná ustupovat podráždění a zánět v ústech. Tkáň se postupně obnovuje."
           }
         },
         "sv": {
@@ -16241,7 +16241,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nejlepší řešení"
+            "value": "TOP NABÍDKA"
           }
         },
         "sv": {
@@ -16544,7 +16544,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vychází z nutkání, která máš zaznamenaná jako překonaná, ne z průměru všech."
+            "value": "Vychází ze sezení, která jste zvládli, nikoli z průměru všech uživatelů."
           }
         },
         "sv": {
@@ -16746,7 +16746,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Začněte svou cestu bez nikotinu."
+            "value": "Začněte cestu k životu bez nikotinu."
           }
         },
         "sv": {
@@ -17756,7 +17756,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ plány jsou dočasně nedostupné. Můžete znovu vyzkoušet nebo pokračovat zdarma."
+            "value": "Předplatná Bloom+ jsou dočasně nedostupná. Zkuste to znovu, nebo pokračujte zdarma."
           }
         },
         "sv": {
@@ -17857,7 +17857,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ odemkne všechny druhy, takže strom můžeš měnit, kdy chceš. Tvá série roste u kteréhokoli z nich."
+            "value": "Bloom+ odemkne všechny druhy, abyste mohli kdykoli změnit strom. Vaše série poroste bez ohledu na to, který si vyberete."
           }
         },
         "sv": {
@@ -17958,7 +17958,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ na zkoušku zdarma"
+            "value": "Vyzkoušejte Bloom+ zdarma"
           }
         },
         "sv": {
@@ -19372,7 +19372,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volej nebo piš na 988 · nonstop · USA"
+            "value": "Zavolejte nebo napište SMS na 988 · nonstop · USA"
           }
         },
         "sv": {
@@ -19574,7 +19574,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zruš kdykoli před koncem. Žádné překvapivé platby."
+            "value": "Předplatné můžete kdykoli před koncem zrušit. Žádné nečekané poplatky."
           }
         },
         "sv": {
@@ -19978,7 +19978,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Změna na bez nikotinu"
+            "value": "Označit jako den bez nikotinu"
           }
         },
         "sv": {
@@ -20079,7 +20079,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Změnit na uklouznutí"
+            "value": "Označit jako uklouznutí"
           }
         },
         "sv": {
@@ -20180,7 +20180,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsat dnešek"
+            "value": "Zaznamenat dnešek"
           }
         },
         "sv": {
@@ -20281,7 +20281,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Začni týden tím, že si zapíšeš den."
+            "value": "K zahájení týdne stačí jeden denní záznam."
           }
         },
         "sv": {
@@ -20382,7 +20382,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zkontroluj připojení a zkus to znovu."
+            "value": "Zkontrolujte připojení a zkuste to znovu."
           }
         },
         "sv": {
@@ -20483,7 +20483,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Záznam dne"
+            "value": "Denní záznam"
           }
         },
         "sv": {
@@ -20584,7 +20584,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsáno"
+            "value": "Zaznamenáno"
           }
         },
         "sv": {
@@ -20685,7 +20685,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ověřujeme dostupnost zkušební doby…"
+            "value": "Ověřujeme dostupnost zkušebního období…"
           }
         },
         "sv": {
@@ -21291,7 +21291,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dokonči svůj první týden."
+            "value": "Dokončete svůj první týden."
           }
         },
         "sv": {
@@ -22301,7 +22301,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nákup se nepodařilo dokončit. Zkus to prosím znovu."
+            "value": "Nákup se nepodařilo dokončit. Zkuste to znovu."
           }
         },
         "sv": {
@@ -22402,7 +22402,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Možnosti předplatného se nepodařilo načíst. Zkontroluj připojení a zkus to znovu."
+            "value": "Možnosti předplatného se nepodařilo načíst. Zkontrolujte připojení a zkuste to znovu."
           }
         },
         "sv": {
@@ -22503,7 +22503,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nákupy se nepodařilo obnovit. Zkus to znovu."
+            "value": "Nákupy se nepodařilo obnovit. Zkuste to znovu."
           }
         },
         "sv": {
@@ -22604,7 +22604,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zkušební období se nepodařilo spustit. Zkus to znovu."
+            "value": "Zkušební období se nepodařilo spustit. Zkuste to znovu."
           }
         },
         "sv": {
@@ -22705,7 +22705,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Započítáno do tvé cesty. Zatím nezapsáno."
+            "value": "Den se započítal do vaší cesty, ale zatím jste ho nezaznamenali."
           }
         },
         "sv": {
@@ -22806,7 +22806,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nutkání vrcholí a slábne"
+            "value": "Nutkání sílí a pak slábne"
           }
         },
         "sv": {
@@ -23513,7 +23513,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Denní zápis"
+            "value": "Denní záznam"
           }
         },
         "sv": {
@@ -23614,7 +23614,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Denní zápis 7 dní v kuse."
+            "value": "Denní záznamy po dobu 7 dnů v řadě."
           }
         },
         "sv": {
@@ -23816,7 +23816,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Denní otázky do deníku, když je nejvíc potřebuješ. K tomu zbytek Bloom+."
+            "value": "Denní podněty do deníku, když je nejvíc potřebujete, a další funkce Bloom+."
           }
         },
         "sv": {
@@ -23917,7 +23917,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Denní upomínka"
+            "value": "Čas denní připomínky"
           }
         },
         "sv": {
@@ -25432,7 +25432,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vypnout přepsání Bloom+"
+            "value": "Vypnout testovací přístup Bloom+"
           }
         },
         "sv": {
@@ -26038,7 +26038,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapnout přepsání Bloom+"
+            "value": "Zapnout testovací přístup Bloom+"
           }
         },
         "sv": {
@@ -26442,7 +26442,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Každé zvládnuté nutkání skončilo bez nikotinového sáčku."
+            "value": "Každé nutkání, které jste zvládli, skončilo bez nikotinového sáčku."
           }
         },
         "sv": {
@@ -26543,7 +26543,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Každý dolar a váček, kterému se vyhýbáš, sledoval."
+            "value": "Sledujte ušetřené peníze a nepoužité nikotinové sáčky."
           }
         },
         "sv": {
@@ -26644,7 +26644,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Každý den bez nikotinu ti roste strom."
+            "value": "Každý den bez nikotinu pomáhá růstu vašeho stromu."
           }
         },
         "sv": {
@@ -26846,7 +26846,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kdykoli odoláš nutkání, stránka zaznamená, kdy přichází, co ho spouští a jak dlouho trvá."
+            "value": "Kdykoli zvládnete nutkání, tato stránka ukáže, kdy přichází, co ho spouští a jak dlouho trvá."
           }
         },
         "sv": {
@@ -26947,7 +26947,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Všechny nástroje, které drží sérii na očích, odemčené ještě dnes."
+            "value": "Dnes získáte přístup ke všem nástrojům, které zobrazují vaši sérii."
           }
         },
         "sv": {
@@ -27099,25 +27099,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Všechny nástroje, které drží sérii na očích. %lld den nic neplatíš."
+                  "value": "Všechny nástroje pro sledování série. Nic neplatíte %1$lld den."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Všechny nástroje, které drží sérii na očích. %lld dny nic neplatíš."
+                  "value": "Všechny nástroje pro sledování série. Nic neplatíte %1$lld dny."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Všechny nástroje, které drží sérii na očích. %lld dne nic neplatíš."
+                  "value": "Všechny nástroje pro sledování série. Nic neplatíte %1$lld dní."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Všechny nástroje, které drží sérii na očích. %lld dní nic neplatíš."
+                  "value": "Všechny nástroje pro sledování série. Nic neplatíte %1$lld dne."
                 }
               }
             }
@@ -27401,7 +27401,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Všechny nástroje, které drží sérii na očích. Dnes se nic neplatí."
+            "value": "Všechny nástroje pro sledování série máte dnes zdarma."
           }
         },
         "sv": {
@@ -27502,7 +27502,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vše se odemkne. Plný přístup, teď platíš %@."
+            "value": "Vše se odemkne. Plný přístup, nyní k úhradě: %1$@."
           }
         },
         "sv": {
@@ -27603,7 +27603,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Everything you lock"
+            "value": "Vše, co získáte"
           }
         },
         "sv": {
@@ -27805,7 +27805,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "ZKUŠEBNÍ OBDOBÍ ZDARMA"
+            "value": "ZDARMA"
           }
         },
         "sv": {
@@ -28108,7 +28108,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Najít léčbu"
+            "value": "Najít pomoc"
           }
         },
         "sv": {
@@ -28310,7 +28310,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Postupujte podle 13 získaných milníků obnovy nikotinu"
+            "value": "Sledujte 13 milníků zotavování po nikotinu podložených zdroji."
           }
         },
         "sv": {
@@ -28613,7 +28613,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zdarma do %1$@. Zapni oznámení a připomeneme ti konec zkušební doby."
+            "value": "Zdarma do %1$@. Zapněte oznámení a připomeneme vám konec zkušebního období."
           }
         },
         "sv": {
@@ -28815,7 +28815,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bezplatná a důvěrná pomoc je k dispozici kdykoli. Ozvat se je síla, ne prohra."
+            "value": "Bezplatná a důvěrná pomoc je k dispozici kdykoli. Požádat o pomoc je projev síly, nikoli krok zpět."
           }
         },
         "sv": {
@@ -28916,7 +28916,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plný přístup k zahradě, deníku, zdraví a úsporám po dobu zkoušky."
+            "value": "Do konce zkušebního období máte plný přístup k zahradě, deníku, časové ose zotavování a úsporám."
           }
         },
         "sv": {
@@ -29017,7 +29017,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Celá zdravotní časová osa"
+            "value": "Úplná časová osa zotavování"
           }
         },
         "sv": {
@@ -29118,7 +29118,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prvky zahrady"
+            "value": "Funkce zahrady"
           }
         },
         "sv": {
@@ -29219,7 +29219,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Obecné informace o zdraví, nikoli lékařské rady. Průběh se u každého liší. Zdravotní potíže prober se zdravotníkem."
+            "value": "Obecné informace o zdraví, nikoli lékařská rada. Časový průběh se u každého liší. V případě zdravotních potíží se obraťte na zdravotníka."
           }
         },
         "sv": {
@@ -29623,7 +29623,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vrať se."
+            "value": "Zpět"
           }
         },
         "sv": {
@@ -29926,7 +29926,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pěstuj všechny druhy."
+            "value": "Pěstujte všechny druhy."
           }
         },
         "sv": {
@@ -30229,7 +30229,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dásně se začínají hojit"
+            "value": "Dásně se začínají obnovovat"
           }
         },
         "sv": {
@@ -30431,7 +30431,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nejtěžší mezi %1$@ a %2$@"
+            "value": "Nejsilnější nutkání přichází mezi %1$@ a %2$@"
           }
         },
         "sv": {
@@ -31340,7 +31340,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jak se změnil můj každodenní život, když jsem přestal s nikotinem?"
+            "value": "Co se změnilo v mém každodenním životě od chvíle, kdy žiju bez nikotinu?"
           }
         },
         "sv": {
@@ -31542,7 +31542,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jak dlouho jsi bez nikotinu."
+            "value": "Jak dlouho už žijete bez nikotinu."
           }
         },
         "sv": {
@@ -31643,7 +31643,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kolik jsi toho bral?"
+            "value": "Kolik nikotinových sáčků jste užívali?"
           }
         },
         "sv": {
@@ -31744,7 +31744,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jak silná byla?"
+            "value": "Jak silné bylo nutkání?"
           }
         },
         "sv": {
@@ -31845,7 +31845,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zavázal jsem se, že se uzdravím."
+            "value": "Rozhoduji se dělat pokroky"
           }
         },
         "sv": {
@@ -31946,7 +31946,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Podlehl jsem"
+            "value": "Nutkání bylo silnější"
           }
         },
         "sv": {
@@ -32047,7 +32047,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uklouzl jsem"
+            "value": "Došlo k uklouznutí"
           }
         },
         "sv": {
@@ -32148,7 +32148,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Beru to vážně"
+            "value": "Beru to jako svůj závazek"
           }
         },
         "sv": {
@@ -32249,7 +32249,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mám chuť na nikotin."
+            "value": "Cítím nutkání sáhnout po nikotinu"
           }
         },
         "sv": {
@@ -32350,7 +32350,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mám to za sebou"
+            "value": "To už mám za sebou"
           }
         },
         "sv": {
@@ -32552,7 +32552,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pokud je dnes bez nikotinu, zapište to a zalévejte vaši zahradu."
+            "value": "Pokud jste dnes bez nikotinu, zaznamenejte to a zalijte zahradu."
           }
         },
         "sv": {
@@ -32754,7 +32754,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Za rok, to je"
+            "value": "Za rok to bude"
           }
         },
         "sv": {
@@ -33259,7 +33259,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "To je v pořádku. Uklouznutí patří k mnoha cestám a jeho zapsání udrží zbytek záznamu poctivý."
+            "value": "To je v pořádku. Na cestě k životu bez nikotinu se uklouznutí stává mnoha lidem. Když ho zaznamenáte, zbytek záznamu bude odpovídat skutečnosti."
           }
         },
         "sv": {
@@ -33562,7 +33562,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Časopis soukromě přes těžké dny"
+            "value": "Pište si soukromě do deníku i v těžkých dnech"
           }
         },
         "sv": {
@@ -33865,7 +33865,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ponech si celou zahradu, deník i úspory, nebo kdykoli před obnovením zruš."
+            "value": "Zachovejte si plný přístup k zahradě, deníku i úsporám, nebo předplatné kdykoli před obnovením zrušte."
           }
         },
         "sv": {
@@ -34067,7 +34067,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poznej svůj vzorec."
+            "value": "Poznejte svůj vlastní vzorec."
           }
         },
         "sv": {
@@ -34471,7 +34471,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Navždy"
+            "value": "Doživotně"
           }
         },
         "sv": {
@@ -34572,7 +34572,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Život: %1$@"
+            "value": "Celkem: %1$@"
           }
         },
         "sv": {
@@ -34774,7 +34774,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Načítám plány…"
+            "value": "Načítáme nabídky…"
           }
         },
         "sv": {
@@ -34875,7 +34875,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zamčeno. Klepnutím se dozvíš o Bloom+"
+            "value": "Zamčeno. Klepněte na řádek a zjistěte více o Bloom+."
           }
         },
         "sv": {
@@ -34976,7 +34976,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsat uklouznutí"
+            "value": "Zaznamenat uklouznutí"
           }
         },
         "sv": {
@@ -35077,7 +35077,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsat uklouznutí?"
+            "value": "Zaznamenat uklouznutí?"
           }
         },
         "sv": {
@@ -35178,7 +35178,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Záznam jako bez nikotinu"
+            "value": "Označit jako den bez nikotinu"
           }
         },
         "sv": {
@@ -35279,7 +35279,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsat a jít dál"
+            "value": "Zaznamenat a pokračovat"
           }
         },
         "sv": {
@@ -35481,7 +35481,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapiš dnešek a zalij zahradu. Zvládneš to."
+            "value": "Zaznamenejte dnešek a zalijte zahradu. Zvládnete to."
           }
         },
         "sv": {
@@ -35582,7 +35582,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapište dnešek jako den bez nikotinu a zalijte bonsaj."
+            "value": "Zaznamenejte dnešek jako den bez nikotinu a zalijte bonsaj."
           }
         },
         "sv": {
@@ -35683,7 +35683,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zapsáno uklouznutí"
+            "value": "Uklouznutí zaznamenáno"
           }
         },
         "sv": {
@@ -35784,7 +35784,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zaznamenaný nikotin bez"
+            "value": "Den bez nikotinu zaznamenán"
           }
         },
         "sv": {
@@ -36390,7 +36390,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ať je to oficiální."
+            "value": "Potvrďte své rozhodnutí"
           }
         },
         "sv": {
@@ -36895,7 +36895,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sledování peněz a sáčků"
+            "value": "Peníze a nikotinové sáčky"
           }
         },
         "sv": {
@@ -37602,7 +37602,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Většina zaznamenaných nutkání spadá do tohoto období: %1$lld z %2$lld."
+            "value": "Záznamy o nutkání nejčastěji spadají do tohoto období: %1$lld z %2$lld."
           }
         },
         "sv": {
@@ -38208,7 +38208,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jmenuj situaci, kdy jsem sahal po pytli."
+            "value": "V jaké situaci mě dříve napadlo sáhnout po nikotinovém sáčku? Jak se mi ji podařilo zvládnout?"
           }
         },
         "sv": {
@@ -39117,7 +39117,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin se odbourává"
+            "value": "Nikotin je z těla pryč"
           }
         },
         "sv": {
@@ -39420,7 +39420,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin se nikdy neabsorbuje."
+            "value": "Nikotin se nevstřebal"
           }
         },
         "sv": {
@@ -39521,7 +39521,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin-free od"
+            "value": "Bez nikotinu od"
           }
         },
         "sv": {
@@ -39824,7 +39824,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatím žádné záznamy. Ten první napíšeš přes tužku."
+            "value": "Zatím nemáte žádné záznamy. Klepnutím na tužku napište první."
           }
         },
         "sv": {
@@ -39925,7 +39925,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatím žádné záznamy. První je zdarma. Napíšeš ho přes tužku."
+            "value": "Zatím nemáte žádné záznamy. První zápis je zdarma. Napište ho klepnutím na tužku."
           }
         },
         "sv": {
@@ -40026,7 +40026,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teď nic neplatíš"
+            "value": "Teď neplatíte"
           }
         },
         "sv": {
@@ -40127,7 +40127,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teď bez platby · Apple připomene předem · Data v zařízení"
+            "value": "Teď neplatíte · Apple vás před platbou upozorní · Data zůstávají v zařízení"
           }
         },
         "sv": {
@@ -40424,7 +40424,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Úspora za sáčky"
+            "value": "Nevydáno za nikotinové sáčky"
           }
         },
         "sv": {
@@ -40626,7 +40626,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatím nevím. Ukončit"
+            "value": "Zatím si nejste jisti. Ukončit sezení"
           }
         },
         "sv": {
@@ -40929,7 +40929,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Všímej si jí, ale nehádej se s ní. Nesnažíš se vyhrát, jen to přečkáváš."
+            "value": "Vnímejte nutkání bez boje. Nemusíte zvítězit, stačí počkat, až odezní."
           }
         },
         "sv": {
@@ -41030,7 +41030,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oznámení jsou vypnuta pro Konec Zyn, takže upomínku nelze doručit. Klepněte na možnost výše v aplikaci Nastavení."
+            "value": "Oznámení pro Quit Zyn jsou vypnutá, takže připomenutí nelze doručit. Klepněte výše a povolte je v aplikaci Nastavení."
           }
         },
         "sv": {
@@ -41333,7 +41333,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Míříš k úspoře"
+            "value": "Očekávaná úspora"
           }
         },
         "sv": {
@@ -41939,7 +41939,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plány jsou dočasně nedostupné. Zkus to prosím za chvíli."
+            "value": "Nabídky jsou dočasně nedostupné. Zkuste to za chvíli znovu."
           }
         },
         "sv": {
@@ -42040,7 +42040,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Navíc %1$@ nikotinových sáčků, které nepoužiješ. Tvoje tělo tak nemusí zpracovat tento nikotin."
+            "value": "Vyhnete se také použití %1$@ nikotinových sáčků. Vaše tělo nebude muset tento nikotin zpracovávat."
           }
         },
         "sv": {
@@ -42343,7 +42343,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sáčků v krabičce"
+            "value": "Nikotinových sáčků v krabičce"
           }
         },
         "sv": {
@@ -42747,7 +42747,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ceny pocházejí z App Storu a v této verzi nejsou k dispozici."
+            "value": "Ceny se načítají z App Storu a v této verzi nejsou k dispozici."
           }
         },
         "sv": {
@@ -43050,7 +43050,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odhad %@, které ušetříš za příští rok"
+            "value": "Odhad úspor za příští rok: %1$@"
           }
         },
         "sv": {
@@ -43151,7 +43151,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Výhled na rok dopředu, ne jen dny za tebou"
+            "value": "Plánujte rok dopředu, ne jen podle uplynulých dnů"
           }
         },
         "sv": {
@@ -43353,7 +43353,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Otázky a úvahy na těžké dny."
+            "value": "Podněty k psaní a zamyšlení pro těžké dny."
           }
         },
         "sv": {
@@ -43555,7 +43555,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nákup zrušen. Pro pokračování klepni znovu."
+            "value": "Nákup byl zrušen. Klepnutím znovu pokračujte."
           }
         },
         "sv": {
@@ -43959,7 +43959,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ukončit Zyn dny"
+            "value": "Quit Zyn: dny bez nikotinu"
           }
         },
         "sv": {
@@ -44060,7 +44060,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hodnotit ukončení Zyn"
+            "value": "Ohodnoťte Quit Zyn"
           }
         },
         "sv": {
@@ -44212,25 +44212,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a odhalíš další své vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a lépe poznáte své vzorce."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a odhalíš další své vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a lépe poznáte své vzorce."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a odhalíš další své vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a lépe poznáte své vzorce."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a odhalíš další své vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a lépe poznáte své vzorce."
                 }
               }
             }
@@ -44565,25 +44565,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a začnou se rýsovat tvoje vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a začnou se rýsovat vaše vzorce."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a začnou se rýsovat tvoje vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a začnou se rýsovat vaše vzorce."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a začnou se rýsovat tvoje vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a začnou se rýsovat vaše vzorce."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Zaznamenej ještě %1$lld nutkání a začnou se rýsovat tvoje vzorce."
+                  "value": "Zaznamenejte ještě %1$lld nutkání a začnou se rýsovat vaše vzorce."
                 }
               }
             }
@@ -44867,7 +44867,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zaznamenej ještě jedno nutkání a odhalíš další své vzorce."
+            "value": "Zaznamenejte ještě jedno nutkání a lépe poznáte své vzorce."
           }
         },
         "sv": {
@@ -44968,7 +44968,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zaznamenej ještě jedno nutkání a začnou se rýsovat tvoje vzorce."
+            "value": "Zaznamenejte ještě jedno nutkání a začnou se rýsovat vaše vzorce."
           }
         },
         "sv": {
@@ -45069,7 +45069,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toto je vaše, pro dnešek a pro následující dny."
+            "value": "Cesta k životu bez nikotinu začíná rozhodnutím. Dnes je to vaše rozhodnutí, stejně jako v dalších dnech."
           }
         },
         "sv": {
@@ -45372,7 +45372,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rafinovaná fáze"
+            "value": "Vytříbená fáze"
           }
         },
         "sv": {
@@ -45473,7 +45473,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Před platbou"
+            "value": "Upozornění před platbou"
           }
         },
         "sv": {
@@ -45574,7 +45574,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Doba upomínky"
+            "value": "Čas připomínky"
           }
         },
         "sv": {
@@ -45675,7 +45675,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Připomínky vycházejí z tvého závazku."
+            "value": "Připomínky vycházejí z vašeho závazku."
           }
         },
         "sv": {
@@ -45776,7 +45776,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Připomínky zůstanou neutrální a bez tlaku."
+            "value": "Připomínky zůstávají neutrální a bez nátlaku."
           }
         },
         "sv": {
@@ -45877,7 +45877,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Automaticky se obnoví. Zruš nejpozději 24 hodin před koncem období. Správa: Nastavení › Apple ID › Předplatná."
+            "value": "Předplatné se obnovuje automaticky. Zrušte ho alespoň 24 hodin před koncem aktuálního období. Spravujte ho v Nastavení › Apple ID › Předplatná."
           }
         },
         "sv": {
@@ -46180,7 +46180,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Obnovit pult?"
+            "value": "Vynulovat počítadlo?"
           }
         },
         "sv": {
@@ -46685,7 +46685,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pár minut klidně dýchej a zkus to vydržet."
+            "value": "Přečkejte nutkání s několika minutami klidného dýchání"
           }
         },
         "sv": {
@@ -46887,7 +46887,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mizerně"
+            "value": "Těžké"
           }
         },
         "sv": {
@@ -47089,7 +47089,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "UŠETŘÍŠ %lld %%"
+            "value": "SLEVA %lld%%"
           }
         },
         "sv": {
@@ -48125,7 +48125,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Podívejte se, kdy vaše %1$@ hit, co je spustí, a jak dlouho vaše vlastně vydrží, plus zbytek Bloom+."
+            "value": "Zjistěte, kdy se vaše %1$@ objevují, co je spouští a jak dlouho trvají. Získáte i další funkce Bloom+."
           }
         },
         "sv": {
@@ -48327,7 +48327,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stupeň semene"
+            "value": "Fáze semínka"
           }
         },
         "sv": {
@@ -48529,7 +48529,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stupeň setí"
+            "value": "Fáze sazenice"
           }
         },
         "sv": {
@@ -51256,7 +51256,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fáze výtoku"
+            "value": "Fáze klíčku"
           }
         },
         "sv": {
@@ -51610,25 +51610,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld den zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld den."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dny zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dny."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dní."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dne."
                 }
               }
             }
@@ -51963,25 +51963,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld měsíc zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld měsíc."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld měsíce zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld měsíce."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld měsíců zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld měsíců."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld měsíců zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld měsíce."
                 }
               }
             }
@@ -52316,25 +52316,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld rok zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld rok."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld roky zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld roky."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld let zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld let."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld let zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld roku."
                 }
               }
             }
@@ -52618,7 +52618,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyzkoušet zdarma"
+            "value": "Začněte zkušební období zdarma"
           }
         },
         "sv": {
@@ -52758,25 +52758,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld den zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld den."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dny zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dny."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dní."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dne."
                 }
               }
             }
@@ -53060,7 +53060,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyzkoušet zdarma"
+            "value": "Začněte zkušební období zdarma"
           }
         },
         "sv": {
@@ -53200,25 +53200,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld den zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld den."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dny zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dny."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dní."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Vyzkoušej %1$lld dní zdarma"
+                  "value": "Začněte zkušební období zdarma na %1$lld dne."
                 }
               }
             }
@@ -53502,7 +53502,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyzkoušet zdarma"
+            "value": "Začněte zkušební období zdarma"
           }
         },
         "sv": {
@@ -53603,7 +53603,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spusť bezplatné zkušební období Bloom+"
+            "value": "Začněte bezplatné zkušební období Bloom+"
           }
         },
         "sv": {
@@ -53698,7 +53698,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Peníze zůstanou tobě místo toho, abys je utratil za nikotinové sáčky. Bloom+ ti pomáhá pokračovat."
+            "value": "Peníze vám zůstanou, místo abyste je utráceli za nikotinové sáčky. Bloom+ vám pomáhá udržet si přehled o sérii."
           }
         },
         "sv": {
@@ -53900,7 +53900,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Streak počítá váš současný běh. Celoživotní počítá každý den bez nikotinu, který jste kdy zaznamenali, takže minulý pokrok není ztracen v resetu."
+            "value": "Série počítá vaše současné období bez nikotinu. Celkem se započítá každý den bez nikotinu, který jste zaznamenali, takže se při vynulování neztratí dřívější pokrok."
           }
         },
         "sv": {
@@ -54506,7 +54506,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Měň druhy kdykoli · série dál roste"
+            "value": "Druh můžete kdykoli změnit · série dál roste"
           }
         },
         "sv": {
@@ -54708,7 +54708,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Měň kdykoli. Počet dní i růst přejdou na jakýkoli strom, který si vybereš."
+            "value": "Strom můžete kdykoli změnit. Počet dnů i růst se přenesou na vybraný strom."
           }
         },
         "sv": {
@@ -54809,7 +54809,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Změnit druh bonsaje, teď %@"
+            "value": "Změnit druh bonsaje, aktuálně %@"
           }
         },
         "sv": {
@@ -54910,7 +54910,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Měň strom, jak tvá série roste."
+            "value": "Měňte strom, jak vaše série roste."
           }
         },
         "sv": {
@@ -55516,7 +55516,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "To je o %1$@ / den"
+            "value": "Vychází to přibližně na %1$@ denně"
           }
         },
         "sv": {
@@ -55617,7 +55617,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaskádový styl napodobuje strom rostoucí na útesu, který se sklání dolů."
+            "value": "Kaskádový styl připomíná strom rostoucí na útesu, jehož větve splývají dolů."
           }
         },
         "sv": {
@@ -55819,7 +55819,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Semínko se zabydluje. Tvoje cesta začíná tady."
+            "value": "Semínko se ujímá. Tady začíná vaše cesta."
           }
         },
         "sv": {
@@ -55920,7 +55920,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "To je blízko vrcholu. Tyto %1$@ vylézt rychle a pak přestat šplhat."
+            "value": "Vrchol je blízko. Síla %1$@ rychle roste a pak se ustálí."
           }
         },
         "sv": {
@@ -56475,7 +56475,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tři měsíce v kuse."
+            "value": "Už tři měsíce to zvládáte."
           }
         },
         "sv": {
@@ -57485,7 +57485,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sledujte každý dolar a váček, kterému se vyhnete, plus zbytek Bloom+."
+            "value": "Sledujte ušetřené peníze i nepoužité nikotinové sáčky a využívejte další funkce Bloom+."
           }
         },
         "sv": {
@@ -57586,7 +57586,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sleduj dny bez nikotinu, pěstuj zahradu a pozoruj, jak se ti vrací zdraví."
+            "value": "Sledujte dny bez nikotinu, nechte růst zahradu a všímejte si změn ve svém zdraví."
           }
         },
         "sv": {
@@ -57889,7 +57889,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Iniciativa pravdy"
+            "value": "Truth Initiative"
           }
         },
         "sv": {
@@ -58091,7 +58091,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyzkoušej Bloom+"
+            "value": "Vyzkoušet Bloom+"
           }
         },
         "sv": {
@@ -58192,7 +58192,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vyzkoušej Bloom+ zdarma"
+            "value": "Vyzkoušet Bloom+ zdarma"
           }
         },
         "sv": {
@@ -58293,7 +58293,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dvě rychlé otázky, dokud je to čerstvé. Obě nepovinné."
+            "value": "Dvě krátké otázky, dokud máte vše v čerstvé paměti. Odpovědi jsou dobrovolné."
           }
         },
         "sv": {
@@ -58394,7 +58394,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zpět"
+            "value": "Vrátit zpět"
           }
         },
         "sv": {
@@ -58495,7 +58495,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vrátit zpět, neuklouzl jsem"
+            "value": "Vrátit záznam o uklouznutí"
           }
         },
         "sv": {
@@ -59044,7 +59044,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemknout navždy"
+            "value": "Doživotní přístup"
           }
         },
         "sv": {
@@ -59196,25 +59196,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Odemknout všechny stromy (%lld)"
+                  "value": "Odemknout %1$lld strom"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Odemknout všechny %lld stromy"
+                  "value": "Odemknout všechny %1$lld stromy"
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Odemknout všech %lld stromu"
+                  "value": "Odemknout všech %1$lld stromů"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Odemknout všech %lld stromů"
+                  "value": "Odemknout všech %1$lld stromu"
                 }
               }
             }
@@ -59492,7 +59492,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemkni všechny druhy bonsají a měň je, kdy chceš. K tomu zbytek Bloom+."
+            "value": "Odemkněte všechny druhy bonsají a kdykoli je měňte. Bloom+ nabízí i další funkce."
           }
         },
         "sv": {
@@ -59593,7 +59593,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemkni další druhy bonsají s Bloom+"
+            "value": "Odemkněte s Bloom+ další druhy bonsají"
           }
         },
         "sv": {
@@ -59694,7 +59694,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemkni celou časovou osu zotavení s 13 milníky. K tomu zbytek Bloom+."
+            "value": "Odemkněte úplnou časovou osu zotavování se 13 milníky a další funkce Bloom+."
           }
         },
         "sv": {
@@ -59795,7 +59795,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemkni celou sadu nástrojů"
+            "value": "Odemkněte všechny nástroje"
           }
         },
         "sv": {
@@ -59896,7 +59896,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odemkni, co přijde, s Bloom+"
+            "value": "Objevte, co dalšího nabízí Bloom+"
           }
         },
         "sv": {
@@ -60199,7 +60199,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Upgradovat"
+            "value": "Přejít na Bloom+"
           }
         },
         "sv": {
@@ -60294,7 +60294,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Slouží k odhadu, kolik peněz a nikotinových sáčků ušetříš a kolika dávkám nikotinu se vyhneš, když žiješ bez nikotinu."
+            "value": "Tyto údaje slouží k odhadu ušetřených peněz a množství sáčků a nikotinu, kterým se vyhnete, když zůstanete bez nikotinu."
           }
         },
         "sv": {
@@ -60395,7 +60395,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sledujte, jak se vaše úspory sčítají."
+            "value": "Sledujte, jak rostou vaše úspory."
           }
         },
         "sv": {
@@ -60950,7 +60950,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Co jsem dnes udělal, za co mi budoucí já poděkuje?"
+            "value": "Co z dneška ocení moje budoucí já?"
           }
         },
         "sv": {
@@ -61354,7 +61354,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jaké spouštěče se dnes objevily a jak jsem reagoval?"
+            "value": "Jaké spouštěče se dnes objevily a jak se mi podařilo reagovat?"
           }
         },
         "sv": {
@@ -61657,7 +61657,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Co ti zůstane"
+            "value": "Co vám zůstane"
           }
         },
         "sv": {
@@ -61758,7 +61758,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Který vztah se zlepšuje od té doby, co jsem přestal?"
+            "value": "Který vztah se zlepšil od chvíle, kdy žiju bez nikotinu?"
           }
         },
         "sv": {
@@ -62061,7 +62061,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Za co jsem dnes vděčný?"
+            "value": "Za co dnes cítím vděčnost?"
           }
         },
         "sv": {
@@ -62263,7 +62263,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kdy vaše cesta bez nikotinu začala?"
+            "value": "Kdy začala vaše cesta k životu bez nikotinu?"
           }
         },
         "sv": {
@@ -62364,7 +62364,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Když udeří a co je vyvolá."
+            "value": "Kdy se nutkání objevují a co je spouští."
           }
         },
         "sv": {
@@ -62465,7 +62465,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Když váš %1$@ hit a co je spustí"
+            "value": "Kdy se vaše %1$@ objevují a co je spouští"
           }
         },
         "sv": {
@@ -62566,7 +62566,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kdy jsem se dnes cítil nejsilnější?"
+            "value": "Kdy se dnes projevila moje největší síla?"
           }
         },
         "sv": {
@@ -62667,7 +62667,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kde si všímám, že se chutě schovávají?"
+            "value": "V jakých situacích si všímám nutkání?"
           }
         },
         "sv": {
@@ -63071,7 +63071,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Při zapnutých oznámeních ti připomeneme konec zkušební doby."
+            "value": "Pokud zapnete oznámení, připomeneme vám konec zkušebního období."
           }
         },
         "sv": {
@@ -63172,7 +63172,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Během několika hodin po posledním nikotinovém sáčku odezní nikotinová špička a tep i krevní tlak se začnou vracet k výchozím hodnotám."
+            "value": "Během několika hodin po posledním nikotinovém sáčku odezní prudký nárůst nikotinu a tep i krevní tlak se začnou vracet k obvyklým hodnotám."
           }
         },
         "sv": {
@@ -63772,7 +63772,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "TVOJE PENÍZE ZŮSTANOU"
+            "value": "VAŠE PENÍZE ZŮSTÁVAJÍ"
           }
         },
         "sv": {
@@ -63873,7 +63873,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "TVOJE ÚSPORY"
+            "value": "VAŠE ÚSPORY"
           }
         },
         "sv": {
@@ -64378,7 +64378,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teď nemusíš dělat nic jiného. Jen tu zůstaň a dýchej."
+            "value": "Teď nemusíte dělat nic dalšího. Zůstaňte tady a dýchejte."
           }
         },
         "sv": {
@@ -64479,7 +64479,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ušetříš"
+            "value": "Ušetříte"
           }
         },
         "sv": {
@@ -64636,7 +64636,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Každý rok ti zůstane %1$@ místo útraty za %2$@. Vyzkoušej Bloom+ zdarma na %#@n@."
+            "value": "Každý rok vám zůstane %1$@ místo útraty za %2$@. Vyzkoušejte Bloom+ zdarma na %#@n@."
           },
           "substitutions": {
             "n": {
@@ -64665,7 +64665,7 @@
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dní"
+                      "value": "%arg dne"
                     }
                   }
                 }
@@ -65071,7 +65071,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Každý rok ti zůstane %1$@. Bloom+ stojí %2$@ %3$@."
+            "value": "Každý rok vám zůstane %1$@. Bloom+ stojí %2$@ %3$@."
           }
         },
         "sv": {
@@ -65223,25 +65223,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nutkání máš za sebou."
+                  "value": "Zvládli jste %1$lld nutkání."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nutkání máš za sebou."
+                  "value": "Zvládli jste %1$lld nutkání."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nutkání máš za sebou."
+                  "value": "Zvládli jste %1$lld nutkání."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nutkání máš za sebou."
+                  "value": "Zvládli jste %1$lld nutkání."
                 }
               }
             }
@@ -65525,7 +65525,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jedno nutkání máš za sebou."
+            "value": "Zvládli jste jedno nutkání."
           }
         },
         "sv": {
@@ -65626,7 +65626,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zůstal jsi s tím pro %1$@."
+            "value": "Vydrželi jste %1$@."
           }
         },
         "sv": {
@@ -65727,7 +65727,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Budete mít denní čítač, kalendář, chtíč a váš strom."
+            "value": "Počítadlo dnů, kalendář, režim zvládání nutkání a váš strom zůstanou zdarma. Roční výhled, úplná časová osa zotavování, deník a další druhy zůstanou zamčené."
           }
         },
         "sv": {
@@ -65879,25 +65879,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Máš za sebou %lld den. Zapiš dnešek a zalij bonsaj."
+                  "value": "Jste bez nikotinu už %1$lld den. Zaznamenejte dnešek a zalijte bonsaj."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Máš za sebou %lld dny. Zapiš dnešek a zalij bonsaj."
+                  "value": "Jste bez nikotinu už %1$lld dny. Zaznamenejte dnešek a zalijte bonsaj."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Máš za sebou %lld dne. Zapiš dnešek a zalij bonsaj."
+                  "value": "Jste bez nikotinu už %1$lld dní. Zaznamenejte dnešek a zalijte bonsaj."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Máš za sebou %lld dní. Zapiš dnešek a zalij bonsaj."
+                  "value": "Jste bez nikotinu už %1$lld dne. Zaznamenejte dnešek a zalijte bonsaj."
                 }
               }
             }
@@ -66181,7 +66181,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatím máš ušetřeno %1$@."
+            "value": "Zatím jste ušetřili %1$@."
           }
         },
         "sv": {
@@ -66276,7 +66276,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Díky dnům bez nikotinu už máš ušetřeno %1$@. Bloom+ ti pomůže pokračovat."
+            "value": "Během života bez nikotinu jste už ušetřili %1$@. S dalšími nástroji Bloom+ můžete v pokroku pokračovat."
           }
         },
         "sv": {
@@ -66478,7 +66478,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mladý bonsaj"
+            "value": "Fáze mladé bonsaje"
           }
         },
         "sv": {
@@ -66579,7 +66579,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaše %1$@ vzory"
+            "value": "Vzorce nutkání: %1$@"
           }
         },
         "sv": {
@@ -66680,7 +66680,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje zkušební doba Bloom+ brzy končí"
+            "value": "Zkušební období Bloom+ brzy skončí"
           }
         },
         "sv": {
@@ -66781,7 +66781,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj strom"
+            "value": "Váš strom"
           }
         },
         "sv": {
@@ -66882,7 +66882,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje bonsaj dozrála v plnou listnatou korunu."
+            "value": "Na vaší bonsaji vyrostla plná, košatá koruna."
           }
         },
         "sv": {
@@ -66983,7 +66983,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje bonsaj se mění v mladý strom."
+            "value": "Vaše bonsaj se rozrůstá v mladý strom."
           }
         },
         "sv": {
@@ -67084,7 +67084,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nejvíc nutkání míváš v den %1$@."
+            "value": "Den, kdy se nutkání objevují nejčastěji: %1$@."
           }
         },
         "sv": {
@@ -67185,7 +67185,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Počítadlo po uklouznutí začne znovu. Dnešní uklouznutí znamená den 1; u dřívějšího se započítají dny od té doby. Nejdelší série odpovídá opraveným datům."
+            "value": "Po uklouznutí se počítadlo spustí znovu. Dnešní uklouznutí znamená 1. den; u dřívějšího se započítají dny od něj. Nejdelší série se přepočítá podle opravených dat."
           }
         },
         "sv": {
@@ -67438,25 +67438,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Počítadlo začíná znovu. Strom si ponechal %1$lld den růstu."
+                  "value": "Počítadlo se spustí znovu. Strom si uchoval %1$lld den růstu."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Počítadlo začíná znovu. Strom si ponechal %1$lld dny růstu."
+                  "value": "Počítadlo se spustí znovu. Strom si uchoval %1$lld dny růstu."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Počítadlo začíná znovu. Strom si ponechal %1$lld dní růstu."
+                  "value": "Počítadlo se spustí znovu. Strom si uchoval %1$lld dní růstu."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Počítadlo začíná znovu. Strom si ponechal %1$lld dne růstu."
+                  "value": "Počítadlo se spustí znovu. Strom si uchoval %1$lld dne růstu."
                 }
               }
             }
@@ -67740,7 +67740,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nutkání obvykle odezní asi za %1$@."
+            "value": "Nutkání obvykle odezní přibližně za %1$@."
           }
         },
         "sv": {
@@ -67841,7 +67841,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvá data zůstanou v tomto zařízení"
+            "value": "Vaše data zůstávají v tomto zařízení"
           }
         },
         "sv": {
@@ -67942,7 +67942,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Počítadlo dní začne po uklouznutí znovu. Strom si část růstu ponechá a historie v kalendáři i dokončené stromy zůstanou. Nejdelší série odpovídá opraveným datům."
+            "value": "Po uklouznutí se počítadlo dnů spustí znovu. Strom si uchová část růstu, historie v kalendáři i dokončené stromy zůstanou. Nejdelší série se přepočítá podle opravených dat."
           }
         },
         "sv": {
@@ -68043,7 +68043,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Počítadlo dní začne znovu od nuly. Historie zůstane."
+            "value": "Počítadlo dnů se vynuluje, vaše historie zůstane zachována."
           }
         },
         "sv": {
@@ -68144,7 +68144,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Počítadlo dnů, režim zvládání chutí, widget a aplikace pro Apple Watch zůstanou navždy zdarma."
+            "value": "Počítadlo dnů, režim zvládání nutkání, widget a aplikace pro Apple Watch zůstanou navždy zdarma."
           }
         },
         "sv": {
@@ -68245,7 +68245,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj záznam"
+            "value": "Váš záznam"
           }
         },
         "sv": {
@@ -68346,7 +68346,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj první klíček prorazil půdu."
+            "value": "Váš první klíček prorazil půdu."
           }
         },
         "sv": {
@@ -68447,7 +68447,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zahrada, deník, zdravotní časová osa a úspory. Vše, co ti pomáhá zůstat bez nikotinu."
+            "value": "Zahrada, deník, časová osa zotavování a úspory. Vše, co vám pomáhá zůstat bez nikotinu."
           }
         },
         "sv": {
@@ -68548,7 +68548,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poslední změnu se v tomto zařízení nepodařilo uložit, takže po zavření aplikace může chybět. Obvykle je to plným úložištěm. Uvolni trochu místa, pak to zkontroluj a zkus znovu."
+            "value": "Poslední změnu se v tomto zařízení nepodařilo uložit, takže po zavření aplikace může chybět. Obvykle je úložiště plné. Uvolněte místo, ověřte změnu a zkuste to znovu."
           }
         },
         "sv": {
@@ -68649,7 +68649,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Před uklouznutím ti obvykle klesá nálada"
+            "value": "Před uklouznutím vám často klesá nálada"
           }
         },
         "sv": {
@@ -68750,7 +68750,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ve dvou dnech před uklouznutím byla tvoje nálada nižší než v ostatních zaznamenaných dnech. Může být užitečné všimnout si toho včas."
+            "value": "Ve dvou dnech před uklouznutím byla vaše nálada nižší než v ostatních zaznamenaných dnech. Může vám pomoci všimnout si tohoto vzorce včas."
           }
         },
         "sv": {
@@ -68845,7 +68845,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dny bez nikotinu se nasčítaly. Část úspor můžeš věnovat nástrojům, které tě podpoří."
+            "value": "Dny bez nikotinu se sčítají. Část úspor můžete věnovat nástrojům, které podpoří váš pokrok."
           }
         },
         "sv": {
@@ -68946,7 +68946,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje dřívější série zůstanou v záznamu"
+            "value": "Vaše předchozí série zůstávají v záznamu"
           }
         },
         "sv": {
@@ -69047,7 +69047,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje vzorce"
+            "value": "Vaše vzorce"
           }
         },
         "sv": {
@@ -69148,7 +69148,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj závazek"
+            "value": "Váš závazek"
           }
         },
         "sv": {
@@ -69249,7 +69249,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj pokrok"
+            "value": "Váš pokrok"
           }
         },
         "sv": {
@@ -69350,7 +69350,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Váš nákup čeká na schválení. Bloom+ odemyká sám, jakmile je potvrzeno, a vy můžete pokračovat pomocí bezplatné verze mezitím."
+            "value": "Váš nákup čeká na schválení. Bloom+ se automaticky odemkne po potvrzení nákupu. Mezitím můžete dál používat bezplatnou verzi."
           }
         },
         "sv": {
@@ -69451,7 +69451,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj strom se přidává do háje"
+            "value": "Váš strom se přidává do háje"
           }
         },
         "sv": {
@@ -69603,25 +69603,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechá %1$lld den růstu"
+                  "value": "Váš strom si uchovává %1$lld den růstu"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechá %1$lld dny růstu"
+                  "value": "Váš strom si uchovává %1$lld dny růstu"
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechá %1$lld dní růstu"
+                  "value": "Váš strom si uchovává %1$lld dní růstu"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechá %1$lld dne růstu"
+                  "value": "Váš strom si uchovává %1$lld dne růstu"
                 }
               }
             }
@@ -69956,25 +69956,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechal %1$lld den růstu. Teď začíná první den."
+                  "value": "Váš strom si uchoval %1$lld den růstu. Teď začíná první den."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechal %1$lld dny růstu. Teď začíná první den."
+                  "value": "Váš strom si uchoval %1$lld dny růstu. Teď začíná první den."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechal %1$lld dní růstu. Teď začíná první den."
+                  "value": "Váš strom si uchoval %1$lld dní růstu. Teď začíná první den."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Strom si ponechal %1$lld dne růstu. Teď začíná první den."
+                  "value": "Váš strom si uchoval %1$lld dne růstu. Teď začíná první den."
                 }
               }
             }
@@ -70258,7 +70258,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaše obvyklá"
+            "value": "Vaše obvyklá krabička"
           }
         },
         "sv": {
@@ -70763,7 +70763,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "chuť"
+            "value": "nutkání"
           }
         },
         "sv": {
@@ -70864,7 +70864,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "chutě"
+            "value": "nutkání"
           }
         },
         "sv": {
@@ -71167,7 +71167,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Všechny funkce"
+            "value": "Plný přístup k Bloom+"
           }
         },
         "sv": {
@@ -72019,7 +72019,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sáčků denně"
+            "value": "nikotinových sáčků denně"
           }
         },
         "sv": {
@@ -72120,7 +72120,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Překonané nutkání"
+            "value": "překonané nutkání"
           }
         },
         "sv": {
@@ -72221,7 +72221,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Překonaná nutkání"
+            "value": "překonaná nutkání"
           }
         },
         "sv": {
@@ -72423,7 +72423,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvoje zahrada roste. Zapiš dnešní den, pokud jsi dnes bez nikotinu."
+            "value": "Vaše zahrada roste. Zaznamenejte dnešek, pokud jste bez nikotinu."
           }
         },
         "sv": {
@@ -72524,7 +72524,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tvůj strom se přidává do háje. Začíná růst nová sazenice."
+            "value": "Váš strom se přidává do háje. Začíná růst nová sazenice."
           }
         },
         "sv": {
@@ -72676,25 +72676,25 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji je teď %1$lld strom. Začíná růst nová sazenice."
+                  "value": "V háji máte nyní %1$lld strom. Začíná růst nová sazenice."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji jsou teď %1$lld stromy. Začíná růst nová sazenice."
+                  "value": "V háji máte nyní %1$lld stromy. Začíná růst nová sazenice."
                 }
               },
               "many": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji je teď %1$lld stromů. Začíná růst nová sazenice."
+                  "value": "V háji máte nyní %1$lld stromů. Začíná růst nová sazenice."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "V háji je teď %1$lld stromu. Začíná růst nová sazenice."
+                  "value": "V háji máte nyní %1$lld stromu. Začíná růst nová sazenice."
                 }
               }
             }
