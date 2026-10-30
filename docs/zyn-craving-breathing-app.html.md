@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/zyn-craving-breathing-app.html
 
 ## Is there an app for Zyn cravings with guided breathing?
 
-By Jack Wallner · Last updated October 29, 2026
+By Jack Wallner · Last updated October 30, 2026
 
 **Yes. [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-zyn-craving-breathing-app&mt=8) has a free craving mode: a full-screen box breathing session you open when an urge for a Zyn or pouch hits.** It runs for two minutes by default, you can add a minute at a time up to ten, and afterwards you can note how strong the craving was and what set it off. There is no paywall anywhere in the flow.
 
@@ -29,7 +29,7 @@ Each session is saved on your phone. With the optional Bloom+ upgrade, the app r
 
 ## Is the craving breathing free?
 
-Yes. Craving mode, the trigger and intensity notes, and the running count of cravings you have ridden out are free. So are the day counter, calendar, garden, widgets and Apple Watch app. Bloom+ adds craving patterns, the full recovery timeline, journal, achievements, savings and more garden species. See the [full free and Bloom+ list](https://jackwallner.com/ios/quitzyn/free-quit-nicotine-pouches-app-no-account.html).
+Yes. Craving mode, the trigger and intensity notes, and the running count of cravings you have ridden out are free. So are the day counter, calendar, garden, achievements, widgets and Apple Watch app. Bloom+ adds craving patterns, all 13 health milestones, unlimited journal entries, money and pouches avoided, and all 6 bonsai species. See the [full free and Bloom+ list](https://jackwallner.com/ios/quitzyn/free-quit-nicotine-pouches-app-no-account.html).
 
 ## Can I start it from the Watch or a widget?
 
@@ -42,6 +42,22 @@ It is one breathing pattern with no audio guide, coach or chat. Quit Zyn is buil
 Free craving mode on iPhone. No account needed.
 
 [Download Quit Zyn](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-zyn-craving-breathing-app&mt=8)
+
+## Quit Zyn at a glance
+
+Quit Zyn counts your days since you quit Zyn, snus or other nicotine pouches. When you slip, the counter restarts from that day and your calendar, longest streak and total nicotine-free days stay. It's free to use, with no account.
+
+Free from the first launch, with no time limit: the day counter, calendar, check-in and reminder, craving mode, slip logging, the garden with one bonsai species, achievements, widgets, the Apple Watch app, the first 5 health milestones and one journal entry.
+
+Bloom+ adds:
+
+- Your craving patterns: the hours and weekdays cravings hit, what sets them off and how long they last.
+- All 13 health milestones, from 2 hours to 1 year without nicotine, each with what the American Cancer Society, National Cancer Institute or another public health source reports at that point, and a link to it.
+- Unlimited journal entries with prompts.
+- Money, pouches and nicotine avoided, worked out from your own daily cost and pouch count.
+- All 6 bonsai species.
+
+Bloom+ is a monthly or yearly subscription, each with a 1-week free trial for eligible new subscribers, or a one-time lifetime purchase. Prices are shown in the app.
 
 ## Frequently asked questions
 

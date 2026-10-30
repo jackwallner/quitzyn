@@ -14,7 +14,7 @@ iPhone · Apple Watch · Widgets
 
 ## What does Quit Zyn include?
 
-The counter and garden are free. Bloom+ adds the full timeline, journal, achievements, and savings.
+The counter, garden, craving mode and achievements are free. Bloom+ adds craving patterns, all 13 health milestones, the full journal, savings and more bonsai species.
 
 ### Day counter
 
@@ -47,8 +47,6 @@ Included with Pro
 ### Achievements
 
 9 milestones across time (First Step, Quarter Master, Year One) and check-in streaks (Perfect Week, Diamond Discipline).
-
-Included with Pro
 
 ### Money, pouches & nicotine saved
 
@@ -84,7 +82,7 @@ An optional upgrade for people who want the full picture. Monthly, yearly, or a 
 
 **Journal.** Daily reflection prompts, freeform writing, and a feeling picker. Every entry stays local on your device.
 
-**Achievements.** All 9 milestones across both elapsed time (First Step, Quarter Master, Year One) and check-in consistency (Perfect Week, Diamond Discipline).
+**Craving patterns.** The hours and weekdays your cravings hit, what sets them off and how long they last.
 
 **Money, Pouches & Nicotine Saved.** A running total of what quitting has actually saved you, using your own cost and pouch estimates, plus all 6 garden species instead of the default one.
 

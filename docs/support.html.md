@@ -25,9 +25,9 @@ Email: [jackwallner+qz@gmail.com](mailto:jackwallner+qz@gmail.com)
 
 - **Today:** Day counter, garden, check-in button, next milestone, next health benefit.
 - **Calendar:** Color-coded monthly view: green (nicotine-free), red (slip), gray (not checked in).
-- **Health:** 13 health benefits on a recovery timeline from the ACS, NCI, and AHA. The first 2 are free; Bloom+ adds the other 11.
-- **Journal:** Daily reflection prompts with a feeling picker. Requires Pro.
-- **Achievements:** 9 milestones across time and check-in streaks. Requires Pro.
+- **Health:** 13 health benefits on a recovery timeline from the ACS, NCI, and AHA. The first 5 are free; Bloom+ adds the other 8.
+- **Journal:** Daily reflection prompts with a feeling picker. Your first entry is free; Bloom+ unlocks the rest.
+- **Achievements:** 9 milestones across time and check-in streaks. Free.
 - **Stats:** Money, pouches, and nicotine saved since starting. Requires Pro.
 - **Garden:** Virtual garden with 6 bonsai styles plus decorations you earn over time. The Traditional bonsai is free; Cascading, Cherry Blossom, Japanese Maple, Black Pine, and Windswept come with Bloom+.
 

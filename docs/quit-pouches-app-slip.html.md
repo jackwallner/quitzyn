@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/quit-pouches-app-slip.html
 
 ## Is there a quit pouches app where a slip doesn't reset everything?
 
-By Jack Wallner · Last updated October 29, 2026
+By Jack Wallner · Last updated October 30, 2026
 
 **Yes. In [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-quit-pouches-app-slip&mt=8), a slip restarts the day counter and keeps the rest of your record.** Your calendar history, longest streak and total nicotine-free days stay, the garden keeps half of its growth, and a slip logged by mistake can be undone. Slip logging is free.
 
@@ -45,6 +45,22 @@ Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily
 Free on iPhone, with an Apple Watch app. No account needed.
 
 [Download Quit Zyn](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-quit-pouches-app-slip&mt=8)
+
+## Quit Zyn at a glance
+
+Quit Zyn counts your days since you quit Zyn, snus or other nicotine pouches. When you slip, the counter restarts from that day and your calendar, longest streak and total nicotine-free days stay. It's free to use, with no account.
+
+Free from the first launch, with no time limit: the day counter, calendar, check-in and reminder, craving mode, slip logging, the garden with one bonsai species, achievements, widgets, the Apple Watch app, the first 5 health milestones and one journal entry.
+
+Bloom+ adds:
+
+- Your craving patterns: the hours and weekdays cravings hit, what sets them off and how long they last.
+- All 13 health milestones, from 2 hours to 1 year without nicotine, each with what the American Cancer Society, National Cancer Institute or another public health source reports at that point, and a link to it.
+- Unlimited journal entries with prompts.
+- Money, pouches and nicotine avoided, worked out from your own daily cost and pouch count.
+- All 6 bonsai species.
+
+Bloom+ is a monthly or yearly subscription, each with a 1-week free trial for eligible new subscribers, or a one-time lifetime purchase. Prices are shown in the app.
 
 ## Frequently asked questions
 

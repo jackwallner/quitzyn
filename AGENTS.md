@@ -64,10 +64,9 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
 ## Pro entitlement (`"pro"`)
 - Free: day counter, single check-in/day, calendar, basic garden, first 5 health
   benefits (`HealthView.freeRevealCount`), the first journal entry, craving mode,
-  slips, widgets, and the watch app.
+  slips, achievements (unlocked by days for everyone), widgets, and the watch app.
 - Pro: full health timeline + sources, journal compose beyond the first entry,
-  achievement unlocks, money/pouches/nicotine saved, craving patterns, additional
-  garden species.
+  money/pouches/nicotine saved, craving patterns, additional garden species.
 
 ## App-specific notes
 - Ratings: no in-app rating question (App Review 5.6.1). After a **daily

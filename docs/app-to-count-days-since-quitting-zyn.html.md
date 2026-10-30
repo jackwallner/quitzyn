@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/app-to-count-days-since-quitting-z
 
 ## Is there an app that counts days since I quit Zyn?
 
-By Jack Wallner · Last updated October 29, 2026
+By Jack Wallner · Last updated October 30, 2026
 
 **Yes. [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-app-to-count-days-since-quitting-zyn&mt=8) is a free iPhone app that counts the days since your last Zyn.** You set your quit date, and the count shows in the app, in Home Screen and Lock Screen widgets, and on an Apple Watch app. There is no account to create, and the counter, calendar, widgets and Watch app are free.
 
@@ -43,11 +43,11 @@ The counting itself is free. Bloom+ is optional and adds extras on top.
 | Slip logging with undo | Yes | Yes |
 | Home Screen and Lock Screen widgets | Yes | Yes |
 | Apple Watch app | Yes | Yes |
-| Nicotine recovery timeline (13 milestones with sources) | First 5 | All 13 |
+| Health milestones, 2 hours to 1 year, with sources | First 5 | All 13 |
 | Journal | First entry | Unlimited, with prompts |
 | Craving patterns: when urges hit, what sets them off, how long they last | No | Yes |
 | Money, pouches and nicotine avoided | No | Yes |
-| Achievements | No | Yes |
+| Achievements | Yes | Yes |
 
 Bloom+ is a monthly or yearly subscription, with a free trial for eligible new subscribers, or a one-time lifetime purchase. Prices show in the app before you buy and vary by region.
 
@@ -58,6 +58,22 @@ Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily
 Free on iPhone, with an Apple Watch app. No account needed.
 
 [Download Quit Zyn](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-app-to-count-days-since-quitting-zyn&mt=8)
+
+## Quit Zyn at a glance
+
+Quit Zyn counts your days since you quit Zyn, snus or other nicotine pouches. When you slip, the counter restarts from that day and your calendar, longest streak and total nicotine-free days stay. It's free to use, with no account.
+
+Free from the first launch, with no time limit: the day counter, calendar, check-in and reminder, craving mode, slip logging, the garden with one bonsai species, achievements, widgets, the Apple Watch app, the first 5 health milestones and one journal entry.
+
+Bloom+ adds:
+
+- Your craving patterns: the hours and weekdays cravings hit, what sets them off and how long they last.
+- All 13 health milestones, from 2 hours to 1 year without nicotine, each with what the American Cancer Society, National Cancer Institute or another public health source reports at that point, and a link to it.
+- Unlimited journal entries with prompts.
+- Money, pouches and nicotine avoided, worked out from your own daily cost and pouch count.
+- All 6 bonsai species.
+
+Bloom+ is a monthly or yearly subscription, each with a 1-week free trial for eligible new subscribers, or a one-time lifetime purchase. Prices are shown in the app.
 
 ## Frequently asked questions
 

@@ -6,9 +6,9 @@ Web page: https://jackwallner.com/ios/quitzyn/free-quit-nicotine-pouches-app-no-
 
 ## Is there a free app to quit nicotine pouches with no account?
 
-By Jack Wallner · Last updated October 29, 2026
+By Jack Wallner · Last updated October 30, 2026
 
-**Yes. [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-free-quit-nicotine-pouches-app-no-account&mt=8) is free on iPhone and opens straight to setup, with no sign-up, email or login.** The day counter, daily check-in, calendar, garden, craving breathing mode, slip logging, widgets and Apple Watch app are all free. An optional upgrade called Bloom+ adds extras such as money saved and the full recovery timeline.
+**Yes. [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-free-quit-nicotine-pouches-app-no-account&mt=8) is free on iPhone and opens straight to setup, with no sign-up, email or login.** The day counter, daily check-in, calendar, garden, craving breathing mode, slip logging, widgets and Apple Watch app are all free. An optional upgrade called Bloom+ adds extras such as money saved and all 13 health milestones.
 
 **Disclosure:** Jack Wallner makes Quit Zyn, so this page describes his own app. Features and what is free were checked against the app as of October 2026.
 
@@ -27,11 +27,11 @@ Everything in the Free column below stays free with no time limit. Bloom+ adds t
 | Slip logging with undo | Yes | Yes |
 | Home Screen and Lock Screen widgets | Yes | Yes |
 | Apple Watch app | Yes | Yes |
-| Nicotine recovery timeline (13 milestones with sources) | First 5 | All 13 |
+| Health milestones, 2 hours to 1 year, with sources | First 5 | All 13 |
 | Journal | First entry | Unlimited, with prompts |
 | Craving patterns: when urges hit, what sets them off, how long they last | No | Yes |
 | Money, pouches and nicotine avoided | No | Yes |
-| Achievements | No | Yes |
+| Achievements | Yes | Yes |
 
 Bloom+ is a monthly or yearly subscription, with a free trial for eligible new subscribers, or a one-time lifetime purchase. Prices show in the app before you buy and vary by region.
 
@@ -55,11 +55,27 @@ Free quit pouches app for iPhone. No account needed.
 
 [Download Quit Zyn](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-free-quit-nicotine-pouches-app-no-account&mt=8)
 
+## Quit Zyn at a glance
+
+Quit Zyn counts your days since you quit Zyn, snus or other nicotine pouches. When you slip, the counter restarts from that day and your calendar, longest streak and total nicotine-free days stay. It's free to use, with no account.
+
+Free from the first launch, with no time limit: the day counter, calendar, check-in and reminder, craving mode, slip logging, the garden with one bonsai species, achievements, widgets, the Apple Watch app, the first 5 health milestones and one journal entry.
+
+Bloom+ adds:
+
+- Your craving patterns: the hours and weekdays cravings hit, what sets them off and how long they last.
+- All 13 health milestones, from 2 hours to 1 year without nicotine, each with what the American Cancer Society, National Cancer Institute or another public health source reports at that point, and a link to it.
+- Unlimited journal entries with prompts.
+- Money, pouches and nicotine avoided, worked out from your own daily cost and pouch count.
+- All 6 bonsai species.
+
+Bloom+ is a monthly or yearly subscription, each with a 1-week free trial for eligible new subscribers, or a one-time lifetime purchase. Prices are shown in the app.
+
 ## Frequently asked questions
 
 ### Is Quit Zyn really free?
 
-The counter, check-in, calendar, garden, craving mode, slip logging, widgets and Apple Watch app are free with no time limit. Bloom+ is optional and adds the full recovery timeline, journal, achievements, craving patterns, savings and more garden species.
+The counter, check-in, calendar, garden, achievements, craving mode, slip logging, widgets and Apple Watch app are free with no time limit. Bloom+ is optional and adds craving patterns, all 13 health milestones, unlimited journal entries, money and pouches avoided, and all 6 bonsai species.
 
 ### Does it need an email or phone number?
 
