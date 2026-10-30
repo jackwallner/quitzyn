@@ -37,7 +37,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ %2$@"
           }
         },
         "nl": {
@@ -2726,7 +2726,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ maksaa suunnilleen %2$lld½ päivän nikotiinipussien verran."
+            "value": "%1$@ maksaa suunnilleen %2$lld ja puolen päivän nikotiinipussien hinnan verran."
           }
         },
         "nl": {
@@ -2933,7 +2933,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ maksaa suunnilleen niin paljon kuin nikotiinipussit %#@n@ ajalta."
+            "value": "%1$@ maksaa suunnilleen %#@n@ nikotiinipussien hinnan verran."
           },
           "substitutions": {
             "n": {
@@ -3306,7 +3306,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ maksaa suunnilleen puolentoista päivän nikotiinipussien verran."
+            "value": "%1$@ maksaa suunnilleen puolentoista päivän nikotiinipussien hinnan verran."
           }
         },
         "nl": {
@@ -3401,7 +3401,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ maksaa suunnilleen päivän nikotiinipussien verran."
+            "value": "%1$@ maksaa suunnilleen päivän nikotiinipussien hinnan verran."
           }
         },
         "nl": {
@@ -3799,7 +3799,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vältät %1$@ nikotiinipussia. Kehosi ei siis tarvitse käsitellä niiden nikotiinia."
+            "value": "Vältät %1$@ nikotiinipussia. Kehosi ei siis joudu käsittelemään niiden nikotiinia."
           }
         },
         "nl": {
@@ -4203,7 +4203,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Kertaosto. Pysyvä käyttö, ei tilausta."
+            "value": "%1$@. Kertaostos. Käyttöoikeus koko eliniäksi, ei tilausta."
           }
         },
         "nl": {
@@ -4405,7 +4405,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ ratsasti tähän mennessä"
+            "value": "%1$lld %2$@ selätetty tähän mennessä."
           }
         },
         "nl": {
@@ -4593,13 +4593,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pv"
+                  "value": "%1$lld päivä"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pv"
+                  "value": "%1$lld päivää"
                 }
               }
             }
@@ -4946,13 +4946,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pv maksutta"
+                  "value": "%1$lld päivä maksutta"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pv maksutta"
+                  "value": "%1$lld päivää maksutta"
                 }
               }
             }
@@ -5293,13 +5293,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "päivä"
+                  "value": "%1$lld päivä"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "päivää"
+                  "value": "%1$lld päivää"
                 }
               }
             }
@@ -6346,13 +6346,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld päivä Bloom+:aa ilmaiseksi"
+                  "value": "%1$lld päivä Bloom+:aa maksutta"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld päivää Bloom+:aa ilmaiseksi"
+                  "value": "%1$lld päivää Bloom+:aa maksutta"
                 }
               }
             }
@@ -6606,7 +6606,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld viimeisestä %2$lld:sta päättyi näin."
+            "value": "Viimeisistä %2$lld:stä näin päättyi %1$lld."
           }
         },
         "nl": {
@@ -7147,7 +7147,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld sekuntia"
+                  "value": "%1$lld sekunti"
                 }
               },
               "other": {
@@ -7500,13 +7500,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld puu kasvatettu"
+                  "value": "%1$lld kasvanut puu"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld puuta kasvatettu"
+                  "value": "%1$lld kasvanutta puuta"
                 }
               }
             }
@@ -7853,13 +7853,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld puu kasvatettu lehdossasi"
+                  "value": "Lehdossasi kasvaa %1$lld puu"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld puuta kasvatettu lehdossasi"
+                  "value": "Lehdossasi kasvaa %1$lld puuta"
                 }
               }
             }
@@ -8559,13 +8559,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan kuukausi- ja vuositilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu kuukausi- tai vuositilauksessa."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan kuukausi- ja vuositilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu kuukausi- tai vuositilauksessa."
                 }
               }
             }
@@ -8912,13 +8912,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan kuukausitilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu kuukausitilauksessa."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan kuukausitilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu kuukausitilauksessa."
                 }
               }
             }
@@ -9265,13 +9265,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan vuositilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu vuositilauksessa."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilu %1$lld päivän ajan vuositilauksessa."
+                  "value": "%1$lld päivän maksuton kokeilu vuositilauksessa."
                 }
               }
             }
@@ -9606,13 +9606,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld päivän ajan, sitten %2$@."
+                  "value": "%1$lld päivän maksuton kokeilu, sitten %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld päivän ajan, sitten %2$@."
+                  "value": "%1$lld päivän maksuton kokeilu, sitten %2$@."
                 }
               }
             }
@@ -10300,13 +10300,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld kuukauden ajan, sitten %2$@."
+                  "value": "%1$lld kuukauden maksuton kokeilu, sitten %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld kuukauden ajan, sitten %2$@."
+                  "value": "%1$lld kuukauden maksuton kokeilu, sitten %2$@."
                 }
               }
             }
@@ -10994,13 +10994,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld vuoden ajan, sitten %2$@."
+                  "value": "%1$lld vuoden maksuton kokeilu, sitten %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Maksuton kokeilujakso %1$lld vuoden ajan, sitten %2$@."
+                  "value": "%1$lld vuoden maksuton kokeilu, sitten %2$@."
                 }
               }
             }
@@ -11347,13 +11347,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld hyöty"
+                  "value": "/ %1$lld etua"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld hyödystä"
+                  "value": "/ %1$lld etua"
                 }
               }
             }
@@ -11607,7 +11607,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "0. 00"
+            "value": "0:00"
           }
         },
         "nl": {
@@ -11910,7 +11910,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 nikotiinin talteenoton välitavoitteita lähteineen."
+            "value": "13 nikotiinista toipumisen virstanpylvästä lähteineen."
           }
         },
         "nl": {
@@ -12314,7 +12314,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kukkiva sakura pehmeän vaaleanpunaisen kukinnan peitossa. Terälehdet leijuvat putkesi kasvaessa."
+            "value": "Pehmeän vaaleanpunaisin kukin kukkiva sakura. Terälehtiä leijailee, kun päiväputkesi kasvaa."
           }
         },
         "nl": {
@@ -12617,7 +12617,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pitsimäinen vaahtera lämpimän syksyn punaisessa ja kullassa. Tähdenmuotoiset lehdet leijuvat päivien kertyessä."
+            "value": "Pitsilehtinen vaahtera hehkuu lämpimissä syyspunaisen ja kullan sävyissä. Tähtimäiset lehdet leijailevat päivien karttuessa."
           }
         },
         "nl": {
@@ -13021,7 +13021,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Taimi seisoo pystyssä. Juuret ottavat otteen."
+            "value": "Taimi seisoo ryhdikkäänä. Juuret alkavat tarttua maahan."
           }
         },
         "nl": {
@@ -13122,7 +13122,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lipsahduksen voi perua vain, jos se on tuorein."
+            "value": "Voit perua retkahduksen vain, jos se on kirjauksistasi viimeisin."
           }
         },
         "nl": {
@@ -13930,7 +13930,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nuoret"
+            "value": "Nuoren puun vaihe"
           }
         },
         "nl": {
@@ -14132,7 +14132,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutkimukset yhdistävät vuoden ilman nikotiinia tupakasta erossa pysymiseen ja selvästi pienempään sydän- ja verisuonitautien riskiin. Keskustele terveydestäsi lääkärin kanssa."
+            "value": "Tutkimusten mukaan vuosi ilman nikotiinia ja tupakkaa liittyy selvästi pienempään sydän- ja verisuonitautien riskiin. Keskustele terveydestäsi lääkärin kanssa."
           }
         },
         "nl": {
@@ -14334,7 +14334,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kahden päivän jälkeen nikotiinin heikentämät hermopäätteet alkavat palautua. Monet huomaavat ruoan maistuvan täyteläisemmältä ja tuoksujen erottuvan selvemmin."
+            "value": "Kahden päivän kuluttua nikotiinin turruttamat hermopäätteet alkavat palautua. Monet huomaavat ruoan maistuvan voimakkaammin ja tuoksujen erottuvan selvemmin."
           }
         },
         "nl": {
@@ -14536,7 +14536,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaikki hyödyt avattu"
+            "value": "Kaikki edut avattu"
           }
         },
         "nl": {
@@ -14839,7 +14839,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Melkein ohi. Se mitä on jäljellä, on jo lähdössä."
+            "value": "Melkein ohi. Loputkin ovat poistumassa elimistöstä."
           }
         },
         "nl": {
@@ -15445,7 +15445,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muinaiset vaiheet"
+            "value": "Ikivanhan puun vaihe"
           }
         },
         "nl": {
@@ -16051,7 +16051,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noin kolmantena päivänä fyysiset vieroitusoireet ovat usein voimakkaimmillaan, kun viimeinen nikotiini poistuu elimistöstä. Sen jälkeen himot alkavat yleensä kestää lyhyemmän aikaa ja tuntua lievemmiltä."
+            "value": "Noin kolmantena päivänä fyysiset vieroitusoireet ovat usein voimakkaimmillaan, kun viimeinen nikotiini poistuu elimistöstä. Sen jälkeen nikotiininhimot alkavat yleensä kestää lyhyemmän aikaa ja tuntua lievemmiltä."
           }
         },
         "nl": {
@@ -16152,7 +16152,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noin kahden viikon jälkeen ilman ikeniä vasten pidettyjä nikotiinipusseja suun ärsytys ja tulehdus alkavat hellittää ja kudos alkaa parantua."
+            "value": "Noin kahden viikon kuluttua ilman ikeniä vasten pidettyjä nikotiinipusseja suun ärsytys ja tulehdus alkavat hellittää, ja kudos alkaa toipua."
           }
         },
         "nl": {
@@ -16253,7 +16253,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "BEST-DEAL"
+            "value": "PARAS TARJOUS"
           }
         },
         "nl": {
@@ -16556,7 +16556,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perustuu läpikäymiisi mielitekoihin, ei kaikkien keskiarvoon."
+            "value": "Perustuu selättämiisi nikotiininhimoihin, ei kaikkien keskiarvoon."
           }
         },
         "nl": {
@@ -16960,7 +16960,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uni ja keskittyminen paranevat"
+            "value": "Uni ja keskittyminen kohenevat"
           }
         },
         "nl": {
@@ -17263,7 +17263,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verenkierto ja vireys paranevat."
+            "value": "Verenkierto vilkastuu ja vireys kasvaa."
           }
         },
         "nl": {
@@ -17667,7 +17667,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ koko eliniäksi"
+            "value": "Bloom+ eliniäksi"
           }
         },
         "nl": {
@@ -17768,7 +17768,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+-suunnitelmat eivät ole tilapäisesti käytettävissä. Voit yrittää uudelleen tai jatkaa ilmaiseksi."
+            "value": "Bloom+-tilaukset eivät ole juuri nyt saatavilla. Yritä uudelleen tai jatka maksutta."
           }
         },
         "nl": {
@@ -17869,7 +17869,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ avaa kaikki lajit, joten voit vaihtaa puuta milloin haluat. Putkesi kasvaa, valitsitpa minkä tahansa."
+            "value": "Bloom+ avaa kaikki puulajit, joten voit vaihtaa puuta milloin haluat. Päiväputkesi kasvaa valitsemastasi puusta riippumatta."
           }
         },
         "nl": {
@@ -18273,7 +18273,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsailajit"
+            "value": "Bonsailaji"
           }
         },
         "nl": {
@@ -18374,7 +18374,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai, päivä %lld"
+            "value": "Bonsai, päivä %1$lld"
           }
         },
         "nl": {
@@ -18576,7 +18576,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oksat kurottuvat leveämmälle. Muoto alkaa hahmottua."
+            "value": "Oksat kasvavat leveämmiksi. Puun muoto alkaa hahmottua."
           }
         },
         "nl": {
@@ -18879,7 +18879,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noin kuukauden kohdalla alkuvaiheen vieroitukseen liittyvä ahdistus ja ärtyneisyys yleensä vähenevät, kun aivojen dopamiiniviestintä tasapainottuu. Kokemukset vaihtelevat."
+            "value": "Noin kuukauden kuluttua vieroituksen alkuvaiheen ahdistus ja ärtyneisyys yleensä hellittävät, kun aivojen dopamiiniviestintä tasapainottuu. Kokemukset vaihtelevat."
           }
         },
         "nl": {
@@ -19182,7 +19182,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Viikon kohdalla uni ja keskittyminen yleensä paranevat, kun aivot sopeutuvat arkeen ilman säännöllisiä nikotiiniannoksia. Kokemukset vaihtelevat."
+            "value": "Viikon kohdalla uni ja keskittyminen yleensä kohenevat, kun aivot sopeutuvat arkeen ilman säännöllisiä nikotiiniannoksia. Kokemukset vaihtelevat."
           }
         },
         "nl": {
@@ -19384,7 +19384,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Soita tai tekstaa 988 · 24/7 · USA"
+            "value": "Soita tai lähetä tekstiviesti numeroon 988 · ympäri vuorokauden · Yhdysvallat"
           }
         },
         "nl": {
@@ -19485,7 +19485,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kumoa"
+            "value": "Peruuta"
           }
         },
         "nl": {
@@ -19990,7 +19990,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muutos nikotiinittomaan"
+            "value": "Muuta nikotiinittomaksi"
           }
         },
         "nl": {
@@ -20091,7 +20091,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muuta lipsahdukseksi"
+            "value": "Muuta retkahdukseksi"
           }
         },
         "nl": {
@@ -20495,7 +20495,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaus"
+            "value": "Päivämerkintä"
           }
         },
         "nl": {
@@ -20596,7 +20596,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjattu"
+            "value": "Päivä merkitty"
           }
         },
         "nl": {
@@ -20899,7 +20899,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verenkierto paranee"
+            "value": "Verenkierto kohenee"
           }
         },
         "nl": {
@@ -22717,7 +22717,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lasketaan matkaasi. Ei vielä kirjattu."
+            "value": "Lasketaan mukaan matkaasi. Et ole vielä tehnyt päivämerkintää."
           }
         },
         "nl": {
@@ -22818,7 +22818,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Himo käy huipussa ja laantuu"
+            "value": "Nikotiininhimot voimistuvat ja hellittävät"
           }
         },
         "nl": {
@@ -22919,7 +22919,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Himot vuorokaudenajan mukaan"
+            "value": "Nikotiininhimot vuorokaudenajan mukaan"
           }
         },
         "nl": {
@@ -23222,7 +23222,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kasvaa nyt"
+            "value": "Kasvaa parhaillaan"
           }
         },
         "nl": {
@@ -23525,7 +23525,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivän kirjaus"
+            "value": "Päivämerkintä"
           }
         },
         "nl": {
@@ -23626,7 +23626,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivittäinen kirjaus 7 päivää putkeen."
+            "value": "Päivämerkintä seitsemänä päivänä peräkkäin."
           }
         },
         "nl": {
@@ -23828,7 +23828,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivittäiset päiväkirjakysymykset silloin, kun niitä eniten tarvitset, sekä kaikki muu Bloom+."
+            "value": "Päiväkirjan kysymyksiä silloin, kun tarvitset niitä eniten, sekä kaikki muu Bloom+."
           }
         },
         "nl": {
@@ -25444,7 +25444,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poista Bloom+-ohitus"
+            "value": "Poista Bloom+-testiohitus käytöstä"
           }
         },
         "nl": {
@@ -25747,7 +25747,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajaessa"
+            "value": "Ajaminen"
           }
         },
         "nl": {
@@ -26050,7 +26050,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ota Bloom+-ohitus käyttöön"
+            "value": "Ota Bloom+-testiohitus käyttöön"
           }
         },
         "nl": {
@@ -26454,7 +26454,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jokainen läpikäymäsi mieliteko päättyi ilman nikotiinipussia."
+            "value": "Jokainen selättämäsi nikotiininhimo päättyi ilman nikotiinipussia."
           }
         },
         "nl": {
@@ -26555,7 +26555,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jäljität jokaisen dollarin ja pussin."
+            "value": "Seuraa säästämiäsi dollareita ja käyttämättä jääviä nikotiinipusseja."
           }
         },
         "nl": {
@@ -26757,7 +26757,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jokainen laskemasi nikotiiniton päivä on yhä tärkeä."
+            "value": "Kaikki kirjaamasi nikotiinittomat päivät lasketaan yhä."
           }
         },
         "nl": {
@@ -26858,7 +26858,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joka kerta kun kestät nikotiininhimon, sivu oppii, milloin se iskee, mikä laukaisee sen ja kuinka kauan se kestää."
+            "value": "Jokaisesta selättämästäsi nikotiininhimosta sivulle kertyy tietoa siitä, milloin ne iskevät, mikä niitä laukaisee ja kuinka kauan ne kestävät."
           }
         },
         "nl": {
@@ -26959,7 +26959,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaikki työkalut, jotka pitävät putken näkyvissä, auki jo tänään."
+            "value": "Avaa jo tänään kaikki työkalut, joiden avulla näet päiväputkesi."
           }
         },
         "nl": {
@@ -27147,13 +27147,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kaikki työkalut, jotka pitävät putken näkyvissä. Ei veloitusta %lld päivään."
+                  "value": "Kaikki työkalut pitävät päiväputkesi näkyvissä. Sinua ei veloiteta %1$lld päivään."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kaikki työkalut, jotka pitävät putken näkyvissä. Ei veloitusta %lld päivään."
+                  "value": "Kaikki työkalut pitävät päiväputkesi näkyvissä. Sinua ei veloiteta %1$lld päivään."
                 }
               }
             }
@@ -27413,7 +27413,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaikki työkalut, jotka pitävät putken näkyvissä. Tänään ei veloiteta mitään."
+            "value": "Kaikki työkalut pitävät päiväputkesi näkyvissä. Sinua ei veloiteta tänään."
           }
         },
         "nl": {
@@ -27817,7 +27817,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "MAKSUTON KOKEILU"
+            "value": "MAKSUTON"
           }
         },
         "nl": {
@@ -28120,7 +28120,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etsi hoitoa"
+            "value": "Hae apua"
           }
         },
         "nl": {
@@ -28322,7 +28322,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seuraa 13 hankittua nikotiinin talteenottoa koskevaa välitavoitetta"
+            "value": "Seuraa 13 lähteisiin perustuvaa nikotiinista toipumisen virstanpylvästä"
           }
         },
         "nl": {
@@ -28928,7 +28928,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Täysi pääsy puutarhaan, päiväkirjaan, terveyteen ja säästöihin kokeilun ajaksi."
+            "value": "Täysi käyttöoikeus puutarhaan, päiväkirjaan, terveyden palautumisen aikajanaan ja säästöihin kokeilujakson loppuun asti."
           }
         },
         "nl": {
@@ -29029,7 +29029,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koko terveysaikajana"
+            "value": "Koko terveyden palautumisen aikajana"
           }
         },
         "nl": {
@@ -29130,7 +29130,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puutarhan osat"
+            "value": "Puutarhan ominaisuudet"
           }
         },
         "nl": {
@@ -29231,7 +29231,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Yleistä hyvinvointitietoa, ei lääketieteellistä neuvontaa. Muutokset ovat yksilöllisiä. Terveysasioissa käänny terveydenhuollon ammattilaisen puoleen."
+            "value": "Yleistä hyvinvointitietoa, ei lääketieteellisiä neuvoja. Toipumisen aikataulu vaihtelee ihmisestä toiseen. Terveysongelmissa ota yhteys terveydenhuollon ammattilaiseen."
           }
         },
         "nl": {
@@ -29534,7 +29534,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vielä minuutti"
+            "value": "Anna vielä minuutti"
           }
         },
         "nl": {
@@ -29635,7 +29635,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mene takaisin."
+            "value": "Palaa takaisin"
           }
         },
         "nl": {
@@ -29837,7 +29837,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Maanpeitteet"
+            "value": "Maanpeitekasvit"
           }
         },
         "nl": {
@@ -29938,7 +29938,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kasvata kaikkia lajeja."
+            "value": "Kasvata kaikkia puulajeja."
           }
         },
         "nl": {
@@ -30241,7 +30241,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikenet alkavat parantua"
+            "value": "Ikenet alkavat palautua"
           }
         },
         "nl": {
@@ -30443,7 +30443,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaikeinta välillä %1$@ ja %2$@"
+            "value": "Vaikeinta kello %1$@–%2$@"
           }
         },
         "nl": {
@@ -30847,7 +30847,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ohje"
+            "value": "Tuki"
           }
         },
         "nl": {
@@ -31554,7 +31554,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kauanko olet ollut ilman nikotiinia?"
+            "value": "Kuinka kauan olet ollut nikotiiniton."
           }
         },
         "nl": {
@@ -31857,7 +31857,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sitoudun paranemaan."
+            "value": "Sitoudun voimaan paremmin."
           }
         },
         "nl": {
@@ -32059,7 +32059,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lipsahdin"
+            "value": "Retkahdin"
           }
         },
         "nl": {
@@ -32261,7 +32261,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tekee mieli nikotiinia."
+            "value": "Tunnen nikotiininhimoa."
           }
         },
         "nl": {
@@ -32362,7 +32362,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Selvisin"
+            "value": "Selätin sen"
           }
         },
         "nl": {
@@ -32564,7 +32564,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jos tänään ei ole nikotiinia, hirttäkää se ja kastelkaa puutarhanne."
+            "value": "Jos olet tänään nikotiiniton, tee päivämerkintä ja kastele puutarhasi."
           }
         },
         "nl": {
@@ -32867,7 +32867,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voimakkuus %lld/5"
+            "value": "Voimakkuus %1$lld/5"
           }
         },
         "nl": {
@@ -32968,7 +32968,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ärtyneisyys ja ahdistus vähenevät."
+            "value": "Ärtyneisyys ja ahdistus hellittävät."
           }
         },
         "nl": {
@@ -33271,7 +33271,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei se mitään. Lipsahdus kuuluu monen matkaan, ja sen kirjaaminen pitää muun historian rehellisenä."
+            "value": "Ei se mitään. Retkahdus kuuluu monen matkaan, ja sen kirjaaminen pitää muun historiasi paikkansapitävänä."
           }
         },
         "nl": {
@@ -33574,7 +33574,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lehden yksityisesti läpi vaikeiden päivien"
+            "value": "Kirjoita päiväkirjaa yksityisesti vaikeinakin päivinä"
           }
         },
         "nl": {
@@ -33776,7 +33776,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pidetäänkö ilmaisversio?"
+            "value": "Jatketaanko ilmaisversion käyttöä?"
           }
         },
         "nl": {
@@ -33877,7 +33877,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pidä koko puutarha, päiväkirja ja säästöt tai peru ennen uusimista."
+            "value": "Säilytä puutarha, päiväkirja ja säästöt ennallaan tai peru tilaus milloin tahansa ennen sen uusiutumista."
           }
         },
         "nl": {
@@ -34584,7 +34584,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elinikä: %1$@"
+            "value": "Elinikäinen: %1$@"
           }
         },
         "nl": {
@@ -34786,7 +34786,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ladataan tilauksia…"
+            "value": "Ladataan tilausvaihtoehtoja…"
           }
         },
         "nl": {
@@ -34887,7 +34887,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lukittu. Napauta ja lue Bloom+:sta"
+            "value": "Lukittu. Napauta riviä ja lue Bloom+:sta."
           }
         },
         "nl": {
@@ -34988,7 +34988,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa lipsahdus"
+            "value": "Kirjaa retkahdus"
           }
         },
         "nl": {
@@ -35089,7 +35089,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjataanko lipsahdus?"
+            "value": "Kirjataanko retkahdus?"
           }
         },
         "nl": {
@@ -35190,7 +35190,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaudu nikotiinittomaksi"
+            "value": "Merkitse nikotiinittomaksi"
           }
         },
         "nl": {
@@ -35392,7 +35392,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa"
+            "value": "Kirjaa retkahdus"
           }
         },
         "nl": {
@@ -35493,7 +35493,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa tämä päivä ja kastele puutarhasi. Sinä pystyt tähän."
+            "value": "Tee päivämerkintä ja kastele puutarhasi. Kyllä sinä pystyt siihen."
           }
         },
         "nl": {
@@ -35594,7 +35594,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa päivä ilman nikotiinia ja kastele bonsai."
+            "value": "Merkitse päivä nikotiinittomaksi ja kastele bonsaitasi."
           }
         },
         "nl": {
@@ -35695,7 +35695,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lipsahdus kirjattu"
+            "value": "Retkahdus kirjattu"
           }
         },
         "nl": {
@@ -35796,7 +35796,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjattu nikotiinittomaksi"
+            "value": "Nikotiiniton päivä kirjattu"
           }
         },
         "nl": {
@@ -36099,7 +36099,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjattu. Olet yhä matkalla."
+            "value": "Kirjattu. Matkasi jatkuu yhä."
           }
         },
         "nl": {
@@ -36402,7 +36402,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tehkää siitä virallista."
+            "value": "Vahvista päätöksesi"
           }
         },
         "nl": {
@@ -36604,7 +36604,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kypsä vaihe"
+            "value": "Täysikasvuisen puun vaihe"
           }
         },
         "nl": {
@@ -36907,7 +36907,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rahan & pussin seuranta"
+            "value": "Rahan ja nikotiinipussien seuranta"
           }
         },
         "nl": {
@@ -37008,7 +37008,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kuukausi"
+            "value": "Kuukausittain"
           }
         },
         "nl": {
@@ -37614,7 +37614,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Suurin osa kirjatuista mieliteoista osuu tähän ajanjaksoon: %1$lld/%2$lld."
+            "value": "Suurin osa kirjatuista nikotiininhimoista osuu tähän aikaväliin: %1$lld/%2$lld."
           }
         },
         "nl": {
@@ -38220,7 +38220,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kerro tilanne, josta hain pussia."
+            "value": "Kuvaile tilanne, jossa otin ennen nikotiinipussin. Miten selvisin siitä?"
           }
         },
         "nl": {
@@ -39432,7 +39432,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiini ei koskaan imeytynyt"
+            "value": "Nikotiini, joka ei imeytynyt"
           }
         },
         "nl": {
@@ -39533,7 +39533,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiinivapaa"
+            "value": "Nikotiinittomana alkaen"
           }
         },
         "nl": {
@@ -39836,7 +39836,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei vielä merkintöjä. Kirjoita ensimmäinen kynästä."
+            "value": "Ei vielä merkintöjä. Napauta kynää ja kirjoita ensimmäinen."
           }
         },
         "nl": {
@@ -39937,7 +39937,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei vielä merkintöjä. Ensimmäinen on ilmainen. Kirjoita se kynästä."
+            "value": "Ei vielä merkintöjä. Ensimmäinen merkintäsi on maksuton. Napauta kynää ja kirjoita se."
           }
         },
         "nl": {
@@ -40139,7 +40139,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei maksua nyt · Apple muistuttaa ennen veloitusta · Tiedot laitteessa"
+            "value": "Ei maksua nyt · Apple muistuttaa ennen veloitusta · Tiedot pysyvät laitteella"
           }
         },
         "nl": {
@@ -40436,7 +40436,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vältetyt pussikulut"
+            "value": "Ei käytetty nikotiinipusseihin"
           }
         },
         "nl": {
@@ -40537,7 +40537,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "En tiedä"
+            "value": "En ole varma"
           }
         },
         "nl": {
@@ -40638,7 +40638,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "En ole varma. Lopeta"
+            "value": "En ole vielä varma. Sulje harjoitus."
           }
         },
         "nl": {
@@ -40840,7 +40840,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei vielä havaintoja"
+            "value": "Ei vielä tuloksia"
           }
         },
         "nl": {
@@ -40941,7 +40941,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Huomaa se väittelemättä sen kanssa. Et yritä voittaa, vaan odotat sen ohi."
+            "value": "Huomaa nikotiininhimo väittelemättä sen kanssa. Sinun ei tarvitse voittaa sitä, riittää että odotat sen ohi."
           }
         },
         "nl": {
@@ -41042,7 +41042,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ilmoitukset ovat pois päältä Quit Zyniä varten, joten muistutusta ei voida toimittaa. Napauta yllä, jotta ne voidaan ottaa käyttöön Asetukset -sovelluksessa."
+            "value": "Quit Zynin ilmoitukset ovat pois päältä, joten muistutusta ei voida lähettää. Napauta yllä olevaa kohtaa ja ota ilmoitukset käyttöön Asetuksissa."
           }
         },
         "nl": {
@@ -41345,7 +41345,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Matkalla säästämään"
+            "value": "Säästöennuste"
           }
         },
         "nl": {
@@ -41547,7 +41547,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kertaosto · ei tilausta"
+            "value": "Kertaostos · ei tilausta"
           }
         },
         "nl": {
@@ -41648,7 +41648,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Suun terveys palautuu"
+            "value": "Suun terveys kohenee"
           }
         },
         "nl": {
@@ -41951,7 +41951,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tilaukset eivät ole hetkeen saatavilla. Yritä hetken päästä uudelleen."
+            "value": "Tilaukset eivät ole juuri nyt saatavilla. Yritä hetken kuluttua uudelleen."
           }
         },
         "nl": {
@@ -42052,7 +42052,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisäksi %1$@ nikotiinipussia jää käyttämättä. Kehosi ei siis tarvitse käsitellä niiden nikotiinia."
+            "value": "Lisäksi %1$@ nikotiinipussia jää käyttämättä. Kehosi ei joudu käsittelemään niiden nikotiinia."
           }
         },
         "nl": {
@@ -42254,7 +42254,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vältetyt nikotiinipussit"
+            "value": "Käyttämättä jääneet nikotiinipussit"
           }
         },
         "nl": {
@@ -42355,7 +42355,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiinipussia rasiassa"
+            "value": "Nikotiinipusseja rasiassa"
           }
         },
         "nl": {
@@ -42456,7 +42456,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiinipussia päivässä"
+            "value": "Nikotiinipusseja päivässä"
           }
         },
         "nl": {
@@ -43062,7 +43062,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ennusta %@, jotka säästäisit ensi vuonna"
+            "value": "Ennusta, kuinka paljon %1$@ jää säästöön ensi vuonna"
           }
         },
         "nl": {
@@ -43163,7 +43163,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Katso vuosi eteenpäin, ei vain päiviä taaksepäin"
+            "value": "Katso vuosi eteenpäin, älä vain taakse jääneitä päiviä"
           }
         },
         "nl": {
@@ -43567,7 +43567,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Osto peruttu. Jatka napauttamalla uudelleen."
+            "value": "Osto peruutettiin. Jatka napauttamalla uudelleen."
           }
         },
         "nl": {
@@ -43668,7 +43668,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Palauttaa laskurin ja puun ennalleen ennen tätä lipsahdusta."
+            "value": "Palauttaa laskurin ja puun tilaan, jossa ne olivat ennen retkahdusta."
           }
         },
         "nl": {
@@ -43769,7 +43769,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neljänneksen mestari"
+            "value": "Neljännesvuoden mestari"
           }
         },
         "nl": {
@@ -43971,7 +43971,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lopeta Zyn Days"
+            "value": "Nikotiinittomat päivät"
           }
         },
         "nl": {
@@ -44072,7 +44072,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rate Lopeta Zyn"
+            "value": "Arvostele Quit Zyn"
           }
         },
         "nl": {
@@ -44260,13 +44260,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kirjaa vielä %1$lld mielitekoa, niin opit lisää omista kuvioistasi."
+                  "value": "Kirjaa vielä %1$lld nikotiininhimoa, niin näet omat kuviosi paremmin."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kirjaa vielä %1$lld mielitekoa, niin opit lisää omista kuvioistasi."
+                  "value": "Kirjaa vielä %1$lld nikotiininhimoa, niin näet omat kuviosi paremmin."
                 }
               }
             }
@@ -44613,13 +44613,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kirjaa vielä %1$lld mielitekoa, niin näet omat kuviosi."
+                  "value": "Kirjaa vielä %1$lld nikotiininhimoa, niin alat nähdä omat kuviosi."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Kirjaa vielä %1$lld mielitekoa, niin näet omat kuviosi."
+                  "value": "Kirjaa vielä %1$lld nikotiininhimoa, niin alat nähdä omat kuviosi."
                 }
               }
             }
@@ -44879,7 +44879,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa vielä yksi mieliteko, niin opit lisää omista kuvioistasi."
+            "value": "Kirjaa vielä yksi nikotiininhimo, niin näet omat kuviosi paremmin."
           }
         },
         "nl": {
@@ -44980,7 +44980,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaa vielä yksi mieliteko, niin näet omat kuviosi."
+            "value": "Kirjaa vielä yksi nikotiininhimo, niin alat nähdä omat kuviosi."
           }
         },
         "nl": {
@@ -45081,7 +45081,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toipuminen alkaa päätöksellä."
+            "value": "Toipuminen alkaa päätöksestä. Tänään teit omasi, ja sama päätös kantaa tulevinakin päivinä."
           }
         },
         "nl": {
@@ -45182,7 +45182,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiottu"
+            "value": "Hienostunut"
           }
         },
         "nl": {
@@ -45283,7 +45283,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiottu ja tiivis. Todellisen kärsivällisyyden tulos."
+            "value": "Hienostunut ja tiheä. Pitkän kärsivällisyyden tulos."
           }
         },
         "nl": {
@@ -45384,7 +45384,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puhdistettu vaihe"
+            "value": "Hienostuneen puun vaihe"
           }
         },
         "nl": {
@@ -45485,7 +45485,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ennen veloitusta"
+            "value": "Muistutus ennen veloitusta"
           }
         },
         "nl": {
@@ -46192,7 +46192,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nollaa tiskisi?"
+            "value": "Nollataanko laskuri?"
           }
         },
         "nl": {
@@ -46697,7 +46697,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hengitä rauhallisesti muutaman minuutin ajan."
+            "value": "Selätä nikotiininhimo hengittämällä rauhallisesti muutaman minuutin ajan"
           }
         },
         "nl": {
@@ -47101,7 +47101,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "SÄÄSTÄ %lld %%"
+            "value": "SÄÄSTÄ %1$lld%%"
           }
         },
         "nl": {
@@ -47568,13 +47568,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Säästetty %1$lld nikotiinittoman päivän aikana."
+                  "value": "Säästöt %1$lld nikotiinittoman päivän ajalta."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Säästetty %1$lld nikotiinittoman päivän aikana."
+                  "value": "Säästöt %1$lld nikotiinittoman päivän ajalta."
                 }
               }
             }
@@ -48137,7 +48137,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Katso kun %1$@ osuma, mikä käynnistää ne, ja kuinka kauan sinun todella kestää, plus loput Bloom+."
+            "value": "Katso, milloin %1$@ iskevät, mikä ne laukaisee ja kuinka kauan ne kestävät, sekä kaikki muu Bloom+."
           }
         },
         "nl": {
@@ -48541,7 +48541,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Taimet"
+            "value": "Taimivaihe"
           }
         },
         "nl": {
@@ -50965,7 +50965,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jotta en enää suunnittelisi päivääni kiekon mukaan"
+            "value": "Jotta en enää suunnittelisi päivääni nikotiinipussirasian mukaan"
           }
         },
         "nl": {
@@ -51268,7 +51268,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Istuinvaihe"
+            "value": "Verson vaihe"
           }
         },
         "nl": {
@@ -51470,7 +51470,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alku"
+            "value": "Aloita"
           }
         },
         "nl": {
@@ -53710,7 +53710,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rahat jäävät sinulle, eivät nikotiinipusseihin. Bloom+ auttaa pitämään putken yllä."
+            "value": "Rahat jäävät taskuusi sen sijaan, että kuluisivat nikotiinipusseihin. Bloom+ auttaa pitämään päiväputkesi yllä."
           }
         },
         "nl": {
@@ -53811,7 +53811,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiiniton"
+            "value": "Yhä nikotiiniton"
           }
         },
         "nl": {
@@ -53912,7 +53912,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elämä laskee jokaisen nikotiinittoman päivän."
+            "value": "Päiväputki näyttää nykyisen yhtenäisen jakson. Elinikäinen kertymä sisältää kaikki kirjaamasi nikotiinittomat päivät, joten aiempi edistyminen säilyy laskurin nollauksesta huolimatta."
           }
         },
         "nl": {
@@ -54013,7 +54013,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Putket"
+            "value": "Päiväputket"
           }
         },
         "nl": {
@@ -54518,7 +54518,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaihda lajia milloin vain · putki kasvaa yhä"
+            "value": "Vaihda puulajia milloin vain · päiväputkesi kasvaa yhä"
           }
         },
         "nl": {
@@ -54720,7 +54720,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaihda milloin vain. Päivät ja kasvu siirtyvät mihin tahansa valitsemaasi puuhun."
+            "value": "Vaihda puuta milloin vain. Päivälaskuri ja kasvu siirtyvät valitsemaasi puuhun."
           }
         },
         "nl": {
@@ -54821,7 +54821,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaihda bonsailaji, nyt %@"
+            "value": "Vaihda bonsailajia, nykyinen: %1$@"
           }
         },
         "nl": {
@@ -54922,7 +54922,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vaihda puuta putkesi kasvaessa."
+            "value": "Vaihda puuta päiväputkesi kasvaessa."
           }
         },
         "nl": {
@@ -55528,7 +55528,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se on noin %1$@ / päivä"
+            "value": "Se tekee noin %1$@ päivässä"
           }
         },
         "nl": {
@@ -55831,7 +55831,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siemen asettuu paikoilleen. Matkasi alkaa tästä."
+            "value": "Siemen juurtuu. Matkasi alkaa tästä."
           }
         },
         "nl": {
@@ -55932,7 +55932,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tämä on lähellä sitä. Nämä %1$@ kiipeävät nopeasti ja sitten ne lakkaavat kiipeämästä."
+            "value": "Olet lähellä huippua. %1$@ voimistuvat nopeasti, sitten niiden voimakkuus ei enää kasva."
           }
         },
         "nl": {
@@ -56386,7 +56386,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kolmen kuukauden kohdalla verenkierto yleensä paranee, kun nikotiini ei enää supista verisuonia. Monet kertovat vireystasonsa tasaantuneen."
+            "value": "Noin kolmen kuukauden kohdalla verenkierto yleensä kohenee, kun nikotiini ei enää supista verisuonia. Monet kertovat vireystasonsa tasaantuneen."
           }
         },
         "nl": {
@@ -56487,7 +56487,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kolme kuukautta vahvana."
+            "value": "Kolme kuukautta takana. Hienoa."
           }
         },
         "nl": {
@@ -56689,7 +56689,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aikavälietapit"
+            "value": "Ajalliset virstanpylväät"
           }
         },
         "nl": {
@@ -56891,7 +56891,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Väsymys"
+            "value": "Väsynyt"
           }
         },
         "nl": {
@@ -57093,7 +57093,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjattu tänään"
+            "value": "Tämä päivä on kirjattu"
           }
         },
         "nl": {
@@ -57194,7 +57194,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tämä päivä on kirjattu lipsahdukseksi"
+            "value": "Tämä päivä on kirjattu retkahdukseksi"
           }
         },
         "nl": {
@@ -57497,7 +57497,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seuraa jokaista dollaria ja pussia, jota vältät, sekä Bloom+."
+            "value": "Seuraa säästämiäsi dollareita ja väliin jääviä nikotiinipusseja sekä kaikkea muuta Bloom+."
           }
         },
         "nl": {
@@ -57901,7 +57901,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Totuusaloite"
+            "value": "Truth Initiative"
           }
         },
         "nl": {
@@ -58204,7 +58204,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kokeile Bloom+:aa ilmaiseksi"
+            "value": "Kokeile Bloom+:aa maksutta"
           }
         },
         "nl": {
@@ -58305,7 +58305,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaksi nopeaa kysymystä, kun se on tuoreessa muistissa. Molemmat vapaaehtoisia."
+            "value": "Kaksi nopeaa kysymystä, kun asia on tuoreessa muistissa. Molemmat ovat vapaaehtoisia."
           }
         },
         "nl": {
@@ -58406,7 +58406,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Peru"
+            "value": "Kumoa"
           }
         },
         "nl": {
@@ -58507,7 +58507,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Peru, en lipsahtanut"
+            "value": "Peru, en retkahtanut"
           }
         },
         "nl": {
@@ -58695,13 +58695,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Avaa %lld puu"
+                  "value": "Avaa %1$lld puulaji"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Avaa %lld puuta"
+                  "value": "Avaa %1$lld puulajia"
                 }
               }
             }
@@ -59244,13 +59244,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Avaa kaikki %lld puuta"
+                  "value": "Avaa kaikki %1$lld puulajia"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Avaa kaikki %lld puuta"
+                  "value": "Avaa kaikki %1$lld puulajia"
                 }
               }
             }
@@ -59504,7 +59504,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avaa kaikki bonsailajit ja vaihda milloin haluat, sekä kaikki muu Bloom+."
+            "value": "Avaa kaikki bonsailajit ja vaihda niiden välillä milloin haluat. Saat käyttöösi myös kaiken muun Bloom+:n."
           }
         },
         "nl": {
@@ -59706,7 +59706,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avaa koko 13 virstanpylvään toipumisaikajana sekä kaikki muu Bloom+."
+            "value": "Avaa terveyden palautumisen aikajana kaikkine 13 virstanpylväineen sekä kaikki muu Bloom+."
           }
         },
         "nl": {
@@ -59908,7 +59908,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avaa tulevat Bloom+:lla"
+            "value": "Avaa lisää Bloom+:lla"
           }
         },
         "nl": {
@@ -60110,7 +60110,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jopa %@/v"
+            "value": "Enintään %1$@ vuodessa"
           }
         },
         "nl": {
@@ -60211,7 +60211,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+"
+            "value": "Päivitä"
           }
         },
         "nl": {
@@ -60306,7 +60306,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Näitä tietoja käytetään arvioimaan, kuinka paljon rahaa ja nikotiinipusseja säästyy ja kuinka paljon nikotiinia jää käyttämättä nikotiinittomana aikana."
+            "value": "Näiden tietojen avulla arvioidaan, kuinka paljon rahaa ja nikotiinia säästät ja kuinka monta nikotiinipussia jää käyttämättä, kun pysyt nikotiinittomana."
           }
         },
         "nl": {
@@ -60407,7 +60407,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Katsokaa, kun säästönne täsmäävät."
+            "value": "Seuraa, miten säästösi karttuvat."
           }
         },
         "nl": {
@@ -60595,13 +60595,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tervetuloa takaisin. Et ole kirjannut %lld päivään. Hyvin menee?"
+                  "value": "Tervetuloa takaisin. Et ole tehnyt päivämerkintää %1$lld päivään. Jatkuuko kaikki hyvin?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tervetuloa takaisin. Et ole kirjannut %lld päivään. Hyvin menee?"
+                  "value": "Tervetuloa takaisin. Et ole tehnyt päivämerkintää %1$lld päivään. Jatkuuko kaikki hyvin?"
                 }
               }
             }
@@ -61568,7 +61568,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mitä ”nollaus” oikeasti maksaisi minulle päivinä ja rahana?"
+            "value": "Mitä laskurin nollaus oikeastaan maksaisi päivinä ja rahana?"
           }
         },
         "nl": {
@@ -61669,7 +61669,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mitä säilyy"
+            "value": "Mitä sinulle jää"
           }
         },
         "nl": {
@@ -61770,7 +61770,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mikä ihmissuhde on parantunut lopettamisen jälkeen?"
+            "value": "Mikä ihmissuhde on muuttunut paremmaksi lopettamiseni jälkeen?"
           }
         },
         "nl": {
@@ -61871,7 +61871,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mikä menee tänään hyvin? Miten pidän vauhdin yllä?"
+            "value": "Mikä sujuu tänään hyvin? Miten voin jatkaa samaan tahtiin?"
           }
         },
         "nl": {
@@ -61972,7 +61972,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Minkä terveellisen tavan haluan rakentaa seuraavaksi?"
+            "value": "Minkä terveellisen tavan haluaisin omaksua seuraavaksi?"
           }
         },
         "nl": {
@@ -62376,7 +62376,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kun he iskevät ja mikä laukaisee heidät."
+            "value": "Milloin nikotiininhimot iskevät ja mikä ne laukaisee."
           }
         },
         "nl": {
@@ -62477,7 +62477,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kun %1$@ osuma ja mikä käynnistää ne"
+            "value": "Milloin %1$@ iskevät ja mikä ne laukaisee"
           }
         },
         "nl": {
@@ -62679,7 +62679,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Missä huomaan himojen piileskelevän?"
+            "value": "Missä huomaan nikotiininhimon piilevän?"
           }
         },
         "nl": {
@@ -63083,7 +63083,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muistutamme ennen kokeilun loppua, jos ilmoitukset ovat käytössä."
+            "value": "Muistutamme ennen kokeilujakson päättymistä, jos ilmoitukset ovat käytössä."
           }
         },
         "nl": {
@@ -63184,7 +63184,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muutama tunti viimeisen nikotiinipussin jälkeen nikotiinipiikki alkaa tasaantua. Syke ja verenpaine alkavat palautua kohti lähtötasoa."
+            "value": "Muutamassa tunnissa viimeisen nikotiinipussin jälkeen nikotiinipiikki laskee ja syke sekä verenpaine alkavat palautua kohti lähtötasoa."
           }
         },
         "nl": {
@@ -63588,7 +63588,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjoita, miltä mieliteko tuntuu."
+            "value": "Kirjoita nikotiininhimostasi."
           }
         },
         "nl": {
@@ -63784,7 +63784,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "RAHASI TALLESSA"
+            "value": "RAHAT, JOTKA SÄÄSTYIVÄT"
           }
         },
         "nl": {
@@ -64289,7 +64289,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vuosi"
+            "value": "Vuositilaus"
           }
         },
         "nl": {
@@ -64491,7 +64491,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Säästät"
+            "value": "Sinulle jää"
           }
         },
         "nl": {
@@ -64704,7 +64704,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Säästät %1$@ vuodessa, kun et käytä sitä tuotteeseen %2$@. Kokeile Bloom+:aa maksutta %#@n@ ajan."
+            "value": "Sinulle jää %1$@ vuodessa, kun et käytä sitä tuotteeseen %2$@. Kokeile Bloom+:aa maksutta %#@n@."
           },
           "substitutions": {
             "n": {
@@ -64715,13 +64715,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg päivän"
+                      "value": "%arg päivä"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg päivän"
+                      "value": "%arg päivää"
                     }
                   }
                 }
@@ -65271,13 +65271,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Olet selättänyt %1$lld mielitekoa."
+                  "value": "Selätit %1$lld nikotiininhimoa."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Olet selättänyt %1$lld mielitekoa."
+                  "value": "Selätit %1$lld nikotiininhimoa."
                 }
               }
             }
@@ -65537,7 +65537,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Selätit yhden mieliteon."
+            "value": "Selätit yhden nikotiininhimon."
           }
         },
         "nl": {
@@ -65638,7 +65638,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pysyit sen mukana %1$@."
+            "value": "Pysyit tunteen äärellä %1$@."
           }
         },
         "nl": {
@@ -65739,7 +65739,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pidät päivälaskurin, kalenterin, himon ja puusi. Vuosittainen ennusteesi, koko terveysaika, päiväkirja ja muut lajit pysyvät lukossa."
+            "value": "Päivälaskuri, kalenteri, apu nikotiininhimoon ja puusi pysyvät käytössä. Vuoden säästöennuste, terveyden palautumisen aikajana, päiväkirja ja muut puulajit pysyvät lukittuina."
           }
         },
         "nl": {
@@ -65927,13 +65927,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Takana %lld päivä. Kirjaa tämä päivä ja kastele bonsaisi."
+                  "value": "Päiväputkesi on kestänyt %1$lld päivän. Tee päivämerkintä tänään ja kastele bonsaitasi."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Takana %lld päivää. Kirjaa tämä päivä ja kastele bonsaisi."
+                  "value": "Päiväputkesi on kestänyt %1$lld päivää. Tee päivämerkintä tänään ja kastele bonsaitasi."
                 }
               }
             }
@@ -66193,7 +66193,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Olet tallentanut %1$@"
+            "value": "Olet säästänyt tähän mennessä %1$@"
           }
         },
         "nl": {
@@ -66591,7 +66591,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ mallisi"
+            "value": "Kuviosi: %1$@"
           }
         },
         "nl": {
@@ -67096,7 +67096,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eniten mielitekoja sinulla on %1$@."
+            "value": "Nikotiininhimoja on eniten päivänä %1$@."
           }
         },
         "nl": {
@@ -67197,7 +67197,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Laskuri alkaa alusta lipsahduksen jälkeen. Tämänpäiväinen lipsahdus aloittaa päivästä 1; aiemmassa lasketaan päivät siitä lähtien. Pisin putki noudattaa korjattuja päiviä."
+            "value": "Laskuri alkaa alusta retkahduksen jälkeen. Tämänpäiväinen retkahdus aloittaa päivästä 1. Aiemman retkahduksen jälkeen lasketaan siitä kuluneet päivät. Pisin päiväputkesi vastaa korjattuja päivämääriä."
           }
         },
         "nl": {
@@ -67752,7 +67752,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mieliteko menee yleensä ohi noin %1$@."
+            "value": "Nikotiininhimo menee yleensä ohi noin %1$@."
           }
         },
         "nl": {
@@ -67954,7 +67954,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivälaskuri alkaa alusta lipsahduksen jälkeen. Puusi säilyttää osan kasvustaan, ja kalenterihistoria ja valmiit puut pysyvät. Pisin putkesi noudattaa korjattuja päiviä."
+            "value": "Päivälaskuri alkaa uudelleen retkahduksen jälkeen. Osa puusi kasvusta siirtyy mukana, ja kalenterihistoria sekä valmiit puut säilyvät. Pisin päiväputkesi vastaa korjattuja päivämääriä."
           }
         },
         "nl": {
@@ -68055,7 +68055,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivälaskuri alkaa taas nollasta. Historiasi säilyy."
+            "value": "Päivälaskuri alkaa uudelleen nollasta. Historiasi säilyy."
           }
         },
         "nl": {
@@ -68156,7 +68156,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivälaskuri, tuki nikotiininhimoon, widget ja Apple Watch -appi ovat aina maksuttomia."
+            "value": "Päivälaskuri, apu nikotiininhimoon, widget ja Apple Watch -appi pysyvät aina maksuttomina."
           }
         },
         "nl": {
@@ -68358,7 +68358,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ensimmäinen itusi on puskenut mullasta."
+            "value": "Ensimmäinen versosi on noussut mullasta."
           }
         },
         "nl": {
@@ -68459,7 +68459,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puutarhasi, päiväkirjasi, terveyden aikajana ja säästösi. Kaikki, mikä tukee nikotiinitonta arkeasi."
+            "value": "Puutarhasi, päiväkirjasi, terveyden palautumisen aikajana ja säästösi. Kaikki, mikä auttaa sinua pysymään nikotiinittomana."
           }
         },
         "nl": {
@@ -68661,7 +68661,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mielialasi laskee usein ennen lipsahdusta"
+            "value": "Mielialasi laskee usein ennen retkahdusta"
           }
         },
         "nl": {
@@ -68762,7 +68762,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mielialasi oli kahtena lipsahdusta edeltävänä päivänä matalampi kuin muina kirjattuina päivinä. Kuvio kannattaa huomata ajoissa."
+            "value": "Mielialasi oli retkahdusta edeltäneinä kahtena päivänä matalampi kuin muina kirjattuina päivinä. Tämän kuvion huomaaminen ajoissa voi auttaa."
           }
         },
         "nl": {
@@ -68958,7 +68958,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aiemmat putkesi säilyvät historiassa"
+            "value": "Aiemmat päiväputkesi säilyvät historiassa"
           }
         },
         "nl": {
@@ -69362,7 +69362,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ostoksesi odottaa hyväksyntää. Bloom+ aukeaa itsestään, kun se on vahvistettu, ja voit jatkaa ilmaisen version käyttöä."
+            "value": "Ostoksesi odottaa hyväksyntää. Bloom+ avautuu automaattisesti, kun osto vahvistetaan. Sillä välin voit jatkaa ilmaisen version käyttöä."
           }
         },
         "nl": {
@@ -70004,13 +70004,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Puusi säilytti %1$lld päivän kasvun. Nyt alkaa ensimmäinen päivä."
+                  "value": "Puusi säilytti %1$lld päivän kasvun. Ensimmäinen päivä alkaa nyt."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Puusi säilytti %1$lld päivän kasvun. Nyt alkaa ensimmäinen päivä."
+                  "value": "Puusi säilytti %1$lld päivän kasvun. Ensimmäinen päivä alkaa nyt."
                 }
               }
             }
@@ -70270,7 +70270,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tavallinen purkkisi"
+            "value": "Tavallinen nikotiinipussirasiasi"
           }
         },
         "nl": {
@@ -70674,7 +70674,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ kohdalla"
+            "value": "klo %1$@"
           }
         },
         "nl": {
@@ -71179,7 +71179,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaikki toiminnot"
+            "value": "Kaikki Bloom+:n ominaisuudet"
           }
         },
         "nl": {
@@ -72031,7 +72031,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotiinipussia päivässä"
+            "value": "nikotiinipussia päivässä"
           }
         },
         "nl": {
@@ -72132,7 +72132,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kestetty himo"
+            "value": "selätetty nikotiininhimo"
           }
         },
         "nl": {
@@ -72233,7 +72233,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kestetyt himot"
+            "value": "selätetyt nikotiininhimot"
           }
         },
         "nl": {
@@ -72435,7 +72435,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puutarhasi kasvaa. Kirjaa tämä päivä, jos olet tänään ilman nikotiinia."
+            "value": "Puutarhasi kasvaa. Tee päivämerkintä tänään, jos olet nikotiiniton."
           }
         },
         "nl": {
