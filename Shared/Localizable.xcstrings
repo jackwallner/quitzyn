@@ -79,7 +79,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ · %2$@"
           }
         },
         "uk": {
@@ -492,7 +492,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %#@n@ zile"
+            "value": "%1$@ / %#@n@"
           },
           "substitutions": {
             "n": {
@@ -989,7 +989,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %#@n@ luni"
+            "value": "%1$@ / %#@n@"
           },
           "substitutions": {
             "n": {
@@ -1486,7 +1486,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %#@n@ săptămâni"
+            "value": "%1$@ / %#@n@"
           },
           "substitutions": {
             "n": {
@@ -1983,7 +1983,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %#@n@ ani"
+            "value": "%1$@ / %#@n@"
           },
           "substitutions": {
             "n": {
@@ -2168,7 +2168,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ /zi"
+            "value": "%1$@ / zi"
           }
         },
         "uk": {
@@ -2269,7 +2269,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ /lună"
+            "value": "%1$@ / lună"
           }
         },
         "uk": {
@@ -2370,7 +2370,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ săptămână"
+            "value": "%1$@ / săptămână"
           }
         },
         "uk": {
@@ -2471,7 +2471,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ an"
+            "value": "%1$@ / an"
           }
         },
         "uk": {
@@ -2572,7 +2572,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ Păstrați grădina completă, sau anulați orice moment înainte de a reînnoi."
+            "value": "%1$@ Păstrați grădina completă sau anulați oricând înainte de reînnoire."
           }
         },
         "uk": {
@@ -2673,7 +2673,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ un an"
+            "value": "%1$@ pe an"
           }
         },
         "uk": {
@@ -2768,7 +2768,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costă cam cât pliculețele cu nicotină pentru %2$lld zile și jumătate."
+            "value": "%1$@ costă cât pliculețele cu nicotină pentru aproximativ %2$lld zile și jumătate."
           }
         },
         "uk": {
@@ -3153,7 +3153,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costă cam cât pliculețele cu nicotină pentru %#@n@."
+            "value": "%1$@ costă cât pliculețele cu nicotină pentru %#@n@."
           },
           "substitutions": {
             "n": {
@@ -3348,7 +3348,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costă cam cât pliculețele cu nicotină pentru o zi și jumătate."
+            "value": "%1$@ costă cât pliculețele cu nicotină pentru aproximativ o zi și jumătate."
           }
         },
         "uk": {
@@ -3443,7 +3443,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costă cam cât pliculețele cu nicotină pentru o zi."
+            "value": "%1$@ costă cât pliculețele cu nicotină pentru aproximativ o zi."
           }
         },
         "uk": {
@@ -3841,7 +3841,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eviți folosirea a %1$@ pliculețe cu nicotină. Corpul tău nu va trebui să proceseze acea nicotină."
+            "value": "Nu veți folosi %1$@ pliculețe cu nicotină. Organismul dvs. nu va mai avea de metabolizat acea nicotină."
           }
         },
         "uk": {
@@ -4245,7 +4245,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@. Achiziţie unică. Acces pe viaţă, fără abonament."
+            "value": "%1$@. Achiziție unică. Acces pe viață, fără abonament."
           }
         },
         "uk": {
@@ -4447,7 +4447,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ a plecat până acum"
+            "value": "Ați făcut față la %1$lld %2$@ până acum."
           }
         },
         "uk": {
@@ -4755,7 +4755,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile"
+                  "value": "%1$lld de zile"
                 }
               }
             }
@@ -5108,7 +5108,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuite"
+                  "value": "%1$lld de zile gratuite"
                 }
               }
             }
@@ -5449,13 +5449,13 @@
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld de zile"
+                  "value": "%1$lld zile"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile"
+                  "value": "%1$lld de zile"
                 }
               }
             }
@@ -6496,19 +6496,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile de Bloom+ gratuit"
+                  "value": "%1$lld zi de acces gratuit la Bloom+"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld de zile de Bloom+ gratuit"
+                  "value": "%1$lld zile de acces gratuit la Bloom+"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile de Bloom+ gratuit"
+                  "value": "%1$lld de zile de acces gratuit la Bloom+"
                 }
               }
             }
@@ -6944,19 +6944,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pliculeț cu nicotină pe zi"
+                  "value": "%1$lld pliculeț/zi"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld de pliculețe cu nicotină pe zi"
+                  "value": "%1$lld pliculețe/zi"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld pliculețe cu nicotină pe zi"
+                  "value": "%1$lld de pliculețe/zi"
                 }
               }
             }
@@ -7297,7 +7297,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld secunde"
+                  "value": "%1$lld secundă"
                 }
               },
               "few": {
@@ -7309,7 +7309,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld secunde"
+                  "value": "%1$lld de secunde"
                 }
               }
             }
@@ -7650,19 +7650,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld copaci crescuţi"
+                  "value": "%1$lld copac crescut"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld de copaci crescuţi"
+                  "value": "%1$lld copaci crescuți"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld copaci crescuţi"
+                  "value": "%1$lld de copaci crescuți"
                 }
               }
             }
@@ -8003,19 +8003,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld copac crescut în crângul tău"
+                  "value": "%1$lld copac crescut în grădina dvs."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld de copaci crescuţi în crângul tău"
+                  "value": "%1$lld copaci crescuți în grădina dvs."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld copaci crescuţi în crângul tău"
+                  "value": "%1$lld de copaci crescuți în grădina dvs."
                 }
               }
             }
@@ -8356,19 +8356,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zi"
+                  "value": "Probă gratuită: %1$lld zi"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zile"
+                  "value": "Probă gratuită: %1$lld zile"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zile"
+                  "value": "Probă gratuită: %1$lld de zile"
                 }
               }
             }
@@ -8709,19 +8709,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zi gratuit pentru abonamentul lunar și anual."
+                  "value": "Probă gratuită: %1$lld zi pentru abonamentul lunar și cel anual."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul lunar și anual."
+                  "value": "Probă gratuită: %1$lld zile pentru abonamentul lunar și cel anual."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul lunar și anual."
+                  "value": "Probă gratuită: %1$lld de zile pentru abonamentul lunar și cel anual."
                 }
               }
             }
@@ -9062,19 +9062,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zi gratuit pentru abonamentul lunar."
+                  "value": "Probă gratuită: %1$lld zi pentru abonamentul lunar."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul lunar."
+                  "value": "Probă gratuită: %1$lld zile pentru abonamentul lunar."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul lunar."
+                  "value": "Probă gratuită: %1$lld de zile pentru abonamentul lunar."
                 }
               }
             }
@@ -9415,19 +9415,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zi gratuit pentru abonamentul anual."
+                  "value": "Probă gratuită: %1$lld zi pentru abonamentul anual."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul anual."
+                  "value": "Probă gratuită: %1$lld zile pentru abonamentul anual."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld zile gratuit pentru abonamentul anual."
+                  "value": "Probă gratuită: %1$lld de zile pentru abonamentul anual."
                 }
               }
             }
@@ -9756,19 +9756,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zi, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld zi, apoi %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zile, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld zile, apoi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld zile, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld de zile, apoi %2$@."
                 }
               }
             }
@@ -10109,19 +10109,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld lună"
+                  "value": "Probă gratuită: %1$lld lună"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld luni"
+                  "value": "Probă gratuită: %1$lld luni"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld luni"
+                  "value": "Probă gratuită: %1$lld de luni"
                 }
               }
             }
@@ -10450,19 +10450,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld lună, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld lună, apoi %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld luni, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld luni, apoi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld luni, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld de luni, apoi %2$@."
                 }
               }
             }
@@ -10803,19 +10803,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld an"
+                  "value": "Probă gratuită: %1$lld an"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld ani"
+                  "value": "Probă gratuită: %1$lld ani"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld ani"
+                  "value": "Probă gratuită: %1$lld de ani"
                 }
               }
             }
@@ -11144,19 +11144,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld an, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld an, apoi %2$@."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld ani, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld ani, apoi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratuit timp de %1$lld ani, apoi %2$@."
+                  "value": "Probă gratuită de %1$lld de ani, apoi %2$@."
                 }
               }
             }
@@ -11497,7 +11497,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld / 1"
+                  "value": "/ %1$lld beneficiu"
                 }
               },
               "few": {
@@ -11509,7 +11509,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %1$lld beneficii"
+                  "value": "/ %1$lld de beneficii"
                 }
               }
             }
@@ -11649,7 +11649,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "0:00."
+            "value": "0:00"
           }
         },
         "uk": {
@@ -11750,7 +11750,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "1-800-662-HELP · Liber, confidențial, 24/7"
+            "value": "1-800-662-HELP · Gratuit și confidențial · non-stop"
           }
         },
         "uk": {
@@ -11851,7 +11851,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 de verificări consecutive."
+            "value": "100 de înregistrări zilnice consecutive."
           }
         },
         "uk": {
@@ -11952,7 +11952,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 repere de recuperare după renunțarea la nicotină, cu surse."
+            "value": "13 repere documentate despre schimbările de sănătate după renunțarea la nicotină."
           }
         },
         "uk": {
@@ -12053,7 +12053,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 de verificări consecutive."
+            "value": "30 de înregistrări zilnice consecutive."
           }
         },
         "uk": {
@@ -12154,7 +12154,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "988 Suicidul şi linia de viaţă de criză"
+            "value": "988 Suicide & Crisis Lifeline"
           }
         },
         "uk": {
@@ -12356,7 +12356,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un cireș sakura înflorit, acoperit de flori roz delicate. Petalele cad pe măsură ce crește seria ta."
+            "value": "Un sakura înflorit, cu petale roz delicate. Pe măsură ce vă crește seria, petalele plutesc ușor."
           }
         },
         "uk": {
@@ -12457,7 +12457,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un an întreg, incredibil."
+            "value": "Un an întreg. Incredibil."
           }
         },
         "uk": {
@@ -12558,7 +12558,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "O viitoare piatră de hotar"
+            "value": "Un reper viitor"
           }
         },
         "uk": {
@@ -12659,7 +12659,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Arțar delicat, în nuanțe de roșu și auriu. Frunzele în formă de stea cad pe măsură ce trec zilele."
+            "value": "Un arțar cu frunziș delicat, în nuanțe calde de roșu și auriu. Frunzele în formă de stea cad pe măsură ce se adună zilele."
           }
         },
         "uk": {
@@ -12760,7 +12760,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un bonsai legendar, un an plin de creştere, vizibil."
+            "value": "Un bonsai legendar. Un an de creștere, acum la vedere."
           }
         },
         "uk": {
@@ -12962,7 +12962,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aici se plantează o sămânță. De aici începe fiecare copac falnic."
+            "value": "Aici este plantată o sămânță. Așa începe orice copac măreț."
           }
         },
         "uk": {
@@ -13164,7 +13164,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poți anula un episod de consum doar cât timp este cel mai recent înregistrat."
+            "value": "O scăpare poate fi anulată numai cât timp este ultima înregistrată."
           }
         },
         "uk": {
@@ -13265,7 +13265,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un bonsai vertical atemporal, echilibrat, senin."
+            "value": "Un bonsai vertical, atemporal, echilibrat și senin."
           }
         },
         "uk": {
@@ -13467,7 +13467,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aproximativ 6 mg per pliculeț"
+            "value": "Aprox. 6 mg/pliculeț"
           }
         },
         "uk": {
@@ -13669,7 +13669,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Adaugă notă"
+            "value": "Adăugați o notă"
           }
         },
         "uk": {
@@ -13770,7 +13770,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajustează data la care a început călătoria ta."
+            "value": "Ajustați data de început a parcursului dvs."
           }
         },
         "uk": {
@@ -13972,7 +13972,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul adolescenţei"
+            "value": "Etapa de copac tânăr"
           }
         },
         "uk": {
@@ -14174,7 +14174,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cercetările asociază un an fără nicotină cu un risc cardiovascular semnificativ mai mic în cazul evitării tutunului. Discută despre sănătatea ta cu un medic."
+            "value": "Cercetările asociază un an fără nicotină cu un risc cardiovascular semnificativ mai scăzut după renunțarea la tutun. Discutați cu un medic despre sănătatea dvs."
           }
         },
         "uk": {
@@ -14275,7 +14275,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După câteva luni fără ciclul de creșteri și scăderi provocat de nicotină, multe persoane observă un nivel obișnuit de stres mai mic și se liniștesc mai ușor."
+            "value": "După câteva luni fără creșterile și scăderile bruște ale nivelului de nicotină, multe persoane observă că stresul obișnuit scade și se simt mai liniștite."
           }
         },
         "uk": {
@@ -14376,7 +14376,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După două zile, terminațiile nervoase afectate de nicotină încep să se refacă. Multe persoane observă gusturi mai intense și mirosuri mai clare."
+            "value": "După două zile, terminațiile nervoase a căror sensibilitate a fost redusă de nicotină încep să crească din nou. Multe persoane observă că mâncarea are un gust mai bogat și mirosurile devin mai intense."
           }
         },
         "uk": {
@@ -14477,7 +14477,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toate cele 6 specii bonsai"
+            "value": "Cele 6 specii de bonsai"
           }
         },
         "uk": {
@@ -14679,7 +14679,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toate deblocate"
+            "value": "Totul este deblocat"
           }
         },
         "uk": {
@@ -14780,7 +14780,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Permite notificări în configurări"
+            "value": "Activați notificările în Configurări"
           }
         },
         "uk": {
@@ -14881,7 +14881,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orice a mai rămas din el e pe cale să iasă."
+            "value": "Aproape a trecut. Ce a mai rămas este pe cale să dispară."
           }
         },
         "uk": {
@@ -14982,7 +14982,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Societatea Americană de Cancer"
+            "value": "American Cancer Society"
           }
         },
         "uk": {
@@ -15184,7 +15184,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un pin veşnic verde cu nivele de ac ca un nor şi un trunchi noduros şi netezit."
+            "value": "Un pin veșnic verde, cu ace dispuse în straturi ca norii și cu un trunchi noduros, modelat de vreme."
           }
         },
         "uk": {
@@ -15285,7 +15285,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Antic"
+            "value": "Străvechi"
           }
         },
         "uk": {
@@ -15386,7 +15386,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copacul ăsta a văzut multe."
+            "value": "Bătrân și modelat de vreme. Acest copac a trecut prin multe."
           }
         },
         "uk": {
@@ -15487,7 +15487,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul antic"
+            "value": "Etapa de copac străvechi"
           }
         },
         "uk": {
@@ -15588,7 +15588,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Răspuns: %1$@"
+            "value": "Completate: %1$@"
           }
         },
         "uk": {
@@ -15689,7 +15689,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cu răspuns: %1$@ · Deschise: %2$@"
+            "value": "Completate: %1$@ · Lăsate necompletate: %2$@"
           }
         },
         "uk": {
@@ -15790,7 +15790,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orice vrei să-ţi aminteşti"
+            "value": "Ce doriți să vă amintiți"
           }
         },
         "uk": {
@@ -15891,7 +15891,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vrei să-ţi aminteşti ceva despre ziua de azi?"
+            "value": "Doriți să vă amintiți ceva despre ziua de azi?"
           }
         },
         "uk": {
@@ -15992,7 +15992,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple va arăta detaliile de facturare înainte de a confirma."
+            "value": "Apple va afișa detaliile de facturare înainte să confirmați."
           }
         },
         "uk": {
@@ -16093,7 +16093,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În jurul celei de-a treia zile, sevrajul fizic tinde să atingă un vârf, pe măsură ce ultima nicotină părăsește corpul. Apoi, pofta începe de obicei să dureze mai puțin și să fie mai puțin intensă."
+            "value": "În jurul celei de-a treia zile, simptomele fizice de sevraj tind să fie cele mai intense, pe măsură ce nicotina rămasă părăsește organismul. Apoi, pofta de nicotină începe de obicei să dureze mai puțin și să fie mai puțin intensă."
           }
         },
         "uk": {
@@ -16194,7 +16194,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După aproximativ două săptămâni fără punguțe cu nicotină lipite de gingii, iritația și inflamația din gură încep să se reducă, iar țesutul începe să se vindece."
+            "value": "După aproximativ două săptămâni fără pliculețe cu nicotină lipite de gingii, iritația și inflamația din gură încep să scadă, iar țesuturile orale încep treptat să revină la normal."
           }
         },
         "uk": {
@@ -16295,7 +16295,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cea mai bună înţelegere."
+            "value": "OFERTĂ DE TOP"
           }
         },
         "uk": {
@@ -16497,7 +16497,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înapoi în grădină."
+            "value": "Înapoi la grădină"
           }
         },
         "uk": {
@@ -16598,7 +16598,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se bazează pe poftele peste care ai trecut, nu pe media tuturor."
+            "value": "Se bazează pe episoadele de poftă cărora le-ați făcut față, nu pe o medie generală."
           }
         },
         "uk": {
@@ -16800,7 +16800,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începeţi călătoria fără nicotină."
+            "value": "Începeți parcursul fără nicotină."
           }
         },
         "uk": {
@@ -17002,7 +17002,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Somnul și concentrarea se îmbunătățesc"
+            "value": "Somn mai bun și concentrare"
           }
         },
         "uk": {
@@ -17204,7 +17204,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tensiunea arterială se normalizează"
+            "value": "Tensiunea arterială revine la valori obișnuite"
           }
         },
         "uk": {
@@ -17305,7 +17305,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fluxul sanguin și energia cresc."
+            "value": "Circulația și nivelul de energie cresc."
           }
         },
         "uk": {
@@ -17406,7 +17406,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotina din sânge scade brusc."
+            "value": "Nivelul nicotinei din sânge scade brusc."
           }
         },
         "uk": {
@@ -17810,7 +17810,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Planurile Bloom+ sunt temporar indisponibile. Puteți încerca sau continua gratuit."
+            "value": "Planurile Bloom+ nu sunt disponibile temporar. Încercați din nou sau continuați gratuit."
           }
         },
         "uk": {
@@ -17911,7 +17911,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ deblochează fiecare specie astfel încât să puteți schimba copacul ori de câte ori doriți. Streak crește oricare dintre cele pe care le alegeți."
+            "value": "Bloom+ deblochează toate speciile, ca să vă puteți schimba copacul oricând. Seria continuă să crească indiferent de copacul ales."
           }
         },
         "uk": {
@@ -18012,7 +18012,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+, liber să încerce"
+            "value": "Bloom+, încercați gratuit"
           }
         },
         "uk": {
@@ -18113,7 +18113,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Specie Bonsai"
+            "value": "Specii de bonsai"
           }
         },
         "uk": {
@@ -18214,7 +18214,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stiluri Bonsai"
+            "value": "Stiluri de bonsai"
           }
         },
         "uk": {
@@ -18315,7 +18315,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Specii de Bonsai"
+            "value": "Specii de bonsai"
           }
         },
         "uk": {
@@ -18416,7 +18416,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai, zi %1$lld"
+            "value": "Bonsai, ziua %1$lld"
           }
         },
         "uk": {
@@ -18618,7 +18618,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ramurile se lărgesc."
+            "value": "Ramurile se întind. Forma copacului prinde contur."
           }
         },
         "uk": {
@@ -18719,7 +18719,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inspiră"
+            "value": "Inspirați"
           }
         },
         "uk": {
@@ -18820,7 +18820,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Expiră"
+            "value": "Expirați"
           }
         },
         "uk": {
@@ -18921,7 +18921,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După aproximativ o lună, anxietatea și iritabilitatea din perioada de început a sevrajului se reduc de obicei, pe măsură ce semnalizarea dopaminei din creier se reechilibrează. Experiențele diferă."
+            "value": "După aproximativ o lună, anxietatea și iritabilitatea de la începutul sevrajului se reduc de obicei, pe măsură ce semnalizarea dopaminei din creier se reechilibrează. Experiențele diferă."
           }
         },
         "uk": {
@@ -19022,7 +19022,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După aproximativ șase luni fără punguțe cu nicotină, scade riscul de retragere a gingiilor și de leziuni în gură, iar țesutul oral continuă să se refacă."
+            "value": "După aproximativ șase luni fără pliculețe cu nicotină, scade riscul de retragere a gingiilor și de leziuni bucale, iar țesuturile din gură continuă să-și revină."
           }
         },
         "uk": {
@@ -19123,7 +19123,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După aproximativ două luni fără creșterile repetate ale tensiunii provocate de nicotină, multe persoane au valori mai mici ale tensiunii și pulsului în repaus. Efectele diferă."
+            "value": "După aproximativ două luni fără creșterile repetate ale tensiunii provocate de nicotină, multe persoane observă valori mai mici ale tensiunii arteriale și pulsului în repaus. Efectele diferă."
           }
         },
         "uk": {
@@ -19224,7 +19224,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După o săptămână, somnul și concentrarea se îmbunătățesc de obicei, pe măsură ce creierul se adaptează la viața fără doze regulate de nicotină. Experiențele diferă."
+            "value": "După o săptămână, somnul și concentrarea se îmbunătățesc de obicei, pe măsură ce creierul se adaptează la lipsa consumului regulat de nicotină. Experiențele diferă."
           }
         },
         "uk": {
@@ -19325,7 +19325,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După ora din zi"
+            "value": "După oră"
           }
         },
         "uk": {
@@ -19426,7 +19426,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apel sau text 988 · 24/7 · SUA"
+            "value": "Sunați sau trimiteți un SMS la 988 · non-stop · SUA"
           }
         },
         "uk": {
@@ -19527,7 +19527,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Renunță"
+            "value": "Anulați"
           }
         },
         "uk": {
@@ -19628,7 +19628,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poți anula oricând înainte să se încheie. Fără costuri neașteptate."
+            "value": "Puteți anula oricând înainte de încheiere. Fără costuri neașteptate."
           }
         },
         "uk": {
@@ -19729,7 +19729,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scade solicitarea inimii și a vaselor de sânge."
+            "value": "Presiunea asupra sistemului cardiovascular se reduce."
           }
         },
         "uk": {
@@ -19830,7 +19830,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cazare"
+            "value": "În cascadă"
           }
         },
         "uk": {
@@ -20032,7 +20032,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimbarea la fără nicotină"
+            "value": "Marcați ca zi fără nicotină"
           }
         },
         "uk": {
@@ -20133,7 +20133,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimbă în episod de consum"
+            "value": "Marcați ca scăpare"
           }
         },
         "uk": {
@@ -20234,7 +20234,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bifează ziua de azi"
+            "value": "Înregistrați ziua de azi"
           }
         },
         "uk": {
@@ -20335,7 +20335,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrează o zi ca să începi săptămâna."
+            "value": "Înregistrați o zi ca să începeți săptămâna."
           }
         },
         "uk": {
@@ -20537,7 +20537,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrarea zilei"
+            "value": "Înregistrare zilnică"
           }
         },
         "uk": {
@@ -20638,7 +20638,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrat"
+            "value": "Zi înregistrată"
           }
         },
         "uk": {
@@ -20739,7 +20739,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verificăm disponibilitatea perioadei de probă…"
+            "value": "Se verifică disponibilitatea perioadei de probă…"
           }
         },
         "uk": {
@@ -20840,7 +20840,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Flori de cireşe"
+            "value": "Cireș înflorit"
           }
         },
         "uk": {
@@ -21042,7 +21042,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Închide"
+            "value": "Închideți"
           }
         },
         "uk": {
@@ -21244,7 +21244,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plante de companie"
+            "value": "Plante însoțitoare"
           }
         },
         "uk": {
@@ -21345,7 +21345,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Termină-ţi prima săptămână."
+            "value": "Completați prima săptămână."
           }
         },
         "uk": {
@@ -21547,7 +21547,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Campion de coerenţă"
+            "value": "Campion al consecvenței"
           }
         },
         "uk": {
@@ -21648,7 +21648,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Continuă"
+            "value": "Continuați"
           }
         },
         "uk": {
@@ -21749,7 +21749,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Continuă (pentru dezvoltatori)"
+            "value": "Continuați (dev)"
           }
         },
         "uk": {
@@ -21850,7 +21850,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Continuaţi liber"
+            "value": "Continuați gratuit"
           }
         },
         "uk": {
@@ -21951,7 +21951,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Continuă cu Bloom+."
+            "value": "Continuați cu Bloom+"
           }
         },
         "uk": {
@@ -22052,7 +22052,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Costuri și utilizare"
+            "value": "Costuri și consum"
           }
         },
         "uk": {
@@ -22153,7 +22153,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Costuri pe zi"
+            "value": "Cost zilnic"
           }
         },
         "uk": {
@@ -22254,7 +22254,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu am putut incarca planurile"
+            "value": "Planurile nu s-au încărcat"
           }
         },
         "uk": {
@@ -22355,7 +22355,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu am putut finaliza achiziţia."
+            "value": "Achiziția nu a putut fi finalizată. Încercați din nou."
           }
         },
         "uk": {
@@ -22456,7 +22456,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu a putut încărca opțiunile de abonament. Verificați conexiunea și încercați din nou."
+            "value": "Opțiunile de abonament nu au putut fi încărcate. Verificați conexiunea și încercați din nou."
           }
         },
         "uk": {
@@ -22557,7 +22557,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu am putut reface achiziţiile."
+            "value": "Achizițiile nu au putut fi restaurate. Încercați din nou."
           }
         },
         "uk": {
@@ -22658,7 +22658,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perioada de probă nu a putut fi începută. Încearcă din nou."
+            "value": "Perioada de probă nu a putut fi începută. Încercați din nou."
           }
         },
         "uk": {
@@ -22759,7 +22759,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "N-am ajuns încă."
+            "value": "Adăugat în istoricul parcursului. Înregistrarea zilei nu a fost încă făcută."
           }
         },
         "uk": {
@@ -22860,7 +22860,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pofta atinge un vârf și scade"
+            "value": "Vârf și scădere a poftelor"
           }
         },
         "uk": {
@@ -22961,7 +22961,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pofta de nicotină după oră"
+            "value": "Pofte de nicotină după oră"
           }
         },
         "uk": {
@@ -23062,7 +23062,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "L-am zdrobit."
+            "value": "Ați reușit!"
           }
         },
         "uk": {
@@ -23163,7 +23163,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Curent"
+            "value": "În prezent"
           }
         },
         "uk": {
@@ -23264,7 +23264,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În prezent, în creștere"
+            "value": "În creștere"
           }
         },
         "uk": {
@@ -23365,7 +23365,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Personalizează grădina"
+            "value": "Personalizați grădina"
           }
         },
         "uk": {
@@ -23466,7 +23466,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reamintire zilnică"
+            "value": "Memento zilnic"
           }
         },
         "uk": {
@@ -23567,7 +23567,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "check-in zilnic"
+            "value": "Înregistrare zilnică"
           }
         },
         "uk": {
@@ -23668,7 +23668,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "check-in-uri de zi cu zi pentru 7 zile drepte."
+            "value": "Înregistrări zilnice timp de 7 zile la rând."
           }
         },
         "uk": {
@@ -23870,7 +23870,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Revista zilnică te ajută când ai nevoie de ele, plus restul Bloom+."
+            "value": "Întrebări zilnice pentru jurnal, exact când aveți nevoie, plus restul Bloom+."
           }
         },
         "uk": {
@@ -23971,7 +23971,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Timp de reamintire zilnic"
+            "value": "Ora mementoului zilnic"
           }
         },
         "uk": {
@@ -24072,7 +24072,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Întuneric"
+            "value": "Întunecat"
           }
         },
         "uk": {
@@ -24375,7 +24375,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ziua %1$lld aşteaptă"
+            "value": "Vă așteaptă ziua %1$lld"
           }
         },
         "uk": {
@@ -24779,7 +24779,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Decorații"
+            "value": "Decorațiuni"
           }
         },
         "uk": {
@@ -24880,7 +24880,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Șterge înregistrarea"
+            "value": "Ștergeți înregistrarea"
           }
         },
         "uk": {
@@ -24981,7 +24981,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Șterge jurnalul"
+            "value": "Ștergeți înregistrarea"
           }
         },
         "uk": {
@@ -25082,7 +25082,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Descrieţi un moment de pace pe care l-am trăit recent."
+            "value": "Descrieți un moment de liniște pe care l-am trăit recent."
           }
         },
         "uk": {
@@ -25183,7 +25183,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Descrie o mică victorie de astăzi."
+            "value": "Descrieți un mic succes de astăzi."
           }
         },
         "uk": {
@@ -25385,7 +25385,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Disciplina cu diamante"
+            "value": "Disciplină de diamant"
           }
         },
         "uk": {
@@ -25486,7 +25486,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dezactivează suprascrierea Bloom+"
+            "value": "Dezactivați suprascrierea Bloom+"
           }
         },
         "uk": {
@@ -25587,7 +25587,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gata."
+            "value": "Gata"
           }
         },
         "uk": {
@@ -25688,7 +25688,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alcool"
+            "value": "Consumul de alcool"
           }
         },
         "uk": {
@@ -25890,7 +25890,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Editează intrarea"
+            "value": "Editați înregistrarea"
           }
         },
         "uk": {
@@ -25991,7 +25991,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poţi să revezi asta oricând în Setări."
+            "value": "Oricare variantă este în regulă. Puteți reveni oricând la această opțiune din Configurări."
           }
         },
         "uk": {
@@ -26092,7 +26092,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Activează suprascrierea Bloom+"
+            "value": "Activați suprascrierea Bloom+"
           }
         },
         "uk": {
@@ -26294,7 +26294,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Articole"
+            "value": "Înregistrări"
           }
         },
         "uk": {
@@ -26395,7 +26395,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intrare"
+            "value": "Înregistrare"
           }
         },
         "uk": {
@@ -26496,7 +26496,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare poftă peste care ai trecut s-a încheiat fără un pliculeț cu nicotină."
+            "value": "Fiecare poftă de nicotină căreia i-ați făcut față s-a încheiat fără un pliculeț."
           }
         },
         "uk": {
@@ -26597,7 +26597,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare dolar pe care-l eviţi, urmărit."
+            "value": "Urmărim fiecare dolar și fiecare pliculeț cu nicotină pe care îl evitați."
           }
         },
         "uk": {
@@ -26698,7 +26698,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare zi fără nicotină îţi creşte copacul."
+            "value": "Fiecare zi fără nicotină vă face copacul să crească."
           }
         },
         "uk": {
@@ -26799,7 +26799,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare zi fără nicotină pe care ai numărat-o contează în continuare."
+            "value": "Fiecare zi fără nicotină pe care ați înregistrat-o continuă să conteze"
           }
         },
         "uk": {
@@ -26900,7 +26900,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De fiecare dată când reziști poftei, pagina învață când apare, ce o declanșează și cât durează."
+            "value": "De fiecare dată când treceți cu bine peste o poftă de nicotină, această pagină înregistrează când apare, ce o declanșează și cât durează."
           }
         },
         "uk": {
@@ -27001,7 +27001,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare instrument care păstrează dunga vizibilă, deblocat astăzi."
+            "value": "Astăzi ați deblocat toate instrumentele care vă ajută să vă urmăriți seria."
           }
         },
         "uk": {
@@ -27297,19 +27297,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Every tool that keeps the streak visible. Nothing is charged for %1$lld day."
+                  "value": "Toate instrumentele care vă arată seria sunt deblocate. Nu vi se percepe nicio taxă timp de %1$lld zi."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Every tool that keeps the streak visible. Nothing is charged for %1$lld days."
+                  "value": "Toate instrumentele care vă arată seria sunt deblocate. Nu vi se percepe nicio taxă timp de %1$lld zile."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Every tool that keeps the streak visible. Nothing is charged for %1$lld days."
+                  "value": "Toate instrumentele care vă arată seria sunt deblocate. Nu vi se percepe nicio taxă timp de %1$lld de zile."
                 }
               }
             }
@@ -27455,7 +27455,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orice unealtă care ţine şirul vizibil."
+            "value": "Toate instrumentele care vă arată seria sunt deblocate astăzi. Nu vi se percepe nicio taxă azi."
           }
         },
         "uk": {
@@ -27556,7 +27556,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Totul se deblochează. Acces complet, de plată acum: %@."
+            "value": "Totul se deblochează. Acces complet. Plătiți %1$@ acum."
           }
         },
         "uk": {
@@ -27657,7 +27657,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tot ce deblochezi"
+            "value": "Tot ce deblocați"
           }
         },
         "uk": {
@@ -27758,7 +27758,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Excelent."
+            "value": "Excelent"
           }
         },
         "uk": {
@@ -27859,7 +27859,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "PERIOADĂ DE PROBĂ GRATUITĂ"
+            "value": "PROBĂ GRATUITĂ"
           }
         },
         "uk": {
@@ -27960,7 +27960,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Senzaţie"
+            "value": "Stare"
           }
         },
         "uk": {
@@ -28061,7 +28061,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mai puține decât în cele 7 zile anterioare"
+            "value": "Mai puține în ultimele 7 zile"
           }
         },
         "uk": {
@@ -28162,7 +28162,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Găsiţi tratament"
+            "value": "Căutați ajutor"
           }
         },
         "uk": {
@@ -28364,7 +28364,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Urmăriți 13 repere sursă de nicotină - recuperare"
+            "value": "Parcurgeți 13 repere documentate despre schimbările de sănătate după renunțarea la nicotină."
           }
         },
         "uk": {
@@ -28566,7 +28566,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perioadă de probă gratuită"
+            "value": "Probă gratuită"
           }
         },
         "uk": {
@@ -28667,7 +28667,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gratuit până la %1$@. Activează notificările și îți reamintim înainte de încheierea perioadei de probă."
+            "value": "Gratuit până la %1$@. Activați notificările și vă vom reaminti înainte să se încheie perioada de probă."
           }
         },
         "uk": {
@@ -28768,7 +28768,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scriere gratuită"
+            "value": "Scrieți liber"
           }
         },
         "uk": {
@@ -28869,7 +28869,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajutor gratuit, confidențial este disponibil oricând. A ajunge afară este o putere, nu un regres."
+            "value": "Ajutorul gratuit și confidențial este disponibil oricând. Să cereți ajutor este un semn de curaj, nu un pas înapoi."
           }
         },
         "uk": {
@@ -28970,7 +28970,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acces complet la grădină, jurnal, sănătate și economii pe durata probei."
+            "value": "Acces complet la grădină, jurnal, cronologia sănătății și economii. Gratuit până la încheierea perioadei de probă."
           }
         },
         "uk": {
@@ -29071,7 +29071,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cronologie completă pentru sănătate"
+            "value": "Sănătate: cronologie completă"
           }
         },
         "uk": {
@@ -29172,7 +29172,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Caracteristici grădină"
+            "value": "Funcții pentru grădină"
           }
         },
         "uk": {
@@ -29273,7 +29273,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Informații generale despre starea de bine, nu sfaturi medicale. Evoluția diferă de la o persoană la alta. Pentru probleme de sănătate, discută cu un profesionist medical."
+            "value": "Informații generale despre starea de bine, nu sfaturi medicale. Evoluția diferă de la o persoană la alta. Pentru întrebări medicale, discutați cu un profesionist din domeniul sănătății."
           }
         },
         "uk": {
@@ -29374,7 +29374,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe"
+            "value": "Începeți"
           }
         },
         "uk": {
@@ -29475,7 +29475,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începeţi"
+            "value": "Începeți"
           }
         },
         "uk": {
@@ -29576,7 +29576,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mai lasă-mă un minut."
+            "value": "Mai acordați-mi un minut"
           }
         },
         "uk": {
@@ -29677,7 +29677,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du-te înapoi"
+            "value": "Reveniți"
           }
         },
         "uk": {
@@ -29778,7 +29778,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bine."
+            "value": "Bine"
           }
         },
         "uk": {
@@ -29879,7 +29879,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acoperiri la sol"
+            "value": "Plante târâtoare"
           }
         },
         "uk": {
@@ -29980,7 +29980,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cresc toate speciile."
+            "value": "Creșteți fiecare specie."
           }
         },
         "uk": {
@@ -30081,7 +30081,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Creşterea"
+            "value": "În creștere"
           }
         },
         "uk": {
@@ -30182,7 +30182,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gingiile și țesuturile din gură se refac."
+            "value": "Gingiile și țesuturile din gură își revin treptat."
           }
         },
         "uk": {
@@ -30283,7 +30283,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gingiile încep să se vindece"
+            "value": "Gingiile își revin"
           }
         },
         "uk": {
@@ -30384,7 +30384,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Erou de jumătate de an"
+            "value": "Erou de șase luni"
           }
         },
         "uk": {
@@ -30485,7 +30485,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cel mai greu dintre %1$@ și %2$@"
+            "value": "Pofta este cea mai intensă între %1$@ și %2$@"
           }
         },
         "uk": {
@@ -30788,7 +30788,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scade riscul cardiovascular"
+            "value": "Riscul cardiac scade"
           }
         },
         "uk": {
@@ -30990,7 +30990,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stai."
+            "value": "Țineți"
           }
         },
         "uk": {
@@ -31192,7 +31192,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ora"
+            "value": "Oră"
           }
         },
         "uk": {
@@ -31293,7 +31293,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cum a fost ziua?"
+            "value": "Cum a decurs ziua?"
           }
         },
         "uk": {
@@ -31394,7 +31394,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cum s-a schimbat viaţa mea zilnică de când m-am lăsat de nicotină?"
+            "value": "Cum s-a schimbat viața mea de zi cu zi de când am renunțat la nicotină?"
           }
         },
         "uk": {
@@ -31495,7 +31495,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cum e somnul meu diferit acum?"
+            "value": "Cum s-a schimbat somnul meu?"
           }
         },
         "uk": {
@@ -31596,7 +31596,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cât timp ai fost fără nicotină."
+            "value": "De cât timp sunteți fără nicotină."
           }
         },
         "uk": {
@@ -31697,7 +31697,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cât ai folosit?"
+            "value": "Câtă nicotină consumați înainte?"
           }
         },
         "uk": {
@@ -31798,7 +31798,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cât de puternic a fost?"
+            "value": "Ce concentrație avea?"
           }
         },
         "uk": {
@@ -31899,7 +31899,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mă angajez să mă fac bine."
+            "value": "Mă angajez să-mi îmbunătățesc starea."
           }
         },
         "uk": {
@@ -32101,7 +32101,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Am consumat nicotină"
+            "value": "Am avut o scăpare."
           }
         },
         "uk": {
@@ -32202,7 +32202,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mă angajez la asta."
+            "value": "Îmi iau acest angajament."
           }
         },
         "uk": {
@@ -32303,7 +32303,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mi-e poftă de nicotină."
+            "value": "Am o poftă de nicotină."
           }
         },
         "uk": {
@@ -32404,7 +32404,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Am trecut prin asta."
+            "value": "Am trecut peste."
           }
         },
         "uk": {
@@ -32505,7 +32505,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dacă aș folosi azi un pliculeț cu nicotină, ce aș pierde?"
+            "value": "Dacă aș folosi astăzi un pliculeț cu nicotină, ce aș pierde?"
           }
         },
         "uk": {
@@ -32606,7 +32606,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dacă azi e fără nicotină, logaţi-o şi udaţi-vă grădina."
+            "value": "Dacă ați fost fără nicotină astăzi, înregistrați ziua și udați grădina."
           }
         },
         "uk": {
@@ -32707,7 +32707,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dacă aveți nevoie de sprijin"
+            "value": "Aveți nevoie de ajutor?"
           }
         },
         "uk": {
@@ -32808,7 +32808,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Într-un an, asta e"
+            "value": "Într-un an, asta înseamnă"
           }
         },
         "uk": {
@@ -32909,7 +32909,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intensitate %1$lld din 5"
+            "value": "Intensitate: %1$lld din 5"
           }
         },
         "uk": {
@@ -33111,7 +33111,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "A trecut."
+            "value": "A trecut"
           }
         },
         "uk": {
@@ -33212,7 +33212,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "E deja mai mică decât era acum un minut, chiar dacă nu se simte terminată."
+            "value": "Este deja mai slabă decât acum un minut, chiar dacă nu pare să fi trecut complet."
           }
         },
         "uk": {
@@ -33313,7 +33313,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "E în regulă. Mulți oameni au episoade de consum pe parcurs. Înregistrarea acestuia păstrează restul istoricului corect."
+            "value": "Este în regulă. O scăpare face parte din parcursul multor persoane, iar înregistrarea ei păstrează restul istoricului dvs. corect."
           }
         },
         "uk": {
@@ -33414,7 +33414,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Maple japonez"
+            "value": "Arțar japonez"
           }
         },
         "uk": {
@@ -33616,7 +33616,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jurnal privat prin zilele grele"
+            "value": "Scrieți în jurnal, în privat, în zilele dificile"
           }
         },
         "uk": {
@@ -33717,7 +33717,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Păstrează perioada de probă"
+            "value": "Păstrez proba gratuită"
           }
         },
         "uk": {
@@ -33919,7 +33919,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Păstraţi - vă grădina plină, jurnalul şi economiile sau anulaţi - le oricând înainte de a se reînnoi."
+            "value": "Păstrați accesul complet la grădină, jurnal și economii sau anulați oricând înainte de reînnoire."
           }
         },
         "uk": {
@@ -34121,7 +34121,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Învaţă-ţi propriul tipar."
+            "value": "Descoperiți-vă propriul tipar."
           }
         },
         "uk": {
@@ -34525,7 +34525,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durata de viaţă"
+            "value": "Pe viață"
           }
         },
         "uk": {
@@ -34626,7 +34626,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durata vieții: %1$@"
+            "value": "Acces pe viață: %1$@"
           }
         },
         "uk": {
@@ -34727,7 +34727,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lumină"
+            "value": "Luminos"
           }
         },
         "uk": {
@@ -34828,7 +34828,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se încarcă planurile..."
+            "value": "Se încarcă planurile…"
           }
         },
         "uk": {
@@ -34929,7 +34929,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Atingeți rândul pentru a afla despre Bloom+."
+            "value": "Blocat. Atingeți rândul pentru detalii despre Bloom+"
           }
         },
         "uk": {
@@ -35030,7 +35030,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrează un episod"
+            "value": "Înregistrați o scăpare"
           }
         },
         "uk": {
@@ -35131,7 +35131,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrezi un episod?"
+            "value": "Înregistrați o scăpare?"
           }
         },
         "uk": {
@@ -35232,7 +35232,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jurnal ca fără nicotină"
+            "value": "Înregistrați zi fără nicotină"
           }
         },
         "uk": {
@@ -35333,7 +35333,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Log-l și să păstreze merge"
+            "value": "Înregistrați și continuați"
           }
         },
         "uk": {
@@ -35434,7 +35434,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrează episodul"
+            "value": "Înregistrați o scăpare"
           }
         },
         "uk": {
@@ -35535,7 +35535,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Log astazi si uda gradina."
+            "value": "Înregistrați ziua de azi și udați grădina. Puteți reuși."
           }
         },
         "uk": {
@@ -35636,7 +35636,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Notează ziua fără nicotină și udă bonsaiul."
+            "value": "Înregistrați ziua de azi ca fără nicotină și udați bonsaiul."
           }
         },
         "uk": {
@@ -35737,7 +35737,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Episod înregistrat"
+            "value": "Scăpare înregistrată"
           }
         },
         "uk": {
@@ -35838,7 +35838,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logged fără nicotină"
+            "value": "Înregistrat: fără nicotină"
           }
         },
         "uk": {
@@ -35939,7 +35939,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrate până acum: %1$lld."
+            "value": "Înregistrări până acum: %1$lld."
           }
         },
         "uk": {
@@ -36141,7 +36141,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încă eşti în călătorie."
+            "value": "Înregistrat. Parcursul dvs. continuă."
           }
         },
         "uk": {
@@ -36343,7 +36343,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cel mai lung"
+            "value": "Cea mai lungă"
           }
         },
         "uk": {
@@ -36444,7 +36444,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Să fie oficial."
+            "value": "Confirmați înregistrarea"
           }
         },
         "uk": {
@@ -36646,7 +36646,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul matur"
+            "value": "Etapa matură"
           }
         },
         "uk": {
@@ -36747,7 +36747,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uşoară"
+            "value": "Ușoară"
           }
         },
         "uk": {
@@ -36949,7 +36949,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Urmărirea banilor și a pungilor"
+            "value": "Bani și pliculețe urmărite"
           }
         },
         "uk": {
@@ -37252,7 +37252,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Starea de spirit se stabilizează"
+            "value": "Stare mai stabilă"
           }
         },
         "uk": {
@@ -37454,7 +37454,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mai multe decât în cele 7 zile anterioare"
+            "value": "Mai multe în ultimele 7 zile"
           }
         },
         "uk": {
@@ -37555,7 +37555,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Declanșatorul cel mai frecvent: %1$@"
+            "value": "Declanșator principal: %1$@"
           }
         },
         "uk": {
@@ -37757,7 +37757,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cea mai mare parte a nicotinei părăsește corpul."
+            "value": "Aproape toată nicotina a părăsit organismul."
           }
         },
         "uk": {
@@ -38060,7 +38060,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "NCI · Sevrajul de nicotină"
+            "value": "NCI · Sevraj nicotinic"
           }
         },
         "uk": {
@@ -38262,7 +38262,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spune-mi o situaţie în care obişnuiam să caut o geantă."
+            "value": "Descrieți o situație în care obișnuiam să iau un pliculeț cu nicotină. Cum am gestionat-o?"
           }
         },
         "uk": {
@@ -38363,7 +38363,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": " terminațiile nervoase încep să se refacă."
+            "value": "Terminațiile nervoase încep să funcționeze mai bine."
           }
         },
         "uk": {
@@ -38464,7 +38464,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neutru"
+            "value": "Neutră"
           }
         },
         "uk": {
@@ -38565,7 +38565,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intrare nouă"
+            "value": "Înregistrare nouă"
           }
         },
         "uk": {
@@ -38666,7 +38666,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "O nouă creștere"
+            "value": "Creștere nouă"
           }
         },
         "uk": {
@@ -38767,7 +38767,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intrare nouă"
+            "value": "Înregistrare nouă"
           }
         },
         "uk": {
@@ -38969,7 +38969,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Următorul"
+            "value": "Urmează"
           }
         },
         "uk": {
@@ -39171,7 +39171,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotina este eliminată"
+            "value": "Nicotină eliminată"
           }
         },
         "uk": {
@@ -39373,7 +39373,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotina are un timp de înjumătățire scurt, astfel că nivelul din sânge scade cu mai mult de jumătate în câteva ore, pe măsură ce corpul elimină ultima doză."
+            "value": "Nicotina are un timp de înjumătățire scurt, așa că în câteva ore nivelul ei din sânge scade cu mai mult de jumătate, pe măsură ce organismul elimină ultima doză."
           }
         },
         "uk": {
@@ -39474,7 +39474,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotina nu a absorbit niciodată"
+            "value": "Nicotină neabsorbită"
           }
         },
         "uk": {
@@ -39676,7 +39676,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nici o achiziție activă Bloom+ găsit pentru acest ID Apple."
+            "value": "Nu există nicio achiziție Bloom+ activă pentru acest ID Apple."
           }
         },
         "uk": {
@@ -39777,7 +39777,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu a fost găsită nicio achiziție activă Bloom+ pentru acest ID Apple."
+            "value": "Nu a fost găsită nicio achiziție Bloom+ activă pentru acest ID Apple."
           }
         },
         "uk": {
@@ -39878,7 +39878,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Foloseşte creionul ca să scrii primul."
+            "value": "Nu există încă înregistrări. Folosiți pictograma creion pentru a scrie prima notă."
           }
         },
         "uk": {
@@ -39979,7 +39979,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nici o intrare încă. Prima intrare este gratuit. Utilizați creionul pentru a-l scrie."
+            "value": "Încă nu există înregistrări. Prima notă este gratuită. Folosiți creionul pentru a o scrie."
           }
         },
         "uk": {
@@ -40080,7 +40080,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nici o plată acum"
+            "value": "Fără plată acum"
           }
         },
         "uk": {
@@ -40181,7 +40181,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fără plată acum · Apple te anunță înainte de debitare · Datele rămân pe dispozitiv"
+            "value": "Fără plată acum · Apple vă reamintește înainte de facturare · Datele rămân pe dispozitiv"
           }
         },
         "uk": {
@@ -40282,7 +40282,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu acum."
+            "value": "Nu acum"
           }
         },
         "uk": {
@@ -40377,7 +40377,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neeconomisit"
+            "value": "Nesalvat"
           }
         },
         "uk": {
@@ -40478,7 +40478,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu pe pliculețe"
+            "value": "Necheltuit pe pliculețe"
           }
         },
         "uk": {
@@ -40579,7 +40579,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu sunt sigur."
+            "value": "Încă nu știu"
           }
         },
         "uk": {
@@ -40680,7 +40680,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încă nu sunt sigur."
+            "value": "Încă nu știu. Închideți sesiunea"
           }
         },
         "uk": {
@@ -40882,7 +40882,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încă nu sunt date"
+            "value": "Nu aveți încă înregistrări"
           }
         },
         "uk": {
@@ -40983,7 +40983,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu încerci să câştigi, aştepţi."
+            "value": "Observați pofta fără să vă luptați cu ea. Nu trebuie să o învingeți, doar să așteptați să treacă."
           }
         },
         "uk": {
@@ -41084,7 +41084,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Notificările sunt oprite pentru Quit Zyn, astfel încât memento-ul nu poate fi livrat. Atingeți mai sus pentru a le activa în aplicația Setări."
+            "value": "Notificările pentru Quit Zyn sunt dezactivate, așa că mementoul nu poate fi trimis. Atingeți mai sus pentru a le activa în Configurări."
           }
         },
         "uk": {
@@ -41185,7 +41185,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bine."
+            "value": "OK"
           }
         },
         "uk": {
@@ -41286,7 +41286,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pe App Store"
+            "value": "În App Store"
           }
         },
         "uk": {
@@ -41387,7 +41387,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pe drumul cel bun de salvat"
+            "value": "Economii estimate"
           }
         },
         "uk": {
@@ -41488,7 +41488,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "A ajuns la o lună."
+            "value": "Ați atins reperul de o lună."
           }
         },
         "uk": {
@@ -41589,7 +41589,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "O singură dată · fără abonament"
+            "value": "O singură plată · fără abonament"
           }
         },
         "uk": {
@@ -41690,7 +41690,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sănătatea orală se reface"
+            "value": "Sănătate orală mai bună"
           }
         },
         "uk": {
@@ -41791,7 +41791,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copleşitor"
+            "value": "Copleșitoare"
           }
         },
         "uk": {
@@ -41892,7 +41892,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Săptămâna perfectă"
+            "value": "Săptămână perfectă"
           }
         },
         "uk": {
@@ -41993,7 +41993,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Planurile sunt temporar indisponibile."
+            "value": "Planurile nu sunt disponibile temporar. Încercați din nou peste puțin timp."
           }
         },
         "uk": {
@@ -42094,7 +42094,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În plus, nu vei folosi %1$@ pliculețe cu nicotină. Corpul tău nu va trebui să proceseze acea nicotină."
+            "value": "În plus, evitați %1$@ pliculețe cu nicotină. Organismul dvs. nu va mai avea de metabolizat acea nicotină."
           }
         },
         "uk": {
@@ -42195,7 +42195,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pliculețe"
+            "value": "Pliculețe cu nicotină"
           }
         },
         "uk": {
@@ -42296,7 +42296,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pliculețe cu nicotină evitate"
+            "value": "Pliculețe evitate"
           }
         },
         "uk": {
@@ -42498,7 +42498,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pliculețe pe zi"
+            "value": "Pliculețe/zi"
           }
         },
         "uk": {
@@ -42801,7 +42801,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prețurile provin de la App Store și nu sunt disponibile în această clădire."
+            "value": "Prețurile sunt furnizate de App Store și nu sunt disponibile în această versiune."
           }
         },
         "uk": {
@@ -42902,7 +42902,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Politica de confidențialitate"
+            "value": "Confidențialitate"
           }
         },
         "uk": {
@@ -43003,7 +43003,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Progrese"
+            "value": "Progres"
           }
         },
         "uk": {
@@ -43104,7 +43104,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proiectați %1$@ pe anul viitor"
+            "value": "Estimați cât puteți economisi în următorul an: %1$@."
           }
         },
         "uk": {
@@ -43205,7 +43205,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proiectează anul viitor, nu doar zilele din urmă"
+            "value": "Priviți spre următorul an, nu doar spre zilele trecute"
           }
         },
         "uk": {
@@ -43306,7 +43306,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Promptul zilei"
+            "value": "Întrebarea zilei"
           }
         },
         "uk": {
@@ -43407,7 +43407,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prompts şi reflecţii în zilele grele."
+            "value": "Întrebări și teme de reflecție pentru zilele grele."
           }
         },
         "uk": {
@@ -43508,7 +43508,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pulsul și tensiunea arterială încep să scadă."
+            "value": "Pulsul și tensiunea arterială se apropie de valorile obișnuite."
           }
         },
         "uk": {
@@ -43609,7 +43609,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Atingeți din nou pentru a continua."
+            "value": "Achiziția a fost anulată. Atingeți din nou pentru a continua."
           }
         },
         "uk": {
@@ -43710,7 +43710,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Readuce contorul și copacul la starea de dinaintea acestui episod."
+            "value": "Readuce contorul și copacul la starea de dinaintea acestei scăpări."
           }
         },
         "uk": {
@@ -43912,7 +43912,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Întrebări, idei sau probleme?"
+            "value": "Aveți întrebări, idei sau probleme? Scrieți-ne."
           }
         },
         "uk": {
@@ -44013,7 +44013,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit Zyn: zile fără nicotină"
+            "value": "Zile fără nicotină"
           }
         },
         "uk": {
@@ -44114,7 +44114,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comment"
+            "value": "Evaluați Quit Zyn"
           }
         },
         "uk": {
@@ -44410,19 +44410,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld poftă ca să descoperi mai multe tipare."
+                  "value": "Înregistrați încă %1$lld poftă pentru a descoperi mai multe tipare."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld pofte ca să descoperi mai multe tipare."
+                  "value": "Înregistrați încă %1$lld pofte pentru a descoperi mai multe tipare."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld de pofte ca să descoperi mai multe tipare."
+                  "value": "Înregistrați încă %1$lld de pofte pentru a descoperi mai multe tipare."
                 }
               }
             }
@@ -44763,19 +44763,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld poftă ca să începi să-ți vezi tiparele."
+                  "value": "Înregistrați încă %1$lld poftă pentru a începe să vă observați tiparele."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld pofte ca să începi să-ți vezi tiparele."
+                  "value": "Înregistrați încă %1$lld pofte pentru a începe să vă observați tiparele."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Înregistrează încă %1$lld de pofte ca să începi să-ți vezi tiparele."
+                  "value": "Înregistrați încă %1$lld de pofte pentru a începe să vă observați tiparele."
                 }
               }
             }
@@ -44921,7 +44921,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrează încă o poftă ca să descoperi mai multe tipare."
+            "value": "Înregistrați încă o poftă pentru a descoperi mai multe tipare."
           }
         },
         "uk": {
@@ -45022,7 +45022,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înregistrează încă o poftă ca să începi să-ți vezi tiparele."
+            "value": "Înregistrați încă o poftă pentru a începe să vă observați tiparele."
           }
         },
         "uk": {
@@ -45123,7 +45123,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Recuperarea începe cu o decizie."
+            "value": "Parcursul începe cu o decizie. Este alegerea dvs., astăzi și în zilele următoare."
           }
         },
         "uk": {
@@ -45224,7 +45224,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Refinite"
+            "value": "Rafinat"
           }
         },
         "uk": {
@@ -45325,7 +45325,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rafinat şi dens."
+            "value": "Rafinat și dens. Rezultatul unei răbdări îndelungate."
           }
         },
         "uk": {
@@ -45527,7 +45527,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Înainte de plată"
+            "value": "Memento înainte de facturare"
           }
         },
         "uk": {
@@ -45628,7 +45628,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Timp de reamintire"
+            "value": "Ora mementoului"
           }
         },
         "uk": {
@@ -45729,7 +45729,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amintirile sunt înrămate în jurul angajamentului tău."
+            "value": "Mementourile se bazează pe angajamentul dvs."
           }
         },
         "uk": {
@@ -45830,7 +45830,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amintirile rămân neutre şi fără presiune."
+            "value": "Mementourile rămân neutre și fără presiune."
           }
         },
         "uk": {
@@ -45931,7 +45931,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se reînnoiește automat. Anulează cu cel puțin 24 de ore înainte de finalul perioadei. Gestionează: Configurări › Apple ID › Abonamente."
+            "value": "Se reînnoiește automat. Puteți anula cu cel puțin 24 de ore înainte de încheierea perioadei curente. Gestionați abonamentul în Configurări › ID Apple › Abonamente."
           }
         },
         "uk": {
@@ -46032,7 +46032,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reinițializează"
+            "value": "Resetați"
           }
         },
         "uk": {
@@ -46133,7 +46133,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Resetează contorul"
+            "value": "Resetați contorul"
           }
         },
         "uk": {
@@ -46234,7 +46234,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Să-ţi resetez tejghea?"
+            "value": "Resetați contorul?"
           }
         },
         "uk": {
@@ -46335,7 +46335,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Restaurează"
+            "value": "Restaurați"
           }
         },
         "uk": {
@@ -46436,7 +46436,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Restaurează achiziții"
+            "value": "Restaurați achizițiile"
           }
         },
         "uk": {
@@ -46537,7 +46537,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Restaurarea..."
+            "value": "Se restaurează…"
           }
         },
         "uk": {
@@ -46638,7 +46638,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Depășite: %1$lld din %2$lld"
+            "value": "Pofte depășite: %1$lld din %2$lld"
           }
         },
         "uk": {
@@ -46739,7 +46739,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Respiră calm câteva minute."
+            "value": "Respirați câteva minute, până trece pofta"
           }
         },
         "uk": {
@@ -46941,7 +46941,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dur"
+            "value": "Dificilă"
           }
         },
         "uk": {
@@ -47143,7 +47143,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "SAVE %1$lld%"
+            "value": "ECONOMISIȚI %1$lld%%"
           }
         },
         "uk": {
@@ -47244,7 +47244,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "La fel de multe ca în cele 7 zile anterioare"
+            "value": "La fel ca în cele 7 zile anterioare"
           }
         },
         "uk": {
@@ -47345,7 +47345,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Salvează"
+            "value": "Salvați"
           }
         },
         "uk": {
@@ -47718,19 +47718,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Economisit în %1$lld zi fără nicotină."
+                  "value": "Economii acumulate în %1$lld zi fără nicotină."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Economisit în %1$lld zile fără nicotină."
+                  "value": "Economii acumulate în %1$lld zile fără nicotină."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Economisit în %1$lld zile fără nicotină."
+                  "value": "Economii acumulate în %1$lld de zile fără nicotină."
                 }
               }
             }
@@ -47876,7 +47876,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vezi toate planurile"
+            "value": "Vedeți toate planurile"
           }
         },
         "uk": {
@@ -47977,7 +47977,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "A se vedea progresul complet"
+            "value": "Vedeți progresul complet"
           }
         },
         "uk": {
@@ -48078,7 +48078,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vezi ce se întoarce."
+            "value": "Observați ce se schimbă în bine."
           }
         },
         "uk": {
@@ -48179,7 +48179,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vezi când apare %1$@, ce o declanșează și cât durează, plus restul Bloom+."
+            "value": "Vedeți când apar %1$@, ce le declanșează și cât durează în cazul dvs., plus restul Bloom+."
           }
         },
         "uk": {
@@ -48280,7 +48280,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Semințe"
+            "value": "Sămânță"
           }
         },
         "uk": {
@@ -48381,7 +48381,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul semințelor"
+            "value": "Etapa de sămânță"
           }
         },
         "uk": {
@@ -48482,7 +48482,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Semănătoare"
+            "value": "Puiet"
           }
         },
         "uk": {
@@ -48583,7 +48583,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul răsadurilor"
+            "value": "Etapa de puiet"
           }
         },
         "uk": {
@@ -48785,7 +48785,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trimite feedback"
+            "value": "Trimiteți feedback"
           }
         },
         "uk": {
@@ -48987,7 +48987,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fiecare ramură spune o poveste despre rezistenţă."
+            "value": "Modelat de vânt de-a lungul anilor. Fiecare ramură spune o poveste despre rezistență."
           }
         },
         "uk": {
@@ -49088,7 +49088,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aparand astazi"
+            "value": "Prezent astăzi"
           }
         },
         "uk": {
@@ -49189,7 +49189,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amestecă prompt"
+            "value": "Schimbați întrebarea"
           }
         },
         "uk": {
@@ -49391,7 +49391,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, vârful ramurii a mai crescut."
+            "value": "De ieri, vârful unei ramuri a mai crescut."
           }
         },
         "uk": {
@@ -49795,7 +49795,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, scoarța s-a întărit puțin."
+            "value": "De ieri, scoarța s-a mai întărit puțin."
           }
         },
         "uk": {
@@ -49896,7 +49896,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, coroana s-a îndesit puțin."
+            "value": "De ieri, coroana s-a mai îndesit puțin."
           }
         },
         "uk": {
@@ -49997,7 +49997,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, coroana copacului a crescut mai sus."
+            "value": "De ieri, coroana copacului a mai crescut."
           }
         },
         "uk": {
@@ -50199,7 +50199,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, acele s-au închis la culoare."
+            "value": "De ieri, acele au căpătat o nuanță mai închisă."
           }
         },
         "uk": {
@@ -50300,7 +50300,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "De ieri, rădăcinile s-au întins puțin mai mult."
+            "value": "De ieri, rădăcinile s-au mai întins puțin."
           }
         },
         "uk": {
@@ -50805,7 +50805,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Şase luni fără nicotină."
+            "value": "Șase luni fără nicotină."
           }
         },
         "uk": {
@@ -50906,7 +50906,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sari"
+            "value": "Omiteți"
           }
         },
         "uk": {
@@ -51007,7 +51007,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ca să nu-mi mai organizez ziua în jurul unei cutii"
+            "value": "Așa nu-mi mai organizez ziua în jurul unei cutii de pliculețe."
           }
         },
         "uk": {
@@ -51209,7 +51209,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mugur"
+            "value": "Lăstar"
           }
         },
         "uk": {
@@ -51310,7 +51310,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stadiul Sprout"
+            "value": "Etapa de lăstar"
           }
         },
         "uk": {
@@ -51411,7 +51411,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etapa avansată: %1$@ → %2$@"
+            "value": "Etapă avansată: %1$@ → %2$@"
           }
         },
         "uk": {
@@ -51512,7 +51512,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe"
+            "value": "Începeți"
           }
         },
         "uk": {
@@ -51808,19 +51808,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zi"
+                  "value": "Începeți proba gratuită: %1$lld zi"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți proba gratuită: %1$lld zile"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți proba gratuită: %1$lld de zile"
                 }
               }
             }
@@ -52161,19 +52161,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld lună"
+                  "value": "Începeți proba gratuită: %1$lld lună"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld luni"
+                  "value": "Începeți proba gratuită: %1$lld luni"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld luni"
+                  "value": "Începeți proba gratuită: %1$lld de luni"
                 }
               }
             }
@@ -52514,19 +52514,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld an"
+                  "value": "Începeți proba gratuită: %1$lld an"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld ani"
+                  "value": "Începeți proba gratuită: %1$lld ani"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld ani"
+                  "value": "Începeți proba gratuită: %1$lld de ani"
                 }
               }
             }
@@ -52672,7 +52672,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe gratuit"
+            "value": "Începeți proba gratuită"
           }
         },
         "uk": {
@@ -52956,19 +52956,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zi"
+                  "value": "Începeți perioada mea de probă: %1$lld zi gratuită"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți perioada mea de probă: %1$lld zile gratuite"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți perioada mea de probă: %1$lld de zile gratuite"
                 }
               }
             }
@@ -53114,7 +53114,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe gratuit"
+            "value": "Începeți proba gratuită"
           }
         },
         "uk": {
@@ -53398,19 +53398,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zi"
+                  "value": "Începeți perioada mea de probă: %1$lld zi gratuită"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți perioada mea de probă: %1$lld zile gratuite"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Încearcă gratuit timp de %1$lld zile"
+                  "value": "Începeți perioada mea de probă: %1$lld de zile gratuite"
                 }
               }
             }
@@ -53556,7 +53556,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe gratuit"
+            "value": "Începeți proba gratuită"
           }
         },
         "uk": {
@@ -53657,7 +53657,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Începe perioada de probă gratuită Bloom+"
+            "value": "Începeți perioada de probă gratuită Bloom+"
           }
         },
         "uk": {
@@ -53752,7 +53752,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Banii rămân la tine, în loc să se ducă pe pliculețe cu nicotină. Bloom+ te ajută să-ți păstrezi seria."
+            "value": "Banii vă rămân în buzunar, nu se duc pe pliculețe cu nicotină. Bloom+ vă ajută să vă păstrați seria."
           }
         },
         "uk": {
@@ -53954,7 +53954,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Viaţa contează fiecare zi fără nicotină pe care ai înregistrat-o, aşa că progresul trecut nu e pierdut pe o resetare."
+            "value": "Seria arată zilele din parcursul actual. Totalul cumulat include fiecare zi fără nicotină pe care ați înregistrat-o, astfel încât progresul anterior nu se pierde la resetarea contorului."
           }
         },
         "uk": {
@@ -54055,7 +54055,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tulburări"
+            "value": "Serii"
           }
         },
         "uk": {
@@ -54358,7 +54358,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fundație puternică"
+            "value": "Bază solidă"
           }
         },
         "uk": {
@@ -54560,7 +54560,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimba orice specie oricand · dunga ta continua sa creasca"
+            "value": "Alegeți oricând altă specie · seria continuă să crească"
           }
         },
         "uk": {
@@ -54661,7 +54661,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comută"
+            "value": "Schimbați"
           }
         },
         "uk": {
@@ -54762,7 +54762,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimbaţi oricând. Numărul de zile şi creşterea duce la copacul pe care îl alegeţi."
+            "value": "Puteți schimba oricând copacul. Numărul de zile și creșterea se transferă la copacul ales."
           }
         },
         "uk": {
@@ -54863,7 +54863,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimbă speciile bonsai, în prezent %1$@"
+            "value": "Schimbați specia de bonsai · acum: %1$@"
           }
         },
         "uk": {
@@ -54964,7 +54964,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schimbă copacul pe măsură ce creşte."
+            "value": "Schimbați copacul pe măsură ce seria crește."
           }
         },
         "uk": {
@@ -55166,7 +55166,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gustul și mirosul se ascut"
+            "value": "Gust și miros mai intense"
           }
         },
         "uk": {
@@ -55570,7 +55570,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Asta e despre %1$@ / zi"
+            "value": "Aproximativ %1$@ pe zi"
           }
         },
         "uk": {
@@ -55671,7 +55671,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stilul cascadei imită un copac care creşte pe o stâncă, cufundându-se în jos."
+            "value": "Stilul în cascadă imită un copac care crește pe o stâncă, cu ramurile atârnând în jos."
           }
         },
         "uk": {
@@ -55772,7 +55772,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perioada cea mai grea trece."
+            "value": "Cea mai grea perioadă trece."
           }
         },
         "uk": {
@@ -55873,7 +55873,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sămânţa se stabileşte."
+            "value": "Sămânța prinde rădăcini. Parcursul dvs. începe aici."
           }
         },
         "uk": {
@@ -55974,7 +55974,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acest lucru este aproape de partea de sus a acesteia. Acestea %1$@ urca rapid și apoi se opresc alpinism."
+            "value": "Sunteți aproape de vârful poftei. %1$@ pot deveni intense rapid, apoi se stabilizează."
           }
         },
         "uk": {
@@ -56270,7 +56270,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Acest factor declanșator a apărut o dată. Număr: %1$lld."
+                  "value": "Factor declanșator înregistrat: %1$lld"
                 }
               },
               "few": {
@@ -56282,7 +56282,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Acest factor declanșator a apărut de %1$lld ori."
+                  "value": "Acest factor declanșator a apărut de %1$lld de ori."
                 }
               }
             }
@@ -56428,7 +56428,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După trei luni, circulația tinde să se îmbunătățească deoarece nicotina nu mai contractă vasele de sânge. Multe persoane spun că au energie mai stabilă."
+            "value": "După trei luni, circulația tinde să se îmbunătățească deoarece nicotina nu mai îngustează vasele de sânge, iar multe persoane spun că au un nivel de energie mai constant."
           }
         },
         "uk": {
@@ -56529,7 +56529,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trei luni puternice."
+            "value": "Trei luni fără nicotină"
           }
         },
         "uk": {
@@ -56630,7 +56630,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trei cuvinte pentru a descrie cum mă simt acum."
+            "value": "Trei cuvinte care descriu cum mă simt acum."
           }
         },
         "uk": {
@@ -56731,7 +56731,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etape de timp"
+            "value": "Repere în timp"
           }
         },
         "uk": {
@@ -56933,7 +56933,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oboseală"
+            "value": "Fără energie"
           }
         },
         "uk": {
@@ -57135,7 +57135,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Notat azi"
+            "value": "Ziua e înregistrată"
           }
         },
         "uk": {
@@ -57236,7 +57236,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Azi este înregistrat un episod"
+            "value": "Ziua de azi este înregistrată ca scăpare"
           }
         },
         "uk": {
@@ -57438,7 +57438,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Greu"
+            "value": "Dificilă"
           }
         },
         "uk": {
@@ -57539,7 +57539,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Urmărește banii și pliculețele cu nicotină pe care le eviți, plus restul Bloom+."
+            "value": "Urmăriți economiile și pliculețele cu nicotină pe care le evitați, plus restul Bloom+."
           }
         },
         "uk": {
@@ -57640,7 +57640,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Urmărește zilele fără nicotină, crește-ți grădina și observă-ți progresul."
+            "value": "Urmăriți zilele fără nicotină, cultivați grădina și observați schimbările pozitive ale sănătății."
           }
         },
         "uk": {
@@ -57741,7 +57741,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tradiţională"
+            "value": "Tradițional"
           }
         },
         "uk": {
@@ -57943,7 +57943,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Iniţiativa adevărului"
+            "value": "Truth Initiative"
           }
         },
         "uk": {
@@ -58044,7 +58044,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încearcă din nou."
+            "value": "Încercați din nou"
           }
         },
         "uk": {
@@ -58145,7 +58145,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încearcă Bloom+."
+            "value": "Încercați Bloom+"
           }
         },
         "uk": {
@@ -58246,7 +58246,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Încearcă Bloom+ gratuit"
+            "value": "Încercați Bloom+ gratuit"
           }
         },
         "uk": {
@@ -58347,7 +58347,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Două întrebări rapide cât e proaspătă."
+            "value": "Două întrebări scurte despre ce tocmai s-a întâmplat. Ambele sunt opționale."
           }
         },
         "uk": {
@@ -58448,7 +58448,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Desfă"
+            "value": "Anulați"
           }
         },
         "uk": {
@@ -58549,7 +58549,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Anulează, nu am consumat nicotină"
+            "value": "Anulați: n-am avut o scăpare"
           }
         },
         "uk": {
@@ -58845,19 +58845,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Deblocare %1$lld copaci"
+                  "value": "Deblocați %1$lld copac"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Deblochează %1$lld de copaci"
+                  "value": "Deblocați %1$lld copaci"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Deblocare %1$lld copaci"
+                  "value": "Deblocați %1$lld de copaci"
                 }
               }
             }
@@ -58997,7 +58997,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odblokuj Bloom+."
+            "value": "Deblocați Bloom+"
           }
         },
         "uk": {
@@ -59098,7 +59098,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează durata de viață"
+            "value": "Deblocați pe viață"
           }
         },
         "uk": {
@@ -59394,19 +59394,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Unlock all %1$lld tree"
+                  "value": "Deblocați toți copacii: %1$lld"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Unlock all %1$lld trees"
+                  "value": "Deblocați toți copacii: %1$lld"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Unlock all %1$lld trees"
+                  "value": "Deblocați toți copacii: %1$lld"
                 }
               }
             }
@@ -59546,7 +59546,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează fiecare specie Bonsai şi schimbă când doreşti, plus restul Bloom+."
+            "value": "Deblocați toate speciile de bonsai și schimbați copacul oricând doriți, plus restul Bloom+."
           }
         },
         "uk": {
@@ -59647,7 +59647,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează mai multe specii bonsai cu Bloom+."
+            "value": "Deblocați mai multe specii de bonsai cu Bloom+"
           }
         },
         "uk": {
@@ -59748,7 +59748,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează întreaga cronologie de recuperare de 13 mile, plus restul Bloom+."
+            "value": "Deblocați cronologia completă cu 13 repere despre schimbările de sănătate, plus restul Bloom+."
           }
         },
         "uk": {
@@ -59849,7 +59849,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează setul complet de unelte"
+            "value": "Deblocați toate instrumentele"
           }
         },
         "uk": {
@@ -59950,7 +59950,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblochează ce vine cu Bloom+."
+            "value": "Vedeți ce vă rezervă Bloom+"
           }
         },
         "uk": {
@@ -60051,7 +60051,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deblocare cu Bloom+."
+            "value": "Deblocați cu Bloom+"
           }
         },
         "uk": {
@@ -60152,7 +60152,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Până la %1$@/yr"
+            "value": "Până la %1$@ pe an"
           }
         },
         "uk": {
@@ -60253,7 +60253,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+"
+            "value": "Treceți la Bloom+"
           }
         },
         "uk": {
@@ -60348,7 +60348,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajută la estimarea banilor și a pliculețelor cu nicotină pe care le economisești, precum și a nicotinei pe care o eviți cât timp nu consumi nicotină."
+            "value": "Aceste date ajută la estimarea banilor economisiți, a pliculețelor evitate și a nicotinei neconsumate cât timp rămâneți fără nicotină."
           }
         },
         "uk": {
@@ -60449,7 +60449,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uită-te cum se adună economiile."
+            "value": "Urmăriți cum cresc economiile."
           }
         },
         "uk": {
@@ -60745,19 +60745,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welcome back. You haven't checked in for %1$lld day. Still going strong?"
+                  "value": "Bine ați revenit! Nu ați făcut o înregistrare zilnică de %1$lld zi. Vă merge în continuare bine?"
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welcome back. You haven't checked in for %1$lld days. Still going strong?"
+                  "value": "Bine ați revenit! Nu ați făcut o înregistrare zilnică de %1$lld zile. Vă merge în continuare bine?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welcome back. You haven't checked in for %1$lld days. Still going strong?"
+                  "value": "Bine ați revenit! Nu ați făcut o înregistrare zilnică de %1$lld de zile. Vă merge în continuare bine?"
                 }
               }
             }
@@ -60903,7 +60903,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce mai aştept săptămâna asta?"
+            "value": "La ce abia aștept săptămâna aceasta?"
           }
         },
         "uk": {
@@ -61004,7 +61004,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pentru ce am făcut azi că viitorul meu eu îmi va mulţumi?"
+            "value": "Ce am făcut astăzi pentru care îmi va mulțumi versiunea mea din viitor?"
           }
         },
         "uk": {
@@ -61105,7 +61105,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pentru ce mi-a mulţumit corpul meu azi?"
+            "value": "Pentru ce mi-ar mulțumi corpul meu astăzi?"
           }
         },
         "uk": {
@@ -61206,7 +61206,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce îmi oferă o viață fără nicotină, ce nu mi-ar fi putut oferi nicotina?"
+            "value": "Ce îmi oferă viața fără nicotină și nu mi-ar fi putut oferi niciodată nicotina?"
           }
         },
         "uk": {
@@ -61307,7 +61307,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce l-a declanşat?"
+            "value": "Ce a declanșat pofta?"
           }
         },
         "uk": {
@@ -61408,7 +61408,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce declanşatori au apărut astăzi, şi cum am reacţionat?"
+            "value": "Ce factori declanșatori au apărut astăzi și cum am reacționat?"
           }
         },
         "uk": {
@@ -61509,7 +61509,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce se întâmplă?"
+            "value": "Ce se întâmpla?"
           }
         },
         "uk": {
@@ -61610,7 +61610,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cât m-ar costa un \"resetat\" în zile şi dolari?"
+            "value": "Cât m-ar costa resetarea contorului, în zile și dolari?"
           }
         },
         "uk": {
@@ -61711,7 +61711,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce păstrezi"
+            "value": "Ce păstrați"
           }
         },
         "uk": {
@@ -61812,7 +61812,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce relaţie se îmbunătăţeşte de când am renunţat?"
+            "value": "Ce relație s-a îmbunătățit de când am renunțat la nicotină?"
           }
         },
         "uk": {
@@ -61913,7 +61913,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cum pot păstra acest impuls?"
+            "value": "Ce merge bine astăzi? Cum pot menține acest ritm?"
           }
         },
         "uk": {
@@ -62014,7 +62014,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Care e un obicei sănătos pe care aş vrea să-l construiesc?"
+            "value": "Ce obicei sănătos aș vrea să-mi formez în continuare?"
           }
         },
         "uk": {
@@ -62115,7 +62115,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pentru ce sunt recunoscătoare azi?"
+            "value": "Ce lucru îmi inspiră recunoștință astăzi?"
           }
         },
         "uk": {
@@ -62317,7 +62317,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Când a început călătoria fără nicotină?"
+            "value": "Când a început parcursul dvs. fără nicotină?"
           }
         },
         "uk": {
@@ -62418,7 +62418,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Când lovesc şi ce le declanşează."
+            "value": "Când apar poftele și ce le declanșează."
           }
         },
         "uk": {
@@ -62519,7 +62519,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Când %1$@ a lovit și ce le declanşează"
+            "value": "Când apar %1$@ și ce le declanșează"
           }
         },
         "uk": {
@@ -62620,7 +62620,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unde m-am simţit mai puternic azi?"
+            "value": "În ce moment am simțit că sunt în formă maximă astăzi?"
           }
         },
         "uk": {
@@ -62721,7 +62721,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unde observ că se ascund poftele?"
+            "value": "În ce momente observ că se ascunde pofta de nicotină?"
           }
         },
         "uk": {
@@ -62822,7 +62822,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cine m-a susţinut astăzi, chiar şi într-un fel mic?"
+            "value": "Cine mi-a fost alături astăzi, chiar și printr-un gest mic?"
           }
         },
         "uk": {
@@ -62923,7 +62923,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vânt"
+            "value": "Modelat de vânt"
           }
         },
         "uk": {
@@ -63125,7 +63125,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Îți reamintim înainte de încheierea probei dacă ai notificările pornite."
+            "value": "Dacă activați notificările, vă vom reaminti înainte de încheierea perioadei de probă."
           }
         },
         "uk": {
@@ -63226,7 +63226,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "La câteva ore după ultima punguță cu nicotină, vârful de nicotină se estompează. Pulsul și tensiunea arterială încep să revină spre valorile inițiale."
+            "value": "În câteva ore de la ultimul pliculeț cu nicotină, creșterea bruscă a nivelului de nicotină se estompează, iar pulsul și tensiunea arterială încep să revină la valorile obișnuite."
           }
         },
         "uk": {
@@ -63327,7 +63327,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "După aproximativ o zi, cea mai mare parte a nicotinei a părăsit corpul. Cotinina, un produs secundar care persistă mai mult, continuă să fie eliminată în următoarele zile."
+            "value": "În aproximativ o zi, cea mai mare parte a nicotinei părăsește organismul. Cotinina, un produs secundar care persistă mai mult, continuă să fie eliminată în zilele următoare."
           }
         },
         "uk": {
@@ -63428,7 +63428,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pauză de lucru"
+            "value": "Pauză de la serviciu"
           }
         },
         "uk": {
@@ -63529,7 +63529,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scrie intrarea"
+            "value": "Scrieți în jurnal"
           }
         },
         "uk": {
@@ -63630,7 +63630,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scrie ce simți când apare pofta."
+            "value": "Scrieți despre poftele de nicotină."
           }
         },
         "uk": {
@@ -63725,7 +63725,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "ECONOMISIT PÂNĂ ACUM"
+            "value": "ECONOMII PÂNĂ ACUM"
           }
         },
         "uk": {
@@ -63826,7 +63826,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Banii tăi, păstrați"
+            "value": "BANI PĂSTRAȚI"
           }
         },
         "uk": {
@@ -63927,7 +63927,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "ECONOMIILE TALE"
+            "value": "ECONOMIILE DVS."
           }
         },
         "uk": {
@@ -64230,7 +64230,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Anul întâi"
+            "value": "Primul an"
           }
         },
         "uk": {
@@ -64432,7 +64432,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu trebuie să faci nimic altceva acum."
+            "value": "Nu trebuie să faceți nimic altceva acum. Rămâneți aici și respirați."
           }
         },
         "uk": {
@@ -64533,7 +64533,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Păstrează"
+            "value": "Păstrați"
           }
         },
         "uk": {
@@ -64924,7 +64924,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În fiecare an îți rămân %1$@ în loc să-i cheltuiești pe %2$@. Încearcă Bloom+ gratuit timp de %#@n@."
+            "value": "În fiecare an vă rămân %1$@, bani pe care nu îi cheltuiți pe %2$@. Încercați Bloom+ gratuit timp de %#@n@."
           },
           "substitutions": {
             "n": {
@@ -65125,7 +65125,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În fiecare an îți rămân %1$@. Bloom+ costă %2$@ %3$@."
+            "value": "În fiecare an vă rămân %1$@. Bloom+ costă %2$@ %3$@."
           }
         },
         "uk": {
@@ -65421,19 +65421,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ai trecut peste %1$lld poftă."
+                  "value": "Ați trecut cu bine peste %1$lld poftă de nicotină."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ai trecut peste %1$lld pofte."
+                  "value": "Ați trecut cu bine peste %1$lld pofte de nicotină."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ai trecut peste %1$lld de pofte."
+                  "value": "Ați trecut cu bine peste %1$lld de pofte de nicotină."
                 }
               }
             }
@@ -65579,7 +65579,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ai trecut peste o poftă."
+            "value": "Ați trecut cu bine peste o poftă de nicotină."
           }
         },
         "uk": {
@@ -65680,7 +65680,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ai stat cu ea pentru %1$@."
+            "value": "Ați respirat conștient timp de %1$@."
           }
         },
         "uk": {
@@ -65781,7 +65781,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Veți păstra tejghea de zi, calendarul, modul de pofta, și copacul tău. Proiecție de anul viitor, cronologia completă de sănătate, jurnalul, și alte specii rămân blocate."
+            "value": "Veți păstra contorul zilelor, calendarul, modul pentru momentele de poftă de nicotină și copacul. Proiecția pe un an, cronologia completă a beneficiilor pentru sănătate, jurnalul și celelalte specii vor rămâne blocate."
           }
         },
         "uk": {
@@ -66077,19 +66077,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "You're %1$lld day in. Log today and water your bonsai."
+                  "value": "Sunteți în ziua %1$lld. Înregistrați ziua de azi și udați bonsaiul."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "You're %1$lld days in. Log today and water your bonsai."
+                  "value": "Sunteți în ziua %1$lld. Înregistrați ziua de azi și udați bonsaiul."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "You're %1$lld days in. Log today and water your bonsai."
+                  "value": "Sunteți în ziua %1$lld. Înregistrați ziua de azi și udați bonsaiul."
                 }
               }
             }
@@ -66235,7 +66235,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Până acum ai economisit %1$@."
+            "value": "Ați economisit %1$@ până acum."
           }
         },
         "uk": {
@@ -66330,7 +66330,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ai economisit %1$@ rămânând fără nicotină. Bloom+ te ajută să continui."
+            "value": "Ați economisit %1$@ cât timp ați stat fără nicotină. Susțineți-vă progresul cu instrumentele Bloom+."
           }
         },
         "uk": {
@@ -66532,7 +66532,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai tânăr"
+            "value": "Etapa de bonsai tânăr"
           }
         },
         "uk": {
@@ -66633,7 +66633,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ tipare"
+            "value": "Tipare despre %1$@"
           }
         },
         "uk": {
@@ -66835,7 +66835,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copacul tău"
+            "value": "Copacul dvs."
           }
         },
         "uk": {
@@ -66936,7 +66936,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai-ul tău s-a transformat într-un coronament plin de frunze."
+            "value": "Bonsaiul dvs. a crescut și are acum o coroană bogată, plină de frunze."
           }
         },
         "uk": {
@@ -67037,7 +67037,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai-ul tău se umple într-un copac tânăr."
+            "value": "Bonsaiul dvs. se dezvoltă și capătă forma unui copac tânăr."
           }
         },
         "uk": {
@@ -67138,7 +67138,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cele mai multe pofte apar în ziua de %1$@."
+            "value": "Ziua cu cele mai multe pofte: %1$@"
           }
         },
         "uk": {
@@ -67239,7 +67239,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Contorul repornește după un episod de consum. Un episod de azi înseamnă ziua 1; dacă s-a întâmplat mai devreme, se numără zilele de atunci. Cea mai lungă serie reflectă datele corectate."
+            "value": "Contorul repornește după o scăpare. O scăpare de astăzi setează ziua 1; pentru o scăpare din trecut se numără zilele de la acea dată. Cea mai lungă serie reflectă datele corectate."
           }
         },
         "uk": {
@@ -67340,7 +67340,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tot ce ai înregistrat e încă numărate."
+            "value": "Contorul pornește din nou, dar toate înregistrările dvs. se păstrează."
           }
         },
         "uk": {
@@ -67794,7 +67794,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pofta trece de obicei în aproximativ %1$@."
+            "value": "Poftele de nicotină trec de obicei în aproximativ %1$@."
           }
         },
         "uk": {
@@ -67895,7 +67895,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Datele tale rămân pe acest dispozitiv."
+            "value": "Datele dvs. rămân pe acest dispozitiv"
           }
         },
         "uk": {
@@ -67996,7 +67996,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Contorul de zile repornește după un episod de consum. Copacul păstrează o parte din creștere, iar istoricul calendarului și copacii finalizați rămân. Cea mai lungă serie reflectă datele corectate."
+            "value": "Contorul zilelor repornește după o scăpare. Copacul păstrează o parte din creștere, iar istoricul din calendar și copacii deja crescuți rămân. Cea mai lungă serie reflectă datele corectate."
           }
         },
         "uk": {
@@ -68097,7 +68097,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Contorul de zi va reporni la zero."
+            "value": "Contorul zilelor va reveni la zero. Istoricul dvs. se păstrează."
           }
         },
         "uk": {
@@ -68198,7 +68198,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Contorul de zile, sprijin pentru pofta de nicotină, widgetul și aplicația Apple Watch sunt mereu gratuite."
+            "value": "Contorul de zile, modul pentru momentele de poftă de nicotină, widgetul și aplicația pentru Apple Watch rămân gratuite, pentru totdeauna"
           }
         },
         "uk": {
@@ -68299,7 +68299,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intrarea ta"
+            "value": "Înregistrarea dvs."
           }
         },
         "uk": {
@@ -68400,7 +68400,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima ta germinare a distrus solul."
+            "value": "Primul lăstar a răsărit din pământ."
           }
         },
         "uk": {
@@ -68501,7 +68501,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Grădina, jurnalul, cronologia sănătății și economiile. Tot ce te ajută să rămâi fără nicotină."
+            "value": "Grădina, jurnalul, cronologia sănătății și economiile dvs. Toate vă ajută să rămâneți fără nicotină."
           }
         },
         "uk": {
@@ -68602,7 +68602,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ultima ta schimbare nu a putut fi salvată pe acest dispozitiv, așa că poate lipsi după ce închideți aplicația. Acest lucru este, de obicei, pentru că depozitarea este completă. Eliberați unele spațiu, apoi verificați-l și încercați din nou."
+            "value": "Ultima modificare nu a putut fi salvată pe acest dispozitiv și s-ar putea pierde când închideți aplicația. De obicei, spațiul de stocare este plin. Eliberați spațiu, apoi verificați modificarea și încercați din nou."
           }
         },
         "uk": {
@@ -68703,7 +68703,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Starea ta tinde să scadă înaintea unui episod de consum."
+            "value": "Starea dvs. de spirit tinde să scadă înainte de o scăpare"
           }
         },
         "uk": {
@@ -68804,7 +68804,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "În cele două zile dinaintea unui episod de consum, starea ta a fost mai scăzută decât în celelalte zile înregistrate. Poate ajuta să observi tiparul din timp."
+            "value": "În cele două zile dinaintea unei scăpări, starea dvs. de spirit a fost mai scăzută decât în celelalte zile înregistrate. Vă poate ajuta să observați din timp acest tipar."
           }
         },
         "uk": {
@@ -68899,7 +68899,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zilele fără nicotină s-au adunat. Folosește o parte din economii pentru instrumente care te ajută să continui."
+            "value": "Zilele fără nicotină s-au adunat. Folosiți o parte din economii pentru instrumente care vă susțin progresul."
           }
         },
         "uk": {
@@ -69000,7 +69000,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trecutul dungi rămâne la dosar."
+            "value": "Seriile anterioare rămân în istoricul dvs."
           }
         },
         "uk": {
@@ -69101,7 +69101,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tiparele tale"
+            "value": "Tiparele dvs."
           }
         },
         "uk": {
@@ -69202,7 +69202,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jurământul tău."
+            "value": "Angajamentul dvs."
           }
         },
         "uk": {
@@ -69303,7 +69303,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Progresul tău."
+            "value": "Progresul dvs."
           }
         },
         "uk": {
@@ -69404,7 +69404,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cumpărarea dvs. este în așteptare pentru aprobare. Bloom+ descuie pe cont propriu odată ce este confirmat, și puteți continua să utilizați versiunea gratuită între timp."
+            "value": "Achiziția dvs. așteaptă aprobarea. Bloom+ se va activa automat după confirmare. Între timp, puteți folosi versiunea gratuită."
           }
         },
         "uk": {
@@ -69505,7 +69505,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copacul tău se alătură pădurii."
+            "value": "Copacul dvs. se alătură grădinii."
           }
         },
         "uk": {
@@ -70312,7 +70312,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ca de obicei"
+            "value": "Cutia obișnuită"
           }
         },
         "uk": {
@@ -70413,7 +70413,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un minut."
+            "value": "un minut"
           }
         },
         "uk": {
@@ -70615,7 +70615,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "un an de Bloom+."
+            "value": "un an de Bloom+"
           }
         },
         "uk": {
@@ -70817,7 +70817,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "poftă"
+            "value": "poftă de nicotină"
           }
         },
         "uk": {
@@ -70918,7 +70918,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "pofte"
+            "value": "pofte de nicotină"
           }
         },
         "uk": {
@@ -71019,7 +71019,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "pe an"
+            "value": "în fiecare an"
           }
         },
         "uk": {
@@ -71120,7 +71120,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "a găsi tratament.gov"
+            "value": "findtreatment.gov"
           }
         },
         "uk": {
@@ -71221,7 +71221,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toate funcțiile"
+            "value": "acces complet la Bloom+"
           }
         },
         "uk": {
@@ -71624,13 +71624,13 @@
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "în %1$lld de zile"
+                  "value": "în %1$lld zile"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "în %1$lld zile"
+                  "value": "în %1$lld de zile"
                 }
               }
             }
@@ -72073,7 +72073,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pliculețe pe zi"
+            "value": "pliculețe/zi"
           }
         },
         "uk": {
@@ -72174,7 +72174,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poftă depășită"
+            "value": "poftă depășită"
           }
         },
         "uk": {
@@ -72275,7 +72275,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pofte depășite"
+            "value": "pofte depășite"
           }
         },
         "uk": {
@@ -72477,7 +72477,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Grădina ta crește. Înregistrează ziua de azi dacă ești fără nicotină."
+            "value": "Grădina dvs. crește. Înregistrați ziua de azi dacă ați fost fără nicotină."
           }
         },
         "uk": {
@@ -72578,7 +72578,7 @@
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copacul tău intră în livadă. Un puiet nou începe să crească."
+            "value": "Copacul dvs. se alătură grădinii. Un puiet nou începe să crească."
           }
         },
         "uk": {
@@ -72874,19 +72874,19 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "În livada ta este acum %1$lld copac. Un puiet nou începe să crească."
+                  "value": "În grădina dvs. este acum %1$lld copac. Un puiet nou începe să crească."
                 }
               },
               "few": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "În livada ta sunt acum %1$lld copaci. Un puiet nou începe să crească."
+                  "value": "În grădina dvs. sunt acum %1$lld copaci. Un puiet nou începe să crească."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "În livada ta sunt acum %1$lld copaci. Un puiet nou începe să crească."
+                  "value": "În grădina dvs. sunt acum %1$lld de copaci. Un puiet nou începe să crească."
                 }
               }
             }
