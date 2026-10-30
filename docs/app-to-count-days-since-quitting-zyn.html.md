@@ -18,11 +18,11 @@ General information, not medical advice. Quit Zyn is a tracking tool and does no
 
 On first launch Quit Zyn asks when your nicotine-free time began. You can pick today or any past date, so a quit from last month starts with those days already counted. From then on the number moves with the calendar, and the widgets and Watch app work it out from your quit date, so they stay current even on days you never open the app.
 
-Each day you can tap one check-in to log how the day felt. Every check-in waters a small garden that grows from a seed toward a full tree as the days add up. The calendar marks each day in green for nicotine-free, red for a slip and gray for a day you have not checked in yet. Above it are three numbers: your current streak, your longest streak and your total nicotine-free days.
+Each day you can tap one check-in to log how the day felt. Every check-in waters a small garden that grows from a seed toward a full tree as the days add up. The calendar shows a day you checked in as solid green, a day counted without a check-in as pale green, and a slip as red. Above it are three numbers: your current streak, your longest streak and your total nicotine-free days.
 
 ## Can I see the count on my Apple Watch and Lock Screen?
 
-Yes, and both are free. The widget comes in five sizes: small and medium for the Home Screen, and circular, rectangular and inline for the Lock Screen. The Apple Watch app shows your day count, the date you quit and your garden's current stage.
+Yes, and both are free. The widget comes in five styles: small and medium for the Home Screen, and circular, rectangular and inline for the Lock Screen. The Apple Watch app shows your day count, the day your current streak started and your garden's current stage.
 
 The Watch app is for glancing at the count. Check-ins, cravings and slips are logged on the iPhone.
 
@@ -53,7 +53,7 @@ Bloom+ is a monthly or yearly subscription, with a free trial for eligible new s
 
 ## What are the limits?
 
-Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. It has no ratings yet.
+Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. Quit Zyn has no App Store ratings yet.
 
 Free on iPhone, with an Apple Watch app. No account needed.
 

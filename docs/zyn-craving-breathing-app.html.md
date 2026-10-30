@@ -18,14 +18,14 @@ General information, not medical advice. Quit Zyn is a tracking tool and does no
 
 1. Tap **I'm having a craving** on the Home screen. The button is always there, whatever else you have logged that day.
 2. A circle grows and shrinks with box breathing: breathe in for 4 seconds, hold for 4, breathe out for 4, hold for 4. The screen stays awake while you breathe.
-3. Short lines of text change as the session goes on. Once you have logged a few cravings, it also tells you how long yours usually last.
+3. Short lines of text change as the session goes on. With Bloom+, once you have logged a few cravings, an extra line tells you how long yours usually last.
 4. Tap **I'm through it** when you are ready, or **Give me another minute** to keep going, up to 10 minutes.
 5. Answer two optional questions: how strong it was, from mild to overwhelming, and what set it off (after a meal, stress, boredom, driving, coffee, work break, drinking or tired).
 6. Close with **It passed**, **Not sure yet** or **I gave in**. I gave in opens the slip screen, which changes nothing until you confirm.
 
 ## What happens to the cravings you log?
 
-Each session is saved on your phone. With the optional Bloom+ upgrade, the app reads them back as patterns: the hours and day of the week your urges tend to hit, what sets them off and how long yours last. Each pattern waits until you have logged enough cravings to say something, so early on it stays empty instead of guessing.
+Each session is saved on your phone. With the optional Bloom+ upgrade, the app reads them back as patterns: the hours and day of the week your urges tend to hit, what sets them off and how long yours last. Each pattern waits until you have logged enough cravings to say something, so early on it stays empty.
 
 ## Is the craving breathing free?
 
@@ -37,7 +37,7 @@ Craving mode runs on the iPhone. The Watch app and widgets show your day count.
 
 ## What are the limits?
 
-It is one breathing pattern with no audio guide, coach or chat. Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. It has no ratings yet.
+It is one breathing pattern with no audio guide, coach or chat. Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. Quit Zyn has no App Store ratings yet.
 
 Free craving mode on iPhone. No account needed.
 

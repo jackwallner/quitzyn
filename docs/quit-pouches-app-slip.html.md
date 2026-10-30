@@ -24,7 +24,7 @@ General information, not medical advice. Quit Zyn is a tracking tool and does no
 
 ## Why does the counter still restart?
 
-The counter answers one question: how many days since your last pouch. The longest streak and total answer the other one: how far you have come overall. Quit Zyn shows all three side by side on the calendar, so a slip changes the first number and leaves the record of your progress in place.
+The counter shows how many days it has been since your last pouch. The longest streak and total show how far you have come overall. Quit Zyn puts all three side by side on the calendar, so a slip changes the first number and leaves the rest of your record in place.
 
 ## What if I log a slip by mistake?
 
@@ -40,7 +40,7 @@ Yes. Slip logging, undo, the calendar, the garden and the day counter are free, 
 
 ## What are the limits?
 
-Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. It has no ratings yet.
+Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. Quit Zyn has no App Store ratings yet.
 
 Free on iPhone, with an Apple Watch app. No account needed.
 
@@ -54,7 +54,7 @@ No. Your calendar, longest streak, total nicotine-free days and completed trees 
 
 ### Can I log a slip on an earlier date?
 
-Yes. Pick the date when you log it, and the days since then are counted.
+Yes. Tap that day on the calendar to log it, and the days since then are counted.
 
 ### How much of the garden does a slip keep?
 

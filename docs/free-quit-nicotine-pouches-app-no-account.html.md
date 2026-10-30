@@ -49,7 +49,7 @@ Yes. Quit Zyn counts nicotine-free days, so it works for Zyn, any other pouch br
 
 ## What are the limits?
 
-Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. It has no ratings yet.
+Quit Zyn is built for stopping completely. It has no per-pouch logging, no daily limit or taper plan and no nicotine strength tracking. If you want to cut down gradually first, the [quit Zyn app comparison](https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html) covers apps built for tapering. Quit Zyn has no App Store ratings yet.
 
 Free quit pouches app for iPhone. No account needed.
 
