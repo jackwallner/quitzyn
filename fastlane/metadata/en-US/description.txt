@@ -1,56 +1,48 @@
-Count the days since you quit Zyn. Quit Zyn is a free day counter for nicotine pouches, snus, dip, vaping and cigarettes, with guided breathing for cravings, Home Screen and Lock Screen widgets, and an Apple Watch app. No account and no sign-up. Your data stays on your iPhone.
+Quit Zyn counts your days since you quit Zyn, snus or other nicotine pouches. It's free, needs no account, keeps your data on your device, and adds guided breathing for cravings, widgets and an Apple Watch app.
 
-COUNT DAYS SINCE YOUR LAST POUCH (FREE)
-- Set your quit date, today or any day in the past, and see how many days you've been nicotine-free.
-- Current streak, longest streak and total nicotine-free days on one calendar.
-- One-tap daily check-in to log how the day felt.
-- A daily reminder at the hour you choose.
+COUNT YOUR NICOTINE-FREE DAYS (FREE)
+- Counts the days since your quit date, today or any date in the past.
+- Shows your current streak, longest streak and total nicotine-free days on a calendar.
+- Logs a one-tap daily check-in of how you feel.
+- Reminds you to check in at the hour you choose.
+- Also works for dip, vaping or cigarettes.
 
-CRAVING MODE WITH GUIDED BREATHING (FREE)
-- Tap "I'm having a craving" for a box breathing session: breathe in, hold, breathe out, hold, four seconds each.
-- Two minutes by default, with another minute whenever you need it.
-- Note how strong the craving was and what set it off, if you want to.
-- See how many cravings you've ridden out.
+GUIDED BREATHING FOR CRAVINGS (FREE)
+- Starts box breathing when you tap "I'm having a craving": in, hold, out, hold, four seconds each.
+- Runs two minutes, with an extra minute when you need it.
+- Logs how strong the craving was and its trigger.
 
-WHEN YOU SLIP (FREE)
-- Log a slip, today or on an earlier date, and the day counter restarts from there.
-- Your calendar history, longest streak and total nicotine-free days stay.
-- Your garden keeps half its growth.
-- Logged a slip by mistake? Undo it.
+LOGGING A SLIP (FREE)
+- Restarts the day counter from a slip's date, today or earlier.
+- Keeps your calendar, longest streak and total nicotine-free days after a slip.
+- Keeps half your garden's growth after a slip.
+- Undoes your latest slip if you logged it by mistake.
 
-A GARDEN THAT GROWS WITH YOU (FREE)
-- Every check-in waters a bonsai that grows from seed toward a full tree as your nicotine-free days add up.
-- Completed trees stay in your garden.
+BONSAI GARDEN (FREE)
+- Grows a bonsai from seed toward a full tree with each daily check-in.
+- Keeps every tree you complete.
 
 APPLE WATCH AND WIDGETS (FREE)
-- Your day count on the Home Screen and Lock Screen, in five widget styles.
-- Apple Watch app with your day count, streak start date and garden stage.
-- The count moves forward every day, even when you don't open the app.
+- Shows your day count in Home Screen and Lock Screen widgets.
+- Shows your day count, streak start date and garden stage on Apple Watch.
 
-NO ACCOUNT, PRIVATE BY DESIGN
-- No sign-up, email or login.
-- Your quit date, check-ins, journal and cravings stay on your device.
-- No ads and no cross-app tracking.
+NO ACCOUNT, ON-DEVICE DATA (FREE)
+- Works with no sign-up, email or login.
+- Stores your quit date, check-ins, journal and cravings on your device.
+- Shows no ads and does no tracking across apps.
 
-ALSO FREE
-- The first five of 13 nicotine recovery milestones, with sources.
-- Your first journal entry.
+BLOOM+ (PRO)
+- Shows your craving patterns: peak hours, weekdays, triggers and how long urges last.
+- Unlocks all 13 nicotine recovery milestones, with sources.
+- Adds unlimited journaling with guided prompts.
+- Adds achievements and more garden species.
+- Tracks money, pouches and nicotine avoided.
 
-BLOOM+ (OPTIONAL)
-- Your craving patterns: the hours and days urges hit, what sets them off, and how long yours last.
-- The full nicotine recovery timeline with sources.
-- Unlimited journaling with guided prompts.
-- Achievements and milestone unlocks.
-- Money, pouches and nicotine avoided since day one.
-- More garden species to grow.
-Eligible new subscribers may get a free trial.
+FREE / PRO
+Free: everything marked FREE, plus the first 5 recovery milestones and one journal entry.
+Pro (Bloom+): everything marked PRO. Monthly or yearly subscription with a free trial for eligible new subscribers, or a one-time lifetime purchase. Subscriptions auto-renew unless canceled at least 24 hours before the period ends.
 
-Quit Zyn is built for stopping completely. Whether you're quitting Zyn, other nicotine pouches or snus, it counts your nicotine-free days, gives you something to do when a craving hits, and keeps your record when you slip.
+Quit Zyn is a self-tracking tool and does not give medical advice. For help quitting, talk to a clinician or call 1-800-QUIT-NOW in the US.
 
-Quit Zyn is a self-tracking tool, not medical advice. For help quitting, talk to a clinician or call 1-800-QUIT-NOW in the US.
-
-Subscription Details
-Bloom+ is available as an auto-renewing subscription (Monthly or Yearly, with a 7-day free trial for eligible new subscribers) or as a one-time Lifetime purchase. Prices are shown in the app before you buy and vary by region. Payment is charged to your Apple ID at confirmation. Subscriptions auto-renew unless canceled at least 24 hours before the end of the period. Manage or cancel anytime in Settings > Apple ID > Subscriptions.
-
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Privacy Policy: https://jackwallner.com/ios/quitzyn/privacy-policy.html
-Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
