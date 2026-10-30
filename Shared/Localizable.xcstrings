@@ -43,7 +43,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ %2$@"
           }
         },
         "es": {
@@ -2132,7 +2132,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / dag"
+            "value": "%1$@ per dag"
           }
         },
         "es": {
@@ -2233,7 +2233,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / maand"
+            "value": "%1$@ per maand"
           }
         },
         "es": {
@@ -2435,7 +2435,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / jaar"
+            "value": "%1$@ per jaar"
           }
         },
         "es": {
@@ -2536,7 +2536,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ Houd de hele tuin of zeg altijd op vóór de verlenging."
+            "value": "%1$@ Behoud je hele tuin of zeg op wanneer je wilt, vóór de verlenging."
           }
         },
         "es": {
@@ -3312,7 +3312,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kost ongeveer evenveel als anderhalve dag nicotinezakjes."
+            "value": "%1$@ kost ongeveer evenveel als nicotinezakjes voor anderhalve dag."
           }
         },
         "es": {
@@ -3407,7 +3407,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kost ongeveer evenveel als een dag nicotinezakjes."
+            "value": "%1$@ kost ongeveer evenveel als nicotinezakjes voor één dag."
           }
         },
         "es": {
@@ -3502,7 +3502,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ kost minder dan een dag nicotinezakjes."
+            "value": "%1$@ kost minder dan nicotinezakjes voor één dag."
           }
         },
         "es": {
@@ -3805,7 +3805,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je vermijdt %1$@ nicotinezakjes. Je lichaam hoeft die nicotine dus niet te verwerken."
+            "value": "Je vermijdt %1$@ nicotinezakjes. Je lichaam hoeft die nicotine niet te verwerken."
           }
         },
         "es": {
@@ -4209,7 +4209,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Eenmalige aankoop. Levenslange toegang, geen abonnement."
+            "value": "%1$@. Eenmalige aankoop. Levenslang toegang, zonder abonnement."
           }
         },
         "es": {
@@ -4411,7 +4411,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ tot nu toe uitgeslagen"
+            "value": "%1$lld %2$@ doorstaan tot nu toe"
           }
         },
         "es": {
@@ -5311,13 +5311,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "dag"
+                  "value": "%1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "dagen"
+                  "value": "%1$lld dagen"
                 }
               }
             }
@@ -6364,13 +6364,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dag Bloom+ gratis"
+                  "value": "%1$lld dag Bloom+ gratis"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dagen Bloom+ gratis"
+                  "value": "%1$lld dagen Bloom+ gratis"
                 }
               }
             }
@@ -6612,7 +6612,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld van je laatste %2$lld eindigden zo."
+            "value": "Dit gebeurde %1$lld keer in je laatste %2$lld registraties."
           }
         },
         "es": {
@@ -7165,7 +7165,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld seconden"
+                  "value": "%1$lld seconde"
                 }
               },
               "other": {
@@ -7518,13 +7518,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld boom gekweekt"
+                  "value": "%1$lld boom gegroeid"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld bomen gekweekt"
+                  "value": "%1$lld bomen gegroeid"
                 }
               }
             }
@@ -7871,13 +7871,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld boom gekweekt in je bosje"
+                  "value": "%1$lld boom gegroeid in je bosje"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld bomen gekweekt in je bosje"
+                  "value": "%1$lld bomen gegroeid in je bosje"
                 }
               }
             }
@@ -8577,13 +8577,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dag gratis bij maand- en jaarabonnement."
+                  "value": "%1$lld dag gratis bij een maand- of jaarabonnement."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dagen gratis bij maand- en jaarabonnement."
+                  "value": "%1$lld dagen gratis bij een maand- of jaarabonnement."
                 }
               }
             }
@@ -11365,13 +11365,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld voordeel"
+                  "value": "/ %1$lld voordeel"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld voordelen"
+                  "value": "/ %1$lld voordelen"
                 }
               }
             }
@@ -11815,7 +11815,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 check-ins op rij."
+            "value": "100 dagregistraties achter elkaar."
           }
         },
         "es": {
@@ -11916,7 +11916,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 nicotine-recovery mijlpalen met bronnen."
+            "value": "13 mijlpalen in nicotineherstel, met bronnen."
           }
         },
         "es": {
@@ -12017,7 +12017,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 check-ins op rij."
+            "value": "30 dagregistraties achter elkaar."
           }
         },
         "es": {
@@ -12320,7 +12320,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Een bloeiende sakura in zacht roze bloesem. Blaadjes dwarrelen neer terwijl je reeks groeit."
+            "value": "Een bloeiende sakura met zachtroze bloemen. Bloemblaadjes dwarrelen neer terwijl je reeks groeit."
           }
         },
         "es": {
@@ -12623,7 +12623,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Een sierlijke esdoorn in warm herfstrood en goud. Stervormige bladeren dwarrelen neer terwijl de dagen verstrijken."
+            "value": "Een fijnbladige esdoorn in warme herfstkleuren. Stervormige bladeren dwarrelen neer terwijl de dagen optellen."
           }
         },
         "es": {
@@ -13027,7 +13027,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Een zaailing staat rechtop. De wortels krijgen grip."
+            "value": "Een jonge boom staat rechtop. De wortels beginnen zich te hechten."
           }
         },
         "es": {
@@ -13128,7 +13128,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Een uitglijder kun je alleen terugdraaien als het de meest recente is."
+            "value": "Je kunt een misstap alleen ongedaan maken zolang het de meest recente is."
           }
         },
         "es": {
@@ -13431,7 +13431,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ongeveer 6 mg per zakje"
+            "value": "Ongeveer 6 mg per nicotinezakje"
           }
         },
         "es": {
@@ -13936,7 +13936,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Adolescente fase"
+            "value": "Jonge boomfase"
           }
         },
         "es": {
@@ -14845,7 +14845,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bijna erdoorheen. Wat er nog over is, is op weg naar buiten."
+            "value": "Bijna voorbij. Wat er nog over is, verdwijnt ook."
           }
         },
         "es": {
@@ -14946,7 +14946,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amerikaanse Kanker Vereniging"
+            "value": "American Cancer Society"
           }
         },
         "es": {
@@ -15451,7 +15451,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oud stadium"
+            "value": "Oeroude fase"
           }
         },
         "es": {
@@ -15956,7 +15956,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple zal de factuurgegevens tonen voordat u het bevestigt."
+            "value": "Apple toont je de betaalgegevens voordat je bevestigt."
           }
         },
         "es": {
@@ -16057,7 +16057,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rond de derde dag bereiken lichamelijke ontwenningsverschijnselen vaak hun piek wanneer de laatste nicotine verdwijnt. Daarna worden de trek momenten doorgaans korter en minder intens."
+            "value": "Rond de derde dag bereiken lichamelijke ontwenningsverschijnselen vaak hun piek wanneer de laatste nicotine verdwijnt. Daarna wordt nicotinetrek meestal korter en minder intens."
           }
         },
         "es": {
@@ -16259,7 +16259,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "BESTE DEAL"
+            "value": "BESTE KEUZE"
           }
         },
         "es": {
@@ -16562,7 +16562,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gebaseerd op de drangmomenten die je hebt doorstaan, niet op een gemiddelde van iedereen."
+            "value": "Gebaseerd op nicotinetrek die je hebt doorstaan, niet op een gemiddelde van iedereen."
           }
         },
         "es": {
@@ -17673,7 +17673,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ voor het leven"
+            "value": "Bloom+ levenslang"
           }
         },
         "es": {
@@ -17774,7 +17774,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ plannen zijn tijdelijk niet beschikbaar. U kunt het opnieuw proberen of verder gratis."
+            "value": "Bloom+-abonnementen zijn tijdelijk niet beschikbaar. Probeer het opnieuw of ga gratis verder."
           }
         },
         "es": {
@@ -17875,7 +17875,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ ontgrendelt elke soort, zodat je je boom kunt wisselen wanneer je wilt. Je reeks groeit bij elke keuze."
+            "value": "Met Bloom+ ontgrendel je alle soorten en kun je je boom wisselen wanneer je wilt. Je reeks groeit met elke soort."
           }
         },
         "es": {
@@ -18279,7 +18279,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsaisoorten"
+            "value": "Bonsaisoort"
           }
         },
         "es": {
@@ -18582,7 +18582,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De takken reiken breder. De vorm wordt zichtbaar."
+            "value": "De takken reiken verder naar buiten. De vorm begint zichtbaar te worden."
           }
         },
         "es": {
@@ -18885,7 +18885,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Na ongeveer een maand nemen angst en prikkelbaarheid van de vroege ontwenning meestal af terwijl de dopamine-signalen in je hersenen opnieuw in balans komen. Ervaringen verschillen."
+            "value": "Na ongeveer een maand nemen angst en prikkelbaarheid door de eerste ontwenningsfase meestal af, terwijl de dopaminesignalering in je hersenen zich opnieuw in evenwicht brengt. Ervaringen verschillen."
           }
         },
         "es": {
@@ -19592,7 +19592,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je kunt op elk moment opzeggen. Geen onverwachte kosten."
+            "value": "Je kunt op elk moment opzeggen voordat het afloopt. Geen onverwachte kosten."
           }
         },
         "es": {
@@ -19996,7 +19996,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Overgang naar nicotinevrij"
+            "value": "Wijzig naar nicotinevrij"
           }
         },
         "es": {
@@ -20097,7 +20097,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wijzig in uitglijder"
+            "value": "Wijzig naar misstap"
           }
         },
         "es": {
@@ -20198,7 +20198,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Check in voor vandaag"
+            "value": "Registreer vandaag"
           }
         },
         "es": {
@@ -20299,7 +20299,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registreer een dag om je week te beginnen."
+            "value": "Registreer één dag om je week te beginnen."
           }
         },
         "es": {
@@ -20501,7 +20501,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagelijkse check-in"
+            "value": "Dagregistratie"
           }
         },
         "es": {
@@ -20602,7 +20602,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingecheckt"
+            "value": "Geregistreerd"
           }
         },
         "es": {
@@ -20703,7 +20703,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proefperiode controleren…"
+            "value": "Beschikbaarheid van de proefperiode controleren…"
           }
         },
         "es": {
@@ -21006,7 +21006,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sluit"
+            "value": "Sluiten"
           }
         },
         "es": {
@@ -22723,7 +22723,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Telt mee voor je reis. Nog niet ingecheckt."
+            "value": "Telt mee voor je reis. Je hebt deze dag nog niet geregistreerd."
           }
         },
         "es": {
@@ -22824,7 +22824,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Drang bereikt een piek en neemt af"
+            "value": "Nicotinetrek piekt en neemt af"
           }
         },
         "es": {
@@ -22925,7 +22925,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Drang per tijdstip"
+            "value": "Nicotinetrek per tijdstip"
           }
         },
         "es": {
@@ -23026,7 +23026,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gelukt"
+            "value": "Geweldig gedaan!"
           }
         },
         "es": {
@@ -23531,7 +23531,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagelijkse check-in"
+            "value": "Dagregistratie"
           }
         },
         "es": {
@@ -23632,7 +23632,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "7 dagen op rij elke dag ingecheckt."
+            "value": "Zeven dagen achter elkaar een dagregistratie."
           }
         },
         "es": {
@@ -23733,7 +23733,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagelijks dagboek"
+            "value": "Dagboek"
           }
         },
         "es": {
@@ -25450,7 +25450,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ override uit"
+            "value": "Bloom+-testmodus uitschakelen"
           }
         },
         "es": {
@@ -25955,7 +25955,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoe dan ook is prima. U kunt dit opnieuw bekijken op elk moment in Instellingen."
+            "value": "Beide keuzes zijn prima. Je kunt dit op elk moment wijzigen in Instellingen."
           }
         },
         "es": {
@@ -26056,7 +26056,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ override aan"
+            "value": "Bloom+-testmodus inschakelen"
           }
         },
         "es": {
@@ -26460,7 +26460,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke drang die je doorstond, eindigde zonder nicotinezakje."
+            "value": "Elke nicotinetrek die je doorstaat, eindigt zonder nicotinezakje."
           }
         },
         "es": {
@@ -26561,7 +26561,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke dollar en zak die je vermijd, gevolgd."
+            "value": "Houd bij hoeveel geld en hoeveel nicotinezakjes je bespaart."
           }
         },
         "es": {
@@ -26662,7 +26662,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke nicotinevrije dag groeit je boom."
+            "value": "Elke nicotinevrije dag laat je boom groeien."
           }
         },
         "es": {
@@ -26763,7 +26763,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke nicotinevrije dag die je hebt bijgehouden, telt mee."
+            "value": "Elke nicotinevrije dag die je hebt bijgehouden, blijft meetellen."
           }
         },
         "es": {
@@ -26864,7 +26864,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke keer dat je de trek doorstaat, leert deze pagina wanneer die opkomt, waardoor die wordt veroorzaakt en hoe lang die duurt."
+            "value": "Elke keer dat je nicotinetrek doorstaat, verzamelt deze pagina gegevens over wanneer die opkomt, wat die uitlokt en hoe lang die duurt."
           }
         },
         "es": {
@@ -26965,7 +26965,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke tool die je reeks zichtbaar houdt, vandaag ontgrendeld."
+            "value": "Ontgrendel vandaag alle tools die je reeks zichtbaar houden."
           }
         },
         "es": {
@@ -27165,13 +27165,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Elke tool die je reeks zichtbaar houdt. %lld dag lang wordt er niets afgeschreven."
+                  "value": "Alle tools houden je reeks zichtbaar. Je betaalt de eerste %1$lld dag niets."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Elke tool die je reeks zichtbaar houdt. %lld dagen lang wordt er niets afgeschreven."
+                  "value": "Alle tools houden je reeks zichtbaar. Je betaalt de eerste %1$lld dagen niets."
                 }
               }
             }
@@ -27419,7 +27419,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elke tool die je reeks zichtbaar houdt. Vandaag wordt er niets afgeschreven."
+            "value": "Alle tools houden je reeks zichtbaar. Vandaag betaal je niets."
           }
         },
         "es": {
@@ -27823,7 +27823,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "GRATIS PROEFPERIODE"
+            "value": "GRATIS"
           }
         },
         "es": {
@@ -28126,7 +28126,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Behandeling zoeken"
+            "value": "Zoek hulp"
           }
         },
         "es": {
@@ -28328,7 +28328,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volg 13 gebruikte nicotine-recovery mijlpalen"
+            "value": "Volg 13 mijlpalen over nicotineherstel, onderbouwd met bronnen"
           }
         },
         "es": {
@@ -28833,7 +28833,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gratis, vertrouwelijke hulp is altijd beschikbaar. Hulp zoeken is een kracht, geen terugval."
+            "value": "Gratis en vertrouwelijke hulp is altijd beschikbaar. Contact opnemen getuigt van kracht, niet van een tegenslag."
           }
         },
         "es": {
@@ -28934,7 +28934,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volledige toegang tot tuin, dagboek, gezondheid en besparingen tijdens je proefperiode."
+            "value": "Volledige toegang tot je tuin, dagboek, gezondheidstijdlijn en besparingen. Gratis tot je proefperiode afloopt."
           }
         },
         "es": {
@@ -29136,7 +29136,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuinelementen"
+            "value": "Tuinfuncties"
           }
         },
         "es": {
@@ -29237,7 +29237,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Algemene informatie over welzijn, geen medisch advies. Het verloop verschilt per persoon. Bespreek medische vragen met een zorgverlener."
+            "value": "Algemene informatie over welzijn, geen medisch advies. Het verloop verschilt per persoon. Bespreek gezondheidsvragen met een zorgverlener."
           }
         },
         "es": {
@@ -29540,7 +29540,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nog een minuut"
+            "value": "Geef me nog een minuut"
           }
         },
         "es": {
@@ -29944,7 +29944,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kweek elke soort."
+            "value": "Laat elke soort groeien."
           }
         },
         "es": {
@@ -31560,7 +31560,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoe lang ben je al nicotinevrij."
+            "value": "Hoe lang je al nicotinevrij bent."
           }
         },
         "es": {
@@ -31863,7 +31863,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ik wil beter worden."
+            "value": "Ik zet me in om vooruit te komen."
           }
         },
         "es": {
@@ -32065,7 +32065,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ik ben uitgegleden"
+            "value": "Ik heb een misstap begaan."
           }
         },
         "es": {
@@ -32267,7 +32267,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ik heb trek in nicotine."
+            "value": "Ik heb nicotinetrek."
           }
         },
         "es": {
@@ -32570,7 +32570,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Als het vandaag nicotinevrij is, log dan in en geef water in je tuin."
+            "value": "Als je vandaag nicotinevrij bent, registreer de dag en geef je tuin water."
           }
         },
         "es": {
@@ -32873,7 +32873,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sterkte %lld van 5"
+            "value": "Intensiteit %1$lld van 5"
           }
         },
         "es": {
@@ -33176,7 +33176,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het is al kleiner dan een minuut geleden, ook al voelt het nog niet voorbij."
+            "value": "De nicotinetrek is nu al minder sterk dan een minuut geleden, ook al voelt het nog niet voorbij."
           }
         },
         "es": {
@@ -33277,7 +33277,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het is oké. Een uitglijder hoort bij veel reizen, en hem vastleggen houdt de rest van je geschiedenis eerlijk."
+            "value": "Het is oké. Een misstap hoort bij veel trajecten. Door die te registreren blijft de rest van je geschiedenis kloppen."
           }
         },
         "es": {
@@ -33580,7 +33580,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagboek privé door de moeilijke dagen"
+            "value": "Schrijf ook op moeilijke dagen privé in je dagboek"
           }
         },
         "es": {
@@ -33681,7 +33681,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proefperiode behouden"
+            "value": "Mijn proefperiode behouden"
           }
         },
         "es": {
@@ -33782,7 +33782,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De gratis versie houden?"
+            "value": "De gratis versie behouden?"
           }
         },
         "es": {
@@ -33883,7 +33883,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Houd je tuin, dagboek en besparingen, of zeg op vóór de verlenging."
+            "value": "Behoud je hele tuin, dagboek en besparingen, of zeg op wanneer je wilt vóór de verlenging."
           }
         },
         "es": {
@@ -34590,7 +34590,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levensduur: %1$@"
+            "value": "Levenslang: %1$@"
           }
         },
         "es": {
@@ -34893,7 +34893,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vergrendeld. Tik voor meer over Bloom+"
+            "value": "Vergrendeld. Tik op de rij voor meer over Bloom+."
           }
         },
         "es": {
@@ -34994,7 +34994,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uitglijder vastleggen"
+            "value": "Registreer een misstap"
           }
         },
         "es": {
@@ -35095,7 +35095,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uitglijder vastleggen?"
+            "value": "Misstap registreren?"
           }
         },
         "es": {
@@ -35196,7 +35196,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Log als nicotinevrij"
+            "value": "Registreer als nicotinevrij"
           }
         },
         "es": {
@@ -35297,7 +35297,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vastleggen en doorgaan"
+            "value": "Registreer het en ga door"
           }
         },
         "es": {
@@ -35398,7 +35398,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vastleggen"
+            "value": "Registreer misstap"
           }
         },
         "es": {
@@ -35499,7 +35499,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Leg vandaag vast en geef je tuin water. Jij kunt dit."
+            "value": "Registreer vandaag en geef je tuin water. Je kunt dit."
           }
         },
         "es": {
@@ -35600,7 +35600,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noteer vandaag als nicotinevrije dag en geef je bonsai water."
+            "value": "Registreer vandaag als nicotinevrij en geef je bonsai water."
           }
         },
         "es": {
@@ -35701,7 +35701,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uitglijder vastgelegd"
+            "value": "Misstap geregistreerd"
           }
         },
         "es": {
@@ -35802,7 +35802,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gelogd nicotinevrij"
+            "value": "Geregistreerd als nicotinevrij"
           }
         },
         "es": {
@@ -36105,7 +36105,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vastgelegd. Je bent nog steeds onderweg."
+            "value": "Geregistreerd. Je bent nog steeds onderweg."
           }
         },
         "es": {
@@ -36610,7 +36610,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volwassen fase"
+            "value": "Volgroeide boomfase"
           }
         },
         "es": {
@@ -36913,7 +36913,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volgen van geldzak"
+            "value": "Geld en nicotinezakjes bijhouden"
           }
         },
         "es": {
@@ -37620,7 +37620,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De meeste vastgelegde drangmomenten vallen in dit tijdvak: %1$lld van %2$lld."
+            "value": "De meeste geregistreerde nicotinetrek valt in dit tijdvak: %1$lld van de %2$lld."
           }
         },
         "es": {
@@ -38226,7 +38226,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noem een situatie waarin ik een zakje zocht."
+            "value": "Beschrijf een situatie waarin je vroeger een nicotinezakje nam. Hoe kwam je er toen doorheen?"
           }
         },
         "es": {
@@ -39842,7 +39842,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nog geen notities. Tik op het potlood voor je eerste."
+            "value": "Nog geen notities. Tik op het potlood om je eerste te schrijven."
           }
         },
         "es": {
@@ -39943,7 +39943,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nog geen notities. Je eerste is gratis. Tik op het potlood."
+            "value": "Nog geen notities. Je eerste notitie is gratis. Tik op het potlood om die te schrijven."
           }
         },
         "es": {
@@ -40145,7 +40145,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu geen betaling · Apple waarschuwt vooraf · Gegevens op je apparaat"
+            "value": "Nu geen betaling · Apple herinnert je vóór de afschrijving · Gegevens blijven op dit apparaat"
           }
         },
         "es": {
@@ -40341,7 +40341,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niet bespaard"
+            "value": "Niet opgeslagen"
           }
         },
         "es": {
@@ -40442,7 +40442,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bespaard op zakjes"
+            "value": "Niet uitgegeven aan nicotinezakjes"
           }
         },
         "es": {
@@ -40543,7 +40543,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weet niet"
+            "value": "Weet ik niet"
           }
         },
         "es": {
@@ -40644,7 +40644,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Weet het nog niet. Sluiten"
+            "value": "Nog niet zeker. Sluit de sessie"
           }
         },
         "es": {
@@ -40947,7 +40947,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Merk het op zonder ermee in discussie te gaan. Je wilt niet winnen, je wacht het af."
+            "value": "Merk de nicotinetrek op zonder ermee in discussie te gaan. Je hoeft niet te winnen, alleen af te wachten."
           }
         },
         "es": {
@@ -41048,7 +41048,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Meldingen worden uitgeschakeld voor het afsluiten van Zyn, zodat de herinnering niet kan worden geleverd. Tik op boven om ze in de instellingenapp in te schakelen."
+            "value": "Meldingen voor Quit Zyn staan uit, dus de herinnering kan niet worden bezorgd. Tik hierboven om meldingen in Instellingen in te schakelen."
           }
         },
         "es": {
@@ -41351,7 +41351,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Op koers om te besparen"
+            "value": "Verwachte besparing"
           }
         },
         "es": {
@@ -41452,7 +41452,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mijlpaal van een maand bereikt."
+            "value": "Mijlpaal van één maand bereikt."
           }
         },
         "es": {
@@ -41957,7 +41957,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abonnementen zijn tijdelijk niet beschikbaar. Probeer het zo opnieuw."
+            "value": "Abonnementen zijn tijdelijk niet beschikbaar. Probeer het zo weer."
           }
         },
         "es": {
@@ -42058,7 +42058,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je gebruikt bovendien %1$@ nicotinezakjes niet. Je lichaam hoeft die nicotine dus niet te verwerken."
+            "value": "Je vermijdt bovendien %1$@ nicotinezakjes. Je lichaam hoeft die nicotine niet te verwerken."
           }
         },
         "es": {
@@ -42159,7 +42159,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotinezakjes"
+            "value": "Zakjes"
           }
         },
         "es": {
@@ -42260,7 +42260,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vermeden nicotinezakjes"
+            "value": "Vermeden zakjes"
           }
         },
         "es": {
@@ -42361,7 +42361,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zakjes per blikje"
+            "value": "Nicotinezakjes per blikje"
           }
         },
         "es": {
@@ -42765,7 +42765,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prijzen komen uit de App Store en zijn in deze build niet beschikbaar."
+            "value": "Prijzen komen uit de App Store en zijn niet beschikbaar in deze versie."
           }
         },
         "es": {
@@ -43068,7 +43068,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bereken de %@ die je komend jaar zou houden"
+            "value": "Bereken hoeveel %1$@ je het komende jaar overhoudt"
           }
         },
         "es": {
@@ -43169,7 +43169,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kijk een jaar vooruit, niet alleen terug"
+            "value": "Kijk een jaar vooruit, niet alleen naar de dagen achter je"
           }
         },
         "es": {
@@ -43270,7 +43270,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vraag van de dag"
+            "value": "Dagboekvraag van de dag"
           }
         },
         "es": {
@@ -43371,7 +43371,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vragen en reflecties voor zware dagen."
+            "value": "Vragen en reflecties voor moeilijke dagen."
           }
         },
         "es": {
@@ -43674,7 +43674,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zet je teller en je boom terug zoals ze vóór deze uitglijder waren."
+            "value": "Zet je teller en boom terug naar de staat van vóór deze misstap."
           }
         },
         "es": {
@@ -43775,7 +43775,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kwartaalkampioen"
+            "value": "Kwartaalheld"
           }
         },
         "es": {
@@ -43876,7 +43876,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vragen, ideeën of problemen? Laat het weten."
+            "value": "Vragen, ideeën of problemen? Laat het ons weten."
           }
         },
         "es": {
@@ -43977,7 +43977,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zyn Days afsluiten"
+            "value": "Dagen zonder nicotine"
           }
         },
         "es": {
@@ -44078,7 +44078,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Afsluiten van Zyn"
+            "value": "Beoordeel Quit Zyn"
           }
         },
         "es": {
@@ -44278,13 +44278,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Leg nog %1$lld drangmoment vast om meer patronen te ontdekken."
+                  "value": "Registreer nog %1$lld nicotinetrek om meer patronen te ontdekken."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Leg nog %1$lld drangmomenten vast om meer patronen te ontdekken."
+                  "value": "Registreer nog %1$lld nicotinetrekken om meer patronen te ontdekken."
                 }
               }
             }
@@ -44631,13 +44631,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Leg nog %1$lld drangmoment vast om je patronen te zien."
+                  "value": "Registreer nog %1$lld nicotinetrek om je patronen te zien."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Leg nog %1$lld drangmomenten vast om je patronen te zien."
+                  "value": "Registreer nog %1$lld nicotinetrekken om je patronen te zien."
                 }
               }
             }
@@ -44885,7 +44885,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Leg nog één drangmoment vast om meer patronen te ontdekken."
+            "value": "Registreer nog één nicotinetrek om meer patronen te ontdekken."
           }
         },
         "es": {
@@ -44986,7 +44986,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Leg nog één drangmoment vast om je patronen te zien."
+            "value": "Registreer nog één nicotinetrek om je patronen te zien."
           }
         },
         "es": {
@@ -45087,7 +45087,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het herstel begint met een beslissing."
+            "value": "Herstel begint met een beslissing. Vandaag heb je die genomen, en je kunt die de komende dagen opnieuw nemen."
           }
         },
         "es": {
@@ -45289,7 +45289,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verfijnd en dicht. Het werk van echt geduld."
+            "value": "Verfijnd en dicht vertakt. Het resultaat van veel geduld."
           }
         },
         "es": {
@@ -45390,7 +45390,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Geraffineerde fase"
+            "value": "Verfijnde boomfase"
           }
         },
         "es": {
@@ -45491,7 +45491,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vóór afschrijving"
+            "value": "Herinnering vóór afschrijving"
           }
         },
         "es": {
@@ -45592,7 +45592,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Herinneringstijd"
+            "value": "Tijdstip van herinnering"
           }
         },
         "es": {
@@ -45693,7 +45693,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Herinneringen gaan uit van je belofte."
+            "value": "Herinneringen sluiten aan bij je belofte."
           }
         },
         "es": {
@@ -45895,7 +45895,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wordt automatisch verlengd. Zeg minstens 24 uur voor het einde op. Beheer: Instellingen › Apple ID › Abonnementen."
+            "value": "Wordt automatisch verlengd. Zeg minstens 24 uur vóór het einde van de huidige periode op. Beheer dit via Instellingen › Apple ID › Abonnementen."
           }
         },
         "es": {
@@ -46198,7 +46198,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je toonbank resetten?"
+            "value": "Je teller resetten?"
           }
         },
         "es": {
@@ -46400,7 +46400,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Herstel aankopen"
+            "value": "Aankopen herstellen"
           }
         },
         "es": {
@@ -46602,7 +46602,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Doorstaan: %1$lld van %2$lld"
+            "value": "Doorstaan: %1$lld van de %2$lld"
           }
         },
         "es": {
@@ -46703,7 +46703,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Adem een paar minuten rustig."
+            "value": "Kom door de nicotinetrek heen met een paar minuten rustig ademhalen"
           }
         },
         "es": {
@@ -47107,7 +47107,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "BESPAAR %lld%%"
+            "value": "BESPAAR %1$lld%%"
           }
         },
         "es": {
@@ -47840,7 +47840,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle abonnementen bekijken"
+            "value": "Bekijk alle abonnementen"
           }
         },
         "es": {
@@ -47941,7 +47941,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bekijk alle voortgang"
+            "value": "Bekijk je volledige voortgang"
           }
         },
         "es": {
@@ -48042,7 +48042,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zie wat er terugkomt."
+            "value": "Ontdek wat er terugkomt."
           }
         },
         "es": {
@@ -48143,7 +48143,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kijk wanneer je %1$@ raakt, wat hen aanzet, en hoe lang de jouwe eigenlijk duurt, plus de rest van Bloom+."
+            "value": "Zie wanneer je %1$@ opkomen, wat ze uitlokt en hoe lang ze duren, plus de rest van Bloom+."
           }
         },
         "es": {
@@ -48547,7 +48547,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zaaifase"
+            "value": "Zaailingfase"
           }
         },
         "es": {
@@ -49052,7 +49052,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vandaag weer present"
+            "value": "Vandaag aanwezig"
           }
         },
         "es": {
@@ -51476,7 +51476,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Begin"
+            "value": "Start"
           }
         },
         "es": {
@@ -53716,7 +53716,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het geld blijft in je zak in plaats van naar nicotinezakjes te gaan. Bloom+ helpt je je reeks vol te houden."
+            "value": "Het geld blijft in je zak in plaats van naar nicotinezakjes te gaan. Bloom+ helpt je reeks vol te houden."
           }
         },
         "es": {
@@ -53918,7 +53918,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Streak telt je huidige run. Levensduur telt elke nicotinevrije dag die je ooit hebt gelogd, zodat vooruitgang in het verleden niet verloren gaat op een reset."
+            "value": "Je reeks telt je huidige periode. Levenslang telt elke nicotinevrije dag die je ooit hebt geregistreerd. Zo raak je eerdere voortgang niet kwijt als je de teller reset."
           }
         },
         "es": {
@@ -54322,7 +54322,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stevig fundament"
+            "value": "Sterke basis"
           }
         },
         "es": {
@@ -54524,7 +54524,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wissel altijd van soort · je reeks blijft groeien"
+            "value": "Wissel wanneer je wilt van soort · je reeks blijft groeien"
           }
         },
         "es": {
@@ -54726,7 +54726,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wissel wanneer je wilt. Je dagen en groei gaan mee naar elke boom die je kiest."
+            "value": "Wissel wanneer je wilt. Je dagentelling en groei gaan mee naar de boom die je kiest."
           }
         },
         "es": {
@@ -54827,7 +54827,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wissel van bonsaisoort, nu %@"
+            "value": "Wissel van bonsaisoort, nu %1$@"
           }
         },
         "es": {
@@ -55534,7 +55534,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dat is ongeveer %1$@ / dag"
+            "value": "Dat is ongeveer %1$@ per dag"
           }
         },
         "es": {
@@ -55635,7 +55635,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De cascadestijl bootst een boom na die op een klif groeit en naar beneden duikt."
+            "value": "De cascadestijl lijkt op een boom die op een klif groeit en omlaag hangt."
           }
         },
         "es": {
@@ -55837,7 +55837,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Het zaadje zet zich vast. Hier begint je reis."
+            "value": "Het zaadje wortelt. Hier begint je reis."
           }
         },
         "es": {
@@ -55938,7 +55938,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dit is nabij de top. Deze %1$@ klimmen snel en dan stoppen ze met klimmen."
+            "value": "Je zit bijna op de piek. Je %1$@ nemen snel toe en vlakken daarna af."
           }
         },
         "es": {
@@ -56138,13 +56138,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Deze trigger kwam %1$lld keer voor."
+                  "value": "Deze aanleiding kwam %1$lld keer voor."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Deze trigger kwam %1$lld keer voor."
+                  "value": "Deze aanleiding kwam %1$lld keer voor."
                 }
               }
             }
@@ -56493,7 +56493,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Drie maanden sterk."
+            "value": "Drie maanden volgehouden."
           }
         },
         "es": {
@@ -56695,7 +56695,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tijdsmijlpalen"
+            "value": "Tijdmijlpalen"
           }
         },
         "es": {
@@ -57099,7 +57099,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vandaag genoteerd"
+            "value": "Vandaag geregistreerd"
           }
         },
         "es": {
@@ -57200,7 +57200,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vandaag staat als uitglijder vastgelegd"
+            "value": "Vandaag geregistreerd als misstap"
           }
         },
         "es": {
@@ -57503,7 +57503,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volg elke dollar en zak die je vermijdt, plus de rest van Bloom+."
+            "value": "Houd bij hoeveel geld en nicotinezakjes je bespaart, plus de rest van Bloom+."
           }
         },
         "es": {
@@ -57604,7 +57604,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Volg je nicotinevrije dagen, laat je tuin groeien en volg je herstel."
+            "value": "Volg je nicotinevrije dagen, laat je tuin groeien en zie hoe je gezondheid zich herstelt."
           }
         },
         "es": {
@@ -57907,7 +57907,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Waarheidsinitiatief"
+            "value": "Truth Initiative"
           }
         },
         "es": {
@@ -58311,7 +58311,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Twee snelle vragen nu het nog vers is. Allebei optioneel."
+            "value": "Twee korte vragen nu het nog vers in je geheugen zit. Beide zijn optioneel."
           }
         },
         "es": {
@@ -58513,7 +58513,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ongedaan maken, ik had geen uitglijder"
+            "value": "Ongedaan maken, ik heb geen misstap begaan"
           }
         },
         "es": {
@@ -58713,13 +58713,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ontgrendel %lld boom"
+                  "value": "Ontgrendel %1$lld boom"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ontgrendel %lld bomen"
+                  "value": "Ontgrendel %1$lld bomen"
                 }
               }
             }
@@ -59262,13 +59262,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ontgrendel alle %lld bomen"
+                  "value": "Ontgrendel alle %1$lld bomen"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Ontgrendel alle %lld bomen"
+                  "value": "Ontgrendel alle %1$lld bomen"
                 }
               }
             }
@@ -59510,7 +59510,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ontgrendel elke bonsaisoort en wissel wanneer je wilt, plus de rest van Bloom+."
+            "value": "Ontgrendel alle bonsaisoorten en wissel wanneer je wilt, plus de rest van Bloom+."
           }
         },
         "es": {
@@ -59712,7 +59712,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ontgrendel de volledige hersteltijdlijn met 13 mijlpalen, plus de rest van Bloom+."
+            "value": "Ontgrendel de volledige herstelgeschiedenis met 13 mijlpalen, plus de rest van Bloom+."
           }
         },
         "es": {
@@ -59914,7 +59914,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ontgrendel wat komt met Bloom+"
+            "value": "Ontdek wat je met Bloom+ kunt ontgrendelen"
           }
         },
         "es": {
@@ -60116,7 +60116,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tot %@/jaar"
+            "value": "Tot %1$@ per jaar"
           }
         },
         "es": {
@@ -60312,7 +60312,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deze gegevens schatten hoeveel geld en nicotinezakjes je bespaart en hoeveel nicotine je vermijdt zolang je nicotinevrij blijft."
+            "value": "Wordt gebruikt om te schatten hoeveel geld en nicotine je bespaart en hoeveel nicotinezakjes je vermijdt zolang je nicotinevrij blijft."
           }
         },
         "es": {
@@ -60413,7 +60413,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Let op je spaargeld."
+            "value": "Zie hoe je besparingen oplopen."
           }
         },
         "es": {
@@ -60613,13 +60613,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welkom terug. Je hebt %lld dag niet ingecheckt. Gaat het nog goed?"
+                  "value": "Welkom terug. Je hebt %1$lld dag geen dagregistratie gedaan. Gaat het nog goed?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Welkom terug. Je hebt %lld dagen niet ingecheckt. Gaat het nog goed?"
+                  "value": "Welkom terug. Je hebt %1$lld dagen geen dagregistratie gedaan. Gaat het nog goed?"
                 }
               }
             }
@@ -61574,7 +61574,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wat zou een ‘reset’ me echt kosten, in dagen en geld?"
+            "value": "Wat zou een reset me echt kosten, in dagen en geld?"
           }
         },
         "es": {
@@ -61675,7 +61675,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wat je houdt"
+            "value": "Wat je overhoudt"
           }
         },
         "es": {
@@ -61776,7 +61776,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Welke relatie verbetert sinds ik ben gestopt?"
+            "value": "Welke relatie is verbeterd sinds ik ben gestopt?"
           }
         },
         "es": {
@@ -62382,7 +62382,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Als ze toeslaan en wat hen afleidt."
+            "value": "Wanneer ze opkomen en wat ze uitlokt."
           }
         },
         "es": {
@@ -62483,7 +62483,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wanneer uw %1$@ raakt en wat hen aanzet"
+            "value": "Wanneer je %1$@ opkomen en wat ze uitlokt"
           }
         },
         "es": {
@@ -62685,7 +62685,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Waar merk ik dat drang zich verstopt?"
+            "value": "Waar merk ik dat nicotinetrek opkomt?"
           }
         },
         "es": {
@@ -63089,7 +63089,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Met meldingen herinneren we je vóór het einde van je proefperiode."
+            "value": "Als meldingen aanstaan, herinneren we je voordat je proefperiode afloopt."
           }
         },
         "es": {
@@ -63190,7 +63190,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Binnen een paar uur na je laatste nicotinezakje neemt de nicotinepiek af. Je hartslag en bloeddruk beginnen terug te gaan naar hun uitgangsniveau."
+            "value": "Een paar uur na je laatste nicotinezakje neemt de nicotinepiek af. Je hartslag en bloeddruk bewegen terug naar hun uitgangsniveau."
           }
         },
         "es": {
@@ -63594,7 +63594,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Schrijf op wat je voelt als de drang opkomt."
+            "value": "Schrijf over je nicotinetrek."
           }
         },
         "es": {
@@ -63689,7 +63689,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "AL BESPAARD"
+            "value": "TOT NU TOE BESPAARD"
           }
         },
         "es": {
@@ -64396,7 +64396,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je hoeft nu niets anders te doen. Blijf gewoon hier en adem."
+            "value": "Je hoeft nu niets anders te doen. Blijf hier en adem rustig."
           }
         },
         "es": {
@@ -64497,7 +64497,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je houdt"
+            "value": "Je houdt over"
           }
         },
         "es": {
@@ -65289,13 +65289,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je hebt %1$lld drangmoment doorstaan."
+                  "value": "Je hebt %1$lld nicotinetrek doorstaan."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je hebt %1$lld drangmomenten doorstaan."
+                  "value": "Je hebt %1$lld nicotinetrekken doorstaan."
                 }
               }
             }
@@ -65543,7 +65543,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je hebt één drangmoment doorstaan."
+            "value": "Je hebt één nicotinetrek doorstaan."
           }
         },
         "es": {
@@ -65644,7 +65644,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je bleef erbij voor %1$@."
+            "value": "Je bleef bij de nicotinetrek gedurende %1$@."
           }
         },
         "es": {
@@ -65745,7 +65745,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je houdt de dagbalie, de kalender, hunkermodus en je boom... je jaar-vooruitzicht, de volledige gezondheidstijdlijn, het dagboek en de andere soorten blijven opgesloten."
+            "value": "Je houdt de dagteller, kalender, hulp bij nicotinetrek en je boom. De jaarprognose, volledige gezondheidstijdlijn, het dagboek en de andere soorten blijven vergrendeld."
           }
         },
         "es": {
@@ -65945,13 +65945,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je bent %lld dag bezig. Leg vandaag vast en geef je bonsai water."
+                  "value": "Je bent %1$lld dag onderweg. Registreer vandaag en geef je bonsai water."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je bent %lld dagen bezig. Leg vandaag vast en geef je bonsai water."
+                  "value": "Je bent %1$lld dagen onderweg. Registreer vandaag en geef je bonsai water."
                 }
               }
             }
@@ -66199,7 +66199,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je hebt tot nu toe %1$@ opgeslagen"
+            "value": "Je hebt tot nu toe %1$@ bespaard"
           }
         },
         "es": {
@@ -66294,7 +66294,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je hebt %1$@ bespaard door nicotinevrij te blijven. Bloom+ helpt je op koers te blijven."
+            "value": "Je hebt %1$@ bespaard door nicotinevrij te blijven. Houd je voortgang bij met tools die je ondersteunen."
           }
         },
         "es": {
@@ -66496,7 +66496,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jonge bonsai podium"
+            "value": "Jonge bonsaifase"
           }
         },
         "es": {
@@ -66900,7 +66900,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je bonsai is uitgegroeid tot een volle bladerkroon."
+            "value": "Je bonsai heeft zich ontwikkeld tot een volle kroon met bladeren."
           }
         },
         "es": {
@@ -67102,7 +67102,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Op %1$@ heb je de meeste drangmomenten."
+            "value": "Je hebt het vaakst nicotinetrek op %1$@."
           }
         },
         "es": {
@@ -67203,7 +67203,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je teller begint na de uitglijder opnieuw. Een uitglijder vandaag begint bij dag 1; bij een eerdere tellen de dagen sindsdien. Je langste reeks volgt de gecorrigeerde data."
+            "value": "Na een misstap begint je teller opnieuw. Een misstap vandaag betekent dag 1. Bij een eerdere misstap tellen de dagen sindsdien mee. Je langste reeks volgt de gecorrigeerde datums."
           }
         },
         "es": {
@@ -67758,7 +67758,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De drang gaat meestal na ongeveer %1$@ over."
+            "value": "Je nicotinetrek gaat meestal na ongeveer %1$@ over."
           }
         },
         "es": {
@@ -67960,7 +67960,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je dagenteller begint na de uitglijder opnieuw. Je boom houdt een deel van zijn groei, en je kalendergeschiedenis en voltooide bomen blijven. Je langste reeks volgt de gecorrigeerde data."
+            "value": "Na een misstap begint je dagteller opnieuw. Een deel van de groei van je boom blijft behouden, net als je kalendergeschiedenis en voltooide bomen. Je langste reeks volgt de gecorrigeerde datums."
           }
         },
         "es": {
@@ -68061,7 +68061,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je dagenteller begint weer bij nul. Je geschiedenis blijft bewaard."
+            "value": "Je dagteller begint opnieuw bij nul. Je geschiedenis blijft behouden."
           }
         },
         "es": {
@@ -68162,7 +68162,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je dagteller, hulp bij trek, widget en Apple Watch-app blijven altijd gratis."
+            "value": "Je dagteller, hulp bij nicotinetrek, widget en Apple Watch-app blijven altijd gratis."
           }
         },
         "es": {
@@ -68465,7 +68465,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je tuin, dagboek, gezondheidstijdlijn en besparingen. Alles wat je helpt om nicotinevrij te blijven."
+            "value": "Je tuin, dagboek, gezondheidstijdlijn en besparingen. Alles wat je helpt nicotinevrij te blijven."
           }
         },
         "es": {
@@ -68566,7 +68566,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je laatste wijziging kon niet op dit apparaat worden bewaard en kan ontbreken als je de app sluit. Meestal is de opslag vol. Maak wat ruimte vrij, controleer het en probeer het opnieuw."
+            "value": "Je laatste wijziging kon niet op dit apparaat worden opgeslagen en kan ontbreken als je de app sluit. Meestal komt dat doordat de opslag vol is. Maak ruimte vrij, controleer de wijziging en probeer het opnieuw."
           }
         },
         "es": {
@@ -68667,7 +68667,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je stemming zakt vaak vóór een uitglijder"
+            "value": "Je stemming daalt vaak vóór een misstap"
           }
         },
         "es": {
@@ -68768,7 +68768,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "In de twee dagen vóór een terugval was je stemming lager dan op andere geregistreerde dagen. Het kan helpen om dit patroon vroeg op te merken."
+            "value": "Je stemming was in de twee dagen vóór een misstap lager dan op andere geregistreerde dagen. Het kan helpen dit patroon vroeg op te merken."
           }
         },
         "es": {
@@ -68964,7 +68964,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je eerdere reeksen blijven bewaard"
+            "value": "Je eerdere reeksen blijven in je geschiedenis staan"
           }
         },
         "es": {
@@ -69368,7 +69368,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uw aankoop wacht op goedkeuring. Bloom+ ontgrendelt op zichzelf zodra het is bevestigd, en u kunt blijven gebruik maken van de gratis versie ondertussen."
+            "value": "Je aankoop wacht op goedkeuring. Bloom+ wordt automatisch ontgrendeld zodra de aankoop is bevestigd. Tot die tijd kun je de gratis versie blijven gebruiken."
           }
         },
         "es": {
@@ -69469,7 +69469,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je boom komt in het bosje"
+            "value": "Je boom krijgt een plek in het bosje"
           }
         },
         "es": {
@@ -69669,13 +69669,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je boom behoudt %1$lld dag groei"
+                  "value": "Je boom behoudt %1$lld dag groei."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je boom behoudt %1$lld dagen groei"
+                  "value": "Je boom behoudt %1$lld dagen groei."
                 }
               }
             }
@@ -70276,7 +70276,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uw gebruikelijke kan"
+            "value": "Je gebruikelijke blikje"
           }
         },
         "es": {
@@ -70781,7 +70781,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "trek"
+            "value": "nicotinetrek"
           }
         },
         "es": {
@@ -70882,7 +70882,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "trek"
+            "value": "nicotinetrekken"
           }
         },
         "es": {
@@ -71084,7 +71084,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vindbehandeling.gov"
+            "value": "findtreatment.gov"
           }
         },
         "es": {
@@ -71185,7 +71185,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle functies"
+            "value": "Volledige toegang tot Bloom+"
           }
         },
         "es": {
@@ -71486,13 +71486,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "over %lld dag"
+                  "value": "over %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "over %lld dagen"
+                  "value": "over %1$lld dagen"
                 }
               }
             }
@@ -72037,7 +72037,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicotinezakjes per dag"
+            "value": "nicotinezakjes per dag"
           }
         },
         "es": {
@@ -72138,7 +72138,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trek weerstaan"
+            "value": "doorgestane nicotinetrek"
           }
         },
         "es": {
@@ -72239,7 +72239,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trek weerstaan"
+            "value": "doorgestane nicotinetrek"
           }
         },
         "es": {
@@ -72542,7 +72542,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Je boom krijgt een plek in het bosje. Een nieuw boompje groeit op."
+            "value": "Je boom krijgt een plek in het bosje. Er begint een nieuwe jonge boom te groeien."
           }
         },
         "es": {
@@ -72742,13 +72742,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je bosje heeft nu %1$lld boom. Een nieuw boompje begint te groeien."
+                  "value": "Je bosje heeft nu %1$lld boom. Er begint een nieuwe jonge boom te groeien."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Je bosje heeft nu %1$lld bomen. Een nieuw boompje begint te groeien."
+                  "value": "Je bosje heeft nu %1$lld bomen. Er begint een nieuwe jonge boom te groeien."
                 }
               }
             }
