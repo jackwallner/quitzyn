@@ -4,6 +4,7 @@ import UserNotifications
 
 struct SettingsView: View {
     @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
     @Environment(SubscriptionService.self) private var subscriptions
     @Query private var settingsRows: [UserSettings]
@@ -164,6 +165,11 @@ struct SettingsView: View {
             }
             .themedScrollBackground()
             .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
             .onChange(of: settings?.dailyReminderHour) { _, _ in rescheduleReminder() }
             .onChange(of: settings?.dailyReminderEnabled) { _, _ in rescheduleReminder() }
             .onChange(of: settings?.madeCommitment) { _, _ in rescheduleReminder() }
@@ -243,6 +249,7 @@ struct SettingsView: View {
             get: { journey.startDate },
             set: {
                 SobrietyService(context: context).updateStartDate($0)
+                CheckInService(context: context).dropAssumedDaysOutsideJourneys()
                 // Keep the calendar in lockstep with the counter: backfill
                 // check-ins for the (possibly earlier) journey range the
                 // same way HomeView.onAppear does. Without this, an edited
@@ -252,6 +259,7 @@ struct SettingsView: View {
                     through: DateHelpers.daysAgo(1)
                 )
                 WidgetSnapshotPump.push(context: context)
+                NotificationService.refreshDailyReminder(context: context)
             }
         )
     }
@@ -267,17 +275,6 @@ struct SettingsView: View {
     }
 
     private func rescheduleReminder() {
-        guard let s = settings else { return }
-        let hour = s.dailyReminderHour
-        let enabled = s.dailyReminderEnabled
-        let committed = s.madeCommitment
-        let streak = activeJourney.map { SobrietyService.daysSinceStart($0.startDate) } ?? 0
-        Task {
-            if enabled {
-                await NotificationService.scheduleDailyReminder(hour: hour, committed: committed, streakDays: streak)
-            } else {
-                await NotificationService.cancelDailyReminder()
-            }
-        }
+        NotificationService.refreshDailyReminder(context: context)
     }
 }

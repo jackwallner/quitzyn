@@ -27,6 +27,11 @@ enum AppGroup {
     /// assumed this".
     static let legacyCheckInsMarkedLoggedKey = "legacyCheckInsMarkedLogged"
 
+    /// Identifier of the time zone whose midnights `DailyCheckIn.day` is keyed
+    /// on. Absent until the first repair, which also merges the duplicates
+    /// earlier builds wrote after a time zone change.
+    static let checkInDayKeyZoneKey = "checkInDayKeyZone"
+
     static let journalTabVisitCountKey = "journalTabVisitCount"
     static let checkInCompletedCountKey = "checkInCompletedCount"
     static let growthCelebrationCountKey = "growthCelebrationCount"

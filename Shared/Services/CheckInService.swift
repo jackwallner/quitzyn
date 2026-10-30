@@ -4,9 +4,11 @@ import SwiftData
 @MainActor
 final class CheckInService {
     private let context: ModelContext
+    private let dayKeyDefaults: UserDefaults
 
-    init(context: ModelContext) {
+    init(context: ModelContext, dayKeyDefaults: UserDefaults = AppGroup.defaults) {
         self.context = context
+        self.dayKeyDefaults = dayKeyDefaults
     }
 
     /// Record a day the user acted on. `logged` marks it as a real tap, which
@@ -77,6 +79,9 @@ final class CheckInService {
     /// otherwise fire thousands of serial fetch round-trips on the main actor
     /// and stall the first Home render.
     func fillJourney(start: Date, through end: Date) {
+        // Rows keyed in another zone would read as missing days and be filled
+        // a second time, so they are moved onto this zone's midnights first.
+        Self.normalizeDayKeys(context: context, defaults: dayKeyDefaults)
         let cal = Calendar.current
         let first = DateHelpers.startOfDay(start)
         let last = DateHelpers.startOfDay(end)
@@ -97,6 +102,25 @@ final class CheckInService {
             cursor = next
         }
         if didInsert { context.saveOrReport() }
+    }
+
+    /// Remove assumed days that no journey covers any more. Assumed rows exist
+    /// only to mirror the runs, so when the user moves the start date later
+    /// the days they dropped must go too: they kept counting in Total and
+    /// lifetime savings while the calendar greyed them out. Logged rows are
+    /// the user's own record and always stay.
+    func dropAssumedDaysOutsideJourneys() {
+        let journeys = (try? context.fetch(FetchDescriptor<SobrietyJourney>())) ?? []
+        let spans = journeys.map { j in
+            (DateHelpers.startOfDay(j.startDate), j.endDate.map(DateHelpers.startOfDay) ?? .distantFuture)
+        }
+        let assumed = (try? context.fetch(FetchDescriptor<DailyCheckIn>(predicate: #Predicate { !$0.wasLogged }))) ?? []
+        var didDelete = false
+        for row in assumed where !spans.contains(where: { row.day >= $0.0 && row.day <= $0.1 }) {
+            context.delete(row)
+            didDelete = true
+        }
+        if didDelete { context.saveOrReport() }
     }
 
     /// Backfill check-ins as sober for every day from the last day the user
@@ -176,6 +200,133 @@ final class CheckInService {
             }
         }
         defaults.set(true, forKey: AppGroup.legacyCheckInsMarkedLoggedKey)
+    }
+
+    // MARK: - Day keys across time zones
+
+    /// Re-key every row onto the current zone's midnights when the zone has
+    /// changed since the rows were written, merging rows that turn out to be
+    /// the same calendar day.
+    ///
+    /// `day` stores the instant of local midnight, and the same calendar day
+    /// has a different midnight in every zone. After a trip, `fillJourney`
+    /// found none of the old rows at this zone's midnights and wrote every
+    /// day again, doubling Total and lifetime savings, and `find(day:)` lost
+    /// track of today's check-in. Keeping one zone's midnights on disk lets
+    /// every reader go on comparing instants.
+    ///
+    /// The zone the rows are keyed in is remembered, which makes the move
+    /// exact. Rows that are not on its midnights (duplicates written by builds
+    /// before this repair, which recorded no zone) have their calendar day
+    /// recovered from the instant itself: a midnight pins its zone's offset to
+    /// within a whole day, and only one candidate falls inside the range of
+    /// real offsets except at the date line. Nothing the user wrote is
+    /// dropped: a tap, a slip, a mood and every note survive a merge.
+    static func normalizeDayKeys(
+        context: ModelContext,
+        zone: TimeZone = .current,
+        defaults: UserDefaults = AppGroup.defaults
+    ) {
+        let keyedZone = defaults.string(forKey: AppGroup.checkInDayKeyZoneKey)
+            .flatMap(TimeZone.init(identifier:))
+        if keyedZone?.identifier == zone.identifier { return }
+
+        guard let rows = try? context.fetch(FetchDescriptor<DailyCheckIn>()) else { return }
+        var groups: [Date: [DailyCheckIn]] = [:]
+        for row in rows {
+            let target = startOfCalendarDay(containing: row.day, keyedIn: keyedZone, in: zone)
+            groups[target, default: []].append(row)
+        }
+
+        var changed = false
+        for (target, members) in groups {
+            let survivor = members.first { $0.day == target }
+                ?? members.first { $0.wasLogged }
+                ?? members[0]
+            if members.count > 1 {
+                merge(members, into: survivor)
+                for row in members where row !== survivor { context.delete(row) }
+                changed = true
+            }
+            if survivor.day != target {
+                survivor.day = target
+                changed = true
+            }
+        }
+        if changed {
+            do {
+                try context.save()
+            } catch {
+                // Left unmarked, so the next launch tries again.
+                context.rollback()
+                return
+            }
+        }
+        defaults.set(zone.identifier, forKey: AppGroup.checkInDayKeyZoneKey)
+    }
+
+    /// This zone's midnight for the calendar day a stored row stands for.
+    nonisolated static func startOfCalendarDay(
+        containing stored: Date,
+        keyedIn keyedZone: TimeZone?,
+        in zone: TimeZone
+    ) -> Date {
+        let comps = calendarDay(of: stored, keyedIn: keyedZone, reference: zone)
+        var target = Calendar(identifier: .gregorian)
+        target.timeZone = zone
+        // Noon, then back to the day's start: a zone whose clocks skip
+        // midnight for daylight saving still has a start of day.
+        var noon = comps
+        noon.hour = 12
+        guard let midday = target.date(from: noon) else { return stored }
+        return target.startOfDay(for: midday)
+    }
+
+    nonisolated private static func calendarDay(
+        of stored: Date,
+        keyedIn keyedZone: TimeZone?,
+        reference zone: TimeZone
+    ) -> DateComponents {
+        if let keyedZone {
+            var keyed = Calendar(identifier: .gregorian)
+            keyed.timeZone = keyedZone
+            if keyed.startOfDay(for: stored) == stored {
+                return keyed.dateComponents([.year, .month, .day], from: stored)
+            }
+        }
+        // `stored` is a midnight somewhere, so that zone's offset is
+        // -stored modulo a day. Real offsets run from -12h to +14h.
+        let day = 86_400
+        let seconds = Int(stored.timeIntervalSince1970.rounded())
+        let remainder = ((-seconds % day) + day) % day
+        let preferred = (keyedZone ?? zone).secondsFromGMT(for: stored)
+        let offset = [remainder, remainder - day]
+            .filter { $0 >= -12 * 3600 && $0 <= 14 * 3600 }
+            .min { abs($0 - preferred) < abs($1 - preferred) } ?? preferred
+        var utc = Calendar(identifier: .gregorian)
+        utc.timeZone = TimeZone(identifier: "UTC") ?? zone
+        return utc.dateComponents(
+            [.year, .month, .day],
+            from: stored.addingTimeInterval(TimeInterval(offset))
+        )
+    }
+
+    /// Fold duplicates of one calendar day into `survivor`. A tap on any copy
+    /// makes the day tended, a logged slip outranks an assumed sober day, and
+    /// distinct notes are kept side by side rather than one winning.
+    private static func merge(_ rows: [DailyCheckIn], into survivor: DailyCheckIn) {
+        let logged = rows.filter(\.wasLogged)
+        let decisive = logged.isEmpty ? rows : logged
+        let ordered = [survivor] + rows.filter { $0 !== survivor }
+        let preferred = ordered.filter(\.wasLogged) + ordered.filter { !$0.wasLogged }
+        var notes: [String] = []
+        for note in preferred.compactMap(\.note) where !note.isEmpty && !notes.contains(note) {
+            notes.append(note)
+        }
+        survivor.wasLogged = !logged.isEmpty
+        survivor.wasSober = decisive.allSatisfy(\.wasSober)
+        survivor.mood = preferred.compactMap(\.mood).first
+        survivor.note = notes.isEmpty ? nil : notes.joined(separator: "\n\n")
     }
 
     /// Every sober day on record, across all journeys. This is the number

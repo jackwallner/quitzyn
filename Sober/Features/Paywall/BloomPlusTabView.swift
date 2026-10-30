@@ -210,14 +210,15 @@ private struct BloomPlusHubView: View {
 
     private var milestonesCard: some View {
         let nextMilestone = AchievementCatalog.nextTimeMilestone(after: days)
-        let hours = Double(max(0, days - 1)) * 24
+        let hours = journeys.first(where: { $0.isActive })
+            .map { max(0, DateHelpers.hoursBetween($0.startDate, .now)) } ?? 0
         let nextBenefit = HealthBenefitCatalog.next(after: hours)
         let earned = unlockedAchievements.count
         return VStack(spacing: 0) {
             milestoneRow(
                 icon: "flag.fill",
                 title: nextMilestone?.title ?? "Year One",
-                trailing: nextMilestone.map { "in \(max(1, $0.dayThreshold - days)) days" } ?? "Crushed it"
+                trailing: nextMilestone.map { AchievementCatalog.daysToGo($0.dayThreshold - days) } ?? "Crushed it"
             )
             Divider().padding(.leading, 48)
             milestoneRow(
