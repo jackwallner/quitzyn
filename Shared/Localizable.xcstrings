@@ -2138,7 +2138,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / día"
+            "value": "%1$@ al día"
           }
         },
         "da": {
@@ -2239,7 +2239,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / mes"
+            "value": "%1$@ al mes"
           }
         },
         "da": {
@@ -2340,7 +2340,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / semana"
+            "value": "%1$@ a la semana"
           }
         },
         "da": {
@@ -2441,7 +2441,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / año"
+            "value": "%1$@ al año"
           }
         },
         "da": {
@@ -2738,7 +2738,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ cuesta aproximadamente lo mismo que %2$lld días y medio de bolsitas de nicotina."
+            "value": "%1$@ cuesta aproximadamente lo mismo que las bolsitas de nicotina de %2$lld días y medio."
           }
         },
         "da": {
@@ -2989,7 +2989,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ cuesta aproximadamente lo mismo que las bolsitas de nicotina para %#@n@."
+            "value": "%1$@ cuesta aproximadamente lo mismo que las bolsitas de nicotina de %#@n@."
           },
           "substitutions": {
             "n": {
@@ -3318,7 +3318,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ cuesta aproximadamente lo mismo que un día y medio de bolsitas de nicotina."
+            "value": "%1$@ cuesta aproximadamente lo mismo que las bolsitas de nicotina de un día y medio."
           }
         },
         "da": {
@@ -3413,7 +3413,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ cuesta aproximadamente lo mismo que un día de bolsitas de nicotina."
+            "value": "%1$@ cuesta aproximadamente lo mismo que las bolsitas de nicotina de un día."
           }
         },
         "da": {
@@ -3508,7 +3508,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ cuesta menos que el gasto de un día en bolsitas de nicotina."
+            "value": "%1$@ cuesta menos que las bolsitas de nicotina de un día."
           }
         },
         "da": {
@@ -4215,7 +4215,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Compra única. Acceso de por vida, sin suscripción."
+            "value": "%1$@. Compra única. Acceso de por vida, sin suscripción."
           }
         },
         "da": {
@@ -5329,13 +5329,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "día"
+                  "value": "%1$lld día"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "días"
+                  "value": "%1$lld días"
                 }
               }
             }
@@ -6382,13 +6382,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld día de Bloom+ gratis"
+                  "value": "%1$lld día de Bloom+ gratis"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld días de Bloom+ gratis"
+                  "value": "%1$lld días de Bloom+ gratis"
                 }
               }
             }
@@ -6618,7 +6618,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld de los últimos %2$lld terminaron así."
+            "value": "Esto ocurrió %1$lld veces entre tus últimos %2$lld registros."
           }
         },
         "da": {
@@ -7183,7 +7183,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld segundos"
+                  "value": "%1$lld segundo"
                 }
               },
               "other": {
@@ -7536,13 +7536,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld árbol cultivado"
+                  "value": "%1$lld árbol crecido"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld árboles cultivados"
+                  "value": "%1$lld árboles crecidos"
                 }
               }
             }
@@ -7889,13 +7889,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld árbol cultivado en tu arboleda"
+                  "value": "%1$lld árbol crecido en tu arboleda"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld árboles cultivados en tu arboleda"
+                  "value": "%1$lld árboles crecidos en tu arboleda"
                 }
               }
             }
@@ -8595,13 +8595,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld día gratis en los planes mensual y anual."
+                  "value": "%1$lld día gratis con las suscripciones mensual y anual."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld días gratis en los planes mensual y anual."
+                  "value": "%1$lld días gratis con las suscripciones mensual y anual."
                 }
               }
             }
@@ -8948,13 +8948,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld día gratis en el plan mensual."
+                  "value": "%1$lld día gratis con la suscripción mensual."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld días gratis en el plan mensual."
+                  "value": "%1$lld días gratis con la suscripción mensual."
                 }
               }
             }
@@ -9301,13 +9301,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld día gratis en el plan anual."
+                  "value": "%1$lld día gratis con la suscripción anual."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld días gratis en el plan anual."
+                  "value": "%1$lld días gratis con la suscripción anual."
                 }
               }
             }
@@ -9642,13 +9642,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld día y después %2$@."
+                  "value": "Prueba gratis durante %1$lld día y luego %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld días y después %2$@."
+                  "value": "Prueba gratis durante %1$lld días y luego %2$@."
                 }
               }
             }
@@ -10336,13 +10336,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld mes y después %2$@."
+                  "value": "Prueba gratis durante %1$lld mes y luego %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld meses y después %2$@."
+                  "value": "Prueba gratis durante %1$lld meses y luego %2$@."
                 }
               }
             }
@@ -11030,13 +11030,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld año y después %2$@."
+                  "value": "Prueba gratis durante %1$lld año y luego %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld años y después %2$@."
+                  "value": "Prueba gratis durante %1$lld años y luego %2$@."
                 }
               }
             }
@@ -11383,13 +11383,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld beneficio"
+                  "value": "/ %1$lld beneficio"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld beneficios"
+                  "value": "/ %1$lld beneficios"
                 }
               }
             }
@@ -11821,7 +11821,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 registros seguidos."
+            "value": "100 registros diarios seguidos."
           }
         },
         "da": {
@@ -11922,7 +11922,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 hitos de recuperación de nicotina con fuentes."
+            "value": "13 hitos de recuperación tras dejar la nicotina, con fuentes."
           }
         },
         "da": {
@@ -12023,7 +12023,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 registros seguidos."
+            "value": "30 registros diarios seguidos."
           }
         },
         "da": {
@@ -12326,7 +12326,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un sakura en flor envuelto en un rosa suave. Los pétalos caen mientras crece tu racha."
+            "value": "Un sakura cubierto de flores rosas. Los pétalos caen mientras crece tu racha."
           }
         },
         "da": {
@@ -12629,7 +12629,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un arce de encaje en cálidos rojos y dorados otoñales. Sus hojas en forma de estrella caen según suman los días."
+            "value": "Un arce de hojas finas, teñidas de rojo y dorado otoñales. Las hojas en forma de estrella caen mientras se acumulan los días."
           }
         },
         "da": {
@@ -13033,7 +13033,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Una plántula se alza. Las raíces se afianzan."
+            "value": "La plántula se alza. Sus raíces empiezan a afianzarse."
           }
         },
         "da": {
@@ -13942,7 +13942,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etapa de adolescentes"
+            "value": "Etapa juvenil"
           }
         },
         "da": {
@@ -14144,7 +14144,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "La investigación relaciona un año sin nicotina con un riesgo cardiovascular notablemente menor al mantenerse alejado del tabaco. Consulta con un profesional de salud."
+            "value": "La investigación relaciona un año sin nicotina con un riesgo cardiovascular notablemente menor al evitar el tabaco. Consulta con un profesional de la salud."
           }
         },
         "da": {
@@ -14851,7 +14851,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Casi lo logras. Lo que queda ya se está yendo."
+            "value": "Ya casi pasa. Lo que queda también está saliendo del cuerpo."
           }
         },
         "da": {
@@ -15457,7 +15457,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Antiguo escenario"
+            "value": "Etapa ancestral"
           }
         },
         "da": {
@@ -16063,7 +16063,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alrededor del tercer día, la abstinencia física suele alcanzar su punto máximo mientras el cuerpo elimina la última nicotina. Después, las ganas suelen durar menos y ser menos intensas."
+            "value": "Alrededor del tercer día, la abstinencia física suele alcanzar su punto máximo mientras el cuerpo elimina la última nicotina. Después, las ansias de nicotina suelen durar menos y ser menos intensas."
           }
         },
         "da": {
@@ -16164,7 +16164,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tras unas dos semanas sin bolsitas de nicotina apoyadas contra las encías, la irritación y la inflamación de la boca empiezan a remitir y el tejido comienza a sanar."
+            "value": "Tras unas dos semanas sin bolsitas de nicotina junto a las encías, la irritación y la inflamación de la boca empiezan a remitir, y el tejido bucal empieza a recuperarse."
           }
         },
         "da": {
@@ -16265,7 +16265,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "MEJOR DEAL"
+            "value": "MEJOR OFERTA"
           }
         },
         "da": {
@@ -16568,7 +16568,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se basa en los deseos que superaste, no en el promedio de todas las personas."
+            "value": "Se basa en las sesiones en que superaste las ansias de nicotina, no en un promedio de todas las personas."
           }
         },
         "da": {
@@ -16770,7 +16770,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comience su viaje sin nicotina."
+            "value": "Empieza tu camino sin nicotina."
           }
         },
         "da": {
@@ -17578,7 +17578,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ activo"
+            "value": "Bloom+ está activo"
           }
         },
         "da": {
@@ -17780,7 +17780,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los planes Bloom+ no están disponibles temporalmente. Usted puede volver a entrar o continuar libre."
+            "value": "Las suscripciones de Bloom+ no están disponibles temporalmente. Inténtalo de nuevo o continúa gratis."
           }
         },
         "da": {
@@ -17881,7 +17881,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ desbloquea todas las especies para cambiar tu árbol cuando quieras. Tu racha crece con cualquiera."
+            "value": "Bloom+ desbloquea todas las especies para que cambies de árbol cuando quieras. Tu racha crece con cualquiera que elijas."
           }
         },
         "da": {
@@ -18285,7 +18285,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Especies de bonsái"
+            "value": "Especie de bonsái"
           }
         },
         "da": {
@@ -18588,7 +18588,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Las ramas se extienden. La forma empieza a verse."
+            "value": "Las ramas se extienden y la forma empieza a definirse."
           }
         },
         "da": {
@@ -18891,7 +18891,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Al cabo de aproximadamente un mes, la ansiedad y la irritabilidad del inicio de la abstinencia suelen disminuir a medida que se reequilibra la señalización de dopamina en el cerebro. Las experiencias varían."
+            "value": "Al cabo de un mes, la ansiedad y la irritabilidad de la abstinencia inicial suelen disminuir mientras se reequilibra la señalización de dopamina en el cerebro. La experiencia varía."
           }
         },
         "da": {
@@ -19396,7 +19396,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Llama o escribe al 988 · 24/7 · EE. UU."
+            "value": "Llama o envía un mensaje al 988 · 24/7 · EE. UU."
           }
         },
         "da": {
@@ -20002,7 +20002,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambio a libre de nicotina"
+            "value": "Cambiar a sin nicotina"
           }
         },
         "da": {
@@ -20204,7 +20204,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrar el día de hoy"
+            "value": "Registra el día de hoy"
           }
         },
         "da": {
@@ -20507,7 +20507,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registro"
+            "value": "Registro diario"
           }
         },
         "da": {
@@ -20608,7 +20608,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrado"
+            "value": "Día registrado"
           }
         },
         "da": {
@@ -20709,7 +20709,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comprobando la prueba gratis…"
+            "value": "Comprobando la disponibilidad del periodo de prueba…"
           }
         },
         "da": {
@@ -22830,7 +22830,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El deseo alcanza su pico y disminuye"
+            "value": "Las ansias de nicotina alcanzan su punto máximo y disminuyen"
           }
         },
         "da": {
@@ -22931,7 +22931,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Antojos según la hora del día"
+            "value": "Ansias de nicotina según la hora del día"
           }
         },
         "da": {
@@ -23032,7 +23032,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lo lograste"
+            "value": "¡Lo lograste!"
           }
         },
         "da": {
@@ -23234,7 +23234,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Creciendo ahora"
+            "value": "En crecimiento"
           }
         },
         "da": {
@@ -23638,7 +23638,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registro diario 7 días seguidos."
+            "value": "Registros diarios durante 7 días seguidos."
           }
         },
         "da": {
@@ -23739,7 +23739,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diario personal"
+            "value": "Diario"
           }
         },
         "da": {
@@ -25456,7 +25456,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Desactivar forzado de Bloom+"
+            "value": "Desactivar el modo de prueba de Bloom+"
           }
         },
         "da": {
@@ -25961,7 +25961,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "De cualquier manera está bien, puedes revisitarlo en cualquier momento en Ajustes."
+            "value": "Cualquiera de las dos opciones está bien. Puedes cambiarla cuando quieras en Ajustes."
           }
         },
         "da": {
@@ -26062,7 +26062,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Activar forzado de Bloom+"
+            "value": "Activar el modo de prueba de Bloom+"
           }
         },
         "da": {
@@ -26466,7 +26466,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada deseo que superaste terminó sin una bolsita de nicotina."
+            "value": "Cada episodio de ansias de nicotina que superaste terminó sin usar una bolsita."
           }
         },
         "da": {
@@ -26567,7 +26567,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada dólar y bolsa que evitas, rastreaste."
+            "value": "Lleva la cuenta del dinero que ahorras y de las bolsitas de nicotina que evitas."
           }
         },
         "da": {
@@ -26668,7 +26668,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada día libre de nicotina crece tu árbol."
+            "value": "Cada día sin nicotina hace crecer tu árbol."
           }
         },
         "da": {
@@ -26769,7 +26769,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada día sin nicotina que has registrado sigue contando."
+            "value": "Cada día sin nicotina que has contado sigue contando."
           }
         },
         "da": {
@@ -26870,7 +26870,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada vez que resistes las ganas, esta página aprende cuándo aparecen, qué las provoca y cuánto duran."
+            "value": "Cada vez que superas las ansias de nicotina, esta página registra cuándo aparecen, qué las provoca y cuánto duran."
           }
         },
         "da": {
@@ -26971,7 +26971,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Todas las herramientas que mantienen tu racha a la vista, desbloqueadas hoy."
+            "value": "Desbloquea hoy todas las herramientas que mantienen visible tu racha."
           }
         },
         "da": {
@@ -27183,13 +27183,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Todas las herramientas que mantienen tu racha a la vista. Sin cobros durante %lld día."
+                  "value": "Todas las herramientas mantienen visible tu racha. No se te cobrará durante %1$lld día."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Todas las herramientas que mantienen tu racha a la vista. Sin cobros durante %lld días."
+                  "value": "Todas las herramientas mantienen visible tu racha. No se te cobrará durante %1$lld días."
                 }
               }
             }
@@ -27425,7 +27425,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Todas las herramientas que mantienen tu racha a la vista. Hoy no se cobra nada."
+            "value": "Todas las herramientas mantienen visible tu racha. Hoy no se te cobrará nada."
           }
         },
         "da": {
@@ -27526,7 +27526,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Todo se desbloquea. Acceso completo, pagas %@ ahora."
+            "value": "Todo queda desbloqueado. Acceso completo; pagas %1$@ ahora."
           }
         },
         "da": {
@@ -28132,7 +28132,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Buscar tratamiento"
+            "value": "Busca ayuda"
           }
         },
         "da": {
@@ -28334,7 +28334,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seguir 13 hitos de recuperación de nicotina fuente"
+            "value": "Sigue 13 hitos de recuperación tras dejar la nicotina, con fuentes"
           }
         },
         "da": {
@@ -28536,7 +28536,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prueba gratuita"
+            "value": "Prueba gratis"
           }
         },
         "da": {
@@ -28637,7 +28637,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gratis hasta el %1$@. Activa las notificaciones y te avisaremos antes de que termine el periodo de prueba."
+            "value": "Gratis hasta %1$@. Activa las notificaciones y te avisaremos antes de que termine el periodo de prueba."
           }
         },
         "da": {
@@ -28839,7 +28839,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hay ayuda gratuita y confidencial en cualquier momento. Pedirla es una fortaleza, no un retroceso."
+            "value": "Hay ayuda gratuita y confidencial en cualquier momento. Pedirla demuestra fortaleza, no es un contratiempo."
           }
         },
         "da": {
@@ -28940,7 +28940,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acceso completo al jardín, diario, salud y ahorros durante la prueba."
+            "value": "Acceso completo a tu jardín, diario, cronología de recuperación de salud y ahorros. Gratis hasta que termine el periodo de prueba."
           }
         },
         "da": {
@@ -29041,7 +29041,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cronología de salud completa"
+            "value": "Cronología completa de recuperación de salud"
           }
         },
         "da": {
@@ -29142,7 +29142,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elementos del jardín"
+            "value": "Funciones del jardín"
           }
         },
         "da": {
@@ -29243,7 +29243,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Información general sobre bienestar, no es consejo médico. Los plazos varían de una persona a otra. Para dudas médicas, consulta a un profesional sanitario."
+            "value": "Información general sobre bienestar, no es consejo médico. Los plazos varían según la persona. Si tienes dudas sobre tu salud, consulta con un profesional de la salud."
           }
         },
         "da": {
@@ -29344,7 +29344,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Empieza."
+            "value": "Empezar"
           }
         },
         "da": {
@@ -29546,7 +29546,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un minuto más"
+            "value": "Dame un minuto más"
           }
         },
         "da": {
@@ -29647,7 +29647,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vuelve."
+            "value": "Volver"
           }
         },
         "da": {
@@ -30152,7 +30152,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se recuperan las encías y el tejido bucal."
+            "value": "Las encías y el tejido bucal se recuperan."
           }
         },
         "da": {
@@ -30253,7 +30253,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Las encías empiezan a sanar"
+            "value": "Las encías empiezan a recuperarse"
           }
         },
         "da": {
@@ -30455,7 +30455,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Más difícil entre las %1$@ y las %2$@"
+            "value": "Más difícil entre %1$@ y %2$@"
           }
         },
         "da": {
@@ -31566,7 +31566,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cuánto tiempo has estado libre de nicotina."
+            "value": "Cuánto tiempo llevas sin nicotina."
           }
         },
         "da": {
@@ -31869,7 +31869,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Me comprometo a mejorar"
+            "value": "Me comprometo a mejorar."
           }
         },
         "da": {
@@ -32071,7 +32071,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuve un desliz"
+            "value": "Tuve un desliz."
           }
         },
         "da": {
@@ -32273,7 +32273,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tengo ganas de nicotina."
+            "value": "Tengo ansias de nicotina."
           }
         },
         "da": {
@@ -32374,7 +32374,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ya lo superé"
+            "value": "Ya pasó"
           }
         },
         "da": {
@@ -32576,7 +32576,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Si hoy está libre de nicotina, regístrelo y regala su jardín."
+            "value": "Si hoy no consumes nicotina, registra el día y riega tu jardín."
           }
         },
         "da": {
@@ -32879,7 +32879,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intensidad %lld de 5"
+            "value": "Intensidad: %1$lld de 5"
           }
         },
         "da": {
@@ -33182,7 +33182,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ya es más pequeño que hace un minuto, aunque no parezca haber terminado."
+            "value": "Las ansias ya son menos intensas que hace un minuto, aunque no parezca que hayan terminado."
           }
         },
         "da": {
@@ -33283,7 +33283,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Está bien. Un desliz forma parte de muchos caminos, y registrarlo mantiene honesto el resto de tu historial."
+            "value": "Está bien. Un desliz forma parte de muchos caminos. Registrarlo ayuda a que el resto de tu historial sea fiel a lo ocurrido."
           }
         },
         "da": {
@@ -33586,7 +33586,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diario privado a través de los días difíciles"
+            "value": "Escribe en privado en tu diario durante los días difíciles"
           }
         },
         "da": {
@@ -33788,7 +33788,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Seguir con la versión gratis?"
+            "value": "¿Te quedas con la versión gratis?"
           }
         },
         "da": {
@@ -33889,7 +33889,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Conserva tu jardín, tu diario y tus ahorros, o cancela antes de la renovación."
+            "value": "Conserva tu jardín, diario y ahorros, o cancela cuando quieras antes de la renovación."
           }
         },
         "da": {
@@ -34596,7 +34596,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime: %1$@"
+            "value": "De por vida: %1$@"
           }
         },
         "da": {
@@ -34798,7 +34798,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cargando planes…"
+            "value": "Cargando suscripciones…"
           }
         },
         "da": {
@@ -34899,7 +34899,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloqueado. Toca para saber más de Bloom+"
+            "value": "Bloqueado. Toca la fila para saber más sobre Bloom+."
           }
         },
         "da": {
@@ -35000,7 +35000,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrar un desliz"
+            "value": "Registra un desliz"
           }
         },
         "da": {
@@ -35202,7 +35202,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lograr como libre de nicotina"
+            "value": "Registrar como día sin nicotina"
           }
         },
         "da": {
@@ -35303,7 +35303,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrarlo y seguir"
+            "value": "Regístralo y sigue adelante"
           }
         },
         "da": {
@@ -35404,7 +35404,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrar"
+            "value": "Registrar desliz"
           }
         },
         "da": {
@@ -35505,7 +35505,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra hoy y riega tu jardín. Tú puedes."
+            "value": "Registra el día y riega tu jardín. Tú puedes."
           }
         },
         "da": {
@@ -35606,7 +35606,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra hoy un día sin nicotina y riega tu bonsái."
+            "value": "Registra hoy como un día sin nicotina y riega tu bonsái."
           }
         },
         "da": {
@@ -35808,7 +35808,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin nicotina apilada"
+            "value": "Día sin nicotina registrado"
           }
         },
         "da": {
@@ -36919,7 +36919,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seguimiento de bolsas de dinero"
+            "value": "Seguimiento de dinero y bolsitas de nicotina"
           }
         },
         "da": {
@@ -37626,7 +37626,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "La mayoría de los deseos registrados se concentran en este tramo: %1$lld de %2$lld."
+            "value": "La mayoría de las ansias de nicotina registradas ocurre en este intervalo: %1$lld de %2$lld."
           }
         },
         "da": {
@@ -38232,7 +38232,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nombra una situación donde solía llegar a una bolsa."
+            "value": "Piensa en una situación en la que antes buscabas una bolsita de nicotina. ¿Cómo la afrontaste?"
           }
         },
         "da": {
@@ -39444,7 +39444,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "La nicotina nunca absorbe"
+            "value": "Nicotina no absorbida"
           }
         },
         "da": {
@@ -39545,7 +39545,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Libre de nicotina desde"
+            "value": "Sin nicotina desde"
           }
         },
         "da": {
@@ -40151,7 +40151,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin pago ahora · Apple avisa antes del cobro · Datos en el dispositivo"
+            "value": "Sin pago ahora · Apple te avisa antes del cobro · Los datos se quedan en el dispositivo"
           }
         },
         "da": {
@@ -40347,7 +40347,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No ahorrado"
+            "value": "No guardado"
           }
         },
         "da": {
@@ -40448,7 +40448,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ahorrado en bolsitas"
+            "value": "No gastado en bolsitas de nicotina"
           }
         },
         "da": {
@@ -40549,7 +40549,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No sé"
+            "value": "No lo sé"
           }
         },
         "da": {
@@ -40650,7 +40650,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aún no sé. Cerrar sesión"
+            "value": "Aún no estoy seguro. Cerrar sesión"
           }
         },
         "da": {
@@ -40852,7 +40852,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aún no hay datos"
+            "value": "Aún no hay patrones"
           }
         },
         "da": {
@@ -40953,7 +40953,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Obsérvalo sin discutir con él. No intentas ganar, solo esperas a que pase."
+            "value": "Nota las ansias sin discutir con ellas. No se trata de ganar, sino de esperar a que pasen."
           }
         },
         "da": {
@@ -41054,7 +41054,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Las notificaciones se apagan para Quit Zyn, por lo que el recordatorio no se puede enviar. Pulse arriba para habilitarlos en la aplicación Ajustes."
+            "value": "Las notificaciones de Quit Zyn están desactivadas, así que no recibirás el recordatorio. Toca arriba para activarlas en Ajustes."
           }
         },
         "da": {
@@ -41357,7 +41357,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vas camino de ahorrar"
+            "value": "Proyección de ahorro"
           }
         },
         "da": {
@@ -41660,7 +41660,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se recupera la salud bucal"
+            "value": "La salud bucal se recupera"
           }
         },
         "da": {
@@ -41963,7 +41963,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los planes no están disponibles por ahora. Inténtalo de nuevo en un momento."
+            "value": "Las suscripciones no están disponibles temporalmente. Inténtalo de nuevo en un momento."
           }
         },
         "da": {
@@ -42064,7 +42064,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Además, no usarás %1$@ bolsitas de nicotina. Tu cuerpo no tendrá que procesar esa nicotina."
+            "value": "Además, evitarás %1$@ bolsitas de nicotina. Tu cuerpo no tendrá que procesar esa nicotina."
           }
         },
         "da": {
@@ -42266,7 +42266,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bolsas de nicotina evitadas"
+            "value": "Bolsitas evitadas"
           }
         },
         "da": {
@@ -43074,7 +43074,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proyecta los %@ que ahorrarías el próximo año"
+            "value": "Proyecta cuánto %1$@ podrías conservar durante el próximo año"
           }
         },
         "da": {
@@ -43175,7 +43175,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proyecta el año que viene, no solo los días pasados"
+            "value": "Proyecta el año que viene, no solo los días que ya pasaron"
           }
         },
         "da": {
@@ -43680,7 +43680,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deja tu contador y tu árbol como estaban antes de este desliz."
+            "value": "Devuelve tu contador y tu árbol al estado anterior al desliz."
           }
         },
         "da": {
@@ -44084,7 +44084,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tasa Quit Zyn"
+            "value": "Valora Quit Zyn"
           }
         },
         "da": {
@@ -44296,13 +44296,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra %1$lld deseo más para descubrir más sobre tus patrones."
+                  "value": "Registra %1$lld ansia más para descubrir mejor tus patrones."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra %1$lld deseos más para descubrir más sobre tus patrones."
+                  "value": "Registra %1$lld ansias más para descubrir mejor tus patrones."
                 }
               }
             }
@@ -44649,13 +44649,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra %1$lld deseo más para empezar a ver tus patrones."
+                  "value": "Registra %1$lld ansia más para empezar a ver tus patrones."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra %1$lld deseos más para empezar a ver tus patrones."
+                  "value": "Registra %1$lld ansias más para empezar a ver tus patrones."
                 }
               }
             }
@@ -44891,7 +44891,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra un deseo más para descubrir más sobre tus patrones."
+            "value": "Registra un ansia más para descubrir mejor tus patrones."
           }
         },
         "da": {
@@ -44992,7 +44992,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra un deseo más para empezar a ver tus patrones."
+            "value": "Registra un ansia más para empezar a ver tus patrones."
           }
         },
         "da": {
@@ -45093,7 +45093,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "La recuperación comienza con una decisión. Esto es suyo, para hoy y los días que siguen."
+            "value": "La recuperación empieza con una decisión. Hoy tomaste la tuya, y puedes renovarla cada día que venga."
           }
         },
         "da": {
@@ -45295,7 +45295,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Refinado y denso. Obra de verdadera paciencia."
+            "value": "Refinado y frondoso. El resultado de mucha paciencia."
           }
         },
         "da": {
@@ -45396,7 +45396,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etapa modificada"
+            "value": "Etapa de refinamiento"
           }
         },
         "da": {
@@ -45497,7 +45497,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Antes del cobro"
+            "value": "Aviso antes del cobro"
           }
         },
         "da": {
@@ -45598,7 +45598,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tiempo de recordatorio"
+            "value": "Hora del recordatorio"
           }
         },
         "da": {
@@ -45699,7 +45699,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los recordatorios giran en torno a tu compromiso."
+            "value": "Los recordatorios se basan en tu compromiso."
           }
         },
         "da": {
@@ -45800,7 +45800,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los recordatorios son neutros y sin presión."
+            "value": "Los recordatorios son neutrales y no te presionan."
           }
         },
         "da": {
@@ -45901,7 +45901,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se renueva automáticamente. Cancela al menos 24 horas antes del fin del periodo. Gestiona en Ajustes › Apple ID › Suscripciones."
+            "value": "Se renueva automáticamente. Cancela al menos 24 horas antes de que termine el periodo actual. Gestiona la suscripción en Ajustes › Apple ID › Suscripciones."
           }
         },
         "da": {
@@ -46204,7 +46204,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Reiniciar su contador?"
+            "value": "¿Reiniciar el contador?"
           }
         },
         "da": {
@@ -46608,7 +46608,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Superados: %1$lld de %2$lld"
+            "value": "Superadas: %1$lld de %2$lld"
           }
         },
         "da": {
@@ -46709,7 +46709,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Respira con calma unos minutos."
+            "value": "Espera a que pase mientras respiras con calma unos minutos"
           }
         },
         "da": {
@@ -47113,7 +47113,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "AHORRA %lld %%"
+            "value": "AHORRA %1$lld%%"
           }
         },
         "da": {
@@ -47846,7 +47846,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ver todos los planes"
+            "value": "Ver todas las suscripciones"
           }
         },
         "da": {
@@ -47947,7 +47947,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ver todo el progreso"
+            "value": "Ver todo tu progreso"
           }
         },
         "da": {
@@ -48048,7 +48048,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mira lo que vuelve."
+            "value": "Mira lo que se está recuperando."
           }
         },
         "da": {
@@ -48149,7 +48149,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vea cuando su golpe %1$@, lo que los pone, y cuánto tiempo el suyo realmente dura, más el resto de Bloom+."
+            "value": "Mira cuándo aparecen tus %1$@, qué las provoca y cuánto duran, además del resto de Bloom+."
           }
         },
         "da": {
@@ -48553,7 +48553,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etapa de siembra"
+            "value": "Etapa de plántula"
           }
         },
         "da": {
@@ -49058,7 +49058,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoy también"
+            "value": "Hoy estás aquí"
           }
         },
         "da": {
@@ -51381,7 +51381,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nueva etapa: %1$@ → %2$@"
+            "value": "Avance de etapa: %1$@ → %2$@"
           }
         },
         "da": {
@@ -51482,7 +51482,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inicio"
+            "value": "Empezar"
           }
         },
         "da": {
@@ -52842,13 +52842,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld día"
+                  "value": "Empieza mi prueba gratis de %1$lld día"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld días"
+                  "value": "Empieza mi prueba gratis de %1$lld días"
                 }
               }
             }
@@ -53084,7 +53084,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Empezar prueba gratis"
+            "value": "Empieza mi prueba gratis"
           }
         },
         "da": {
@@ -53284,13 +53284,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld día"
+                  "value": "Empieza mi prueba gratis de %1$lld día"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prueba gratis durante %1$lld días"
+                  "value": "Empieza mi prueba gratis de %1$lld días"
                 }
               }
             }
@@ -53526,7 +53526,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Empezar prueba gratis"
+            "value": "Empieza mi prueba gratis"
           }
         },
         "da": {
@@ -53823,7 +53823,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aún sin nicotina"
+            "value": "Sigues sin nicotina"
           }
         },
         "da": {
@@ -53924,7 +53924,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Streak cuenta tu carrera actual. Lifetime cuenta cada día libre de nicotina que hayas registrado, así que el progreso pasado no se pierde en un reset."
+            "value": "La racha cuenta tu periodo actual. El total de por vida suma cada día sin nicotina que has registrado, así que no pierdes tu progreso anterior al reiniciar el contador."
           }
         },
         "da": {
@@ -54732,7 +54732,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambia cuando quieras. Tus días y tu crecimiento pasan al árbol que elijas."
+            "value": "Cambia cuando quieras. Tu cuenta de días y el crecimiento se mantienen con el árbol que elijas."
           }
         },
         "da": {
@@ -54833,7 +54833,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambiar especie de bonsái, ahora %@"
+            "value": "Cambia de especie de bonsái. Actual: %1$@"
           }
         },
         "da": {
@@ -54934,7 +54934,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambia tu árbol mientras crece tu racha."
+            "value": "Cambia de árbol mientras crece tu racha."
           }
         },
         "da": {
@@ -55540,7 +55540,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eso es sobre %1$@ / day"
+            "value": "Eso equivale a %1$@ al día"
           }
         },
         "da": {
@@ -55641,7 +55641,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El estilo cascada imita un árbol que crece en un acantilado y cae hacia abajo."
+            "value": "El estilo en cascada imita un árbol que crece en un acantilado y cae hacia abajo."
           }
         },
         "da": {
@@ -55843,7 +55843,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "La semilla se está asentando. Tu camino empieza aquí."
+            "value": "La semilla empieza a echar raíces. Tu camino comienza aquí."
           }
         },
         "da": {
@@ -55944,7 +55944,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Esto está cerca de la cima. Estos %1$@ escalan rápido y luego dejan de escalar."
+            "value": "Estás cerca del punto máximo. Las %1$@ aumentan rápido y luego dejan de subir."
           }
         },
         "da": {
@@ -56499,7 +56499,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tres meses firme."
+            "value": "Tres meses de constancia."
           }
         },
         "da": {
@@ -56903,7 +56903,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cansancio"
+            "value": "Cansado"
           }
         },
         "da": {
@@ -57105,7 +57105,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Anotado hoy"
+            "value": "Día registrado"
           }
         },
         "da": {
@@ -57206,7 +57206,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hoy está registrado como desliz"
+            "value": "Día registrado como desliz"
           }
         },
         "da": {
@@ -57509,7 +57509,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rastrea cada dólar y bolsa que evite, más el resto de Bloom+."
+            "value": "Lleva la cuenta del dinero que ahorras y de las bolsitas de nicotina que evitas, además del resto de Bloom+."
           }
         },
         "da": {
@@ -57610,7 +57610,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sigue tus días sin nicotina, cultiva tu jardín y observa cómo recuperas tu salud."
+            "value": "Sigue tus días sin nicotina, cultiva tu jardín y observa cómo se recupera tu salud."
           }
         },
         "da": {
@@ -58014,7 +58014,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reintentar"
+            "value": "Inténtalo de nuevo"
           }
         },
         "da": {
@@ -58317,7 +58317,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dos preguntas rápidas mientras está reciente. Ambas opcionales."
+            "value": "Dos preguntas rápidas mientras lo tienes presente. Ambas son opcionales."
           }
         },
         "da": {
@@ -58731,13 +58731,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Desbloquear %lld árbol"
+                  "value": "Desbloquea %1$lld árbol"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Desbloquear %lld árboles"
+                  "value": "Desbloquea %1$lld árboles"
                 }
               }
             }
@@ -59280,13 +59280,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Desbloquea los %lld árboles"
+                  "value": "Desbloquea %1$lld árbol"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Desbloquea los %lld árboles"
+                  "value": "Desbloquea %1$lld árboles"
                 }
               }
             }
@@ -59718,7 +59718,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Desbloquea la cronología completa de recuperación con 13 hitos, además del resto de Bloom+."
+            "value": "Desbloquea la cronología completa de recuperación de salud, con 13 hitos, además del resto de Bloom+."
           }
         },
         "da": {
@@ -59920,7 +59920,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Desbloquea lo que viene con Bloom+"
+            "value": "Descubre todo lo que ofrece Bloom+"
           }
         },
         "da": {
@@ -60122,7 +60122,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hasta %@/año"
+            "value": "Hasta %1$@ al año"
           }
         },
         "da": {
@@ -60223,7 +60223,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+"
+            "value": "Mejorar"
           }
         },
         "da": {
@@ -60318,7 +60318,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sirve para calcular cuánto dinero y cuántas bolsitas ahorras, y cuánta nicotina evitas mientras sigues sin consumirla."
+            "value": "Se usa para calcular cuánto dinero y cuántas bolsitas de nicotina ahorras, y cuánta nicotina evitas al mantenerte sin nicotina."
           }
         },
         "da": {
@@ -60419,7 +60419,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cuidado con tus ahorros."
+            "value": "Mira cómo crecen tus ahorros."
           }
         },
         "da": {
@@ -60631,13 +60631,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Hola de nuevo. Llevas %lld día sin registrarte. ¿Sigues firme?"
+                  "value": "Hola de nuevo. Llevas %1$lld día sin registrar tu día. ¿Sigues firme?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Hola de nuevo. Llevas %lld días sin registrarte. ¿Sigues firme?"
+                  "value": "Hola de nuevo. Llevas %1$lld días sin registrar tu día. ¿Sigues firme?"
                 }
               }
             }
@@ -60873,7 +60873,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Qué me ilusiona esta semana?"
+            "value": "¿Qué espero con ganas esta semana?"
           }
         },
         "da": {
@@ -61580,7 +61580,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Cuánto me costaría de verdad un «reinicio», en días y en dinero?"
+            "value": "¿Cuánto me costaría realmente reiniciar el contador, en días y dinero?"
           }
         },
         "da": {
@@ -61984,7 +61984,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Qué hábito sano quiero crear ahora?"
+            "value": "¿Qué hábito saludable quiero crear ahora?"
           }
         },
         "da": {
@@ -62388,7 +62388,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cuando golpearon y lo que los desató."
+            "value": "Cuándo aparecen las ansias y qué las provoca."
           }
         },
         "da": {
@@ -62489,7 +62489,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cuando tu golpe %1$@ y lo que los libera"
+            "value": "Cuándo aparecen tus %1$@ y qué las provoca"
           }
         },
         "da": {
@@ -62691,7 +62691,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Dónde noto que se esconden los antojos?"
+            "value": "¿Dónde noto que se esconden las ansias de nicotina?"
           }
         },
         "da": {
@@ -63095,7 +63095,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Te avisaremos antes de que termine la prueba si tienes las notificaciones activadas."
+            "value": "Si activas las notificaciones, te avisaremos antes de que termine el periodo de prueba."
           }
         },
         "da": {
@@ -63196,7 +63196,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "A las pocas horas de tu última bolsita de nicotina, baja el pico de nicotina. El pulso y la presión arterial empiezan a acercarse a sus valores habituales."
+            "value": "Unas horas después de tu última bolsita, disminuye el pico de nicotina. El pulso y la presión arterial empiezan a acercarse a sus valores habituales."
           }
         },
         "da": {
@@ -63600,7 +63600,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Escribe lo que sientes cuando aparece el deseo."
+            "value": "Escribe sobre las ansias cuando aparezcan."
           }
         },
         "da": {
@@ -63695,7 +63695,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "AHORRADO HASTA AHORA"
+            "value": "HAS AHORRADO HASTA AHORA"
           }
         },
         "da": {
@@ -63796,7 +63796,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "TU DINERO, A SALVO"
+            "value": "EL DINERO QUE CONSERVAS"
           }
         },
         "da": {
@@ -64099,7 +64099,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Año %1$lld  %2$lld"
+            "value": "Año %1$lld · %2$lld"
           }
         },
         "da": {
@@ -64402,7 +64402,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ahora no tienes que hacer nada más. Solo quédate aquí y respira."
+            "value": "No tienes que hacer nada más ahora. Quédate aquí y respira."
           }
         },
         "da": {
@@ -64503,7 +64503,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ahorras"
+            "value": "Conservas"
           }
         },
         "da": {
@@ -64760,7 +64760,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cada año te quedan %1$@ en vez de gastarlos en %2$@. Prueba Bloom+ gratis durante %#@n@."
+            "value": "Cada año conservas %1$@ en vez de gastarlo en %2$@. Prueba Bloom+ gratis durante %#@n@."
           },
           "substitutions": {
             "n": {
@@ -65307,13 +65307,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Has superado %1$lld deseo."
+                  "value": "Has superado %1$lld ansia."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Has superado %1$lld deseos."
+                  "value": "Has superado %1$lld ansias."
                 }
               }
             }
@@ -65549,7 +65549,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Has superado un deseo."
+            "value": "Has superado un ansia."
           }
         },
         "da": {
@@ -65650,7 +65650,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Te quedaste con él para %1$@."
+            "value": "Aguantaste las ansias durante %1$@."
           }
         },
         "da": {
@@ -65751,7 +65751,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usted mantendrá el contador de día, el calendario, el modo de ansia, y su árbol. Su proyección de año a cabeza, el cronograma completo de salud, la revista, y la otra especie permanecen cerradas."
+            "value": "Conservarás el contador de días, el calendario, la ayuda para las ansias de nicotina y tu árbol. La proyección anual, la cronología completa de recuperación de salud, el diario y las demás especies seguirán bloqueados."
           }
         },
         "da": {
@@ -65963,13 +65963,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Llevas %lld día. Registra hoy y riega tu bonsái."
+                  "value": "Llevas %1$lld día. Registra el día de hoy y riega tu bonsái."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Llevas %lld días. Registra hoy y riega tu bonsái."
+                  "value": "Llevas %1$lld días. Registra el día de hoy y riega tu bonsái."
                 }
               }
             }
@@ -66906,7 +66906,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu bonsái ha madurado con una copa frondosa."
+            "value": "Tu bonsái ha madurado y tiene una copa llena de hojas."
           }
         },
         "da": {
@@ -67007,7 +67007,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu bonsái se está convirtiendo en un árbol joven."
+            "value": "Tu bonsái está creciendo y tomando la forma de un árbol joven."
           }
         },
         "da": {
@@ -67108,7 +67108,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El día con más deseos es el %1$@."
+            "value": "El día con más ansias de nicotina es el %1$@."
           }
         },
         "da": {
@@ -67209,7 +67209,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu contador se reinicia tras el desliz. Un desliz hoy empieza en el día 1; si fue antes, se cuentan los días desde entonces. Tu mejor racha refleja las fechas corregidas."
+            "value": "El contador se reinicia tras un desliz. Un desliz de hoy te lleva al día 1; si fue anterior, se cuentan los días desde entonces. Tu racha más larga refleja las fechas corregidas."
           }
         },
         "da": {
@@ -67522,13 +67522,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "El contador vuelve a empezar. Tu árbol conservó %1$lld día de crecimiento."
+                  "value": "El contador vuelve a empezar. Tu árbol conserva %1$lld día de crecimiento."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "El contador vuelve a empezar. Tu árbol conservó %1$lld días de crecimiento."
+                  "value": "El contador vuelve a empezar. Tu árbol conserva %1$lld días de crecimiento."
                 }
               }
             }
@@ -67764,7 +67764,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El deseo suele pasar en alrededor de %1$@."
+            "value": "Las ansias de nicotina suelen pasar en unos %1$@."
           }
         },
         "da": {
@@ -67966,7 +67966,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu contador de días se reinicia tras el desliz. Tu árbol conserva parte de su crecimiento, y tu historial y los árboles completados se quedan. Tu mejor racha refleja las fechas corregidas."
+            "value": "El contador de días se reinicia tras un desliz. Tu árbol conserva parte de su crecimiento, al igual que el historial del calendario y los árboles completados. Tu racha más larga refleja las fechas corregidas."
           }
         },
         "da": {
@@ -68067,7 +68067,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu contador volverá a cero. Tu historial se conserva."
+            "value": "El contador de días vuelve a cero. Tu historial se conserva."
           }
         },
         "da": {
@@ -68168,7 +68168,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El contador de días, el apoyo ante el ansia, el widget y la app para Apple Watch siempre serán gratis."
+            "value": "El contador de días, la ayuda para las ansias de nicotina, el widget y la app para Apple Watch siempre serán gratis."
           }
         },
         "da": {
@@ -68370,7 +68370,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu primer brote ha roto la tierra."
+            "value": "Tu primer brote ha salido de la tierra."
           }
         },
         "da": {
@@ -68471,7 +68471,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu jardín, diario, cronología de salud y ahorros. Todo lo que te ayuda a seguir sin nicotina."
+            "value": "Tu jardín, diario, cronología de recuperación de salud y ahorros. Todo lo que te ayuda a seguir sin nicotina."
           }
         },
         "da": {
@@ -68572,7 +68572,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu último cambio no se pudo guardar en este dispositivo, así que puede faltar al cerrar la app. Suele pasar cuando el almacenamiento está lleno. Libera algo de espacio, revísalo e inténtalo de nuevo."
+            "value": "No se pudo guardar tu último cambio en este dispositivo, así que podría faltar al cerrar la app. Suele ocurrir cuando el almacenamiento está lleno. Libera espacio, comprueba el cambio e inténtalo de nuevo."
           }
         },
         "da": {
@@ -68774,7 +68774,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "En los dos días previos a un desliz, tu ánimo fue más bajo que en los demás días registrados. Puede ser útil detectar este patrón pronto."
+            "value": "Tu ánimo fue más bajo en los dos días previos a un desliz que en otros días registrados. Quizá te ayude detectar pronto este patrón."
           }
         },
         "da": {
@@ -68869,7 +68869,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tus días sin nicotina han dado fruto. Destina parte de tus ahorros a herramientas que te ayuden a seguir."
+            "value": "Tus días sin nicotina se han acumulado. Usa parte de tus ahorros para herramientas que apoyen tu progreso."
           }
         },
         "da": {
@@ -68970,7 +68970,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tus rachas anteriores se quedan en tu historial"
+            "value": "Tus rachas anteriores siguen en tu historial"
           }
         },
         "da": {
@@ -69374,7 +69374,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Su compra está esperando la aprobación. Bloom+ se desbloquea por su cuenta una vez que esté confirmado, y puede seguir utilizando la versión gratuita mientras tanto."
+            "value": "Tu compra está pendiente de aprobación. Bloom+ se desbloqueará automáticamente cuando se confirme. Mientras tanto, puedes seguir usando la versión gratis."
           }
         },
         "da": {
@@ -70040,13 +70040,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tu árbol conservó %1$lld día de crecimiento. Ahora empieza el día uno."
+                  "value": "Tu árbol conservó %1$lld día de crecimiento. Hoy empieza el primer día."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tu árbol conservó %1$lld días de crecimiento. Ahora empieza el día uno."
+                  "value": "Tu árbol conservó %1$lld días de crecimiento. Hoy empieza el primer día."
                 }
               }
             }
@@ -70282,7 +70282,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Su costumbre puede"
+            "value": "Tu lata habitual"
           }
         },
         "da": {
@@ -70383,7 +70383,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un minuto."
+            "value": "un minuto"
           }
         },
         "da": {
@@ -70686,7 +70686,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "a las %@"
+            "value": "a las %1$@"
           }
         },
         "da": {
@@ -70787,7 +70787,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "ansia"
+            "value": "ansia de nicotina"
           }
         },
         "da": {
@@ -70888,7 +70888,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "ansias"
+            "value": "ansias de nicotina"
           }
         },
         "da": {
@@ -71090,7 +71090,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "encontrar tratamiento.gov"
+            "value": "findtreatment.gov"
           }
         },
         "da": {
@@ -71191,7 +71191,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Todas las funciones"
+            "value": "Acceso completo a Bloom+"
           }
         },
         "da": {
@@ -71504,13 +71504,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "en %lld día"
+                  "value": "dentro de %1$lld día"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "en %lld días"
+                  "value": "dentro de %1$lld días"
                 }
               }
             }
@@ -72043,7 +72043,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bolsitas al día"
+            "value": "bolsitas de nicotina al día"
           }
         },
         "da": {
@@ -72144,7 +72144,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ansia superada"
+            "value": "ansia de nicotina superada"
           }
         },
         "da": {
@@ -72245,7 +72245,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ansias superadas"
+            "value": "ansias de nicotina superadas"
           }
         },
         "da": {
@@ -72447,7 +72447,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu jardín crece. Registra el día si hoy estás sin nicotina."
+            "value": "Tu jardín crece. Registra el día de hoy si no consumes nicotina."
           }
         },
         "da": {
