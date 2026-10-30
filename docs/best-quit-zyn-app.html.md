@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html
 
 ## Best Quit Zyn App for iPhone
 
-By Jack Wallner · Last updated October 28, 2026
+By Jack Wallner · Last updated October 29, 2026
 
 **Best for tapering down pouch by pouch: Pace or Pouch Buddy. Best for a plain cold-turkey day counter with no account: Quit Zyn. Best if you want a quit coach and community and do not mind a vaping focus: Quit Vaping.** A quit Zyn app is an iPhone app that tracks your nicotine pouches, days without one and money saved. Pouched is a quiz-led plan with per-pouch logging. The main choice is whether you want to cut back gradually or stop completely and count the days.
 
@@ -96,7 +96,7 @@ Not entirely. Jack Wallner makes Quit Zyn. Competitor entries use their public A
 
 For pouches, Pace and Pouch Buddy suit tapering and Quit Zyn suits stopping completely, while Quit Vaping is the most established app in this set, with a coach and community, though it is written for vaping. No app treats nicotine dependence, and free support is available through 1-800-QUIT-NOW and Smokefree.gov.
 
-Related: [How to Quit Zyn: Withdrawal Timeline and What to Expect](https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html).
+Related: [How to Quit Zyn: Withdrawal Timeline and What to Expect](https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html), [App that counts days since you quit Zyn](https://jackwallner.com/ios/quitzyn/app-to-count-days-since-quitting-zyn.html), [Free quit pouches app with no account](https://jackwallner.com/ios/quitzyn/free-quit-nicotine-pouches-app-no-account.html), [Zyn craving app with guided breathing](https://jackwallner.com/ios/quitzyn/zyn-craving-breathing-app.html), [Quit pouches app where a slip keeps your progress](https://jackwallner.com/ios/quitzyn/quit-pouches-app-slip.html).
 
 ## Sources
 
