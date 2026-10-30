@@ -3056,25 +3056,25 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ odpowiada mniej więcej kosztowi saszetek nikotynowych na %#@n@."
+                      "value": "%arg dzień"
                     }
                   },
                   "few": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ odpowiada mniej więcej kosztowi saszetek nikotynowych na %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "many": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ odpowiada mniej więcej kosztowi saszetek nikotynowych na %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ odpowiada mniej więcej kosztowi saszetek nikotynowych na %#@n@."
+                      "value": "%arg dnia"
                     }
                   }
                 }
@@ -3096,25 +3096,25 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ zodpovedá približne výdavkom na nikotínové vrecúška za %#@n@."
+                      "value": "%arg deň"
                     }
                   },
                   "few": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ zodpovedá približne výdavkom na nikotínové vrecúška za %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "many": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ zodpovedá približne výdavkom na nikotínové vrecúška za %#@n@."
+                      "value": "%arg dní"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Cena %1$@ zodpovedá približne výdavkom na nikotínové vrecúška za %#@n@."
+                      "value": "%arg dňa"
                     }
                   }
                 }
@@ -3136,13 +3136,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %#@n@."
+                      "value": "%arg dag"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %#@n@."
+                      "value": "%arg dager"
                     }
                   }
                 }
@@ -64827,25 +64827,25 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Każdego roku zostaje ci %1$@ zamiast pieniędzy wydanych na %2$@. Wypróbuj Bloom+ za darmo przez %#@n@."
+                      "value": "%arg dzień"
                     }
                   },
                   "few": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Każdego roku zostaje ci %1$@ zamiast pieniędzy wydanych na %2$@. Wypróbuj Bloom+ za darmo przez %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "many": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Każdego roku zostaje ci %1$@ zamiast pieniędzy wydanych na %2$@. Wypróbuj Bloom+ za darmo przez %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Każdego roku zostaje ci %1$@ zamiast pieniędzy wydanych na %2$@. Wypróbuj Bloom+ za darmo przez %#@n@."
+                      "value": "%arg dnia"
                     }
                   }
                 }
@@ -64867,25 +64867,25 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Každý rok ti zostane %1$@, ktoré neutratíš za %2$@. Vyskúšaj Bloom+ zadarmo na %#@n@."
+                      "value": "%arg deň"
                     }
                   },
                   "few": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Každý rok ti zostane %1$@, ktoré neutratíš za %2$@. Vyskúšaj Bloom+ zadarmo na %#@n@."
+                      "value": "%arg dni"
                     }
                   },
                   "many": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Každý rok ti zostane %1$@, ktoré neutratíš za %2$@. Vyskúšaj Bloom+ zadarmo na %#@n@."
+                      "value": "%arg dní"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Každý rok ti zostane %1$@, ktoré neutratíš za %2$@. Vyskúšaj Bloom+ zadarmo na %#@n@."
+                      "value": "%arg dňa"
                     }
                   }
                 }
@@ -64907,13 +64907,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Du beholder %1$@ hvert år i stedet for å bruke pengene på %2$@. Prøv Bloom+ gratis i %#@n@."
+                      "value": "%arg dag"
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "Du beholder %1$@ hvert år i stedet for å bruke pengene på %2$@. Prøv Bloom+ gratis i %#@n@."
+                      "value": "%arg dager"
                     }
                   }
                 }
