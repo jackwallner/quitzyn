@@ -91,7 +91,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "#%1$@  %2$@"
+            "value": "%1$@ · %2$@"
           }
         },
         "zh-Hans": {
@@ -2180,7 +2180,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / giorno"
+            "value": "%1$@ al giorno"
           }
         },
         "zh-Hans": {
@@ -2281,7 +2281,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / mese"
+            "value": "%1$@ al mese"
           }
         },
         "zh-Hans": {
@@ -2382,7 +2382,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / settimana"
+            "value": "%1$@ a settimana"
           }
         },
         "zh-Hans": {
@@ -2483,7 +2483,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / anno"
+            "value": "%1$@ all’anno"
           }
         },
         "zh-Hans": {
@@ -2584,7 +2584,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ Tieni tutto il giardino o annulla quando vuoi prima del rinnovo."
+            "value": "%1$@ Mantieni il giardino completo o annulla quando vuoi prima del rinnovo."
           }
         },
         "zh-Hans": {
@@ -2685,7 +2685,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ all'anno"
+            "value": "%1$@ all’anno"
           }
         },
         "zh-Hans": {
@@ -2780,7 +2780,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costa più o meno quanto %2$lld giorni e mezzo di bustine di nicotina."
+            "value": "%1$@ costa più o meno quanto le bustine di nicotina per %2$lld giorni e mezzo."
           }
         },
         "zh-Hans": {
@@ -3360,7 +3360,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costa più o meno quanto una giornata e mezza di bustine di nicotina."
+            "value": "%1$@ costa più o meno quanto le bustine di nicotina per una giornata e mezza."
           }
         },
         "zh-Hans": {
@@ -3455,7 +3455,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costa più o meno quanto una giornata di bustine di nicotina."
+            "value": "%1$@ costa più o meno quanto le bustine di nicotina per una giornata."
           }
         },
         "zh-Hans": {
@@ -3550,7 +3550,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ costa meno di una giornata di bustine di nicotina."
+            "value": "%1$@ costa meno delle bustine di nicotina per una giornata."
           }
         },
         "zh-Hans": {
@@ -3853,7 +3853,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eviterai %1$@ bustine di nicotina. Il tuo corpo non dovrà elaborare quella nicotina."
+            "value": "Eviterai %1$@ bustine di nicotina. Il tuo corpo non dovrà metabolizzare quella nicotina."
           }
         },
         "zh-Hans": {
@@ -4055,7 +4055,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@."
+            "value": "%1$@."
           }
         },
         "zh-Hans": {
@@ -4257,7 +4257,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Acquisto una tantum. Accesso a vita, nessun abbonamento."
+            "value": "%1$@. Acquisto una tantum. Accesso a vita, senza abbonamento."
           }
         },
         "zh-Hans": {
@@ -4459,7 +4459,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ risalito finora"
+            "value": "Finora hai superato %1$lld %2$@."
           }
         },
         "zh-Hans": {
@@ -5497,13 +5497,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "giorno"
+                  "value": "%1$lld giorno"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "giorni"
+                  "value": "%1$lld giorni"
                 }
               }
             }
@@ -6550,13 +6550,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld giorno di Bloom+ gratis"
+                  "value": "%1$lld giorno di accesso gratuito a Bloom+"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld giorni di Bloom+ gratis"
+                  "value": "%1$lld giorni di accesso gratuito a Bloom+"
                 }
               }
             }
@@ -7351,7 +7351,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld secondi"
+                  "value": "%1$lld secondo"
                 }
               },
               "other": {
@@ -7704,13 +7704,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld albero cresciuto"
+                  "value": "%1$lld albero cresciuto"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld alberi cresciuti"
+                  "value": "%1$lld alberi cresciuti"
                 }
               }
             }
@@ -8057,13 +8057,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld albero cresciuto nel tuo boschetto"
+                  "value": "Nel tuo boschetto è cresciuto %1$lld albero"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld alberi cresciuti nel tuo boschetto"
+                  "value": "Nel tuo boschetto sono cresciuti %1$lld alberi"
                 }
               }
             }
@@ -8410,13 +8410,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld giorno"
+                  "value": "Prova gratuita di %1$lld giorno"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld giorni"
+                  "value": "Prova gratuita di %1$lld giorni"
                 }
               }
             }
@@ -8763,13 +8763,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorno gratis con i piani mensile e annuale."
+                  "value": "Prova gratuita di %1$lld giorno con gli abbonamenti mensile e annuale."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorni gratis con i piani mensile e annuale."
+                  "value": "Prova gratuita di %1$lld giorni con gli abbonamenti mensile e annuale."
                 }
               }
             }
@@ -9116,13 +9116,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorno gratis con il piano mensile."
+                  "value": "Prova gratuita di %1$lld giorno con l’abbonamento mensile."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorni gratis con il piano mensile."
+                  "value": "Prova gratuita di %1$lld giorni con l’abbonamento mensile."
                 }
               }
             }
@@ -9469,13 +9469,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorno gratis con il piano annuale."
+                  "value": "Prova gratuita di %1$lld giorno con l’abbonamento annuale."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld giorni gratis con il piano annuale."
+                  "value": "Prova gratuita di %1$lld giorni con l’abbonamento annuale."
                 }
               }
             }
@@ -9810,13 +9810,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld giorno, poi %2$@."
+                  "value": "Prova gratuita di %1$lld giorno, poi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld giorni, poi %2$@."
+                  "value": "Prova gratuita di %1$lld giorni, poi %2$@."
                 }
               }
             }
@@ -10163,13 +10163,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld mese"
+                  "value": "Prova gratuita di %1$lld mese"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld mesi"
+                  "value": "Prova gratuita di %1$lld mesi"
                 }
               }
             }
@@ -10504,13 +10504,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld mese, poi %2$@."
+                  "value": "Prova gratuita di %1$lld mese, poi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld mesi, poi %2$@."
+                  "value": "Prova gratuita di %1$lld mesi, poi %2$@."
                 }
               }
             }
@@ -10857,13 +10857,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld anno"
+                  "value": "Prova gratuita di %1$lld anno"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld anni"
+                  "value": "Prova gratuita di %1$lld anni"
                 }
               }
             }
@@ -11198,13 +11198,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld anno, poi %2$@."
+                  "value": "Prova gratuita di %1$lld anno, poi %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis per %1$lld anni, poi %2$@."
+                  "value": "Prova gratuita di %1$lld anni, poi %2$@."
                 }
               }
             }
@@ -11551,13 +11551,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld beneficio"
+                  "value": "/ %1$lld beneficio"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld benefici"
+                  "value": "/ %1$lld benefici"
                 }
               }
             }
@@ -11661,7 +11661,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "0"
+            "value": "0:00"
           }
         },
         "zh-Hans": {
@@ -11762,7 +11762,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "1-800-662-HELP · gratuito, riservato, 24/7"
+            "value": "1-800-662-HELP · gratuito e riservato · 24/7"
           }
         },
         "zh-Hans": {
@@ -11863,7 +11863,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 check-in consecutivi."
+            "value": "100 registrazioni quotidiane consecutive."
           }
         },
         "zh-Hans": {
@@ -11964,7 +11964,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 pietre miliari nicotina-recupero con fonti."
+            "value": "13 traguardi sui cambiamenti dopo aver smesso con la nicotina, con le relative fonti."
           }
         },
         "zh-Hans": {
@@ -12065,7 +12065,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 check-in consecutivi."
+            "value": "30 registrazioni quotidiane consecutive."
           }
         },
         "zh-Hans": {
@@ -12368,7 +12368,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un sakura in fiore avvolto in un rosa delicato. I petali cadono mentre la serie cresce."
+            "value": "Un sakura in fiore, avvolto da una delicata tonalità rosa. I petali cadono mentre la tua serie cresce."
           }
         },
         "zh-Hans": {
@@ -12671,7 +12671,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un acero delicato nei caldi rossi e ori d'autunno. Le foglie a stella cadono man mano che i giorni passano."
+            "value": "Un acero dal fogliame delicato, nei caldi toni autunnali del rosso e dell’oro. Le foglie a stella cadono man mano che i giorni si sommano."
           }
         },
         "zh-Hans": {
@@ -12772,7 +12772,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un bonsai leggendario. Un anno intero di crescita reso visibile."
+            "value": "Un bonsai leggendario. Un anno di crescita reso visibile."
           }
         },
         "zh-Hans": {
@@ -12974,7 +12974,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un seme è piantato. Ogni grande albero inizia qui."
+            "value": "Un seme viene piantato. Ogni grande albero comincia da qui."
           }
         },
         "zh-Hans": {
@@ -13075,7 +13075,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Una piantina sta dritta. Le radici attecchiscono."
+            "value": "Una piantina si erge. Le radici stanno attecchendo."
           }
         },
         "zh-Hans": {
@@ -13176,7 +13176,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uno scivolone si può annullare solo se è il più recente."
+            "value": "Puoi annullare uno scivolone solo finché è l’ultimo registrato."
           }
         },
         "zh-Hans": {
@@ -13277,7 +13277,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un bonsai eretto senza tempo. Simmetrico, equilibrato, sereno."
+            "value": "Un bonsai eretto e senza tempo. Simmetrico, equilibrato, sereno."
           }
         },
         "zh-Hans": {
@@ -13580,7 +13580,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Traguardi ottenuti"
+            "value": "Traguardi raggiunti"
           }
         },
         "zh-Hans": {
@@ -13681,7 +13681,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aggiungi nota"
+            "value": "Aggiungi una nota"
           }
         },
         "zh-Hans": {
@@ -13782,7 +13782,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Modifica la data in cui è iniziato il tuo percorso."
+            "value": "Modifica la data d’inizio del tuo percorso."
           }
         },
         "zh-Hans": {
@@ -13883,7 +13883,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Albero giovane"
+            "value": "Giovane"
           }
         },
         "zh-Hans": {
@@ -13984,7 +13984,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fase adolescente"
+            "value": "Fase giovane"
           }
         },
         "zh-Hans": {
@@ -14186,7 +14186,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La ricerca collega un anno senza nicotina a un rischio cardiovascolare sensibilmente più basso quando si evita il tabacco. Parla della tua salute con un medico."
+            "value": "Dopo un anno senza nicotina, alcune ricerche associano l’assenza di tabacco a un rischio cardiovascolare sensibilmente più basso. Parlane con il medico."
           }
         },
         "zh-Hans": {
@@ -14287,7 +14287,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo diversi mesi senza il ciclo di picchi e cali della nicotina, molte persone notano un livello abituale di stress più basso e riescono a calmarsi più facilmente."
+            "value": "Dopo alcuni mesi senza i picchi e i cali causati dalla nicotina, molte persone notano un livello abituale di stress più basso e riescono a ritrovare la calma più facilmente."
           }
         },
         "zh-Hans": {
@@ -14388,7 +14388,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo due giorni, le terminazioni nervose indebolite dalla nicotina iniziano a riprendersi. Molte persone notano sapori più pieni e odori più intensi."
+            "value": "Dopo due giorni, le terminazioni nervose indebolite dalla nicotina iniziano a ricrescere. Molte persone notano sapori più intensi e odori più distinti."
           }
         },
         "zh-Hans": {
@@ -14489,7 +14489,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutte le 6 specie di bonsai"
+            "value": "Tutte e 6 le specie di bonsai"
           }
         },
         "zh-Hans": {
@@ -15095,7 +15095,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Associazione del cuore americano"
+            "value": "American Heart Association"
           }
         },
         "zh-Hans": {
@@ -15196,7 +15196,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un pino sempreverde con palchi di aghi come nuvole e un tronco nodoso e segnato dal tempo."
+            "value": "Un pino sempreverde, con nuvole di aghi a strati e un tronco nodoso e segnato dal tempo."
           }
         },
         "zh-Hans": {
@@ -15398,7 +15398,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Antico e segnato dal tempo. Quest'albero ne ha viste tante."
+            "value": "Antico e segnato dal tempo. Questo albero ne ha viste tante."
           }
         },
         "zh-Hans": {
@@ -15600,7 +15600,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Risposta: %1$@"
+            "value": "Risposto: %1$@"
           }
         },
         "zh-Hans": {
@@ -15701,7 +15701,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Risposte: %1$@ · In sospeso: %2$@"
+            "value": "Risposto: %1$@ · Lasciato in sospeso: %2$@"
           }
         },
         "zh-Hans": {
@@ -15903,7 +15903,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Qualcosa da ricordare di oggi?"
+            "value": "C’è qualcosa di oggi che vuoi ricordare?"
           }
         },
         "zh-Hans": {
@@ -16004,7 +16004,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple mostrerà i dettagli di fatturazione prima di confermare."
+            "value": "Apple mostrerà i dettagli di fatturazione prima che tu confermi."
           }
         },
         "zh-Hans": {
@@ -16105,7 +16105,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intorno al terzo giorno, l’astinenza fisica tende a raggiungere il picco mentre l’ultima nicotina lascia il corpo. Poi la voglia tende a durare meno ed essere meno intensa."
+            "value": "Intorno al terzo giorno, i sintomi fisici dell’astinenza tendono a raggiungere il picco mentre l’ultima nicotina lascia il corpo. Poi la voglia di nicotina tende a durare meno ed essere meno intensa."
           }
         },
         "zh-Hans": {
@@ -16206,7 +16206,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo circa due settimane senza bustine di nicotina a contatto con le gengive, irritazione e infiammazione in bocca iniziano a diminuire e i tessuti cominciano a guarire."
+            "value": "Dopo circa due settimane senza bustine di nicotina a contatto con le gengive, irritazione e infiammazione in bocca iniziano a diminuire e i tessuti della bocca iniziano a migliorare."
           }
         },
         "zh-Hans": {
@@ -16307,7 +16307,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "MIGLIOR DEGLI"
+            "value": "OFFERTA TOP"
           }
         },
         "zh-Hans": {
@@ -16610,7 +16610,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Si basa sugli impulsi che hai superato, non su una media generale."
+            "value": "Si basa sugli episodi di voglia che hai superato, non su una media generale."
           }
         },
         "zh-Hans": {
@@ -16812,7 +16812,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia il tuo viaggio senza nicotina."
+            "value": "Inizia il tuo percorso senza nicotina."
           }
         },
         "zh-Hans": {
@@ -17014,7 +17014,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Migliorano sonno e concentrazione"
+            "value": "Sonno migliore e più concentrazione"
           }
         },
         "zh-Hans": {
@@ -17317,7 +17317,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aumentano flusso sanguigno ed energia."
+            "value": "Aumentano la circolazione e l’energia."
           }
         },
         "zh-Hans": {
@@ -17822,7 +17822,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I piani Bloom+ sono temporaneamente non disponibili. È possibile riprovare o continuare gratuitamente."
+            "value": "I piani Bloom+ non sono al momento disponibili. Riprova o continua con la versione gratuita."
           }
         },
         "zh-Hans": {
@@ -17923,7 +17923,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ sblocca tutte le specie per cambiare albero quando vuoi. La tua serie cresce con qualunque scelta."
+            "value": "Bloom+ sblocca tutte le specie, così puoi cambiare albero quando vuoi. La tua serie cresce con qualunque specie tu scelga."
           }
         },
         "zh-Hans": {
@@ -18024,7 +18024,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+, gratis da provare"
+            "value": "Bloom+ da provare gratis"
           }
         },
         "zh-Hans": {
@@ -18428,7 +18428,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai, giorno %lld"
+            "value": "Bonsai, giorno %1$lld"
           }
         },
         "zh-Hans": {
@@ -18630,7 +18630,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I rami si allargano. La forma sta emergendo."
+            "value": "I rami si allargano e la forma dell’albero prende contorno."
           }
         },
         "zh-Hans": {
@@ -18933,7 +18933,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo circa un mese, ansia e irritabilità della fase iniziale dell’astinenza di solito si attenuano mentre i segnali della dopamina nel cervello ritrovano equilibrio. Le esperienze variano."
+            "value": "Dopo circa un mese, ansia e irritabilità iniziali di solito si attenuano mentre i segnali della dopamina nel cervello ritrovano equilibrio. Le esperienze variano."
           }
         },
         "zh-Hans": {
@@ -19034,7 +19034,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo circa sei mesi senza bustine di nicotina, diminuisce il rischio di recessione gengivale e lesioni della bocca, mentre i tessuti orali continuano a riprendersi."
+            "value": "Dopo circa sei mesi senza bustine di nicotina, diminuisce il rischio di recessione gengivale e lesioni in bocca. Lo stato dei tessuti orali continua a migliorare."
           }
         },
         "zh-Hans": {
@@ -19135,7 +19135,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo circa due mesi senza i ripetuti picchi di pressione causati dalla nicotina, molte persone hanno pressione e battito a riposo più bassi. Gli effetti variano."
+            "value": "Dopo circa due mesi senza i ripetuti picchi di pressione causati dalla nicotina, molte persone notano valori più bassi di pressione e battito a riposo. Gli effetti variano."
           }
         },
         "zh-Hans": {
@@ -19337,7 +19337,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "In base all’ora del giorno"
+            "value": "Per momento della giornata"
           }
         },
         "zh-Hans": {
@@ -19438,7 +19438,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Chiama o scrivi al 988 · 24/7 · USA"
+            "value": "Chiama o invia un SMS al 988 · 24/7 · USA"
           }
         },
         "zh-Hans": {
@@ -19741,7 +19741,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diminuisce il carico su cuore e vasi."
+            "value": "Diminuisce il carico su cuore e vasi sanguigni."
           }
         },
         "zh-Hans": {
@@ -20044,7 +20044,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambio di nicotina"
+            "value": "Segna come giornata senza nicotina"
           }
         },
         "zh-Hans": {
@@ -20145,7 +20145,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambia in scivolone"
+            "value": "Segna come scivolone"
           }
         },
         "zh-Hans": {
@@ -20246,7 +20246,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fai il check-in di oggi"
+            "value": "Registra la giornata di oggi"
           }
         },
         "zh-Hans": {
@@ -20347,7 +20347,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra un giorno per iniziare la settimana."
+            "value": "Registra una giornata per iniziare la settimana."
           }
         },
         "zh-Hans": {
@@ -20549,7 +20549,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Resoconto giornaliero"
+            "value": "Registrazione quotidiana"
           }
         },
         "zh-Hans": {
@@ -20650,7 +20650,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Check-in fatto"
+            "value": "Registrato"
           }
         },
         "zh-Hans": {
@@ -20751,7 +20751,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verifica del periodo di prova…"
+            "value": "Verifica disponibilità del periodo di prova…"
           }
         },
         "zh-Hans": {
@@ -20953,7 +20953,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Migliora la circolazione"
+            "value": "La circolazione migliora"
           }
         },
         "zh-Hans": {
@@ -21256,7 +21256,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Piante di compagnia"
+            "value": "Piante compagne"
           }
         },
         "zh-Hans": {
@@ -22064,7 +22064,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Costo e utilizzo"
+            "value": "Costi e consumi"
           }
         },
         "zh-Hans": {
@@ -22165,7 +22165,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spesa al giorno"
+            "value": "Costo al giorno"
           }
         },
         "zh-Hans": {
@@ -22367,7 +22367,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Impossibile completare l'acquisto. Riprova."
+            "value": "Impossibile completare l’acquisto. Riprova."
           }
         },
         "zh-Hans": {
@@ -22468,7 +22468,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Impossibile caricare gli abbonamenti. Controlla la connessione e riprova."
+            "value": "Impossibile caricare le opzioni di abbonamento. Controlla la connessione e riprova."
           }
         },
         "zh-Hans": {
@@ -22771,7 +22771,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Conta per il tuo percorso. Check-in non ancora fatto."
+            "value": "Conteggiato nel tuo percorso. Registrazione di oggi non ancora fatta."
           }
         },
         "zh-Hans": {
@@ -22872,7 +22872,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La voglia raggiunge il picco e cala"
+            "value": "La voglia raggiunge il picco e poi cala"
           }
         },
         "zh-Hans": {
@@ -22973,7 +22973,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voglie secondo l’ora del giorno"
+            "value": "Voglie di nicotina per momento della giornata"
           }
         },
         "zh-Hans": {
@@ -23074,7 +23074,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce l'hai fatta"
+            "value": "Ce l’hai fatta!"
           }
         },
         "zh-Hans": {
@@ -23276,7 +23276,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "In crescita ora"
+            "value": "In crescita"
           }
         },
         "zh-Hans": {
@@ -23377,7 +23377,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Personalizza giardino"
+            "value": "Personalizza il giardino"
           }
         },
         "zh-Hans": {
@@ -23579,7 +23579,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Check-in quotidiano"
+            "value": "Registrazione quotidiana"
           }
         },
         "zh-Hans": {
@@ -23680,7 +23680,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Check-in giornaliero per 7 giorni di fila."
+            "value": "Registrazioni quotidiane per 7 giorni di fila."
           }
         },
         "zh-Hans": {
@@ -23882,7 +23882,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spunti di diario ogni giorno, proprio quando servono. E tutto il resto di Bloom+."
+            "value": "Spunti quotidiani per il diario, proprio quando servono, e tutto il resto di Bloom+."
           }
         },
         "zh-Hans": {
@@ -23983,7 +23983,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tempo di promemoria giornaliero"
+            "value": "Ora del promemoria giornaliero"
           }
         },
         "zh-Hans": {
@@ -24286,7 +24286,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giorno %lld"
+            "value": "Giorno %1$lld"
           }
         },
         "zh-Hans": {
@@ -24387,7 +24387,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il giorno %lld ti aspetta"
+            "value": "Ti aspetta il giorno %1$lld"
           }
         },
         "zh-Hans": {
@@ -24892,7 +24892,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elimina voce"
+            "value": "Elimina la voce"
           }
         },
         "zh-Hans": {
@@ -24993,7 +24993,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elimina registrazione"
+            "value": "Elimina la registrazione"
           }
         },
         "zh-Hans": {
@@ -25094,7 +25094,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Descrivi un momento di pace vissuto di recente."
+            "value": "Descrivi un momento di pace che ho vissuto di recente."
           }
         },
         "zh-Hans": {
@@ -25599,7 +25599,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fine"
+            "value": "Fatto"
           }
         },
         "zh-Hans": {
@@ -25902,7 +25902,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Modifica voce"
+            "value": "Modifica la voce"
           }
         },
         "zh-Hans": {
@@ -26003,7 +26003,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "In entrambi i casi va bene, puoi rivisitarlo in qualsiasi momento in Impostazioni."
+            "value": "Va bene in entrambi i casi. Puoi cambiarlo quando vuoi in Impostazioni."
           }
         },
         "zh-Hans": {
@@ -26508,7 +26508,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ogni impulso che hai superato è passato senza ricorrere a una bustina di nicotina."
+            "value": "Ogni voglia di nicotina che hai superato è passata senza usare una bustina."
           }
         },
         "zh-Hans": {
@@ -26609,7 +26609,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ogni dollaro e la busta che eviterai, rintracciato."
+            "value": "Teniamo traccia di ogni dollaro e bustina di nicotina che eviti."
           }
         },
         "zh-Hans": {
@@ -26710,7 +26710,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ogni giorno senza nicotina cresce il tuo albero."
+            "value": "Ogni giorno senza nicotina fa crescere il tuo albero."
           }
         },
         "zh-Hans": {
@@ -26811,7 +26811,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ogni giorno senza nicotina che hai registrato continua a contare."
+            "value": "Ogni giorno senza nicotina che hai contato continua a valere."
           }
         },
         "zh-Hans": {
@@ -26912,7 +26912,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ogni volta che resisti alla voglia, questa pagina impara quando arriva, cosa la scatena e quanto dura."
+            "value": "Ogni volta che superi una voglia, questa pagina registra quando arriva, cosa la scatena e quanto dura."
           }
         },
         "zh-Hans": {
@@ -27013,7 +27013,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutti gli strumenti che tengono in vista la tua serie, sbloccati oggi."
+            "value": "Oggi hai sbloccato tutti gli strumenti che tengono in vista la tua serie."
           }
         },
         "zh-Hans": {
@@ -27351,13 +27351,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tutti gli strumenti che tengono in vista la tua serie. Nessun addebito per %lld giorno."
+                  "value": "Tutti gli strumenti per tenere d’occhio la serie. Nessun addebito per %1$lld giorno."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Tutti gli strumenti che tengono in vista la tua serie. Nessun addebito per %lld giorni."
+                  "value": "Tutti gli strumenti per tenere d’occhio la serie. Nessun addebito per %1$lld giorni."
                 }
               }
             }
@@ -27467,7 +27467,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutti gli strumenti che tengono in vista la tua serie. Oggi non paghi nulla."
+            "value": "Tutti gli strumenti per tenere d’occhio la tua serie. Oggi non ti viene addebitato nulla."
           }
         },
         "zh-Hans": {
@@ -27568,7 +27568,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Si sblocca tutto. Accesso completo, %@ da pagare ora."
+            "value": "Si sblocca tutto. Accesso completo. Da pagare oggi: %1$@."
           }
         },
         "zh-Hans": {
@@ -27669,7 +27669,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutto quello che si sblocca"
+            "value": "Tutto quello che sblocchi"
           }
         },
         "zh-Hans": {
@@ -27871,7 +27871,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "PROVA GRATUITA"
+            "value": "PROVA GRATIS"
           }
         },
         "zh-Hans": {
@@ -27972,7 +27972,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stato d'animo"
+            "value": "Sensazione"
           }
         },
         "zh-Hans": {
@@ -28073,7 +28073,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Meno rispetto ai 7 giorni precedenti"
+            "value": "Meno negli ultimi 7 giorni"
           }
         },
         "zh-Hans": {
@@ -28174,7 +28174,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trova un trattamento"
+            "value": "Trova aiuto specializzato"
           }
         },
         "zh-Hans": {
@@ -28376,7 +28376,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seguire 13 pietre miliari nicotina-recupero"
+            "value": "Segui 13 traguardi documentati sui cambiamenti dopo aver smesso con la nicotina."
           }
         },
         "zh-Hans": {
@@ -28780,7 +28780,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scrittura libera"
+            "value": "Scrivi liberamente"
           }
         },
         "zh-Hans": {
@@ -28982,7 +28982,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Accesso completo a giardino, diario, salute e risparmi durante la prova."
+            "value": "Accesso completo al giardino, al diario, alla cronologia della salute e ai risparmi. Gratis fino alla fine della prova."
           }
         },
         "zh-Hans": {
@@ -29083,7 +29083,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cronologia della salute completa"
+            "value": "Cronologia completa della salute"
           }
         },
         "zh-Hans": {
@@ -29184,7 +29184,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elementi del giardino"
+            "value": "Funzioni del giardino"
           }
         },
         "zh-Hans": {
@@ -29285,7 +29285,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Informazioni generali sul benessere, non consigli medici. I tempi variano da persona a persona. Per questioni di salute, rivolgiti a un professionista sanitario."
+            "value": "Informazioni generali sul benessere, non consigli medici. I tempi variano da persona a persona. Per questioni di salute, parlane con un professionista sanitario."
           }
         },
         "zh-Hans": {
@@ -29386,7 +29386,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Iniziare"
+            "value": "Inizia"
           }
         },
         "zh-Hans": {
@@ -29588,7 +29588,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ancora un minuto"
+            "value": "Dammi ancora un minuto"
           }
         },
         "zh-Hans": {
@@ -29891,7 +29891,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Coprisuolo"
+            "value": "Piante tappezzanti"
           }
         },
         "zh-Hans": {
@@ -29992,7 +29992,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Coltiva ogni specie."
+            "value": "Fai crescere ogni specie."
           }
         },
         "zh-Hans": {
@@ -30194,7 +30194,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gengive e tessuti della bocca si riprendono."
+            "value": "Migliorano gengive e tessuti della bocca."
           }
         },
         "zh-Hans": {
@@ -30295,7 +30295,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le gengive iniziano a guarire"
+            "value": "Le gengive iniziano a migliorare"
           }
         },
         "zh-Hans": {
@@ -30396,7 +30396,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eroe del semestre"
+            "value": "Eroe dei sei mesi"
           }
         },
         "zh-Hans": {
@@ -30497,7 +30497,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Più difficile tra le %1$@ e le %2$@"
+            "value": "La voglia è più forte tra %1$@ e %2$@"
           }
         },
         "zh-Hans": {
@@ -30800,7 +30800,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diminuisce il rischio cardiovascolare"
+            "value": "Il rischio cardiaco diminuisce"
           }
         },
         "zh-Hans": {
@@ -31002,7 +31002,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trattieni"
+            "value": "Trattieni il respiro"
           }
         },
         "zh-Hans": {
@@ -31204,7 +31204,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orario"
+            "value": "Ora"
           }
         },
         "zh-Hans": {
@@ -31305,7 +31305,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Com'è andata la giornata?"
+            "value": "Com’è andata la giornata?"
           }
         },
         "zh-Hans": {
@@ -31406,7 +31406,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Come è cambiata la mia vita quotidiana da quando ho lasciato la nicotina?"
+            "value": "Com’è cambiata la mia vita quotidiana da quando ho smesso con la nicotina?"
           }
         },
         "zh-Hans": {
@@ -31507,7 +31507,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "In cosa è cambiato il mio sonno?"
+            "value": "Com’è cambiato il mio sonno?"
           }
         },
         "zh-Hans": {
@@ -31709,7 +31709,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quanto stavi usando?"
+            "value": "Quanta nicotina usavi?"
           }
         },
         "zh-Hans": {
@@ -31810,7 +31810,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quanto era forte?"
+            "value": "Quanto era intensa?"
           }
         },
         "zh-Hans": {
@@ -31911,7 +31911,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mi impegno a migliorare"
+            "value": "Mi impegno a stare meglio"
           }
         },
         "zh-Hans": {
@@ -32214,7 +32214,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mi impegno"
+            "value": "Mi impegno a farlo"
           }
         },
         "zh-Hans": {
@@ -32416,7 +32416,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ce l'ho fatta"
+            "value": "È passata."
           }
         },
         "zh-Hans": {
@@ -32618,7 +32618,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se oggi è privo di nicotina, registrarlo e innaffiare il vostro giardino."
+            "value": "Se oggi sei senza nicotina, registra la giornata e annaffia il giardino."
           }
         },
         "zh-Hans": {
@@ -32921,7 +32921,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Intensità %lld su 5"
+            "value": "Intensità %1$lld su 5"
           }
         },
         "zh-Hans": {
@@ -33224,7 +33224,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "È già più piccola di un minuto fa, anche se non sembra finita."
+            "value": "La voglia è già più lieve rispetto a un minuto fa, anche se non sembra passata del tutto."
           }
         },
         "zh-Hans": {
@@ -33325,7 +33325,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Va bene. Uno scivolone fa parte di tanti percorsi, e registrarlo mantiene onesto il resto della tua cronologia."
+            "value": "Va bene. Uno scivolone capita in molti percorsi. Registrarlo mantiene accurato il resto della tua cronologia."
           }
         },
         "zh-Hans": {
@@ -33628,7 +33628,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diario privato attraverso i giorni difficili"
+            "value": "Scrivi nel diario, per te, anche nei giorni difficili"
           }
         },
         "zh-Hans": {
@@ -33729,7 +33729,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mantieni la prova"
+            "value": "Mantieni il mio periodo di prova"
           }
         },
         "zh-Hans": {
@@ -33830,7 +33830,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tenere la versione gratuita?"
+            "value": "Vuoi tenere la versione gratuita?"
           }
         },
         "zh-Hans": {
@@ -33931,7 +33931,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tieni giardino, diario e risparmi, oppure annulla prima del rinnovo."
+            "value": "Mantieni il giardino completo, il diario e i risparmi, oppure annulla quando vuoi prima del rinnovo."
           }
         },
         "zh-Hans": {
@@ -34032,7 +34032,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ultimi 7 giorni: %1$lld. I 7 giorni precedenti: %2$lld."
+            "value": "Ultimi 7 giorni: %1$lld. 7 giorni precedenti: %2$lld."
           }
         },
         "zh-Hans": {
@@ -34537,7 +34537,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "A vita"
+            "value": "Accesso a vita"
           }
         },
         "zh-Hans": {
@@ -34638,7 +34638,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durata: %1$@"
+            "value": "Accesso a vita: %1$@"
           }
         },
         "zh-Hans": {
@@ -34941,7 +34941,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloccato. Tocca per scoprire Bloom+"
+            "value": "Bloccato. Tocca la riga per saperne di più su Bloom+"
           }
         },
         "zh-Hans": {
@@ -35244,7 +35244,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Accedi come nicotina"
+            "value": "Registra come giornata senza nicotina"
           }
         },
         "zh-Hans": {
@@ -35446,7 +35446,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra"
+            "value": "Registra uno scivolone"
           }
         },
         "zh-Hans": {
@@ -35547,7 +35547,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra oggi e annaffia il tuo giardino. Ce la fai."
+            "value": "Registra la giornata e annaffia il giardino. Ce la puoi fare."
           }
         },
         "zh-Hans": {
@@ -35648,7 +35648,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Segna oggi una giornata senza nicotina e annaffia il tuo bonsai."
+            "value": "Registra oggi come giornata senza nicotina e annaffia il bonsai."
           }
         },
         "zh-Hans": {
@@ -35850,7 +35850,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Senza nicotina"
+            "value": "Giornata senza nicotina registrata"
           }
         },
         "zh-Hans": {
@@ -35951,7 +35951,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrati finora: %1$lld."
+            "value": "Registrazioni finora: %1$lld."
           }
         },
         "zh-Hans": {
@@ -36153,7 +36153,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrato. Sei ancora sul tuo percorso."
+            "value": "Registrato. Sei ancora nel tuo percorso."
           }
         },
         "zh-Hans": {
@@ -36355,7 +36355,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Record"
+            "value": "Più lunga"
           }
         },
         "zh-Hans": {
@@ -36456,7 +36456,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Renderlo ufficiale"
+            "value": "Conferma la registrazione"
           }
         },
         "zh-Hans": {
@@ -36658,7 +36658,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fase di maturo"
+            "value": "Fase matura"
           }
         },
         "zh-Hans": {
@@ -36961,7 +36961,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rilevamento di denaro e sacchetto"
+            "value": "Tracciamento di spese e bustine"
           }
         },
         "zh-Hans": {
@@ -37466,7 +37466,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Più rispetto ai 7 giorni precedenti"
+            "value": "Di più negli ultimi 7 giorni"
           }
         },
         "zh-Hans": {
@@ -37668,7 +37668,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La maggior parte degli impulsi registrati si concentra in questa fascia: %1$lld su %2$lld."
+            "value": "La maggior parte delle voglie registrate si concentra in questa fascia: %1$lld su %2$lld."
           }
         },
         "zh-Hans": {
@@ -37769,7 +37769,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La maggior parte della nicotina lascia il corpo."
+            "value": "La maggior parte della nicotina ha lasciato il corpo."
           }
         },
         "zh-Hans": {
@@ -38274,7 +38274,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Definire una situazione in cui ho usato per raggiungere una busta."
+            "value": "Descrivi una situazione in cui in passato cercavo una bustina di nicotina. Come ho fatto a superarla?"
           }
         },
         "zh-Hans": {
@@ -38375,7 +38375,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le terminazioni nervose iniziano a riprendersi."
+            "value": "La funzione delle terminazioni nervose inizia a migliorare."
           }
         },
         "zh-Hans": {
@@ -38880,7 +38880,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mese successivo"
+            "value": "Mese prossimo"
           }
         },
         "zh-Hans": {
@@ -39082,7 +39082,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "nicotina"
+            "value": "Nicotina"
           }
         },
         "zh-Hans": {
@@ -39183,7 +39183,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La nicotina viene eliminata"
+            "value": "Nicotina eliminata"
           }
         },
         "zh-Hans": {
@@ -39385,7 +39385,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La nicotina ha una breve emivita, quindi in poche ore il livello nel sangue scende di oltre la metà mentre il corpo elimina l’ultima dose."
+            "value": "La nicotina ha una breve emivita: in poche ore il suo livello nel sangue scende di oltre la metà mentre il corpo elimina l’ultima dose."
           }
         },
         "zh-Hans": {
@@ -39486,7 +39486,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "nicotina mai assorbita"
+            "value": "Nicotina non assorbita"
           }
         },
         "zh-Hans": {
@@ -39587,7 +39587,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Senza nicotina"
+            "value": "Senza nicotina dal"
           }
         },
         "zh-Hans": {
@@ -39688,7 +39688,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nessun acquisto Bloom+ attivo trovato per questo ID Apple."
+            "value": "Non risulta alcun acquisto Bloom+ attivo per questo ID Apple."
           }
         },
         "zh-Hans": {
@@ -39890,7 +39890,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ancora nessuna voce. Tocca la matita per scrivere la prima."
+            "value": "Non ci sono ancora voci. Tocca la matita per scrivere la prima."
           }
         },
         "zh-Hans": {
@@ -39991,7 +39991,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ancora nessuna voce. La prima è gratis. Tocca la matita per scriverla."
+            "value": "Non ci sono ancora voci. La prima è gratuita. Tocca la matita per scriverla."
           }
         },
         "zh-Hans": {
@@ -40193,7 +40193,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nessun pagamento ora · Apple avvisa prima dell’addebito · Dati sul dispositivo"
+            "value": "Nessun pagamento ora · Apple ti avviserà prima dell’addebito · I dati restano sul dispositivo"
           }
         },
         "zh-Hans": {
@@ -40490,7 +40490,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non spesi in bustine"
+            "value": "Non speso in bustine di nicotina"
           }
         },
         "zh-Hans": {
@@ -40692,7 +40692,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non so ancora. Chiudi sessione"
+            "value": "Non lo so ancora. Chiudi la sessione"
           }
         },
         "zh-Hans": {
@@ -40894,7 +40894,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ancora nessun dato"
+            "value": "Ancora niente da leggere"
           }
         },
         "zh-Hans": {
@@ -40995,7 +40995,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Osservala senza discuterci. Non devi vincere, devi solo aspettare che passi."
+            "value": "Nota la voglia senza contrastarla. Non devi vincere, devi solo aspettare che passi."
           }
         },
         "zh-Hans": {
@@ -41096,7 +41096,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le notifiche vengono disattivate per Quit Zyn, quindi il promemoria non può essere consegnato. Tocca sopra per abilitarle nell'app Impostazioni."
+            "value": "Le notifiche di Quit Zyn sono disattivate, quindi il promemoria non può arrivare. Tocca sopra per attivarle in Impostazioni."
           }
         },
         "zh-Hans": {
@@ -41399,7 +41399,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sei sulla buona strada per risparmiare"
+            "value": "Risparmi previsti"
           }
         },
         "zh-Hans": {
@@ -41500,7 +41500,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Traguardo di un mese raggiunto."
+            "value": "Hai raggiunto il traguardo di un mese."
           }
         },
         "zh-Hans": {
@@ -41601,7 +41601,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Una tantum · nessun abbonamento"
+            "value": "Una tantum · senza abbonamento"
           }
         },
         "zh-Hans": {
@@ -41702,7 +41702,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La salute orale si riprende"
+            "value": "La salute orale migliora"
           }
         },
         "zh-Hans": {
@@ -42106,7 +42106,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "In più, non userai %1$@ bustine di nicotina. Il tuo corpo non dovrà elaborare quella nicotina."
+            "value": "In più, eviterai %1$@ bustine di nicotina. Il tuo corpo non dovrà metabolizzare quella nicotina."
           }
         },
         "zh-Hans": {
@@ -42207,7 +42207,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bustine"
+            "value": "Bustine di nicotina"
           }
         },
         "zh-Hans": {
@@ -42409,7 +42409,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bustine per scatola"
+            "value": "Bustine per confezione"
           }
         },
         "zh-Hans": {
@@ -42813,7 +42813,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I prezzi arrivano da App Store e non sono disponibili in questa build."
+            "value": "I prezzi provengono da App Store e non sono disponibili in questa versione."
           }
         },
         "zh-Hans": {
@@ -43116,7 +43116,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Proietta i %@ che risparmieresti nel prossimo anno"
+            "value": "Stima quanto potresti risparmiare nel prossimo anno: %1$@."
           }
         },
         "zh-Hans": {
@@ -43217,7 +43217,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guarda all'anno che viene, non solo ai giorni passati"
+            "value": "Guarda all’anno che viene, non solo ai giorni passati."
           }
         },
         "zh-Hans": {
@@ -43520,7 +43520,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Battito e pressione iniziano a scendere."
+            "value": "Battito e pressione si avvicinano ai valori abituali."
           }
         },
         "zh-Hans": {
@@ -43722,7 +43722,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Riporta contatore e albero a com'erano prima di questo scivolone."
+            "value": "Riporta il contatore e l’albero a com’erano prima dello scivolone."
           }
         },
         "zh-Hans": {
@@ -44025,7 +44025,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giorni senza Zyn"
+            "value": "Giorni senza nicotina"
           }
         },
         "zh-Hans": {
@@ -44126,7 +44126,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tasso Quit Zyn"
+            "value": "Valuta Quit Zyn"
           }
         },
         "zh-Hans": {
@@ -44464,13 +44464,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra ancora %1$lld impulso per scoprire altri tuoi schemi."
+                  "value": "Registra ancora %1$lld voglia per scoprire altri tuoi schemi."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra ancora %1$lld impulsi per scoprire altri tuoi schemi."
+                  "value": "Registra ancora %1$lld voglie per scoprire altri tuoi schemi."
                 }
               }
             }
@@ -44817,13 +44817,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra ancora %1$lld impulso per iniziare a vedere i tuoi schemi."
+                  "value": "Registra ancora %1$lld voglia per iniziare a notare i tuoi schemi."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registra ancora %1$lld impulsi per iniziare a vedere i tuoi schemi."
+                  "value": "Registra ancora %1$lld voglie per iniziare a notare i tuoi schemi."
                 }
               }
             }
@@ -44933,7 +44933,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra un impulso in più per scoprire altri tuoi schemi."
+            "value": "Registra un’altra voglia per scoprire altri tuoi schemi."
           }
         },
         "zh-Hans": {
@@ -45034,7 +45034,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registra un impulso in più per iniziare a vedere i tuoi schemi."
+            "value": "Registra un’altra voglia per iniziare a notare i tuoi schemi."
           }
         },
         "zh-Hans": {
@@ -45135,7 +45135,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il recupero inizia con una decisione. Questo è tuo, per oggi e i giorni che seguono."
+            "value": "Il cambiamento inizia con una decisione. Oggi e nei giorni a venire, la scelta è tua."
           }
         },
         "zh-Hans": {
@@ -45337,7 +45337,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Raffinato e fitto. Frutto di vera pazienza."
+            "value": "Raffinato e fitto. Frutto di tanta pazienza."
           }
         },
         "zh-Hans": {
@@ -45438,7 +45438,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fase refrigerata"
+            "value": "Fase raffinata"
           }
         },
         "zh-Hans": {
@@ -45539,7 +45539,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima dell’addebito"
+            "value": "Promemoria prima dell’addebito"
           }
         },
         "zh-Hans": {
@@ -45640,7 +45640,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tempo di attesa"
+            "value": "Ora del promemoria"
           }
         },
         "zh-Hans": {
@@ -45741,7 +45741,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I promemoria fanno leva sul tuo impegno."
+            "value": "I promemoria si basano sul tuo impegno."
           }
         },
         "zh-Hans": {
@@ -45842,7 +45842,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I promemoria restano neutri e senza pressioni."
+            "value": "I promemoria restano neutrali e senza pressioni."
           }
         },
         "zh-Hans": {
@@ -45943,7 +45943,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Si rinnova automaticamente. Annulla almeno 24 ore prima della fine del periodo. Gestisci: Impostazioni › ID Apple › Abbonamenti."
+            "value": "Si rinnova automaticamente. Annulla almeno 24 ore prima della fine del periodo in corso. Gestisci l’abbonamento in Impostazioni › ID Apple › Abbonamenti."
           }
         },
         "zh-Hans": {
@@ -46145,7 +46145,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Azzera contatore"
+            "value": "Azzera il contatore"
           }
         },
         "zh-Hans": {
@@ -46246,7 +46246,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ripristinare il contatore?"
+            "value": "Vuoi azzerare il contatore?"
           }
         },
         "zh-Hans": {
@@ -46650,7 +46650,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Superati: %1$lld su %2$lld"
+            "value": "Voglie superate: %1$lld su %2$lld"
           }
         },
         "zh-Hans": {
@@ -46751,7 +46751,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Respira con calma per qualche minuto."
+            "value": "Aspetta che passi, respirando con calma per qualche minuto."
           }
         },
         "zh-Hans": {
@@ -46953,7 +46953,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pessimo"
+            "value": "Difficile"
           }
         },
         "zh-Hans": {
@@ -47155,7 +47155,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "RISPARMI IL %lld%%"
+            "value": "RISPARMIA IL %1$lld%%"
           }
         },
         "zh-Hans": {
@@ -47256,7 +47256,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lo stesso numero dei 7 giorni precedenti"
+            "value": "Come nei 7 giorni precedenti"
           }
         },
         "zh-Hans": {
@@ -47772,13 +47772,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Risparmiati in %1$lld giorno senza nicotina."
+                  "value": "Risparmi accumulati in %1$lld giorno senza nicotina."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Risparmiati in %1$lld giorni senza nicotina."
+                  "value": "Risparmi accumulati in %1$lld giorni senza nicotina."
                 }
               }
             }
@@ -48090,7 +48090,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guarda cosa sta tornando."
+            "value": "Scopri cosa sta tornando."
           }
         },
         "zh-Hans": {
@@ -48191,7 +48191,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vedere quando il vostro %1$@ ha colpito, che cosa li imposta, e quanto dura realmente il vostro, più il resto di Bloom+."
+            "value": "Scopri i momenti delle %1$@, cosa le scatena e quanto durano, insieme al resto di Bloom+."
           }
         },
         "zh-Hans": {
@@ -48393,7 +48393,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fase di seme"
+            "value": "Fase del seme"
           }
         },
         "zh-Hans": {
@@ -48595,7 +48595,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fase di cucitura"
+            "value": "Fase della piantina"
           }
         },
         "zh-Hans": {
@@ -48999,7 +48999,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Plasmato da una vita di vento. Ogni ramo racconta una storia di resistenza."
+            "value": "Scolpito dal vento nel corso degli anni. Ogni ramo racconta una storia di resistenza."
           }
         },
         "zh-Hans": {
@@ -49100,7 +49100,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Anche oggi"
+            "value": "Registrazione di oggi"
           }
         },
         "zh-Hans": {
@@ -49201,7 +49201,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Altro spunto"
+            "value": "Cambia spunto"
           }
         },
         "zh-Hans": {
@@ -49302,7 +49302,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dal %@"
+            "value": "Dal %1$@"
           }
         },
         "zh-Hans": {
@@ -49403,7 +49403,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri, la punta del ramo è cresciuta."
+            "value": "Da ieri la punta di un ramo è cresciuta."
           }
         },
         "zh-Hans": {
@@ -49706,7 +49706,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri è apparso un piccolo bocciolo."
+            "value": "Da ieri è comparsa una piccola gemma."
           }
         },
         "zh-Hans": {
@@ -49908,7 +49908,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri la chioma è diventata un po’ più folta."
+            "value": "Da ieri la chioma si è infoltita un po’."
           }
         },
         "zh-Hans": {
@@ -50009,7 +50009,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri la chioma è cresciuta più in alto."
+            "value": "Da ieri la cima dell’albero è cresciuta un po’."
           }
         },
         "zh-Hans": {
@@ -50110,7 +50110,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri il muschio si è esteso un po’ di più."
+            "value": "Da ieri il muschio si è esteso un po’."
           }
         },
         "zh-Hans": {
@@ -50211,7 +50211,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri gli aghi hanno un colore più intenso."
+            "value": "Da ieri gli aghi hanno assunto una tonalità più intensa."
           }
         },
         "zh-Hans": {
@@ -50312,7 +50312,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri le radici si sono estese un po’ di più."
+            "value": "Da ieri le radici si sono estese un po’."
           }
         },
         "zh-Hans": {
@@ -50413,7 +50413,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Da ieri il seme sta mettendo radici."
+            "value": "Da ieri il seme sta attecchendo."
           }
         },
         "zh-Hans": {
@@ -51019,7 +51019,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per non organizzare più la giornata intorno a una scatola"
+            "value": "Per non organizzare più la giornata intorno a una confezione di bustine."
           }
         },
         "zh-Hans": {
@@ -51423,7 +51423,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nuova fase: %1$@ → %2$@"
+            "value": "Passaggio alla fase successiva: %1$@ → %2$@"
           }
         },
         "zh-Hans": {
@@ -51524,7 +51524,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizio"
+            "value": "Inizia"
           }
         },
         "zh-Hans": {
@@ -52684,7 +52684,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia gratis"
+            "value": "Inizia la prova gratuita"
           }
         },
         "zh-Hans": {
@@ -53126,7 +53126,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia gratis"
+            "value": "Inizia la mia prova gratuita"
           }
         },
         "zh-Hans": {
@@ -53568,7 +53568,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia gratis"
+            "value": "Inizia la mia prova gratuita"
           }
         },
         "zh-Hans": {
@@ -53669,7 +53669,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia il periodo di prova gratuito di Bloom+"
+            "value": "Inizia la prova gratuita di Bloom+"
           }
         },
         "zh-Hans": {
@@ -53764,7 +53764,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I soldi restano a te, invece di finire in bustine di nicotina. Bloom+ ti aiuta a mantenere la serie."
+            "value": "I soldi restano in tasca, invece di finire nelle bustine. Bloom+ ti aiuta a mantenere la serie."
           }
         },
         "zh-Hans": {
@@ -53966,7 +53966,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tempo di vita conta ogni giorno senza nicotina che hai mai registrato, quindi i progressi passati non vengono persi su un reset."
+            "value": "La serie conta i giorni del percorso attuale. Il totale di sempre include ogni giorno senza nicotina che hai registrato, così i progressi passati non si perdono quando azzeri il contatore."
           }
         },
         "zh-Hans": {
@@ -54774,7 +54774,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambia quando vuoi. Giorni e crescita passano all'albero che scegli."
+            "value": "Cambia quando vuoi. Il conteggio dei giorni e la crescita passano all’albero che scegli."
           }
         },
         "zh-Hans": {
@@ -54875,7 +54875,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cambia specie di bonsai, ora %@"
+            "value": "Cambia specie di bonsai, ora: %1$@"
           }
         },
         "zh-Hans": {
@@ -55178,7 +55178,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gusto e olfatto si affinano"
+            "value": "Gusto e olfatto diventano più intensi"
           }
         },
         "zh-Hans": {
@@ -55380,7 +55380,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Condizioni d'uso"
+            "value": "Condizioni d’uso"
           }
         },
         "zh-Hans": {
@@ -55481,7 +55481,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Termini d'uso (EULA)"
+            "value": "Condizioni d’uso (EULA)"
           }
         },
         "zh-Hans": {
@@ -55582,7 +55582,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Si tratta di %1$@ / giorno"
+            "value": "Circa %1$@ al giorno"
           }
         },
         "zh-Hans": {
@@ -55683,7 +55683,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lo stile a cascata imita un albero che cresce su una scogliera, protendendosi verso il basso."
+            "value": "Lo stile a cascata ricorda un albero che cresce su una scogliera, con i rami protesi verso il basso."
           }
         },
         "zh-Hans": {
@@ -55885,7 +55885,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il seme si sta ambientando. Il tuo percorso inizia qui."
+            "value": "Il seme sta attecchendo. Il tuo percorso comincia qui."
           }
         },
         "zh-Hans": {
@@ -55986,7 +55986,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Questo è vicino alla cima di esso. Questi %1$@ salire veloce e poi smettere di arrampicarsi."
+            "value": "Il picco è vicino. L’intensità delle %1$@ aumenta rapidamente, poi si stabilizza."
           }
         },
         "zh-Hans": {
@@ -56440,7 +56440,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo tre mesi, la circolazione tende a migliorare perché la nicotina non restringe più i vasi sanguigni. Molte persone riferiscono un’energia più costante."
+            "value": "Dopo tre mesi la circolazione tende a migliorare perché la nicotina non restringe più i vasi sanguigni. Molte persone riferiscono un’energia più costante."
           }
         },
         "zh-Hans": {
@@ -56541,7 +56541,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tre mesi di forza."
+            "value": "Tre mesi senza nicotina."
           }
         },
         "zh-Hans": {
@@ -56642,7 +56642,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tre parole per descrivere come mi sento ora."
+            "value": "Tre parole per descrivere come mi sento adesso."
           }
         },
         "zh-Hans": {
@@ -56743,7 +56743,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Traguardi di tempo"
+            "value": "Traguardi nel tempo"
           }
         },
         "zh-Hans": {
@@ -57147,7 +57147,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrato oggi"
+            "value": "Giornata registrata"
           }
         },
         "zh-Hans": {
@@ -57248,7 +57248,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oggi è registrato come scivolone"
+            "value": "Giornata registrata come scivolone"
           }
         },
         "zh-Hans": {
@@ -57551,7 +57551,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tracciare ogni dollaro e la busta si evita, più il resto di Bloom+."
+            "value": "Tieni traccia dei dollari e delle bustine di nicotina che eviti, insieme al resto di Bloom+."
           }
         },
         "zh-Hans": {
@@ -57652,7 +57652,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Segui i tuoi giorni senza nicotina, coltiva il tuo giardino e osserva il ritorno del benessere."
+            "value": "Tieni traccia dei giorni senza nicotina, fai crescere il giardino e osserva i miglioramenti del tuo benessere."
           }
         },
         "zh-Hans": {
@@ -57955,7 +57955,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Iniziativa della verità"
+            "value": "Truth Initiative"
           }
         },
         "zh-Hans": {
@@ -58359,7 +58359,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Due domande veloci finché è fresco. Entrambe facoltative."
+            "value": "Due domande veloci su ciò che è appena successo. Entrambe facoltative."
           }
         },
         "zh-Hans": {
@@ -58899,13 +58899,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sblocca %lld albero"
+                  "value": "Sblocca %1$lld albero"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sblocca %lld alberi"
+                  "value": "Sblocca %1$lld alberi"
                 }
               }
             }
@@ -59110,7 +59110,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sblocca per sempre"
+            "value": "Sblocca l’accesso a vita"
           }
         },
         "zh-Hans": {
@@ -59448,13 +59448,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sblocca tutti i %lld alberi"
+                  "value": "Sblocca tutti gli alberi: %1$lld"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sblocca tutti i %lld alberi"
+                  "value": "Sblocca tutti gli alberi: %1$lld"
                 }
               }
             }
@@ -59558,7 +59558,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sblocca tutte le specie di bonsai e cambia quando vuoi, più il resto di Bloom+."
+            "value": "Sblocca tutte le specie di bonsai e cambia albero quando vuoi, insieme al resto di Bloom+."
           }
         },
         "zh-Hans": {
@@ -59760,7 +59760,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sblocca la cronologia completa di recupero con 13 traguardi, più il resto di Bloom+."
+            "value": "Sblocca la cronologia completa dei 13 traguardi di salute, insieme al resto di Bloom+."
           }
         },
         "zh-Hans": {
@@ -59962,7 +59962,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sblocca ciò che arriva con Bloom+"
+            "value": "Scopri cosa ti offre Bloom+"
           }
         },
         "zh-Hans": {
@@ -60164,7 +60164,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fino a %@/anno"
+            "value": "Fino a %1$@ all’anno"
           }
         },
         "zh-Hans": {
@@ -60360,7 +60360,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Serve a stimare quanto denaro e quante bustine risparmi e quanta nicotina eviti mentre resti senza nicotina."
+            "value": "Serve a stimare i soldi risparmiati, le bustine evitate e la nicotina non assunta mentre resti senza nicotina."
           }
         },
         "zh-Hans": {
@@ -60461,7 +60461,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guarda i tuoi risparmi."
+            "value": "Guarda crescere i tuoi risparmi."
           }
         },
         "zh-Hans": {
@@ -60799,13 +60799,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Bentornato. Non fai check-in da %lld giorno. Tutto procede bene?"
+                  "value": "Bentornato. Non registri una giornata da %1$lld giorno. Come va?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Bentornato. Non fai check-in da %lld giorni. Tutto procede bene?"
+                  "value": "Bentornato. Non registri una giornata da %1$lld giorni. Come va?"
                 }
               }
             }
@@ -61016,7 +61016,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cosa ho fatto oggi per cui il me del futuro mi ringrazierà?"
+            "value": "Per cosa mi ringrazierò in futuro, grazie a ciò che ho fatto oggi?"
           }
         },
         "zh-Hans": {
@@ -61117,7 +61117,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per cosa mi ha ringraziato oggi il mio corpo?"
+            "value": "Per cosa potrebbe ringraziarmi oggi il mio corpo?"
           }
         },
         "zh-Hans": {
@@ -61218,7 +61218,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cosa mi dà vivere senza nicotina che la nicotina non potrebbe mai darmi?"
+            "value": "Cosa mi dà una vita senza nicotina che la nicotina non potrebbe mai darmi?"
           }
         },
         "zh-Hans": {
@@ -61319,7 +61319,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cosa l'ha scatenata?"
+            "value": "Cosa l’ha scatenata?"
           }
         },
         "zh-Hans": {
@@ -61420,7 +61420,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quali fattori scatenanti sono emersi oggi e come ho reagito?"
+            "value": "Cosa ha scatenato la voglia oggi e come ho reagito?"
           }
         },
         "zh-Hans": {
@@ -61622,7 +61622,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quanto mi costerebbe davvero un «azzeramento», in giorni e denaro?"
+            "value": "Quanto mi costerebbe davvero azzerare il contatore, in giorni e dollari?"
           }
         },
         "zh-Hans": {
@@ -61925,7 +61925,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cosa sta andando bene oggi? Come mantengo lo slancio?"
+            "value": "Cosa sta andando bene oggi? Come posso mantenere lo slancio?"
           }
         },
         "zh-Hans": {
@@ -62026,7 +62026,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quale abitudine sana vorrei costruire adesso?"
+            "value": "Quale abitudine sana vorrei sviluppare?"
           }
         },
         "zh-Hans": {
@@ -62127,7 +62127,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per cosa sono grato oggi?"
+            "value": "Per cosa provo gratitudine oggi?"
           }
         },
         "zh-Hans": {
@@ -62329,7 +62329,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quando è iniziato il tuo viaggio senza nicotina?"
+            "value": "Quando è iniziato il tuo percorso senza nicotina?"
           }
         },
         "zh-Hans": {
@@ -62430,7 +62430,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quando hanno colpito e cosa li fa scattare."
+            "value": "Quando arrivano le voglie e cosa le scatena."
           }
         },
         "zh-Hans": {
@@ -62531,7 +62531,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quando il tuo successo %1$@ e cosa li imposta"
+            "value": "Quando arrivano le %1$@ e cosa le scatena"
           }
         },
         "zh-Hans": {
@@ -62632,7 +62632,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quando mi sono sentito più forte oggi?"
+            "value": "In quale momento oggi ho sentito di avere più forza?"
           }
         },
         "zh-Hans": {
@@ -62733,7 +62733,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dove noto che si nascondono le voglie?"
+            "value": "Dove noto che si nasconde la voglia di nicotina?"
           }
         },
         "zh-Hans": {
@@ -62834,7 +62834,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Chi mi ha sostenuto oggi, anche solo un po'?"
+            "value": "Chi mi ha sostenuto oggi, anche solo un po’?"
           }
         },
         "zh-Hans": {
@@ -62935,7 +62935,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Battuto dal vento"
+            "value": "Scolpito dal vento"
           }
         },
         "zh-Hans": {
@@ -63036,7 +63036,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai battuto dal vento"
+            "value": "Bonsai scolpito dal vento"
           }
         },
         "zh-Hans": {
@@ -63137,7 +63137,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ti avviseremo prima della fine della prova se hai attivato le notifiche."
+            "value": "Se attivi le notifiche, ti avviseremo prima della fine del periodo di prova."
           }
         },
         "zh-Hans": {
@@ -63238,7 +63238,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dopo un paio d’ore dall’ultima bustina di nicotina, il picco di nicotina si attenua. Battito e pressione iniziano a tornare verso i valori iniziali."
+            "value": "Dopo un paio d’ore dall’ultima bustina di nicotina, il picco si attenua e battito e pressione iniziano a tornare ai valori abituali."
           }
         },
         "zh-Hans": {
@@ -63642,7 +63642,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scrivi cosa provi quando arriva l’impulso."
+            "value": "Scrivi cosa provi quando arriva la voglia."
           }
         },
         "zh-Hans": {
@@ -63737,7 +63737,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "RISPARMIATO FINORA"
+            "value": "HAI RISPARMIATO FINORA"
           }
         },
         "zh-Hans": {
@@ -63838,7 +63838,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I TUOI SOLDI, AL SICURO"
+            "value": "I SOLDI CHE TI RESTANO"
           }
         },
         "zh-Hans": {
@@ -64444,7 +64444,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Adesso non devi fare nient'altro. Resta qui e respira."
+            "value": "Non devi fare altro adesso. Resta qui e respira."
           }
         },
         "zh-Hans": {
@@ -64545,7 +64545,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Risparmi"
+            "value": "Ti restano"
           }
         },
         "zh-Hans": {
@@ -65475,13 +65475,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Hai superato %1$lld impulso."
+                  "value": "Hai superato %1$lld voglia di nicotina."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Hai superato %1$lld impulsi."
+                  "value": "Hai superato %1$lld voglie di nicotina."
                 }
               }
             }
@@ -65591,7 +65591,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hai superato un impulso."
+            "value": "Hai superato una voglia di nicotina."
           }
         },
         "zh-Hans": {
@@ -65692,7 +65692,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sei rimasto con lui per %1$@."
+            "value": "Hai resistito alla voglia per %1$@."
           }
         },
         "zh-Hans": {
@@ -65793,7 +65793,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Manterrete il contatore di giorno, il calendario, la modalità di desiderio, e il vostro albero. La vostra proiezione di testa di anno, la linea temporale completa della salute, la rivista, e l'altra specie rimangono bloccati."
+            "value": "Ti restano il contatore dei giorni, il calendario, la modalità per gestire la voglia di nicotina e il tuo albero. Le proiezioni annuali, la cronologia completa della salute, il diario e le altre specie restano bloccati."
           }
         },
         "zh-Hans": {
@@ -66131,13 +66131,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sei a %lld giorno. Registra oggi e annaffia il tuo bonsai."
+                  "value": "Sei al giorno %1$lld. Registra oggi e annaffia il bonsai."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Sei a %lld giorni. Registra oggi e annaffia il tuo bonsai."
+                  "value": "Sei al giorno %1$lld. Registra oggi e annaffia il bonsai."
                 }
               }
             }
@@ -66247,7 +66247,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hai salvato %1$@ finora"
+            "value": "Hai risparmiato %1$@ finora."
           }
         },
         "zh-Hans": {
@@ -66342,7 +66342,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hai risparmiato %1$@ restando senza nicotina. Bloom+ ti aiuta a continuare."
+            "value": "Hai risparmiato %1$@ restando senza nicotina. Continua a far crescere i tuoi progressi con gli strumenti di Bloom+."
           }
         },
         "zh-Hans": {
@@ -66544,7 +66544,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giovane tappa bonsai"
+            "value": "Fase del bonsai giovane"
           }
         },
         "zh-Hans": {
@@ -66645,7 +66645,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I tuoi modelli %1$@"
+            "value": "Schemi delle %1$@"
           }
         },
         "zh-Hans": {
@@ -66746,7 +66746,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La tua prova di Bloom+ sta per finire"
+            "value": "Il periodo di prova di Bloom+ termina presto"
           }
         },
         "zh-Hans": {
@@ -66948,7 +66948,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo bonsai è maturato in una chioma folta."
+            "value": "Il tuo bonsai ha sviluppato una chioma folta e piena di foglie."
           }
         },
         "zh-Hans": {
@@ -67150,7 +67150,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il giorno in cui hai più impulsi è %1$@."
+            "value": "Il giorno con più voglie è %1$@."
           }
         },
         "zh-Hans": {
@@ -67251,7 +67251,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il contatore riparte dopo lo scivolone. Uno scivolone oggi riparte dal giorno 1; per uno passato si contano i giorni da allora. La serie più lunga segue le date corrette."
+            "value": "Dopo uno scivolone il contatore riparte. Se succede oggi, ricominci dal giorno 1; se è successo in passato, si contano i giorni da quella data. La serie più lunga riflette le date corrette."
           }
         },
         "zh-Hans": {
@@ -67352,7 +67352,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il contatore riparte. Tutto ciò che hai registrato conta ancora."
+            "value": "Il contatore riparte, ma tutto ciò che hai registrato continua a essere conteggiato."
           }
         },
         "zh-Hans": {
@@ -68008,7 +68008,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il contatore dei giorni riparte dopo lo scivolone. Il tuo albero conserva parte della crescita, e cronologia e alberi completati restano. La serie più lunga segue le date corrette."
+            "value": "Dopo uno scivolone il contatore dei giorni riparte. Il tuo albero conserva parte della crescita, mentre la cronologia del calendario e gli alberi completati restano. La serie più lunga riflette le date corrette."
           }
         },
         "zh-Hans": {
@@ -68109,7 +68109,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il contatore ripartirà da zero. La tua cronologia resta."
+            "value": "Il contatore dei giorni ripartirà da zero. La cronologia resta."
           }
         },
         "zh-Hans": {
@@ -68210,7 +68210,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il contatore dei giorni, il supporto per gestire le voglie, il widget e l'app per Apple Watch sono sempre gratuiti."
+            "value": "Il contatore dei giorni, la modalità per gestire la voglia di nicotina, il widget e l’app per Apple Watch restano sempre gratuiti."
           }
         },
         "zh-Hans": {
@@ -68412,7 +68412,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo primo germoglio ha rotto il terreno."
+            "value": "Il tuo primo germoglio è spuntato dal terreno."
           }
         },
         "zh-Hans": {
@@ -68614,7 +68614,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "L'ultima modifica non è stata salvata su questo dispositivo, quindi potrebbe mancare dopo la chiusura dell'app. Di solito succede perché lo spazio è pieno. Libera un po' di spazio, controlla e riprova."
+            "value": "L’ultima modifica non è stata salvata su questo dispositivo e potrebbe mancare quando chiudi l’app. Di solito succede perché lo spazio di archiviazione è esaurito. Libera spazio, controlla e riprova."
           }
         },
         "zh-Hans": {
@@ -68715,7 +68715,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo umore tende a calare prima di uno scivolone"
+            "value": "Il tuo umore tende a calare prima di uno scivolone."
           }
         },
         "zh-Hans": {
@@ -68816,7 +68816,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nei due giorni prima di uno scivolone, il tuo umore era più basso rispetto agli altri giorni registrati. Può essere utile notare per tempo questo schema."
+            "value": "Nei due giorni prima di uno scivolone, il tuo umore era più basso che negli altri giorni registrati. Potrebbe aiutarti notare per tempo questo schema."
           }
         },
         "zh-Hans": {
@@ -68911,7 +68911,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I tuoi giorni senza nicotina hanno dato i loro frutti. Usa parte dei risparmi per strumenti che ti aiutino a proseguire."
+            "value": "I giorni senza nicotina si sono accumulati. Usa una parte dei risparmi per strumenti che sostengano i tuoi progressi."
           }
         },
         "zh-Hans": {
@@ -69012,7 +69012,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le tue serie passate restano nella cronologia"
+            "value": "Le serie passate restano nella tua cronologia"
           }
         },
         "zh-Hans": {
@@ -69416,7 +69416,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo acquisto è in attesa di approvazione. Bloom+ si sblocca da solo una volta confermato, e si può continuare a utilizzare la versione gratuita nel frattempo."
+            "value": "Il tuo acquisto è in attesa di approvazione. Dopo la conferma, Bloom+ si sbloccherà automaticamente. Nel frattempo puoi continuare a usare la versione gratuita."
           }
         },
         "zh-Hans": {
@@ -69517,7 +69517,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo albero entra nel boschetto"
+            "value": "Il tuo albero si unisce al boschetto"
           }
         },
         "zh-Hans": {
@@ -70324,7 +70324,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il solito può"
+            "value": "La tua solita confezione"
           }
         },
         "zh-Hans": {
@@ -70425,7 +70425,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un minuto"
+            "value": "un minuto"
           }
         },
         "zh-Hans": {
@@ -70728,7 +70728,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "a %@"
+            "value": "alle %1$@"
           }
         },
         "zh-Hans": {
@@ -70829,7 +70829,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "voglia"
+            "value": "voglia di nicotina"
           }
         },
         "zh-Hans": {
@@ -71031,7 +71031,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "all'anno"
+            "value": "ogni anno"
           }
         },
         "zh-Hans": {
@@ -71132,7 +71132,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "trovaretrattamento.gov"
+            "value": "findtreatment.gov"
           }
         },
         "zh-Hans": {
@@ -71233,7 +71233,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tutte le funzioni"
+            "value": "accesso completo a Bloom+"
           }
         },
         "zh-Hans": {
@@ -71334,7 +71334,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "tra %@"
+            "value": "tra %1$@"
           }
         },
         "zh-Hans": {
@@ -71672,13 +71672,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "tra %lld giorno"
+                  "value": "tra %1$lld giorno"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "tra %lld giorni"
+                  "value": "tra %1$lld giorni"
                 }
               }
             }
@@ -72085,7 +72085,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bustine al giorno"
+            "value": "bustine al giorno"
           }
         },
         "zh-Hans": {
@@ -72186,7 +72186,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voglia superata"
+            "value": "voglia superata"
           }
         },
         "zh-Hans": {
@@ -72287,7 +72287,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voglie superate"
+            "value": "voglie superate"
           }
         },
         "zh-Hans": {
@@ -72590,7 +72590,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il tuo albero entra nel boschetto. Una nuova piantina inizia a crescere."
+            "value": "Il tuo albero si unisce al boschetto. Una nuova piantina inizia a crescere."
           }
         },
         "zh-Hans": {
@@ -72928,13 +72928,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Nel tuo boschetto ora c’è %1$lld albero. Una nuova piantina inizia a crescere."
+                  "value": "Nel tuo boschetto c’è %1$lld albero. Una nuova piantina inizia a crescere."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Nel tuo boschetto ora ci sono %1$lld alberi. Una nuova piantina inizia a crescere."
+                  "value": "Nel tuo boschetto ci sono %1$lld alberi. Una nuova piantina inizia a crescere."
                 }
               }
             }
