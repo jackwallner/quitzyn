@@ -1,4 +1,5 @@
 import Foundation
+import SwiftData
 import UserNotifications
 
 enum NotificationService {
@@ -52,50 +53,135 @@ enum NotificationService {
         }
     }
 
-    static func scheduleDailyReminder(hour: Int, committed: Bool = true, streakDays: Int = 0) async {
+    /// How many days of reminders are queued ahead. Each one carries the day
+    /// number for its own date, so they are one-shot requests rather than a
+    /// repeating trigger, and every app open re-arms the window.
+    static let reminderHorizonDays = 30
+
+    /// Queue the daily reminder for the next `reminderHorizonDays` days.
+    ///
+    /// A repeating trigger carries one fixed body, written with whatever the
+    /// counter read at the last Home refresh: a user who stopped opening the
+    /// app got "Day 11 is waiting" every morning for weeks, and the morning
+    /// after a slip it congratulated the streak that had just ended. Each
+    /// request here is numbered from the journey start for the date it fires.
+    static func scheduleDailyReminder(
+        hour: Int,
+        committed: Bool = true,
+        journeyStart: Date? = nil,
+        checkedInToday: Bool = false,
+        now: Date = .now
+    ) async {
         guard await isAuthorized() else { return }
         let center = UNUserNotificationCenter.current()
         await cancelDailyReminder()
 
-        // Copy stays supportive — even the "committed" variants avoid guilt
-        // language. People early in recovery delete apps that scold. When we
-        // know the streak, lead with it so the reminder feels personal; the
-        // schedule is refreshed on every check-in/app-open so it stays current.
-        let content = UNMutableNotificationContent()
-        if streakDays > 1 {
-            content.title = "Day \(streakDays + 1) is waiting"
-            content.body = committed
-                ? "You're \(streakDays) days in. Log today and water your bonsai."
-                : "\(streakDays) days and growing. If today's nicotine-free, log it."
-        } else {
-            content.title = committed ? "Showing up today" : "Daily check-in"
-            content.body = committed
+        let fireDates = reminderFireDates(hour: hour, now: now, checkedInToday: checkedInToday)
+        for (index, fireDate) in fireDates.enumerated() {
+            let copy = reminderContent(fireDate: fireDate, journeyStart: journeyStart, committed: committed)
+            let content = UNMutableNotificationContent()
+            content.title = copy.title
+            content.body = copy.body
+            content.sound = .default
+            content.userInfo = [deepLinkKey: deepLinkCheckIn]
+
+            let components = Calendar.current.dateComponents(
+                [.year, .month, .day, .hour, .minute], from: fireDate
+            )
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+            let request = UNNotificationRequest(
+                identifier: dailyReminderRequestID(index), content: content, trigger: trigger
+            )
+            try? await center.add(request)
+        }
+    }
+
+    /// The reminder's wording for the day it fires. Copy stays supportive:
+    /// even the "committed" variants avoid guilt language, because people
+    /// early in recovery delete apps that scold. The day number only appears
+    /// once there is a streak worth naming, so the morning after a slip gets
+    /// the plain encouragement rather than the run that just ended.
+    static func reminderContent(
+        fireDate: Date,
+        journeyStart: Date?,
+        committed: Bool
+    ) -> (title: String, body: String) {
+        let day = journeyStart.map { SobrietyService.daysSinceStart($0, asOf: fireDate) } ?? 0
+        let daysIn = day - 1
+        if daysIn > 1 {
+            return (
+                "Day \(day) is waiting",
+                committed
+                    ? "You're \(daysIn) days in. Log today and water your bonsai."
+                    : "\(daysIn) days and growing. If today's nicotine-free, log it."
+            )
+        }
+        return (
+            committed ? "Showing up today" : "Daily check-in",
+            committed
                 ? "Log today and water your garden. You've got this."
                 : "If today's nicotine-free, log it and water your garden."
+        )
+    }
+
+    /// The next reminder times at `hour`, starting today when it is still
+    /// ahead and today is not logged yet: a reminder for a day already
+    /// checked in is noise.
+    static func reminderFireDates(
+        hour: Int,
+        now: Date,
+        checkedInToday: Bool,
+        count: Int = reminderHorizonDays
+    ) -> [Date] {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: now)
+        let todayFire = cal.date(bySettingHour: hour, minute: 0, second: 0, of: today) ?? today
+        let firstOffset = (todayFire > now && !checkedInToday) ? 0 : 1
+        return (firstOffset..<(firstOffset + count)).compactMap { offset in
+            cal.date(byAdding: .day, value: offset, to: today).flatMap {
+                cal.date(bySettingHour: hour, minute: 0, second: 0, of: $0)
+            }
         }
-        content.sound = .default
-        content.userInfo = [deepLinkKey: deepLinkCheckIn]
-
-        var components = DateComponents()
-        components.hour = hour
-        components.minute = 0
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        let request = UNNotificationRequest(identifier: dailyReminderID, content: content, trigger: trigger)
-        try? await center.add(request)
     }
 
-    /// Re-schedule the daily reminder with fresh streak copy, but only if one
-    /// is already pending — never resurrects a reminder the user turned off.
-    static func refreshDailyReminder(hour: Int, committed: Bool, streakDays: Int) async {
-        let pending = await UNUserNotificationCenter.current().pendingNotificationRequests()
-        guard pending.contains(where: { $0.identifier == dailyReminderID }) else { return }
-        await scheduleDailyReminder(hour: hour, committed: committed, streakDays: streakDays)
+    /// Re-arm the reminder from the store: the active run's start and whether
+    /// today is logged. Called after anything that changes either (a check-in,
+    /// a slip, an undo, a reset, a start date edit) and on every Home refresh,
+    /// and cancels the queue when the user has turned the reminder off.
+    @MainActor
+    static func refreshDailyReminder(context: ModelContext, now: Date = .now) {
+        let settings = try? context.fetch(FetchDescriptor<UserSettings>()).first
+        guard let settings, settings.dailyReminderEnabled else {
+            lastReminderPlan = nil
+            Task { await cancelDailyReminder() }
+            return
+        }
+        let hour = settings.dailyReminderHour
+        let committed = settings.madeCommitment
+        let start = SobrietyService(context: context).activeJourney()?.startDate
+        let checkedIn = CheckInService(context: context).hasCheckedIn(on: now)
+        // Home refreshes on every tab switch; re-queueing thirty requests each
+        // time the answer has not changed is wasted work.
+        let plan = "\(hour)|\(committed)|\(start?.timeIntervalSince1970 ?? 0)|\(checkedIn)|\(DateHelpers.startOfDay(now).timeIntervalSince1970)"
+        guard plan != lastReminderPlan else { return }
+        lastReminderPlan = plan
+        Task {
+            await scheduleDailyReminder(
+                hour: hour, committed: committed, journeyStart: start, checkedInToday: checkedIn, now: now
+            )
+        }
     }
+
+    @MainActor private static var lastReminderPlan: String?
 
     static func cancelDailyReminder() async {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(
-            withIdentifiers: [dailyReminderID]
-        )
+        // The bare ID is the repeating request earlier builds scheduled.
+        let ids = [dailyReminderID] + (0..<reminderHorizonDays).map(dailyReminderRequestID)
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
+    }
+
+    private static func dailyReminderRequestID(_ index: Int) -> String {
+        "\(dailyReminderID).\(index)"
     }
 
     // MARK: - Trial

@@ -911,9 +911,12 @@ struct OnboardingView: View {
         context.saveOrReport()
 
         let hour = reminderHour
+        let journeyStart = SobrietyService(context: context).activeJourney()?.startDate
         Task {
             _ = await NotificationService.requestAuthorization()
-            await NotificationService.scheduleDailyReminder(hour: hour, committed: committed)
+            await NotificationService.scheduleDailyReminder(
+                hour: hour, committed: committed, journeyStart: journeyStart
+            )
         }
 
         // Only queue the Home popup when the offer step never ran, or the user

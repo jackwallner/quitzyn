@@ -38,7 +38,7 @@ struct HealthView: View {
                         // Beyond the free window, *all* future milestones (earned or
                         // not-yet-earned) are part of the Bloom+ value prop and
                         // render as a Pro tease rather than revealing the title.
-                        BenefitRow(benefit: benefit, unlocked: visible, blurred: !visible && !inFreeWindow)
+                        BenefitRow(benefit: benefit, hoursElapsed: hours, unlocked: visible, blurred: !visible && !inFreeWindow)
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 if !subscriptions.isProSubscriber && idx >= freeRevealCount {
@@ -125,7 +125,7 @@ struct HealthView: View {
                     .lineLimit(2)
             }
             Spacer(minLength: Theme.Space.s)
-            Text("in \(n.displayWait)")
+            Text("in \(n.remainingWait(hoursElapsed: hours))")
                 .font(Theme.caption(weight: .semibold))
                 .foregroundStyle(Theme.textSecondary)
                 .monospacedDigit()
@@ -135,6 +135,7 @@ struct HealthView: View {
 
 private struct BenefitRow: View {
     let benefit: HealthBenefit
+    let hoursElapsed: Double
     /// True when fully revealed (timed-unlock met AND user has access).
     let unlocked: Bool
     /// True when the user has *earned* this benefit by time, but it's gated behind Bloom+.
@@ -223,7 +224,7 @@ private struct BenefitRow: View {
                 .font(Theme.caption(weight: .semibold))
                 .foregroundStyle(Theme.brandPrimary)
         } else {
-            Text("in \(benefit.displayWait)")
+            Text("in \(benefit.remainingWait(hoursElapsed: hoursElapsed))")
                 .font(Theme.caption(weight: .semibold))
                 .foregroundStyle(Theme.textTertiary)
                 .monospacedDigit()

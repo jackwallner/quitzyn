@@ -41,4 +41,10 @@ enum AchievementCatalog {
     static func nextTimeMilestone(after days: Int) -> Achievement? {
         all.first { $0.kind == .timeMilestone && days < $0.dayThreshold }
     }
+
+    /// "in 3 days", and "in 1 day" rather than "in 1 days".
+    static func daysToGo(_ remaining: Int) -> String {
+        let n = max(1, remaining)
+        return n == 1 ? "in 1 day" : "in \(n) days"
+    }
 }

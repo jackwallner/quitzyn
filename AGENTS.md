@@ -81,6 +81,13 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
 - SwiftData migrations: any change to a `@Model`'s stored properties needs a schema
   migration (lightweight is fine for now). A store that won't open is moved aside as
   `Sober.v2.store.unopenable-<stamp>` rather than deleted, so history is recoverable.
+- `DailyCheckIn.day` is the current zone's midnight. After a time zone change,
+  `CheckInService.normalizeDayKeys` (run in `SoberApp.init` and at the top of
+  every `fillJourney`) re-keys every row to the new zone and merges duplicates,
+  so compare check-in days as instants only after it has run.
+- The daily reminder is 30 one-shot requests, each numbered for its own fire
+  date (`NotificationService.reminderContent`), re-armed by
+  `refreshDailyReminder(context:)` after any check-in, slip, undo or reset.
 - Widget snapshots are decoupled from SwiftData via `WidgetSnapshotStore` so the widget doesn't need a SwiftData schema.
 
 ## Android port

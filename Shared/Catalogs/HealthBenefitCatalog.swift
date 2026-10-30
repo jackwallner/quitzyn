@@ -9,9 +9,19 @@ struct HealthBenefit: Identifiable, Hashable {
     let sourceLabel: String
     let sourceURL: URL?
 
-    var displayWait: String {
-        if hoursRequired < 24 { return "\(Int(hoursRequired))h" }
-        let days = Int(hoursRequired / 24)
+    /// When the milestone lands, measured from the start ("at 1mo").
+    var displayWait: String { Self.compactDuration(hours: hoursRequired) }
+
+    /// How long is left until the milestone ("in 4h"), for countdowns. The
+    /// milestone's own time read as a countdown told someone 20 hours in that
+    /// the 24-hour milestone was a day away.
+    func remainingWait(hoursElapsed: Double) -> String {
+        Self.compactDuration(hours: max(1, (hoursRequired - hoursElapsed).rounded(.up)))
+    }
+
+    static func compactDuration(hours: Double) -> String {
+        if hours < 24 { return "\(max(1, Int(hours)))h" }
+        let days = Int(hours / 24)
         if days < 7 { return "\(days)d" }
         if days < 30 { return "\(days / 7)w" }
         if days < 365 { return "\(days / 30)mo" }

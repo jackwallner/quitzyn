@@ -1,3 +1,4 @@
+import Combine
 import SwiftData
 import StoreKit
 import SwiftUI
@@ -124,7 +125,7 @@ struct HomeView: View {
             .onChange(of: scenePhase) { _, phase in
                 if phase == .active { refreshDailyState() }
             }
-            .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged)) { _ in
+            .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged).receive(on: DispatchQueue.main)) { _ in
                 refreshDailyState()
             }
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { _ in
@@ -484,7 +485,6 @@ struct HomeView: View {
         refreshCheckInState()
         checkForGrowth()
         WidgetSnapshotPump.push(context: context)
-        refreshReminderCopy()
     }
 
     private func refreshCheckInState() {
@@ -495,6 +495,9 @@ struct HomeView: View {
         week = TendedWeek.days(
             facts: svc.facts(from: DateHelpers.daysAgo(TendedWeek.length - 1), to: .now)
         )
+        // Every check-in, slip, undo and reset passes through here, and each
+        // changes what tomorrow's reminder should say.
+        NotificationService.refreshDailyReminder(context: context)
     }
 
     /// Riding out an urge is the single highest-intent moment this app has:
@@ -572,18 +575,6 @@ struct HomeView: View {
             // Home/Timeline/Health passive nudges don't fire back-to-back.
             TrialNudgeGate.markShown()
             TrialOfferCoordinator.shared.request(.postOnboarding, policy: .initial)
-        }
-    }
-
-    /// Keep the daily reminder's streak copy current. No-ops unless a reminder
-    /// is already pending, so it never resurrects one the user disabled.
-    private func refreshReminderCopy() {
-        guard let s = settingsRows.first, s.dailyReminderEnabled else { return }
-        let hour = s.dailyReminderHour
-        let committed = s.madeCommitment
-        let streak = days
-        Task {
-            await NotificationService.refreshDailyReminder(hour: hour, committed: committed, streakDays: streak)
         }
     }
 
@@ -726,6 +717,7 @@ struct ProgressSheet: View {
     @Query private var settingsRows: [UserSettings]
     @Query private var unlockedAchievements: [UnlockedAchievement]
     @Query private var checkIns: [DailyCheckIn]
+    @Query(sort: \SobrietyJourney.startDate, order: .reverse) private var journeys: [SobrietyJourney]
     let days: Int
     let gardenState: GardenState?
     let isPro: Bool
@@ -820,13 +812,15 @@ struct ProgressSheet: View {
         return progressRow(
             icon: "flag.fill",
             title: next?.title ?? "Year One",
-            detail: next.map { "in \(max(1, $0.dayThreshold - days)) days" } ?? "Crushed it"
+            detail: next.map { AchievementCatalog.daysToGo($0.dayThreshold - days) } ?? "Crushed it"
         )
     }
 
     private var nextBenefitRow: some View {
-        // `days` is 1-based (start day = Day 1); elapsed full days is days - 1.
-        let hours = Double(max(0, days - 1)) * 24
+        // The same hours since the start that the Health tab counts, so the
+        // two never name different milestones as next.
+        let hours = journeys.first(where: { $0.isActive })
+            .map { max(0, DateHelpers.hoursBetween($0.startDate, .now)) } ?? 0
         let next = HealthBenefitCatalog.next(after: hours)
         return progressRow(
             icon: "heart.fill",
@@ -874,7 +868,10 @@ struct ProgressSheet: View {
 
     /// Every sober day ever recorded — the basis for lifetime savings so a
     /// relapse reset doesn't wipe the user's accumulated progress.
-    private var lifetimeSoberDays: Int { checkIns.filter { $0.wasSober }.count }
+    ///
+    /// Floored at the streak: today counts in the streak from midnight but has
+    /// no row until the check-in, so lifetime read a day below it every morning.
+    private var lifetimeSoberDays: Int { max(checkIns.filter { $0.wasSober }.count, days) }
 
     private var lifetimeMoneySaved: String {
         let cents = lifetimeSoberDays * (settings?.costPerDayCents ?? 0)
@@ -905,7 +902,9 @@ struct ProgressSheet: View {
         // a non-subscriber's hard-won "Perfect Week" look identical to one
         // they'd never earned, which punishes loyalty.
         let everEarned = unlockedAchievements.contains { $0.achievementID == a.id }
-        let unlocked = everEarned || days >= a.dayThreshold
+        // A streak badge counts check-ins, which the day counter does not
+        // know about, so only the trophy case can say it was earned.
+        let unlocked = everEarned || (a.kind == .timeMilestone && days >= a.dayThreshold)
         return HStack(spacing: Theme.Space.m) {
             Image(systemName: a.icon)
                 .font(.title3)

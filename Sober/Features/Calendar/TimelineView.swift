@@ -203,7 +203,9 @@ struct TimelineView: View {
     private var summaryRow: some View {
         let active = journeys.first(where: { $0.isActive })
         let days = active.map { SobrietyService.daysSinceStart($0.startDate) } ?? 0
-        let totalSober = checkIns.filter { $0.wasSober }.count
+        // Floored at the streak: today counts in Current from midnight but has
+        // no row until it is logged.
+        let totalSober = max(checkIns.filter { $0.wasSober }.count, days)
         return Grid(horizontalSpacing: 0) {
             GridRow {
                 statCell(value: "\(days)", label: "Current")
@@ -343,6 +345,19 @@ struct TimelineView: View {
                 guard !inFuture && !beforeStart else { return }
                 withAnimation(.easeInOut(duration: 0.35)) { selectedDate = day }
             }
+            // The fill colour is the only thing that tells a slip from a
+            // check-in, so VoiceOver gets it in words.
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(dayCellLabel(date: date, checkIn: checkIn, readable: !inFuture && !beforeStart))
+            .accessibilityAddTraits(inFuture || beforeStart ? [] : .isButton)
+            .accessibilityAddTraits(isSelected ? .isSelected : [])
+    }
+
+    private func dayCellLabel(date: Date, checkIn: DailyCheckIn?, readable: Bool) -> String {
+        let name = date.formatted(.dateTime.month(.wide).day())
+        guard readable, let checkIn else { return name }
+        if !checkIn.wasSober { return "\(name), slip" }
+        return checkIn.wasLogged ? "\(name), checked in" : "\(name), not checked in"
     }
 
     // MARK: - Reconstructed tree for the selected day
@@ -518,6 +533,7 @@ struct TimelineView: View {
             context: context
         )
         pendingSlipDay = nil
+        NotificationService.refreshDailyReminder(context: context)
     }
 
     /// 1...5 mood scale, ordered rough → excellent to match the journal's
@@ -586,7 +602,13 @@ struct TimelineView: View {
             mood: draftMood,
             note: trimmed.isEmpty ? nil : trimmed
         )
+        // Logging today here is the same check-in as Home's, so it waters
+        // the garden the same way.
+        if wasSober, DateHelpers.isSameDay(day, .now) {
+            GardenService(context: context).water()
+        }
         WidgetSnapshotPump.push(context: context)
+        NotificationService.refreshDailyReminder(context: context)
     }
 
     /// Reverse a slip in full: calendar row, counter, journey, and garden.
@@ -599,12 +621,14 @@ struct TimelineView: View {
             note: trimmed.isEmpty ? nil : trimmed,
             context: context
         )
+        NotificationService.refreshDailyReminder(context: context)
     }
 
     private func deleteCheckIn(_ checkIn: DailyCheckIn) {
         context.delete(checkIn)
         context.saveOrReport()
         WidgetSnapshotPump.push(context: context)
+        NotificationService.refreshDailyReminder(context: context)
     }
 }
 
