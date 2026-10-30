@@ -73,7 +73,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@  %2$@"
+            "value": "%1$@ · %2$@"
           }
         },
         "ro": {
@@ -972,13 +972,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg måned"
+                      "value": "%arg mnd."
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg måneder"
+                      "value": "%arg mnd."
                     }
                   }
                 }
@@ -2162,7 +2162,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / dag"
+            "value": "%1$@ / dag"
           }
         },
         "ro": {
@@ -2263,7 +2263,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / mnd."
+            "value": "%1$@ / mnd."
           }
         },
         "ro": {
@@ -2364,7 +2364,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / uke"
+            "value": "%1$@ / uke"
           }
         },
         "ro": {
@@ -2465,7 +2465,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ / år"
+            "value": "%1$@ / år"
           }
         },
         "ro": {
@@ -2566,7 +2566,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ Behold hele hagen, eller avslutt når som helst før fornyelse."
+            "value": "%1$@ Behold hele hagen, eller avslutt når som helst før abonnementet fornyes."
           }
         },
         "ro": {
@@ -2667,7 +2667,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ i året"
+            "value": "%1$@ i året"
           }
         },
         "ro": {
@@ -2762,7 +2762,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ koster omtrent like mye som nikotinposer for %2$lld og en halv dag."
+            "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %2$lld og en halv dag."
           }
         },
         "ro": {
@@ -3125,7 +3125,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ koster omtrent like mye som nikotinposer for %#@n@."
+            "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %#@n@."
           },
           "substitutions": {
             "n": {
@@ -3136,13 +3136,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dag"
+                      "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %#@n@."
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dager"
+                      "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i %#@n@."
                     }
                   }
                 }
@@ -3342,7 +3342,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ koster omtrent like mye som nikotinposer for halvannen dag."
+            "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i halvannen dag."
           }
         },
         "ro": {
@@ -3437,7 +3437,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ koster omtrent like mye som en dags forbruk av nikotinposer."
+            "value": "Prisen på %1$@ tilsvarer omtrent det du bruker på nikotinposer i løpet av én dag."
           }
         },
         "ro": {
@@ -3532,7 +3532,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ koster mindre enn en dags forbruk av nikotinposer."
+            "value": "Prisen på %1$@ er lavere enn det du bruker på nikotinposer i løpet av én dag."
           }
         },
         "ro": {
@@ -3633,7 +3633,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ /dag"
+            "value": "%1$@ per dag"
           }
         },
         "ro": {
@@ -3835,7 +3835,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du unngår %1$@ nikotinposer. Kroppen slipper dermed å behandle den nikotinen."
+            "value": "Du unngår %1$@ nikotinposer. Kroppen slipper dermed å omsette den nikotinen."
           }
         },
         "ro": {
@@ -4037,7 +4037,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@."
+            "value": "%1$@."
           }
         },
         "ro": {
@@ -4239,7 +4239,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@. Engangskjøp. Livsvarig tilgang, ikke abonnement."
+            "value": "%1$@. Engangskjøp. Livstidsadgang uten abonnement."
           }
         },
         "ro": {
@@ -4340,7 +4340,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld"
+            "value": "%1$lld"
           }
         },
         "ro": {
@@ -4441,7 +4441,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld  %2$@ ride ut så langt"
+            "value": "Du har kommet deg gjennom %1$lld %2$@ så langt."
           }
         },
         "ro": {
@@ -5772,13 +5772,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dag nikotinfri"
+                  "value": "%1$lld dag uten nikotin"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dager nikotinfri"
+                  "value": "%1$lld dager uten nikotin"
                 }
               }
             }
@@ -6125,7 +6125,7 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld nikotinfri dag"
+                  "value": "%1$lld nikotinfrie dag"
                 }
               },
               "other": {
@@ -6478,13 +6478,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dag med Bloom+ gratis"
+                  "value": "%1$lld dag med Bloom+ gratis"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld dager med Bloom+ gratis"
+                  "value": "%1$lld dager med Bloom+ gratis"
                 }
               }
             }
@@ -6642,7 +6642,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld av de siste %2$lld endte slik."
+            "value": "Dette skjedde i %1$lld av de siste %2$lld registrerte nikotinsuget."
           }
         },
         "ro": {
@@ -7632,13 +7632,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld tre vokst"
+                  "value": "%1$lld tre dyrket"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld trær vokst"
+                  "value": "%1$lld trær dyrket"
                 }
               }
             }
@@ -7985,13 +7985,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld tre vokst i lunden din"
+                  "value": "Det har vokst %1$lld tre i lunden din."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%lld trær vokst i lunden din"
+                  "value": "Det har vokst %1$lld trær i lunden din."
                 }
               }
             }
@@ -8338,13 +8338,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld dag"
+                  "value": "Gratis prøveperiode på %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld dager"
+                  "value": "Gratis prøveperiode på %1$lld dager"
                 }
               }
             }
@@ -8691,13 +8691,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dag gratis med måneds- og årsabonnement."
+                  "value": "Prøveperiode: %1$lld dag gratis med måneds- eller årsabonnement."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dager gratis med måneds- og årsabonnement."
+                  "value": "Prøveperiode: %1$lld dager gratis med måneds- eller årsabonnement."
                 }
               }
             }
@@ -9044,13 +9044,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dag gratis med månedsabonnement."
+                  "value": "Prøveperiode: %1$lld dag gratis med månedsabonnement."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dager gratis med månedsabonnement."
+                  "value": "Prøveperiode: %1$lld dager gratis med månedsabonnement."
                 }
               }
             }
@@ -9397,13 +9397,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dag gratis med årsabonnement."
+                  "value": "Prøveperiode: %1$lld dag gratis med årsabonnement."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dager gratis med årsabonnement."
+                  "value": "Prøveperiode: %1$lld dager gratis med årsabonnement."
                 }
               }
             }
@@ -9738,13 +9738,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld dag, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld dag, deretter %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld dager, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld dager, deretter %2$@."
                 }
               }
             }
@@ -10091,13 +10091,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld måned"
+                  "value": "Gratis prøveperiode i %1$lld måned"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld måneder"
+                  "value": "Gratis prøveperiode i %1$lld måneder"
                 }
               }
             }
@@ -10432,13 +10432,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld måned, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld måned, deretter %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld måneder, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld måneder, deretter %2$@."
                 }
               }
             }
@@ -10785,13 +10785,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld år"
+                  "value": "Gratis prøveperiode i %1$lld år"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld år"
+                  "value": "Gratis prøveperiode i %1$lld år"
                 }
               }
             }
@@ -11126,13 +11126,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld år, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld år, deretter %2$@."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Gratis i %1$lld år, deretter %2$@."
+                  "value": "Gratis prøveperiode i %1$lld år, deretter %2$@."
                 }
               }
             }
@@ -11479,13 +11479,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld fordel"
+                  "value": "/ %1$lld fordel"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "/ %lld fordeler"
+                  "value": "/ %1$lld fordeler"
                 }
               }
             }
@@ -11744,7 +11744,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "1-800-662-HELP · gratis, konfidensielt, døgnåpent"
+            "value": "1-800-662-HELP · gratis og konfidensielt · døgnåpent"
           }
         },
         "ro": {
@@ -11845,7 +11845,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "100 innsjekker på rad."
+            "value": "100 daglige registreringer på rad."
           }
         },
         "ro": {
@@ -11946,7 +11946,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "13 nikotin-gjenvinning milepæler med kilder."
+            "value": "13 kildebelagte helseendringer etter nikotinstopp."
           }
         },
         "ro": {
@@ -12047,7 +12047,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 innsjekker på rad."
+            "value": "30 daglige registreringer på rad."
           }
         },
         "ro": {
@@ -12350,7 +12350,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En blomstrende sakura i myk rosa. Kronbladene daler ned mens rekken vokser."
+            "value": "En blomstrende sakura med mykrosa blomster. Kronbladene daler mens rekken din vokser."
           }
         },
         "ro": {
@@ -12653,7 +12653,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En spinkel lønn i varm høstrød og gull. Stjerneformede blader daler ned mens dagene går."
+            "value": "En lett og elegant lønn i varme høstfarger, rødt og gull. Stjerneformede blader daler etter hvert som dagene går."
           }
         },
         "ro": {
@@ -12754,7 +12754,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En legendarisk bonsai. Et helt år med vekst, synlig."
+            "value": "En legendarisk bonsai. Et helt års vekst som er synlig."
           }
         },
         "ro": {
@@ -12855,7 +12855,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En måned med Bloom+"
+            "value": "Et månedsabonnement på Bloom+"
           }
         },
         "ro": {
@@ -12956,7 +12956,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et frø er sådd. Hvert store tre starter her."
+            "value": "Et frø er sådd. Slik begynner alle store trær."
           }
         },
         "ro": {
@@ -13057,7 +13057,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En småplante står rak. Røttene tar tak."
+            "value": "En småplante står støtt, og røttene begynner å feste seg."
           }
         },
         "ro": {
@@ -13158,7 +13158,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En sprekk kan bare angres så lenge den er den nyeste."
+            "value": "Du kan bare angre en glipp så lenge den er den nyeste i historikken din."
           }
         },
         "ro": {
@@ -13259,7 +13259,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En tidløs, opprett bonsai. Symmetrisk, balansert, rolig."
+            "value": "En tidløs, opprett bonsai. Symmetrisk, balansert og rolig."
           }
         },
         "ro": {
@@ -13360,7 +13360,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ett år med Bloom+"
+            "value": "Et årsabonnement på Bloom+"
           }
         },
         "ro": {
@@ -13461,7 +13461,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ca. 6 mg per nikotinpose"
+            "value": "Omtrent 6 mg per nikotinpose"
           }
         },
         "ro": {
@@ -13966,7 +13966,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ungdomsscene"
+            "value": "Ungt stadium"
           }
         },
         "ro": {
@@ -14067,7 +14067,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter maten"
+            "value": "Etter et måltid"
           }
         },
         "ro": {
@@ -14168,7 +14168,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Forskning knytter ett år uten nikotin til betydelig lavere hjerte- og karrisiko når man holder seg unna tobakk. Snakk med lege om helsen din."
+            "value": "Forskning knytter ett år uten nikotin til betydelig lavere risiko for hjerte- og karsykdom når du holder deg unna tobakk. Snakk med lege om helsen din."
           }
         },
         "ro": {
@@ -14269,7 +14269,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter flere måneder uten nikotinets topper og fall opplever mange at det vanlige stressnivået er lavere og at det er lettere å finne ro."
+            "value": "Etter flere måneder uten nikotinets brå topper og fall opplever mange at det vanlige stressnivået er lavere og at det er lettere å finne ro."
           }
         },
         "ro": {
@@ -14370,7 +14370,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter to dager begynner nerveender som er påvirket av nikotin å hente seg inn. Mange merker fyldigere smak og tydeligere lukter."
+            "value": "Etter to dager begynner nerveender som er påvirket av nikotin, å fungere bedre. Mange merker fyldigere smak og tydeligere lukter."
           }
         },
         "ro": {
@@ -14471,7 +14471,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle 6 bonsaiartene"
+            "value": "Alle de 6 bonsaiartene"
           }
         },
         "ro": {
@@ -14572,7 +14572,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle fordeler låst opp"
+            "value": "Alle fordelene er låst opp"
           }
         },
         "ro": {
@@ -14673,7 +14673,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alt låst opp"
+            "value": "Alt er låst opp"
           }
         },
         "ro": {
@@ -14875,7 +14875,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nesten gjennom. Det som er igjen, er på vei ut."
+            "value": "Det verste er nesten over. Resten er også på vei ut."
           }
         },
         "ro": {
@@ -15077,7 +15077,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Amerikansk hjerteforening"
+            "value": "American Heart Association"
           }
         },
         "ro": {
@@ -15178,7 +15178,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "En eviggrønn furu med skylignende nåletrinn og en knudrete, værbitt stamme."
+            "value": "En eviggrønn furu med lag av nåler som skyer og en krokete, værbitt stamme."
           }
         },
         "ro": {
@@ -15279,7 +15279,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eldgammel"
+            "value": "Eldgammelt"
           }
         },
         "ro": {
@@ -15380,7 +15380,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eldgammel og værbitt. Dette treet har sett mye."
+            "value": "Eldgammelt og værbitt. Dette treet har opplevd mye."
           }
         },
         "ro": {
@@ -15481,7 +15481,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gamle scenen"
+            "value": "Eldgammelt stadium"
           }
         },
         "ro": {
@@ -15582,7 +15582,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Svart: %1$@"
+            "value": "Besvart: %1$@"
           }
         },
         "ro": {
@@ -15683,7 +15683,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Besvart: %1$@ · Åpne: %2$@"
+            "value": "Besvart: %1$@ · Ikke besvart: %2$@"
           }
         },
         "ro": {
@@ -15885,7 +15885,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Noe du vil huske fra i dag?"
+            "value": "Er det noe du vil huske fra i dag?"
           }
         },
         "ro": {
@@ -15986,7 +15986,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple vil vise faktureringsdetaljene før du bekrefter."
+            "value": "Apple viser betalingsdetaljene før du bekrefter."
           }
         },
         "ro": {
@@ -16087,7 +16087,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rundt den tredje dagen når fysiske abstinensplager ofte toppen når den siste nikotinen forlater kroppen. Deretter blir suget gjerne kortere og mindre intenst."
+            "value": "Rundt den tredje dagen er de fysiske abstinensplagene ofte på sitt sterkeste, mens den siste nikotinen forlater kroppen. Deretter blir nikotinsuget gjerne kortere og mindre intenst."
           }
         },
         "ro": {
@@ -16188,7 +16188,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter omtrent to uker uten nikotinposer mot tannkjøttet begynner irritasjon og betennelse i munnen å avta, og vevet begynner å leges."
+            "value": "Etter omtrent to uker uten nikotinposer mot tannkjøttet begynner irritasjon og betennelse i munnen å avta. Tilstanden i vevet blir gradvis bedre."
           }
         },
         "ro": {
@@ -16592,7 +16592,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bygger på sug du kom deg gjennom, ikke et gjennomsnitt for alle."
+            "value": "Bygger på nikotinsuget du kom deg gjennom, ikke et gjennomsnitt for alle."
           }
         },
         "ro": {
@@ -16794,7 +16794,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Begynn din nikotinfrie reise."
+            "value": "Begynn reisen mot et liv uten nikotin."
           }
         },
         "ro": {
@@ -16996,7 +16996,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Søvn og konsentrasjon blir bedre"
+            "value": "Bedre søvn og konsentrasjon"
           }
         },
         "ro": {
@@ -17299,7 +17299,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Blodgjennomstrømning og energi øker."
+            "value": "Blodgjennomstrømningen øker, og energinivået stiger."
           }
         },
         "ro": {
@@ -17400,7 +17400,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin i blodet synker tydelig."
+            "value": "Nikotinnivået i blodet synker kraftig."
           }
         },
         "ro": {
@@ -17602,7 +17602,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ aktiv"
+            "value": "Bloom+ er aktivt"
           }
         },
         "ro": {
@@ -17703,7 +17703,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ for livet"
+            "value": "Bloom+ livet ut"
           }
         },
         "ro": {
@@ -17804,7 +17804,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ planer er midlertidig utilgjengelige. Du kan prøve eller fortsette gratis."
+            "value": "Bloom+-abonnementene er midlertidig utilgjengelige. Prøv igjen eller fortsett gratis."
           }
         },
         "ro": {
@@ -17905,7 +17905,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+ låser opp alle arter, så du kan bytte tre når du vil. Rekken vokser uansett hvilket du velger."
+            "value": "Bloom+ låser opp alle bonsaiartene, så du kan bytte tre når du vil. Rekken din vokser uansett hvilket du velger."
           }
         },
         "ro": {
@@ -18006,7 +18006,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+, gratis å prøve"
+            "value": "Prøv Bloom+ gratis"
           }
         },
         "ro": {
@@ -18208,7 +18208,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsaistiler"
+            "value": "Bonsaiutforminger"
           }
         },
         "ro": {
@@ -18410,7 +18410,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsai, dag %lld"
+            "value": "Bonsai, dag %1$lld"
           }
         },
         "ro": {
@@ -18612,7 +18612,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Greinene strekker seg bredere. Formen trer frem."
+            "value": "Greinene strekker seg utover, og treet begynner å få form."
           }
         },
         "ro": {
@@ -18915,7 +18915,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter omtrent en måned avtar ofte angst og irritabilitet fra den tidlige abstinensen mens dopaminsignalene i hjernen finner en ny balanse. Opplevelser varierer."
+            "value": "Etter omtrent en måned avtar ofte angst og irritabilitet fra den tidlige abstinensen mens dopaminsignalene i hjernen finner en ny balanse. Forløpet varierer."
           }
         },
         "ro": {
@@ -19016,7 +19016,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter omtrent seks måneder uten nikotinposer synker risikoen for tilbaketrukket tannkjøtt og sår i munnen, og munnvevet fortsetter å hente seg inn."
+            "value": "Etter omtrent seks måneder uten nikotinposer synker risikoen for tilbaketrukket tannkjøtt og sår i munnen. Tilstanden i munnvevet fortsetter å bli bedre."
           }
         },
         "ro": {
@@ -19218,7 +19218,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etter en uke blir søvn og konsentrasjon som regel bedre når hjernen tilpasser seg en hverdag uten regelmessige doser nikotin. Opplevelser varierer."
+            "value": "Etter én uke blir søvn og konsentrasjon som regel bedre når hjernen tilpasser seg en hverdag uten regelmessige doser nikotin. Forløpet varierer."
           }
         },
         "ro": {
@@ -19622,7 +19622,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du kan avslutte når du vil før prøveperioden er over. Ingen uventede kostnader."
+            "value": "Du kan avslutte når som helst før perioden er over. Ingen uventede kostnader."
           }
         },
         "ro": {
@@ -19723,7 +19723,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Belastningen på hjerte og kar blir mindre."
+            "value": "Belastningen på hjerte og kar avtar."
           }
         },
         "ro": {
@@ -20026,7 +20026,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Endring til nikotinfri"
+            "value": "Endre til nikotinfri dag"
           }
         },
         "ro": {
@@ -20127,7 +20127,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Endre til sprekk"
+            "value": "Endre til glipp"
           }
         },
         "ro": {
@@ -20228,7 +20228,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sjekk inn for i dag"
+            "value": "Registrer dagen i dag"
           }
         },
         "ro": {
@@ -20329,7 +20329,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer en dag for å starte uken."
+            "value": "Registrer én dag for å starte uken."
           }
         },
         "ro": {
@@ -20531,7 +20531,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Innsjekk"
+            "value": "Daglig registrering"
           }
         },
         "ro": {
@@ -20632,7 +20632,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sjekket inn"
+            "value": "Registrert"
           }
         },
         "ro": {
@@ -20935,7 +20935,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Blodsirkulasjonen bedres"
+            "value": "Blodsirkulasjonen blir bedre"
           }
         },
         "ro": {
@@ -21541,7 +21541,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stabilitetsmester"
+            "value": "Mest konsekvent"
           }
         },
         "ro": {
@@ -22046,7 +22046,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kostnad og bruk"
+            "value": "Kostnad og forbruk"
           }
         },
         "ro": {
@@ -22248,7 +22248,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kunne ikke laste abonnementer"
+            "value": "Abonnementene kunne ikke lastes inn"
           }
         },
         "ro": {
@@ -22349,7 +22349,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kunne ikke fullføre kjøpet. Prøv igjen."
+            "value": "Kjøpet kunne ikke fullføres. Prøv igjen."
           }
         },
         "ro": {
@@ -22450,7 +22450,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kunne ikke laste abonnementsvalg. Sjekk tilkoblingen og prøv igjen."
+            "value": "Abonnementsalternativene kunne ikke lastes inn. Sjekk tilkoblingen og prøv igjen."
           }
         },
         "ro": {
@@ -22551,7 +22551,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kunne ikke gjenopprette kjøp. Prøv igjen."
+            "value": "Kjøpene kunne ikke gjenopprettes. Prøv igjen."
           }
         },
         "ro": {
@@ -22652,7 +22652,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kunne ikke starte prøveperioden. Prøv igjen."
+            "value": "Prøveperioden kunne ikke startes. Prøv igjen."
           }
         },
         "ro": {
@@ -22753,7 +22753,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teller med på reisen. Ikke sjekket inn ennå."
+            "value": "Dagen teller med i rekken din, men er ikke registrert ennå."
           }
         },
         "ro": {
@@ -22854,7 +22854,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Suget når toppen og avtar"
+            "value": "Nikotinsuget når toppen og avtar"
           }
         },
         "ro": {
@@ -22955,7 +22955,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sug etter tid på døgnet"
+            "value": "Nikotinsug etter tid på døgnet"
           }
         },
         "ro": {
@@ -23056,7 +23056,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fullført"
+            "value": "Så bra!"
           }
         },
         "ro": {
@@ -23157,7 +23157,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nå"
+            "value": "Nåværende"
           }
         },
         "ro": {
@@ -23561,7 +23561,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Daglig innsjekk"
+            "value": "Daglig registrering"
           }
         },
         "ro": {
@@ -23662,7 +23662,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Daglig innsjekk 7 dager på rad."
+            "value": "Daglige registreringer sju dager på rad."
           }
         },
         "ro": {
@@ -23763,7 +23763,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Daglig dagbok"
+            "value": "Dagbok"
           }
         },
         "ro": {
@@ -23864,7 +23864,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Daglige dagbokspørsmål når du trenger dem mest, pluss resten av Bloom+."
+            "value": "Daglige spørsmål til dagboken når du trenger dem mest, pluss resten av Bloom+."
           }
         },
         "ro": {
@@ -23965,7 +23965,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Daglig påminnelsestid"
+            "value": "Tidspunkt for daglig påminnelse"
           }
         },
         "ro": {
@@ -24268,7 +24268,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dag %lld"
+            "value": "Dag %1$lld"
           }
         },
         "ro": {
@@ -24369,7 +24369,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dag %lld venter"
+            "value": "Dag %1$lld venter"
           }
         },
         "ro": {
@@ -24571,7 +24571,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagen starter nå."
+            "value": "Dag én starter nå."
           }
         },
         "ro": {
@@ -25076,7 +25076,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Beskriv et øyeblikk av ro du opplevde nylig."
+            "value": "Beskriv et øyeblikk med ro fra den siste tiden."
           }
         },
         "ro": {
@@ -25682,7 +25682,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alkohol"
+            "value": "Alkoholbruk"
           }
         },
         "ro": {
@@ -25783,7 +25783,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Når jeg kjører"
+            "value": "Bilkjøring"
           }
         },
         "ro": {
@@ -25985,7 +25985,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uansett er det bra. Du kan se dette når som helst i Innstillinger."
+            "value": "Begge deler er helt greit. Du kan endre dette når som helst i Innstillinger."
           }
         },
         "ro": {
@@ -26490,7 +26490,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvert sug du kom deg gjennom, endte uten en nikotinpose."
+            "value": "Hvert nikotinsug du kom deg gjennom, endte uten en nikotinpose."
           }
         },
         "ro": {
@@ -26591,7 +26591,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hver dollar og pose du unngår."
+            "value": "Følg med på pengene du sparer og nikotinposene du unngår."
           }
         },
         "ro": {
@@ -26692,7 +26692,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hver nikotinfri dag vokser ditt tre."
+            "value": "Hver dag uten nikotin får treet ditt til å vokse."
           }
         },
         "ro": {
@@ -26793,7 +26793,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hver nikotinfri dag du har telt, teller fortsatt."
+            "value": "Hver registrerte dag uten nikotin teller fortsatt"
           }
         },
         "ro": {
@@ -26894,7 +26894,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hver gang du står imot nikotinsuget, lærer denne siden når det kommer, hva som utløser det og hvor lenge det varer."
+            "value": "Hver gang du kommer deg gjennom et nikotinsug, lærer denne siden når det kommer, hva som utløser det og hvor lenge det varer."
           }
         },
         "ro": {
@@ -26995,7 +26995,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle verktøyene som holder rekken synlig, låst opp i dag."
+            "value": "Lås opp alle verktøyene som viser rekken din, allerede i dag."
           }
         },
         "ro": {
@@ -27279,13 +27279,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Alle verktøyene som holder rekken synlig. Ingenting belastes på %lld dag."
+                  "value": "Alle verktøyene som viser rekken din. Du betaler ingenting på %1$lld dag."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Alle verktøyene som holder rekken synlig. Ingenting belastes på %lld dager."
+                  "value": "Alle verktøyene som viser rekken din. Du betaler ingenting på %1$lld dager."
                 }
               }
             }
@@ -27449,7 +27449,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle verktøyene som holder rekken synlig. Ingenting belastes i dag."
+            "value": "Alle verktøyene som viser rekken din. Du betaler ingenting i dag."
           }
         },
         "ro": {
@@ -27550,7 +27550,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alt låses opp. Full tilgang, %@ å betale nå."
+            "value": "Alt låses opp. Full tilgang. Du betaler %1$@ nå."
           }
         },
         "ro": {
@@ -28055,7 +28055,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Færre enn de foregående 7 dagene"
+            "value": "Færre enn de foregående sju dagene"
           }
         },
         "ro": {
@@ -28156,7 +28156,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Finn behandling"
+            "value": "Finn hjelp"
           }
         },
         "ro": {
@@ -28358,7 +28358,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Følg 13 kildede nikotin-gjenvinning milepæler"
+            "value": "Følg 13 kildebelagte helseendringer etter nikotinstopp"
           }
         },
         "ro": {
@@ -28661,7 +28661,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gratis til %1$@. Slå på varsler, så minner vi deg på det før prøveperioden er over."
+            "value": "Gratis til %1$@. Slå på varslinger, så minner vi deg på det før prøveperioden er over."
           }
         },
         "ro": {
@@ -28863,7 +28863,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gratis og konfidensiell hjelp er tilgjengelig når som helst. Å ta kontakt er en styrke, ikke et tilbakeslag."
+            "value": "Gratis og konfidensiell hjelp er tilgjengelig når som helst. Å be om hjelp er en styrke, ikke et tilbakeslag."
           }
         },
         "ro": {
@@ -28964,7 +28964,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Full tilgang til hage, dagbok, helse og sparing i prøveperioden."
+            "value": "Full tilgang til hagen, dagboken, helsetidslinjen og besparelsene dine. Gratis til prøveperioden er over."
           }
         },
         "ro": {
@@ -29065,7 +29065,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hele helsetidslinjen"
+            "value": "Full helsetidslinje"
           }
         },
         "ro": {
@@ -29166,7 +29166,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hageelementer"
+            "value": "Hagefunksjoner"
           }
         },
         "ro": {
@@ -29267,7 +29267,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Generell informasjon om velvære, ikke medisinske råd. Forløp varierer fra person til person. Snakk med helsepersonell hvis du har helsespørsmål."
+            "value": "Generell informasjon om velvære, ikke medisinske råd. Forløpet varierer fra person til person. Snakk med helsepersonell hvis du har helsespørsmål."
           }
         },
         "ro": {
@@ -29570,7 +29570,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ett minutt til"
+            "value": "Gi meg ett minutt til"
           }
         },
         "ro": {
@@ -29873,7 +29873,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bunndekke"
+            "value": "Bunndekkende planter"
           }
         },
         "ro": {
@@ -29974,7 +29974,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dyrk alle artene."
+            "value": "Dyrk alle bonsaiartene."
           }
         },
         "ro": {
@@ -30176,7 +30176,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tannkjøtt og vev i munnen henter seg inn."
+            "value": "Tilstanden i tannkjøttet og munnvevet blir bedre."
           }
         },
         "ro": {
@@ -30277,7 +30277,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tannkjøttet begynner å leges"
+            "value": "Tannkjøttet begynner å bli bedre"
           }
         },
         "ro": {
@@ -30479,7 +30479,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tyngst mellom %1$@ og %2$@"
+            "value": "Vanskeligst mellom %1$@ og %2$@"
           }
         },
         "ro": {
@@ -30984,7 +30984,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hold"
+            "value": "Hold inne"
           }
         },
         "ro": {
@@ -31186,7 +31186,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "time"
+            "value": "Time"
           }
         },
         "ro": {
@@ -31388,7 +31388,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvordan har hverdagen endret seg siden jeg sluttet å nikotin?"
+            "value": "Hvordan har hverdagen endret seg etter at jeg sluttet med nikotin?"
           }
         },
         "ro": {
@@ -31590,7 +31590,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvor lenge du har vært nikotinfri."
+            "value": "Hvor lenge du har vært uten nikotin."
           }
         },
         "ro": {
@@ -31792,7 +31792,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvor sterkt var det?"
+            "value": "Hvor sterkt var nikotinsuget?"
           }
         },
         "ro": {
@@ -31893,7 +31893,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeg forplikter meg til å bli bedre"
+            "value": "Jeg bestemmer meg for å få det bedre."
           }
         },
         "ro": {
@@ -32095,7 +32095,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeg sprakk"
+            "value": "Jeg hadde en glipp"
           }
         },
         "ro": {
@@ -32196,7 +32196,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeg forplikter meg"
+            "value": "Jeg forplikter meg til dette"
           }
         },
         "ro": {
@@ -32297,7 +32297,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeg har nikotinsug."
+            "value": "Jeg har nikotinsug"
           }
         },
         "ro": {
@@ -32398,7 +32398,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Jeg kom meg gjennom"
+            "value": "Jeg kom meg gjennom det"
           }
         },
         "ro": {
@@ -32499,7 +32499,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hva ville jeg mistet hvis jeg tok en nikotinpose i dag?"
+            "value": "Hva ville jeg mistet hvis jeg brukte en nikotinpose i dag?"
           }
         },
         "ro": {
@@ -32600,7 +32600,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvis dagens nikotinfri, logg den og vann din hage."
+            "value": "Hvis du har en dag uten nikotin, registrer den og vann hagen."
           }
         },
         "ro": {
@@ -32903,7 +32903,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Styrke %lld av 5"
+            "value": "Intensitet: %1$lld av 5"
           }
         },
         "ro": {
@@ -33206,7 +33206,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Det er allerede mindre enn for et minutt siden, selv om det ikke føles over."
+            "value": "Nikotinsuget er allerede svakere enn for ett minutt siden, selv om det ikke føles helt over."
           }
         },
         "ro": {
@@ -33307,7 +33307,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Det er greit. En sprekk er en del av mange reiser, og å registrere den holder resten av historikken ærlig."
+            "value": "Det går bra. En glipp er en del av mange endringsreiser. Når du registrerer den, blir resten av historikken din riktig."
           }
         },
         "ro": {
@@ -33610,7 +33610,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tidskrift privat gjennom de vanskelige dagene"
+            "value": "Skriv dagbok for deg selv gjennom de vanskelige dagene"
           }
         },
         "ro": {
@@ -33913,7 +33913,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Behold hele hagen, dagboken og sparingen, eller avslutt før fornyelse."
+            "value": "Behold hele hagen, dagboken og besparelsene dine, eller avslutt før abonnementet fornyes."
           }
         },
         "ro": {
@@ -34014,7 +34014,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siste 7 dager: %1$lld. De foregående 7 dagene: %2$lld."
+            "value": "Siste sju dager: %1$lld. De foregående sju dagene: %2$lld."
           }
         },
         "ro": {
@@ -34418,7 +34418,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Legendarisk scene"
+            "value": "Legendarisk stadium"
           }
         },
         "ro": {
@@ -34620,7 +34620,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Livstid: %1$@"
+            "value": "Livstidsadgang: %1$@"
           }
         },
         "ro": {
@@ -34822,7 +34822,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Laster abonnementer …"
+            "value": "Laster inn abonnementer…"
           }
         },
         "ro": {
@@ -34923,7 +34923,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Låst. Trykk for å lese om Bloom+"
+            "value": "Låst. Trykk på raden for å lese om Bloom+"
           }
         },
         "ro": {
@@ -35024,7 +35024,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer sprekk"
+            "value": "Registrer en glipp"
           }
         },
         "ro": {
@@ -35125,7 +35125,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrere en sprekk?"
+            "value": "Registrere en glipp?"
           }
         },
         "ro": {
@@ -35226,7 +35226,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logg som nikotinfri"
+            "value": "Registrer som dag uten nikotin"
           }
         },
         "ro": {
@@ -35327,7 +35327,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer og fortsett"
+            "value": "Registrer det og fortsett"
           }
         },
         "ro": {
@@ -35428,7 +35428,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer"
+            "value": "Registrer glipp"
           }
         },
         "ro": {
@@ -35529,7 +35529,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer dagen og vann hagen. Du klarer dette."
+            "value": "Registrer dagen og vann hagen. Dette klarer du."
           }
         },
         "ro": {
@@ -35630,7 +35630,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer dagen som nikotinfri, og vann bonsaien."
+            "value": "Registrer dagen som nikotinfri og vann bonsaien"
           }
         },
         "ro": {
@@ -35731,7 +35731,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sprekk registrert"
+            "value": "Glipp registrert"
           }
         },
         "ro": {
@@ -35832,7 +35832,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logged nikotinfri"
+            "value": "Nikotinfri dag registrert"
           }
         },
         "ro": {
@@ -36236,7 +36236,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Risikoen på lang sikt blir mindre."
+            "value": "Risikoen på lang sikt avtar."
           }
         },
         "ro": {
@@ -36539,7 +36539,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voksen"
+            "value": "Modent"
           }
         },
         "ro": {
@@ -36640,7 +36640,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eldre scenen"
+            "value": "Modent stadium"
           }
         },
         "ro": {
@@ -36943,7 +36943,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Penger og posesporing"
+            "value": "Penger og nikotinposer"
           }
         },
         "ro": {
@@ -37448,7 +37448,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Flere enn de foregående 7 dagene"
+            "value": "Flere enn de foregående sju dagene"
           }
         },
         "ro": {
@@ -37650,7 +37650,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "De fleste registrerte sugene kommer i dette tidsrommet: %1$lld av %2$lld."
+            "value": "De fleste registrerte nikotinsuget kommer i dette tidsrommet: %1$lld av %2$lld."
           }
         },
         "ro": {
@@ -37751,7 +37751,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Det meste av nikotinet forlater kroppen."
+            "value": "Det meste av nikotinet er ute av kroppen."
           }
         },
         "ro": {
@@ -37852,7 +37852,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mest %1$@"
+            "value": "For det meste %1$@"
           }
         },
         "ro": {
@@ -38054,7 +38054,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "NCI · Nikotinabstinenser"
+            "value": "NCI · Nikotinabstinens"
           }
         },
         "ro": {
@@ -38256,7 +38256,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nevn en situasjon der jeg pleide å nå etter en pose. Hvordan navigerte jeg det?"
+            "value": "Beskriv en situasjon der du pleide å ty til en nikotinpose. Hvordan kom du deg gjennom den?"
           }
         },
         "ro": {
@@ -38357,7 +38357,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nerveender begynner å hente seg inn."
+            "value": "Nerveendene begynner gradvis å fungere bedre."
           }
         },
         "ro": {
@@ -39367,7 +39367,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin har kort halveringstid. I løpet av noen timer faller nivået i blodet med mer enn halvparten mens kroppen bryter ned den siste dosen."
+            "value": "Nikotin har kort halveringstid. I løpet av noen timer synker nivået i blodet med mer enn halvparten mens kroppen bryter ned den siste dosen."
           }
         },
         "ro": {
@@ -39468,7 +39468,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotin aldri absorbert"
+            "value": "Nikotin som ikke ble tatt opp"
           }
         },
         "ro": {
@@ -39973,7 +39973,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingen innlegg ennå. Det første er gratis. Trykk på blyanten."
+            "value": "Ingen innlegg ennå. Det første er gratis. Trykk på blyanten for å skrive det."
           }
         },
         "ro": {
@@ -40175,7 +40175,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingen betaling nå · Apple minner deg før trekk · Data på enheten"
+            "value": "Ingen betaling nå · Apple varsler deg før belastning · Dataene lagres på enheten"
           }
         },
         "ro": {
@@ -40371,7 +40371,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikke spart"
+            "value": "Ikke lagret"
           }
         },
         "ro": {
@@ -40472,7 +40472,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spart på snus"
+            "value": "Ikke brukt på nikotinposer"
           }
         },
         "ro": {
@@ -40674,7 +40674,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usikker ennå. Avslutt"
+            "value": "Ikke sikker ennå. Avslutt økten"
           }
         },
         "ro": {
@@ -40876,7 +40876,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ingen mønstre ennå"
+            "value": "Ingenting å lese ennå"
           }
         },
         "ro": {
@@ -40977,7 +40977,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Legg merke til det uten å krangle med det. Du prøver ikke å vinne, du venter det ut."
+            "value": "Legg merke til nikotinsuget uten å krangle med det. Du trenger ikke å vinne, bare å vente det ut."
           }
         },
         "ro": {
@@ -41078,7 +41078,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Varsler slås av for Avslutt Zyn, slik at påminnelsen ikke kan leveres. Trykk på ovenfor for å aktivere dem i Innstillinger-appen."
+            "value": "Varslinger for Quit Zyn er slått av, så påminnelsen kan ikke sendes. Trykk ovenfor for å slå dem på i Innstillinger."
           }
         },
         "ro": {
@@ -41381,7 +41381,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "På vei til å spare"
+            "value": "Forventet besparelse"
           }
         },
         "ro": {
@@ -41583,7 +41583,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Engangskjøp · ikke abonnement"
+            "value": "Engangskjøp · uten abonnement"
           }
         },
         "ro": {
@@ -41684,7 +41684,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Munnhelsen bedres"
+            "value": "Munnhelsen blir bedre"
           }
         },
         "ro": {
@@ -42088,7 +42088,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "I tillegg bruker du ikke %1$@ nikotinposer. Kroppen slipper dermed å behandle den nikotinen."
+            "value": "I tillegg unngår du %1$@ nikotinposer. Kroppen slipper dermed å omsette den nikotinen."
           }
         },
         "ro": {
@@ -43098,7 +43098,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se de %@ du ville spart det neste året"
+            "value": "Beregn hvor mye du kan spare det neste året: %1$@."
           }
         },
         "ro": {
@@ -43199,7 +43199,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se året fremover, ikke bare dagene bak deg"
+            "value": "Se året fremover, ikke bare dagene som har gått"
           }
         },
         "ro": {
@@ -43401,7 +43401,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spørsmål og refleksjon for tunge dager."
+            "value": "Spørsmål og refleksjoner for vanskelige dager."
           }
         },
         "ro": {
@@ -43502,7 +43502,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Puls og blodtrykk begynner å synke."
+            "value": "Puls og blodtrykk begynner å nærme seg normalen."
           }
         },
         "ro": {
@@ -43704,7 +43704,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Setter telleren og treet tilbake slik de var før denne sprekken."
+            "value": "Tilbakestiller telleren og treet til slik de var før glippen."
           }
         },
         "ro": {
@@ -44007,7 +44007,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avslutt Zyn Days"
+            "value": "Dager uten nikotin"
           }
         },
         "ro": {
@@ -44108,7 +44108,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avslutt Zyn"
+            "value": "Vurder Quit Zyn"
           }
         },
         "ro": {
@@ -44392,13 +44392,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registrer %1$lld sug til for å oppdage flere av mønstrene dine."
+                  "value": "Registrer %1$lld nikotinsug til for å oppdage flere mønstre."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registrer %1$lld sug til for å oppdage flere av mønstrene dine."
+                  "value": "Registrer %1$lld nikotinsug til for å oppdage flere mønstre."
                 }
               }
             }
@@ -44745,13 +44745,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registrer %1$lld sug til for å se mønstrene dine."
+                  "value": "Registrer %1$lld nikotinsug til for å begynne å se mønstrene dine."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Registrer %1$lld sug til for å se mønstrene dine."
+                  "value": "Registrer %1$lld nikotinsug til for å begynne å se mønstrene dine."
                 }
               }
             }
@@ -44915,7 +44915,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer ett sug til for å oppdage flere av mønstrene dine."
+            "value": "Registrer ett nikotinsug til for å oppdage flere mønstre."
           }
         },
         "ro": {
@@ -45016,7 +45016,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Registrer ett sug til for å se mønstrene dine."
+            "value": "Registrer ett nikotinsug til for å begynne å se mønstrene dine."
           }
         },
         "ro": {
@@ -45117,7 +45117,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Recovery starter med en beslutning. Dette er din, for i dag og de dagene som følger."
+            "value": "Endring starter med en beslutning. Dette er din beslutning for i dag og dagene fremover."
           }
         },
         "ro": {
@@ -45319,7 +45319,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Raffinert og tett. Et verk av ekte tålmodighet."
+            "value": "Raffinert og tett. Resultatet av ekte tålmodighet."
           }
         },
         "ro": {
@@ -45420,7 +45420,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Raffinert fase"
+            "value": "Raffinert stadium"
           }
         },
         "ro": {
@@ -45521,7 +45521,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Før betaling"
+            "value": "Påminnelse før belastning"
           }
         },
         "ro": {
@@ -45622,7 +45622,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Påmindelsestid"
+            "value": "Påminnelsestid"
           }
         },
         "ro": {
@@ -45925,7 +45925,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fornyes automatisk. Si opp minst 24 timer før perioden slutter. Administrer: Innstillinger › Apple-ID › Abonnementer."
+            "value": "Abonnementet fornyes automatisk. Avslutt minst 24 timer før perioden utløper. Administrer i Innstillinger › Apple-ID › Abonnementer."
           }
         },
         "ro": {
@@ -46228,7 +46228,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nullstill disk?"
+            "value": "Nullstille telleren?"
           }
         },
         "ro": {
@@ -46531,7 +46531,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gjenoppretter …"
+            "value": "Gjenoppretter…"
           }
         },
         "ro": {
@@ -46733,7 +46733,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pust rolig i noen minutter."
+            "value": "Kom deg gjennom nikotinsuget med noen minutters rolig pusting"
           }
         },
         "ro": {
@@ -46935,7 +46935,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tungt"
+            "value": "Tøft"
           }
         },
         "ro": {
@@ -47137,7 +47137,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "SPAR %lld %%"
+            "value": "SPAR %1$lld%%"
           }
         },
         "ro": {
@@ -47238,7 +47238,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Like mange som de foregående 7 dagene"
+            "value": "Samme som de foregående sju dagene"
           }
         },
         "ro": {
@@ -47700,13 +47700,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Spart på %1$lld dag uten nikotin."
+                  "value": "Dette har du spart i løpet av %1$lld nikotinfri dag."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Spart på %1$lld dager uten nikotin."
+                  "value": "Dette har du spart i løpet av %1$lld nikotinfrie dager."
                 }
               }
             }
@@ -47870,7 +47870,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se alle abonnementer"
+            "value": "Se alle abonnementene"
           }
         },
         "ro": {
@@ -47971,7 +47971,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se all fremgang"
+            "value": "Se hele fremgangen"
           }
         },
         "ro": {
@@ -48173,7 +48173,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se når din %1$@ hit, hva som setter dem av, og hvor lenge din faktisk vare, pluss resten av Bloom+."
+            "value": "Se når du får %1$@, hva som utløser det og hvor lenge det varer, pluss resten av Bloom+."
           }
         },
         "ro": {
@@ -48375,7 +48375,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Frøfase"
+            "value": "Frøstadium"
           }
         },
         "ro": {
@@ -48577,7 +48577,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seedling scenen"
+            "value": "Småplantestadium"
           }
         },
         "ro": {
@@ -48981,7 +48981,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Formet av et liv i vind. Hver grein forteller om utholdenhet."
+            "value": "Formet av år med vind. Hver grein forteller en historie om utholdenhet."
           }
         },
         "ro": {
@@ -49082,7 +49082,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Til stede i dag"
+            "value": "Du møter opp i dag også"
           }
         },
         "ro": {
@@ -49284,7 +49284,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden %@"
+            "value": "Siden %1$@"
           }
         },
         "ro": {
@@ -49385,7 +49385,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har greintuppen vokst litt."
+            "value": "Siden i går har en greinspiss blitt lengre."
           }
         },
         "ro": {
@@ -49486,7 +49486,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har et nytt skudd kommet fram."
+            "value": "Siden i går har et nytt skudd kommet frem."
           }
         },
         "ro": {
@@ -49789,7 +49789,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har barken blitt litt hardere."
+            "value": "Siden i går har barken blitt litt mørkere og hardere."
           }
         },
         "ro": {
@@ -49890,7 +49890,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har trekrona blitt litt tettere."
+            "value": "Siden i går har trekronen blitt litt tettere."
           }
         },
         "ro": {
@@ -49991,7 +49991,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har trekrona vokst høyere."
+            "value": "Siden i går har trekronen strukket seg høyere."
           }
         },
         "ro": {
@@ -50092,7 +50092,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har mosen krøpet litt lenger."
+            "value": "Siden i går har mosen vokst litt lenger utover."
           }
         },
         "ro": {
@@ -50496,7 +50496,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går har treets form blitt tydeligere."
+            "value": "Siden i går har treets silhuett blitt tydeligere."
           }
         },
         "ro": {
@@ -50597,7 +50597,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siden i går er treet ferdig, og en ny syklus begynner."
+            "value": "Siden i går er treet ferdig, og en ny syklus har begynt."
           }
         },
         "ro": {
@@ -50799,7 +50799,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seks måneder nikotinfritt."
+            "value": "Seks måneder uten nikotin."
           }
         },
         "ro": {
@@ -51102,7 +51102,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Arter"
+            "value": "Art"
           }
         },
         "ro": {
@@ -51304,7 +51304,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sprout scenen"
+            "value": "Spirestadium"
           }
         },
         "ro": {
@@ -51506,7 +51506,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Startdato"
+            "value": "Start"
           }
         },
         "ro": {
@@ -51790,13 +51790,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dag"
+                  "value": "Start en gratis prøveperiode på %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dager"
+                  "value": "Start en gratis prøveperiode på %1$lld dager"
                 }
               }
             }
@@ -52143,13 +52143,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld måned"
+                  "value": "Start en gratis prøveperiode på %1$lld måned"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld måneder"
+                  "value": "Start en gratis prøveperiode på %1$lld måneder"
                 }
               }
             }
@@ -52496,13 +52496,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld år"
+                  "value": "Start en gratis prøveperiode på %1$lld år"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld år"
+                  "value": "Start en gratis prøveperiode på %1$lld år"
                 }
               }
             }
@@ -52666,7 +52666,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prøv gratis"
+            "value": "Start gratis prøveperiode"
           }
         },
         "ro": {
@@ -52938,13 +52938,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dag"
+                  "value": "Start min gratis prøveperiode på %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dager"
+                  "value": "Start min gratis prøveperiode på %1$lld dager"
                 }
               }
             }
@@ -53108,7 +53108,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prøv gratis"
+            "value": "Start min gratis prøveperiode"
           }
         },
         "ro": {
@@ -53380,13 +53380,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dag"
+                  "value": "Start min gratis prøveperiode på %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Prøv gratis i %1$lld dager"
+                  "value": "Start min gratis prøveperiode på %1$lld dager"
                 }
               }
             }
@@ -53550,7 +53550,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prøv gratis"
+            "value": "Start min gratis prøveperiode"
           }
         },
         "ro": {
@@ -53651,7 +53651,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start den gratis prøveperioden for Bloom+"
+            "value": "Start den gratis prøveperioden på Bloom+"
           }
         },
         "ro": {
@@ -53746,7 +53746,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pengene blir i lomma i stedet for å gå til nikotinposer. Bloom+ hjelper deg å holde rekken gående."
+            "value": "Pengene blir i lomma i stedet for å gå til nikotinposer. Bloom+ hjelper deg med å holde rekken gående."
           }
         },
         "ro": {
@@ -53948,7 +53948,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Streak teller din nåværende kjøring. Livstid teller hver nikotinfri dag du noensinne har logget, så tidligere fremgang går ikke tapt på en tilbakestilling."
+            "value": "Rekken teller den nåværende perioden din. Livstidsoversikten teller alle registrerte dager uten nikotin, så tidligere fremgang går ikke tapt når du nullstiller."
           }
         },
         "ro": {
@@ -54352,7 +54352,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Solid grunnmur"
+            "value": "Solid grunnlag"
           }
         },
         "ro": {
@@ -54554,7 +54554,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bytt art når du vil · rekken fortsetter å vokse"
+            "value": "Bytt art når du vil · rekken din fortsetter å vokse"
           }
         },
         "ro": {
@@ -54756,7 +54756,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bytt når du vil. Dagene og veksten følger med til treet du velger."
+            "value": "Bytt når du vil. Dagstelleren og veksten følger med til treet du velger."
           }
         },
         "ro": {
@@ -54857,7 +54857,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bytt bonsaiart, nå %@"
+            "value": "Bytt bonsaiart. Nåværende: %1$@"
           }
         },
         "ro": {
@@ -55160,7 +55160,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Smak og lukt blir skarpere"
+            "value": "Smaks- og luktesansen skjerpes"
           }
         },
         "ro": {
@@ -55362,7 +55362,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vilkår for bruk"
+            "value": "Bruksvilkår"
           }
         },
         "ro": {
@@ -55564,7 +55564,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Det handler om %1$@ /dag"
+            "value": "Det tilsvarer omtrent %1$@ per dag"
           }
         },
         "ro": {
@@ -55665,7 +55665,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kaskadestilen etterligner et tre på en klippe som stuper nedover."
+            "value": "Kaskadestilen etterligner et tre som vokser på en klippe og henger nedover."
           }
         },
         "ro": {
@@ -55867,7 +55867,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Frøet finner seg til rette. Reisen din starter her."
+            "value": "Frøet begynner å slå rot. Reisen din starter her."
           }
         },
         "ro": {
@@ -55968,7 +55968,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dette er nær toppen av det. Disse %1$@ klatre raskt og deretter slutter de å klatre."
+            "value": "Nikotinsuget er nesten på topp. %1$@ øker raskt før intensiteten flater ut."
           }
         },
         "ro": {
@@ -56523,7 +56523,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tre måneder sterk."
+            "value": "Tre måneder i mål. Bra jobbet!"
           }
         },
         "ro": {
@@ -56624,7 +56624,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tre ord som beskriver hvordan jeg har det akkurat nå."
+            "value": "Tre ord som beskriver hvordan jeg føler meg akkurat nå."
           }
         },
         "ro": {
@@ -56927,7 +56927,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sliten"
+            "value": "Trøtt"
           }
         },
         "ro": {
@@ -57129,7 +57129,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logget i dag"
+            "value": "Dagen er registrert"
           }
         },
         "ro": {
@@ -57230,7 +57230,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "I dag er registrert som en sprekk"
+            "value": "Dagen er registrert som en glipp"
           }
         },
         "ro": {
@@ -57432,7 +57432,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Krevende"
+            "value": "Tøft"
           }
         },
         "ro": {
@@ -57533,7 +57533,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spor hver dollar og pose du unngår, pluss resten av Bloom+."
+            "value": "Følg med på pengene du sparer og nikotinposene du unngår, pluss resten av Bloom+."
           }
         },
         "ro": {
@@ -57634,7 +57634,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Følg dagene uten nikotin, dyrk hagen din og se helsen komme tilbake."
+            "value": "Følg med på dagene uten nikotin, dyrk hagen og legg merke til helseforandringene."
           }
         },
         "ro": {
@@ -57937,7 +57937,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sannhetens initiativ"
+            "value": "Truth Initiative"
           }
         },
         "ro": {
@@ -58341,7 +58341,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "To raske spørsmål mens det er ferskt. Begge valgfrie."
+            "value": "To raske spørsmål mens du husker det. Begge er valgfrie."
           }
         },
         "ro": {
@@ -58543,7 +58543,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Angre, jeg tok ikke et feiltrinn"
+            "value": "Angre, jeg hadde ingen glipp"
           }
         },
         "ro": {
@@ -58827,13 +58827,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lås opp %lld tre"
+                  "value": "Lås opp %1$lld tre"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lås opp %lld trær"
+                  "value": "Lås opp %1$lld trær"
                 }
               }
             }
@@ -59092,7 +59092,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lås opp for alltid"
+            "value": "Få livstidsadgang"
           }
         },
         "ro": {
@@ -59376,13 +59376,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lås opp alle %lld trærne"
+                  "value": "Lås opp alle %1$lld trær"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lås opp alle %lld trærne"
+                  "value": "Lås opp alle %1$lld trær"
                 }
               }
             }
@@ -59540,7 +59540,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lås opp alle bonsaiarter og bytt når du vil, pluss resten av Bloom+."
+            "value": "Lås opp alle bonsaiartene og bytt når du vil, pluss resten av Bloom+."
           }
         },
         "ro": {
@@ -59742,7 +59742,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lås opp hele tidslinjen for bedring med 13 milepæler, pluss resten av Bloom+."
+            "value": "Lås opp hele helsetidslinjen med 13 milepæler, pluss resten av Bloom+."
           }
         },
         "ro": {
@@ -59944,7 +59944,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lås opp det som kommer med Bloom+"
+            "value": "Lås opp alt som følger med Bloom+"
           }
         },
         "ro": {
@@ -60146,7 +60146,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Opptil %@/år"
+            "value": "Opptil %1$@ i året"
           }
         },
         "ro": {
@@ -60443,7 +60443,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Se sparene dine legge til."
+            "value": "Se besparelsene vokse."
           }
         },
         "ro": {
@@ -60727,13 +60727,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Velkommen tilbake. Du har ikke sjekket inn på %lld dag. Går det fortsatt bra?"
+                  "value": "Velkommen tilbake. Det er %1$lld dag siden forrige registrering. Går det fortsatt bra?"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Velkommen tilbake. Du har ikke sjekket inn på %lld dager. Går det fortsatt bra?"
+                  "value": "Velkommen tilbake. Det er %1$lld dager siden forrige registrering. Går det fortsatt bra?"
                 }
               }
             }
@@ -61099,7 +61099,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hva takket kroppen meg for i dag?"
+            "value": "Hva takket kroppen min meg for i dag?"
           }
         },
         "ro": {
@@ -61200,7 +61200,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hva gir livet uten nikotin meg som nikotin aldri kunne gi?"
+            "value": "Hva gir livet uten nikotin meg som nikotin aldri kunne gitt?"
           }
         },
         "ro": {
@@ -61604,7 +61604,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hva ville en «nullstilling» egentlig koste meg, i dager og penger?"
+            "value": "Hva ville en nullstilling egentlig kostet meg i dager og penger?"
           }
         },
         "ro": {
@@ -61705,7 +61705,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dette beholder du"
+            "value": "Dette sparer du"
           }
         },
         "ro": {
@@ -61806,7 +61806,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvilket forhold blir bedre etter at jeg sluttet?"
+            "value": "Hvilket forhold har blitt bedre etter at jeg sluttet med nikotin?"
           }
         },
         "ro": {
@@ -61907,7 +61907,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hva går bra i dag? Hvordan holder jeg farten oppe?"
+            "value": "Hva går bra i dag? Hvordan kan jeg holde på fremgangen?"
           }
         },
         "ro": {
@@ -62008,7 +62008,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvilken sunn vane vil jeg bygge videre?"
+            "value": "Hvilken sunn vane vil jeg bygge videre på?"
           }
         },
         "ro": {
@@ -62311,7 +62311,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Når begynte nikotinfrie reiser?"
+            "value": "Når begynte reisen din uten nikotin?"
           }
         },
         "ro": {
@@ -62412,7 +62412,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Når de treffer og hva som setter dem av."
+            "value": "Når nikotinsuget kommer, og hva som utløser det."
           }
         },
         "ro": {
@@ -62513,7 +62513,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Når din %1$@ slår og hva som setter dem av"
+            "value": "Når du får %1$@, og hva som utløser det"
           }
         },
         "ro": {
@@ -62614,7 +62614,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvor følte jeg meg sterkest i dag?"
+            "value": "Når kjente jeg meg sterkest i dag?"
           }
         },
         "ro": {
@@ -62715,7 +62715,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvor merker jeg at suget gjemmer seg?"
+            "value": "I hvilke situasjoner merker jeg nikotinsuget?"
           }
         },
         "ro": {
@@ -62816,7 +62816,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hvem støttet meg i dag, om enn bare litt?"
+            "value": "Hvem støttet meg i dag, om så bare litt?"
           }
         },
         "ro": {
@@ -63119,7 +63119,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vi minner deg på det før prøveperioden er over hvis varsler er slått på."
+            "value": "Hvis varslinger er slått på, minner vi deg på det før prøveperioden er over."
           }
         },
         "ro": {
@@ -63220,7 +63220,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et par timer etter den siste nikotinposen avtar nikotinkicket. Puls og blodtrykk begynner å nærme seg utgangsnivået."
+            "value": "Et par timer etter den siste nikotinposen avtar nikotintoppen. Puls og blodtrykk begynner å nærme seg utgangsnivået."
           }
         },
         "ro": {
@@ -63624,7 +63624,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Skriv ned hvordan suget føles."
+            "value": "Skriv om hvordan nikotinsuget føles."
           }
         },
         "ro": {
@@ -63820,7 +63820,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "PENGENE DINE, SPART"
+            "value": "PENGENE DINE, BEHOLDT"
           }
         },
         "ro": {
@@ -63921,7 +63921,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "SPARINGEN DIN"
+            "value": "BESPARELSENE DINE"
           }
         },
         "ro": {
@@ -64426,7 +64426,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du trenger ikke gjøre noe annet nå. Bare bli her og pust."
+            "value": "Du trenger ikke gjøre noe mer akkurat nå. Bare bli her og pust."
           }
         },
         "ro": {
@@ -64527,7 +64527,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du sparer"
+            "value": "Dette beholder du"
           }
         },
         "ro": {
@@ -64896,7 +64896,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du beholder %1$@ hvert år i stedet for å bruke dem på %2$@. Prøv Bloom+ gratis i %#@n@."
+            "value": "Du beholder %1$@ hvert år i stedet for å bruke pengene på %2$@. Prøv Bloom+ gratis i %#@n@."
           },
           "substitutions": {
             "n": {
@@ -64907,13 +64907,13 @@
                   "one": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dag"
+                      "value": "Du beholder %1$@ hvert år i stedet for å bruke pengene på %2$@. Prøv Bloom+ gratis i %#@n@."
                     }
                   },
                   "other": {
                     "stringUnit": {
                       "state": "translated",
-                      "value": "%arg dager"
+                      "value": "Du beholder %1$@ hvert år i stedet for å bruke pengene på %2$@. Prøv Bloom+ gratis i %#@n@."
                     }
                   }
                 }
@@ -65119,7 +65119,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du får %1$@ mer til overs hvert år. Bloom+ koster %2$@ %3$@."
+            "value": "Du sitter igjen med %1$@ hvert år. Bloom+ koster %2$@ %3$@."
           }
         },
         "ro": {
@@ -65403,13 +65403,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du kom deg gjennom %1$lld sug."
+                  "value": "Du kom deg gjennom %1$lld nikotinsug."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du kom deg gjennom %1$lld sug."
+                  "value": "Du kom deg gjennom %1$lld nikotinsug."
                 }
               }
             }
@@ -65573,7 +65573,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du kom deg gjennom ett sug."
+            "value": "Du kom deg gjennom ett nikotinsug."
           }
         },
         "ro": {
@@ -65674,7 +65674,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du bodde med det for %1$@."
+            "value": "Du holdt ut i %1$@."
           }
         },
         "ro": {
@@ -65775,7 +65775,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du vil holde dagskranken, kalenderen, appetittmodusen din og treet ditt. Din år-ahead projeksjon, full helse timeline, tidsskriftet og de andre artene holde seg låst."
+            "value": "Du beholder dagtelleren, kalenderen, modusen for å håndtere nikotinsug og treet ditt. Årsprognosen, hele helsetidslinjen, dagboken og de andre artene forblir låst."
           }
         },
         "ro": {
@@ -66059,13 +66059,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du er %lld dag inne. Registrer dagen og vann bonsaien."
+                  "value": "Du har vært nikotinfri i %1$lld dag. Registrer dagen og vann bonsaien."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Du er %lld dager inne. Registrer dagen og vann bonsaien."
+                  "value": "Du har vært nikotinfri i %1$lld dager. Registrer dagen og vann bonsaien."
                 }
               }
             }
@@ -66229,7 +66229,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du har lagret %1$@ så langt"
+            "value": "Du har spart %1$@ så langt"
           }
         },
         "ro": {
@@ -66324,7 +66324,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du har spart %1$@ ved å være nikotinfri. Bloom+ hjelper deg videre."
+            "value": "Du har spart %1$@ ved å være nikotinfri. Fortsett fremgangen med verktøy som støtter deg."
           }
         },
         "ro": {
@@ -66526,7 +66526,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ung bonsai scene"
+            "value": "Ungt bonsaistadium"
           }
         },
         "ro": {
@@ -66627,7 +66627,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ -mønster"
+            "value": "Mønstrene dine: %1$@"
           }
         },
         "ro": {
@@ -66728,7 +66728,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bloom+-prøveperioden din slutter snart"
+            "value": "Bloom+-prøveperioden din er snart over"
           }
         },
         "ro": {
@@ -66930,7 +66930,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsaien din har modnet til en full, løvrik krone."
+            "value": "Bonsaien din har vokst til et fullt, frodig tre."
           }
         },
         "ro": {
@@ -67031,7 +67031,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bonsaien din fylles ut til et ungt tre."
+            "value": "Bonsaien din vokser seg til et ungt tre."
           }
         },
         "ro": {
@@ -67132,7 +67132,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Du har flest sug på %1$@."
+            "value": "Du har oftest nikotinsug på %1$@."
           }
         },
         "ro": {
@@ -67233,7 +67233,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Telleren starter på nytt etter sprekken. En sprekk i dag starter på dag 1; for en tidligere sprekk telles dagene siden. Den lengste rekken følger de korrigerte datoene."
+            "value": "Telleren starter på nytt etter glippen. En glipp i dag betyr dag én; for en tidligere glipp teller dagene siden den skjedde. Den lengste rekken følger de korrigerte datoene."
           }
         },
         "ro": {
@@ -67618,13 +67618,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Telleren starter på nytt. Treet ditt beholdt veksten i %1$lld dag."
+                  "value": "Telleren starter på nytt. Treet beholdt vekst tilsvarende %1$lld dag."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Telleren starter på nytt. Treet ditt beholdt veksten i %1$lld dager."
+                  "value": "Telleren starter på nytt. Treet beholdt vekst tilsvarende %1$lld dager."
                 }
               }
             }
@@ -67788,7 +67788,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Suget går som regel over på omtrent %1$@."
+            "value": "Nikotinsuget går som regel over etter omtrent %1$@."
           }
         },
         "ro": {
@@ -67990,7 +67990,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagtelleren starter på nytt etter sprekken. Treet ditt tar med seg noe av veksten, og kalenderhistorikken og ferdige trær blir værende. Den lengste rekken din følger de korrigerte datoene."
+            "value": "Dagtelleren starter på nytt etter glippen. Treet beholder noe av veksten, og kalenderhistorikken og fullførte trær blir værende. Den lengste rekken følger de korrigerte datoene."
           }
         },
         "ro": {
@@ -68091,7 +68091,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagtelleren starter på null igjen. Historikken beholdes."
+            "value": "Dagtelleren starter på null igjen. Historikken din beholdes."
           }
         },
         "ro": {
@@ -68192,7 +68192,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dagstelleren, støtte når nikotinsuget melder seg, widgeten og Apple Watch-appen er alltid gratis."
+            "value": "Dagtelleren, modusen for å håndtere nikotinsug, widgeten og Apple Watch-appen er alltid gratis."
           }
         },
         "ro": {
@@ -68293,7 +68293,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ditt innlegg"
+            "value": "Innlegget ditt"
           }
         },
         "ro": {
@@ -68495,7 +68495,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hagen, dagboken, helseoversikten og sparingen. Alt som hjelper deg å holde deg nikotinfri."
+            "value": "Hagen, dagboken, helsetidslinjen og besparelsene dine. Alt som støtter deg i å leve uten nikotin."
           }
         },
         "ro": {
@@ -68596,7 +68596,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Den siste endringen kunne ikke lagres på denne enheten og kan mangle når du lukker appen. Det skyldes som regel full lagringsplass. Frigjør litt plass, sjekk den og prøv igjen."
+            "value": "Den siste endringen kunne ikke lagres på denne enheten og kan mangle når du lukker appen. Det skyldes som regel at lagringsplassen er full. Frigjør litt plass, sjekk at endringen er lagret, og prøv igjen."
           }
         },
         "ro": {
@@ -68697,7 +68697,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Humøret ditt synker ofte før en sprekk"
+            "value": "Humøret ditt synker ofte før en glipp"
           }
         },
         "ro": {
@@ -68798,7 +68798,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Humøret ditt var lavere de to dagene før en sprekk enn på andre dager du har registrert. Det kan hjelpe å legge merke til mønsteret tidlig."
+            "value": "Humøret ditt var lavere de to dagene før en glipp enn på andre registrerte dager. Det kan hjelpe å legge merke til mønsteret tidlig."
           }
         },
         "ro": {
@@ -68893,7 +68893,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "De nikotinfrie dagene dine har gitt resultater. Bruk litt av det du har spart på verktøy som støtter deg videre."
+            "value": "Dagene uten nikotin har gitt besparelser. Bruk noe av dem på verktøy som støtter fremgangen din."
           }
         },
         "ro": {
@@ -68994,7 +68994,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tidligere rekker blir stående"
+            "value": "Tidligere rekker blir stående i historikken din"
           }
         },
         "ro": {
@@ -69398,7 +69398,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ditt kjøp venter på godkjenning. Bloom+ låses opp på egen hånd når det er bekreftet, og du kan fortsette å bruke den gratis versjonen i mellomtiden."
+            "value": "Kjøpet ditt venter på godkjenning. Bloom+ låses opp automatisk når kjøpet er bekreftet. I mellomtiden kan du bruke gratisversjonen."
           }
         },
         "ro": {
@@ -69783,13 +69783,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Treet beholder veksten fra %1$lld dag"
+                  "value": "Treet beholder vekst tilsvarende %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Treet beholder veksten fra %1$lld dager"
+                  "value": "Treet beholder vekst tilsvarende %1$lld dager"
                 }
               }
             }
@@ -70136,13 +70136,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Treet ditt beholdt veksten fra %1$lld dag. Nå starter dag én."
+                  "value": "Treet beholdt vekst tilsvarende %1$lld dag. Dag én starter nå."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Treet ditt beholdt veksten fra %1$lld dager. Nå starter dag én."
+                  "value": "Treet beholdt vekst tilsvarende %1$lld dager. Dag én starter nå."
                 }
               }
             }
@@ -70306,7 +70306,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Din vanlige kan"
+            "value": "Den vanlige boksen din"
           }
         },
         "ro": {
@@ -70407,7 +70407,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et minutt"
+            "value": "ett minutt"
           }
         },
         "ro": {
@@ -70609,7 +70609,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "et år med Bloom+"
+            "value": "et årsabonnement på Bloom+"
           }
         },
         "ro": {
@@ -70710,7 +70710,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "etter %@"
+            "value": "kl. %1$@"
           }
         },
         "ro": {
@@ -71013,7 +71013,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "i året"
+            "value": "hvert år"
           }
         },
         "ro": {
@@ -71114,7 +71114,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "funnbehandling.gov"
+            "value": "findtreatment.gov"
           }
         },
         "ro": {
@@ -71215,7 +71215,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle funksjoner"
+            "value": "Full tilgang til Bloom+"
           }
         },
         "ro": {
@@ -71316,7 +71316,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "om %@"
+            "value": "om %1$@"
           }
         },
         "ro": {
@@ -71600,13 +71600,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "om %lld dag"
+                  "value": "om %1$lld dag"
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "om %lld dager"
+                  "value": "om %1$lld dager"
                 }
               }
             }
@@ -72067,7 +72067,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nikotinposer per dag"
+            "value": "nikotinposer per dag"
           }
         },
         "ro": {
@@ -72168,7 +72168,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stått imot suget"
+            "value": "Nikotinsug du kom deg gjennom"
           }
         },
         "ro": {
@@ -72269,7 +72269,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Stått imot suget"
+            "value": "Nikotinsug du kom deg gjennom"
           }
         },
         "ro": {
@@ -72471,7 +72471,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hagen din vokser. Logg dagen hvis du er nikotinfri i dag."
+            "value": "Hagen din vokser. Registrer dagen i dag hvis du har vært uten nikotin."
           }
         },
         "ro": {
@@ -72572,7 +72572,7 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Treet ditt får plass i lunden. En ny spire begynner å vokse."
+            "value": "Treet ditt blir en del av lunden. En ny småplante begynner å vokse."
           }
         },
         "ro": {
@@ -72856,13 +72856,13 @@
               "one": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lunden din har nå %1$lld tre. En ny spire begynner å vokse."
+                  "value": "Lunden din har nå %1$lld tre. En ny småplante begynner å vokse."
                 }
               },
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "Lunden din har nå %1$lld trær. En ny spire begynner å vokse."
+                  "value": "Lunden din har nå %1$lld trær. En ny småplante begynner å vokse."
                 }
               }
             }
