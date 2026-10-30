@@ -42,7 +42,7 @@ Bloom+ adds:
 
 Bloom+ is a monthly or yearly subscription, each with a 1-week free trial for eligible new subscribers, or a one-time lifetime purchase. Prices are shown in the app. Subscriptions renew automatically unless canceled at least 24 hours before the period ends. Manage them in Settings > Apple ID > Subscriptions.
 
-Quit Zyn is a self-tracking tool and does not give medical advice. For help quitting, talk to a clinician or call 1-800-QUIT-NOW in the US.
+Quit Zyn is a self-tracking tool, not medical advice. For help quitting, talk to a clinician or call 1-800-QUIT-NOW in the US.
 
 Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 Privacy Policy: https://jackwallner.com/ios/quitzyn/privacy-policy.html
