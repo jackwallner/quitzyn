@@ -220,4 +220,55 @@ final class InterruptedReturnAuditUITests: InterruptedAuditCase {
         snap("home_after_kill")
         note("after the kill the app opens on Home: \(cravingStart != nil)")
     }
+
+    // MARK: - R5: Upgrade from inside Settings
+
+    /// Settings is a sheet raised by Home, the trial offer is a sheet raised by
+    /// the tab view underneath it. Records what the Upgrade row does, and what
+    /// the way out looks like after the person has been away.
+    func testR5_SettingsUpgradeRowThenAnInterruption() {
+        tag = "R5"
+        launch(["-seedDemo", "-previewStore"])
+        guard cravingStart != nil else {
+            note("MISSING Home")
+            snap("home_missing")
+            return
+        }
+        tap(app.buttons["More"], "More menu")
+        sleep(1)
+        tap(app.buttons["Settings"], "Settings")
+        guard app.navigationBars["Settings"].waitForExistence(timeout: 8) else {
+            note("MISSING Settings sheet")
+            snap("settings_missing")
+            return
+        }
+        sleep(1)
+        snap("settings")
+        measure("Settings Done", in: app.buttons["Done"])
+        // The tab bar button behind the sheet is also called Upgrade; the row
+        // in the sheet is the one high on the screen.
+        let called = app.buttons.matching(NSPredicate(format: "label == %@", "Upgrade")).allElementsBoundByIndex
+        let places = called.map { element in
+            "y=\(Int(element.frame.minY)) h=\(Int(element.frame.height))"
+        }
+        note("buttons called Upgrade: \(places)")
+        let row = called.first { $0.frame.minY < 600 }
+        measure("Settings Upgrade row", in: row)
+        tap(row, "Settings Upgrade row")
+        sleep(3)
+        snap("after_upgrade_tap")
+        note("after tapping Upgrade: Settings on screen=\(app.navigationBars["Settings"].exists), trial offer (See all plans)=\(app.buttons["See all plans"].exists), Not now=\(app.buttons["Not now"].exists)")
+
+        interrupt(seconds: 5)
+        snap("after_interruption")
+        note("after 5s away: Settings on screen=\(app.navigationBars["Settings"].exists), trial offer=\(app.buttons["See all plans"].exists)")
+
+        if app.buttons["Not now"].exists {
+            tap(app.buttons["Not now"], "Not now")
+            sleep(2)
+        }
+        snap("after_exit")
+        note("after the exit: Settings on screen=\(app.navigationBars["Settings"].exists), Home craving button=\(findButton("I'm having a", timeout: 2) != nil)")
+        if app.navigationBars["Settings"].exists { tap(app.buttons["Done"], "Done") }
+    }
 }
