@@ -234,6 +234,7 @@ final class InterruptedReturnAuditUITests: InterruptedAuditCase {
             snap("home_missing")
             return
         }
+        clearTrialNudge(waitingUpTo: 9, label: "home")
         tap(app.buttons["More"], "More menu")
         sleep(1)
         tap(app.buttons["Settings"], "Settings")

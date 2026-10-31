@@ -128,6 +128,7 @@ final class InterruptedOnboardingAuditUITests: InterruptedAuditCase {
         let counter = findText("^[0-9]+ days? nicotine-free.*", timeout: 20)?.label ?? "(counter not found)"
         snap("home_after_second_pass")
         note("day counter on Home after the second pass: \(counter) (the quit date entered before the kill was 12 days back)")
+        clearTrialNudge(waitingUpTo: 9, label: "home_second_pass")
 
         tap(app.buttons["More"], "More menu")
         tap(app.buttons["Settings"], "Settings")

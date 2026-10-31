@@ -189,6 +189,36 @@ class InterruptedAuditCase: XCTestCase {
         sleep(1)
     }
 
+    /// The passive trial offer rises about six seconds after Home appears on an
+    /// install that has a local offering. Waits for it so it cannot land on a
+    /// later step, notes when it came, and sends it away with "Not now".
+    @discardableResult
+    func clearTrialNudge(waitingUpTo seconds: TimeInterval, label: String) -> Bool {
+        let started = Date()
+        let notNow = app.buttons["Not now"]
+        guard notNow.waitForExistence(timeout: seconds) else {
+            note("no trial nudge within \(Int(seconds))s (\(label))")
+            return false
+        }
+        note("TRIAL NUDGE rose \(Int(Date().timeIntervalSince(started)))s into a \(Int(seconds))s wait (\(label))")
+        snap("\(label)_trial_nudge")
+        notNow.tap()
+        sleep(1)
+        return true
+    }
+
+    /// The system rating prompt can follow a check-in, a ridden-out urge or a
+    /// growth celebration by about 3.5 s. Sends it away so it cannot hide what
+    /// a later step needs, and notes that it came.
+    func clearRatingPrompt(label: String) {
+        let notNow = app.buttons["Not Now"]
+        guard notNow.waitForExistence(timeout: 1) else { return }
+        note("RATING PROMPT on screen (\(label))")
+        snap("\(label)_rating_prompt")
+        notNow.tap()
+        sleep(1)
+    }
+
     /// The notification permission prompt belongs to SpringBoard, not the app.
     func answerSystemAlert(named shot: String) {
         let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
