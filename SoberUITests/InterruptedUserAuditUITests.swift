@@ -38,6 +38,7 @@ final class InterruptedUserAuditUITests: InterruptedAuditCase {
         }
         let opened = Date()
         snap("home")
+        measure("I'm having a craving", in: craving)
         craving.tap()
         guard app.buttons["I'm through it"].waitForExistence(timeout: 10) else {
             note("MISSING craving session")
@@ -84,6 +85,8 @@ final class InterruptedUserAuditUITests: InterruptedAuditCase {
         tapTab("Timeline")
         sleep(1)
         snap("timeline")
+        measure("Previous month", in: app.buttons["Previous month"])
+        measure("Next month", in: app.buttons["Next month"])
 
         // The only way to leave a tended day in the past without moving the
         // clock: tend one by hand on the calendar.
@@ -97,6 +100,7 @@ final class InterruptedUserAuditUITests: InterruptedAuditCase {
         formatter.dateFormat = "MMMM d"
         let name = formatter.string(from: target)
         let cell = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "\(name),")).firstMatch
+        measure("calendar day cell \(name)", in: cell)
         tap(cell, "calendar day \(name)")
         sleep(1)
         let log = app.buttons["Log as nicotine-free"]
@@ -142,11 +146,17 @@ final class InterruptedUserAuditUITests: InterruptedAuditCase {
         let later = timerText()
         snap("session_4s_after_return")
         note("timer before leaving \(before), on return \(onReturn), 4s later \(later); wall clock away 30s")
+        measure("I'm through it", in: app.buttons["I'm through it"])
+        measure("Give me another minute", in: findButton("Give me another minute", timeout: 2))
+        measure("Close (x)", in: app.buttons["Close"])
 
         tap(app.buttons["I'm through it"], "I'm through it")
         let stayed = findText("^You stayed with it for .*", timeout: 10)?.label ?? "(missing)"
         snap("reflect")
         note("reflect copy after 30s away: \(stayed)")
+        measure("It passed", in: findButton("It passed", timeout: 2))
+        measure("Not sure yet. Close session", in: findButton("Not sure yet", timeout: 2))
+        measure("I gave in", in: findButton("I gave in", timeout: 2))
         tap(findButton("It passed", timeout: 10), "It passed")
         _ = app.staticTexts["Logged."].waitForExistence(timeout: 10)
         snap("logged")
@@ -278,6 +288,7 @@ final class InterruptedUserAuditUITests: InterruptedAuditCase {
         tap(app.buttons["Save"], "Save")
         sleep(1)
         snap("saved_morning_note")
+        measure("Add note (Home)", in: findButton("Add note", timeout: 3))
 
         interrupt(seconds: 3)
         tap(findButton("Add note", timeout: 5), "Add note later in the day")

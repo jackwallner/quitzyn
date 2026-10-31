@@ -139,6 +139,16 @@ class InterruptedAuditCase: XCTestCase {
         }
     }
 
+    /// Records the size of a control, since a tired thumb needs 44 pt.
+    func measure(_ label: String, in element: XCUIElement?) {
+        guard let element, element.exists else {
+            note("MEASURE \(label): not on screen")
+            return
+        }
+        let frame = element.frame
+        note("MEASURE \(label): \(Int(frame.width)) x \(Int(frame.height)) pt at (\(Int(frame.minX)), \(Int(frame.minY)))")
+    }
+
     // MARK: - Text input
 
     func firstTextInput() -> XCUIElement {
