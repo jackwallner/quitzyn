@@ -47,9 +47,9 @@ final class InterruptedReturnAuditUITests: InterruptedAuditCase {
         return app.navigationBars["Checked in"].waitForExistence(timeout: 8)
     }
 
-    // MARK: - R1: the check-in note against a kill
+    // MARK: - R1: the check-in note, added later and against a kill
 
-    func testR1_CheckInNoteDoesNotSurviveAKillButTheDayDoes() {
+    func testR1_CheckInNoteAddedLaterAndADraftAgainstAKill() {
         tag = "R1"
         launch(seeded)
         guard cravingStart != nil else {
@@ -67,21 +67,56 @@ final class InterruptedReturnAuditUITests: InterruptedAuditCase {
         measure("Skip", in: app.buttons["Skip"])
         measure("Save", in: app.buttons["Save"])
         tap(findButton("Good", timeout: 3), "mood Good")
-        enter("Craving at the loading dock. Held on.", into: firstTextInput())
-        snap("typed")
-        note("note typed before the kill: '\(inputText(firstTextInput()))'")
+        enter("Morning: skipped the break-room run.", into: firstTextInput())
+        snap("morning_typed")
+        tap(app.buttons["Save"], "Save")
+        sleep(1)
+        snap("morning_saved")
+        clearRatingPrompt(label: "after_morning_save", waitingUpTo: 6)
 
+        // Back later in the day to add to it.
+        interrupt(seconds: 3)
+        tap(findButton("Add note", timeout: 5), "Add note later in the day")
+        guard app.navigationBars["Checked in"].waitForExistence(timeout: 8) else {
+            note("MISSING note sheet when adding later")
+            snap("evening_missing")
+            return
+        }
+        snap("evening_form")
+        note("note field when reopened to add to a saved note: '\(inputText(firstTextInput()))'")
+        enter("Evening: two cravings, both passed.", into: firstTextInput())
+        tap(app.buttons["Save"], "Save")
+        sleep(1)
+        snap("evening_saved")
+        clearRatingPrompt(label: "after_evening_save", waitingUpTo: 2)
+
+        tapTab("Timeline")
+        sleep(1)
+        var field = firstTextInput()
+        scrollTo(field)
+        snap("timeline_note")
+        note("today's note on Timeline after both saves: '\(inputText(field))'")
+        tapTab("Home")
+        sleep(1)
+
+        // A third thought, typed when the process goes.
+        tap(findButton("Add note", timeout: 5), "Add note for a third thought")
+        guard app.navigationBars["Checked in"].waitForExistence(timeout: 8) else {
+            note("MISSING note sheet for the third thought")
+            return
+        }
+        enter("Third thought, written just before the call.", into: firstTextInput())
+        snap("third_typed")
         killAndReopen(seeded)
         _ = cravingStart
         snap("home_after_kill")
         note("after the kill Home shows the logged card: \(findText("^Today is logged.*", timeout: 3) != nil), the check-in button: \(findButton("Check in for today", timeout: 2) != nil)")
-        guard openCheckInNoteSheet() else {
-            note("MISSING note sheet after the kill")
-            return
-        }
-        snap("sheet_reopened_after_kill")
-        note("note field when reopened after the kill: '\(inputText(firstTextInput()))'")
-        tap(app.buttons["Skip"], "Skip")
+        tapTab("Timeline")
+        sleep(1)
+        field = firstTextInput()
+        scrollTo(field)
+        snap("timeline_after_kill")
+        note("today's note on Timeline after the kill: '\(inputText(field))'")
     }
 
     // MARK: - R2: the slip sheet
@@ -234,7 +269,8 @@ final class InterruptedReturnAuditUITests: InterruptedAuditCase {
             snap("home_missing")
             return
         }
-        clearTrialNudge(waitingUpTo: 9, label: "home")
+        let cravingFrame = cravingStart?.frame
+        probeTrialNudge(label: "home", cravingFrame: cravingFrame, waitingUpTo: 9)
         tap(app.buttons["More"], "More menu")
         sleep(1)
         tap(app.buttons["Settings"], "Settings")

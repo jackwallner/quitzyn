@@ -210,13 +210,47 @@ class InterruptedAuditCase: XCTestCase {
     /// The system rating prompt can follow a check-in, a ridden-out urge or a
     /// growth celebration by about 3.5 s. Sends it away so it cannot hide what
     /// a later step needs, and notes that it came.
-    func clearRatingPrompt(label: String) {
+    func clearRatingPrompt(label: String, waitingUpTo seconds: TimeInterval = 1) {
         let notNow = app.buttons["Not Now"]
-        guard notNow.waitForExistence(timeout: 1) else { return }
+        guard notNow.waitForExistence(timeout: seconds) else { return }
         note("RATING PROMPT on screen (\(label))")
         snap("\(label)_rating_prompt")
         notNow.tap()
         sleep(1)
+    }
+
+    /// Waits for the passive trial offer, photographs it and records where its
+    /// buttons sit against the craving button underneath: a tap meant for one
+    /// lands on the other when the sheet rises first. Sends the offer away with
+    /// "Not now". Nothing that starts a purchase is tapped.
+    @discardableResult
+    func probeTrialNudge(label: String, cravingFrame: CGRect?, waitingUpTo seconds: TimeInterval = 14) -> Bool {
+        let started = Date()
+        let seeAll = app.buttons["See all plans"]
+        guard seeAll.waitForExistence(timeout: seconds) else {
+            note("no trial nudge within \(Int(seconds))s (\(label))")
+            return false
+        }
+        note("TRIAL NUDGE on screen \(Int(Date().timeIntervalSince(started)))s into the wait (\(label))")
+        snap("\(label)_trial_nudge")
+        let cta = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] %@", "Free Trial")).firstMatch
+        let notNow = app.buttons["Not now"]
+        measure("trial offer CTA", in: cta)
+        measure("trial offer See all plans", in: seeAll)
+        measure("trial offer Not now", in: notNow)
+        if let cravingFrame {
+            let centre = CGPoint(x: cravingFrame.midX, y: cravingFrame.midY)
+            note("craving button before the offer rose: x \(Int(cravingFrame.minX)) to \(Int(cravingFrame.maxX)), y \(Int(cravingFrame.minY)) to \(Int(cravingFrame.maxY)); centre \(Int(centre.x)),\(Int(centre.y))")
+            for (name, element) in [("CTA", cta), ("See all plans", seeAll), ("Not now", notNow)] where element.exists {
+                let frame = element.frame
+                if frame.contains(centre) || frame.intersects(cravingFrame) {
+                    note("OVERLAP: the offer's \(name) (y \(Int(frame.minY)) to \(Int(frame.maxY))) covers part of where the craving button was; centre covered: \(frame.contains(centre))")
+                }
+            }
+        }
+        if notNow.exists { notNow.tap() }
+        sleep(1)
+        return true
     }
 
     /// The notification permission prompt belongs to SpringBoard, not the app.
