@@ -679,7 +679,7 @@ private struct CheckInDetailSheet: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Mood") {
+                Section {
                     HStack(spacing: Theme.Space.m) {
                         ForEach(1...5, id: \.self) { value in
                             Button {
@@ -700,10 +700,14 @@ private struct CheckInDetailSheet: View {
                         }
                     }
                     .padding(.vertical, Theme.Space.xs)
+                } header: {
+                    sectionHeader("Mood")
                 }
-                Section("Note") {
+                Section {
                     TextField("Anything you want to remember about today?", text: $note, axis: .vertical)
                         .lineLimit(1...4)
+                } header: {
+                    sectionHeader("Note")
                 }
             }
             .navigationTitle("Checked in")
@@ -718,6 +722,11 @@ private struct CheckInDetailSheet: View {
                 }
             }
         }
+    }
+
+    /// The system header grey reads at 3:1 on this sheet.
+    private func sectionHeader(_ title: String) -> some View {
+        Text(title).foregroundStyle(Theme.textPrimary)
     }
 
     private func save() {

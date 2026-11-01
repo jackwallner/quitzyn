@@ -75,6 +75,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         // The sheet can be slow to rise; a tap that landed mid-transition is retried.
         if !good.waitForExistence(timeout: 10), addNote.exists { addNote.tap() }
         XCTAssertTrue(good.waitForExistence(timeout: 10))
+        // Unfolded, the sheet keeps rising after it appears; tap once it rests.
+        waitUntilStill(good)
         let choice = good.isSelected ? mood("Great", in: app) : good
         let chosen = choice.label
         choice.tap()
@@ -104,6 +106,16 @@ final class ReleaseJourneysUITests: XCTestCase {
     private func assertSelected(_ name: String, in app: XCUIApplication, _ message: String) {
         let selected = app.buttons.matching(NSPredicate(format: "label ENDSWITH %@ AND isSelected == true", name)).firstMatch
         XCTAssertTrue(selected.waitForExistence(timeout: 5), message)
+    }
+
+    private func waitUntilStill(_ element: XCUIElement) {
+        var last = element.frame
+        for _ in 0..<10 {
+            Thread.sleep(forTimeInterval: 0.5)
+            let now = element.frame
+            if now == last { return }
+            last = now
+        }
     }
 
     private func mood(_ name: String, in app: XCUIApplication) -> XCUIElement {

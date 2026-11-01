@@ -445,7 +445,9 @@ struct OnboardingView: View {
                 trialBenefit(icon: "book.closed.fill", text: "Journal privately through the hard days")
             }
             .padding(Theme.Space.m)
-            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
+            // A darker card keeps the white list readable where the page's
+            // gradient is lightest.
+            .background(.black.opacity(0.14), in: RoundedRectangle(cornerRadius: 18))
         }
     }
 
