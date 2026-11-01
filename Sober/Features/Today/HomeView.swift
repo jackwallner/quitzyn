@@ -60,6 +60,14 @@ struct HomeView: View {
     private var dayInCycle: Int { GardenService.cycleProgress(forDays: treeDays).dayInCycle }
     private var stage: BonsaiStage { GardenService.stage(forDays: treeDays) }
 
+    @ViewBuilder private var tendedStrip: some View {
+        WeekStripView(days: week)
+        Text(TendedWeek.compactSummary(week))
+            .font(Theme.caption())
+            .foregroundStyle(Theme.textSecondary)
+            .lineLimit(1)
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -394,12 +402,11 @@ struct HomeView: View {
                     // thing whether or not the user ever opened the app, so the
                     // confirmation shows the one record that only exists
                     // because they did.
-                    HStack(spacing: Theme.Space.s) {
-                        WeekStripView(days: week)
-                        Text(TendedWeek.compactSummary(week))
-                            .font(Theme.caption())
-                            .foregroundStyle(Theme.textSecondary)
-                            .lineLimit(1)
+                    // At the largest text sizes the count drops under the
+                    // strip instead of truncating beside it.
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: Theme.Space.s) { tendedStrip }
+                        VStack(alignment: .leading, spacing: Theme.Space.xs) { tendedStrip }
                     }
                 }
                 Spacer(minLength: 0)
@@ -673,10 +680,10 @@ private struct CheckInDetailSheet: View {
                                 VStack(spacing: 4) {
                                     Image(systemName: symbols[value - 1])
                                         .font(.title2)
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                     Text(moodLabels[value - 1])
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }

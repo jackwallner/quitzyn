@@ -73,7 +73,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         let note = "Walked it off \(Int(Date().timeIntervalSince1970) % 100_000)"
         let field = noteField(in: app)
         XCTAssertTrue(field.waitForExistence(timeout: 10))
-        field.tap()
+        focus(field)
         field.typeText(note)
         tap("Save", in: app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
@@ -89,6 +89,18 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue((kept.value as? String ?? "").contains(note), "the note survives a relaunch")
         QA.checkpoint(app, "note-after-relaunch")
         tap("Skip", in: app)
+    }
+
+    /// A tap can miss on the unfolded Duo; a short press on the field's
+    /// own coordinate focuses it there.
+    private func focus(_ field: XCUIElement) {
+        field.tap()
+        let focused = NSPredicate(format: "hasKeyboardFocus == true")
+        for _ in 0..<3 {
+            let wait = XCTWaiter().wait(for: [XCTNSPredicateExpectation(predicate: focused, object: field)], timeout: 2)
+            if wait == .completed { return }
+            field.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).press(forDuration: 0.05)
+        }
     }
 
     private func noteField(in app: XCUIApplication) -> XCUIElement {
