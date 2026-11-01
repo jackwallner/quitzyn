@@ -84,6 +84,7 @@ struct OnboardingView: View {
         }
         .task {
             ConversionDiagnostics.record(.onboardingReached)
+            restoreSavedSetup()
             #if canImport(RevenueCat)
             if subscriptions.isConfigured, subscriptions.packages.isEmpty {
                 await subscriptions.fetchProducts()
@@ -872,6 +873,21 @@ struct OnboardingView: View {
     /// (before the offer and again at the pledge), so the journey is started
     /// once and only moved after that: a second `startJourney` would close the
     /// first as a zero-length journey.
+    /// A setup saved before the app was killed mid-onboarding fills the
+    /// steps again, so tapping through never turns a saved quit date into today.
+    private func restoreSavedSetup() {
+        guard let journey = SobrietyService(context: context).activeJourney() else { return }
+        let settings = SettingsService(context: context).current()
+        guard !settings.hasCompletedOnboarding else { return }
+        startDate = journey.startDate
+        if settings.pouchesPerDay > 0 {
+            pouchesPerDay = Double(settings.pouchesPerDay)
+            let perCan = Double(settings.costPerDayCents) / 100 * Double(pouchesPerCan) / pouchesPerDay
+            costPerCan = min(20, max(1, (perCan * 2).rounded() / 2))
+        }
+        reminderHour = settings.dailyReminderHour
+    }
+
     private func persistSetup() {
         let settings = SettingsService(context: context).current()
         settings.costPerDayCents = Int((derivedCostPerDay * 100).rounded())

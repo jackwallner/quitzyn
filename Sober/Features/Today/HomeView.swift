@@ -134,7 +134,13 @@ struct HomeView: View {
             .onReceive(NotificationCenter.default.publisher(for: .soberOpenCheckIn)) { _ in
                 refreshDailyState()
             }
-            .task { await presentPassiveTrialNudge(subscriptions, intent: .postOnboarding, delay: 6) }
+            // The offer waits for a quiet Home: opening the craving cover or any
+            // sheet cancels the wait, and it starts over once Home is clear, so it
+            // never rises under a thumb reaching for "I'm having a craving".
+            .task(id: isHomeClear) {
+                guard isHomeClear else { return }
+                await presentPassiveTrialNudge(subscriptions, intent: .postOnboarding, delay: 20)
+            }
             .overlay {
                 if showGrowth, let event = growthEvent {
                     GrowthCelebrationView(
@@ -686,6 +692,11 @@ private struct CheckInDetailSheet: View {
             }
             .navigationTitle("Checked in")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                let saved = CheckInService(context: context).saved()
+                mood = mood ?? saved.mood
+                if note.isEmpty { note = saved.note ?? "" }
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Skip") { dismiss() }
