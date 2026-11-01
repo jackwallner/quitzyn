@@ -72,11 +72,13 @@ final class ReleaseJourneysUITests: XCTestCase {
         }
         // Pick the mood that is not already chosen, so the save is a change.
         let good = mood("Good", in: app)
+        // The sheet can be slow to rise; a tap that landed mid-transition is retried.
+        if !good.waitForExistence(timeout: 10), addNote.exists { addNote.tap() }
         XCTAssertTrue(good.waitForExistence(timeout: 10))
         let choice = good.isSelected ? mood("Great", in: app) : good
         let chosen = choice.label
         choice.tap()
-        assertSelected(mood(chosen, in: app), "\(chosen) is selected")
+        assertSelected(chosen, in: app, "\(chosen) is selected")
         tap("Save", in: app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
         XCTAssertFalse(checkIn.exists)
@@ -86,16 +88,17 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertFalse(app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch.exists)
         QA.checkpoint(app, "home-after-relaunch")
         tap("Add note", in: app)
-        let kept = mood(chosen, in: app)
-        XCTAssertTrue(kept.waitForExistence(timeout: 10))
-        assertSelected(kept, "the mood survives a relaunch")
+        XCTAssertTrue(mood(chosen, in: app).waitForExistence(timeout: 10))
+        assertSelected(chosen, in: app, "the mood survives a relaunch")
         QA.checkpoint(app, "mood-after-relaunch")
         tap("Skip", in: app)
     }
 
-    private func assertSelected(_ element: XCUIElement, _ message: String) {
-        let selected = XCTNSPredicateExpectation(predicate: NSPredicate(format: "isSelected == true"), object: element)
-        XCTAssertEqual(XCTWaiter().wait(for: [selected], timeout: 5), .completed, message)
+    /// Home can show a button ending in the same mood word behind the sheet,
+    /// so look for a selected one rather than the first match.
+    private func assertSelected(_ name: String, in app: XCUIApplication, _ message: String) {
+        let selected = app.buttons.matching(NSPredicate(format: "label ENDSWITH %@ AND isSelected == true", name)).firstMatch
+        XCTAssertTrue(selected.waitForExistence(timeout: 5), message)
     }
 
     private func mood(_ name: String, in app: XCUIApplication) -> XCUIElement {

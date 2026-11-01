@@ -168,7 +168,10 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showCheckInDetail, onDismiss: scheduleReviewRequestAfterPositiveMoment) {
-                CheckInDetailSheet()
+                // Read at presentation so the sheet opens on today's saved
+                // mood and note rather than filling them in after it appears.
+                let saved = CheckInService(context: context).saved()
+                CheckInDetailSheet(mood: saved.mood, note: saved.note ?? "")
                     .presentationDetents([.height(320)])
             }
             .sheet(isPresented: $showSettings) { SettingsView() }
@@ -663,7 +666,12 @@ private struct CheckInDetailSheet: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var mood: Int?
-    @State private var note: String = ""
+    @State private var note: String
+
+    init(mood: Int?, note: String) {
+        _mood = State(initialValue: mood)
+        _note = State(initialValue: note)
+    }
 
     private let symbols = ["cloud.rain.fill", "cloud.fill", "cloud.sun.fill", "sun.max.fill", "sparkles"]
     private let moodLabels = ["Rough", "Low", "OK", "Good", "Great"]
@@ -700,11 +708,6 @@ private struct CheckInDetailSheet: View {
             }
             .navigationTitle("Checked in")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                let saved = CheckInService(context: context).saved()
-                mood = mood ?? saved.mood
-                if note.isEmpty { note = saved.note ?? "" }
-            }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Skip") { dismiss() }
