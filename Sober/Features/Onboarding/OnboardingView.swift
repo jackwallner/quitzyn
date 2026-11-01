@@ -759,8 +759,8 @@ struct OnboardingView: View {
             Text("·")
             Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
         }
-        .font(Theme.caption())
-        .foregroundStyle(.white.opacity(0.94))
+        .font(Theme.caption(weight: .medium))
+        .foregroundStyle(.white)
         .tint(.white)
     }
 
