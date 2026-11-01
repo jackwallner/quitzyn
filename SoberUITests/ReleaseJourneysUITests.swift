@@ -54,23 +54,46 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "garden-after-relaunch")
     }
 
-    /// Core loop: check in for today, and the day stays logged after a relaunch.
+    /// Core loop: check in for today with a note, and the day and the note
+    /// are still there after a relaunch.
     func testCoreLoopCheckInLogsTodayAndKeepsIt() {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
         QA.launch(app, arguments: ["-seedDemo", "-previewStore"])
         let checkIn = app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch
-        XCTAssertTrue(checkIn.waitForExistence(timeout: 20), "today starts unlogged")
-        QA.checkpoint(app, "home-before-check-in")
-        checkIn.tap()
-        tap("Skip", in: app)
-        let logged = app.staticTexts["Today is logged"]
-        XCTAssertTrue(logged.waitForExistence(timeout: 10))
+        let addNote = app.buttons["Add note"].firstMatch
+        // An earlier journey on this install may already have logged today;
+        // the note sheet is then one tap further.
+        if checkIn.waitForExistence(timeout: 20) {
+            QA.checkpoint(app, "home-before-check-in")
+            checkIn.tap()
+        } else {
+            XCTAssertTrue(addNote.waitForExistence(timeout: 5), "today can be checked in or noted")
+            addNote.tap()
+        }
+        let note = "Walked it off \(Int(Date().timeIntervalSince1970) % 100_000)"
+        let field = noteField(in: app)
+        XCTAssertTrue(field.waitForExistence(timeout: 10))
+        field.tap()
+        field.typeText(note)
+        tap("Save", in: app)
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
         XCTAssertFalse(checkIn.exists)
         QA.checkpoint(app, "home-checked-in")
         QA.relaunch(app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 20))
         XCTAssertFalse(app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch.exists)
         QA.checkpoint(app, "home-after-relaunch")
+        tap("Add note", in: app)
+        let kept = noteField(in: app)
+        XCTAssertTrue(kept.waitForExistence(timeout: 10))
+        XCTAssertTrue((kept.value as? String ?? "").contains(note), "the note survives a relaunch")
+        QA.checkpoint(app, "note-after-relaunch")
+        tap("Skip", in: app)
+    }
+
+    private func noteField(in app: XCUIApplication) -> XCUIElement {
+        let types = [XCUIElement.ElementType.textField, .textView].map(\.rawValue)
+        return app.descendants(matching: .any).matching(NSPredicate(format: "elementType IN %@", types)).firstMatch
     }
 
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {
