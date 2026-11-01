@@ -54,7 +54,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "garden-after-relaunch")
     }
 
-    /// Core loop: check in for today with a note, and the day and the note
+    /// Core loop: check in for today with a mood, and the day and the mood
     /// are still there after a relaunch.
     func testCoreLoopCheckInLogsTodayAndKeepsIt() {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
@@ -62,7 +62,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         let checkIn = app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch
         let addNote = app.buttons["Add note"].firstMatch
         // An earlier journey on this install may already have logged today;
-        // the note sheet is then one tap further.
+        // the mood sheet is then one tap further.
         if checkIn.waitForExistence(timeout: 20) {
             QA.checkpoint(app, "home-before-check-in")
             checkIn.tap()
@@ -70,11 +70,13 @@ final class ReleaseJourneysUITests: XCTestCase {
             XCTAssertTrue(addNote.waitForExistence(timeout: 5), "today can be checked in or noted")
             addNote.tap()
         }
-        let note = "Walked it off \(Int(Date().timeIntervalSince1970) % 100_000)"
-        let field = noteField(in: app)
-        XCTAssertTrue(field.waitForExistence(timeout: 10))
-        focus(field)
-        field.typeText(note)
+        // Pick the mood that is not already chosen, so the save is a change.
+        let good = mood("Good", in: app)
+        XCTAssertTrue(good.waitForExistence(timeout: 10))
+        let choice = good.isSelected ? mood("Great", in: app) : good
+        let chosen = choice.label
+        choice.tap()
+        assertSelected(mood(chosen, in: app), "\(chosen) is selected")
         tap("Save", in: app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))
         XCTAssertFalse(checkIn.exists)
@@ -84,28 +86,20 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertFalse(app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch.exists)
         QA.checkpoint(app, "home-after-relaunch")
         tap("Add note", in: app)
-        let kept = noteField(in: app)
+        let kept = mood(chosen, in: app)
         XCTAssertTrue(kept.waitForExistence(timeout: 10))
-        XCTAssertTrue((kept.value as? String ?? "").contains(note), "the note survives a relaunch")
-        QA.checkpoint(app, "note-after-relaunch")
+        assertSelected(kept, "the mood survives a relaunch")
+        QA.checkpoint(app, "mood-after-relaunch")
         tap("Skip", in: app)
     }
 
-    /// A tap can miss on the unfolded Duo; a short press on the field's
-    /// own coordinate focuses it there.
-    private func focus(_ field: XCUIElement) {
-        field.tap()
-        let focused = NSPredicate(format: "hasKeyboardFocus == true")
-        for _ in 0..<3 {
-            let wait = XCTWaiter().wait(for: [XCTNSPredicateExpectation(predicate: focused, object: field)], timeout: 2)
-            if wait == .completed { return }
-            field.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).press(forDuration: 0.05)
-        }
+    private func assertSelected(_ element: XCUIElement, _ message: String) {
+        let selected = XCTNSPredicateExpectation(predicate: NSPredicate(format: "isSelected == true"), object: element)
+        XCTAssertEqual(XCTWaiter().wait(for: [selected], timeout: 5), .completed, message)
     }
 
-    private func noteField(in app: XCUIApplication) -> XCUIElement {
-        let types = [XCUIElement.ElementType.textField, .textView].map(\.rawValue)
-        return app.descendants(matching: .any).matching(NSPredicate(format: "elementType IN %@", types)).firstMatch
+    private func mood(_ name: String, in app: XCUIApplication) -> XCUIElement {
+        app.buttons.matching(NSPredicate(format: "label ENDSWITH %@", name)).firstMatch
     }
 
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {

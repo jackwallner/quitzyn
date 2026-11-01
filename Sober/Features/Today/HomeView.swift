@@ -683,11 +683,12 @@ private struct CheckInDetailSheet: View {
                                         .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                     Text(moodLabels[value - 1])
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textPrimary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }
                             .buttonStyle(.plain)
+                            .accessibilityAddTraits(mood == value ? .isSelected : [])
                         }
                     }
                     .padding(.vertical, Theme.Space.xs)
