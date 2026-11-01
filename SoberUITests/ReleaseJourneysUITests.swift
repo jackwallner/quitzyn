@@ -44,13 +44,33 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Logged."].waitForExistence(timeout: 10))
         QA.checkpoint(app, "craving-saved")
         tap("Back to the garden", in: app)
-        tap("Timeline", in: app)
+        // Unfolded, the Timeline is the trailing pane and has no tab.
+        if app.buttons["Timeline"].firstMatch.waitForExistence(timeout: 3) { tap("Timeline", in: app) }
         QA.checkpoint(app, "timeline")
         QA.interrupt(app)
         QA.checkpoint(app, "timeline-after-interruption")
         QA.relaunch(app)
         XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
         QA.checkpoint(app, "garden-after-relaunch")
+    }
+
+    /// Core loop: check in for today, and the day stays logged after a relaunch.
+    func testCoreLoopCheckInLogsTodayAndKeepsIt() {
+        let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
+        QA.launch(app, arguments: ["-seedDemo", "-previewStore"])
+        let checkIn = app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch
+        XCTAssertTrue(checkIn.waitForExistence(timeout: 20), "today starts unlogged")
+        QA.checkpoint(app, "home-before-check-in")
+        checkIn.tap()
+        tap("Skip", in: app)
+        let logged = app.staticTexts["Today is logged"]
+        XCTAssertTrue(logged.waitForExistence(timeout: 10))
+        XCTAssertFalse(checkIn.exists)
+        QA.checkpoint(app, "home-checked-in")
+        QA.relaunch(app)
+        XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons.containing(NSPredicate(format: "label BEGINSWITH %@", "Check in for today")).firstMatch.exists)
+        QA.checkpoint(app, "home-after-relaunch")
     }
 
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {
@@ -60,7 +80,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     private func tap(_ label: String, in app: XCUIApplication) {
         let button = app.buttons[label].firstMatch
         XCTAssertTrue(button.waitForExistence(timeout: 15), label)
-        if !button.isHittable { app.swipeUp() }
+        if !button.isHittable { QA.swipe(app.windows.firstMatch, .up) }
         button.tap()
     }
 }
