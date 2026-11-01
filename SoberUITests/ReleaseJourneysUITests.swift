@@ -78,6 +78,11 @@ final class ReleaseJourneysUITests: XCTestCase {
         let choice = good.isSelected ? mood("Great", in: app) : good
         let chosen = choice.label
         choice.tap()
+        // Unfolded, a tap can miss; a short press on the button selects it there.
+        let picked = app.buttons.matching(NSPredicate(format: "label ENDSWITH %@ AND isSelected == true", chosen)).firstMatch
+        if !picked.waitForExistence(timeout: 3) {
+            choice.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).press(forDuration: 0.05)
+        }
         assertSelected(chosen, in: app, "\(chosen) is selected")
         tap("Save", in: app)
         XCTAssertTrue(app.staticTexts["Today is logged"].waitForExistence(timeout: 10))

@@ -147,7 +147,7 @@ struct OnboardingView: View {
 
     private var startDateStep: some View {
         VStack(spacing: Theme.Space.xl) {
-            Spacer()
+            Spacer(minLength: 0)
             Text("When did your nicotine-free journey begin?")
                 .font(Theme.display())
                 .multilineTextAlignment(.center)
@@ -159,7 +159,9 @@ struct OnboardingView: View {
                 .labelsHidden()
                 .colorScheme(.dark)
                 .tint(.white)
-            Spacer()
+            // At the largest text sizes the steps run out of room; spacers that
+            // give way to nothing keep Continue where every other step has it.
+            Spacer(minLength: 0)
             bottomBar(primaryTitle: "Continue") { withAnimation { step = 2 } }
         }
     }
@@ -285,7 +287,7 @@ struct OnboardingView: View {
                     .foregroundStyle(.white)
                 Text("In a year, that's")
                     .font(Theme.caption())
-                    .foregroundStyle(.white.opacity(0.75))
+                    .foregroundStyle(.white.opacity(0.9))
                 if yearlyDollars > 0 {
                     Text(formatCurrency(yearlyDollars))
                         .font(.system(size: 40, weight: .bold, design: .rounded))
@@ -295,7 +297,7 @@ struct OnboardingView: View {
                          ? "plus \(yearlyPouches.formatted()) pouches you won't put in. That's the nicotine your body never has to process."
                          : "\(yearlyPouches.formatted()) pouches you won't put in. That's nicotine your body never has to process.")
                         .font(Theme.caption())
-                        .foregroundStyle(.white.opacity(0.75))
+                        .foregroundStyle(.white.opacity(0.9))
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                 }
