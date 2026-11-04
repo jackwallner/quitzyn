@@ -242,7 +242,7 @@ struct PaywallView: View {
                      : focus.pitchSubheadline)
                     .font(Theme.subhead())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(3)
+                    .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
             } else if hasSavings {
                 eyebrow("YOU'VE SAVED SO FAR")
@@ -254,7 +254,7 @@ struct PaywallView: View {
                 Text("Your nicotine-free days have added up. Put some of your savings toward tools that support your progress.")
                     .font(Theme.subhead())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(2)
+                    .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
             } else if costPerDayCents > 0 {
                 eyebrow("YOUR MONEY, KEPT")
@@ -267,7 +267,7 @@ struct PaywallView: View {
                 Text("Stays in your pocket, not on pouches. Bloom+ keeps the streak that gets you there.")
                     .font(Theme.subhead())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(2)
+                    .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
             } else {
                 eyebrow("BLOOM+")
@@ -277,7 +277,7 @@ struct PaywallView: View {
                 Text("Your garden, journal, health timeline, and savings. Everything that keeps you nicotine-free.")
                     .font(Theme.subhead())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(2)
+                    .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -318,8 +318,8 @@ struct PaywallView: View {
                 Text(feature.title)
                     .font(Theme.subhead(weight: .semibold))
                     .foregroundStyle(Theme.textPrimary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.85)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text(feature.detail)
                     .font(Theme.caption())
                     .foregroundStyle(Theme.textSecondary)
@@ -717,7 +717,7 @@ private struct PlanCard: View {
                         Text(subtitle)
                             .font(Theme.caption(weight: .semibold))
                             .foregroundStyle(Theme.textSecondary)
-                            .lineLimit(2)
+                            .lineLimit(3)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }
