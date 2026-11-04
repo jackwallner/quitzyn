@@ -218,7 +218,7 @@ struct PaywallView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    private func eyebrow(_ text: String) -> some View {
+    private func eyebrow(_ text: LocalizedStringKey) -> some View {
         Text(text)
             .font(.system(size: 11, weight: .heavy))
             .tracking(1.2)
@@ -332,7 +332,7 @@ struct PaywallView: View {
                 .font(.system(size: 12, weight: .heavy))
                 .foregroundStyle(Theme.brandPrimary.opacity(highlighted ? 1 : 0.55))
         }
-        .frame(height: 38)
+        .frame(minHeight: 38)
         .padding(.horizontal, highlighted ? 8 : 0)
         .background(
             highlighted ? Theme.brandPrimary.opacity(0.08) : .clear,
