@@ -356,8 +356,8 @@ struct TimelineView: View {
     private func dayCellLabel(date: Date, checkIn: DailyCheckIn?, readable: Bool) -> String {
         let name = date.formatted(.dateTime.month(.wide).day())
         guard readable, let checkIn else { return name }
-        if !checkIn.wasSober { return "\(name), slip" }
-        return checkIn.wasLogged ? "\(name), checked in" : "\(name), not checked in"
+        if !checkIn.wasSober { return String(localized: "\(name), slip") }
+        return checkIn.wasLogged ? String(localized: "\(name), checked in") : String(localized: "\(name), not checked in")
     }
 
     // MARK: - Reconstructed tree for the selected day

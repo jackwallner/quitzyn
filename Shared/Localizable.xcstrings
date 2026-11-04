@@ -72399,107 +72399,6 @@
         }
       }
     },
-    "Your garden is growing. Check in today if you're nicotine-free.": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your garden is growing. Check in today if you're nicotine-free."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dein Garten wächst. Mach heute einen Check-in, wenn du nikotinfrei bist."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ваш сад растёт. Отметьте сегодняшний день, если вы не употребляли никотин."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vaše zahrada roste. Zaznamenejte dnešek, pokud jste bez nikotinu."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Din trädgård växer. Registrera dagen om du är nikotinfri."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Puutarhasi kasvaa. Tee päivämerkintä tänään, jos olet nikotiiniton."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Je tuin groeit. Registreer vandaag als je nicotinevrij bent."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu jardín crece. Registra el día de hoy si no consumes nicotina."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Din have vokser. Registrer dagen i dag, hvis du er uden nikotin."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Twój ogród rośnie. Dodaj dziś wpis i podlej go, jeśli nie sięgasz po nikotynę."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tvoja záhrada rastie. Ak si dnes bez nikotínu, pridaj denný záznam a polej ju."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hagen din vokser. Registrer dagen i dag hvis du har vært uten nikotin."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Grădina dvs. crește. Înregistrați ziua de azi dacă ați fost fără nicotină."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ваш сад росте. Позначте сьогоднішній день, якщо не вживали нікотин."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Il tuo giardino cresce. Registra la giornata se oggi sei senza nicotina."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "你的花园正在生长。如果今天没有摄入尼古丁，就记录下来。"
-          }
-        }
-      }
-    },
     "Your tree joins the grove. A new sapling begins.": {
       "extractionState": "manual",
       "localizations": {
@@ -72947,6 +72846,662 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "你的树林现在有 %1$lld 棵树。新树苗即将开始生长。"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@, checked in": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, checked in"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, eingecheckt"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, отмечено"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, zaznamenáno"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, avstämd"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, merkitty"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, geregistreerd"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, registrado"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, registreret"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, zapisano"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, zaznamenané"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, registrert"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, înregistrată"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, відмічено"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, registrato"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@，已打卡"
+          }
+        }
+      }
+    },
+    "%@, not checked in": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, not checked in"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, nicht eingecheckt"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, не отмечено"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, nezaznamenáno"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, inte avstämd"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, ei merkitty"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, niet geregistreerd"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, sin registrar"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, ikke registreret"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, brak wpisu"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, bez záznamu"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, ikke registrert"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, neînregistrată"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, не відмічено"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, non registrato"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@，未打卡"
+          }
+        }
+      }
+    },
+    "%@, slip": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, slip"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, Ausrutscher"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, срыв"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, uklouznutí"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, snedsteg"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, retkahdus"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, misstap"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, desliz"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, smutter"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, potknięcie"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, pošmyknutie"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, glipp"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, scăpare"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, зрив"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, scivolone"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@，失手"
+          }
+        }
+      }
+    },
+    "%lld days and growing. If today's nicotine-free, log it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld day and growing. If today's nicotine-free, log it."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld days and growing. If today's nicotine-free, log it."
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Schon %1$lld Tag, und es werden mehr. Wenn du heute nikotinfrei bist, trag den Tag ein."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Schon %1$lld Tage, und es werden mehr. Wenn du heute nikotinfrei bist, trag den Tag ein."
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld дня, и дальше больше. Если сегодня вы не употребляли никотин, отметьте этот день."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld дней, и дальше больше. Если сегодня вы не употребляли никотин, отметьте этот день."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld день, и дальше больше. Если сегодня вы не употребляли никотин, отметьте этот день."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld дня, и дальше больше. Если сегодня вы не употребляли никотин, отметьте этот день."
+                }
+              }
+            }
+          }
+        },
+        "cs": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dny a přibývají další. Pokud jste dnes bez nikotinu, zaznamenejte to."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dne a přibývají další. Pokud jste dnes bez nikotinu, zaznamenejte to."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld den a přibývají další. Pokud jste dnes bez nikotinu, zaznamenejte to."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dní a přibývají další. Pokud jste dnes bez nikotinu, zaznamenejte to."
+                }
+              }
+            }
+          }
+        },
+        "sv": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dag och fler på väg. Om du är nikotinfri i dag, registrera dagen."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dagar och fler på väg. Om du är nikotinfri i dag, registrera dagen."
+                }
+              }
+            }
+          }
+        },
+        "fi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Jo %1$lld päivä, ja lisää tulee. Jos olet tänään nikotiiniton, tee päivämerkintä."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Jo %1$lld päivää, ja lisää tulee. Jos olet tänään nikotiiniton, tee päivämerkintä."
+                }
+              }
+            }
+          }
+        },
+        "nl": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Al %1$lld dag en het worden er meer. Als je vandaag nicotinevrij bent, registreer de dag."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Al %1$lld dagen en het worden er meer. Als je vandaag nicotinevrij bent, registreer de dag."
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ya llevas %1$lld día y sigues sumando. Si hoy no consumes nicotina, registra el día."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ya llevas %1$lld días y sigues sumando. Si hoy no consumes nicotina, registra el día."
+                }
+              }
+            }
+          }
+        },
+        "da": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dag, og der kommer flere til. Hvis du er uden nikotin i dag, så registrer dagen."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dage, og der kommer flere til. Hvis du er uden nikotin i dag, så registrer dagen."
+                }
+              }
+            }
+          }
+        },
+        "pl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Już %1$lld dni, a będzie więcej. Jeśli dzisiejszy dzień jest bez nikotyny, dodaj wpis."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Już %1$lld dni, a będzie więcej. Jeśli dzisiejszy dzień jest bez nikotyny, dodaj wpis."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Już %1$lld dzień, a będzie więcej. Jeśli dzisiejszy dzień jest bez nikotyny, dodaj wpis."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Już %1$lld dnia, a będzie więcej. Jeśli dzisiejszy dzień jest bez nikotyny, dodaj wpis."
+                }
+              }
+            }
+          }
+        },
+        "sk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dni a pribúdajú ďalšie. Ak je dnešok bez nikotínu, pridaj záznam."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dňa a pribúdajú ďalšie. Ak je dnešok bez nikotínu, pridaj záznam."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld deň a pribúdajú ďalšie. Ak je dnešok bez nikotínu, pridaj záznam."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Už %1$lld dní a pribúdajú ďalšie. Ak je dnešok bez nikotínu, pridaj záznam."
+                }
+              }
+            }
+          }
+        },
+        "nb": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dag, og flere kommer. Hvis du har en dag uten nikotin, registrer den."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld dager, og flere kommer. Hvis du har en dag uten nikotin, registrer den."
+                }
+              }
+            }
+          }
+        },
+        "ro": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Deja %1$lld zile și tot mai multe. Dacă ați fost fără nicotină astăzi, înregistrați ziua."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Deja %1$lld zi și tot mai multe. Dacă ați fost fără nicotină astăzi, înregistrați ziua."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Deja %1$lld de zile și tot mai multe. Dacă ați fost fără nicotină astăzi, înregistrați ziua."
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld дні, і далі більше. Якщо сьогодні ви не вживали нікотин, позначте цей день."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld днів, і далі більше. Якщо сьогодні ви не вживали нікотин, позначте цей день."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld день, і далі більше. Якщо сьогодні ви не вживали нікотин, позначте цей день."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Уже %1$lld дня, і далі більше. Якщо сьогодні ви не вживали нікотин, позначте цей день."
+                }
+              }
+            }
+          }
+        },
+        "it": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Già %1$lld giorno, e si va avanti. Se oggi sei senza nicotina, registra la giornata."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Già %1$lld giorni, e si va avanti. Se oggi sei senza nicotina, registra la giornata."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "已经 %1$lld 天，还在增加。如果今天没有摄入尼古丁，就记录下来。"
                 }
               }
             }
