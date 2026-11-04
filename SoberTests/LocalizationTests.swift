@@ -30,6 +30,24 @@ struct LocalizationTests {
         #expect(String(localized: "\(5) days nicotine-free", bundle: russian, locale: locale) == "5 дней без никотина")
     }
 
+    @Test func trialDisclosureResolvesItsPluralInEveryLanguage() throws {
+        for language in ["en"] + Self.languages {
+            let host = try #require(bundle(language), "\(language).lproj is missing")
+            let locale = Locale(identifier: language)
+            let disclosures = [
+                String(localized: "\(7)-day free trial, then \("$34.99").", bundle: host, locale: locale),
+                String(localized: "\(1)-month free trial, then \("$34.99").", bundle: host, locale: locale),
+                String(localized: "\(1)-year free trial, then \("$34.99").", bundle: host, locale: locale),
+            ]
+            for disclosure in disclosures {
+                #expect(!disclosure.contains("#@"), "\(language): \(disclosure)")
+                #expect(disclosure.contains("$34.99"), "\(language): \(disclosure)")
+            }
+        }
+        let english = try #require(bundle("en"))
+        #expect(String(localized: "\(7)-day free trial, then \("$34.99").", bundle: english, locale: Locale(identifier: "en")) == "7-day free trial, then $34.99.")
+    }
+
     @Test func germanCopyIsTranslated() throws {
         let german = try #require(bundle("de"))
         #expect(String(localized: "Every nicotine-free day grows your tree.", bundle: german) == "Jeder nikotinfreie Tag lässt deinen Baum wachsen.")

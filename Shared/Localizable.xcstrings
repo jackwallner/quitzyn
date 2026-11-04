@@ -9502,6 +9502,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "%#@n@, then %2$@."
+          },
+          "substitutions": {
+            "n": {
+              "argNum": 1,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-day free trial"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-day free trial"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "de": {
@@ -10196,6 +10218,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "%#@n@, then %2$@."
+          },
+          "substitutions": {
+            "n": {
+              "argNum": 1,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-month free trial"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-month free trial"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "de": {
@@ -10890,6 +10934,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "%#@n@, then %2$@."
+          },
+          "substitutions": {
+            "n": {
+              "argNum": 1,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-year free trial"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg-year free trial"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "de": {

@@ -166,6 +166,14 @@ def main():
                         problems.append(f'"{key}" [{lang}]: plural substitution {name!r} is not referenced')
             for v in bad:
                 problems.append(f'"{key}" [{lang}]: format specifiers differ in "{v}"')
+    for key, entry in catalog.items():
+        for lang, loc in entry.get('localizations', {}).items():
+            units = [loc] + list(loc.get('variations', {}).get('plural', {}).values())
+            for unit in units:
+                value = unit.get('stringUnit', {}).get('value', '')
+                for name in re.findall(r'%(?:\d+\$)?#@(\w+)@', value):
+                    if name not in loc.get('substitutions', {}):
+                        problems.append(f'"{key}" [{lang}]: plural token {name!r} has no substitution')
     for p in problems:
         print(p)
     print(f'{len(catalog)} keys, {len(LANGS)} languages, {len(problems)} problems')
