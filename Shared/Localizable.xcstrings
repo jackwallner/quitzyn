@@ -16283,7 +16283,7 @@
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "NAJVÝHODNEJŠIA PONUKA"
+            "value": "NAJVÝHODNEJŠIE"
           }
         },
         "nb": {
@@ -27841,13 +27841,13 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "OKRES PRÓBNY GRATIS"
+            "value": "GRATIS"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "SKÚŠOBNÉ OBDOBIE ZADARMO"
+            "value": "ZADARMO"
           }
         },
         "nb": {
@@ -37008,7 +37008,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kuukausittain"
+            "value": "Kuukausi"
           }
         },
         "nl": {
@@ -64289,7 +64289,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vuositilaus"
+            "value": "Vuosi"
           }
         },
         "nl": {

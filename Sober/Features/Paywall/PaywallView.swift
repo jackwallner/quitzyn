@@ -242,7 +242,7 @@ struct PaywallView: View {
                      : focus.pitchSubheadline)
                     .font(Theme.subhead())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(2)
+                    .lineLimit(3)
                     .fixedSize(horizontal: false, vertical: true)
             } else if hasSavings {
                 eyebrow("YOU'VE SAVED SO FAR")
@@ -323,8 +323,8 @@ struct PaywallView: View {
                 Text(feature.detail)
                     .font(Theme.caption())
                     .foregroundStyle(Theme.textSecondary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 8)
 
@@ -446,13 +446,19 @@ struct PaywallView: View {
             Button(action: startRestore) {
                 Text(isRestoring ? "Restoring…" : "Restore Purchases")
                     .underline()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
             .buttonStyle(.plain)
             .disabled(isRestoring || isPurchasing)
             Text("·")
-            Link("Terms", destination: PaywallLinks.standardEULA)
+            Link(destination: PaywallLinks.standardEULA) {
+                Text("Terms").lineLimit(1).minimumScaleFactor(0.7)
+            }
             Text("·")
-            Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
+            Link(destination: PaywallLinks.privacyPolicy) {
+                Text("Privacy Policy").lineLimit(1).minimumScaleFactor(0.7)
+            }
         }
         .font(Theme.caption())
         .foregroundStyle(Theme.textTertiary)
@@ -653,6 +659,27 @@ private struct PlanCard: View {
         return nil
     }
 
+    private var planName: some View {
+        Text(package.soberDisplayName)
+            .font(Theme.subhead(weight: .bold))
+            .foregroundStyle(Theme.textPrimary)
+            .lineLimit(1)
+            .fixedSize()
+    }
+
+    @ViewBuilder private var planBadge: some View {
+        if let badgeLabel {
+            Text(badgeLabel)
+                .font(.system(size: 10, weight: .heavy))
+                .foregroundStyle(.white)
+                .lineLimit(1)
+                .fixedSize()
+                .padding(.horizontal, 7)
+                .padding(.vertical, 3)
+                .background(badgeFill, in: Capsule())
+        }
+    }
+
     private var badgeLabel: String? {
         if kind == .yearly, let pct = savingsPercent { return String(localized: "SAVE \(pct)%") }
         if kind == .lifetime { return String(localized: "BEST DEAL") }
@@ -679,26 +706,19 @@ private struct PlanCard: View {
                 }
 
                 VStack(alignment: .leading, spacing: 3) {
-                    HStack(spacing: 6) {
-                        Text(package.soberDisplayName)
-                            .font(Theme.subhead(weight: .bold))
-                            .foregroundStyle(Theme.textPrimary)
-                        if let badgeLabel {
-                            Text(badgeLabel)
-                                .font(.system(size: 10, weight: .heavy))
-                                .foregroundStyle(.white)
-                                .padding(.horizontal, 7)
-                                .padding(.vertical, 3)
-                                .background(badgeFill, in: Capsule())
-                        }
+                    // Long languages stack the badge under the plan name instead of
+                    // breaking either one mid-word.
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: 6) { planName; planBadge }
+                        VStack(alignment: .leading, spacing: 4) { planName; planBadge }
                     }
 
                     if let subtitle {
                         Text(subtitle)
                             .font(Theme.caption(weight: .semibold))
                             .foregroundStyle(Theme.textSecondary)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.85)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
 
