@@ -743,6 +743,7 @@ private struct PlanCard: View {
                 .frame(width: 112, alignment: .trailing)
             }
             .padding(.horizontal, 16)
+            .padding(.vertical, 8)
             .frame(minHeight: 60)
             .frame(maxWidth: .infinity)
             .background(
