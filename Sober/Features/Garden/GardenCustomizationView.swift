@@ -149,6 +149,7 @@ struct GardenCustomizationView: View {
                         .font(Theme.caption(weight: isActive ? .bold : .regular))
                         .foregroundStyle(isActive ? Theme.brandPrimary : Theme.textSecondary)
                         .lineLimit(1)
+                        .minimumScaleFactor(0.72)
                     if isActive {
                         Image(systemName: "checkmark.circle.fill")
                             .font(Theme.caption())
