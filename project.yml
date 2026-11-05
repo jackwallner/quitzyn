@@ -145,6 +145,8 @@ targets:
     platform: iOS
     sources:
       - path: SoberUITests
+    resources:
+      - path: SoberUITests/StoreScreenshotLocales.json
     dependencies:
       - target: Sober
     settings:
@@ -152,4 +154,3 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.quitzyn.uitests
         TEST_TARGET_NAME: Sober
-

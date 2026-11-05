@@ -1,8 +1,9 @@
-raw/
-en-live/
-sheets/
-out/
 .venv/
+.capture-id
+*.id
 tools/headline
 tools/ocr
-__pycache__/
+en-live/
+raw/
+sheets/
+out/

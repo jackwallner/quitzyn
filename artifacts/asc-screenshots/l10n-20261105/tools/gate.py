@@ -119,6 +119,21 @@ def main() -> int:
                 failures.append(f'HEADER {name}: unchanged English')
             if frame['file'] not in english:
                 failures.append(f'HEADER {name}: missing English reference ({english_locale})')
+            for extra in frame.get('extra_text', []):
+                extra_key = f"{frame['file']}#{extra['key']}"
+                extra_text = headers.get(args.locale, {}).get(extra_key, '')
+                if not extra_text.strip():
+                    failures.append(f'HEADER {name}: missing extra text {extra_key}')
+                    continue
+                if len(extra_text.split('\n')) > 2:
+                    failures.append(f'HEADER {name}: extra text {extra_key} has more than 2 lines')
+                if any(c in extra_text for c in '.。．｡۔'):
+                    failures.append(f'HEADER {name}: extra text {extra_key} has a period')
+                english_extra = english.get(extra_key, '')
+                if not english_extra:
+                    failures.append(f'HEADER {name}: missing English reference for {extra_key}')
+                elif normalize(extra_text) and normalize(extra_text) == normalize(english_extra):
+                    failures.append(f'HEADER {name}: unchanged English extra text {extra_key}')
             path = output / frame['file']
             if path.is_file():
                 with Image.open(path) as im:

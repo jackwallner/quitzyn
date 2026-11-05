@@ -34,6 +34,9 @@ private struct BloomPlusHubView: View {
     @Query private var episodes: [CravingEpisode]
 
     @State private var showProgress = false
+    #if DEBUG
+    @State private var showScreenshotPatterns = false
+    #endif
 
     private var settings: UserSettings? { settingsRows.first }
     private var costPerDayCents: Int { settings?.costPerDayCents ?? 0 }
@@ -90,6 +93,14 @@ private struct BloomPlusHubView: View {
                     isPro: true
                 )
             }
+            #if DEBUG
+            .navigationDestination(isPresented: $showScreenshotPatterns) { PatternsView() }
+            .task {
+                if ProcessInfo.processInfo.arguments.contains("-screenshotPatterns") {
+                    showScreenshotPatterns = true
+                }
+            }
+            #endif
         }
     }
 
@@ -209,6 +220,9 @@ private struct BloomPlusHubView: View {
             .background(Theme.cardSurface, in: RoundedRectangle(cornerRadius: 16))
         }
         .buttonStyle(.plain)
+        #if DEBUG
+        .accessibilityIdentifier("storeScreenshot.patterns")
+        #endif
     }
 
     private var patternsSubtitle: String {

@@ -116,6 +116,9 @@ struct CravingModeView: View {
                         .contentShape(Rectangle())
                 }
                 .accessibilityLabel("Close")
+                #if DEBUG
+                .accessibilityIdentifier("storeScreenshot.craving.close")
+                #endif
                 Spacer()
                 Text(timeRemaining)
                     .font(Theme.body(weight: .semibold))

@@ -6,10 +6,40 @@ import argparse
 import sys
 import tempfile
 from pathlib import Path
+from typing import Optional
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 from common import config, destinations, erase_header, header_job, headline, paste_screen, raw_path, read_json, source
+
+
+def extra_job(extra: dict, text: str, locale: str, out: Optional[Path]) -> dict:
+    return {
+        "text": text,
+        "locale": locale,
+        "font": extra["font"],
+        "color": extra["color"],
+        "box": extra["box"][2:],
+        "maxSize": extra.get("max_size", 48),
+        "minSize": extra.get("min_size", 1),
+        "align": extra.get("align", "center"),
+        "out": str(out) if out else None,
+    }
+
+
+def paint_extra_background(canvas: Image.Image, extra: dict, plate: Image.Image = None) -> None:
+    box = extra["box"]
+    if "fill_color" not in extra:
+        erase_header(canvas, box, plate)
+        return
+    x, y, width, height = box
+    radius = extra.get("radius", height / 2)
+    draw = ImageDraw.Draw(canvas)
+    draw.rounded_rectangle(
+        (x, y, x + width - 1, y + height - 1),
+        radius=radius,
+        fill=tuple(extra["fill_color"]),
+    )
 
 
 def main() -> None:
@@ -24,6 +54,8 @@ def main() -> None:
     data, headers = config(args.config), read_json(args.headers)[args.locale]
     sets = data['sets'] if args.set_key is None else {args.set_key: data['sets'][args.set_key]}
     plans = []
+    extra_jobs = []
+    extras_by_frame = {}
     for key, group in sets.items():
         frames = group['frames']
         jobs = [header_job(f, headers[f['file']], args.locale) for f in frames]
@@ -36,10 +68,30 @@ def main() -> None:
             for target in destinations(f):
                 if not raw_path(args.raw_root, args.locale, key, target['raw']).is_file():
                     raise ValueError(f"missing raw {key}/{target['raw']}")
-        plans.append((key, group, jobs, size))
+            frame_extras = []
+            for extra in f.get('extra_text', []):
+                text_key = f"{f['file']}#{extra['key']}"
+                text = headers.get(text_key, '')
+                if not text.strip():
+                    raise ValueError(f"{key}/{text_key}: missing localized extra text")
+                job = extra_job(extra, text, args.locale, None)
+                frame_extras.append((extra, job))
+                extra_jobs.append(job)
+            extras_by_frame[f['file']] = frame_extras
+        plans.append((key, group, frames, jobs, size))
+    if extra_jobs:
+        extra_results = headline(extra_jobs)
+        for job, result in zip(extra_jobs, extra_results):
+            if not result['fits'] or result['size'] < job['minSize']:
+                raise ValueError(f"extra text does not fit at min_size: {job['text']!r}")
     with tempfile.TemporaryDirectory() as tmp:
-        for key, group, jobs, size in plans:
-            frames = group['frames']
+        for index, job in enumerate(extra_jobs):
+            job['out'] = str(Path(tmp) / f'extra-{index}.png')
+        if extra_jobs:
+            extra_results = headline(extra_jobs)
+            if not all(result['fits'] for result in extra_results):
+                raise ValueError('extra text does not fit')
+        for key, group, frames, jobs, size in plans:
             for i, job in enumerate(jobs):
                 job.update(size=size, out=str(Path(tmp) / f'{i}.png'))
             rendered = headline(jobs)
@@ -62,6 +114,10 @@ def main() -> None:
                         paste_screen(canvas, raw, target['rect'], target.get('radius', 0))
                 with Image.open(job['out']) as overlay:
                     canvas.paste(overlay, tuple(frame['header_box'][:2]), overlay)
+                for extra, extra_render in extras_by_frame[frame['file']]:
+                    paint_extra_background(canvas, extra, plate)
+                    with Image.open(extra_render['out']) as overlay:
+                        canvas.paste(overlay, tuple(extra['box'][:2]), overlay)
                 canvas.save(output / frame['file'], format='PNG', optimize=True)
             print(f'{args.locale}/{key}: {len(frames)} frames size={size:g}')
 

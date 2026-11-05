@@ -170,6 +170,9 @@ struct GardenSceneView: View {
             .shadow(color: .black.opacity(isPro ? 0 : 0.15), radius: 4, y: 1)
         }
         .buttonStyle(.plain)
+        #if DEBUG
+        .accessibilityIdentifier("storeScreenshot.garden")
+        #endif
         .accessibilityLabel(isPro ? "Switch bonsai species, currently \(activeSpeciesName)" : "Unlock more bonsai species with Bloom+")
     }
 

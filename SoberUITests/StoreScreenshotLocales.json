@@ -1,0 +1,44 @@
+{
+  "locales": [
+    {
+      "store_locale": "en-US",
+      "language": "en",
+      "region": "en_US"
+    },
+    {
+      "store_locale": "de-DE",
+      "language": "de",
+      "region": "de_DE"
+    },
+    {
+      "store_locale": "ru",
+      "language": "ru",
+      "region": "ru_RU"
+    },
+    {
+      "store_locale": "cs",
+      "language": "cs",
+      "region": "cs_CZ"
+    },
+    {
+      "store_locale": "fi",
+      "language": "fi",
+      "region": "fi_FI"
+    },
+    {
+      "store_locale": "sk",
+      "language": "sk",
+      "region": "sk_SK"
+    },
+    {
+      "store_locale": "da",
+      "language": "da",
+      "region": "da_DK"
+    },
+    {
+      "store_locale": "nl-NL",
+      "language": "nl",
+      "region": "nl_NL"
+    }
+  ]
+}

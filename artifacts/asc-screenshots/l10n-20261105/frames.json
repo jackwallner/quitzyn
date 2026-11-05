@@ -1,0 +1,202 @@
+{
+  "english_locale": "en-US",
+  "sets": {
+    "phone": {
+      "canvas": [
+        1320,
+        2868
+      ],
+      "frames": [
+        {
+          "file": "01-see-every-day-add-up.png",
+          "base": "en-live/phone/01-see-every-day-add-up.png",
+          "raw": "home",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "02-make-your-progress-personal.png",
+          "base": "en-live/phone/02-make-your-progress-personal.png",
+          "raw": "garden",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "03-notice-the-milestones-you-reach.png",
+          "base": "en-live/phone/03-notice-the-milestones-you-reach.png",
+          "raw": "timeline",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "04-see-what-staying-adds-up-to.png",
+          "base": "en-live/phone/04-see-what-staying-adds-up-to.png",
+          "raw": "journal",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "05-return-to-a-private-routine.png",
+          "base": "en-live/phone/05-return-to-a-private-routine.png",
+          "raw": "craving",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "06-see-a-progress-milestone.png",
+          "base": "en-live/phone/06-see-a-progress-milestone.png",
+          "raw": "checkin",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        },
+        {
+          "file": "07-see-the-cravings-you-rode-out.png",
+          "base": "en-live/phone/07-see-the-cravings-you-rode-out.png",
+          "raw": "patterns",
+          "screen": [
+            110,
+            590,
+            1100,
+            2063
+          ],
+          "radius": 105,
+          "header_box": [
+            40,
+            85,
+            1240,
+            410
+          ],
+          "font": "AvenirNextCondensed-Bold",
+          "color": [
+            25,
+            53,
+            42
+          ],
+          "max_size": 156,
+          "min_size": 100,
+          "align": "center"
+        }
+      ]
+    }
+  }
+}

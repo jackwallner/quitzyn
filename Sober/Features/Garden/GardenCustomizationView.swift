@@ -50,6 +50,9 @@ struct GardenCustomizationView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        #if DEBUG
+                        .accessibilityIdentifier("storeScreenshot.garden.done")
+                        #endif
                 }
             }
             .safeAreaInset(edge: .bottom) {

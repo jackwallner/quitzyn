@@ -12,6 +12,77 @@ enum QuitZynScreenshotMode {
     }
 }
 
+#if DEBUG
+private enum ScreenshotDemoCopy {
+    static func journalTexts(arguments: [String]) -> [String] {
+        let language: String
+        if let index = arguments.firstIndex(of: "-AppleLanguages"), index + 1 < arguments.count {
+            language = String(arguments[index + 1].trimmingCharacters(in: CharacterSet(charactersIn: "()")))
+        } else {
+            language = Locale.current.language.languageCode?.identifier ?? "en"
+        }
+        switch language {
+        case "de":
+            return [
+                "Ein ganzer Arbeitstag, ohne auch nur einmal in die Tasche zu greifen. Das Tief am Nachmittag ist kürzer.",
+                "Nach dem Mittagessen kam das Verlangen. Ein Spaziergang um den Block, und es war vorbei.",
+                "Ich schlafe wieder durch. Morgens ist mein Kopf klarer als seit Jahren.",
+                "Die Woche begann schwer, aber ich habe nichts konsumiert. Das zählt für mich."
+            ]
+        case "ru":
+            return [
+                "Целый рабочий день рука ни разу не потянулась к карману. Послеобеденный спад стал короче.",
+                "После обеда накатила тяга. Прогулка вокруг квартала помогла, и тяга прошла.",
+                "Снова удаётся спать всю ночь. Утром голова яснее, чем раньше.",
+                "Неделя началась тяжело, но без никотина. Уже победа."
+            ]
+        case "cs":
+            return [
+                "Celý pracovní den bez jediného sáhnutí do kapsy. Odpolední útlum už trvá kratší dobu.",
+                "Po obědě přišla chuť. Krátká procházka kolem bloku a přešla.",
+                "Spánek už vydrží celou noc. Ráno je hlava jasnější než dřív.",
+                "Začátek týdne byl těžký, ale bez nikotinu. I to se počítá."
+            ]
+        case "fi":
+            return [
+                "Koko työpäivä ilman yhtäkään taskuun kurottamista. Iltapäivän väsymys kestää nyt vähemmän.",
+                "Himo iski lounaan jälkeen. Kävely korttelin ympäri auttoi, ja se meni ohi.",
+                "Nukun taas läpi yön. Aamut tuntuvat selkeämmiltä kuin vuosiin.",
+                "Viikko alkoi vaikeasti, mutta pysyin ilman nikotiinia. Se lasketaan voitoksi."
+            ]
+        case "sk":
+            return [
+                "Celý pracovný deň bez jediného siahnutia do vrecka. Popoludňajší útlm už trvá kratšie.",
+                "Po obede prišla chuť. Krátka prechádzka okolo bloku a prešla.",
+                "Spánok už vydrží celú noc. Ráno je hlava jasnejšia než predtým.",
+                "Začiatok týždňa bol ťažký, ale bez nikotínu. Aj to sa počíta."
+            ]
+        case "da":
+            return [
+                "En hel arbejdsdag uden at række efter lommen. Eftermiddagstrætheden varer kortere nu.",
+                "Trangen kom efter frokost. En tur rundt om blokken hjalp, og den gik over.",
+                "Jeg sover natten igennem igen. Morgenerne føles klarere end i årevis.",
+                "Ugen startede hårdt, men jeg holdt fast. Det tæller også."
+            ]
+        case "nl":
+            return [
+                "Een hele werkdag zonder ook maar één keer naar mijn zak te grijpen. De middagdip duurt nu korter.",
+                "Na de lunch kwam de trek op. Ik liep een blokje om en toen zakte het.",
+                "Ik slaap weer de hele nacht door. Mijn ochtenden voelen helderder dan in jaren.",
+                "De week begon zwaar, maar ik hield vol. Dat telt ook."
+            ]
+        default:
+            return [
+                "Went a full workday without reaching for my pocket once. The afternoon slump is shorter now.",
+                "Craving hit after lunch. Walked around the block and it passed before I got back.",
+                "Sleeping through the night again. Mornings feel clearer than they have in years.",
+                "Rough start to the week, but I didn't use. Counting that as a win."
+            ]
+        }
+    }
+}
+#endif
+
 /// `-DuoScreen home|timeline|health|journal|bloom` (DEBUG) opens that tab at
 /// launch, so a capture run can relaunch once per surface with gh-sim's
 /// `--screen` instead of timing shots against a tour. Read once at launch.
@@ -270,12 +341,15 @@ struct RootView: View {
             CheckInService(context: context).fillJourney(start: start, through: .now)
         }
 
-        if args.contains("-QuitZynScreenshot"), (try? context.fetch(FetchDescriptor<JournalEntry>()))?.isEmpty ?? true {
+        if args.contains("-QuitZynScreenshot") {
+            let existingEntries = (try? context.fetch(FetchDescriptor<JournalEntry>())) ?? []
+            for entry in existingEntries { context.delete(entry) }
+            let texts = ScreenshotDemoCopy.journalTexts(arguments: args)
             let entries: [(daysAgo: Int, hour: Int, feeling: String, text: String)] = [
-                (1, 21, "excellent", "Went a full workday without reaching for my pocket once. The afternoon slump is shorter now."),
-                (4, 20, "good", "Craving hit after lunch. Walked around the block and it passed before I got back."),
-                (9, 22, "good", "Sleeping through the night again. Mornings feel clearer than they have in years."),
-                (17, 19, "neutral", "Rough start to the week, but I didn't use. Counting that as a win.")
+                (1, 21, "excellent", texts[0]),
+                (4, 20, "good", texts[1]),
+                (9, 22, "good", texts[2]),
+                (17, 19, "neutral", texts[3])
             ]
             for entry in entries {
                 let day = Calendar.current.date(byAdding: .day, value: -entry.daysAgo, to: .now) ?? .now

@@ -120,6 +120,8 @@ struct HomeView: View {
                 let args = ProcessInfo.processInfo.arguments
                 if args.contains("-craving") { showCraving = true }
                 if args.contains("-slip") { showSlipSheet = true }
+                if args.contains("-screenshotGarden") { showCustomize = true }
+                if args.contains("-screenshotCheckIn") { showCheckInDetail = true }
                 #endif
             }
             .onChange(of: scenePhase) { _, phase in
@@ -404,6 +406,9 @@ struct HomeView: View {
                 .buttonStyle(.bordered)
                 .tint(Theme.brandPrimary)
                 .controlSize(.small)
+                #if DEBUG
+                .accessibilityIdentifier("storeScreenshot.checkin")
+                #endif
             }
             .padding(14)
             .background(Theme.checkInDoneFill, in: RoundedRectangle(cornerRadius: 18))
@@ -473,6 +478,9 @@ struct HomeView: View {
             .overlay(Capsule().stroke(Theme.ringTrack, lineWidth: 1))
         }
         .buttonStyle(.plain)
+        #if DEBUG
+        .accessibilityIdentifier("storeScreenshot.craving")
+        #endif
     }
 
     // MARK: - State
@@ -693,6 +701,9 @@ private struct CheckInDetailSheet: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") { save() }
                         .fontWeight(.semibold)
+                        #if DEBUG
+                        .accessibilityIdentifier("storeScreenshot.checkin.save")
+                        #endif
                 }
             }
         }
