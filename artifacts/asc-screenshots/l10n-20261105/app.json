@@ -1,0 +1,91 @@
+{
+ "repo": "nicfree",
+ "github": "jackwallner/quitzyn",
+ "bundle": "com.jackwallner.quitzyn",
+ "family": "scene",
+ "asc_id": "6784788496",
+ "live_version": "1.3.1",
+ "targets": [
+  {
+   "rank": 19,
+   "store_locale": "de-DE",
+   "lang": "de",
+   "apple_languages": "(de)",
+   "apple_locale": "de_DE",
+   "regions": [
+    "Austria",
+    "Germany",
+    "Switzerland"
+   ],
+   "customers": 65.0
+  },
+  {
+   "rank": 69,
+   "store_locale": "ru",
+   "lang": "ru",
+   "apple_languages": "(ru)",
+   "apple_locale": "ru_RU",
+   "regions": [
+    "Russian Federation"
+   ],
+   "customers": 9.0
+  },
+  {
+   "rank": 78,
+   "store_locale": "cs",
+   "lang": "cs",
+   "apple_languages": "(cs)",
+   "apple_locale": "cs_CZ",
+   "regions": [
+    "Czechia"
+   ],
+   "customers": 8.0
+  },
+  {
+   "rank": 79,
+   "store_locale": "fi",
+   "lang": "fi",
+   "apple_languages": "(fi)",
+   "apple_locale": "fi_FI",
+   "regions": [
+    "Finland"
+   ],
+   "customers": 8.0
+  },
+  {
+   "rank": 87,
+   "store_locale": "sk",
+   "lang": "sk",
+   "apple_languages": "(sk)",
+   "apple_locale": "sk_SK",
+   "regions": [
+    "Slovakia"
+   ],
+   "customers": 7.0
+  },
+  {
+   "rank": 88,
+   "store_locale": "da",
+   "lang": "da",
+   "apple_languages": "(da)",
+   "apple_locale": "da_DK",
+   "regions": [
+    "Denmark"
+   ],
+   "customers": 7.0
+  },
+  {
+   "rank": 98,
+   "store_locale": "nl-NL",
+   "lang": "nl",
+   "apple_languages": "(nl)",
+   "apple_locale": "nl_NL",
+   "regions": [
+    "Netherlands"
+   ],
+   "customers": 6.0
+  }
+ ],
+ "store_locales_missing": [],
+ "dest": "artifacts/asc-screenshots/l10n-20261105"
+}
