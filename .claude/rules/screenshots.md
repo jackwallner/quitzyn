@@ -15,7 +15,8 @@ paths:
 - Recapture with `artifacts/asc-screenshots/l10n-20261105/tools/capture.sh`
   (all locales by default, or pass locale codes). It writes the locale list
   into the UI-test bundle, navigates through all seven scenes during one app
-  launch per locale, and sorts the attachments into the kit's raw tree.
+  launch per locale, sorts the attachments, then reskins, gates, and writes
+  contact sheets for every selected locale.
 - `gh-sim launch` has a 10-minute screenshot-step limit. A two-locale, seven
   scene launch run timed out after the English set and four Finnish scenes.
   The `StoreScreenshotLocalizationUITests` XCUITest loop captures all locales

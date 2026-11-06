@@ -87,4 +87,5 @@ for locale in locales:
 
 print(f"sorted {copied} real app captures for {len(locales)} locales")
 PY
+"$kit_root/tools/process.sh" "$@"
 printf 'XCUITest capture completed for %s locales in gh-sim run %s\n' "${#locale_rows[@]}" "$run_id"
