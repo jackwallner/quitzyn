@@ -41,6 +41,12 @@ def unchanged_raw(a: Path, b: Path) -> bool:
 
 def normalize(text: str) -> str:
     folded = unicodedata.normalize('NFKC', text).casefold()
+    confusables = str.maketrans({
+        'а': 'a', 'в': 'b', 'е': 'e', 'к': 'k', 'м': 'm', 'н': 'h',
+        'о': 'o', 'р': 'p', 'с': 'c', 'т': 't', 'у': 'y', 'х': 'x',
+        'і': 'i',
+    })
+    folded = folded.translate(confusables)
     return ''.join(c for c in folded if c.isalnum())
 
 
@@ -61,19 +67,21 @@ def english_sources(catalog: Path, lang: str) -> Dict[str, str]:
     source_lang = data.get('sourceLanguage', 'en')
     if not source_lang.startswith('en'):
         raise ValueError('catalog sourceLanguage must be English')
-    result = {}
+    result: Dict[str, str] = {}
+    localized_values = set()
     for key, entry in data.get('strings', {}).items():
         locales = entry.get('localizations', {})
         translation = locales.get(lang)
         if translation is None:
             translation = locales.get(lang.split('-')[0], {})
         values = translated_values(translation)
+        localized_values.update(normalize(value) for value in values if normalize(value))
         source_values = translated_values(locales.get(source_lang, {})) or [key]
         if values and any(normalize(v) not in {normalize(s) for s in source_values} for v in values):
             for text in [key] + source_values:
                 if normalize(text):
                     result[normalize(text)] = text
-    return result
+    return {normalized: text for normalized, text in result.items() if normalized not in localized_values}
 
 
 def main() -> int:
