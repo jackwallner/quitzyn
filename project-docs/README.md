@@ -8,6 +8,7 @@ Developer notes and historical audits for this repository. The published site re
 - [caudit914.md](audits/caudit914.md): Quit Zyn 1.2.4 release-readiness audit (2026-09-14)
 - [ios27QuitZyn.md](audits/ios27QuitZyn.md): iOS 27 compatibility audit: Quit Zyn
 - [laudit914.md](audits/laudit914.md): Quit Zyn 1.2.4 release-readiness audit
+- [state-machines-2026-11-06.md](audits/state-machines-2026-11-06.md): state machine audit, 6 bugs (4 proved by test), repro suite alongside
 
 ## Marketing
 
