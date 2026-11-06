@@ -1,0 +1,58 @@
+{
+  "locales": [
+    "de-DE",
+    "ru",
+    "cs",
+    "fi",
+    "sk",
+    "da",
+    "nl-NL"
+  ],
+  "frames": 7,
+  "gate": {
+    "de-DE": "PASS",
+    "ru": "PASS",
+    "cs": "PASS",
+    "fi": "PASS",
+    "sk": "PASS",
+    "da": "PASS",
+    "nl-NL": "PASS"
+  },
+  "gh_sim_jobs": 4,
+  "app_code_changed": [
+    {
+      "path": "Sober/App.swift",
+      "debug_only": true
+    },
+    {
+      "path": "Sober/Features/Craving/CravingModeView.swift",
+      "debug_only": true
+    },
+    {
+      "path": "Sober/Features/Garden/GardenCustomizationView.swift",
+      "debug_only": false
+    },
+    {
+      "path": "Sober/Features/Garden/GardenSceneView.swift",
+      "debug_only": true
+    },
+    {
+      "path": "Sober/Features/Paywall/BloomPlusTabView.swift",
+      "debug_only": true
+    },
+    {
+      "path": "Sober/Features/Today/HomeView.swift",
+      "debug_only": true
+    },
+    {
+      "path": "project.yml",
+      "debug_only": true
+    }
+  ],
+  "defects": [
+    "Finnish bonsai picker label clipped at default size; fixed with minimumScaleFactor 0.72.",
+    "OCR gate false positives for German Start and Russian ОК; gate now accepts valid localized terms and Cyrillic lookalikes."
+  ],
+  "left_out": [],
+  "adapter": "xcuitest"
+}
