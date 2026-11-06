@@ -59,3 +59,12 @@ least two new customers in the prior 90 days.
 plural selection and translated German copy. The `gh-sim` verification recipe
 is in the root guide. Do not set the production RevenueCat key for simulator
 runs.
+
+## Language row
+
+Settings has a Language row that names the running localization in itself
+(`Bundle.main.preferredLocalizations`) and opens `openSettingsURLString`, Apple's
+route for a per-app language change. iOS hides the app's Language option on a
+device with one preferred language unless `UIPrefersShowingLanguageSettings` is
+YES in `Info.plist`, so keep that key. The simulator's Settings opens at its root
+for this link; check the landing on a real iPhone.
