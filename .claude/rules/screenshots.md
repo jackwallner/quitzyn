@@ -20,6 +20,9 @@ paths:
   scene launch run timed out after the English set and four Finnish scenes.
   The `StoreScreenshotLocalizationUITests` XCUITest loop captures all locales
   in one test job instead.
+- The live English screens use an older app layout, so cropped-screen NCC did
+  not match. For this set, `locate.py --bezel --radius` gives the phone screen
+  rectangle from the visible continuous bezel.
 - `-screenshotGarden`, `-screenshotCheckIn`, and `-screenshotPatterns` are
   DEBUG-only routes for the garden picker, daily check-in sheet, and craving
   patterns. `-craving` opens the breathing session. Seed with
