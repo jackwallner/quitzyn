@@ -11,29 +11,29 @@
   "de-DE": {
     "01-see-every-day-add-up.png": "Jeder nikotinfreie\nTag zählt",
     "02-make-your-progress-personal.png": "Gestalte deinen\nFortschritt",
-    "03-notice-the-milestones-you-reach.png": "Deine Tage im\nVerlauf",
+    "03-notice-the-milestones-you-reach.png": "Deine Tage\nim Rückblick",
     "04-see-what-staying-adds-up-to.png": "Halte deinen Weg\nim Tagebuch fest",
     "05-return-to-a-private-routine.png": "Eine ruhige Pause\nnur für dich",
     "06-see-a-progress-milestone.png": "Feiere deinen\nFortschritt",
-    "07-see-the-cravings-you-rode-out.png": "Erkenne überstandenes\nVerlangen"
+    "07-see-the-cravings-you-rode-out.png": "Verlangen, das du\nüberstanden hast"
   },
   "ru": {
     "01-see-every-day-add-up.png": "Каждый день\nбез никотина",
     "02-make-your-progress-personal.png": "Выберите свой\nбонсай",
-    "03-notice-the-milestones-you-reach.png": "Ваши дни\nв хронологии",
+    "03-notice-the-milestones-you-reach.png": "Ваши дни\nна календаре",
     "04-see-what-staying-adds-up-to.png": "Записывайте мысли\nв дневник",
     "05-return-to-a-private-routine.png": "Минута спокойствия\nдля себя",
     "06-see-a-progress-milestone.png": "Отмечайте\nсвой прогресс",
     "07-see-the-cravings-you-rode-out.png": "Замечайте победы\nнад тягой"
   },
   "cs": {
-    "01-see-every-day-add-up.png": "Každý den\nbez nikotinu se počítá",
+    "01-see-every-day-add-up.png": "Každý den\nbez nikotinu",
     "02-make-your-progress-personal.png": "Vyberte si\nvlastní bonsaj",
     "03-notice-the-milestones-you-reach.png": "Vaše dny\nna časové ose",
     "04-see-what-staying-adds-up-to.png": "Zachyťte svou cestu\ndo deníku",
     "05-return-to-a-private-routine.png": "Chvíle klidu\njen pro vás",
     "06-see-a-progress-milestone.png": "Oslavte svůj\npokrok",
-    "07-see-the-cravings-you-rode-out.png": "Všimněte si\npřekonaných nutkání"
+    "07-see-the-cravings-you-rode-out.png": "Překonaná nutkání\nsáhnout po nikotinu"
   },
   "fi": {
     "01-see-every-day-add-up.png": "Jokainen nikotiiniton\npäivä lasketaan",
@@ -42,16 +42,16 @@
     "04-see-what-staying-adds-up-to.png": "Kirjaa matkasi\npäiväkirjaan",
     "05-return-to-a-private-routine.png": "Rauhallinen hetki\nvain sinulle",
     "06-see-a-progress-milestone.png": "Juhlista\nedistymistäsi",
-    "07-see-the-cravings-you-rode-out.png": "Huomaa ohittamasi\nnikotiininhimot"
+    "07-see-the-cravings-you-rode-out.png": "Nikotiininhimot,\njotka selätit"
   },
   "sk": {
-    "01-see-every-day-add-up.png": "Každý deň\nbez nikotínu sa ráta",
+    "01-see-every-day-add-up.png": "Každý deň\nbez nikotínu",
     "02-make-your-progress-personal.png": "Vyber si\nvlastný bonsaj",
     "03-notice-the-milestones-you-reach.png": "Tvoje dni\nna časovej osi",
     "04-see-what-staying-adds-up-to.png": "Zachyť svoju cestu\ndo denníka",
     "05-return-to-a-private-routine.png": "Chvíľa pokoja\nlen pre teba",
     "06-see-a-progress-milestone.png": "Osláv svoj\npokrok",
-    "07-see-the-cravings-you-rode-out.png": "Všímaj si prekonanú\nchuť na nikotín"
+    "07-see-the-cravings-you-rode-out.png": "Prekonané chute\nna nikotín"
   },
   "da": {
     "01-see-every-day-add-up.png": "Hver nikotinfri\ndag tæller",

@@ -1,0 +1,135 @@
+{
+  "verdict": "FIX",
+  "header_fixes": [
+    {
+      "locale": "de-DE",
+      "file": "03-notice-the-milestones-you-reach.png",
+      "before": "Deine Tage im\nVerlauf",
+      "after": "Deine Tage\nim Rückblick",
+      "why": "Use natural retrospective copy; the original splits the preposition im from Verlauf and reads like a literal UI label."
+    },
+    {
+      "locale": "de-DE",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "before": "Erkenne überstandenes\nVerlangen",
+      "after": "Verlangen, das du\nüberstanden hast",
+      "why": "Erkenne überstandenes Verlangen is stilted. Name the craving the user rode out, retain catalog term Verlangen, and balance the lines."
+    },
+    {
+      "locale": "ru",
+      "file": "03-notice-the-milestones-you-reach.png",
+      "before": "Ваши дни\nв хронологии",
+      "after": "Ваши дни\nна календаре",
+      "why": "В хронологии is an awkward literal placement. На календаре naturally describes the visible day-by-day calendar and preserves the English retrospective meaning."
+    },
+    {
+      "locale": "cs",
+      "file": "01-see-every-day-add-up.png",
+      "before": "Každý den\nbez nikotinu se počítá",
+      "after": "Každý den\nbez nikotinu",
+      "why": "The second line is almost three times the first line width. Shorten to balanced nicotine-free-day copy matching the English frame."
+    },
+    {
+      "locale": "cs",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "before": "Všimněte si\npřekonaných nutkání",
+      "after": "Překonaná nutkání\nsáhnout po nikotinu",
+      "why": "Všimněte si překonaných nutkání is a stiff instruction to notice an abstract noun. Use the catalog wording for cravings and a clear retrospective heading with balanced lines."
+    },
+    {
+      "locale": "fi",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "before": "Huomaa ohittamasi\nnikotiininhimot",
+      "after": "Nikotiininhimot,\njotka selätit",
+      "why": "Ohittamasi can suggest cravings skipped or passed by. Selätit expresses riding them out and matches catalog selätetyt nikotiininhimot."
+    },
+    {
+      "locale": "sk",
+      "file": "01-see-every-day-add-up.png",
+      "before": "Každý deň\nbez nikotínu sa ráta",
+      "after": "Každý deň\nbez nikotínu",
+      "why": "The second line is more than twice the first line width. Shorten to balanced nicotine-free-day copy matching the English frame."
+    },
+    {
+      "locale": "sk",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "before": "Všímaj si prekonanú\nchuť na nikotín",
+      "after": "Prekonané chute\nna nikotín",
+      "why": "Všímaj si prekonanú chuť is an unnatural instruction to notice a past craving. Name the overcome cravings directly, preserving catalog chuť na nikotín."
+    }
+  ],
+  "ui_defects": [
+    {
+      "locale": "de-DE",
+      "file": "01-see-every-day-add-up.png",
+      "what": "The craving-card supporting sentence ends in an ellipsis after Atemüb. The localized sentence does not fit its single line.",
+      "severity": "minor"
+    },
+    {
+      "locale": "de-DE",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "what": "The duration insight reads nach etwa eine Minute; use nach etwa einer Minute. The KPI also uses the unnatural plural ÜBERSTANDENE VERLANGEN; use a natural count label such as ÜBERSTANDENE VERLANGENSMOMENTE. These are catalog/UI issues, not editable store headers.",
+      "severity": "minor"
+    },
+    {
+      "locale": "cs",
+      "file": "01-see-every-day-add-up.png",
+      "what": "The counter subtitle reads 131 DNE BEZ NIKOTINU; integer 131 requires 131 DNÍ BEZ NIKOTINU. The catalog other plural incorrectly uses dne.",
+      "severity": "minor"
+    },
+    {
+      "locale": "cs",
+      "file": "06-see-a-progress-milestone.png",
+      "what": "The same incorrect 131 DNE BEZ NIKOTINU subtitle remains visible behind the check-in sheet; use 131 DNÍ BEZ NIKOTINU.",
+      "severity": "minor"
+    },
+    {
+      "locale": "fi",
+      "file": "01-see-every-day-add-up.png",
+      "what": "The craving-card supporting sentence is visibly ellipsized. The localized sentence does not fit its single line.",
+      "severity": "minor"
+    },
+    {
+      "locale": "fi",
+      "file": "07-see-the-cravings-you-rode-out.png",
+      "what": "The duration insight reads Nikotiininhimo menee yleensä ohi noin minuutti. The duration needs the correct case, noin minuutissa. Omat kuviot is also an unnatural literal rendering of behavioral patterns; Omat toimintamallit would identify the feature more clearly.",
+      "severity": "minor"
+    },
+    {
+      "locale": "sk",
+      "file": "01-see-every-day-add-up.png",
+      "what": "The counter subtitle reads 131 DŇA BEZ NIKOTÍNU; integer 131 requires 131 DNÍ BEZ NIKOTÍNU. The Today is logged status is truncated to Dnešný záznam je ul... and the craving-card supporting sentence is also ellipsized.",
+      "severity": "minor"
+    },
+    {
+      "locale": "sk",
+      "file": "03-notice-the-milestones-you-reach.png",
+      "what": "The middle summary label NAJDLHŠIA splits within the word, leaving A alone on a second line. The row is visibly broken compared with the other locales.",
+      "severity": "blocker"
+    },
+    {
+      "locale": "sk",
+      "file": "06-see-a-progress-milestone.png",
+      "what": "The same incorrect 131 DŇA BEZ NIKOTÍNU subtitle remains visible behind the check-in sheet; use 131 DNÍ BEZ NIKOTÍNU.",
+      "severity": "minor"
+    },
+    {
+      "locale": "da",
+      "file": "02-make-your-progress-personal.png",
+      "what": "The species grid contains Sort pine and Windsweet Bonsai. These match defective Danish catalog values, not natural Danish names. Translate pine as fyr and replace Windsweet with Danish wording such as Vindblæst bonsai.",
+      "severity": "minor"
+    },
+    {
+      "locale": "nl-NL",
+      "file": "01-see-every-day-add-up.png",
+      "what": "The Today is logged status is truncated to Vandaag geregistree... instead of Vandaag geregistreerd. The craving-card supporting sentence is also ellipsized.",
+      "severity": "minor"
+    }
+  ],
+  "unsure": [
+    "All 49 target frames were reviewed in seven English/localized phone comparison sheets (de-DE, ru, cs, fi, sk, da, nl-NL), using tools/sheet.py with frames.json. Full frames were opened only to confirm suspected defects. No additional sets are configured for these targets.",
+    "The eight header fixes are applied only to copy/headers.json. tools/reskin.py requires every raw capture and has no existing-screen reuse mode. Raws are absent, so the PNGs retain their original headers. The orchestrator must rerender the complete affected locale sets with a uniform header size and review the resulting sheets before approval.",
+    "Raw-image checks and native CoreText fitting could not run on this Linux host. Sheet labels alone used a temporary Pillow renderer; screenshot pixels were unchanged. Existing rendered headers appear uniform within each locale, with aligned phones and no visible header seam or clipping. New header fitting remains unverified.",
+    "The live English screenshots use an older app layout and September demo data. Target locales consistently use the current layout and localized November demo data. Patterns now show Answered and sometimes Left open, confirmed in PatternsView.swift and the catalog; these are current app content, not untranslated out-of-logged labels. No real personal data, prices, or treatment/cure/diagnosis claims were visible."
+  ]
+}
