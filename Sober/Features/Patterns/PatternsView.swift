@@ -94,6 +94,8 @@ struct PatternsView: View {
                 .tracking(1.2)
                 .textCase(.uppercase)
                 .foregroundStyle(Theme.textSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.72)
             Text(openEnded > 0
                  ? String(localized: "Answered: \(answered.count.formatted()) · Left open: \(openEnded.formatted())")
                  : String(localized: "Answered: \(answered.count.formatted())"))

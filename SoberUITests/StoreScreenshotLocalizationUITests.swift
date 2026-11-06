@@ -9,6 +9,11 @@ final class StoreScreenshotLocalizationUITests: XCTestCase {
         let store_locale: String
         let language: String
         let region: String
+        let scenes: [String]?
+
+        func captures(_ scene: String) -> Bool {
+            scenes?.contains(scene) ?? true
+        }
     }
 
     func testCaptureStoreFrames() throws {
@@ -26,24 +31,38 @@ final class StoreScreenshotLocalizationUITests: XCTestCase {
             app.launch()
             XCTAssertTrue(app.wait(for: .runningForeground, timeout: 30), "App did not foreground for \(locale.store_locale)")
 
-            capture("home", locale: locale.store_locale, app: app)
+            if locale.captures("home") {
+                capture("home", locale: locale.store_locale, app: app)
+            }
             tap("storeScreenshot.garden", app: app)
-            capture("garden", locale: locale.store_locale, app: app)
+            if locale.captures("garden") {
+                capture("garden", locale: locale.store_locale, app: app)
+            }
             tap("storeScreenshot.garden.done", app: app)
             tapTab(1, app: app)
-            capture("timeline", locale: locale.store_locale, app: app)
+            if locale.captures("timeline") {
+                capture("timeline", locale: locale.store_locale, app: app)
+            }
             tapTab(3, app: app)
-            capture("journal", locale: locale.store_locale, app: app)
+            if locale.captures("journal") {
+                capture("journal", locale: locale.store_locale, app: app)
+            }
             tapTab(0, app: app)
             tap("storeScreenshot.craving", app: app)
-            capture("craving", locale: locale.store_locale, app: app)
+            if locale.captures("craving") {
+                capture("craving", locale: locale.store_locale, app: app)
+            }
             tap("storeScreenshot.craving.close", app: app)
             tap("storeScreenshot.checkin", app: app)
-            capture("checkin", locale: locale.store_locale, app: app)
+            if locale.captures("checkin") {
+                capture("checkin", locale: locale.store_locale, app: app)
+            }
             tap("storeScreenshot.checkin.save", app: app)
             tapTab(4, app: app)
             tap("storeScreenshot.patterns", app: app, scrollIfNeeded: true)
-            capture("patterns", locale: locale.store_locale, app: app)
+            if locale.captures("patterns") {
+                capture("patterns", locale: locale.store_locale, app: app)
+            }
             app.terminate()
         }
     }

@@ -386,6 +386,8 @@ struct HomeView: View {
                     Text("Today is logged")
                         .font(Theme.subhead(weight: .semibold))
                         .foregroundStyle(Theme.textPrimary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.72)
                     // The tap's receipt. A day counter would have said the same
                     // thing whether or not the user ever opened the app, so the
                     // confirmation shows the one record that only exists
@@ -465,6 +467,8 @@ struct HomeView: View {
                     Text(CravingCoach.buttonSubtitle)
                         .font(Theme.caption())
                         .foregroundStyle(Theme.textSecondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.72)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")

@@ -227,6 +227,8 @@ struct TimelineView: View {
                 .font(Theme.caption(weight: .semibold))
                 .tracking(0.6)
                 .foregroundStyle(Theme.textSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.65)
         }
         .frame(maxWidth: .infinity)
     }

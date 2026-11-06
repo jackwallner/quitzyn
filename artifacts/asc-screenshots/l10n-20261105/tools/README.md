@@ -1,5 +1,15 @@
 # Screenshot localization kit
 
+The Quit Zyn capture adapter supports locale-specific recapture plans. The
+scene names are `home`, `garden`, `timeline`, `journal`, `craving`, `checkin`,
+and `patterns`; `--skip-english` reuses the existing English reference raws.
+
+```sh
+./tools/capture.sh de-DE,cs,fi,sk,da,nl-NL \
+  --scenes 'de-DE=home,patterns;cs=home,checkin;fi=home,patterns;sk=home,timeline,checkin;da=garden;nl-NL=home' \
+  --skip-english
+```
+
 ```sh
 cd l10n-kit
 /usr/bin/python3 -m venv .venv

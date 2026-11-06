@@ -5610,7 +5610,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dne bez nikotinu"
+                  "value": "%1$lld dní bez nikotinu"
                 }
               }
             }
@@ -5760,7 +5760,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dňa bez nikotínu"
+                  "value": "%1$lld dní bez nikotínu"
                 }
               }
             }
@@ -5963,7 +5963,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dne bez nikotinu"
+                  "value": "%1$lld dní bez nikotinu"
                 }
               }
             }
@@ -6113,7 +6113,7 @@
               "other": {
                 "stringUnit": {
                   "state": "translated",
-                  "value": "%1$lld dňa bez nikotínu"
+                  "value": "%1$lld dní bez nikotínu"
                 }
               }
             }
@@ -17145,7 +17145,7 @@
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sort pine"
+            "value": "Sort fyr"
           }
         },
         "pl": {
@@ -63066,7 +63066,7 @@
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Windsweet Bonsai"
+            "value": "Vindblæst bonsai"
           }
         },
         "pl": {
@@ -69125,7 +69125,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Omat kuviot"
+            "value": "Omat toimintamallit"
           }
         },
         "nl": {
@@ -70413,7 +70413,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "eine Minute"
+            "value": "einer Minute"
           }
         },
         "ru": {
@@ -70437,7 +70437,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "minuutti"
+            "value": "minuutissa"
           }
         },
         "nl": {
@@ -72275,7 +72275,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "überstandene Verlangen"
+            "value": "überstandene Verlangensmomente"
           }
         },
         "ru": {

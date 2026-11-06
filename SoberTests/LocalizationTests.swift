@@ -54,4 +54,35 @@ struct LocalizationTests {
         #expect(String(localized: "\(1) days free", bundle: german, locale: Locale(identifier: "de")) == "1 Tag gratis")
         #expect(String(localized: "\(7) days free", bundle: german, locale: Locale(identifier: "de")) == "7 Tage gratis")
     }
+
+    @Test func reviewedScreenshotCopyUsesNaturalLocalizedForms() throws {
+        let czech = try #require(bundle("cs"))
+        let czechLocale = Locale(identifier: "cs")
+        #expect(String(localized: "\(131) days nicotine-free", bundle: czech, locale: czechLocale) == "131 dní bez nikotinu")
+        #expect(String(localized: "\(131) days nicotine-free label", bundle: czech, locale: czechLocale) == "131 dní bez nikotinu")
+
+        let slovak = try #require(bundle("sk"))
+        let slovakLocale = Locale(identifier: "sk")
+        #expect(String(localized: "\(131) days nicotine-free", bundle: slovak, locale: slovakLocale) == "131 dní bez nikotínu")
+        #expect(String(localized: "\(131) days nicotine-free label", bundle: slovak, locale: slovakLocale) == "131 dní bez nikotínu")
+
+        let german = try #require(bundle("de"))
+        let germanLocale = Locale(identifier: "de")
+        let germanMinute = String(localized: "a minute", bundle: german, locale: germanLocale)
+        #expect(germanMinute == "einer Minute")
+        #expect(String(localized: "Your cravings usually pass in about \(germanMinute).", bundle: german, locale: germanLocale) == "Dein Verlangen klingt meist nach etwa einer Minute ab.")
+        #expect(String(localized: "urges ridden out", bundle: german, locale: germanLocale) == "überstandene Verlangensmomente")
+
+        let finnish = try #require(bundle("fi"))
+        let finnishLocale = Locale(identifier: "fi")
+        let finnishMinute = String(localized: "a minute", bundle: finnish, locale: finnishLocale)
+        #expect(finnishMinute == "minuutissa")
+        #expect(String(localized: "Your cravings usually pass in about \(finnishMinute).", bundle: finnish, locale: finnishLocale) == "Nikotiininhimo menee yleensä ohi noin minuutissa.")
+        #expect(String(localized: "Your patterns", bundle: finnish, locale: finnishLocale) == "Omat toimintamallit")
+
+        let danish = try #require(bundle("da"))
+        let danishLocale = Locale(identifier: "da")
+        #expect(String(localized: "Black Pine", bundle: danish, locale: danishLocale) == "Sort fyr")
+        #expect(String(localized: "Windswept Bonsai", bundle: danish, locale: danishLocale) == "Vindblæst bonsai")
+    }
 }
