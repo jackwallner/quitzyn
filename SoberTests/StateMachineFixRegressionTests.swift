@@ -283,11 +283,13 @@ struct StateMachineFixRegressionTests {
 @Suite("State machine fixes 2026-11-06: Timeline pane")
 @MainActor
 struct TimelinePaneDraftRegressionTests {
+    // The test target compiles Shared/ too, so the models exist twice.
+    // `TimelineSelection` lives in the app module and takes the app's copy.
     private let container: ModelContainer
 
     init() throws {
         container = try ModelContainer(
-            for: DailyCheckIn.self, SobrietyJourney.self, GardenState.self,
+            for: Sober.DailyCheckIn.self, Sober.SobrietyJourney.self, Sober.GardenState.self,
             configurations: ModelConfiguration(isStoredInMemoryOnly: true)
         )
     }
@@ -303,8 +305,8 @@ struct TimelinePaneDraftRegressionTests {
         selection.loadDraft(from: nil, day: today)
         #expect(selection.draftNote.isEmpty)
 
-        CheckInService(context: context).checkIn(for: today, wasSober: true, mood: 4, note: "Walked it off")
-        let row = try #require(try context.fetch(FetchDescriptor<DailyCheckIn>()).first)
+        Sober.CheckInService(context: context).checkIn(for: today, wasSober: true, mood: 4, note: "Walked it off")
+        let row = try #require(try context.fetch(FetchDescriptor<Sober.DailyCheckIn>()).first)
         selection.storedRowDidChange(row, day: today)
 
         #expect(selection.draftMood == 4)
@@ -318,7 +320,7 @@ struct TimelinePaneDraftRegressionTests {
         selection.loadDraft(from: nil, day: today)
         selection.draftNote = "half-typed"
 
-        let assumed = DailyCheckIn(day: today, wasSober: true)
+        let assumed = Sober.DailyCheckIn(day: today, wasSober: true)
         assumed.wasLogged = false
         context.insert(assumed)
         selection.storedRowDidChange(assumed, day: today)
