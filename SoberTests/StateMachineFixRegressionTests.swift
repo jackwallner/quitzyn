@@ -39,4 +39,25 @@ struct StateMachineFixRegressionTests {
         let us = UserSettings.formattedMoney(cents: 4800, locale: Locale(identifier: "en_US"))
         #expect(us == "$48")
     }
+
+    // MARK: - SM-5 Allowing notifications later re-arms the reminder
+
+    /// A pass that ran without permission queued nothing, so the same plan
+    /// must run again once permission arrives. The memo used to swallow it
+    /// until the plan changed (a check-in, a slip, a new day). The test host
+    /// can't grant permission, so this pins the half it can observe: the
+    /// unauthorized pass leaves the plan unarmed.
+    @Test func sm5_aPassWithoutPermissionLeavesThePlanUnarmed() async {
+        guard await !NotificationService.isAuthorized() else { return }
+        _ = SettingsService(context: context).current()
+        SobrietyService(context: context).startJourney(at: DateHelpers.daysAgo(5))
+
+        let first = NotificationService.refreshDailyReminder(context: context)
+        #expect(first != nil, "precondition: the first pass runs")
+        await first?.value
+
+        let retry = NotificationService.refreshDailyReminder(context: context)
+        #expect(retry != nil, "the same plan was treated as armed although nothing was queued")
+        await retry?.value
+    }
 }
