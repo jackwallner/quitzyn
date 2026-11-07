@@ -60,4 +60,50 @@ struct StateMachineFixRegressionTests {
         #expect(retry != nil, "the same plan was treated as armed although nothing was queued")
         await retry?.value
     }
+
+    // MARK: - SM-1 A slip back-logged into a run the Reset button ended
+
+    /// The shape `SobrietyService.reset()` leaves: the old run ends at the
+    /// reset instant and the new one starts there. No slip row.
+    private func seedResetEndedRun() {
+        let boundary = Date.now.addingTimeInterval(-10 * 86_400)
+        context.insert(SobrietyJourney(startDate: DateHelpers.daysAgo(40), endDate: boundary))
+        context.insert(SobrietyJourney(startDate: boundary))
+        try? context.save()
+    }
+
+    /// Timeline's "Log a slip" promises "Your longest streak reflects the
+    /// corrected dates". The slip is history, so the live tree stays as it was.
+    @Test func sm1_slipInsideAResetEndedRunSplitsItAndLeavesTheTreeAlone() {
+        seedResetEndedRun()
+        let sobriety = SobrietyService(context: context)
+        let checkIns = CheckInService(context: context)
+        let garden = GardenService(context: context)
+        let slipDay = DateHelpers.startOfDay(DateHelpers.daysAgo(25))
+
+        #expect(checkIns.lastSlipDate() == nil)
+        #expect(sobriety.activeJourneyCovers(slipDay) == false)
+        #expect(sobriety.longestStreakDays() == 31)
+        let carryoverBefore = garden.current().carryoverDays
+        let vitalityBefore = garden.current().vitality
+        let counterBefore = sobriety.currentDayCount()
+
+        SlipRecorder.record(on: slipDay, context: context)
+
+        #expect(checkIns.loggedSlip(on: slipDay))
+        // 40 to 25 days ago is 16 days, 24 to 10 days ago is 15, the active run 11.
+        #expect(sobriety.longestStreakDays() == 16)
+        #expect(sobriety.currentDayCount() == counterBefore)
+        #expect(garden.current().carryoverDays == carryoverBefore)
+        #expect(garden.current().vitality == vitalityBefore)
+    }
+
+    /// Control: a back-dated slip inside the live run still restarts it.
+    @Test func sm1_backDatedSlipInsideTheLiveRunStillRestartsTheCounter() {
+        let sobriety = SobrietyService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        let outcome = SlipRecorder.record(on: DateHelpers.daysAgo(10), context: context)
+        #expect(sobriety.currentDayCount() == 10)
+        #expect(outcome.carryoverDays == 15)
+    }
 }
