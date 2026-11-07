@@ -883,7 +883,7 @@ struct ProgressSheet: View {
 
     private var dailyCostLabel: String {
         let amount = Decimal(settingsRows.first?.costPerDayCents ?? 0) / 100
-        return String(localized: "\(amount.formatted(.currency(code: settingsRows.first?.currencyCode ?? "USD"))) per day")
+        return String(localized: "\(amount.formatted(.currency(code: UserSettings.displayCurrencyCode()))) per day")
     }
 
     /// Every sober day ever recorded — the basis for lifetime savings so a
@@ -915,15 +915,7 @@ struct ProgressSheet: View {
     }
 
     private func formattedCurrency(cents: Int) -> String {
-        let code = settings?.currencyCode ?? Locale.current.currency?.identifier ?? "USD"
-        let amount = Decimal(cents) / 100
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = .current
-        formatter.currencyCode = code
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: amount as NSDecimalNumber)
-            ?? amount.formatted(.currency(code: code))
+        UserSettings.formattedMoney(cents: cents)
     }
 
     private func achievementRow(_ a: Achievement) -> some View {
