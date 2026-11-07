@@ -11,6 +11,7 @@ Developer notes and historical audits for this repository. The published site re
 - [state-machines-2026-11-06.md](audits/state-machines-2026-11-06.md): state machine audit, 6 bugs (4 proved by test), repro suite alongside
 - [state-machines-2026-11-06-review.md](audits/state-machines-2026-11-06-review.md): independent review of the state machine audit, 6 of 6 confirmed (1 major, 5 minor), 2 misframed, 0 false positives
 - [state-machines-2026-11-06-fixes.md](audits/state-machines-2026-11-06-fixes.md): fixes for the reviewed state machine audit, 6 of 6 fixed, 0 held, 0 skipped, suite 192/192
+- [state-machines-2026-11-06-verify.md](audits/state-machines-2026-11-06-verify.md): independent verification of the state machine fixes, PASS, 6 of 6 work, no regressions, suite 192/192, 7 bug tests fail with the fixes reverted
 
 ## Marketing
 
