@@ -29,6 +29,12 @@ final class GardenState {
     /// rather than an estimate. `recordSlip` overwrites the live value, and
     /// halving is not invertible. See `GardenService.undoSlip`.
     var carryoverBeforeSlip: Int = 0
+    /// What `groveCountAtJourneyStart` was immediately before the most recent
+    /// slip, so undoing it puts the reopened run's baseline back. Leaving the
+    /// slip's baseline in place counted the run's finished trees twice and
+    /// added a phantom tree to the grove. Nil for a slip an older build
+    /// recorded; `GardenService.undoSlip` derives it then.
+    var groveCountBeforeSlip: Int?
     /// Missed days since `lastWateredAt` already taken off `vitality`, so
     /// `GardenService.applyVitalityDecay` charges each missed day once however
     /// often Home appears. Watering resets it.
