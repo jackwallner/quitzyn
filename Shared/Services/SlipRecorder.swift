@@ -137,10 +137,15 @@ enum SlipRecorder {
         guard checkIns.loggedSlip(on: day) else { return false }
         // Reopen first: if the counter can't be put back, the calendar row must
         // stay as it is rather than disagree with it.
-        guard let restoredStreak = sobriety.reopenJourney(endedOn: day) else { return false }
+        guard let reversal = sobriety.reopenJourney(endedOn: day) else { return false }
 
         checkIns.checkIn(for: day, wasSober: true, mood: mood, note: note)
-        garden.undoSlip(restoredStreakDays: restoredStreak)
+        // A Reset after the slip started the tree over on purpose, and a slip
+        // back-logged into history never touched it: handing back the growth
+        // the slip banked would undo the Reset instead of the slip.
+        if reversal.reopenedLiveRun {
+            garden.undoSlip(restoredStreakDays: reversal.currentDays)
+        }
         WidgetSnapshotPump.push(context: context)
         return true
     }

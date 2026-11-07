@@ -504,9 +504,11 @@ struct TimelineView: View {
                 } label: {
                     Label("Change to nicotine-free", systemImage: "arrow.uturn.backward")
                 }
-                Text("Puts your counter and your tree back the way they were before this slip.")
-                    .font(Theme.caption())
-                    .foregroundStyle(Theme.textSecondary)
+                if SobrietyService(context: context).undoReopensLiveRun(endedOn: day) {
+                    Text("Puts your counter and your tree back the way they were before this slip.")
+                        .font(Theme.caption())
+                        .foregroundStyle(Theme.textSecondary)
+                }
             } else {
                 Text("A slip can only be taken back while it's the most recent one on your record.")
                     .font(Theme.caption())

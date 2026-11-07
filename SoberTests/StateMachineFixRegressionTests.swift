@@ -106,4 +106,94 @@ struct StateMachineFixRegressionTests {
         #expect(sobriety.currentDayCount() == 10)
         #expect(outcome.carryoverDays == 15)
     }
+
+    // MARK: - SM-2 Undo after a Reset reverses the slip, not the Reset
+
+    private func sortedJourneys() -> [SobrietyJourney] {
+        let descriptor = FetchDescriptor<SobrietyJourney>(sortBy: [SortDescriptor(\.startDate, order: .forward)])
+        return (try? context.fetch(descriptor)) ?? []
+    }
+
+    private func expectNoOverlap() {
+        let all = sortedJourneys()
+        for (earlier, later) in zip(all, all.dropFirst()) {
+            #expect((earlier.endDate ?? .distantFuture) <= later.startDate,
+                    "runs overlap: \(earlier.startDate)...\(String(describing: earlier.endDate)) and \(later.startDate)")
+        }
+        #expect(all.filter(\.isActive).count == 1)
+    }
+
+    /// What Home's "Reset" alert runs (HomeView.swift).
+    private func resetCounter() {
+        SobrietyService(context: context).reset()
+        GardenService(context: context).resetForNewJourney()
+    }
+
+    /// Slip today from the slip sheet (`startOfDay()`), Reset, then Undo on
+    /// Home's slip card (`.now`). The slip's boundary goes, the Reset stays.
+    @Test func sm2_todaySlipThenResetThenUndoKeepsTheResetAndDropsTheSlip() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        SlipRecorder.record(on: DateHelpers.startOfDay(), context: context)
+        resetCounter()
+        #expect(sobriety.currentDayCount() == 1)
+        #expect(SlipRecorder.canUndo(on: .now, context: context))
+        #expect(sobriety.undoReopensLiveRun(endedOn: .now) == false)
+
+        #expect(SlipRecorder.undo(on: .now, context: context))
+
+        #expect(CheckInService(context: context).loggedSlip(on: .now) == false)
+        #expect(sobriety.currentDayCount() == 1, "the Reset was thrown away")
+        #expect(sortedJourneys().allSatisfy { $0.resetReason != "slip" }, "the slip's boundary is still on record")
+        #expect(sobriety.longestStreakDays() == 41)
+        #expect(garden.current().carryoverDays == 0, "the Reset wiped the tree; undo must not regrow it")
+        expectNoOverlap()
+    }
+
+    /// The same with the slip dated yesterday: the Reset used to be discarded
+    /// and the stub it closed left overlapping the reopened run.
+    @Test func sm2_yesterdaySlipThenResetThenUndoLeavesNoOverlappingRuns() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        let yesterday = DateHelpers.startOfDay(DateHelpers.daysAgo(1))
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        SlipRecorder.record(on: yesterday, context: context)
+        resetCounter()
+        #expect(SlipRecorder.canUndo(on: yesterday, context: context))
+
+        #expect(SlipRecorder.undo(on: yesterday, context: context))
+
+        #expect(CheckInService(context: context).loggedSlip(on: yesterday) == false)
+        #expect(sobriety.currentDayCount() == 1, "the Reset was thrown away")
+        #expect(garden.current().carryoverDays == 0)
+        expectNoOverlap()
+    }
+
+    /// Control: with no Reset in between, undo still restores the whole run
+    /// and the tree, and the Timeline caption that promises it still shows.
+    @Test func sm2_undoWithoutAResetStillRestoresTheRunAndTheTree() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        SlipRecorder.record(on: DateHelpers.startOfDay(), context: context)
+        #expect(garden.current().carryoverDays == 20)
+        #expect(sobriety.undoReopensLiveRun(endedOn: .now))
+
+        #expect(SlipRecorder.undo(on: .now, context: context))
+        #expect(sobriety.currentDayCount() == 41)
+        #expect(garden.current().carryoverDays == 0)
+        expectNoOverlap()
+    }
+
+    /// A slip followed by another slip is still not reversible after a Reset.
+    @Test func sm2_aSlipBehindALaterSlipStaysIrreversibleAfterAReset() {
+        let sobriety = SobrietyService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        let older = DateHelpers.startOfDay(DateHelpers.daysAgo(20))
+        SlipRecorder.record(on: older, context: context)
+        SlipRecorder.record(on: DateHelpers.startOfDay(DateHelpers.daysAgo(5)), context: context)
+        resetCounter()
+        #expect(SlipRecorder.canUndo(on: older, context: context) == false)
+    }
 }
