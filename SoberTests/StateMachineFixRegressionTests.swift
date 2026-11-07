@@ -196,4 +196,108 @@ struct StateMachineFixRegressionTests {
         resetCounter()
         #expect(SlipRecorder.canUndo(on: older, context: context) == false)
     }
+
+    // MARK: - SM-3 Slip and Undo past a year adds no grove tree
+
+    /// `completedTreeStyles` is "a permanent record of milestones actually
+    /// reached". Slip then Undo past 365 days used to add a second tree for a
+    /// cycle already counted.
+    @Test func sm3_undoingASlipAfterATreeCompletedDoesNotAddAnotherTree() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(400))
+        #expect(sobriety.currentDayCount() == 401)
+        #expect(garden.processCycleCompletions(days: 401) == 1)
+
+        SlipRecorder.record(on: DateHelpers.startOfDay(), context: context)
+        #expect(SlipRecorder.undo(on: .now, context: context))
+        #expect(sobriety.currentDayCount() == 401)
+
+        garden.processCycleCompletions(days: sobriety.currentDayCount())
+        #expect(garden.current().completedTreeStyles.count == 1)
+        #expect(garden.current().groveCountAtJourneyStart == 0)
+    }
+
+    /// Upgrade: a slip recorded by an older build has no stored baseline.
+    /// Undoing it after the update still adds no tree.
+    @Test func sm3_undoOfASlipFromAnOlderBuildAddsNoTree() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(800))
+        #expect(garden.processCycleCompletions(days: sobriety.currentDayCount()) == 2)
+        SlipRecorder.record(on: DateHelpers.startOfDay(), context: context)
+        garden.current().groveCountBeforeSlip = nil
+        try? context.save()
+
+        #expect(SlipRecorder.undo(on: .now, context: context))
+        garden.processCycleCompletions(days: sobriety.currentDayCount())
+        #expect(garden.current().completedTreeStyles.count == 2)
+    }
+
+    /// Control: after a real slip a new run still grows its own trees.
+    @Test func sm3_aRunAfterASlipStillAddsItsOwnTrees() {
+        let garden = GardenService(context: context)
+        SobrietyService(context: context).startJourney(at: DateHelpers.daysAgo(400))
+        garden.processCycleCompletions(days: 401)
+        SlipRecorder.record(on: DateHelpers.startOfDay(), context: context)
+        #expect(garden.processCycleCompletions(days: 366) == 1)
+        #expect(garden.current().completedTreeStyles.count == 2)
+    }
+
+    /// Upgrade: a garden row written before `groveCountBeforeSlip` existed
+    /// opens with every value intact and the new field empty.
+    @Test func sm3_aStoreFromTheOlderSchemaOpensWithItsGardenIntact() throws {
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent("sm3-\(UUID().uuidString).store")
+        defer {
+            for suffix in ["", "-shm", "-wal"] {
+                try? FileManager.default.removeItem(at: URL(fileURLWithPath: url.path + suffix))
+            }
+        }
+        do {
+            let legacy = try ModelContainer(
+                for: LegacyGardenSchema.GardenState.self,
+                configurations: ModelConfiguration(url: url)
+            )
+            let row = LegacyGardenSchema.GardenState()
+            row.completedTreeStyles = ["traditional-bonsai"]
+            row.groveCountAtJourneyStart = 1
+            row.carryoverDays = 40
+            row.carryoverBeforeSlip = 12
+            legacy.mainContext.insert(row)
+            try legacy.mainContext.save()
+        }
+
+        let upgraded = try ModelContainer(
+            for: GardenState.self, configurations: ModelConfiguration(url: url)
+        )
+        let state = try #require(try upgraded.mainContext.fetch(FetchDescriptor<GardenState>()).first)
+        #expect(state.completedTreeStyles == ["traditional-bonsai"])
+        #expect(state.groveCountAtJourneyStart == 1)
+        #expect(state.carryoverDays == 40)
+        #expect(state.carryoverBeforeSlip == 12)
+        #expect(state.groveCountBeforeSlip == nil)
+    }
+}
+
+/// `GardenState` as shipped before `groveCountBeforeSlip` was added.
+enum LegacyGardenSchema {
+    @Model
+    final class GardenState {
+        var id: UUID = UUID()
+        var vitality: Double = 1.0
+        var lastWateredAt: Date?
+        var unlockedItemIDs: [String] = ["moss"]
+        var placedItemIDs: [String] = []
+        var activeBonsaiStyleID: String = "traditional-bonsai"
+        var gardenThemeID: String = "zen"
+        var lastUnlockNotifiedAtDays: Int = 0
+        var completedTreeStyles: [String] = []
+        var groveCountAtJourneyStart: Int = 0
+        var carryoverDays: Int = 0
+        var carryoverBeforeSlip: Int = 0
+        var vitalityDecayDays: Int = 0
+
+        init() {}
+    }
 }

@@ -193,6 +193,7 @@ final class GardenService {
         state.carryoverBeforeSlip = state.carryoverDays
         state.carryoverDays = kept
         state.lastUnlockNotifiedAtDays = 0
+        state.groveCountBeforeSlip = state.groveCountAtJourneyStart
         state.groveCountAtJourneyStart = state.completedTreeStyles.count
         state.vitality = max(0.3, state.vitality - 0.3)
         state.lastWateredAt = nil
@@ -214,6 +215,11 @@ final class GardenService {
         let restored = state.carryoverBeforeSlip
         state.carryoverDays = restored
         state.carryoverBeforeSlip = 0
+        // The reopened run's finished trees are already in the grove.
+        let derivedBaseline = state.completedTreeStyles.count
+            - Self.cycleProgress(forDays: restoredStreakDays).completed
+        state.groveCountAtJourneyStart = state.groveCountBeforeSlip ?? max(0, derivedBaseline)
+        state.groveCountBeforeSlip = nil
         state.lastUnlockNotifiedAtDays = max(
             state.lastUnlockNotifiedAtDays,
             Self.treeDays(streakDays: restoredStreakDays, carryover: restored)
