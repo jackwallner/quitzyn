@@ -280,6 +280,53 @@ struct StateMachineFixRegressionTests {
     }
 }
 
+@Suite("State machine fixes 2026-11-06: Timeline pane")
+@MainActor
+struct TimelinePaneDraftRegressionTests {
+    private let container: ModelContainer
+
+    init() throws {
+        container = try ModelContainer(
+            for: DailyCheckIn.self, SobrietyJourney.self, GardenState.self,
+            configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+        )
+    }
+
+    private var context: ModelContext { container.mainContext }
+
+    /// SM-7: the unfolded pane stays mounted while Home checks today in with
+    /// a mood and note. The pane's draft must follow the saved row, or its
+    /// Note field shows blank and the next keystroke replaces the saved note.
+    @Test func sm7_aCheckInSavedOnHomeReachesThePaneDraft() throws {
+        let today = DateHelpers.startOfDay()
+        let selection = TimelineSelection()
+        selection.loadDraft(from: nil, day: today)
+        #expect(selection.draftNote.isEmpty)
+
+        CheckInService(context: context).checkIn(for: today, wasSober: true, mood: 4, note: "Walked it off")
+        let row = try #require(try context.fetch(FetchDescriptor<DailyCheckIn>()).first)
+        selection.storedRowDidChange(row, day: today)
+
+        #expect(selection.draftMood == 4)
+        #expect(selection.draftNote == "Walked it off")
+    }
+
+    /// An assumed row appearing under a half-typed note keeps the note.
+    @Test func sm7_anAssumedRowLeavesAHalfTypedNoteAlone() throws {
+        let today = DateHelpers.startOfDay()
+        let selection = TimelineSelection()
+        selection.loadDraft(from: nil, day: today)
+        selection.draftNote = "half-typed"
+
+        let assumed = DailyCheckIn(day: today, wasSober: true)
+        assumed.wasLogged = false
+        context.insert(assumed)
+        selection.storedRowDidChange(assumed, day: today)
+
+        #expect(selection.draftNote == "half-typed")
+    }
+}
+
 /// `GardenState` as shipped before `groveCountBeforeSlip` was added.
 enum LegacyGardenSchema {
     @Model
