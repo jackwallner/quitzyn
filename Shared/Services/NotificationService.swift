@@ -149,12 +149,12 @@ enum NotificationService {
     /// a slip, an undo, a reset, a start date edit) and on every Home refresh,
     /// and cancels the queue when the user has turned the reminder off.
     @MainActor
-    static func refreshDailyReminder(context: ModelContext, now: Date = .now) {
+    @discardableResult
+    static func refreshDailyReminder(context: ModelContext, now: Date = .now) -> Task<Void, Never>? {
         let settings = try? context.fetch(FetchDescriptor<UserSettings>()).first
         guard let settings, settings.dailyReminderEnabled else {
             lastReminderPlan = nil
-            Task { await cancelDailyReminder() }
-            return
+            return Task { await cancelDailyReminder() }
         }
         let hour = settings.dailyReminderHour
         let committed = settings.madeCommitment
@@ -163,16 +163,24 @@ enum NotificationService {
         // Home refreshes on every tab switch; re-queueing thirty requests each
         // time the answer has not changed is wasted work.
         let plan = "\(hour)|\(committed)|\(start?.timeIntervalSince1970 ?? 0)|\(checkedIn)|\(DateHelpers.startOfDay(now).timeIntervalSince1970)"
-        guard plan != lastReminderPlan else { return }
+        guard plan != lastReminderPlan else { return nil }
         lastReminderPlan = plan
-        Task {
+        return Task {
+            // Without permission nothing is queued, so the plan must not count
+            // as armed: granting it later (the Settings banner, or the iOS
+            // Settings app) re-runs this with the same plan, and the memo
+            // turned that into a no-op until the next check-in or new day.
+            guard await isAuthorized() else {
+                if lastReminderPlan == plan { lastReminderPlan = nil }
+                return
+            }
             await scheduleDailyReminder(
                 hour: hour, committed: committed, journeyStart: start, checkedInToday: checkedIn, now: now
             )
         }
     }
 
-    @MainActor private static var lastReminderPlan: String?
+    @MainActor private(set) static var lastReminderPlan: String?
 
     static func cancelDailyReminder() async {
         // The bare ID is the repeating request earlier builds scheduled.
