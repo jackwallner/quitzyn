@@ -38,7 +38,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "garden-return")
         craving.tap()
         XCTAssertTrue(button("I'm through it", in: app).waitForExistence(timeout: 10))
-        QA.checkpoint(app, "craving-session")
+        // The breathing circle and the countdown move on purpose; nothing else may.
+        QA.checkpoint(app, "craving-session", ambient: ["craving.breathing", "craving.timer"])
         tap("I'm through it", in: app)
         tap("It passed", in: app)
         XCTAssertTrue(text("Logged.", in: app).waitForExistence(timeout: 10))
@@ -59,37 +60,44 @@ final class ReleaseJourneysUITests: XCTestCase {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
         let note = "Walked past the shop and kept going"
         QA.launch(app, arguments: ["-seedDemo", "-previewStore", "-QuitZynScreenshot"])
-        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
-        // The demo seed already logged today, so the loop starts from Home's logged card.
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 15))
-        QA.checkpoint(app, "home-logged")
-
-        // Add a mood and a note to today.
-        tap("Add note", in: app)
-        XCTAssertTrue(navigationBar("Checked in", in: app).waitForExistence(timeout: 10))
+        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20), "Home never showed the craving button")
+        // The store outlives a test: this one runs after test01 and test02 (alphabetical order),
+        // which already finished onboarding, so -seedDemo does not log today and Home offers the
+        // check-in instead. Start from whichever state Home is really in.
+        if text("Today is logged", in: app).waitForExistence(timeout: 6) {
+            QA.checkpoint(app, "home-logged")
+            tap("Add note", in: app)
+        } else {
+            QA.checkpoint(app, "home-unlogged")
+            let checkIn = checkInButton(in: app)
+            XCTAssertTrue(checkIn.waitForExistence(timeout: 10), "Home showed neither a logged day nor the check-in button")
+            checkIn.tap()
+        }
+        // Either path ends on the check-in sheet.
+        XCTAssertTrue(navigationBar("Checked in", in: app).waitForExistence(timeout: 10), "The check-in sheet never opened")
         tap("Good", in: app)
         let field = app.textFields.matching(NSPredicate(format: "label IN %@ OR placeholderValue IN %@", labels("Anything you want to remember about today?"), labels("Anything you want to remember about today?"))).firstMatch
-        XCTAssertTrue(field.waitForExistence(timeout: 10))
+        XCTAssertTrue(field.waitForExistence(timeout: 10), "The note field is missing from the check-in sheet")
         field.tap()
         field.typeText(note)
         QA.checkpoint(app, "check-in-note")
         tap("Save", in: app)
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10))
+        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10), "Home did not show today as logged after saving the note")
         QA.checkpoint(app, "home-after-note")
 
         // Ride out a craving.
         cravingButton(in: app).tap()
         tap("I'm through it", in: app)
         tap("It passed", in: app)
-        XCTAssertTrue(text("Logged.", in: app).waitForExistence(timeout: 10))
-        XCTAssertFalse(app.alerts.firstMatch.exists)
+        XCTAssertTrue(text("Logged.", in: app).waitForExistence(timeout: 10), "The craving session never reached its Logged. screen")
+        XCTAssertFalse(app.alerts.firstMatch.exists, "Saving the craving raised an alert")
         QA.checkpoint(app, "craving-saved")
         tap("Back to the garden", in: app)
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10))
+        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10), "Home lost today's check-in after the craving")
 
         // Everything is still there after a cold start.
         QA.relaunch(app)
-        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20))
+        XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20), "Home never came back after the relaunch")
         XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10),
                       "The check-in was gone after relaunch")
         QA.checkpoint(app, "home-after-relaunch")
@@ -120,6 +128,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         "Timeline": "Verlauf",
         "Today is logged": "Heute erfasst",
         "Add note": "Notiz hinzufügen",
+        "Check in for today": "Mach den heutigen Check-in",
         "Checked in": "Eingecheckt",
         "Good": "Gut",
         "Anything you want to remember about today?": "Möchtest du dir etwas von heute merken?",
@@ -146,6 +155,11 @@ final class ReleaseJourneysUITests: XCTestCase {
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {
         app.buttons.containing(NSPredicate(
             format: "label BEGINSWITH %@ OR label BEGINSWITH %@", "I'm having a", "Ich verspüre gerade")).firstMatch
+    }
+
+    private func checkInButton(in app: XCUIApplication) -> XCUIElement {
+        app.buttons.containing(NSPredicate(
+            format: "label BEGINSWITH %@ OR label BEGINSWITH %@", "Check in for today", "Mach den heutigen Check-in")).firstMatch
     }
 
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
