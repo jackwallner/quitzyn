@@ -198,14 +198,14 @@ struct OnboardingView: View {
                     .monospacedDigit()
                 Text("pouches a day")
                     .font(Theme.body())
-                    .foregroundStyle(.white.opacity(0.85))
+                    .foregroundStyle(Theme.onGradientText)
                 Slider(value: $pouchesPerDay, in: 0...40, step: 1)
                     .tint(.white)
                     .padding(.horizontal, Theme.Space.s)
             }
             .frame(maxWidth: .infinity)
             .padding(Theme.Space.l)
-            .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 18))
+            .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 18))
 
             canCard
 
@@ -224,7 +224,7 @@ struct OnboardingView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Price")
                         .font(Theme.caption())
-                        .foregroundStyle(.white.opacity(0.75))
+                        .foregroundStyle(Theme.onGradientText)
                     HStack(spacing: Theme.Space.m) {
                         stepButton("minus") {
                             costPerCan = max(1, costPerCan - 0.5)
@@ -242,7 +242,7 @@ struct OnboardingView: View {
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Pouches")
                         .font(Theme.caption())
-                        .foregroundStyle(.white.opacity(0.75))
+                        .foregroundStyle(Theme.onGradientText)
                     Picker("Pouches per can", selection: $pouchesPerCan) {
                         ForEach([15, 20, 24], id: \.self) { count in
                             Text("\(count)").tag(count)
@@ -255,7 +255,7 @@ struct OnboardingView: View {
             }
         }
         .padding(Theme.Space.l)
-        .background(.white.opacity(0.12), in: RoundedRectangle(cornerRadius: 18))
+        .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 18))
     }
 
     private func stepButton(_ icon: String, action: @escaping () -> Void) -> some View {
@@ -282,7 +282,7 @@ struct OnboardingView: View {
                     .foregroundStyle(.white)
                 Text("In a year, that's")
                     .font(Theme.caption())
-                    .foregroundStyle(.white.opacity(0.75))
+                    .foregroundStyle(Theme.onGradientText)
                 if yearlyDollars > 0 {
                     Text(formatCurrency(yearlyDollars))
                         .font(.system(size: 40, weight: .bold, design: .rounded))
@@ -292,7 +292,7 @@ struct OnboardingView: View {
                          ? String(localized: "Plus \(yearlyPouches.formatted()) pouches you won't put in. That's the nicotine your body never has to process.")
                          : String(localized: "\(yearlyPouches.formatted()) pouches you won't put in. That's nicotine your body never has to process."))
                         .font(Theme.caption())
-                        .foregroundStyle(.white.opacity(0.75))
+                        .foregroundStyle(Theme.onGradientText)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -300,7 +300,7 @@ struct OnboardingView: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, Theme.Space.m)
             .padding(.horizontal, Theme.Space.m)
-            .background(.white.opacity(0.15), in: RoundedRectangle(cornerRadius: 16))
+            .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 16))
         }
     }
 
@@ -426,7 +426,7 @@ struct OnboardingView: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text(trialSubhead)
                     .font(Theme.body())
-                    .foregroundStyle(.white.opacity(0.88))
+                    .foregroundStyle(Theme.onGradientText)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -442,7 +442,7 @@ struct OnboardingView: View {
                 trialBenefit(icon: "book.closed.fill", text: String(localized: "Journal privately through the hard days"))
             }
             .padding(Theme.Space.m)
-            .background(.white.opacity(0.13), in: RoundedRectangle(cornerRadius: 18))
+            .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 18))
         }
     }
 
@@ -510,8 +510,9 @@ struct OnboardingView: View {
         Button { showSkipTrialConfirm = true } label: {
             Text("Get started")
                 .font(Theme.caption(weight: .semibold))
-                .foregroundStyle(.white.opacity(0.7))
-                .padding(.vertical, 2)
+                .foregroundStyle(Theme.onGradientText)
+                .frame(minWidth: 44, minHeight: 44)
+                .contentShape(Rectangle())
         }
         .disabled(trialInFlight)
     }
@@ -533,7 +534,7 @@ struct OnboardingView: View {
                 .padding(.horizontal, 13)
                 .padding(.vertical, 10)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(.white.opacity(0.16), in: RoundedRectangle(cornerRadius: 12))
+                .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 12))
             }
 
             // The billed amount, the most conspicuous price on the screen
@@ -586,7 +587,7 @@ struct OnboardingView: View {
             Spacer(minLength: 0)
         }
         .font(Theme.caption())
-        .foregroundStyle(.white.opacity(0.72))
+        .foregroundStyle(Theme.onGradientText)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 4)
     }
@@ -612,7 +613,7 @@ struct OnboardingView: View {
     private func disclosureLine(_ text: String) -> some View {
         Text(text)
             .font(Theme.caption())
-            .foregroundStyle(.white.opacity(0.7))
+            .foregroundStyle(Theme.onGradientText)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
             .padding(.horizontal, Theme.Space.s)
@@ -654,7 +655,7 @@ struct OnboardingView: View {
             Text("Recovery starts with a decision. This is yours, for today and the days that follow.")
                 .multilineTextAlignment(.center)
                 .font(Theme.body())
-                .foregroundStyle(.white.opacity(0.9))
+                .foregroundStyle(Theme.onGradientText)
                 .padding(.horizontal, Theme.Space.m)
             Spacer()
             bottomBar(
@@ -664,13 +665,14 @@ struct OnboardingView: View {
                         Button { completeOnboarding(committed: false) } label: {
                             Text("Not now")
                                 .font(Theme.subhead(weight: .medium))
-                                .foregroundStyle(.white.opacity(0.8))
+                                .foregroundStyle(Theme.onGradientText)
                                 .underline()
-                                .padding(.vertical, 6)
+                                .frame(minWidth: 44, minHeight: 44)
+                                .contentShape(Rectangle())
                         }
                         Text("Either way is fine. You can revisit this any time in Settings.")
                             .font(Theme.caption())
-                            .foregroundStyle(.white.opacity(0.7))
+                            .foregroundStyle(Theme.onGradientText)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, Theme.Space.m)
                     }
@@ -721,7 +723,8 @@ struct OnboardingView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, Theme.Space.l)
             }
-            .background(.white.opacity(0.25), in: RoundedRectangle(cornerRadius: 18))
+            .background(Theme.onGradientControl, in: RoundedRectangle(cornerRadius: 18))
+            .overlay(RoundedRectangle(cornerRadius: 18).stroke(.white.opacity(0.55), lineWidth: 1))
             .disabled(busy)
 
             ZStack(alignment: .top) {
@@ -736,19 +739,24 @@ struct OnboardingView: View {
     }
 
     private var legalFooter: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 0) {
             Button { restorePurchasesFromOnboarding() } label: {
                 Text(restoreInFlight ? "Restoring…" : "Restore")
                     .underline()
+                    .legalTarget()
             }
             .disabled(restoreInFlight)
             Text("·")
-            Link("Terms of Use", destination: PaywallLinks.standardEULA)
+            Link(destination: PaywallLinks.standardEULA) {
+                Text("Terms of Use").legalTarget()
+            }
             Text("·")
-            Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
+            Link(destination: PaywallLinks.privacyPolicy) {
+                Text("Privacy Policy").legalTarget()
+            }
         }
         .font(Theme.caption())
-        .foregroundStyle(.white.opacity(0.75))
+        .foregroundStyle(Theme.onGradientText)
         .tint(.white)
     }
 

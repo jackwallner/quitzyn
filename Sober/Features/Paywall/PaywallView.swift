@@ -442,22 +442,23 @@ struct PaywallView: View {
     }
 
     private var footerLinks: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 0) {
             Button(action: startRestore) {
                 Text(isRestoring ? "Restoring…" : "Restore Purchases")
                     .underline()
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
+                    .legalTarget()
             }
             .buttonStyle(.plain)
             .disabled(isRestoring || isPurchasing)
             Text("·")
             Link(destination: PaywallLinks.standardEULA) {
-                Text("Terms").lineLimit(1).minimumScaleFactor(0.7)
+                Text("Terms").lineLimit(1).minimumScaleFactor(0.7).legalTarget()
             }
             Text("·")
             Link(destination: PaywallLinks.privacyPolicy) {
-                Text("Privacy Policy").lineLimit(1).minimumScaleFactor(0.7)
+                Text("Privacy Policy").lineLimit(1).minimumScaleFactor(0.7).legalTarget()
             }
         }
         .font(Theme.caption())

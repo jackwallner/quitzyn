@@ -84,6 +84,7 @@ struct CravingModeView: View {
     }
 
     private static let phaseSeconds = 4
+    private static let restingScale: CGFloat = 0.86
     private var breathPhase: BreathPhase {
         BreathPhase(rawValue: (elapsed / Self.phaseSeconds) % 4) ?? .inhale
     }
@@ -94,7 +95,9 @@ struct CravingModeView: View {
         case .inhale, .holdFull: target = 1.0
         case .exhale, .holdEmpty: target = 0.72
         }
-        guard !reduceMotion else { circleScale = target; return }
+        // Reduce Motion: the circle holds still and the phase word carries the
+        // rhythm, so nothing on screen redraws except the countdown and the label.
+        guard !reduceMotion else { circleScale = Self.restingScale; return }
         // The animation runs the length of the phase, so "hold" phases simply
         // arrive at a value they are already at and sit still. One rule, four
         // phases, no special-casing.
@@ -125,6 +128,7 @@ struct CravingModeView: View {
                     .monospacedDigit()
                     .foregroundStyle(Theme.textSecondary)
                     .padding(.trailing, Theme.Space.m)
+                    .accessibilityIdentifier("craving.timer")
             }
 
             Spacer(minLength: 0)
@@ -147,13 +151,14 @@ struct CravingModeView: View {
             }
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(breathPhase.label)
+            .accessibilityIdentifier("craving.breathing")
 
             VStack(spacing: Theme.Space.s) {
                 Text(CravingCoach.line(elapsed: elapsed, target: targetSeconds))
                     .font(Theme.body())
                     .foregroundStyle(Theme.textPrimary)
                     .multilineTextAlignment(.center)
-                    .animation(.easeInOut, value: CravingCoach.line(elapsed: elapsed, target: targetSeconds))
+                    .animation(reduceMotion ? nil : .easeInOut, value: CravingCoach.line(elapsed: elapsed, target: targetSeconds))
                 // Held back until the user is far enough in that a line about
                 // their own history reads as reassurance rather than a stat.
                 if let coachLine, elapsed >= targetSeconds / 3 {
@@ -166,7 +171,7 @@ struct CravingModeView: View {
             }
             .frame(maxWidth: 320)
             .fixedSize(horizontal: false, vertical: true)
-            .animation(.easeInOut, value: elapsed >= targetSeconds / 3)
+            .animation(reduceMotion ? nil : .easeInOut, value: elapsed >= targetSeconds / 3)
 
             Spacer(minLength: 0)
 
@@ -187,6 +192,8 @@ struct CravingModeView: View {
                     Text("Give me another minute")
                         .font(Theme.subhead(weight: .semibold))
                         .foregroundStyle(Theme.brandPrimary)
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 .opacity(targetSeconds >= HabitVocabulary.maxUrgeSeconds ? 0 : 1)
@@ -322,6 +329,7 @@ struct CravingModeView: View {
                 .buttonStyle(.plain)
                 Text("Give me another minute")
                     .font(Theme.subhead(weight: .semibold))
+                    .frame(maxWidth: .infinity, minHeight: 44)
                     .hidden()
                     .accessibilityHidden(true)
             }
