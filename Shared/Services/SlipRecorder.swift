@@ -71,7 +71,11 @@ enum SlipRecorder {
         // streak stops at it, and leaves the garden alone: re-running the 50% rule
         // here overwrote the undo baseline and replayed stage celebrations, and a
         // later undo of the newer slip then drew the tree bigger than any run.
-        if laterSlipOnRecord && !sobriety.activeJourneyCovers(day) {
+        // The same holds for a day inside a run the Reset button ended: no slip
+        // row marks that boundary, so keying on a later slip alone left the run
+        // whole (Longest counted through the slip) and grew the live tree.
+        if !sobriety.activeJourneyCovers(day),
+           laterSlipOnRecord || sobriety.closedJourney(containing: day) != nil {
             sobriety.splitClosedJourney(on: day)
             WidgetSnapshotPump.push(context: context)
             return Outcome(previousStreakDays: previousStreak, carryoverDays: garden.current().carryoverDays)

@@ -80,6 +80,17 @@ final class SobrietyService {
         return DateHelpers.startOfDay(day) >= DateHelpers.startOfDay(active.startDate)
     }
 
+    /// The closed run that `day` falls inside, before the day it ended.
+    func closedJourney(containing day: Date) -> SobrietyJourney? {
+        let target = DateHelpers.startOfDay(day)
+        let journeys = (try? context.fetch(FetchDescriptor<SobrietyJourney>())) ?? []
+        return journeys.first { j in
+            guard let end = j.endDate else { return false }
+            return target >= DateHelpers.startOfDay(j.startDate)
+                && target < DateHelpers.startOfDay(end)
+        }
+    }
+
     /// Split the closed run that contains `day` at that day, for a slip entered
     /// after a newer one. The run stops on the slip day and a closed run covers
     /// the days after it, up to where the original stopped, so the longest
@@ -88,14 +99,7 @@ final class SobrietyService {
     @discardableResult
     func splitClosedJourney(on day: Date) -> Bool {
         let target = DateHelpers.startOfDay(day)
-        let descriptor = FetchDescriptor<SobrietyJourney>()
-        let journeys = (try? context.fetch(descriptor)) ?? []
-        let containing = journeys.first { j in
-            guard let end = j.endDate else { return false }
-            return target >= DateHelpers.startOfDay(j.startDate)
-                && target < DateHelpers.startOfDay(end)
-        }
-        guard let containing, let originalEnd = containing.endDate,
+        guard let containing = closedJourney(containing: day), let originalEnd = containing.endDate,
               let dayAfter = Calendar.current.date(byAdding: .day, value: 1, to: target)
         else { return false }
 
