@@ -71,7 +71,11 @@ enum SlipRecorder {
         // streak stops at it, and leaves the garden alone: re-running the 50% rule
         // here overwrote the undo baseline and replayed stage celebrations, and a
         // later undo of the newer slip then drew the tree bigger than any run.
-        if laterSlipOnRecord && !sobriety.activeJourneyCovers(day) {
+        // The same holds for a day inside a run the Reset button ended: no slip
+        // row marks that boundary, so keying on a later slip alone left the run
+        // whole (Longest counted through the slip) and grew the live tree.
+        if !sobriety.activeJourneyCovers(day),
+           laterSlipOnRecord || sobriety.closedJourney(containing: day) != nil {
             sobriety.splitClosedJourney(on: day)
             WidgetSnapshotPump.push(context: context)
             return Outcome(previousStreakDays: previousStreak, carryoverDays: garden.current().carryoverDays)
@@ -133,10 +137,15 @@ enum SlipRecorder {
         guard checkIns.loggedSlip(on: day) else { return false }
         // Reopen first: if the counter can't be put back, the calendar row must
         // stay as it is rather than disagree with it.
-        guard let restoredStreak = sobriety.reopenJourney(endedOn: day) else { return false }
+        guard let reversal = sobriety.reopenJourney(endedOn: day) else { return false }
 
         checkIns.checkIn(for: day, wasSober: true, mood: mood, note: note)
-        garden.undoSlip(restoredStreakDays: restoredStreak)
+        // A Reset after the slip started the tree over on purpose, and a slip
+        // back-logged into history never touched it: handing back the growth
+        // the slip banked would undo the Reset instead of the slip.
+        if reversal.reopenedLiveRun {
+            garden.undoSlip(restoredStreakDays: reversal.currentDays)
+        }
         WidgetSnapshotPump.push(context: context)
         return true
     }

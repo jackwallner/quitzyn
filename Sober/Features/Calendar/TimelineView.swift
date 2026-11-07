@@ -102,6 +102,14 @@ struct TimelineView: View {
                 }
             }
             .onChange(of: selectedDate) { _, _ in loadDraft() }
+            // In the unfolded Duo split this pane stays mounted beside Home, so
+            // a check-in saved there never re-fires `onAppear`. Without this the
+            // pane read "Logged" over blank fields, and typing a note replaced
+            // the one just saved.
+            .onChange(of: selectedRowState) { _, _ in
+                let day = DateHelpers.startOfDay(selectedDate)
+                selection.storedRowDidChange(checkInsByDay[day], day: day)
+            }
             .alert(
                 "Log a slip?",
                 isPresented: Binding(get: { pendingSlipDay != nil }, set: { if !$0 { pendingSlipDay = nil } }),
@@ -192,10 +200,12 @@ struct TimelineView: View {
 
     private func loadDraft() {
         let day = DateHelpers.startOfDay(selectedDate)
-        let checkIn = checkInsByDay[day]
-        selection.draftDay = day
-        draftMood = checkIn?.mood
-        draftNote = checkIn?.note ?? ""
+        selection.loadDraft(from: checkInsByDay[day], day: day)
+    }
+
+    /// What the selected day's stored row says, to notice edits made elsewhere.
+    private var selectedRowState: TimelineSelection.RowState? {
+        checkInsByDay[DateHelpers.startOfDay(selectedDate)].map(TimelineSelection.RowState.init)
     }
 
     // MARK: - Summary
@@ -504,9 +514,11 @@ struct TimelineView: View {
                 } label: {
                     Label("Change to nicotine-free", systemImage: "arrow.uturn.backward")
                 }
-                Text("Puts your counter and your tree back the way they were before this slip.")
-                    .font(Theme.caption())
-                    .foregroundStyle(Theme.textSecondary)
+                if SobrietyService(context: context).undoReopensLiveRun(endedOn: day) {
+                    Text("Puts your counter and your tree back the way they were before this slip.")
+                        .font(Theme.caption())
+                        .foregroundStyle(Theme.textSecondary)
+                }
             } else {
                 Text("A slip can only be taken back while it's the most recent one on your record.")
                     .font(Theme.caption())
@@ -645,4 +657,33 @@ final class TimelineSelection {
     /// The day the draft was loaded for, so a remount can tell a stale draft
     /// from one still being typed.
     var draftDay: Date?
+
+    /// The parts of a check-in the editor shows.
+    struct RowState: Equatable {
+        let wasLogged: Bool
+        let wasSober: Bool
+        let mood: Int?
+        let note: String?
+
+        init(_ checkIn: DailyCheckIn) {
+            wasLogged = checkIn.wasLogged
+            wasSober = checkIn.wasSober
+            mood = checkIn.mood
+            note = checkIn.note
+        }
+    }
+
+    func loadDraft(from checkIn: DailyCheckIn?, day: Date) {
+        draftDay = day
+        draftMood = checkIn?.mood
+        draftNote = checkIn?.note ?? ""
+    }
+
+    /// The selected day's row changed outside the editor, such as a check-in
+    /// saved on Home. A logged row is what the day says now, so the draft
+    /// follows it; an assumed row leaves a half-typed note alone.
+    func storedRowDidChange(_ checkIn: DailyCheckIn?, day: Date) {
+        guard let checkIn, checkIn.wasLogged, draftDay == day else { return }
+        loadDraft(from: checkIn, day: day)
+    }
 }

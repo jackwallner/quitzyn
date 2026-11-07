@@ -41,7 +41,6 @@ private struct BloomPlusHubView: View {
     private var settings: UserSettings? { settingsRows.first }
     private var costPerDayCents: Int { settings?.costPerDayCents ?? 0 }
     private var pouchesPerDay: Int { settings?.pouchesPerDay ?? 0 }
-    private var currencyCode: String { settings?.currencyCode ?? Locale.current.currency?.identifier ?? "USD" }
 
     private var days: Int {
         guard let j = journeys.first(where: { $0.isActive }) else { return 0 }
@@ -160,13 +159,7 @@ private struct BloomPlusHubView: View {
     }
 
     private func formatCurrency(_ amount: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = .current
-        formatter.currencyCode = currencyCode
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: amount))
-            ?? Decimal(amount).formatted(.currency(code: currencyCode))
+        UserSettings.formattedMoney(cents: Int((amount * 100).rounded()))
     }
 
     private var projectionCard: some View {
