@@ -46,6 +46,29 @@ final class UserSettings {
     var costPerDay: Decimal {
         Decimal(costPerDayCents) / 100
     }
+
+    /// The currency every money figure is shown in: the device's, the same
+    /// one onboarding and Settings use when the cost is typed in.
+    ///
+    /// `currencyCode` keeps its "USD" default because nothing ever wrote it,
+    /// so formatting with it put a dollar sign on a cost entered in euros.
+    /// It stays stored only so existing stores keep opening.
+    static func displayCurrencyCode(locale: Locale = .current) -> String {
+        locale.currency?.identifier ?? "USD"
+    }
+
+    /// Whole-unit money string for `cents`, as the savings screens show it.
+    static func formattedMoney(cents: Int, locale: Locale = .current) -> String {
+        let code = displayCurrencyCode(locale: locale)
+        let amount = Decimal(cents) / 100
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = locale
+        formatter.currencyCode = code
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: amount as NSDecimalNumber)
+            ?? amount.formatted(.currency(code: code).locale(locale))
+    }
 }
 
 enum AppearancePreference: String, CaseIterable, Identifiable {
