@@ -323,7 +323,8 @@ struct RootView: View {
         guard args.contains("-seedDemo") else { return }
 
         let settings = SettingsService(context: context).current()
-        if !settings.hasCompletedOnboarding {
+        let isFirstSeed = !settings.hasCompletedOnboarding
+        if isFirstSeed {
             settings.costPerDayCents = 320
             settings.pouchesPerDay = 8
             settings.madeCommitment = true
@@ -360,8 +361,9 @@ struct RootView: View {
                 (0, 5, "Feeling steady. Garden keeps growing."), (1, 4, nil), (2, 4, nil),
                 (3, 5, nil), (5, 3, nil), (6, 4, nil), (8, 5, nil)
             ]
+            // Only on the first launch: a relaunch must not overwrite what the user typed.
             let checkIns = CheckInService(context: context)
-            for item in moods {
+            for item in moods where isFirstSeed {
                 checkIns.checkIn(for: DateHelpers.daysAgo(item.daysAgo), wasSober: true, mood: item.mood, note: item.note)
             }
         }

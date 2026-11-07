@@ -394,6 +394,8 @@ struct HomeView: View {
                     // because they did.
                     HStack(spacing: Theme.Space.s) {
                         WeekStripView(days: week)
+                            .frame(minWidth: 44, minHeight: 44)
+                            .contentShape(Rectangle())
                         Text(TendedWeek.compactSummary(week))
                             .font(Theme.caption())
                             .foregroundStyle(Theme.textSecondary)
@@ -670,7 +672,7 @@ private struct CheckInDetailSheet: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Mood") {
+                Section {
                     HStack(spacing: Theme.Space.m) {
                         ForEach(1...5, id: \.self) { value in
                             Button {
@@ -679,10 +681,10 @@ private struct CheckInDetailSheet: View {
                                 VStack(spacing: 4) {
                                     Image(systemName: symbols[value - 1])
                                         .font(.title2)
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                         Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textTertiary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }
@@ -690,10 +692,14 @@ private struct CheckInDetailSheet: View {
                         }
                     }
                     .padding(.vertical, Theme.Space.xs)
+                } header: {
+                    Text("Mood").foregroundStyle(Theme.textSecondary)
                 }
-                Section("Note") {
+                Section {
                     TextField("Anything you want to remember about today?", text: $note, axis: .vertical)
                         .lineLimit(1...4)
+                } header: {
+                    Text("Note").foregroundStyle(Theme.textSecondary)
                 }
             }
             .navigationTitle("Checked in")

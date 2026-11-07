@@ -150,6 +150,7 @@ struct OnboardingView: View {
             Text("When did your nicotine-free journey begin?")
                 .font(Theme.display())
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             DatePicker("", selection: $startDate, in: ...Date.now, displayedComponents: [.date])
                 .datePickerStyle(.graphical)
                 .labelsHidden()
