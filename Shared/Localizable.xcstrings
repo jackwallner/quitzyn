@@ -58133,6 +58133,107 @@
         }
       }
     },
+    "Trial start cancelled. Tap again to continue.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trial start cancelled. Tap again to continue."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start der Testphase abgebrochen. Tippe erneut, um fortzufahren."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запуск пробного периода отменён. Нажмите ещё раз, чтобы продолжить."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spuštění zkušebního období bylo zrušeno. Klepnutím znovu pokračujte."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten av provperioden avbröts. Tryck igen för att fortsätta."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kokeilujakson aloitus peruutettiin. Jatka napauttamalla uudelleen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start van de proefperiode geannuleerd. Tik opnieuw om door te gaan."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio de la prueba cancelado. Toca de nuevo para continuar."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start af prøveperioden blev annulleret. Tryk igen for at fortsætte."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anulowano rozpoczęcie okresu próbnego. Stuknij ponownie, aby kontynuować."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spustenie skúšobného obdobia bolo zrušené. Ťukni znova a pokračuj."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start av prøveperioden ble avbrutt. Trykk igjen for å fortsette."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Începerea perioadei de probă a fost anulată. Atingeți din nou pentru a continua."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Початок пробного періоду скасовано. Торкніться ще раз, щоб продовжити."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avvio del periodo di prova annullato. Tocca di nuovo per continuare."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已取消开始试用。再次点按以继续。"
+          }
+        }
+      }
+    },
     "Truth Initiative": {
       "extractionState": "manual",
       "localizations": {

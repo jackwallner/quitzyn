@@ -657,11 +657,11 @@ struct MainTabView: View {
                     trialPurchaseError = SubscriptionService.pendingApprovalMessage
                 case .cancelled:
                     ConversionDiagnostics.record(.purchaseCancelled)
-                    trialPurchaseError = "Trial start cancelled. Tap again to continue."
+                    trialPurchaseError = String(localized: "Trial start cancelled. Tap again to continue.")
                 }
             } catch {
                 ConversionDiagnostics.record(.purchaseFailed)
-                trialPurchaseError = "Couldn't start your trial. Please try again."
+                trialPurchaseError = String(localized: "Couldn't start your trial. Please try again.")
             }
         }
     }

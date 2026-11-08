@@ -48,6 +48,23 @@ struct LocalizationTests {
         #expect(String(localized: "\(7)-day free trial, then \("$34.99").", bundle: english, locale: Locale(identifier: "en")) == "7-day free trial, then $34.99.")
     }
 
+    /// The trial sheet's two purchase errors used to be bare `String`s, so
+    /// every language saw them in English.
+    @Test func trialSheetErrorsAreTranslatedInEveryLanguage() throws {
+        let keys = [
+            String.LocalizationValue("Trial start cancelled. Tap again to continue."),
+            String.LocalizationValue("Couldn't start your trial. Please try again."),
+        ]
+        let english = try #require(bundle("en"))
+        for language in Self.languages {
+            let host = try #require(bundle(language), "\(language).lproj is missing")
+            for key in keys {
+                let source = String(localized: key, bundle: english)
+                #expect(String(localized: key, bundle: host) != source, "\(language) shows \(source) in English")
+            }
+        }
+    }
+
     @Test func germanCopyIsTranslated() throws {
         let german = try #require(bundle("de"))
         #expect(String(localized: "Every nicotine-free day grows your tree.", bundle: german) == "Jeder nikotinfreie Tag lässt deinen Baum wachsen.")
