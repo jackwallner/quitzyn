@@ -30,7 +30,7 @@ while (($#)); do
     esac
 done
 
-locale_output=$("$python" - "$app_json" "$scene_plan" "$skip_english" "${locale_args[@]}" <<'PY'
+locale_output=$("$python" - "$app_json" "$scene_plan" "$skip_english" ${locale_args[@]+"${locale_args[@]}"} <<'PY'
 import json
 import sys
 from pathlib import Path
@@ -132,5 +132,5 @@ for row in rows:
 
 print(f"sorted {copied} real app captures for {len(rows)} locales")
 PY
-"$kit_root/tools/process.sh" "${locale_args[@]}"
+"$kit_root/tools/process.sh" ${locale_args[@]+"${locale_args[@]}"}
 printf 'XCUITest capture completed for %s locales in gh-sim run %s\n' "${#locale_rows[@]}" "$run_id"

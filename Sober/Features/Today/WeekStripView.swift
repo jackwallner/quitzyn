@@ -15,8 +15,14 @@ struct WeekStripView: View {
                 dot(for: day.mark)
             }
         }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(TendedWeek.summary(days))
+        // The strip takes only its dots' height; the element overflows it to 44 pt.
+        .overlay {
+            Color.clear
+                .frame(minWidth: 44, minHeight: 44)
+                .contentShape(Rectangle())
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(TendedWeek.summary(days))
+        }
     }
 
     @ViewBuilder

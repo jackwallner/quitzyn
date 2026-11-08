@@ -45,6 +45,8 @@ extension JournalEntry {
         case "okay": String(localized: "OK")
         case "tough": String(localized: "Tough")
         case "rough": String(localized: "Rough")
+        case "low": String(localized: "Low")
+        case "great": String(localized: "Great")
         default: feeling
         }
     }

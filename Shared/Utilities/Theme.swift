@@ -19,12 +19,12 @@ enum Theme {
     static let ringTrack = Color(red: 0.886, green: 0.851, blue: 0.792)       // warm sand-gray #E2D9CA
     static let textPrimary = Color(red: 0.102, green: 0.102, blue: 0.094)     // ink    #1A1A18
     static let textSecondary = Color(red: 0.357, green: 0.337, blue: 0.298)   // warm gray
-    static let textTertiary = Color(red: 0.557, green: 0.529, blue: 0.471)
+    static let textTertiary = Color(red: 0.420, green: 0.395, blue: 0.340)   // 5.1:1 on cream, 5.7:1 on cards
     #endif
 
     // D1 "Slow morning" palette — moss anchor, warm sand accent, no chromatic energy.
     static let brandPrimary = Color(red: 0.184, green: 0.357, blue: 0.271)   // moss   #2F5B45
-    static let brandSecondary = Color(red: 0.310, green: 0.522, blue: 0.408) // lighter moss
+    static let brandSecondary = Color(red: 0.220, green: 0.410, blue: 0.310) // lighter moss, dark enough for white text (6.4:1)
     static let accent = Color(red: 0.769, green: 0.612, blue: 0.424)         // sand   #C49C6C
     static let streakFlame = Color(red: 0.851, green: 0.451, blue: 0.235)    // warm terracotta
     static let success = Color(red: 0.184, green: 0.357, blue: 0.271)        // moss
@@ -44,6 +44,13 @@ enum Theme {
         static let xl: CGFloat = 24
         static let xxl: CGFloat = 32
     }
+
+    /// Secondary text, panels and a control fill for screens drawn on `brandGradient`
+    /// (onboarding). Panels are a dark tint rather than a white one, so white text on
+    /// them keeps 4.5:1 across the whole gradient.
+    static let onGradientText = Color.white.opacity(0.94)
+    static let onGradientPanel = Color.black.opacity(0.16)
+    static let onGradientControl = Color.white.opacity(0.12)
 
     /// Dark scrim used on Home overlays that sit on top of the light garden gradient.
     /// Solid (not material) so legibility is the same whether the garden is bright sky
@@ -123,6 +130,13 @@ enum Theme {
 }
 
 extension View {
+    /// Makes a small text link or footer button a 44 pt target without moving its text.
+    func legalTarget() -> some View {
+        padding(.horizontal, 6)
+            .frame(minHeight: 44)
+            .contentShape(Rectangle())
+    }
+
     /// Replaces the default cool system-grouped background of a `List`/`Form` with the
     /// brand cream, so scrolling screens (Health, Journal, Settings) read as the same
     /// surface as the rest of the app instead of a stock iOS settings page.
