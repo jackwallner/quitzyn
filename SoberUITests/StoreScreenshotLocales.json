@@ -1,76 +1,49 @@
 {
   "locales": [
     {
+      "store_locale": "en-US",
+      "language": "en",
+      "region": "en_US"
+    },
+    {
       "store_locale": "es-MX",
       "language": "es",
-      "region": "es_MX",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "es_MX"
     },
     {
       "store_locale": "it",
       "language": "it",
-      "region": "it_IT",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "it_IT"
     },
     {
       "store_locale": "no",
       "language": "nb",
-      "region": "nb_NO",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "nb_NO"
     },
     {
       "store_locale": "pl",
       "language": "pl",
-      "region": "pl_PL",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "pl_PL"
     },
     {
       "store_locale": "ro",
       "language": "ro",
-      "region": "ro_RO",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "ro_RO"
     },
     {
       "store_locale": "sv",
       "language": "sv",
-      "region": "sv_SE",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "sv_SE"
     },
     {
       "store_locale": "uk",
       "language": "uk",
-      "region": "uk_UA",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "uk_UA"
     },
     {
       "store_locale": "zh-Hans",
       "language": "zh-Hans",
-      "region": "zh_CN",
-      "scenes": [
-        "journal",
-        "checkin"
-      ]
+      "region": "zh_CN"
     }
   ]
 }
