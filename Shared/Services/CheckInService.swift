@@ -42,6 +42,19 @@ final class CheckInService {
         return (entry?.mood, entry?.note)
     }
 
+    /// Writes a day's mood and note exactly as an editor holds them, so a
+    /// cleared note or deselected mood is cleared rather than kept. A day with
+    /// no row yet gets a logged check-in carrying whatever was entered.
+    func setDetails(on date: Date = .now, mood: Int?, note: String?) {
+        guard let existing = find(day: DateHelpers.startOfDay(date)) else {
+            if mood != nil || note != nil { checkIn(for: date, mood: mood, note: note) }
+            return
+        }
+        existing.mood = mood
+        existing.note = note
+        context.saveOrReport()
+    }
+
     /// Whether the user has actually checked in on this day, as opposed to the
     /// app having filled it in. Drives Home's check-in control, so it has to
     /// mean the tap, not the row.
