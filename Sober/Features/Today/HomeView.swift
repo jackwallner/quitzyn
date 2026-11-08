@@ -756,9 +756,9 @@ private struct CheckInDetailSheet: View {
 
     private func save() {
         let trimmed = note.trimmingCharacters(in: .whitespacesAndNewlines)
-        if mood != nil || !trimmed.isEmpty {
-            CheckInService(context: context).checkIn(mood: mood, note: trimmed.isEmpty ? nil : trimmed)
-        }
+        // The sheet opens on today's saved mood and note, so Save writes what
+        // it shows: clearing either one has to stick.
+        CheckInService(context: context).setDetails(mood: mood, note: trimmed.isEmpty ? nil : trimmed)
         dismiss()
     }
 }

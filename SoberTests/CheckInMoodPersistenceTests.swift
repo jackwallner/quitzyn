@@ -35,3 +35,53 @@ struct CheckInMoodPersistenceTests {
         #expect(checkIns.saved().note == "Feeling steady.")
     }
 }
+
+/// The Home note sheet opens prefilled, so its Save has to be able to clear
+/// what it shows. `checkIn(mood:note:)` treats nil as "keep", which silently
+/// brought a deleted note or deselected mood back.
+@Suite("Clearing today's mood or note in the check-in sheet sticks")
+@MainActor
+struct CheckInDetailClearTests {
+    private func service() throws -> (CheckInService, ModelContainer) {
+        let container = try ModelContainer(
+            for: DailyCheckIn.self, SobrietyJourney.self,
+            configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+        )
+        let defaults = UserDefaults(suiteName: "detail-\(UUID().uuidString)")!
+        return (CheckInService(context: container.mainContext, dayKeyDefaults: defaults), container)
+    }
+
+    @Test func clearedNoteAndMoodStayCleared() throws {
+        let (checkIns, container) = try service()
+        checkIns.checkIn(mood: 4, note: "Walked it off.")
+
+        checkIns.setDetails(mood: nil, note: nil)
+
+        #expect(checkIns.saved().mood == nil)
+        #expect(checkIns.saved().note == nil)
+        #expect(checkIns.hasCheckedIn())
+        _ = container
+    }
+
+    @Test func editKeepsTheDayLoggedAndSober() throws {
+        let (checkIns, container) = try service()
+        checkIns.checkIn()
+
+        checkIns.setDetails(mood: 5, note: "Clear head.")
+
+        #expect(checkIns.saved().mood == 5)
+        #expect(checkIns.saved().note == "Clear head.")
+        #expect(checkIns.hasCheckedIn())
+        #expect(!checkIns.loggedSlip())
+        _ = container
+    }
+
+    @Test func emptyEditOnAnUnloggedDayWritesNothing() throws {
+        let (checkIns, container) = try service()
+
+        checkIns.setDetails(mood: nil, note: nil)
+
+        #expect(!checkIns.hasCheckedIn())
+        _ = container
+    }
+}
