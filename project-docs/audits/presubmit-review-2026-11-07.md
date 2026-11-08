@@ -108,3 +108,10 @@ from it. Rerun the suite before submitting for a fresh pass.
 | P2 | `Sober/Features/Onboarding/OnboardingView.swift:878` | After a kill mid-onboarding, the restored price per can is back-computed from the saved cost per day with the default 15 pouches per can (the can size is not stored) and rounded to $0.50, clamped to $1 to $20. A user who picked 20 or 24 sees a different can size and price; the daily cost drifts by a few cents when they continue. | Not fixed (only after a kill mid-onboarding, small drift, needs a stored can size to fix properly) |
 
 No P0 findings. The two P2s from the first pass are unchanged.
+
+### Tests (second pass)
+
+`gh-sim test --scheme Sober --only SoberTests` on this branch with the fix,
+id `nicfree@20261108-075707-590c-claude-mbpro39fad-1108-075900-15387`, GitHub
+run 42497525079: 196 passed, 0 failed, 0 skipped (Xcode 27.1, iPhone 17,
+iOS 27.2). Includes the three new `CheckInDetailClearTests`.
