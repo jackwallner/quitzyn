@@ -495,7 +495,9 @@ struct HomeView: View {
             }
             .padding(.horizontal, Theme.Space.l)
             .padding(.vertical, 10)
-            .frame(maxWidth: .infinity)
+            // Same height as the craving session's own main button, so the
+            // dock does not nudge between Home and the "Back to the garden" step.
+            .frame(maxWidth: .infinity, minHeight: 54)
             .background(Theme.cardSurface, in: Capsule())
             .overlay(Capsule().stroke(Theme.ringTrack, lineWidth: 1))
         }
