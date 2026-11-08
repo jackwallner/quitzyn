@@ -64,7 +64,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         // The store outlives a test: this one runs after test01 and test02 (alphabetical order),
         // which already finished onboarding, so -seedDemo does not log today and Home offers the
         // check-in instead. Start from whichever state Home is really in.
-        if text("Today is logged", in: app).waitForExistence(timeout: 6) {
+        if loggedMarker(in: app).waitForExistence(timeout: 6) {
             QA.checkpoint(app, "home-logged")
             tap("Add note", in: app)
         } else {
@@ -86,7 +86,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         field.typeText(note)
         QA.checkpoint(app, "check-in-note")
         tap("Save", in: app)
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10), "Home did not show today as logged after saving the note")
+        XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10), "Home did not show today as logged after saving the note")
         QA.checkpoint(app, "home-after-note")
 
         // Ride out a craving.
@@ -97,12 +97,12 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertFalse(app.alerts.firstMatch.exists, "Saving the craving raised an alert")
         QA.checkpoint(app, "craving-saved")
         tap("Back to the garden", in: app)
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10), "Home lost today's check-in after the craving")
+        XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10), "Home lost today's check-in after the craving")
 
         // Everything is still there after a cold start.
         QA.relaunch(app)
         XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 20), "Home never came back after the relaunch")
-        XCTAssertTrue(text("Today is logged", in: app).waitForExistence(timeout: 10),
+        XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10),
                       "The check-in was gone after relaunch")
         QA.checkpoint(app, "home-after-relaunch")
         // A tab on a phone, a pane beside Home on the unfolded Duo.
@@ -150,6 +150,12 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     private func text(_ english: String, in app: XCUIApplication) -> XCUIElement {
         app.staticTexts.matching(NSPredicate(format: "label IN %@", labels(english))).firstMatch
+    }
+
+    /// Home's logged card, found by its "Add note" button: a button query comes back fast
+    /// on the unfolded Duo, where a static text query over Home's tree times out.
+    private func loggedMarker(in app: XCUIApplication) -> XCUIElement {
+        button("Add note", in: app)
     }
 
     private func navigationBar(_ english: String, in app: XCUIApplication) -> XCUIElement {

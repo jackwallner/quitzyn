@@ -681,10 +681,10 @@ private struct CheckInDetailSheet: View {
                                 VStack(spacing: 4) {
                                     Image(systemName: symbols[value - 1])
                                         .font(.title2)
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Color.secondary)
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                     Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Color.primary : Color.secondary)
+                                        .foregroundStyle(mood == value ? Theme.textPrimary : Theme.textSecondary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }
@@ -692,16 +692,22 @@ private struct CheckInDetailSheet: View {
                         }
                     }
                     .padding(.vertical, Theme.Space.xs)
+                    .listRowBackground(Theme.cardSurface)
                 } header: {
-                    Text("Mood")
+                    Text("Mood").foregroundStyle(Theme.textSecondary)
                 }
                 Section {
                     TextField("Anything you want to remember about today?", text: $note, axis: .vertical)
                         .lineLimit(1...4)
+                        .listRowBackground(Theme.cardSurface)
                 } header: {
-                    Text("Note")
+                    Text("Note").foregroundStyle(Theme.textSecondary)
                 }
             }
+            // Opaque, so the garden does not show through the glass sheet and
+            // pull the labels below contrast.
+            .scrollContentBackground(.hidden)
+            .background(Theme.background)
             .navigationTitle("Checked in")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
