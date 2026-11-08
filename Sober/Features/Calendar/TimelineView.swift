@@ -580,6 +580,7 @@ struct TimelineView: View {
                         .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityAddTraits(draftMood == value ? .isSelected : [])
                 }
             }
         }

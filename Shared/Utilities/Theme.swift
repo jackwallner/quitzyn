@@ -48,8 +48,8 @@ enum Theme {
     /// Secondary text, panels and a control fill for screens drawn on `brandGradient`
     /// (onboarding). Panels are a dark tint rather than a white one, so white text on
     /// them keeps 4.5:1 across the whole gradient.
-    static let onGradientText = Color.white.opacity(0.92)
-    static let onGradientPanel = Color.black.opacity(0.14)
+    static let onGradientText = Color.white.opacity(0.94)
+    static let onGradientPanel = Color.black.opacity(0.16)
     static let onGradientControl = Color.white.opacity(0.12)
 
     /// Dark scrim used on Home overlays that sit on top of the light garden gradient.

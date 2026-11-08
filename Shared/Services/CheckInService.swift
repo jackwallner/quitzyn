@@ -35,6 +35,13 @@ final class CheckInService {
         context.saveOrReport()
     }
 
+    /// The mood and note already saved for a day, so a sheet that edits them
+    /// opens on what is there instead of replacing it.
+    func saved(on date: Date = .now) -> (mood: Int?, note: String?) {
+        let entry = find(day: DateHelpers.startOfDay(date))
+        return (entry?.mood, entry?.note)
+    }
+
     /// Whether the user has actually checked in on this day, as opposed to the
     /// app having filled it in. Drives Home's check-in control, so it has to
     /// mean the tap, not the row.

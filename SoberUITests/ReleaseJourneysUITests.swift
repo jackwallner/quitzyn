@@ -135,6 +135,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         "Check in for today": "Mach den heutigen Check-in",
         "Checked in": "Eingecheckt",
         "Good": "Gut",
+        "Great": "Super",
+        "Skip": "Überspringen",
         "Anything you want to remember about today?": "Möchtest du dir etwas von heute merken?",
         "Save": "Sichern",
         "Logged nicotine-free": "Nikotinfrei eingetragen"
@@ -160,6 +162,90 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     private func navigationBar(_ english: String, in app: XCUIApplication) -> XCUIElement {
         app.navigationBars.matching(NSPredicate(format: "identifier IN %@", labels(english))).firstMatch
+    }
+
+    /// Core loop: check in for today with a mood, and the day and the mood
+    /// are still there after a relaunch.
+    func testCoreLoopCheckInLogsTodayAndKeepsIt() {
+        let app = XCUIApplication(bundleIdentifier: "com.jackwallner.quitzyn")
+        QA.launch(app, arguments: ["-seedDemo", "-previewStore"])
+        let checkIn = checkInButton(in: app)
+        let addNote = loggedMarker(in: app)
+        // An earlier journey on this install may already have logged today;
+        // the mood sheet is then one tap further.
+        if checkIn.waitForExistence(timeout: 20) {
+            QA.checkpoint(app, "home-before-check-in")
+            checkIn.tap()
+        } else {
+            XCTAssertTrue(addNote.waitForExistence(timeout: 5), "today can be checked in or noted")
+            addNote.tap()
+        }
+        // The unfolded Duo keeps the timeline's own mood row beside Home, so
+        // wait for the sheet itself before looking for a mood button.
+        let sheet = navigationBar("Checked in", in: app)
+        // The sheet can be slow to rise; a tap that landed mid-transition is retried.
+        if !sheet.waitForExistence(timeout: 10), addNote.exists { addNote.tap() }
+        XCTAssertTrue(sheet.waitForExistence(timeout: 10), "the check-in sheet opens")
+        // Pick the mood that is not already chosen, so the save is a change.
+        let good = mood("Good", in: app, sheet: sheet)
+        XCTAssertTrue(good.waitForExistence(timeout: 10))
+        // Unfolded, the sheet keeps rising after it appears; tap once it rests.
+        waitUntilStill(good)
+        let choice = good.isSelected ? mood("Great", in: app, sheet: sheet) : good
+        let chosen = choice.label
+        choice.tap()
+        // Unfolded, a tap can miss; a short press on the button selects it there.
+        if !waitUntilSelected(chosen, in: app, sheet: sheet, timeout: 3) {
+            choice.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).press(forDuration: 0.05)
+        }
+        XCTAssertTrue(waitUntilSelected(chosen, in: app, sheet: sheet, timeout: 5), "\(chosen) is selected")
+        tap("Save", in: app)
+        XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10), "Home did not show today as logged")
+        XCTAssertFalse(checkIn.exists)
+        QA.checkpoint(app, "home-checked-in")
+        QA.relaunch(app)
+        XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 20), "The check-in was gone after relaunch")
+        XCTAssertFalse(checkInButton(in: app).exists)
+        QA.checkpoint(app, "home-after-relaunch")
+        tap("Add note", in: app)
+        XCTAssertTrue(sheet.waitForExistence(timeout: 10), "the check-in sheet opens")
+        XCTAssertTrue(mood(chosen, in: app, sheet: sheet).waitForExistence(timeout: 10))
+        XCTAssertTrue(waitUntilSelected(chosen, in: app, sheet: sheet, timeout: 5), "the mood survives a relaunch")
+        QA.checkpoint(app, "mood-after-relaunch")
+        tap("Skip", in: app)
+    }
+
+    private func waitUntilSelected(_ name: String, in app: XCUIApplication, sheet: XCUIElement, timeout: TimeInterval) -> Bool {
+        let deadline = Date().addingTimeInterval(timeout)
+        while Date() < deadline {
+            if mood(name, in: app, sheet: sheet).isSelected { return true }
+            Thread.sleep(forTimeInterval: 0.25)
+        }
+        return mood(name, in: app, sheet: sheet).isSelected
+    }
+
+    private func waitUntilStill(_ element: XCUIElement) {
+        var last = element.frame
+        for _ in 0..<10 {
+            Thread.sleep(forTimeInterval: 0.5)
+            let now = element.frame
+            if now == last { return }
+            last = now
+        }
+    }
+
+    /// The mood button inside the check-in sheet. Home's Timeline pane and the
+    /// Home card can show buttons with the same label behind or beside it, and
+    /// a tap on one of those lands on the sheet's backdrop and dismisses it.
+    private func mood(_ name: String, in app: XCUIApplication, sheet: XCUIElement) -> XCUIElement {
+        let names = labels(name)
+        let matches = app.buttons.matching(NSPredicate(format: "label ENDSWITH %@ OR label ENDSWITH %@", names[0], names[1]))
+        let box = sheet.frame
+        let inSheet = matches.allElementsBoundByIndex.first {
+            let f = $0.frame
+            return f.minY > box.maxY && f.minX >= box.minX - 1 && f.maxX <= box.maxX + 1
+        }
+        return inSheet ?? matches.firstMatch
     }
 
     private func cravingButton(in app: XCUIApplication) -> XCUIElement {

@@ -60,6 +60,16 @@ struct HomeView: View {
     private var dayInCycle: Int { GardenService.cycleProgress(forDays: treeDays).dayInCycle }
     private var stage: BonsaiStage { GardenService.stage(forDays: treeDays) }
 
+    @ViewBuilder private var tendedStrip: some View {
+        WeekStripView(days: week)
+            .frame(minWidth: 44, minHeight: 44)
+            .contentShape(Rectangle())
+        Text(TendedWeek.compactSummary(week))
+            .font(Theme.caption())
+            .foregroundStyle(Theme.textSecondary)
+            .lineLimit(1)
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -136,7 +146,13 @@ struct HomeView: View {
             .onReceive(NotificationCenter.default.publisher(for: .soberOpenCheckIn)) { _ in
                 refreshDailyState()
             }
-            .task { await presentPassiveTrialNudge(subscriptions, intent: .postOnboarding, delay: 6) }
+            // The offer waits for a quiet Home: opening the craving cover or any
+            // sheet cancels the wait, and it starts over once Home is clear, so it
+            // never rises under a thumb reaching for "I'm having a craving".
+            .task(id: isHomeClear) {
+                guard isHomeClear else { return }
+                await presentPassiveTrialNudge(subscriptions, intent: .postOnboarding, delay: 20)
+            }
             .overlay {
                 if showGrowth, let event = growthEvent {
                     GrowthCelebrationView(
@@ -156,7 +172,10 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showCheckInDetail, onDismiss: scheduleReviewRequestAfterPositiveMoment) {
-                CheckInDetailSheet()
+                // Read at presentation so the sheet opens on today's saved
+                // mood and note rather than filling them in after it appears.
+                let saved = CheckInService(context: context).saved()
+                CheckInDetailSheet(mood: saved.mood, note: saved.note ?? "")
                     .presentationDetents([.height(320)])
             }
             .sheet(isPresented: $showSettings) { SettingsView() }
@@ -392,14 +411,11 @@ struct HomeView: View {
                     // thing whether or not the user ever opened the app, so the
                     // confirmation shows the one record that only exists
                     // because they did.
-                    HStack(spacing: Theme.Space.s) {
-                        WeekStripView(days: week)
-                            .frame(minWidth: 44, minHeight: 44)
-                            .contentShape(Rectangle())
-                        Text(TendedWeek.compactSummary(week))
-                            .font(Theme.caption())
-                            .foregroundStyle(Theme.textSecondary)
-                            .lineLimit(1)
+                    // At the largest text sizes the count drops under the
+                    // strip instead of truncating beside it.
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: Theme.Space.s) { tendedStrip }
+                        VStack(alignment: .leading, spacing: Theme.Space.xs) { tendedStrip }
                     }
                 }
                 Spacer(minLength: 0)
@@ -664,7 +680,12 @@ private struct CheckInDetailSheet: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var mood: Int?
-    @State private var note: String = ""
+    @State private var note: String
+
+    init(mood: Int?, note: String) {
+        _mood = State(initialValue: mood)
+        _note = State(initialValue: note)
+    }
 
     private let symbols = ["cloud.rain.fill", "cloud.fill", "cloud.sun.fill", "sun.max.fill", "sparkles"]
     private let moodLabels = ["Rough", "Low", "OK", "Good", "Great"]
@@ -684,24 +705,25 @@ private struct CheckInDetailSheet: View {
                                         .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
                                     Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Theme.textPrimary : Theme.textSecondary)
+                                        .foregroundStyle(Theme.textPrimary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }
                             .buttonStyle(.plain)
+                            .accessibilityAddTraits(mood == value ? .isSelected : [])
                         }
                     }
                     .padding(.vertical, Theme.Space.xs)
                     .listRowBackground(Theme.cardSurface)
                 } header: {
-                    Text("Mood").foregroundStyle(Theme.textSecondary)
+                    sectionHeader("Mood")
                 }
                 Section {
                     TextField("Anything you want to remember about today?", text: $note, axis: .vertical)
                         .lineLimit(1...4)
                         .listRowBackground(Theme.cardSurface)
                 } header: {
-                    Text("Note").foregroundStyle(Theme.textSecondary)
+                    sectionHeader("Note")
                 }
             }
             // Opaque, so the garden does not show through the glass sheet and
@@ -723,6 +745,11 @@ private struct CheckInDetailSheet: View {
                 }
             }
         }
+    }
+
+    /// The system header grey reads at 3:1 on this sheet.
+    private func sectionHeader(_ title: LocalizedStringKey) -> some View {
+        Text(title).foregroundStyle(Theme.textPrimary)
     }
 
     private func save() {
