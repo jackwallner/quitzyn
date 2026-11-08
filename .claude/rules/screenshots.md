@@ -31,3 +31,14 @@ paths:
   `SOBER_SCREENSHOT_MODE=1`; never configure a production RevenueCat key.
 - Keep raw captures out of git. Run `locate.py`, `reskin.py`, `sheet.py`, and
   `gate.py` from the kit before replacing root-level target-locale PNGs.
+
+## 2026-11-08 run (es-MX, it, no, pl, ro, sv, uk, zh-Hans)
+
+- One `capture.sh` (no arguments) took one gh-sim XCUITest job for en-US plus
+  the eight locales (about 19 min of test time; the GitHub macOS queue added
+  over two hours of waiting). Rerun a subset with `capture.sh <locales>`.
+- `capture.sh` and `process.sh` run under macOS bash 3.2: empty-array expansion
+  needs `${arr[@]+"${arr[@]}"}`.
+- Headers sit in a 1240 px box at up to 156 px; keep lines under about 17
+  characters in Latin and Cyrillic scripts so they stay clear of the canvas edge.
+- Norwegian is store locale `no` with `-AppleLanguages (nb)`.
