@@ -145,18 +145,23 @@ struct OnboardingView: View {
     }
 
     private var startDateStep: some View {
-        VStack(spacing: Theme.Space.xl) {
-            Spacer()
-            Text("When did your nicotine-free journey begin?")
-                .font(Theme.display())
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-            DatePicker("", selection: $startDate, in: ...Date.now, displayedComponents: [.date])
-                .datePickerStyle(.graphical)
-                .labelsHidden()
-                .colorScheme(.dark)
-                .tint(.white)
-            Spacer()
+        VStack(spacing: Theme.Space.l) {
+            ScrollView {
+                VStack(spacing: Theme.Space.xl) {
+                    Text("When did your nicotine-free journey begin?")
+                        .font(Theme.display())
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                    DatePicker("", selection: $startDate, in: ...Date.now, displayedComponents: [.date])
+                        .datePickerStyle(.graphical)
+                        .labelsHidden()
+                        .colorScheme(.dark)
+                        .tint(.white)
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .scrollBounceBehavior(.basedOnSize)
+            .scrollIndicators(.hidden)
             bottomBar(primaryTitle: String(localized: "Continue")) { withAnimation { step = 2 } }
         }
     }
@@ -359,11 +364,9 @@ struct OnboardingView: View {
                 trialPitch(showsGlyph: false)
                 ScrollView {
                     trialPitch(showsGlyph: false)
-                        .padding(.bottom, Self.scrollFadeHeight)
                 }
                 .scrollBounceBehavior(.basedOnSize)
                 .scrollIndicatorsFlash(onAppear: true)
-                .mask(scrollFadeMask)
             }
             .frame(maxHeight: .infinity)
 
@@ -443,18 +446,6 @@ struct OnboardingView: View {
             }
             .padding(Theme.Space.m)
             .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 18))
-        }
-    }
-
-    private static let scrollFadeHeight: CGFloat = 28
-
-    /// Fades the scrolled pitch into the dock instead of slicing a row in half,
-    /// so it reads as "there is more" on the phones where it scrolls.
-    private var scrollFadeMask: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-            LinearGradient(colors: [.black, .clear], startPoint: .top, endPoint: .bottom)
-                .frame(height: Self.scrollFadeHeight)
         }
     }
 

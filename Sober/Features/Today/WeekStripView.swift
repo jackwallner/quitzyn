@@ -15,8 +15,12 @@ struct WeekStripView: View {
                 dot(for: day.mark)
             }
         }
+        .frame(minWidth: 44, minHeight: 44)
+        .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(TendedWeek.summary(days))
+        // The element is 44 pt tall; the strip still takes only its dots' height.
+        .padding(.vertical, -(44 - dotSize) / 2)
     }
 
     @ViewBuilder

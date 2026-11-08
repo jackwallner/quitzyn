@@ -681,10 +681,10 @@ private struct CheckInDetailSheet: View {
                                 VStack(spacing: 4) {
                                     Image(systemName: symbols[value - 1])
                                         .font(.title2)
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
-                        Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
+                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Color.secondary)
+                                    Text(JournalEntry.feelingLabel(TendedWeek.moodLabels[value - 1]))
                                         .font(Theme.caption(weight: .semibold))
-                                        .foregroundStyle(mood == value ? Theme.brandPrimary : Theme.textSecondary)
+                                        .foregroundStyle(mood == value ? Color.primary : Color.secondary)
                                 }
                                 .frame(maxWidth: .infinity)
                             }
@@ -693,13 +693,13 @@ private struct CheckInDetailSheet: View {
                     }
                     .padding(.vertical, Theme.Space.xs)
                 } header: {
-                    Text("Mood").foregroundStyle(Theme.textSecondary)
+                    Text("Mood")
                 }
                 Section {
                     TextField("Anything you want to remember about today?", text: $note, axis: .vertical)
                         .lineLimit(1...4)
                 } header: {
-                    Text("Note").foregroundStyle(Theme.textSecondary)
+                    Text("Note")
                 }
             }
             .navigationTitle("Checked in")

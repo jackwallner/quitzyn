@@ -176,16 +176,6 @@ struct CravingModeView: View {
             Spacer(minLength: 0)
 
             VStack(spacing: Theme.Space.m) {
-                Button { advanceToReflect() } label: {
-                    Text("I'm through it")
-                        .font(Theme.body(weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Theme.brandPrimary, in: Capsule())
-                }
-                .buttonStyle(.plain)
-
                 Button {
                     targetSeconds = min(HabitVocabulary.maxUrgeSeconds, targetSeconds + 60)
                 } label: {
@@ -198,11 +188,29 @@ struct CravingModeView: View {
                 .buttonStyle(.plain)
                 .opacity(targetSeconds >= HabitVocabulary.maxUrgeSeconds ? 0 : 1)
                 .disabled(targetSeconds >= HabitVocabulary.maxUrgeSeconds)
+
+                Button { advanceToReflect() } label: {
+                    primaryLabel("I'm through it")
+                }
+                .buttonStyle(.plain)
             }
-            .padding(.horizontal, Theme.Space.xl)
-            .padding(.bottom, Theme.Space.xl)
+            .padding(.horizontal, Theme.Space.l)
+            .padding(.bottom, Self.dockBottomInset)
         }
         .padding(.top, Theme.Space.s)
+    }
+
+    /// Same size and place as Home's craving button, so the main button holds
+    /// still as the session opens and closes.
+    private static let dockBottomInset: CGFloat = 54
+
+    private func primaryLabel(_ title: LocalizedStringKey) -> some View {
+        Text(title)
+            .font(Theme.body(weight: .semibold))
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 17)
+            .background(Theme.brandPrimary, in: Capsule())
     }
 
     private var timeRemaining: String {
@@ -318,23 +326,18 @@ struct CravingModeView: View {
             // Docked exactly like the session's buttons, with the same reserve
             // below, so the main button does not move when the step changes.
             VStack(spacing: Theme.Space.m) {
-                Button { dismiss() } label: {
-                    Text("Back to the garden")
-                        .font(Theme.body(weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Theme.brandPrimary, in: Capsule())
-                }
-                .buttonStyle(.plain)
                 Text("Give me another minute")
                     .font(Theme.subhead(weight: .semibold))
                     .frame(maxWidth: .infinity, minHeight: 44)
                     .hidden()
                     .accessibilityHidden(true)
+                Button { dismiss() } label: {
+                    primaryLabel("Back to the garden")
+                }
+                .buttonStyle(.plain)
             }
-            .padding(.horizontal, Theme.Space.xl)
-            .padding(.bottom, Theme.Space.xl)
+            .padding(.horizontal, Theme.Space.l)
+            .padding(.bottom, Self.dockBottomInset)
         }
         .padding(.top, Theme.Space.s)
     }

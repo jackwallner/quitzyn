@@ -76,7 +76,11 @@ final class ReleaseJourneysUITests: XCTestCase {
         // Either path ends on the check-in sheet.
         XCTAssertTrue(navigationBar("Checked in", in: app).waitForExistence(timeout: 10), "The check-in sheet never opened")
         tap("Good", in: app)
-        let field = app.textFields.matching(NSPredicate(format: "label IN %@ OR placeholderValue IN %@", labels("Anything you want to remember about today?"), labels("Anything you want to remember about today?"))).firstMatch
+        let fieldPrompt = NSPredicate(format: "label IN %@ OR placeholderValue IN %@", labels("Anything you want to remember about today?"), labels("Anything you want to remember about today?"))
+        // A vertical-axis TextField is a text view on some layouts (the unfolded Duo).
+        let field = app.textFields.matching(fieldPrompt).firstMatch.exists
+            ? app.textFields.matching(fieldPrompt).firstMatch
+            : app.textViews.matching(fieldPrompt).firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10), "The note field is missing from the check-in sheet")
         field.tap()
         field.typeText(note)
