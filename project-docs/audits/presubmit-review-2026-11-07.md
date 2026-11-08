@@ -70,3 +70,41 @@ verification run 42349741691 (192 passed, 0 failed) on the state machine fixes.
 One app commit landed after it (`f48c0b9`: layout, contrast, a 44 pt week strip
 and a DEBUG seed guard, no logic the unit suite covers), and build 67 compiled
 from it. Rerun the suite before submitting for a fresh pass.
+
+## Second pass (2026-11-08)
+
+### Scope
+
+- Reviewed `0543606..f52ace7` (origin/main, build 68), app sources only.
+  This takes in the `ship/1.3.1` merge (`5a2e89d`, builds 53 to 62) plus the
+  UI fixes on main after it: onboarding contrast and 44 pt targets, saved
+  quit date restored after a mid-onboarding kill, check-in sheet opening on
+  today's saved mood and note, Home trial offer waiting for a quiet Home,
+  craving dock sizing, week strip hit region, `textTertiary` and
+  `brandSecondary` darkened, DEBUG screenshot copy for eight more locales.
+- `origin/main` was merged into this branch so the fix below sits on the
+  code being submitted.
+
+### Checks run
+
+- Crash and data loss: no schema change, no new force unwraps or index
+  reads outside DEBUG (`symbols[value - 1]` and `moodLabels[value - 1]`
+  iterate `1...5` over 5-element arrays). `restoreSavedSetup` divides by
+  `pouchesPerDay` only inside `pouchesPerDay > 0`.
+- Purchases: no RevenueCat, offering, restore or entitlement logic changed.
+  Paywall and onboarding legal footers keep Restore, Terms and Privacy, now
+  with 44 pt targets. The Home trial offer now restarts its 20 s wait each
+  time Home clears; `TrialNudgeGate`, `hasClaimedTrial`,
+  `hasTrialOfferAvailable` and the pending-request guard still apply.
+- App Review: the new screenshot copy and seed changes sit inside
+  `#if DEBUG`. Two new catalog uses (`Low`, `Great` feeling labels).
+  `python3 Tools/Localization/check.py`: 608 keys, 15 languages, 0 problems.
+
+### Findings
+
+| Severity | File:line | What happens | Status |
+|---|---|---|---|
+| P1 | `Sober/Features/Today/HomeView.swift:757` | The check-in sheet now opens on today's saved mood and note, but Save called `checkIn(mood:note:)`, which treats nil as "keep". Deleting the note or deselecting the mood and tapping Save silently kept the old values, so a note the user removed came back. | Fixed (`022b397`): Save writes the sheet's values through new `CheckInService.setDetails`, which never touches `wasSober` or `wasLogged`. Tests in `CheckInDetailClearTests`. |
+| P2 | `Sober/Features/Onboarding/OnboardingView.swift:878` | After a kill mid-onboarding, the restored price per can is back-computed from the saved cost per day with the default 15 pouches per can (the can size is not stored) and rounded to $0.50, clamped to $1 to $20. A user who picked 20 or 24 sees a different can size and price; the daily cost drifts by a few cents when they continue. | Not fixed (only after a kill mid-onboarding, small drift, needs a stored can size to fix properly) |
+
+No P0 findings. The two P2s from the first pass are unchanged.
