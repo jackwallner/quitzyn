@@ -1,74 +1,146 @@
 {
-  "en-US": {
-    "01-see-every-day-add-up.png": "See each\nnicotine-free day",
-    "02-make-your-progress-personal.png": "Make your\nprogress personal",
-    "03-notice-the-milestones-you-reach.png": "Review the days\nbehind your count",
-    "04-see-what-staying-adds-up-to.png": "Return to a\nnicotine-free routine",
-    "05-return-to-a-private-routine.png": "Keep a private\nprogress ritual",
-    "06-see-a-progress-milestone.png": "See a progress\nmilestone",
-    "07-see-the-cravings-you-rode-out.png": "See the cravings\nyou rode out"
-  },
-  "de-DE": {
-    "01-see-every-day-add-up.png": "Jeder nikotinfreie\nTag zählt",
-    "02-make-your-progress-personal.png": "Gestalte deinen\nFortschritt",
-    "03-notice-the-milestones-you-reach.png": "Deine Tage\nim Rückblick",
-    "04-see-what-staying-adds-up-to.png": "Halte deinen Weg\nim Tagebuch fest",
-    "05-return-to-a-private-routine.png": "Eine ruhige Pause\nnur für dich",
-    "06-see-a-progress-milestone.png": "Feiere deinen\nFortschritt",
-    "07-see-the-cravings-you-rode-out.png": "Verlangen, das du\nüberstanden hast"
-  },
-  "ru": {
-    "01-see-every-day-add-up.png": "Каждый день\nбез никотина",
-    "02-make-your-progress-personal.png": "Выберите свой\nбонсай",
-    "03-notice-the-milestones-you-reach.png": "Ваши дни\nна календаре",
-    "04-see-what-staying-adds-up-to.png": "Записывайте мысли\nв дневник",
-    "05-return-to-a-private-routine.png": "Минута спокойствия\nдля себя",
-    "06-see-a-progress-milestone.png": "Отмечайте\nсвой прогресс",
-    "07-see-the-cravings-you-rode-out.png": "Замечайте победы\nнад тягой"
-  },
-  "cs": {
-    "01-see-every-day-add-up.png": "Každý den\nbez nikotinu",
-    "02-make-your-progress-personal.png": "Vyberte si\nvlastní bonsaj",
-    "03-notice-the-milestones-you-reach.png": "Vaše dny\nna časové ose",
-    "04-see-what-staying-adds-up-to.png": "Zachyťte svou cestu\ndo deníku",
-    "05-return-to-a-private-routine.png": "Chvíle klidu\njen pro vás",
-    "06-see-a-progress-milestone.png": "Oslavte svůj\npokrok",
-    "07-see-the-cravings-you-rode-out.png": "Překonaná nutkání\nsáhnout po nikotinu"
-  },
-  "fi": {
-    "01-see-every-day-add-up.png": "Jokainen nikotiiniton\npäivä lasketaan",
-    "02-make-your-progress-personal.png": "Valitse oma\nbonsai",
-    "03-notice-the-milestones-you-reach.png": "Päiväsi\naikajanalla",
-    "04-see-what-staying-adds-up-to.png": "Kirjaa matkasi\npäiväkirjaan",
-    "05-return-to-a-private-routine.png": "Rauhallinen hetki\nvain sinulle",
-    "06-see-a-progress-milestone.png": "Juhlista\nedistymistäsi",
-    "07-see-the-cravings-you-rode-out.png": "Nikotiininhimot,\njotka selätit"
-  },
-  "sk": {
-    "01-see-every-day-add-up.png": "Každý deň\nbez nikotínu",
-    "02-make-your-progress-personal.png": "Vyber si\nvlastný bonsaj",
-    "03-notice-the-milestones-you-reach.png": "Tvoje dni\nna časovej osi",
-    "04-see-what-staying-adds-up-to.png": "Zachyť svoju cestu\ndo denníka",
-    "05-return-to-a-private-routine.png": "Chvíľa pokoja\nlen pre teba",
-    "06-see-a-progress-milestone.png": "Osláv svoj\npokrok",
-    "07-see-the-cravings-you-rode-out.png": "Prekonané chute\nna nikotín"
-  },
-  "da": {
-    "01-see-every-day-add-up.png": "Hver nikotinfri\ndag tæller",
-    "02-make-your-progress-personal.png": "Vælg din\negen bonsai",
-    "03-notice-the-milestones-you-reach.png": "Dine dage\npå tidslinjen",
-    "04-see-what-staying-adds-up-to.png": "Skriv om din vej\ni dagbogen",
-    "05-return-to-a-private-routine.png": "Et roligt øjeblik\nfor dig selv",
-    "06-see-a-progress-milestone.png": "Fejr dine\nfremskridt",
-    "07-see-the-cravings-you-rode-out.png": "Se den nikotintrang\ndu har klaret"
-  },
-  "nl-NL": {
-    "01-see-every-day-add-up.png": "Elke nicotinevrije\ndag telt",
-    "02-make-your-progress-personal.png": "Kies je\neigen bonsai",
-    "03-notice-the-milestones-you-reach.png": "Je dagen\nop de tijdlijn",
-    "04-see-what-staying-adds-up-to.png": "Leg je weg vast\nin je dagboek",
-    "05-return-to-a-private-routine.png": "Een rustig moment\nvoor jezelf",
-    "06-see-a-progress-milestone.png": "Vier je\nvooruitgang",
-    "07-see-the-cravings-you-rode-out.png": "Zie de nicotinetrek\ndie je doorstond"
-  }
+ "en-US": {
+  "01-see-every-day-add-up.png": "See each\nnicotine-free day",
+  "02-make-your-progress-personal.png": "Make your\nprogress personal",
+  "03-notice-the-milestones-you-reach.png": "Review the days\nbehind your count",
+  "04-see-what-staying-adds-up-to.png": "Return to a\nnicotine-free routine",
+  "05-return-to-a-private-routine.png": "Keep a private\nprogress ritual",
+  "06-see-a-progress-milestone.png": "See a progress\nmilestone",
+  "07-see-the-cravings-you-rode-out.png": "See the cravings\nyou rode out"
+ },
+ "de-DE": {
+  "01-see-every-day-add-up.png": "Jeder nikotinfreie\nTag zählt",
+  "02-make-your-progress-personal.png": "Gestalte deinen\nFortschritt",
+  "03-notice-the-milestones-you-reach.png": "Deine Tage\nim Rückblick",
+  "04-see-what-staying-adds-up-to.png": "Halte deinen Weg\nim Tagebuch fest",
+  "05-return-to-a-private-routine.png": "Eine ruhige Pause\nnur für dich",
+  "06-see-a-progress-milestone.png": "Feiere deinen\nFortschritt",
+  "07-see-the-cravings-you-rode-out.png": "Verlangen, das du\nüberstanden hast"
+ },
+ "ru": {
+  "01-see-every-day-add-up.png": "Каждый день\nбез никотина",
+  "02-make-your-progress-personal.png": "Выберите свой\nбонсай",
+  "03-notice-the-milestones-you-reach.png": "Ваши дни\nна календаре",
+  "04-see-what-staying-adds-up-to.png": "Записывайте мысли\nв дневник",
+  "05-return-to-a-private-routine.png": "Минута спокойствия\nдля себя",
+  "06-see-a-progress-milestone.png": "Отмечайте\nсвой прогресс",
+  "07-see-the-cravings-you-rode-out.png": "Замечайте победы\nнад тягой"
+ },
+ "cs": {
+  "01-see-every-day-add-up.png": "Každý den\nbez nikotinu",
+  "02-make-your-progress-personal.png": "Vyberte si\nvlastní bonsaj",
+  "03-notice-the-milestones-you-reach.png": "Vaše dny\nna časové ose",
+  "04-see-what-staying-adds-up-to.png": "Zachyťte svou cestu\ndo deníku",
+  "05-return-to-a-private-routine.png": "Chvíle klidu\njen pro vás",
+  "06-see-a-progress-milestone.png": "Oslavte svůj\npokrok",
+  "07-see-the-cravings-you-rode-out.png": "Překonaná nutkání\nsáhnout po nikotinu"
+ },
+ "fi": {
+  "01-see-every-day-add-up.png": "Jokainen nikotiiniton\npäivä lasketaan",
+  "02-make-your-progress-personal.png": "Valitse oma\nbonsai",
+  "03-notice-the-milestones-you-reach.png": "Päiväsi\naikajanalla",
+  "04-see-what-staying-adds-up-to.png": "Kirjaa matkasi\npäiväkirjaan",
+  "05-return-to-a-private-routine.png": "Rauhallinen hetki\nvain sinulle",
+  "06-see-a-progress-milestone.png": "Juhlista\nedistymistäsi",
+  "07-see-the-cravings-you-rode-out.png": "Nikotiininhimot,\njotka selätit"
+ },
+ "sk": {
+  "01-see-every-day-add-up.png": "Každý deň\nbez nikotínu",
+  "02-make-your-progress-personal.png": "Vyber si\nvlastný bonsaj",
+  "03-notice-the-milestones-you-reach.png": "Tvoje dni\nna časovej osi",
+  "04-see-what-staying-adds-up-to.png": "Zachyť svoju cestu\ndo denníka",
+  "05-return-to-a-private-routine.png": "Chvíľa pokoja\nlen pre teba",
+  "06-see-a-progress-milestone.png": "Osláv svoj\npokrok",
+  "07-see-the-cravings-you-rode-out.png": "Prekonané chute\nna nikotín"
+ },
+ "da": {
+  "01-see-every-day-add-up.png": "Hver nikotinfri\ndag tæller",
+  "02-make-your-progress-personal.png": "Vælg din\negen bonsai",
+  "03-notice-the-milestones-you-reach.png": "Dine dage\npå tidslinjen",
+  "04-see-what-staying-adds-up-to.png": "Skriv om din vej\ni dagbogen",
+  "05-return-to-a-private-routine.png": "Et roligt øjeblik\nfor dig selv",
+  "06-see-a-progress-milestone.png": "Fejr dine\nfremskridt",
+  "07-see-the-cravings-you-rode-out.png": "Se den nikotintrang\ndu har klaret"
+ },
+ "nl-NL": {
+  "01-see-every-day-add-up.png": "Elke nicotinevrije\ndag telt",
+  "02-make-your-progress-personal.png": "Kies je\neigen bonsai",
+  "03-notice-the-milestones-you-reach.png": "Je dagen\nop de tijdlijn",
+  "04-see-what-staying-adds-up-to.png": "Leg je weg vast\nin je dagboek",
+  "05-return-to-a-private-routine.png": "Een rustig moment\nvoor jezelf",
+  "06-see-a-progress-milestone.png": "Vier je\nvooruitgang",
+  "07-see-the-cravings-you-rode-out.png": "Zie de nicotinetrek\ndie je doorstond"
+ },
+ "es-MX": {
+  "01-see-every-day-add-up.png": "Cada día sin\nnicotina cuenta",
+  "02-make-your-progress-personal.png": "Personaliza\ntu progreso",
+  "03-notice-the-milestones-you-reach.png": "Tus días\nen el calendario",
+  "04-see-what-staying-adds-up-to.png": "Escribe tu camino\nen el diario",
+  "05-return-to-a-private-routine.png": "Una pausa\ntranquila para ti",
+  "06-see-a-progress-milestone.png": "Celebra\ntu avance",
+  "07-see-the-cravings-you-rode-out.png": "Mira las ansias\nque superaste"
+ },
+ "it": {
+  "01-see-every-day-add-up.png": "Ogni giorno senza\nnicotina conta",
+  "02-make-your-progress-personal.png": "Personalizza\nil tuo percorso",
+  "03-notice-the-milestones-you-reach.png": "I tuoi giorni\nin sintesi",
+  "04-see-what-staying-adds-up-to.png": "Il tuo cammino\nnel diario",
+  "05-return-to-a-private-routine.png": "Una pausa di calma\nsolo per te",
+  "06-see-a-progress-milestone.png": "Festeggia i tuoi\nprogressi",
+  "07-see-the-cravings-you-rode-out.png": "Le voglie che\nhai superato"
+ },
+ "no": {
+  "01-see-every-day-add-up.png": "Hver dag uten\nnikotin teller",
+  "02-make-your-progress-personal.png": "Tilpass\nfremgangen din",
+  "03-notice-the-milestones-you-reach.png": "Dagene dine\ni kalenderen",
+  "04-see-what-staying-adds-up-to.png": "Skriv ned veien\ni dagboken",
+  "05-return-to-a-private-routine.png": "En rolig pause\nbare for deg",
+  "06-see-a-progress-milestone.png": "Feir\nfremgangen din",
+  "07-see-the-cravings-you-rode-out.png": "Overvunnet\nnikotinsug"
+ },
+ "pl": {
+  "01-see-every-day-add-up.png": "Każdy dzień bez\nnikotyny się liczy",
+  "02-make-your-progress-personal.png": "Dopasuj postępy\ndo siebie",
+  "03-notice-the-milestones-you-reach.png": "Twoje dni\nw kalendarzu",
+  "04-see-what-staying-adds-up-to.png": "Zapisuj swoją\ndrogę w dzienniku",
+  "05-return-to-a-private-routine.png": "Spokojna chwila\ntylko dla Ciebie",
+  "06-see-a-progress-milestone.png": "Świętuj swoje\npostępy",
+  "07-see-the-cravings-you-rode-out.png": "Pokonane głody\nnikotynowe"
+ },
+ "ro": {
+  "01-see-every-day-add-up.png": "Fiecare zi fără\nnicotină contează",
+  "02-make-your-progress-personal.png": "Personalizează\nprogresul tău",
+  "03-notice-the-milestones-you-reach.png": "Zilele tale\nîn calendar",
+  "04-see-what-staying-adds-up-to.png": "Notează-ți drumul\nîn jurnal",
+  "05-return-to-a-private-routine.png": "O pauză liniștită\ndoar pentru tine",
+  "06-see-a-progress-milestone.png": "Sărbătorește\nprogresul tău",
+  "07-see-the-cravings-you-rode-out.png": "Pofte pe care\nle-ai depășit"
+ },
+ "sv": {
+  "01-see-every-day-add-up.png": "Varje dag utan\nnikotin räknas",
+  "02-make-your-progress-personal.png": "Gör framstegen\ntill dina egna",
+  "03-notice-the-milestones-you-reach.png": "Dina dagar\ni kalendern",
+  "04-see-what-staying-adds-up-to.png": "Skriv ner din\nresa i dagboken",
+  "05-return-to-a-private-routine.png": "En lugn paus\nbara för dig",
+  "06-see-a-progress-milestone.png": "Fira dina\nframsteg",
+  "07-see-the-cravings-you-rode-out.png": "Sug du har\nklarat av"
+ },
+ "uk": {
+  "01-see-every-day-add-up.png": "Кожен день\nбез нікотину",
+  "02-make-your-progress-personal.png": "Налаштуйте\nпрогрес під себе",
+  "03-notice-the-milestones-you-reach.png": "Ваші дні\nв календарі",
+  "04-see-what-staying-adds-up-to.png": "Записуйте думки\nу щоденник",
+  "05-return-to-a-private-routine.png": "Хвилина спокою\nдля себе",
+  "06-see-a-progress-milestone.png": "Відзначайте\nсвій прогрес",
+  "07-see-the-cravings-you-rode-out.png": "Бачте перемоги\nнад потягом"
+ },
+ "zh-Hans": {
+  "01-see-every-day-add-up.png": "无尼古丁的每一天\n都算数",
+  "02-make-your-progress-personal.png": "打造专属于你的\n进度",
+  "03-notice-the-milestones-you-reach.png": "回顾你坚持的\n每一天",
+  "04-see-what-staying-adds-up-to.png": "在日记里\n记录心路历程",
+  "05-return-to-a-private-routine.png": "为自己留出\n平静的片刻",
+  "06-see-a-progress-milestone.png": "庆祝你的\n每一步进步",
+  "07-see-the-cravings-you-rode-out.png": "看见你战胜的\n每一次渴求"
+ }
 }

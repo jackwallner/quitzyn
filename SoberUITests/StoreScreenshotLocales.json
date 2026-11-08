@@ -6,39 +6,44 @@
       "region": "en_US"
     },
     {
-      "store_locale": "de-DE",
-      "language": "de",
-      "region": "de_DE"
+      "store_locale": "es-MX",
+      "language": "es",
+      "region": "es_MX"
     },
     {
-      "store_locale": "ru",
-      "language": "ru",
-      "region": "ru_RU"
+      "store_locale": "it",
+      "language": "it",
+      "region": "it_IT"
     },
     {
-      "store_locale": "cs",
-      "language": "cs",
-      "region": "cs_CZ"
+      "store_locale": "no",
+      "language": "nb",
+      "region": "nb_NO"
     },
     {
-      "store_locale": "fi",
-      "language": "fi",
-      "region": "fi_FI"
+      "store_locale": "pl",
+      "language": "pl",
+      "region": "pl_PL"
     },
     {
-      "store_locale": "sk",
-      "language": "sk",
-      "region": "sk_SK"
+      "store_locale": "ro",
+      "language": "ro",
+      "region": "ro_RO"
     },
     {
-      "store_locale": "da",
-      "language": "da",
-      "region": "da_DK"
+      "store_locale": "sv",
+      "language": "sv",
+      "region": "sv_SE"
     },
     {
-      "store_locale": "nl-NL",
-      "language": "nl",
-      "region": "nl_NL"
+      "store_locale": "uk",
+      "language": "uk",
+      "region": "uk_UA"
+    },
+    {
+      "store_locale": "zh-Hans",
+      "language": "zh-Hans",
+      "region": "zh_CN"
     }
   ]
 }
