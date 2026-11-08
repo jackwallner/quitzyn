@@ -22,62 +22,6 @@ private enum ScreenshotDemoCopy {
             language = Locale.current.language.languageCode?.identifier ?? "en"
         }
         switch language {
-        case "es":
-            return [
-                "Una jornada entera sin meter la mano al bolsillo ni una vez. El bajón de la tarde dura menos.",
-                "Me dieron ganas después de comer. Caminé una vuelta a la manzana y se me pasó.",
-                "Vuelvo a dormir toda la noche. Las mañanas se sienten más claras que en años.",
-                "La semana empezó pesada, pero no consumí. Eso también cuenta como victoria."
-            ]
-        case "it":
-            return [
-                "Un'intera giornata di lavoro senza mai infilare la mano in tasca. Il calo del pomeriggio dura meno.",
-                "Dopo pranzo è arrivata la voglia. Un giro dell'isolato a piedi e mi è passata.",
-                "Dormo di nuovo tutta la notte. Le mattine sono più lucide che da anni.",
-                "L'inizio di settimana è stato duro, ma non ho ceduto. Conta anche questo."
-            ]
-        case "nb":
-            return [
-                "En hel arbeidsdag uten å strekke meg etter lommen én eneste gang. Nedturen om ettermiddagen varer kortere nå.",
-                "Suget kom etter lunsj. En tur rundt kvartalet hjalp, og det gikk over.",
-                "Jeg sover gjennom natten igjen. Morgenene føles klarere enn på mange år.",
-                "Uken startet tungt, men jeg holdt ut. Det teller også."
-            ]
-        case "pl":
-            return [
-                "Cały dzień pracy i ani razu nie sięgnąłem do kieszeni. Popołudniowy spadek formy trwa krócej.",
-                "Po obiedzie przyszła ochota. Spacer wokół osiedla i minęła.",
-                "Znowu przesypiam całą noc. Poranki są jaśniejsze niż od lat.",
-                "Początek tygodnia był ciężki, ale nie sięgnąłem po nic. To też się liczy."
-            ]
-        case "ro":
-            return [
-                "O zi întreagă de lucru fără să duc mâna la buzunar nici măcar o dată. Căderea de după-amiază durează mai puțin.",
-                "După prânz a venit pofta. M-am plimbat în jurul blocului și mi-a trecut.",
-                "Dorm din nou toată noaptea. Diminețile sunt mai limpezi decât în ultimii ani.",
-                "Începutul săptămânii a fost greu, dar nu am cedat. Și asta contează."
-            ]
-        case "sv":
-            return [
-                "En hel arbetsdag utan att sträcka mig efter fickan en enda gång. Eftermiddagsdippen varar kortare nu.",
-                "Suget kom efter lunch. En promenad runt kvarteret hjälpte, och det gick över.",
-                "Jag sover hela natten igen. Morgnarna känns klarare än på flera år.",
-                "Veckan började tungt, men jag höll ut. Det räknas också."
-            ]
-        case "uk":
-            return [
-                "Цілий робочий день жодного разу не потягнувся до кишені. Післяобідній спад тепер коротший.",
-                "Після обіду накотила тяга. Прогулянка навколо кварталу допомогла, і вона минула.",
-                "Знову сплю всю ніч. Ранки ясніші, ніж були за останні роки.",
-                "Тиждень почався важко, але я втримався. Це теж перемога."
-            ]
-        case "zh-Hans":
-            return [
-                "整整一个工作日,我一次都没有伸手去摸口袋。下午的低落期也变短了。",
-                "午饭后烟瘾上来了。绕着街区走了一圈,它就过去了。",
-                "我又能一觉睡到天亮了。早晨的头脑比这几年都清醒。",
-                "这周开头很难熬,但我没有再碰。这也算一次胜利。"
-            ]
         case "de":
             return [
                 "Ein ganzer Arbeitstag, ohne auch nur einmal in die Tasche zu greifen. Das Tief am Nachmittag ist kürzer.",
@@ -414,7 +358,7 @@ struct RootView: View {
                 context.insert(JournalEntry(createdAt: createdAt, kind: .freeform, text: entry.text, feeling: entry.feeling))
             }
             let moods: [(daysAgo: Int, mood: Int, note: String?)] = [
-                (0, 5, nil), (1, 4, nil), (2, 4, nil),
+                (0, 5, "Feeling steady. Garden keeps growing."), (1, 4, nil), (2, 4, nil),
                 (3, 5, nil), (5, 3, nil), (6, 4, nil), (8, 5, nil)
             ]
             // Only on the first launch: a relaunch must not overwrite what the user typed.
