@@ -61,5 +61,12 @@ No P0 or P1 findings. No code changes were made.
 
 ## Tests
 
-`gh-sim test --scheme Sober` on `origin/main` (`0543606`): see the result line
-below.
+Not run. `gh-sim test --scheme Sober` on `origin/main` (`0543606`), id
+`nicfree@20261107-230102-8f3a-claude-mbpro33ce3-1107-231913-25042`, GitHub run
+42458302612, sat queued for over 2 hours (22 fleet runs queued account-wide,
+the Air lane had no room) and was cancelled past the 90-minute limit. No code
+changed in this review, so the last proof of this code is the 2026-11-06
+verification run 42349741691 (192 passed, 0 failed) on the state machine fixes.
+One app commit landed after it (`f48c0b9`: layout, contrast, a 44 pt week strip
+and a DEBUG seed guard, no logic the unit suite covers), and build 67 compiled
+from it. Rerun the suite before submitting for a fresh pass.
