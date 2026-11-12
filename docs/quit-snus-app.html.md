@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/quit-snus-app.html
 
 ## Is there an app for quitting snus?
 
-By Jack Wallner · Last updated October 30, 2026
+By Jack Wallner · Last updated November 12, 2026
 
 **Yes. [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-quit-snus-app&mt=8) is a free app for iPhone and Android that counts your nicotine-free days after snus.** You set your quit date, and the app keeps the count, with a daily check-in, a calendar and a guided breathing session for cravings. There is no account to create.
 
@@ -25,6 +25,22 @@ General information, not medical advice. Quit Zyn is a self-tracking tool and do
 ## Does it work for snus as well as Zyn?
 
 Yes. Quit Zyn counts nicotine-free days, so the counter works the same for snus, Zyn and other nicotine pouches, dip, vaping or cigarettes. The app's name lists pouches and snus, and setup asks about pouches and cans, which is the unit the optional Bloom+ money, pouches and nicotine numbers use.
+
+## Is quitting snus different from quitting Zyn?
+
+The quitting part is the same: both deliver nicotine through the gum, so the cravings and the counting are the same. The difference is what is in the pouch. Snus is ground tobacco, while Zyn and other nicotine pouches contain nicotine but no tobacco leaf. A day counter does not care which one you used, so you can count from the same quit date even if you switched between them.
+
+## How much does snus cost you in a year?
+
+Multiply cans per week by your price per can, then by 52. Prices vary a lot by country and brand, so these use two example prices:
+
+| Cans per week | At $6 a can | At $8 a can |
+| --- | --- | --- |
+| 3 cans | $936 | $1,248 |
+| 5 cans | $1,560 | $2,080 |
+| 7 cans | $2,184 | $2,912 |
+
+A can a day at $8 is close to $3,000 a year. For the money you have kept since your quit date, see the [money saved tracker](https://jackwallner.com/ios/quitzyn/zyn-money-saved-tracker-app.html).
 
 ## Where is the count on my phone?
 

@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/quitzyn/how-to-quit-zyn.html
 
 ## How to Quit Zyn: Withdrawal Timeline and What to Expect
 
-By Jack Wallner · Last updated October 28, 2026
+By Jack Wallner · Last updated November 12, 2026
 
 Zyn withdrawal is the discomfort that follows stopping nicotine pouches, because regular nicotine use leads to dependence. Most people feel the worst of Zyn withdrawal in the first few days, with symptoms peaking around day 3 and generally easing over the first month. Expect cravings, irritability, trouble sleeping and trouble concentrating. The timelines come from tobacco research, because pouches are newer. What helps most is a quit date, a plan for your triggers, and support: the CDC says counseling plus medication gives the best chance of quitting for good.
 
@@ -92,7 +92,7 @@ It is uncomfortable at first for most people, but the pattern is predictable. Th
 
 For the habit, carrots, sugar-free gum or hard candy keep your mouth and hands busy, as the NCI suggests, and both the NCI and Smokefree.gov recommend a walk or other activity when a craving hits. For the nicotine, over-the-counter nicotine replacement (patch, gum or lozenge) and prescription options exist, and the CDC says counseling plus medication gives the best chance of quitting for good. Ask a doctor or pharmacist what fits you, especially if you are pregnant.
 
-Related: [Sobriety Milestones: What 30, 60, 90 Days and 1 Year Mean](https://jackwallner.com/ios/sober/sobriety-milestones.html).
+Related: [Quitting snus instead of Zyn](https://jackwallner.com/ios/quitzyn/quit-snus-app.html) and [Sobriety Milestones: What 30, 60, 90 Days and 1 Year Mean](https://jackwallner.com/ios/sober/sobriety-milestones.html).
 
 ## Sources
 
