@@ -8,7 +8,7 @@ Web page: https://jackwallner.com/ios/quitzyn/
 
 Quit Zyn is a free quit Zyn app for iPhone that counts your nicotine-free days after Zyn, pouches, or snus, with a virtual garden, health milestones, a journal, and more. All private, all on your device.
 
-iPhone · Apple Watch · Widgets
+Free · No account · iPhone, Apple Watch and widgets
 
 [Download for free](https://apps.apple.com/us/app/quit-zyn-pouch-snus-tracker/id6784788496?pt=128748779&ct=jw-quitzyn-home&mt=8)
 
@@ -109,6 +109,14 @@ An optional upgrade for people who want the full picture. Monthly, yearly, or a 
 ## Questions
 
 Quick answers about the quit Zyn app.
+
+## Is there an app that counts how many days since I quit Zyn?
+
+Yes. Quit Zyn: Pouch & Snus Tracker counts your nicotine-free days and hours from your quit date, which can be today or any date in the past, and keeps your current streak, longest streak and total nicotine-free days on a calendar. The counter, widgets and Apple Watch app are free, with no account.
+
+## Is there a free nicotine pouch tracker that doesn't need an account?
+
+Yes. Quit Zyn needs no sign-up, email or login. The day counter, calendar, daily check-in, craving mode, widgets and Apple Watch app are free with no time limit, and your quit date and check-ins stay on your device.
 
 ## Is there a free app to help me quit Zyn?
 
