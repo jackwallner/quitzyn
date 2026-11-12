@@ -1,16 +1,16 @@
 # Best Quit Zyn App: 5 Pouch Quit Apps Compared
 
-> Five iPhone apps for quitting Zyn and nicotine pouches compared: Pace, Pouch Buddy, Pouched, Quit Vaping and Quit Zyn. Facts as of October 2026.
+> Five iPhone apps for quitting Zyn and nicotine pouches compared: Pace, Pouch Buddy, Pouched, Quit Vaping and Quit Zyn. Facts as of November 2026.
 
 Web page: https://jackwallner.com/ios/quitzyn/best-quit-zyn-app.html
 
 ## Best Quit Zyn App for iPhone
 
-By Jack Wallner · Last updated October 29, 2026
+By Jack Wallner · Last updated November 11, 2026
 
 **Best for tapering down pouch by pouch: Pace or Pouch Buddy. Best for a plain cold-turkey day counter with no account: Quit Zyn. Best if you want a quit coach and community and do not mind a vaping focus: Quit Vaping.** A quit Zyn app is an iPhone app that tracks your nicotine pouches, days without one and money saved. Pouched is a quiz-led plan with per-pouch logging. The main choice is whether you want to cut back gradually or stop completely and count the days.
 
-**How we compared.** We read each app's App Store listing and pulled rating, rating count and update date on October 12, 2026. We also ran Pouched, Quit Vaping and Pace through first launch and stopped at the sign-up screen in Pouch Buddy. We did not subscribe to anything. **Disclosure:** Jack Wallner makes Quit Zyn: Pouch & Snus Tracker, so read its entry with that in mind.
+**How we compared.** We read each app's App Store listing and pulled rating, rating count and update date on November 11, 2026. We also ran Pouched, Quit Vaping and Pace through first launch and stopped at the sign-up screen in Pouch Buddy. We did not subscribe to anything. **Disclosure:** Jack Wallner makes Quit Zyn: Pouch & Snus Tracker, so read its entry with that in mind.
 
 General information, not medical advice. A tracker does not treat nicotine dependence. For help quitting, talk to a clinician or call 1-800-QUIT-NOW (1-800-784-8669) in the US, and see Smokefree.gov.
 
@@ -21,12 +21,12 @@ Pace and Pouch Buddy suit tapering, Quit Zyn is a day counter for stopping compl
 | App | Best for | Price model | Apple Watch | iPad | Account | Rating (count) | Last updated |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [Pace - Quit Zyn & Nicotine](https://apps.apple.com/us/app/id6760906294) | Gradual taper with a daily pouch limit | Free + subscription or lifetime | Not listed | Not listed | None in our test | 5.0 (4) | Apr 13, 2026 |
-| [Pouch Buddy Nicotine Tracking](https://apps.apple.com/us/app/id6642661050) | Step-down plan with limits in pouches or mg | Free + subscription | Not listed | Not listed | Sign-up required | 4.52 (418) | Oct 2, 2026 |
-| [Pouched Nicotine Pouch Tracker](https://apps.apple.com/us/app/id6740014859) | Quiz-led plan with per-pouch logging | Subscription or lifetime | Not listed | Yes | None in our test | 4.8 (61) | Sep 18, 2026 |
-| [Quit Vaping](https://apps.apple.com/us/app/id1479615245) | Coach, buddy system and community | Free + subscription | Yes | Not listed | Optional | 4.89 (11,644) | Sep 30, 2026 |
-| [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/id6784788496?pt=128748779&ct=jw-quitzyn-best-quit-zyn-app&mt=8) | Cold-turkey day counter, no account | Free + subscription or lifetime | Yes | Not listed | None | No ratings yet | Oct 7, 2026 |
+| [Pouch Buddy Nicotine Tracking](https://apps.apple.com/us/app/id6642661050) | Step-down plan with limits in pouches or mg | Free + subscription | Not listed | Not listed | Sign-up required | 4.53 (424) | Oct 2, 2026 |
+| [Pouched Nicotine Pouch Tracker](https://apps.apple.com/us/app/id6740014859) | Quiz-led plan with per-pouch logging | Subscription or lifetime | Not listed | Yes | None in our test | 4.74 (62) | Nov 11, 2026 |
+| [Quit Vaping](https://apps.apple.com/us/app/id1479615245) | Coach, buddy system and community | Free + subscription | Yes | Not listed | Optional | 4.89 (11,675) | Sep 30, 2026 |
+| [Quit Zyn: Pouch & Snus Tracker](https://apps.apple.com/us/app/id6784788496?pt=128748779&ct=jw-quitzyn-best-quit-zyn-app&mt=8) | Cold-turkey day counter, no account | Free + subscription or lifetime | Yes | Not listed | None | No ratings yet | Nov 10, 2026 |
 
-Ratings and update dates are from each app's App Store listing as of October 12, 2026. Apple Watch and iPad show the devices each listing names; "Not listed" means the listing does not name them. Price models describe the structure only, because prices vary by region and change.
+Ratings and update dates are from each app's App Store listing as of November 11, 2026. Apple Watch and iPad show the devices each listing names; "Not listed" means the listing does not name them. Price models describe the structure only, because prices vary by region and change.
 
 ## Pace - Quit Zyn & Nicotine
 
@@ -50,11 +50,11 @@ Jack Wallner's app. It counts days since your last pouch, with a one-tap daily c
 
 ## What other quit Zyn apps will you see?
 
-Snusless: Quit Zyn and Quit Pouches: Nicotine Tracker also show up when you search for a quit Zyn app. We did not test them; the notes below come from their App Store listings as of October 13, 2026.
+Snusless: Quit Zyn and Quit Pouches: Nicotine Tracker also show up when you search for a quit Zyn app. We did not test them; the notes below come from their App Store listings as of November 11, 2026.
 
 ### [Snusless: Quit Zyn](https://apps.apple.com/us/app/id6740810702)
 
-Snusless is built for cutting down. Per its listing, you log each pouch by product and nicotine strength, follow a plan of daily nicotine limits that step down over time, and watch a forest grow as you go, with charts, craving tips and Lock Screen widgets. The listing says the tracking features need a premium subscription, so it suits people who want a paid taper plan rather than a free counter. It has a 4.3 rating from 20 ratings and was last updated September 29, 2026.
+Snusless is built for cutting down. Per its listing, you log each pouch by product and nicotine strength, follow a plan of daily nicotine limits that step down over time, and watch a forest grow as you go, with charts, craving tips and Lock Screen widgets. The listing says the tracking features need a premium subscription, so it suits people who want a paid taper plan rather than a free counter. It has a 4.14 rating from 21 ratings and was last updated October 19, 2026.
 
 ### [Quit Pouches: Nicotine Tracker](https://apps.apple.com/us/app/id6756239542)
 
