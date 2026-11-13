@@ -36,6 +36,7 @@ struct HomeView: View {
     @State private var stackSpace = StackSpace()
     @Environment(\.requestReview) private var requestReview
     @Environment(\.isLeadingPane) private var isLeadingPane
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var activeJourney: SobrietyJourney? { journeys.first { $0.isActive } }
     private var hasCompletedOnboarding: Bool { settingsRows.first?.hasCompletedOnboarding ?? false }
@@ -448,11 +449,19 @@ struct HomeView: View {
                 showCheckInDetail = true
             } label: {
                 VStack(spacing: 2) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "drop.fill")
-                        Text("Check in for today")
-                            .fontWeight(.semibold)
-                            .fixedSize(horizontal: false, vertical: true)
+                    // Stacks at accessibility sizes: beside the drop the title
+                    // got a one-line slot and clipped to "Check in for tod...".
+                    let title = Text("Check in for today").fontWeight(.semibold)
+                    if dynamicTypeSize.isAccessibilitySize {
+                        VStack(spacing: 4) {
+                            Image(systemName: "drop.fill")
+                            title.lineLimit(nil).fixedSize(horizontal: false, vertical: true)
+                        }
+                    } else {
+                        HStack(spacing: 8) {
+                            Image(systemName: "drop.fill")
+                            title.fixedSize(horizontal: false, vertical: true)
+                        }
                     }
                     Text("Log today nicotine-free and water your bonsai")
                         .font(Theme.caption())

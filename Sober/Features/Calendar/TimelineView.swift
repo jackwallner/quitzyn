@@ -495,18 +495,18 @@ struct TimelineView: View {
 
         if let checkIn = existing, checkIn.wasLogged {
             if checkIn.wasSober {
-                Button(role: .destructive) {
+                Button {
                     pendingSlipDay = day
                 } label: {
                     Label("Change to slip", systemImage: "arrow.left.arrow.right")
-                        .foregroundStyle(Theme.dangerText)
                 }
-                Button(role: .destructive) {
+                .foregroundStyle(Theme.dangerText)
+                Button {
                     deleteCheckIn(checkIn)
                 } label: {
                     Label("Delete log", systemImage: "trash")
-                        .foregroundStyle(Theme.dangerText)
                 }
+                .foregroundStyle(Theme.dangerText)
             } else if SlipRecorder.canUndo(on: day, context: context) {
                 // Goes through `SlipRecorder.undo`, not a plain check-in edit.
                 // Flipping only the row turned the day green next to a counter
@@ -532,12 +532,12 @@ struct TimelineView: View {
             } label: {
                 Label("Log as nicotine-free", systemImage: "checkmark.circle")
             }
-            Button(role: .destructive) {
+            Button {
                 pendingSlipDay = day
             } label: {
                 Label("Log a slip", systemImage: "exclamationmark.triangle")
-                        .foregroundStyle(Theme.dangerText)
             }
+            .foregroundStyle(Theme.dangerText)
         }
     }
 
