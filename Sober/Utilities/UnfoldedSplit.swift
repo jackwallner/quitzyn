@@ -154,6 +154,7 @@ struct PaneTabStrip: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(item.title)
+        .accessibilityIdentifier("paneTab.\(item.tag)")
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }

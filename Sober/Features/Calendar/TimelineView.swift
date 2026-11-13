@@ -91,6 +91,7 @@ struct TimelineView: View {
             Group {
                 if isPane { paneScroll } else { list }
             }
+            .background((isPane ? Theme.background : Color(.systemGroupedBackground)).ignoresSafeArea())
             .navigationTitle("Timeline")
             .task { await presentPassiveTrialNudge(subscriptions, intent: .progressSheet) }
             .onAppear {
@@ -121,7 +122,6 @@ struct TimelineView: View {
                 Text("Your day counter restarts after the slip. Your tree carries some growth forward, and your calendar history and completed trees stay. Your longest streak reflects the corrected dates.")
             }
         }
-        .background(Color(.systemGroupedBackground).ignoresSafeArea())
     }
 
     private var list: some View {

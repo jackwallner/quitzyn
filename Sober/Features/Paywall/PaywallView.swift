@@ -164,6 +164,7 @@ struct PaywallView: View {
         .padding(.horizontal, 22)
         .padding(.top, displayCloseButton ? 40 : 12)
         .padding(.bottom, 8)
+        .frame(maxWidth: 560)
         .frame(maxWidth: .infinity, alignment: .top)
     }
 

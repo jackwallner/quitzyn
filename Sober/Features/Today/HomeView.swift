@@ -178,11 +178,12 @@ struct HomeView: View {
                 CheckInDetailSheet(mood: saved.mood, note: saved.note ?? "")
                     .presentationDetents([.height(320)])
             }
-            .sheet(isPresented: $showSettings) { SettingsView() }
+            .sheet(isPresented: $showSettings) { SettingsView().pageSheetOnPad() }
             .sheet(isPresented: $showSlipSheet) {
                 SlipSheet(currentStreakDays: days) {
                     refreshCheckInState()
                 }
+                .pageSheetOnPad()
             }
             .fullScreenCover(isPresented: $showCraving, onDismiss: {
                 // Presented on dismiss rather than inside the callback: a sheet
@@ -195,7 +196,7 @@ struct HomeView: View {
                     pendingCravingOutcome = outcome
                 }
             }
-            .sheet(isPresented: $showCustomize) { GardenCustomizationView() }
+            .sheet(isPresented: $showCustomize) { GardenCustomizationView().pageSheetOnPad() }
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(days: days, gardenState: gardenState, isPro: isPro)
                     .presentationDetents([.medium, .large])

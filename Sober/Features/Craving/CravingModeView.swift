@@ -195,6 +195,7 @@ struct CravingModeView: View {
                 .buttonStyle(.plain)
             }
             .padding(.horizontal, Theme.Space.l)
+            .readableWidth(520)
             .padding(.bottom, Self.dockBottomInset)
         }
         .padding(.top, Theme.Space.s)
@@ -304,6 +305,7 @@ struct CravingModeView: View {
                 .padding(.top, Theme.Space.s)
             }
             .padding(Theme.Space.xl)
+            .readableWidth(560)
         }
     }
 
@@ -337,6 +339,7 @@ struct CravingModeView: View {
                 .buttonStyle(.plain)
             }
             .padding(.horizontal, Theme.Space.l)
+            .readableWidth(520)
             .padding(.bottom, Self.dockBottomInset)
         }
         .padding(.top, Theme.Space.s)

@@ -109,7 +109,8 @@ struct TrialOfferSheet: View {
             }
             .padding(.horizontal, 24)
             .padding(.top, 8)
-            .safeAreaInset(edge: .bottom, spacing: 0) { ctaStack }
+            .readableWidth(560)
+            .safeAreaInset(edge: .bottom, spacing: 0) { ctaStack.readableWidth(560) }
         }
         .onAppear { glowPulse = true }
     }
