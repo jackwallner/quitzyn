@@ -37,7 +37,7 @@ final class IPadStoreScreenshotsUITests: XCTestCase {
             tap("storeScreenshot.garden", app: app)
             capture("garden", locale: locale.store_locale)
             tap("storeScreenshot.garden.done", app: app)
-            tapTab(1, app: app)
+            tapTab(2, app: app)
             capture("timeline", locale: locale.store_locale)
             tapTab(3, app: app)
             capture("journal", locale: locale.store_locale)
