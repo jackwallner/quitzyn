@@ -14,6 +14,8 @@ struct GardenSceneView: View {
     /// Tapped when the user taps the species badge — the discoverability hook
     /// for swapping the active bonsai.
     var onSwapBonsai: (() -> Void)? = nil
+    /// False for decorative previews (onboarding) that are not interactive.
+    var showsChrome: Bool = true
 
     private var cycle: (dayInCycle: Int, completed: Int) {
         GardenService.cycleProgress(forDays: days)
@@ -72,6 +74,7 @@ struct GardenSceneView: View {
                 // count (top-right). The sky's corners are always clear; at
                 // the bottom-left the switcher sat on the pot whenever the
                 // card was short enough to widen it.
+                if showsChrome {
                 VStack {
                     HStack(alignment: .top) {
                         speciesSwitcher
@@ -84,6 +87,7 @@ struct GardenSceneView: View {
                     Spacer()
                 }
                 .padding(12)
+                }
             }
         }
     }

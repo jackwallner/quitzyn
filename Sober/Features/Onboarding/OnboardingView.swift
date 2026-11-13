@@ -116,7 +116,8 @@ struct OnboardingView: View {
                 days: 120,
                 vitality: 1.0,
                 activeBonsaiStyleID: GardenItemCatalog.freeSpeciesID,
-                isPro: false
+                isPro: false,
+                showsChrome: false
             )
             .clipShape(RoundedRectangle(cornerRadius: Theme.cardRadius))
             .allowsHitTesting(false)

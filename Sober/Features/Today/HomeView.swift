@@ -452,12 +452,15 @@ struct HomeView: View {
                         Image(systemName: "drop.fill")
                         Text("Check in for today")
                             .fontWeight(.semibold)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     Text("Log today nicotine-free and water your bonsai")
                         .font(Theme.caption())
                         .foregroundStyle(.white.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
                 .background(AnyShapeStyle(Theme.brandPrimary), in: Capsule())

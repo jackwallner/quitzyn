@@ -30,6 +30,8 @@ enum Theme {
     static let success = Color(red: 0.184, green: 0.357, blue: 0.271)        // moss
     static let warning = Color(red: 0.769, green: 0.612, blue: 0.424)        // sand
     static let danger = Color(red: 0.776, green: 0.357, blue: 0.302)         // muted terracotta
+    /// Danger as text or icon on cream/cards: 5.9:1 on cream (system red was 3.6:1).
+    static let dangerText = Color(red: 0.620, green: 0.220, blue: 0.170)
 
     static let cardRadius: CGFloat = 22
     static let cardPadding: CGFloat = 22
