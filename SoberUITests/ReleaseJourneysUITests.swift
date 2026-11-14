@@ -87,7 +87,12 @@ final class ReleaseJourneysUITests: XCTestCase {
             ? app.textFields.matching(fieldPrompt).firstMatch
             : app.textViews.matching(fieldPrompt).firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10), "The note field is missing from the check-in sheet")
-        field.tap()
+        // Reduce Motion can leave the sheet settling; tap again until the keyboard is up.
+        waitUntilStill(field)
+        for _ in 0..<3 {
+            field.tap()
+            if app.keyboards.firstMatch.waitForExistence(timeout: 3) { break }
+        }
         field.typeText(note)
         QA.checkpoint(app, "check-in-note")
         tap("Save", in: app)
