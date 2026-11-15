@@ -95,6 +95,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         }
         field.typeText(note)
         QA.checkpoint(app, "check-in-note")
+        let loggedDay = Calendar.current.startOfDay(for: Date())
         tap("Save", in: app)
         XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10), "Home did not show today as logged after saving the note")
         QA.checkpoint(app, "home-after-note")
@@ -107,6 +108,12 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertFalse(app.alerts.firstMatch.exists, "Saving the craving raised an alert")
         QA.checkpoint(app, "craving-saved")
         tap("Back to the garden", in: app)
+        // A run that crosses midnight leaves Home on a new, unlogged day. That is correct,
+        // and the persistence checks below name the day that was logged, so stop here.
+        guard Calendar.current.startOfDay(for: Date()) == loggedDay else {
+            XCTAssertTrue(cravingButton(in: app).waitForExistence(timeout: 10), "Home never came back after the craving")
+            return
+        }
         XCTAssertTrue(loggedMarker(in: app).waitForExistence(timeout: 10), "Home lost today's check-in after the craving")
 
         // Everything is still there after a cold start.

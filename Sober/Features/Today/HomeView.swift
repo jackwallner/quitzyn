@@ -424,6 +424,7 @@ struct HomeView: View {
                 Button { showCheckInDetail = true } label: {
                     Text("Add note")
                         .font(Theme.caption(weight: .semibold))
+                        .foregroundStyle(Theme.textPrimary)
                 }
                 .buttonStyle(.bordered)
                 .tint(Theme.brandPrimary)
