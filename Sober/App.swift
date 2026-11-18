@@ -284,6 +284,11 @@ struct RootView: View {
             Text(saveFailures.message ?? "")
         }
         .task { WidgetSnapshotPump.push(context: context) }
+        .onOpenURL { url in
+            guard JanuaryChallenge.handles(url) else { return }
+            ChallengeLinkInbox.shared.pending = true
+            NotificationCenter.default.post(name: .soberOpenCheckIn, object: nil)
+        }
         #if DEBUG
         .task { seedDemoIfRequested() }
         #endif
@@ -315,10 +320,17 @@ struct RootView: View {
     /// never compiled into Release — no path to end users.
     ///   -seedDemo : skip onboarding with a ~3.5-week nicotine-free journey
     ///   -demoPro  : flip the local Pro override on
+    ///   -openChallenge : open the Nicotine-Free January sheet, as its link does
+    ///   -challengeNow yyyy-MM-dd : the date the challenge reads
     private func seedDemoIfRequested() {
         let args = ProcessInfo.processInfo.arguments
         if args.contains("-demoPro") {
             SubscriptionService.shared.setLocalOverride(isPro: true)
+        }
+        // -openChallenge: what `quitzyn://nicotine-free-january` does, for
+        // headless captures, where `simctl openurl` stops on a confirmation alert.
+        if args.contains("-openChallenge") {
+            ChallengeLinkInbox.shared.pending = true
         }
         guard args.contains("-seedDemo") else { return }
 
@@ -339,7 +351,7 @@ struct RootView: View {
             let start = Calendar.current.date(byAdding: .day, value: -seedDays, to: .now) ?? .now
             _ = SobrietyService(context: context).startJourney(at: start)
             _ = GardenService(context: context).current()
-            CheckInService(context: context).fillJourney(start: start, through: .now)
+            CheckInService(context: context).fillJourney(start: start, through: JanuaryChallenge.clock())
         }
 
         if args.contains("-QuitZynScreenshot") {

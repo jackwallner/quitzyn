@@ -102,6 +102,7 @@ billing, release state and the remote-Pro emulator recipe: `.claude/rules/androi
 - `.claude/rules/ipad-layout.md`: iPad support (split reuse, readable widths, sheets, proof capture).
 - `.claude/rules/screenshots.md`: localized App Store sets and capture workflow.
 - `.claude/rules/localization.md`: in-app localization, catalog workflow and translation terms.
+- `.claude/rules/january-challenge.md`: Nicotine-Free January 2027 challenge behind the in-app event, `quitzyn://nicotine-free-january`, debug clock.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, RevenueCat dev tips, review funnel, gotchas):

@@ -27,6 +27,9 @@ struct HomeView: View {
     @State private var showSettings = false
     @State private var showCustomize = false
     @State private var showProgress = false
+    @State private var showChallenge = false
+    @State private var challengeNow = JanuaryChallenge.clock()
+    @State private var challengeInbox = ChallengeLinkInbox.shared
     @State private var growthEvent: GardenGrowthEvent?
     @State private var showGrowth = false
     @State private var showCheckInDetail = false
@@ -91,6 +94,9 @@ struct HomeView: View {
                         gardenCard
                             .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.garden = $0 }
                         checkInControl
+                        if showsChallengeCard {
+                            JanuaryChallengeCard(now: challengeNow) { showChallenge = true }
+                        }
                         cravingControl
                     }
                     .padding(.horizontal, Theme.Space.l)
@@ -198,6 +204,13 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showCustomize) { GardenCustomizationView().pageSheetOnPad() }
+            .sheet(isPresented: $showChallenge) { JanuaryChallengeSheet(now: challengeNow).pageSheetOnPad() }
+            .onChange(of: challengeInbox.pending, initial: true) { _, pending in
+                guard pending else { return }
+                challengeInbox.pending = false
+                challengeNow = JanuaryChallenge.clock()
+                showChallenge = JanuaryChallenge.acceptsLink(now: challengeNow)
+            }
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(days: days, gardenState: gardenState, isPro: isPro)
                     .presentationDetents([.medium, .large])
@@ -306,9 +319,16 @@ struct HomeView: View {
         gardenState?.completedTreeStyles.count ?? 0
     }
 
+    private var showsChallengeCard: Bool {
+        activeJourney != nil && JanuaryChallenge.showsCard(now: challengeNow)
+    }
+
     private var gardenMinHeight: CGFloat {
         let stageBoost: CGFloat = stage == .seed ? 0 : 60
-        return 300 + stageBoost + min(120, CGFloat(gardenContentScore) * 16)
+        // The January row takes its height from the garden, never from the
+        // craving button's place above the tab bar.
+        let challengeRow = showsChallengeCard ? JanuaryChallengeCard.homeHeight : 0
+        return 300 + stageBoost + min(120, CGFloat(gardenContentScore) * 16) - challengeRow
     }
 
     /// The floor, lowered only as far as the space requires. Where everything
@@ -526,8 +546,11 @@ struct HomeView: View {
     private func refreshDailyState() {
         if let j = activeJourney {
             // Leave today unlogged until the user checks in.
-            CheckInService(context: context).fillJourney(start: j.startDate, through: DateHelpers.daysAgo(1))
+            // `clock()` is the real clock outside a DEBUG `-challengeNow` capture.
+            challengeNow = JanuaryChallenge.clock()
+            CheckInService(context: context).fillJourney(start: j.startDate, through: DateHelpers.daysAgo(1, from: challengeNow))
         }
+        challengeNow = JanuaryChallenge.clock()
         refreshCheckInState()
         checkForGrowth()
         WidgetSnapshotPump.push(context: context)
@@ -606,7 +629,8 @@ struct HomeView: View {
         // The in-view latch only dedupes the delay task (onAppear fires again on
         // every tab switch). The persisted flag is what makes this one-shot, and
         // it is consumed below, at the moment the pitch is actually requested.
-        guard !showGrowth, postOnboardingPaywallTask == nil else { return }
+        // A challenge link opened the app: the pitch waits for the next arrival.
+        guard !showGrowth, !showChallenge, !challengeInbox.pending, postOnboardingPaywallTask == nil else { return }
         postOnboardingPaywallTask = Task { @MainActor in
             defer { postOnboardingPaywallTask = nil }
             try? await Task.sleep(nanoseconds: 700_000_000)
@@ -615,7 +639,7 @@ struct HomeView: View {
             // the delay window. Leaving it set retries on the next Home arrival.
             // MainTabView drops a pitch while a review sheet is up, so the flag
             // is only spent once the request can actually be honoured.
-            guard !showGrowth else { return }
+            guard !showGrowth, !showChallenge else { return }
             AppGroup.defaults.set(false, forKey: AppGroup.postOnboardingPaywallKey)
             // Start the passive-nudge cooldown here so the day-0 popup and the
             // Home/Timeline/Health passive nudges don't fire back-to-back.
@@ -633,7 +657,7 @@ struct HomeView: View {
     /// cover or alert.
     private var isHomeClear: Bool {
         !showGrowth && !showCheckInDetail && !showSlipSheet && !showCraving
-            && !showSettings && !showCustomize && !showProgress && !showResetAlert
+            && !showSettings && !showCustomize && !showProgress && !showResetAlert && !showChallenge
     }
 
     /// The rating ask after a positive moment: Apple's own prompt, no question
@@ -841,6 +865,10 @@ struct ProgressSheet: View {
                 Section("Streaks") {
                     ForEach(AchievementCatalog.all.filter { $0.kind == .streak }) { achievementRow($0) }
                 }
+
+                if showsChallengeBadge {
+                    Section("Nicotine-Free January") { achievementRow(AchievementCatalog.nicotineFreeJanuary) }
+                }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Your progress")
@@ -996,12 +1024,21 @@ struct ProgressSheet: View {
             Spacer()
             if unlocked {
                 Image(systemName: "checkmark.seal.fill").foregroundStyle(Theme.brandPrimary)
-            } else if !isPro {
+            } else if !isPro, a.kind != .challenge {
                 Image(systemName: "lock.fill").foregroundStyle(Theme.textTertiary)
             }
         }
         .contentShape(Rectangle())
-        .onTapGesture { if !unlocked && !isPro { requestSubsequentLockedFeaturePitch(.progressSheet) } }
+        .onTapGesture {
+            if !unlocked && !isPro && a.kind != .challenge { requestSubsequentLockedFeaturePitch(.progressSheet) }
+        }
+    }
+
+    /// The challenge badge has a row while the challenge is on, and for good
+    /// once earned.
+    private var showsChallengeBadge: Bool {
+        JanuaryChallenge.showsCard(now: JanuaryChallenge.clock())
+            || unlockedAchievements.contains { $0.achievementID == JanuaryChallenge.achievementID }
     }
 
 }
