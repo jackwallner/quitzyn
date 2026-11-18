@@ -89,11 +89,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(field.waitForExistence(timeout: 10), "The note field is missing from the check-in sheet")
         // Reduce Motion can leave the sheet settling; tap again until the keyboard is up.
         waitUntilStill(field)
-        for _ in 0..<3 {
-            field.tap()
-            if app.keyboards.firstMatch.waitForExistence(timeout: 3) { break }
-        }
-        field.typeText(note)
+        QA.type(note, into: field, in: app)
         QA.checkpoint(app, "check-in-note")
         let loggedDay = Calendar.current.startOfDay(for: Date())
         tap("Save", in: app)
@@ -282,9 +278,6 @@ final class ReleaseJourneysUITests: XCTestCase {
     }
 
     private func tap(_ label: String, in app: XCUIApplication) {
-        let target = button(label, in: app)
-        XCTAssertTrue(target.waitForExistence(timeout: 15), label)
-        if !target.isHittable { QA.swipe(app, .up) }
-        target.tap()
+        QA.tap(button(label, in: app), in: app, label, timeout: 15)
     }
 }
