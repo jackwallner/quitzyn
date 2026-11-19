@@ -81,11 +81,12 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(good.waitForExistence(timeout: 10), "The check-in sheet has no Good mood")
         waitUntilStill(good)
         good.tap()
-        let fieldPrompt = NSPredicate(format: "label IN %@ OR placeholderValue IN %@", labels("Anything you want to remember about today?"), labels("Anything you want to remember about today?"))
-        // A vertical-axis TextField is a text view on some layouts (the unfolded Duo).
-        let field = app.textFields.matching(fieldPrompt).firstMatch.exists
-            ? app.textFields.matching(fieldPrompt).firstMatch
-            : app.textViews.matching(fieldPrompt).firstMatch
+        let prompt = labels("Anything you want to remember about today?")
+        // A vertical-axis TextField is a text view on some layouts (the unfolded Duo), so wait
+        // for either kind rather than picking one before the sheet has built its rows.
+        let kinds = [XCUIElement.ElementType.textField, .textView].map(\.rawValue)
+        let field = app.descendants(matching: .any).matching(NSPredicate(
+            format: "elementType IN %@ AND (label IN %@ OR placeholderValue IN %@)", kinds, prompt, prompt)).firstMatch
         XCTAssertTrue(field.waitForExistence(timeout: 10), "The note field is missing from the check-in sheet")
         // Reduce Motion can leave the sheet settling; tap again until the keyboard is up.
         waitUntilStill(field)
