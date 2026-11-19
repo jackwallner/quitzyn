@@ -1,3 +1,3 @@
-Nouveau : le défi Janvier sans nicotine. À partir du 18 décembre, vous le trouverez dans Accueil. Faites votre check-in chaque jour de janvier pour remplir le mois, puis notez les 31 jours sans nicotine pour obtenir le badge Janvier 2027.
+Nouveau : le défi Janvier sans nicotine. À partir du 18 décembre, il se trouve tout en haut de Timeline. Chaque jour sans nicotine de janvier remplit le mois, et les 31 jours vous valent le badge Janvier 2027.
 
-Cette mise à jour apporte aussi : un texte plus facile à lire, ainsi que des corrections et des améliorations.
+Aussi dans cette mise à jour : le compteur de jours dans Accueil n'affiche plus le chiffre en double, ainsi que des corrections et des améliorations.
