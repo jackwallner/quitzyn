@@ -1,8 +1,8 @@
 import SwiftData
 import SwiftUI
 
-/// Carries a challenge link from `RootView.onOpenURL` to Home, which may not
-/// exist yet (cold launch, or onboarding still in front of it).
+/// Carries a challenge link from `RootView.onOpenURL` to Timeline, which may
+/// not exist yet (cold launch, or onboarding still in front of it).
 @MainActor
 @Observable
 final class ChallengeLinkInbox {
@@ -34,46 +34,40 @@ private func startDateLabel(_ snapshot: JanuaryChallenge.Snapshot) -> String {
     (snapshot.days.first?.date ?? .now).formatted(.dateTime.month(.wide).day())
 }
 
-/// Nicotine-Free January's door on Home: a row shaped like the craving button
-/// under it, so Home's fixed stack still fits above the tab bar.
-struct JanuaryChallengeCard: View {
+/// Nicotine-Free January's row at the top of Timeline, the month view it
+/// extends.
+struct JanuaryChallengeRow: View {
     let now: Date
     let onTap: () -> Void
     private let checkIns = JanuaryCheckIns()
-
-    /// The row and the gap above it: what the garden gives up while it shows.
-    static let homeHeight: CGFloat = 54 + Theme.Space.l
 
     var body: some View {
         let snapshot = checkIns.snapshot(now: now)
         Button(action: onTap) {
             HStack(spacing: Theme.Space.m) {
-                Image(systemName: "calendar")
-                    .font(Theme.body(weight: .semibold))
+                Image(systemName: "calendar.badge.checkmark")
+                    .font(.title3)
                     .foregroundStyle(Theme.brandPrimary)
-                VStack(alignment: .leading, spacing: 1) {
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 2) {
                     Text("Nicotine-Free January")
-                        .font(Theme.subhead(weight: .semibold))
+                        .font(Theme.body(weight: .semibold))
                         .foregroundStyle(Theme.textPrimary)
                     progress(snapshot)
-                        .font(Theme.caption())
+                        .font(Theme.subhead())
                         .foregroundStyle(Theme.textSecondary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.72)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
                     .font(Theme.caption(weight: .semibold))
                     .foregroundStyle(Theme.textTertiary)
+                    .accessibilityHidden(true)
             }
-            .padding(.horizontal, Theme.Space.l)
-            .padding(.vertical, 10)
-            .frame(maxWidth: .infinity, minHeight: 54)
-            .background(Theme.cardSurface, in: Capsule())
-            .overlay(Capsule().stroke(Theme.ringTrack, lineWidth: 1))
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityIdentifier("januaryChallengeCard")
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("januaryChallengeRow")
     }
 
     private func progress(_ snapshot: JanuaryChallenge.Snapshot) -> Text {

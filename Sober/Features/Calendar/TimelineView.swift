@@ -15,6 +15,9 @@ struct TimelineView: View {
     /// its own pane, and the month, day and unsaved note have to come along.
     var selection: TimelineSelection
     @State private var pendingSlipDay: Date?
+    @State private var showChallenge = false
+    @State private var challengeNow = JanuaryChallenge.clock()
+    @State private var challengeInbox = ChallengeLinkInbox.shared
     @Environment(\.isTimelinePane) private var isPane
 
     private var monthAnchor: Date {
@@ -39,6 +42,15 @@ struct TimelineView: View {
     }
     private var earliestStart: Date? { journeys.last?.startDate }
     private var activeStart: Date? { journeys.first(where: { $0.isActive })?.startDate }
+
+    /// Fills unlogged past days the way Home does. The nicotine-free-january
+    /// link can open Timeline before Home has appeared this launch, and the
+    /// challenge would count short until it did.
+    private func refreshChallengeDays() {
+        challengeNow = JanuaryChallenge.clock()
+        guard let start = activeStart else { return }
+        CheckInService(context: context).fillJourney(start: start, through: DateHelpers.daysAgo(1, from: challengeNow))
+    }
 
     /// Sober days accrued as of a given calendar date. Looks up whichever
     /// historical journey covered that date so the tree preview keeps showing
@@ -103,6 +115,14 @@ struct TimelineView: View {
                 }
             }
             .onChange(of: selectedDate) { _, _ in loadDraft() }
+            .onAppear { refreshChallengeDays() }
+            .sheet(isPresented: $showChallenge) { JanuaryChallengeSheet(now: challengeNow).pageSheetOnPad() }
+            .onChange(of: challengeInbox.pending, initial: true) { _, pending in
+                guard pending else { return }
+                challengeInbox.pending = false
+                refreshChallengeDays()
+                showChallenge = JanuaryChallenge.acceptsLink(now: challengeNow)
+            }
             // In the unfolded Duo split this pane stays mounted beside Home, so
             // a check-in saved there never re-fires `onAppear`. Without this the
             // pane read "Logged" over blank fields, and typing a note replaced
@@ -126,6 +146,9 @@ struct TimelineView: View {
 
     private var list: some View {
         List {
+            if JanuaryChallenge.showsCard(now: challengeNow) {
+                Section { challengeRow }
+            }
             Section {
                 summaryRow
                     .listRowInsets(EdgeInsets(top: Theme.Space.m, leading: Theme.Space.l, bottom: Theme.Space.m, trailing: Theme.Space.l))
@@ -160,6 +183,9 @@ struct TimelineView: View {
     private var paneScroll: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Theme.Space.xl) {
+                if JanuaryChallenge.showsCard(now: challengeNow) {
+                    paneCard { challengeRow }
+                }
                 paneCard { summaryRow }
                 paneCard {
                     monthNav
@@ -179,6 +205,10 @@ struct TimelineView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .ignoresSafeArea(.container, edges: .trailing)
+    }
+
+    private var challengeRow: some View {
+        JanuaryChallengeRow(now: challengeNow) { showChallenge = true }
     }
 
     private func paneCard<Content: View>(title: String? = nil, @ViewBuilder content: () -> Content) -> some View {
@@ -654,8 +684,9 @@ struct TimelineView: View {
 @MainActor
 @Observable
 final class TimelineSelection {
-    var monthAnchor: Date = DateHelpers.startOfDay()
-    var selectedDate: Date = DateHelpers.startOfDay()
+    // `clock()` is the real clock outside a DEBUG `-challengeNow` capture.
+    var monthAnchor: Date = DateHelpers.startOfDay(JanuaryChallenge.clock())
+    var selectedDate: Date = DateHelpers.startOfDay(JanuaryChallenge.clock())
     var draftMood: Int?
     var draftNote: String = ""
     /// The day the draft was loaded for, so a remount can tell a stale draft

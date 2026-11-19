@@ -111,7 +111,8 @@ enum DuoScreen: String, CaseIterable {
 
     static var launchTab: Int {
         #if DEBUG
-        return launchTab(arguments: ProcessInfo.processInfo.arguments) ?? 0
+        let arguments = ProcessInfo.processInfo.arguments
+        return launchTab(arguments: arguments) ?? (arguments.contains("-openChallenge") ? 1 : 0)
         #else
         return 0
         #endif
@@ -122,6 +123,8 @@ extension Notification.Name {
     /// Posted when the user taps the daily-reminder notification — MainTabView
     /// switches to Home so the check-in button is right there.
     static let soberOpenCheckIn = Notification.Name("com.jackwallner.quitzyn.openCheckIn")
+    /// Posted by the Nicotine-Free January link: Timeline holds the challenge.
+    static let soberOpenTimeline = Notification.Name("com.jackwallner.quitzyn.openTimeline")
     /// Posted when the user taps the trial-ending reminder, so it lands on the
     /// Bloom+ tab where the plan and the cancel path are.
     static let soberOpenBloomPlus = Notification.Name("com.jackwallner.quitzyn.openBloomPlus")
@@ -287,7 +290,7 @@ struct RootView: View {
         .onOpenURL { url in
             guard JanuaryChallenge.handles(url) else { return }
             ChallengeLinkInbox.shared.pending = true
-            NotificationCenter.default.post(name: .soberOpenCheckIn, object: nil)
+            NotificationCenter.default.post(name: .soberOpenTimeline, object: nil)
         }
         #if DEBUG
         .task { seedDemoIfRequested() }
@@ -553,6 +556,10 @@ struct MainTabView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: .soberOpenBloomPlus)) { _ in
             tab = 4
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .soberOpenTimeline)) { _ in
+            // Unfolded, Timeline is its own pane and already on screen.
+            if split == nil { tab = 1 }
         }
         .onChange(of: subscriptions.isProSubscriber) { _, isPro in
             if isPro { showTrialOffer = false }

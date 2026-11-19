@@ -27,7 +27,6 @@ struct HomeView: View {
     @State private var showSettings = false
     @State private var showCustomize = false
     @State private var showProgress = false
-    @State private var showChallenge = false
     @State private var challengeNow = JanuaryChallenge.clock()
     @State private var challengeInbox = ChallengeLinkInbox.shared
     @State private var growthEvent: GardenGrowthEvent?
@@ -94,9 +93,6 @@ struct HomeView: View {
                         gardenCard
                             .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stackSpace.garden = $0 }
                         checkInControl
-                        if showsChallengeCard {
-                            JanuaryChallengeCard(now: challengeNow) { showChallenge = true }
-                        }
                         cravingControl
                     }
                     .padding(.horizontal, Theme.Space.l)
@@ -204,13 +200,6 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showCustomize) { GardenCustomizationView().pageSheetOnPad() }
-            .sheet(isPresented: $showChallenge) { JanuaryChallengeSheet(now: challengeNow).pageSheetOnPad() }
-            .onChange(of: challengeInbox.pending, initial: true) { _, pending in
-                guard pending else { return }
-                challengeInbox.pending = false
-                challengeNow = JanuaryChallenge.clock()
-                showChallenge = JanuaryChallenge.acceptsLink(now: challengeNow)
-            }
             .sheet(isPresented: $showProgress) {
                 ProgressSheet(days: days, gardenState: gardenState, isPro: isPro)
                     .presentationDetents([.medium, .large])
@@ -275,7 +264,7 @@ struct HomeView: View {
                 .minimumScaleFactor(0.5)
                 .foregroundStyle(Theme.brandPrimary)
                 .accessibilityLabel("\(days) days nicotine-free")
-            Text("\(days) days nicotine-free label")
+            Text(verbatim: DateHelpers.nicotineFreeDayLabel(days))
                 .font(.system(size: 13, weight: .semibold, design: .serif))
                 .tracking(2.0)
                 .textCase(.uppercase)
@@ -319,16 +308,9 @@ struct HomeView: View {
         gardenState?.completedTreeStyles.count ?? 0
     }
 
-    private var showsChallengeCard: Bool {
-        activeJourney != nil && JanuaryChallenge.showsCard(now: challengeNow)
-    }
-
     private var gardenMinHeight: CGFloat {
         let stageBoost: CGFloat = stage == .seed ? 0 : 60
-        // The January row takes its height from the garden, never from the
-        // craving button's place above the tab bar.
-        let challengeRow = showsChallengeCard ? JanuaryChallengeCard.homeHeight : 0
-        return 300 + stageBoost + min(120, CGFloat(gardenContentScore) * 16) - challengeRow
+        return 300 + stageBoost + min(120, CGFloat(gardenContentScore) * 16)
     }
 
     /// The floor, lowered only as far as the space requires. Where everything
@@ -630,7 +612,7 @@ struct HomeView: View {
         // every tab switch). The persisted flag is what makes this one-shot, and
         // it is consumed below, at the moment the pitch is actually requested.
         // A challenge link opened the app: the pitch waits for the next arrival.
-        guard !showGrowth, !showChallenge, !challengeInbox.pending, postOnboardingPaywallTask == nil else { return }
+        guard !showGrowth, !challengeInbox.pending, postOnboardingPaywallTask == nil else { return }
         postOnboardingPaywallTask = Task { @MainActor in
             defer { postOnboardingPaywallTask = nil }
             try? await Task.sleep(nanoseconds: 700_000_000)
@@ -639,7 +621,7 @@ struct HomeView: View {
             // the delay window. Leaving it set retries on the next Home arrival.
             // MainTabView drops a pitch while a review sheet is up, so the flag
             // is only spent once the request can actually be honoured.
-            guard !showGrowth, !showChallenge else { return }
+            guard !showGrowth, !challengeInbox.pending else { return }
             AppGroup.defaults.set(false, forKey: AppGroup.postOnboardingPaywallKey)
             // Start the passive-nudge cooldown here so the day-0 popup and the
             // Home/Timeline/Health passive nudges don't fire back-to-back.
@@ -657,7 +639,7 @@ struct HomeView: View {
     /// cover or alert.
     private var isHomeClear: Bool {
         !showGrowth && !showCheckInDetail && !showSlipSheet && !showCraving
-            && !showSettings && !showCustomize && !showProgress && !showResetAlert && !showChallenge
+            && !showSettings && !showCustomize && !showProgress && !showResetAlert
     }
 
     /// The rating ask after a positive moment: Apple's own prompt, no question
