@@ -140,4 +140,71 @@ struct BugCatalogRegressionTests {
         #expect(garden.current().vitality == vitality)
         #expect(garden.current().lastWateredAt != nil)
     }
+
+    // MARK: - B9 Craving hours stay in the zone they were logged in
+
+    @Test func b9_peakHoursDoNotMoveWithTheDeviceZone() throws {
+        let service = CravingService(context: context)
+        let here = Calendar.current
+        for (daysAgo, hour) in [(1, 15), (2, 15), (3, 15), (4, 15), (5, 3), (6, 3)] {
+            let day = DateHelpers.daysAgo(daysAgo)
+            let startedAt = try #require(here.date(bySettingHour: hour, minute: 10, second: 0, of: day))
+            service.record(startedAt: startedAt, secondsElapsed: 90, outcome: .rodeItOut, intensity: 3)
+        }
+        var away = Calendar(identifier: .gregorian)
+        away.timeZone = try #require(TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT() + 6 * 3600))
+
+        let peak = CravingInsights.peakWindow(service.facts(), calendar: away)
+        #expect(peak?.startHour == 13)
+        #expect(peak?.count == 4)
+    }
+
+    /// Upgrade: a craving logged before the zone was stored opens intact and
+    /// reads in the device's zone, as it always did.
+    @Test func b9_aStoreFromBeforeTheZoneOpensWithItsCravingsIntact() throws {
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent("b9-\(UUID().uuidString).store")
+        defer {
+            for suffix in ["", "-shm", "-wal"] {
+                try? FileManager.default.removeItem(at: URL(fileURLWithPath: url.path + suffix))
+            }
+        }
+        let startedAt = Date(timeIntervalSince1970: 1_790_000_000)
+        do {
+            let legacy = try ModelContainer(
+                for: LegacyCravingSchema.CravingEpisode.self,
+                configurations: ModelConfiguration(url: url)
+            )
+            let row = LegacyCravingSchema.CravingEpisode()
+            row.startedAt = startedAt
+            row.secondsElapsed = 95
+            row.trigger = "Stress"
+            legacy.mainContext.insert(row)
+            try legacy.mainContext.save()
+        }
+
+        let upgraded = try ModelContainer(for: CravingEpisode.self, configurations: ModelConfiguration(url: url))
+        let episode = try #require(try upgraded.mainContext.fetch(FetchDescriptor<CravingEpisode>()).first)
+        #expect(episode.startedAt == startedAt)
+        #expect(episode.secondsElapsed == 95)
+        #expect(episode.trigger == "Stress")
+        #expect(episode.timeZoneID == nil)
+        let facts = CravingService(context: upgraded.mainContext).facts()
+        #expect(facts.first?.timeZone == nil)
+    }
+}
+
+enum LegacyCravingSchema {
+    @Model
+    final class CravingEpisode {
+        var id: UUID = UUID()
+        var startedAt: Date = Date.now
+        var endedAt: Date?
+        var intensity: Int = 0
+        var outcomeRaw: String = "rodeItOut"
+        var trigger: String?
+        var secondsElapsed: Int = 0
+
+        init() {}
+    }
 }

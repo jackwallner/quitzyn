@@ -76,7 +76,8 @@ final class CravingService {
                 secondsElapsed: $0.secondsElapsed,
                 outcome: $0.outcome,
                 intensity: $0.intensity,
-                trigger: $0.trigger
+                trigger: $0.trigger,
+                timeZone: $0.timeZone
             )
         }
     }

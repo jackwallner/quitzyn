@@ -46,6 +46,9 @@ final class CravingEpisode {
     /// Seconds the user actually stayed in the session, which is not the same
     /// as the session length they picked.
     var secondsElapsed: Int
+    /// The zone the urge was logged in, so its hour reads as the user lived
+    /// it after a trip or a move. Nil on rows from before it was stored.
+    var timeZoneID: String?
 
     init(
         id: UUID = UUID(),
@@ -54,7 +57,8 @@ final class CravingEpisode {
         intensity: Int = 3,
         outcome: CravingOutcome = .unresolved,
         trigger: String? = nil,
-        secondsElapsed: Int = 0
+        secondsElapsed: Int = 0,
+        timeZoneID: String? = TimeZone.current.identifier
     ) {
         self.id = id
         self.startedAt = startedAt
@@ -63,7 +67,10 @@ final class CravingEpisode {
         self.outcomeRaw = outcome.rawValue
         self.trigger = trigger
         self.secondsElapsed = secondsElapsed
+        self.timeZoneID = timeZoneID
     }
+
+    var timeZone: TimeZone? { timeZoneID.flatMap(TimeZone.init(identifier:)) }
 
     var outcome: CravingOutcome {
         get { CravingOutcome(rawValue: outcomeRaw) ?? .unresolved }
