@@ -21,6 +21,7 @@ struct SettingsView: View {
     @State private var restoreMessage: String?
     @State private var isRestoring = false
     @State private var notificationsDenied = false
+    private let spendScale = SpendScale.current
 
     private var settings: UserSettings? { settingsRows.first }
     private var activeJourney: SobrietyJourney? { journeys.first { $0.isActive } }
@@ -109,7 +110,7 @@ struct SettingsView: View {
                         }
                     }
                     Section {
-                        Stepper(value: bind(\.costPerDayCents, on: s), in: 0...20000, step: 100) {
+                        Stepper(value: bind(\.costPerDayCents, on: s), in: 0...spendScale.dailyCostMaxCents, step: spendScale.dailyCostStepCents) {
                             HStack {
                                 Text("Cost per day")
                                 Spacer()

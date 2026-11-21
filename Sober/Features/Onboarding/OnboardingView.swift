@@ -23,7 +23,7 @@ struct OnboardingView: View {
     #endif
     @State private var startDate: Date = .now
     @State private var pouchesPerDay: Double = 8
-    @State private var costPerCan: Double = 6
+    @State private var costPerCan: Double = SpendScale.current.defaultCanPrice
     @State private var pouchesPerCan: Int = 15
     @State private var reminderHour: Int = 9
     @State private var trialInFlight = false
@@ -44,6 +44,8 @@ struct OnboardingView: View {
     /// pouch count at a fixed price) so the dollars and pouches the user sees can
     /// never disagree — unlike two free sliders. Per-pouch price = $/can ÷
     /// pouches/can; daily spend = pouches/day × per-pouch price.
+    private let spendScale = SpendScale.current
+
     private var derivedCostPerDay: Double {
         guard pouchesPerCan > 0 else { return 0 }
         return pouchesPerDay * costPerCan / Double(pouchesPerCan)
@@ -234,17 +236,22 @@ struct OnboardingView: View {
                         .foregroundStyle(Theme.onGradientText)
                     HStack(spacing: Theme.Space.m) {
                         stepButton("minus") {
-                            costPerCan = max(1, costPerCan - 0.5)
+                            costPerCan = spendScale.clampedCanPrice(costPerCan - spendScale.canPriceStep)
                         }
                         Text(formatCurrencyDecimal(costPerCan))
                             .font(.system(size: 22, weight: .bold, design: .rounded))
                             .monospacedDigit()
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                             .frame(minWidth: 56)
                         stepButton("plus") {
-                            costPerCan = min(20, costPerCan + 0.5)
+                            costPerCan = spendScale.clampedCanPrice(costPerCan + spendScale.canPriceStep)
                         }
                     }
                 }
+                // Room goes to the price before the spacer: "120 CZK" wrapped
+                // when the two split it evenly.
+                .layoutPriority(1)
                 Spacer(minLength: 0)
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Pouches")
@@ -877,7 +884,7 @@ struct OnboardingView: View {
         if settings.pouchesPerDay > 0 {
             pouchesPerDay = Double(settings.pouchesPerDay)
             let perCan = Double(settings.costPerDayCents) / 100 * Double(pouchesPerCan) / pouchesPerDay
-            costPerCan = min(20, max(1, (perCan * 2).rounded() / 2))
+            costPerCan = spendScale.clampedCanPrice(perCan)
         }
         reminderHour = settings.dailyReminderHour
     }
