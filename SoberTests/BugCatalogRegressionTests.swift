@@ -80,4 +80,37 @@ struct BugCatalogRegressionTests {
         _ = garden.processGrowthEvents(days: garden.treeDays(streakDays: days))
         #expect(garden.processGrowthEvents(days: 30) == .newStage(.adolescent))
     }
+
+    // MARK: - B5 Delete log inside a closed run keeps the day counted
+
+    @Test func b5_deletingALogInsideAClosedRunKeepsTheDay() {
+        let sobriety = SobrietyService(context: context)
+        let checkIns = CheckInService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(19))
+        checkIns.fillJourney(start: DateHelpers.daysAgo(19), through: DateHelpers.daysAgo(1))
+        let day = DateHelpers.daysAgo(15)
+        checkIns.checkIn(for: day, mood: 4, note: "Walked instead")
+        SlipRecorder.record(on: DateHelpers.daysAgo(10), context: context)
+        #expect(sobriety.closedJourney(containing: day) != nil, "precondition: the day sits in a closed run")
+        let before = checkIns.lifetimeSoberDayCount()
+
+        checkIns.deleteLog(on: day)
+
+        #expect(checkIns.lifetimeSoberDayCount() == before)
+        #expect(checkIns.hasCheckedIn(on: day) == false)
+        #expect(checkIns.saved(on: day).mood == nil)
+        #expect(checkIns.saved(on: day).note == nil)
+    }
+
+    /// Control: on the live run, today's log is removed outright so Home offers
+    /// the check-in again.
+    @Test func b5_deletingTodaysLogStillClearsIt() {
+        let sobriety = SobrietyService(context: context)
+        let checkIns = CheckInService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(5))
+        checkIns.checkIn(for: .now, mood: 5)
+        checkIns.deleteLog(on: .now)
+        #expect(checkIns.hasCheckedIn(on: .now) == false)
+        #expect(checkIns.facts(from: .now, to: .now).isEmpty)
+    }
 }

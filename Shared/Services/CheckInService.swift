@@ -55,6 +55,24 @@ final class CheckInService {
         context.saveOrReport()
     }
 
+    /// Timeline's "Delete log": takes back what the user logged for a day.
+    ///
+    /// The live run refills a removed day as assumed, but nothing refills a
+    /// closed one, so there the row goes back to assumed instead: deleting it
+    /// lost a nicotine-free day the run still covers from the calendar and
+    /// every lifetime total.
+    func deleteLog(on date: Date) {
+        guard let existing = find(day: DateHelpers.startOfDay(date)) else { return }
+        if existing.wasSober, SobrietyService(context: context).closedJourney(containing: existing.day) != nil {
+            existing.wasLogged = false
+            existing.mood = nil
+            existing.note = nil
+        } else {
+            context.delete(existing)
+        }
+        context.saveOrReport()
+    }
+
     /// Whether the user has actually checked in on this day, as opposed to the
     /// app having filled it in. Drives Home's check-in control, so it has to
     /// mean the tap, not the row.
