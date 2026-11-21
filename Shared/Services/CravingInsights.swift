@@ -8,6 +8,8 @@ struct CravingFacts: Equatable, Sendable {
     let outcome: CravingOutcome
     let intensity: Int
     let trigger: String?
+    /// Where it was logged; nil reads it in the calendar's own zone.
+    var timeZone: TimeZone? = nil
 }
 
 /// A single thing the app can say back to the user about their own record.
@@ -44,6 +46,15 @@ enum CravingInsights {
 
     // MARK: - Individual readings
 
+    /// An hour or weekday on the clock where the urge was logged. Reading
+    /// every urge in the device's zone of the moment moved the whole log by
+    /// the time difference after a trip or a move.
+    static func localComponent(_ component: Calendar.Component, of date: Date, in zone: TimeZone?, calendar: Calendar) -> Int {
+        var local = calendar
+        if let zone { local.timeZone = zone }
+        return local.component(component, from: date)
+    }
+
     /// Sessions the user actually answered for. Timing readings deliberately
     /// count every session, answered or not, because an urge that started at
     /// 9pm started at 9pm regardless of how the screen was closed. Anything
@@ -77,7 +88,7 @@ enum CravingInsights {
         guard facts.count >= minimumForTiming else { return nil }
         var byHour = [Int](repeating: 0, count: 24)
         for fact in facts {
-            byHour[calendar.component(.hour, from: fact.startedAt)] += 1
+            byHour[localComponent(.hour, of: fact.startedAt, in: fact.timeZone, calendar: calendar)] += 1
         }
         var best = (startHour: 0, count: -1)
         for start in 0..<24 {
@@ -105,7 +116,7 @@ enum CravingInsights {
     static func hardestWeekday(_ facts: [CravingFacts], calendar: Calendar = .current) -> (weekday: Int, count: Int)? {
         guard facts.count >= minimumForTiming else { return nil }
         let counts = Dictionary(
-            facts.map { (calendar.component(.weekday, from: $0.startedAt), 1) },
+            facts.map { (localComponent(.weekday, of: $0.startedAt, in: $0.timeZone, calendar: calendar), 1) },
             uniquingKeysWith: +
         )
         guard let best = counts.max(by: { ($0.value, $1.key) < ($1.value, $0.key) }), best.value >= 2 else { return nil }
