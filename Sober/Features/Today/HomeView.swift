@@ -32,6 +32,9 @@ struct HomeView: View {
     @State private var growthEvent: GardenGrowthEvent?
     @State private var showGrowth = false
     @State private var showCheckInDetail = false
+    /// The trial pitch a check-in earns, held until the note sheet the same
+    /// tap opens is closed: the pitch's sheet replaced it, dropping the note.
+    @State private var pendingCheckInPitchCount: Int?
     @State private var reviewPromptShownThisSession = false
     /// Measured to keep the garden's floor from pushing the stack past its
     /// space (see `fittedGardenMinHeight`).
@@ -174,7 +177,10 @@ struct HomeView: View {
                     .zIndex(100)
                 }
             }
-            .sheet(isPresented: $showCheckInDetail, onDismiss: scheduleReviewRequestAfterPositiveMoment) {
+            .sheet(isPresented: $showCheckInDetail, onDismiss: {
+                scheduleReviewRequestAfterPositiveMoment()
+                sendPendingCheckInPitch()
+            }) {
                 // Read at presentation so the sheet opens on today's saved
                 // mood and note rather than filling them in after it appears.
                 let saved = CheckInService(context: context).saved()
@@ -669,7 +675,12 @@ struct HomeView: View {
 
     private func recordCheckInForTrialPitch() {
         guard !isPro else { return }
-        let count = TrialSubsequentPitchGate.incrementPersistedCount(key: AppGroup.checkInCompletedCountKey)
+        pendingCheckInPitchCount = TrialSubsequentPitchGate.incrementPersistedCount(key: AppGroup.checkInCompletedCountKey)
+    }
+
+    private func sendPendingCheckInPitch() {
+        guard let count = pendingCheckInPitchCount else { return }
+        pendingCheckInPitchCount = nil
         Task {
             await evaluateUsageBasedTrialPitch(
                 subscriptions,
