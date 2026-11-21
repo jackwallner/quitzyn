@@ -55,4 +55,29 @@ struct BugCatalogRegressionTests {
         #expect(czk.clampedCanPrice(0) == czk.canPriceRange.lowerBound)
         #expect(SpendScale(currencyCode: "USD").clampedCanPrice(6.3) == 6.5)
     }
+
+    // MARK: - B4 A start date edited far back and corrected leaves no phantom tree
+
+    @Test func b4_correctingAFarEarlierStartDateDropsThePhantomTreeAndKeepsCelebrations() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        sobriety.startJourney(at: DateHelpers.daysAgo(19))
+        _ = garden.processGrowthEvents(days: sobriety.currentDayCount())
+
+        // Mis-tap: about 400 days back. Home then counts a finished tree.
+        sobriety.updateStartDate(DateHelpers.daysAgo(399))
+        let wrongDays = sobriety.currentDayCount()
+        garden.processCycleCompletions(days: wrongDays)
+        _ = garden.processGrowthEvents(days: garden.treeDays(streakDays: wrongDays))
+        #expect(garden.current().completedTreeStyles.count == 1, "precondition: the phantom tree was grown")
+
+        // Corrected back to the real date.
+        sobriety.updateStartDate(DateHelpers.daysAgo(19))
+        let days = sobriety.currentDayCount()
+        garden.processCycleCompletions(days: days)
+        #expect(garden.current().completedTreeStyles.isEmpty)
+        // Day 30 is the next stage, and it still celebrates.
+        _ = garden.processGrowthEvents(days: garden.treeDays(streakDays: days))
+        #expect(garden.processGrowthEvents(days: 30) == .newStage(.adolescent))
+    }
 }
