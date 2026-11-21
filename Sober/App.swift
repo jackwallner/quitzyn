@@ -130,6 +130,14 @@ extension Notification.Name {
     static let soberOpenBloomPlus = Notification.Name("com.jackwallner.quitzyn.openBloomPlus")
 }
 
+/// The screen a notification tap asked for, held until `MainTabView` is up to
+/// take it. A tap that launches the app posts before any view listens, and a
+/// post nobody hears is gone.
+@MainActor
+enum NotificationTapInbox {
+    static var pending: Notification.Name?
+}
+
 /// Routes notification taps. Without a delegate, tapping the daily reminder
 /// just foregrounds the app on whatever tab was last open. Stateless, so the
 /// unchecked-Sendable shared instance is safe.
@@ -145,18 +153,26 @@ final class NotificationTapRouter: NSObject, UNUserNotificationCenterDelegate, @
         didReceive response: UNNotificationResponse,
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
-        let info = response.notification.request.content.userInfo
-        let name: Notification.Name?
-        switch info[NotificationService.deepLinkKey] as? String {
-        case NotificationService.deepLinkCheckIn: name = .soberOpenCheckIn
-        case NotificationService.deepLinkBloomPlus: name = .soberOpenBloomPlus
-        default: name = nil
-        }
+        let link = response.notification.request.content.userInfo[NotificationService.deepLinkKey] as? String
         nonisolated(unsafe) let done = completionHandler
         Task { @MainActor in
-            if let name { NotificationCenter.default.post(name: name, object: nil) }
+            if let name = Self.destination(for: link) { Self.open(name) }
             done()
         }
+    }
+
+    static func destination(for deepLink: String?) -> Notification.Name? {
+        switch deepLink {
+        case NotificationService.deepLinkCheckIn: return .soberOpenCheckIn
+        case NotificationService.deepLinkBloomPlus: return .soberOpenBloomPlus
+        default: return nil
+        }
+    }
+
+    @MainActor
+    static func open(_ name: Notification.Name) {
+        NotificationTapInbox.pending = name
+        NotificationCenter.default.post(name: name, object: nil)
     }
 }
 
@@ -196,6 +212,9 @@ struct SoberApp: App {
         }
         #endif
         UNUserNotificationCenter.current().delegate = NotificationTapRouter.shared
+        #if DEBUG
+        Self.routeDebugNotificationTapIfRequested()
+        #endif
         // Before any view can run `fillJourney`, or this build's assumed rows
         // would be marked tended along with the legacy ones.
         CheckInService.migrateLegacyCheckInsIfNeeded(
@@ -207,6 +226,17 @@ struct SoberApp: App {
     }
 
     #if DEBUG
+    /// `-debugNotificationTap <deepLink>` routes a notification tap the way
+    /// the delegate does, from launch, before any view is listening: the
+    /// earliest a tap that cold-launches the app can arrive. Simulators do
+    /// not reliably show the banner to tap.
+    private static func routeDebugNotificationTapIfRequested() {
+        let args = ProcessInfo.processInfo.arguments
+        guard let index = args.firstIndex(of: "-debugNotificationTap"), index + 1 < args.count,
+              let name = NotificationTapRouter.destination(for: args[index + 1]) else { return }
+        Task { @MainActor in NotificationTapRouter.open(name) }
+    }
+
     /// `-previewStore [-previewTrialDays N]` loads a local offering so the real
     /// paywall renders on a headless simulator. Without it the simulator has no
     /// RevenueCat packages at all (see `PaywallPreviewStore`) and every
@@ -552,10 +582,18 @@ struct MainTabView: View {
         .onChange(of: showTrialOffer) { _, _ in syncPresentationFlag() }
         .onChange(of: showTrialPaywall) { _, _ in syncPresentationFlag() }
         .onReceive(NotificationCenter.default.publisher(for: .soberOpenCheckIn)) { _ in
+            NotificationTapInbox.pending = nil
             tab = 0
         }
         .onReceive(NotificationCenter.default.publisher(for: .soberOpenBloomPlus)) { _ in
+            NotificationTapInbox.pending = nil
             tab = 4
+        }
+        .onAppear {
+            guard let pending = NotificationTapInbox.pending else { return }
+            NotificationTapInbox.pending = nil
+            if pending == .soberOpenBloomPlus { tab = 4 }
+            if pending == .soberOpenCheckIn { tab = 0 }
         }
         .onReceive(NotificationCenter.default.publisher(for: .soberOpenTimeline)) { _ in
             // Unfolded, Timeline is its own pane and already on screen.

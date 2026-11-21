@@ -83,4 +83,17 @@ final class BugCatalogUITests: XCTestCase {
         // Counting ticks it read about 1:52.
         XCTAssertLessThanOrEqual(left, 100, "The countdown read \(timer.label) after a 20 s stall")
     }
+
+    /// B8: a tap on the trial-ending reminder that launches the app should
+    /// open Bloom+, where the plan and the cancel path are. The tap is routed
+    /// at launch, before any view listens, as a cold launch delivers it.
+    func test3NotificationTapAtLaunchOpensBloomPlus() throws {
+        let app = XCUIApplication(bundleIdentifier: bundleID)
+        app.launchArguments += ["-seedDemo", "-QuitZynScreenshot", "-debugNotificationTap", "bloomPlus"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.firstMatch.waitForExistence(timeout: 20), "The tabs never appeared")
+        let landed = app.navigationBars["Support"].waitForExistence(timeout: 10)
+        attach(app, "b8-after-launch-tap")
+        XCTAssertTrue(landed, "A tap routed at launch did not open Bloom+")
+    }
 }
