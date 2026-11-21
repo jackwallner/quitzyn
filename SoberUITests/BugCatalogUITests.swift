@@ -60,4 +60,27 @@ final class BugCatalogUITests: XCTestCase {
         XCTAssertTrue(app.buttons["Not now"].waitForExistence(timeout: 10), "The trial pitch never followed the note sheet")
         attach(app, "b3-pitch-after-save")
     }
+
+    /// B7: the craving countdown counted timer ticks, so time the timer did
+    /// not fire (the app suspended in the background) was never counted. The
+    /// simulator under XCUITest keeps a backgrounded app running, so a 20 s
+    /// main-thread stall stands in for the suspension: the timer misses its
+    /// ticks the same way.
+    func test2CravingClockCountsTimeTheTimerMissed() throws {
+        let app = XCUIApplication(bundleIdentifier: bundleID)
+        app.launchArguments += ["-seedDemo", "-debugStallCravingClock"]
+        app.launch()
+        let start = cravingButton(in: app)
+        XCTAssertTrue(start.waitForExistence(timeout: 20), "Home never showed the craving button")
+        start.tap()
+        let timer = app.staticTexts["craving.timer"]
+        XCTAssertTrue(timer.waitForExistence(timeout: 10), "The session countdown never appeared")
+        sleep(26)
+        attach(app, "b7-countdown-after-stall")
+        let parts = timer.label.split(separator: ":").compactMap { Int($0) }
+        let left = try XCTUnwrap(parts.count == 2 ? parts[0] * 60 + parts[1] : nil, "Unreadable countdown \(timer.label)")
+        // A 2:00 session about 27 s in, 20 of them stalled: about 1:33 left.
+        // Counting ticks it read about 1:52.
+        XCTAssertLessThanOrEqual(left, 100, "The countdown read \(timer.label) after a 20 s stall")
+    }
 }

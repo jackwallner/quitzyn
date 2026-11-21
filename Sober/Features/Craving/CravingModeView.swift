@@ -16,6 +16,7 @@ struct CravingModeView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(SubscriptionService.self) private var subscriptions
 
     /// Called once the episode has been written, with the outcome the user
@@ -50,10 +51,11 @@ struct CravingModeView: View {
             case .done: doneStep
             }
         }
-        .onReceive(tick) { _ in
-            guard step == .breathing else { return }
-            elapsed += 1
-            if elapsed >= targetSeconds { advanceToReflect() }
+        .onReceive(tick) { _ in syncElapsed() }
+        // The timer does not fire while the app is away, so the clock is read
+        // from the start time: counting ticks stored only the time on screen.
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { syncElapsed() }
         }
         .onChange(of: breathPhase) { _, phase in animate(to: phase) }
         .onAppear {
@@ -62,6 +64,14 @@ struct CravingModeView: View {
             if subscriptions.isProSubscriber {
                 coachLine = CravingInsights.coachLine(CravingService(context: context).facts())
             }
+            #if DEBUG
+            // `-debugStallCravingClock`: blocks the main thread for 20 s, so
+            // the timer misses its ticks as it does while iOS suspends the
+            // app. The simulator under XCUITest never suspends it.
+            if ProcessInfo.processInfo.arguments.contains("-debugStallCravingClock") {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { Thread.sleep(forTimeInterval: 20) }
+            }
+            #endif
         }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .interactiveDismissDisabled(step == .breathing)
@@ -221,6 +231,12 @@ struct CravingModeView: View {
         formatter.unitsStyle = .positional
         formatter.zeroFormattingBehavior = .pad
         return formatter.string(from: TimeInterval(left)) ?? String(localized: "0:00")
+    }
+
+    private func syncElapsed() {
+        guard step == .breathing else { return }
+        elapsed = max(elapsed, Int(Date.now.timeIntervalSince(startedAt)))
+        if elapsed >= targetSeconds { advanceToReflect() }
     }
 
     private func advanceToReflect() {
