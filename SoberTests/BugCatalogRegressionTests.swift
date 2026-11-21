@@ -113,4 +113,31 @@ struct BugCatalogRegressionTests {
         #expect(checkIns.hasCheckedIn(on: .now) == false)
         #expect(checkIns.facts(from: .now, to: .now).isEmpty)
     }
+
+    // MARK: - B6 A slip on a day no run covers leaves the tree alone
+
+    @Test func b6_aSlipOnAGapDayLeavesTheTreeAndCounterAlone() {
+        let sobriety = SobrietyService(context: context)
+        let garden = GardenService(context: context)
+        // A run that a slip ended 25 days ago, then the live run's start moved
+        // later in Settings, leaving days no run covers.
+        sobriety.startJourney(at: DateHelpers.daysAgo(40))
+        SlipRecorder.record(on: DateHelpers.daysAgo(25), context: context)
+        sobriety.updateStartDate(DateHelpers.daysAgo(19))
+        let gapDay = DateHelpers.daysAgo(22)
+        #expect(!sobriety.activeJourneyCovers(gapDay) && sobriety.closedJourney(containing: gapDay) == nil,
+                "precondition: no run covers the day")
+        garden.water()
+        let carryover = garden.current().carryoverDays
+        let vitality = garden.current().vitality
+        let counter = sobriety.currentDayCount()
+
+        SlipRecorder.record(on: gapDay, context: context)
+
+        #expect(CheckInService(context: context).loggedSlip(on: gapDay))
+        #expect(sobriety.currentDayCount() == counter)
+        #expect(garden.current().carryoverDays == carryover)
+        #expect(garden.current().vitality == vitality)
+        #expect(garden.current().lastWateredAt != nil)
+    }
 }

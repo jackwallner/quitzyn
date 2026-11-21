@@ -96,13 +96,19 @@ enum SlipRecorder {
         let alreadyRestarted = sobriety.activeJourney().map {
             DateHelpers.startOfDay($0.startDate) >= DateHelpers.startOfDay(dayAfter)
         } ?? false
-        if !alreadyRestarted {
-            // The run that just ended stopped on the slip day, not today: closing
-            // it at `.now` left it overlapping the fresh run whenever the slip
-            // was back-dated, so a slip from ten days ago *raised* the longest
-            // streak.
-            sobriety.resetJourney(startingAt: dayAfter, endingPreviousOn: day)
+        // The live run already starts after this day, so the day sits in a gap
+        // no run covers (a start date moved later in Settings). The counter
+        // stays put, and so does the tree: halving it here broke the promise
+        // the slip confirmation makes for a slip that changed nothing.
+        if alreadyRestarted {
+            WidgetSnapshotPump.push(context: context)
+            return Outcome(previousStreakDays: previousStreak, carryoverDays: garden.current().carryoverDays)
         }
+        // The run that just ended stopped on the slip day, not today: closing
+        // it at `.now` left it overlapping the fresh run whenever the slip
+        // was back-dated, so a slip from ten days ago *raised* the longest
+        // streak.
+        sobriety.resetJourney(startingAt: dayAfter, endingPreviousOn: day)
 
         let carryover = garden.recordSlip(previousStreakDays: previousStreak)
         WidgetSnapshotPump.push(context: context)
