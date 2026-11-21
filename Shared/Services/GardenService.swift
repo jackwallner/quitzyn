@@ -258,6 +258,22 @@ final class GardenService {
         return expected - have
     }
 
+    /// Brings the grove and the growth watermark back to a start date the
+    /// user corrected. Both only ever grew, so a date set a year back by
+    /// mistake left a finished tree in the grove and muted every growth
+    /// celebration until the streak passed the wrong count. Does nothing
+    /// before the garden exists.
+    func realignToEditedStart(streakDays: Int) {
+        guard let state = try? context.fetch(FetchDescriptor<GardenState>()).first else { return }
+        let expected = state.groveCountAtJourneyStart + Self.cycleProgress(forDays: streakDays).completed
+        let extraTrees = state.completedTreeStyles.count - expected
+        let watermark = Self.treeDays(streakDays: streakDays, carryover: state.carryoverDays)
+        guard extraTrees > 0 || state.lastUnlockNotifiedAtDays > watermark else { return }
+        if extraTrees > 0 { state.completedTreeStyles.removeLast(extraTrees) }
+        state.lastUnlockNotifiedAtDays = min(state.lastUnlockNotifiedAtDays, watermark)
+        context.saveOrReport()
+    }
+
     // ── Growth ──
 
     /// Pure decision: what celebration (if any) does moving from

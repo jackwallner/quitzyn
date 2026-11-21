@@ -35,6 +35,7 @@ final class SobrietyService {
         guard let journey = activeJourney() else { return }
         journey.startDate = min(date, .now)
         context.saveOrReport()
+        GardenService(context: context).realignToEditedStart(streakDays: Self.daysSinceStart(journey.startDate))
     }
 
     func reset(reason: String? = nil) {
