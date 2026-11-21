@@ -145,7 +145,7 @@ struct PatternsView: View {
     private var hourCounts: [Int] {
         var counts = [Int](repeating: 0, count: 24)
         for craving in cravings {
-            counts[Calendar.current.component(.hour, from: craving.startedAt)] += 1
+            counts[CravingInsights.localComponent(.hour, of: craving.startedAt, in: craving.timeZone, calendar: .current)] += 1
         }
         return counts
     }
