@@ -673,8 +673,7 @@ struct TimelineView: View {
     }
 
     private func deleteCheckIn(_ checkIn: DailyCheckIn) {
-        context.delete(checkIn)
-        context.saveOrReport()
+        CheckInService(context: context).deleteLog(on: checkIn.day)
         WidgetSnapshotPump.push(context: context)
         NotificationService.refreshDailyReminder(context: context)
     }
