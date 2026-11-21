@@ -80,7 +80,9 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   and schedules the heads-up `TrialTimeline` promises, two days before conversion.
 - SwiftData migrations: any change to a `@Model`'s stored properties needs a schema
   migration (lightweight is fine for now). A store that won't open is moved aside as
-  `Sober.v2.store.unopenable-<stamp>` rather than deleted, so history is recoverable.
+  `Sober.v2.store.unopenable-<stamp>` rather than deleted, and only after a retry
+  with room on the disk. A later launch whose live store is empty puts the newest
+  aside store back if it opens (`DataService.openStore`).
 - `DailyCheckIn.day` is the current zone's midnight. After a time zone change,
   `CheckInService.normalizeDayKeys` (run in `SoberApp.init` and at the top of
   every `fillJourney`) re-keys every row to the new zone and merges duplicates,
