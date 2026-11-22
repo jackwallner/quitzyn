@@ -94,6 +94,22 @@ object SoberEngine {
         return state.copy(checkIns = entries.values.sortedBy { it.day })
     }
 
+    /**
+     * `CheckInService.deleteLog`: takes back what the user logged for a day.
+     * The live run refills a removed day as assumed, but nothing refills a
+     * closed one, so there the row goes back to assumed instead: deleting it
+     * lost a nicotine-free day the run still covers.
+     */
+    fun deleteLog(state: SoberState, day: LocalDate, clock: AppClock): SoberState {
+        val existing = state.checkIns.firstOrNull { it.day == day } ?: return state
+        if (existing.wasSober && closedJourney(state, day, clock) != null) {
+            return state.copy(checkIns = state.checkIns.map {
+                if (it.day == day) it.copy(wasLogged = false, mood = null, note = null) else it
+            })
+        }
+        return state.copy(checkIns = state.checkIns.filterNot { it.day == day })
+    }
+
     fun hasCheckedIn(state: SoberState, day: LocalDate): Boolean = state.checkIns.any { it.day == day && it.wasLogged }
 
     fun loggedSlip(state: SoberState, day: LocalDate): Boolean =
@@ -163,13 +179,19 @@ object SoberEngine {
         return day >= active.start.atZone(clock.zone()).toLocalDate()
     }
 
+    /** `SobrietyService.closedJourney(containing:)`: the closed run `day` falls inside, before the day it ended. */
+    private fun closedJourney(state: SoberState, day: LocalDate, clock: AppClock): Journey? {
+        val zone = clock.zone()
+        return state.journeys.firstOrNull { j ->
+            val end = j.end ?: return@firstOrNull false
+            day >= j.start.atZone(zone).toLocalDate() && day < end.atZone(zone).toLocalDate()
+        }
+    }
+
     /** `SobrietyService.splitClosedJourney`: end the closed run containing `day` there, keep its tail. */
     private fun splitClosedJourney(state: SoberState, day: LocalDate, clock: AppClock): SoberState {
         val zone = clock.zone()
-        val containing = state.journeys.firstOrNull { j ->
-            val end = j.end ?: return@firstOrNull false
-            day >= j.start.atZone(zone).toLocalDate() && day < end.atZone(zone).toLocalDate()
-        } ?: return state
+        val containing = closedJourney(state, day, clock) ?: return state
         val originalEnd = containing.end ?: return state
         val tail = Journey(
             start = day.plusDays(1).atStartOfDay(zone).toInstant(),

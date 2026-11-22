@@ -53,4 +53,32 @@ class BugCatalogRegressionTest {
         assertEquals(30, store.days)
         assertEquals(GrowthEvent.NewStage(BonsaiStage.ADOLESCENT), store.processGrowth())
     }
+
+    // B5: Delete log inside a closed run keeps the day counted
+
+    @Test fun b5_deletingALogInsideAClosedRunKeepsTheDay() {
+        startJourney(19)
+        store.refresh()
+        val logged = day(15)
+        store.logCheckIn(logged, wasSober = true, mood = 4, note = "Walked instead")
+        store.recordSlip(day(10))
+        val before = store.lifetimeSoberDays
+
+        store.deleteCheckIn(logged)
+
+        assertEquals(before, store.lifetimeSoberDays)
+        assertFalse(store.hasCheckedIn(logged))
+        assertNotNull(store.checkIn(logged))
+        assertNull(store.checkIn(logged)?.mood)
+        assertNull(store.checkIn(logged)?.note)
+    }
+
+    /** Control: on the live run, today's log is removed outright so Home offers the check-in again. */
+    @Test fun b5_deletingTodaysLogStillClearsIt() {
+        startJourney(5)
+        store.checkInToday()
+        store.deleteCheckIn(store.today)
+        assertFalse(store.hasCheckedIn(store.today))
+        assertNull(store.checkIn(store.today))
+    }
 }

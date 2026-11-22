@@ -231,7 +231,7 @@ class SoberStore(
         old.copy(checkIns = old.checkIns.map { if (it.day == day) edited else it })
     }
 
-    fun deleteCheckIn(day: LocalDate) = update { old -> old.copy(checkIns = old.checkIns.filterNot { it.day == day }) }
+    fun deleteCheckIn(day: LocalDate) = update { SoberEngine.deleteLog(it, day, clock) }
 
     // MARK: - Settings
 
