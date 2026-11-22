@@ -49,12 +49,17 @@ final class BugCatalogUITests: XCTestCase {
         let settle = Date().addingTimeInterval(5)
         while Date() < settle, !field.isHittable { usleep(200_000) }
         field.tap()
-        app.typeText("Walked past the shop")
+        let typed = "Walked past the shop"
+        app.typeText(typed)
         // The pitch used to fire 2.5 s after the tap, over the sheet.
         sleep(6)
         attach(app, "b3-note-sheet-after-6s")
         XCTAssertTrue(sheet.exists, "The note sheet was replaced while the user was typing")
         XCTAssertFalse(app.buttons["Not now"].exists, "The trial pitch rose over the note sheet")
+        XCTAssertTrue((field.value as? String)?.contains(typed) == true, "The typed note was lost")
+        // Save no note: a saved note hides the prompt that ReleaseJourneysUITests
+        // finds the field by when it later reopens today's sheet.
+        app.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: typed.count + 4))
         app.navigationBars["Checked in"].buttons["Save"].tap()
         // The pitch is deferred, not dropped.
         XCTAssertTrue(app.buttons["Not now"].waitForExistence(timeout: 10), "The trial pitch never followed the note sheet")
