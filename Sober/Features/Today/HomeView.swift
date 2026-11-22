@@ -345,7 +345,9 @@ struct HomeView: View {
                         refreshCheckInState()
                         WidgetSnapshotPump.push(context: context)
                         recordPositiveMomentForReview()
+                        // No note sheet opens here, so nothing would send it.
                         recordCheckInForTrialPitch()
+                        sendPendingCheckInPitch()
                     } label: {
                         Label("Still nicotine-free", systemImage: "checkmark.circle.fill")
                             .fontWeight(.semibold)
