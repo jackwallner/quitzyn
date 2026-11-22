@@ -70,6 +70,13 @@ data class CravingEpisode(
         /** An unresolved session shorter than this was an accidental open (`CravingService`). */
         const val MINIMUM_UNRESOLVED_SECONDS = 8
 
+        /**
+         * Seconds on the craving clock, read from the start time. Counting
+         * one per tick stored only the time the app was awake to count.
+         */
+        fun elapsedSeconds(shown: Int, startedAtMillis: Long, nowMillis: Long): Int =
+            maxOf(shown, ((nowMillis - startedAtMillis) / 1_000).toInt())
+
         fun isWorthLogging(outcome: CravingOutcome, secondsElapsed: Int): Boolean =
             outcome != CravingOutcome.UNRESOLVED || secondsElapsed >= MINIMUM_UNRESOLVED_SECONDS
     }

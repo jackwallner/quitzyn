@@ -103,7 +103,7 @@ fun CravingModeScreen(onFinish: (CravingOutcome) -> Unit, onClose: () -> Unit) {
     LaunchedEffect(step) {
         while (step == CravingStep.BREATHING) {
             delay(1_000)
-            elapsed += 1
+            elapsed = CravingEpisode.elapsedSeconds(elapsed, startedAt, graph.clock.now().toEpochMilli())
             if (elapsed >= target) step = CravingStep.REFLECT
         }
     }

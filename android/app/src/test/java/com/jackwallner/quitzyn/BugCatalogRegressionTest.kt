@@ -153,4 +153,13 @@ class BugCatalogRegressionTest {
         assertEquals(clock.zone(), episode.zone(clock.zone()))
         assertEquals("Asia/Tokyo", SoberCodec.decode(SoberCodec.encode(saved)).cravings.single().timeZoneId)
     }
+
+    // B7: the craving clock counts time the timer missed
+
+    @Test fun b7_cravingClockCountsTimeTheTimerMissed() {
+        val startedAt = 1_000_000L
+        assertEquals("one tick after a 20 s stall", 29, CravingEpisode.elapsedSeconds(shown = 9, startedAtMillis = startedAt, nowMillis = startedAt + 29_400))
+        assertEquals(1, CravingEpisode.elapsedSeconds(shown = 0, startedAtMillis = startedAt, nowMillis = startedAt + 1_050))
+        assertEquals("a clock set back never rewinds it", 40, CravingEpisode.elapsedSeconds(shown = 40, startedAtMillis = startedAt, nowMillis = startedAt - 5_000))
+    }
 }
