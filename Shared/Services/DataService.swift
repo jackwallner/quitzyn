@@ -62,12 +62,16 @@ enum DataService {
         return open(url)
     }
 
-    /// Puts the newest aside store back when the live one holds no history,
-    /// for a store that opens again now (the failure was transient, or a later
-    /// build can migrate it). The empty live store is kept beside it too.
+    /// Puts the newest aside store back when the live one opens empty (or is
+    /// missing), for a store that opens again now (the failure was transient,
+    /// or a later build can migrate it). The empty live store is kept beside
+    /// it too. A live store that will not open is left to the retry and
+    /// move-aside path: swapping it out here hid its newer history under a
+    /// name nothing reads back.
     private static func restoreNewestAsideIfEmpty(at url: URL, now: Date, open: (URL) -> ModelContainer?) {
-        guard let aside = newestAside(of: url),
-              storeHasHistory(at: url, open: open) != true,
+        guard let aside = newestAside(of: url) else { return }
+        let liveIsMissing = !FileManager.default.fileExists(atPath: url.path)
+        guard liveIsMissing || storeHasHistory(at: url, open: open) == false,
               storeHasHistory(at: aside, open: open) == true
         else { return }
         moveStore(from: url, to: URL(fileURLWithPath: url.path + ".replaced-\(Int(now.timeIntervalSince1970))"))

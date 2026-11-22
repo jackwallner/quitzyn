@@ -84,6 +84,30 @@ struct StoreRecoveryTests {
         #expect(!asideFiles().isEmpty)
     }
 
+    /// A live store that fails to open while an older one sits aside is not
+    /// swapped for the older one: it holds the newer history, so it goes
+    /// through the retry and, if it still fails, aside as the newest store,
+    /// where a later launch takes it back.
+    @Test func aLiveStoreThatWillNotOpenIsNotSwappedForAnOlderOne() throws {
+        try seedStore(at: URL(fileURLWithPath: url.path + ".unopenable-1700000000"), startDaysAgo: 200)
+        try seedStore(at: url, startDaysAgo: 5)
+        // The live store fails the probe, the open and its retry; the fourth
+        // open is the fresh store after the move aside.
+        var liveOpens = 0
+        do {
+            let failingLive = DataService.openStore(at: url, diskIsFull: { _ in false }) { target in
+                guard target == url else { return realOpen(target) }
+                liveOpens += 1
+                return liveOpens <= 3 ? nil : realOpen(target)
+            }
+            #expect(journeyCount(in: failingLive) == 0, "this launch runs on a fresh store")
+        }
+
+        // Next launch, the transient failure has passed.
+        let next = DataService.openStore(at: url, open: realOpen)
+        #expect(startDaysAgo(in: next) == 5)
+    }
+
     @Test func aCorruptStoreIsStillMovedAsideAndAFreshOneOpens() throws {
         try Data("not a database".utf8).write(to: url)
         let container = DataService.openStore(at: url, open: realOpen)
