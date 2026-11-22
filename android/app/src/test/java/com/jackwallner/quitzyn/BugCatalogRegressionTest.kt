@@ -197,4 +197,14 @@ class BugCatalogRegressionTest {
         assertEquals(czk.canPriceRange.start, czk.clampedCanPrice(0.0), 0.0)
         assertEquals(6.5, SpendScale("USD").clampedCanPrice(6.3), 0.0)
     }
+
+    // B3: the check-in trial pitch waits for the note sheet
+
+    @Test fun b3_checkInPitchIsHeldUntilTheNoteSheetCloses() {
+        val held = HeldCheckInPitch()
+        assertNull("nothing to send before a check-in", held.take())
+        held.hold(3)
+        assertEquals(3, held.take())
+        assertNull("sent once, not again when the sheet closes a second time", held.take())
+    }
 }

@@ -123,6 +123,21 @@ class TrialNudgeGate(private val defaults: KeyValueStore, private val clock: App
     }
 }
 
+/**
+ * The trial pitch a check-in earns, held until the note sheet the same tap
+ * opens is closed: sent on its timer it came up over the note being typed.
+ */
+class HeldCheckInPitch {
+    private var count: Int? = null
+
+    fun hold(count: Int) {
+        this.count = count
+    }
+
+    /** The held check-in count, once. */
+    fun take(): Int? = count.also { count = null }
+}
+
 class TrialSubsequentPitchGate(private val defaults: KeyValueStore, private val nudges: TrialNudgeGate) {
     private val sessionCounts = mutableMapOf<String, Int>()
 

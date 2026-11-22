@@ -54,6 +54,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.jackwallner.quitzyn.DebugLaunchOptions
+import com.jackwallner.quitzyn.data.HeldCheckInPitch
 import com.jackwallner.quitzyn.data.PitchIntent
 import com.jackwallner.quitzyn.data.PitchPolicy
 import com.jackwallner.quitzyn.data.TrialSubsequentPitchGate
@@ -111,6 +112,7 @@ fun HomeScreen() {
     var showProgress by rememberSaveable { mutableStateOf(DebugLaunchOptions.showProgress) }
     var growthEvent by remember { mutableStateOf<GrowthEvent?>(null) }
     var showCheckInDetail by remember { mutableStateOf(false) }
+    val heldCheckInPitch = remember { HeldCheckInPitch() }
     var menuOpen by remember { mutableStateOf(false) }
     var reviewShownThisSession by remember { mutableStateOf(false) }
     var postOnboardingScheduled by remember { mutableStateOf(false) }
@@ -144,7 +146,11 @@ fun HomeScreen() {
 
     fun recordCheckInForTrialPitch() {
         if (subscriptions.isPro) return
-        val count = graph.pitchGate.incrementPersistedCount(TrialSubsequentPitchGate.CHECK_IN_COMPLETED_COUNT_KEY)
+        heldCheckInPitch.hold(graph.pitchGate.incrementPersistedCount(TrialSubsequentPitchGate.CHECK_IN_COMPLETED_COUNT_KEY))
+    }
+
+    fun sendHeldCheckInPitch() {
+        val count = heldCheckInPitch.take() ?: return
         scope.launch { graph.pitches.usageBased(PitchIntent.CHECK_IN_MILESTONE, count, threshold = 3, delaySeconds = 2.5) }
     }
 
@@ -270,6 +276,8 @@ fun HomeScreen() {
                                 store.backfillAndWater()
                                 recordPositiveMoment()
                                 recordCheckInForTrialPitch()
+                                // No note sheet opens here, so nothing else would send it.
+                                sendHeldCheckInPitch()
                             },
                             onSlipped = { showSlip = true },
                             onAddNote = { showCheckInDetail = true },
@@ -321,8 +329,8 @@ fun HomeScreen() {
         )
     }
 
-    SoberSheet(showCheckInDetail, onDismiss = { showCheckInDetail = false }, height = SheetHeight.COMPACT) {
-        CheckInDetailSheet(onClose = { showCheckInDetail = false })
+    SoberSheet(showCheckInDetail, onDismiss = { showCheckInDetail = false; sendHeldCheckInPitch() }, height = SheetHeight.COMPACT) {
+        CheckInDetailSheet(onClose = { showCheckInDetail = false; sendHeldCheckInPitch() })
     }
     SoberSheet(showSettings, onDismiss = { showSettings = false }) {
         SettingsScreen(onClose = { showSettings = false })
