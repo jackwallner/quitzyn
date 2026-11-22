@@ -75,6 +75,7 @@ import com.jackwallner.quitzyn.data.StoreLinks
 import com.jackwallner.quitzyn.data.SubscriptionService
 import com.jackwallner.quitzyn.data.TrialSubsequentPitchGate
 import com.jackwallner.quitzyn.model.JourneyDays
+import com.jackwallner.quitzyn.model.SpendScale
 import com.jackwallner.quitzyn.ui.Format
 import com.jackwallner.quitzyn.ui.LocalGraph
 import com.jackwallner.quitzyn.ui.findActivity
@@ -116,7 +117,7 @@ fun OnboardingScreen() {
     var step by rememberSaveable { mutableIntStateOf(0) }
     var startDay by rememberSaveable { mutableStateOf(graph.clock.today().toString()) }
     var pouchesPerDay by rememberSaveable { mutableFloatStateOf(8f) }
-    var costPerCan by rememberSaveable { mutableDoubleStateOf(6.0) }
+    var costPerCan by rememberSaveable { mutableDoubleStateOf(SpendScale.current.defaultCanPrice) }
     var pouchesPerCan by rememberSaveable { mutableIntStateOf(15) }
     var reminderHour by rememberSaveable { mutableIntStateOf(9) }
     var trialInFlight by remember { mutableStateOf(false) }
@@ -511,10 +512,11 @@ private fun CanCard(costPerCan: Double, pouchesPerCan: Int, onCost: (Double) -> 
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text("Price", style = SoberType.caption(), color = Color.White.copy(alpha = 0.75f))
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(Space.m)) {
-                    StepButton("minus", "Lower can price") { onCost(maxOf(1.0, costPerCan - 0.5)) }
+                    val scale = remember { SpendScale.current }
+                    StepButton("minus", "Lower can price") { onCost(scale.clampedCanPrice(costPerCan - scale.canPriceStep)) }
                     Text(Format.currencyDecimal(costPerCan), style = SoberType.rounded(22.sp, FontWeight.Bold), color = Color.White,
-                        textAlign = TextAlign.Center, modifier = Modifier.widthIn(min = 56.dp))
-                    StepButton("plus", "Raise can price") { onCost(minOf(20.0, costPerCan + 0.5)) }
+                        textAlign = TextAlign.Center, maxLines = 1, softWrap = false, modifier = Modifier.widthIn(min = 56.dp))
+                    StepButton("plus", "Raise can price") { onCost(scale.clampedCanPrice(costPerCan + scale.canPriceStep)) }
                 }
             }
             Spacer(Modifier.weight(1f))

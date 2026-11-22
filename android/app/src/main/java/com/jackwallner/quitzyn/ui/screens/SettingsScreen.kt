@@ -44,6 +44,7 @@ import com.jackwallner.quitzyn.BuildConfig
 import com.jackwallner.quitzyn.data.PitchIntent
 import com.jackwallner.quitzyn.data.PitchPolicy
 import com.jackwallner.quitzyn.data.StoreLinks
+import com.jackwallner.quitzyn.model.SpendScale
 import com.jackwallner.quitzyn.ui.Format
 import com.jackwallner.quitzyn.ui.LocalGraph
 import com.jackwallner.quitzyn.ui.openUrl
@@ -74,6 +75,7 @@ fun SettingsScreen(onClose: () -> Unit) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val settings = store.settings
+    val spendScale = remember { SpendScale.current }
     val isPro = subscriptions.isPro
     var restoreMessage by remember { mutableStateOf<String?>(null) }
     var isRestoring by remember { mutableStateOf(false) }
@@ -212,9 +214,9 @@ fun SettingsScreen(onClose: () -> Unit) {
                             Text(Format.currencyDecimal(settings.costPerDayCents / 100.0), style = SoberType.body(), color = SoberColors.textSecondary)
                         },
                         canDecrement = settings.costPerDayCents > 0,
-                        canIncrement = settings.costPerDayCents < 20_000,
-                        onDecrement = { store.updateSettings { it.copy(costPerDayCents = maxOf(0, it.costPerDayCents - 100)) } },
-                        onIncrement = { store.updateSettings { it.copy(costPerDayCents = minOf(20_000, it.costPerDayCents + 100)) } },
+                        canIncrement = settings.costPerDayCents < spendScale.dailyCostMaxCents,
+                        onDecrement = { store.updateSettings { it.copy(costPerDayCents = maxOf(0, it.costPerDayCents - spendScale.dailyCostStepCents)) } },
+                        onIncrement = { store.updateSettings { it.copy(costPerDayCents = minOf(spendScale.dailyCostMaxCents, it.costPerDayCents + spendScale.dailyCostStepCents)) } },
                         decrementLabel = "Lower cost per day",
                         incrementLabel = "Raise cost per day",
                     )

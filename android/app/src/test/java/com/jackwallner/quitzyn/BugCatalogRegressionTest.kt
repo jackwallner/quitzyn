@@ -162,4 +162,39 @@ class BugCatalogRegressionTest {
         assertEquals(1, CravingEpisode.elapsedSeconds(shown = 0, startedAtMillis = startedAt, nowMillis = startedAt + 1_050))
         assertEquals("a clock set back never rewinds it", 40, CravingEpisode.elapsedSeconds(shown = 40, startedAtMillis = startedAt, nowMillis = startedAt - 5_000))
     }
+
+    // B2: can price and cost per day reach real prices in every currency
+
+    @Test fun b2_dollarAndEuroSteppersAreUnchanged() {
+        for (code in listOf("USD", "EUR", "GBP", null)) {
+            val scale = SpendScale(code)
+            assertEquals(1.0..20.0, scale.canPriceRange)
+            assertEquals(0.5, scale.canPriceStep, 0.0)
+            assertEquals(6.0, scale.defaultCanPrice, 0.0)
+            assertEquals(20_000, scale.dailyCostMaxCents)
+            assertEquals(100, scale.dailyCostStepCents)
+        }
+    }
+
+    /** A can costs roughly 50 to 150 in these currencies, and the old 1...20 stepper could not reach any of it. */
+    @Test fun b2_localCanPricesFitTheStepper() {
+        val typicalCan = mapOf("CZK" to 130.0, "SEK" to 55.0, "NOK" to 110.0, "DKK" to 45.0, "RUB" to 450.0, "UAH" to 200.0, "RON" to 25.0, "PLN" to 25.0)
+        for ((code, price) in typicalCan) {
+            val scale = SpendScale(code)
+            assertTrue("$code $price", price in scale.canPriceRange)
+            assertEquals("$code $price is not on the stepper's grid", price, scale.clampedCanPrice(price), 0.0)
+        }
+    }
+
+    @Test fun b2_settingsReachesANormalDailyCostInYenAndWon() {
+        assertTrue(SpendScale("JPY").dailyCostMaxCents >= 2_000 * 100)
+        assertTrue(SpendScale("KRW").dailyCostMaxCents >= 20_000 * 100)
+    }
+
+    @Test fun b2_clampingKeepsAPriceInsideTheRange() {
+        val czk = SpendScale("CZK")
+        assertEquals(czk.canPriceRange.endInclusive, czk.clampedCanPrice(9_999.0), 0.0)
+        assertEquals(czk.canPriceRange.start, czk.clampedCanPrice(0.0), 0.0)
+        assertEquals(6.5, SpendScale("USD").clampedCanPrice(6.3), 0.0)
+    }
 }
