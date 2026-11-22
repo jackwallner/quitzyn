@@ -14,9 +14,28 @@ object SoberEngine {
 
     fun changeStart(state: SoberState, start: Instant, clock: AppClock): SoberState {
         val active = JourneyDays.active(state) ?: return state
-        return state.copy(journeys = state.journeys.map {
+        return realignGardenToEditedStart(state.copy(journeys = state.journeys.map {
             if (it.id == active.id) it.copy(start = minOf(start, clock.now())) else it
-        })
+        }), clock)
+    }
+
+    /**
+     * `GardenService.realignToEditedStart`: brings the grove and the growth
+     * watermark back to a start date the user corrected. Both only ever grew,
+     * so a date set a year back by mistake left a finished tree in the grove
+     * and muted every growth celebration until the streak passed the wrong count.
+     */
+    private fun realignGardenToEditedStart(state: SoberState, clock: AppClock): SoberState {
+        val streak = JourneyDays.current(state, clock)
+        val garden = state.garden
+        val expected = garden.groveCountAtJourneyStart + GardenGrowth.cycle(streak).completed
+        val extraTrees = garden.completedTreeStyles.size - expected
+        val watermark = GardenGrowth.treeDays(streak, garden.carryoverDays)
+        if (extraTrees <= 0 && garden.watermark <= watermark) return state
+        return state.copy(garden = garden.copy(
+            completedTreeStyles = if (extraTrees > 0) garden.completedTreeStyles.dropLast(extraTrees) else garden.completedTreeStyles,
+            watermark = minOf(garden.watermark, watermark),
+        ))
     }
 
     fun resetCounter(state: SoberState, clock: AppClock): SoberState {
