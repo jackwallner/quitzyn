@@ -62,6 +62,7 @@ object SoberCodec {
                 put("outcomeRaw", entry.outcome.key)
                 putNullable("trigger", entry.trigger)
                 put("secondsElapsed", entry.secondsElapsed)
+                putNullable("timeZoneID", entry.timeZoneId)
             }
         }))
         put("garden", JSONObject().apply {
@@ -111,7 +112,7 @@ object SoberCodec {
                 CravingEpisode(it.getString("id"), Instant.parse(it.getString("startedAt")),
                     Instant.parse(it.getString("endedAt")), it.getInt("intensity").coerceIn(0, 5),
                     CravingOutcome.entries.first { outcome -> outcome.key == it.getString("outcomeRaw") },
-                    it.nullableString("trigger"), it.getInt("secondsElapsed").coerceAtLeast(0))
+                    it.nullableString("trigger"), it.getInt("secondsElapsed").coerceAtLeast(0), it.nullableString("timeZoneID"))
             },
             garden = GardenState(
                 vitality = garden.getDouble("vitality").coerceIn(0.3, 1.0),

@@ -89,7 +89,7 @@ fun PatternsScreen(backLabel: String, onBack: () -> Unit) {
                         style = SoberType.caption(), color = SoberColors.textTertiary, textAlign = TextAlign.Center,
                     )
                 }
-                if (cravings.size >= CravingInsights.MINIMUM_FOR_TIMING) HourChart(cravings.map { it.startedAt.atZone(zone).hour }, words.urges)
+                if (cravings.size >= CravingInsights.MINIMUM_FOR_TIMING) HourChart(cravings.map { it.startedAt.atZone(it.zone(zone)).hour }, words.urges)
                 insights.forEach { InsightCard(it) }
                 CravingInsights.nextUnlock(cravings, insights.size, words.urge, words.urges)?.let {
                     Text(it, style = SoberType.caption(), color = SoberColors.textSecondary, textAlign = TextAlign.Center,

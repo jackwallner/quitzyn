@@ -57,7 +57,15 @@ data class CravingEpisode(
     val outcome: CravingOutcome = CravingOutcome.UNRESOLVED,
     val trigger: String? = null,
     val secondsElapsed: Int = 0,
+    /**
+     * The zone the urge was logged in, so its hour reads as the user lived it
+     * after a trip or a move. Null on rows from before it was stored.
+     */
+    val timeZoneId: String? = null,
 ) {
+    /** The zone to read this urge's clock in; rows without one use the device's. */
+    fun zone(device: ZoneId): ZoneId = timeZoneId?.let { runCatching { ZoneId.of(it) }.getOrNull() } ?: device
+
     companion object {
         /** An unresolved session shorter than this was an accidental open (`CravingService`). */
         const val MINIMUM_UNRESOLVED_SECONDS = 8

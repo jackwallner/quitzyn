@@ -36,7 +36,7 @@ object CravingInsights {
     fun peakWindow(facts: List<CravingEpisode>, zone: ZoneId): Window? {
         if (facts.size < MINIMUM_FOR_TIMING) return null
         val counts = IntArray(24)
-        facts.forEach { counts[it.startedAt.atZone(zone).hour]++ }
+        facts.forEach { counts[it.startedAt.atZone(it.zone(zone)).hour]++ }
         var best = Window(0, -1)
         for (start in 0..23) {
             val count = (0..2).sumOf { counts[(start + it) % 24] }
@@ -56,7 +56,7 @@ object CravingInsights {
 
     fun hardestWeekday(facts: List<CravingEpisode>, zone: ZoneId): Weekday? {
         if (facts.size < MINIMUM_FOR_TIMING) return null
-        val best = facts.groupingBy { it.startedAt.atZone(zone).dayOfWeek.value % 7 + 1 }.eachCount()
+        val best = facts.groupingBy { it.startedAt.atZone(it.zone(zone)).dayOfWeek.value % 7 + 1 }.eachCount()
             .entries.sortedWith(compareByDescending<Map.Entry<Int, Int>> { it.value }.thenBy { it.key }).firstOrNull()
             ?: return null
         return Weekday(best.key, best.value).takeIf { it.count >= 2 }

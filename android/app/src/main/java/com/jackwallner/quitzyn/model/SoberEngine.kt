@@ -282,6 +282,7 @@ object SoberEngine {
         outcome = outcome,
         trigger = trigger,
         secondsElapsed = maxOf(0, seconds),
+        timeZoneId = clock.zone().id,
     ))
 
     fun putJournalEntry(state: SoberState, entry: JournalEntry, isPro: Boolean): SoberState {
