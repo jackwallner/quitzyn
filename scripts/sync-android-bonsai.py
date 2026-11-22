@@ -133,9 +133,15 @@ def exporter_sources(directory: Path) -> list[Path]:
 
 def build_exporter(directory: Path) -> Path:
     executable = directory / "export"
+    # `@State` is a macro in the current SDK, and bare swiftc does not look in
+    # the platform's plugin folder for it the way an Xcode build does.
+    platform = subprocess.run(
+        ["xcrun", "--sdk", "macosx", "--show-sdk-platform-path"], check=True, capture_output=True, text=True,
+    ).stdout.strip()
     subprocess.run(
         [
             "xcrun", "swiftc", "-O", "-swift-version", "5", "-target", "arm64-apple-macos14.0",
+            "-plugin-path", f"{platform}/Developer/usr/lib/swift/host/plugins",
             *map(str, exporter_sources(directory)), "-o", str(executable),
         ],
         check=True,
