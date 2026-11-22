@@ -155,14 +155,16 @@ object SoberEngine {
         val restartDay = maxOf(day, latestSlip).plusDays(1)
         val active = JourneyDays.active(next)
         val alreadyRestarted = active != null && active.start.atZone(clock.zone()).toLocalDate() >= restartDay
-        if (!alreadyRestarted) {
-            val endingOn = minOf(day.atStartOfDay(clock.zone()).toInstant(), clock.now())
-            val journeys = next.journeys.map {
-                if (it.id == active?.id) it.copy(end = maxOf(it.start, endingOn), resetReason = "slip") else it
-            }
-            val start = minOf(restartDay.atStartOfDay(clock.zone()).toInstant(), clock.now())
-            next = next.copy(journeys = journeys + Journey(start = start))
+        // The live run already starts after this day, so the day sits in a gap
+        // no run covers (a start date moved later in Settings). The counter
+        // stays put, and so does the tree.
+        if (alreadyRestarted) return next
+        val endingOn = minOf(day.atStartOfDay(clock.zone()).toInstant(), clock.now())
+        val journeys = next.journeys.map {
+            if (it.id == active?.id) it.copy(end = maxOf(it.start, endingOn), resetReason = "slip") else it
         }
+        val start = minOf(restartDay.atStartOfDay(clock.zone()).toInstant(), clock.now())
+        next = next.copy(journeys = journeys + Journey(start = start))
         val had = GardenGrowth.treeDays(previousStreak, state.garden.carryoverDays)
         return next.copy(garden = state.garden.copy(
             carryoverBeforeSlip = state.garden.carryoverDays,

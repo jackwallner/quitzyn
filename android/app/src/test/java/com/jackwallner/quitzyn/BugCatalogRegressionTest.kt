@@ -81,4 +81,28 @@ class BugCatalogRegressionTest {
         assertFalse(store.hasCheckedIn(store.today))
         assertNull(store.checkIn(store.today))
     }
+
+    // B6: a slip on a day no run covers leaves the tree alone
+
+    @Test fun b6_aSlipOnAGapDayLeavesTheTreeAndCounterAlone() {
+        // A run that a slip ended 25 days ago, then the live run's start moved
+        // later in Settings, leaving days no run covers.
+        startJourney(40)
+        store.recordSlip(day(25))
+        store.changeStart(start(19))
+        val gapDay = day(22)
+        assertEquals("precondition: no run covers the day", 0, store.streakDays(gapDay))
+        store.checkInToday()
+        val garden = store.state.garden
+        assertTrue("precondition: the tree carries days over from the slip", garden.carryoverDays > 0)
+        val counter = store.days
+
+        store.recordSlip(gapDay)
+
+        assertTrue(store.loggedSlip(gapDay))
+        assertEquals(counter, store.days)
+        assertEquals(garden.carryoverDays, store.state.garden.carryoverDays)
+        assertEquals(garden.vitality, store.state.garden.vitality, 0.0)
+        assertNotNull(store.state.garden.lastWateredAt)
+    }
 }
