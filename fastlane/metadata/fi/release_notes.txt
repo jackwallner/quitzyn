@@ -1,3 +1,1 @@
-Uutta: Nikotiiniton tammikuu -haaste. 18. joulukuuta alkaen se on Aikajana-näkymän ylimpänä. Jokainen nikotiiniton tammikuun päivä täyttää kuukauden, ja kaikki 31 ansaitsevat Tammikuu 2027 -merkin.
-
-Myös tässä päivityksessä: Kodin päivälaskuri ei enää näytä lukua kahteen kertaan, sekä korjauksia ja parannuksia.
+Taustaparannuksia ja virhekorjauksia, jotta Quit Zyn toimii sujuvasti. Kiitos, että olet mukana.

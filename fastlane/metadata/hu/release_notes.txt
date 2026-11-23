@@ -1,3 +1,1 @@
-Újdonság: a Nikotinmentes január kihívás. December 18-tól az Timeline tetején található. A január minden nikotinmentes napja kitölti a hónapot, és mind a 31 nap megszerzi a Január 2027 jelvényt.
-
-Ebben a frissítésben még: a napok száma a Kezdő oldalon már nem mutatja kétszer a számot, valamint javítások és fejlesztések.
+Háttérbeli fejlesztések és hibajavítások, hogy a Quit Zyn gördülékenyen működjön. Köszönjük, hogy itt vagy.

@@ -1,3 +1,1 @@
-Novo: izziv Januar brez nikotina. Od 18. decembra je čisto na vrhu zavihka Timeline. Vsak dan januarja brez nikotina zapolni mesec, vseh 31 pa ti prinese značko Januar 2027.
-
-Tudi v tej posodobitvi: števec dni na Domu ne prikazuje več številke dvakrat, poleg tega popravki in izboljšave.
+Izboljšave v ozadju in popravki napak, da Quit Zyn deluje gladko. Hvala, da ste z nami.

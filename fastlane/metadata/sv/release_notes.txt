@@ -1,3 +1,1 @@
-Nytt: utmaningen Nikotinfri januari. Från och med 18 december ligger den högst upp i Tidslinje. Varje nikotinfri dag i januari fyller månaden, och alla 31 ger dig märket Januari 2027.
-
-Även i den här uppdateringen: dagräknaren på Hem visar inte längre siffran två gånger, plus fixar och förbättringar.
+Förbättringar bakom kulisserna och buggfixar så att Quit Zyn fungerar smidigt. Tack för att du är här.

@@ -1,3 +1,1 @@
-Nieuw: de uitdaging Nicotinevrije januari. Vanaf 18 december staat die bovenaan in Tijdlijn. Elke nicotinevrije dag van januari vult de maand, en alle 31 leveren je de badge Januari 2027 op.
-
-Ook in deze update: de dagenteller op Vandaag toont het getal niet langer dubbel, plus fixes en verbeteringen.
+Verbeteringen achter de schermen en bugfixes zodat Quit Zyn soepel werkt. Bedankt dat je er bent.

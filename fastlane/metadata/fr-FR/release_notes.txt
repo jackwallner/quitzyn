@@ -1,3 +1,1 @@
-Nouveau : le défi Janvier sans nicotine. À partir du 18 décembre, il se trouve tout en haut de Timeline. Chaque jour sans nicotine de janvier remplit le mois, et les 31 jours vous valent le badge Janvier 2027.
-
-Aussi dans cette mise à jour : le compteur de jours dans Accueil n'affiche plus le chiffre en double, ainsi que des corrections et des améliorations.
+Améliorations en coulisses et corrections de bugs pour que Quit Zyn reste fluide. Merci d'être là.

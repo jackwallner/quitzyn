@@ -1,3 +1,1 @@
-Novidade: o desafio Janeiro Sem Nicotina. A partir de 18 de dezembro, ele fica no topo de Timeline. Cada dia de janeiro sem nicotina preenche o mês, e os 31 dias rendem a medalha Janeiro 2027.
-
-Também nesta atualização: a contagem de dias em Início não mostra mais o número duas vezes, além de correções e melhorias.
+Melhorias nos bastidores e correções de erros para o Quit Zyn funcionar melhor. Obrigado por estar aqui.

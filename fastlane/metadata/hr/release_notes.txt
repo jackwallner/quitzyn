@@ -1,3 +1,1 @@
-Novo: izazov Siječanj bez nikotina. Od 18. prosinca nalazi se na vrhu odjeljka Timeline. Svaki dan u siječnju bez nikotina popunjava mjesec, a svih 31 donosi ti značku Siječanj 2027.
-
-Također u ovom ažuriranju: broj dana na Početnoj više ne prikazuje broj dvaput, uz ispravke i poboljšanja.
+Poboljšanja u pozadini i ispravci grešaka kako bi Quit Zyn radio glatko. Hvala što ste tu.

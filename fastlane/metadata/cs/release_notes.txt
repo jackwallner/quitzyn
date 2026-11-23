@@ -1,3 +1,1 @@
-Novinka: výzva Leden bez nikotinu. Od 18. prosince je úplně nahoře v sekci Časová osa. Každý den ledna bez nikotinu vyplní měsíc a všech 31 dní vám přinese odznak Leden 2027.
-
-V této aktualizaci také: počet dní na Domů už nezobrazuje číslo dvakrát, a navíc opravy a vylepšení.
+Vylepšení na pozadí a opravy chyb, aby Quit Zyn běžel hladce. Děkujeme, že jste tu.

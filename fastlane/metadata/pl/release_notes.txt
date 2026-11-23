@@ -1,3 +1,1 @@
-Nowość: wyzwanie Styczeń bez nikotyny. Od 18 grudnia znajduje się na samej górze zakładki Oś czasu. Każdy dzień stycznia bez nikotyny wypełnia miesiąc, a wszystkie 31 dają odznakę Styczeń 2027.
-
-Także w tej aktualizacji: licznik dni na Start nie pokazuje już liczby dwa razy, a do tego poprawki i ulepszenia.
+Ulepszenia w tle i poprawki błędów, aby Quit Zyn działał płynnie. Dziękujemy, że jesteś.

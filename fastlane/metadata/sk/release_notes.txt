@@ -1,3 +1,1 @@
-Novinka: výzva Január bez nikotínu. Od 18. decembra je úplne hore v sekcii Časová os. Každý deň januára bez nikotínu vyplní mesiac a všetkých 31 dní ti prinesie odznak Január 2027.
-
-V tejto aktualizácii tiež: počet dní v časti Domov už nezobrazuje číslo dvakrát, a navyše opravy a vylepšenia.
+Vylepšenia na pozadí a opravy chýb, aby Quit Zyn fungoval hladko. Ďakujeme, že ste tu.

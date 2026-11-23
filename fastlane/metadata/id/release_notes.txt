@@ -1,3 +1,1 @@
-Baru: tantangan Januari Bebas Nikotin. Mulai 18 Desember, tantangan ini ada di bagian paling atas Timeline. Setiap hari Januari tanpa nikotin mengisi bulannya, dan ke-31 harinya memberimu lencana Januari 2027.
-
-Juga di pembaruan ini: hitungan hari di Beranda tidak lagi menampilkan angkanya dua kali, plus perbaikan dan peningkatan.
+Peningkatan di balik layar dan perbaikan bug agar Quit Zyn berjalan lancar. Terima kasih telah hadir.
