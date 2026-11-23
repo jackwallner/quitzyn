@@ -70,11 +70,14 @@ struct WindClock<Content: View>: View {
     @State private var pausedAt: Date?
 
     private var paused: Bool { scenePhase != .active || !onScreen }
+    /// Store-screenshot launches draw the still tree; a 60 fps redraw keeps the
+    /// app from idling, so XCTest's accessibility audit times out on this screen.
+    private var still: Bool { reduceMotion || ProcessInfo.processInfo.arguments.contains("-QuitZynScreenshot") }
 
     var body: some View {
-        SwiftUI.TimelineView(.animation(minimumInterval: 1.0 / 60, paused: paused || reduceMotion)) { tl in
+        SwiftUI.TimelineView(.animation(minimumInterval: 1.0 / 60, paused: paused || still)) { tl in
             let now = pausedAt ?? tl.date
-            content(reduceMotion ? nil : BonsaiWind(t: now.timeIntervalSince(start) * 1000))
+            content(still ? nil : BonsaiWind(t: now.timeIntervalSince(start) * 1000))
         }
         .onAppear { onScreen = true }
         .onDisappear { onScreen = false }
