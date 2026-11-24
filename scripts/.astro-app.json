@@ -1,20 +1,11 @@
 {
   "appId": "6784788496",
+  "appName": "Quit Zyn: Pouch & Snus Tracker",
   "appStoreId": "6784788496",
-  "researchAppId": "113",
-  "researchAppName": "NicFree (ASO research)",
-  "appName": "Quit Zyn",
   "bundleId": "com.jackwallner.quitzyn",
   "store": "us",
-  "syncedAt": "2026-06-27T00:00:00Z",
-  "note": "6784788496 not yet indexable in Astro; US keyword research uses temp app 113.",
-  "allAstroStores": [
-    "ae", "al", "am", "ar", "at", "au", "az", "be", "bg", "bh", "bo", "br", "ca", "ch",
-    "cl", "cn", "co", "cr", "cy", "cz", "de", "dk", "do", "dz", "ec", "ee", "eg", "es",
-    "fi", "fr", "gb", "gh", "gr", "gt", "hk", "hn", "hr", "hu", "id", "ie", "il", "in",
-    "iq", "is", "it", "jo", "jp", "ke", "kg", "kh", "kr", "kw", "kz", "lb", "lk", "lu",
-    "lv", "ma", "mn", "mo", "mx", "my", "nl", "no", "np", "nz", "om", "pa", "pe", "ph",
-    "pk", "pl", "pt", "py", "qa", "ro", "ru", "sa", "se", "sg", "si", "sk", "sv", "th",
-    "tr", "tw", "ua", "us", "uz", "vn", "za"
-  ]
+  "temporary": false,
+  "keywordCount": 85,
+  "researchAppId": "113",
+  "syncedAt": "2026-07-28"
 }

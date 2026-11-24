@@ -16,15 +16,13 @@ final class ReleaseJourneysUITests: XCTestCase {
         tap("Continue", in: app)
         QA.checkpoint(app, "daily-spend")
         tap("Continue", in: app)
-        XCTAssertTrue(button("Get started", in: app).waitForExistence(timeout: 15))
-        QA.checkpoint(app, "onboarding-trial", paywall: true)
-        tap("Get started", in: app)
-        XCTAssertTrue(app.alerts.firstMatch.waitForExistence(timeout: 5))
-        app.alerts.buttons.firstMatch.tap()
         QA.checkpoint(app, "reminder")
         tap("Continue", in: app)
         QA.checkpoint(app, "commitment")
         tap("Not now", in: app)
+        XCTAssertTrue(text("Make your commitment count", in: app).waitForExistence(timeout: 20))
+        QA.checkpoint(app, "onboarding-trial", paywall: true)
+        tap("Get Started", in: app)
         let craving = cravingButton(in: app)
         XCTAssertTrue(craving.waitForExistence(timeout: 20))
         QA.checkpoint(app, "first-garden")
@@ -142,7 +140,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         "Get started": "Los geht's",
         "Continue": "Weiter",
         "Not now": "Nicht jetzt",
-        "Keep the free version?": "Kostenlose Version behalten?",
+        "Make your commitment count": "Lass deine Entscheidung zählen",
         "I'm through it": "Ich hab's geschafft",
         "It passed": "Es ist vorbei",
         "Logged.": "Eingetragen.",
