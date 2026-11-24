@@ -74483,6 +74483,965 @@
           }
         }
       }
+    },
+    "Make your commitment count": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Make your commitment count"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lass deine Entscheidung zählen"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пусть ваше решение принесёт плоды"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ať vaše rozhodnutí něco znamená"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Låt ditt beslut räknas"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anna päätöksellesi merkitys"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laat je besluit tellen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz que tu compromiso cuente"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Få dit løfte til at tælle"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niech twoja decyzja się liczy"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nech tvoje rozhodnutie niečo znamená"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La beslutningen din telle"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faceți ca angajamentul să conteze"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нехай ваше рішення важить"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fai valere il tuo impegno"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "让你的决定更有分量"
+          }
+        }
+      }
+    },
+    "You just committed. Try every tool that keeps you nicotine-free, free.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You just committed. Try every tool that keeps you nicotine-free, free."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du hast dich gerade entschieden. Teste jedes Werkzeug, das dich nikotinfrei hält, kostenlos."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вы только что приняли решение. Попробуйте бесплатно все инструменты, которые помогают не возвращаться к никотину."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Právě jste se rozhodli. Vyzkoušejte zdarma všechny nástroje, které vám pomáhají zůstat bez nikotinu."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du har just bestämt dig. Testa alla verktyg som håller dig nikotinfri, gratis."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teit juuri päätöksen. Kokeile kaikkia nikotiinittomuutta tukevia työkaluja ilmaiseksi."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je hebt net een besluit genomen. Probeer alle tools die je nicotinevrij houden gratis."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acabas de comprometerte. Prueba gratis todas las herramientas que te mantienen sin nicotina."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du har lige truffet en beslutning. Prøv alle værktøjer, der holder dig nikotinfri, gratis."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decyzja podjęta. Wypróbuj za darmo wszystkie narzędzia, które pomagają wytrwać bez nikotyny."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozhodnutie padlo. Vyskúšaj zadarmo všetky nástroje, ktoré ti pomáhajú zostať bez nikotínu."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du har nettopp bestemt deg. Prøv alle verktøyene som holder deg nikotinfri, gratis."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocmai v-ați angajat. Încercați gratuit toate instrumentele care vă ajută să rămâneți fără nicotină."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ви щойно ухвалили рішення. Спробуйте безкоштовно всі інструменти, які допомагають залишатися без нікотину."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hai appena preso un impegno. Prova gratis tutti gli strumenti che ti aiutano a restare senza nicotina."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你刚刚下定决心。免费试用所有帮你远离尼古丁的工具。"
+          }
+        }
+      }
+    },
+    "Full health timeline with 13 nicotine-recovery milestones": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full health timeline with 13 nicotine-recovery milestones"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollständiger Gesundheitsverlauf mit 13 Meilensteinen der Erholung nach dem Nikotinstopp"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Полная хронология здоровья: 13 этапов восстановления после отказа от никотина"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Úplná časová osa zdraví s 13 milníky zotavování po nikotinu"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hela hälsotidslinjen med 13 milstolpar i nikotinåterhämtningen"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koko terveysaikajana ja 13 nikotiinista toipumisen virstanpylvästä"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volledige gezondheidstijdlijn met 13 mijlpalen over nicotineherstel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronología de salud completa con 13 hitos de recuperación tras dejar la nicotina"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hele sundhedstidslinjen med 13 milepæle for bedring efter nikotinstop"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pełna oś czasu zdrowia z 13 etapami zmian po odstawieniu nikotyny"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Celá časová os zdravia s 13 míľnikmi zmien po vysadení nikotínu"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hele helsetidslinjen med 13 helseendringer etter nikotinstopp"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronologia completă a sănătății, cu 13 repere după renunțarea la nicotină"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повна хронологія здоров'я: 13 етапів змін після відмови від нікотину"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronologia completa della salute con 13 traguardi dopo aver smesso con la nicotina"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完整健康时间线，含 13 个戒除尼古丁里程碑"
+          }
+        }
+      }
+    },
+    "Daily journal prompts for the hard days": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily journal prompts for the hard days"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tägliche Tagebuchfragen für schwere Tage"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ежедневные вопросы для дневника на трудные дни"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denní otázky do deníku na těžké dny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dagliga dagboksfrågor för tunga dagar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Päivittäiset päiväkirjakysymykset vaikeisiin päiviin"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dagelijkse dagboekvragen voor de zware dagen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preguntas diarias para tu diario en los días difíciles"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daglige dagbogsspørgsmål til de svære dage"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Codzienne pytania do dziennika na trudne dni"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denné otázky do denníka na ťažké dni"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daglige dagbokspørsmål for de vanskelige dagene"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Întrebări zilnice pentru jurnal în zilele dificile"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Щоденні питання для щоденника у важкі дні"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domande quotidiane per il diario nei giorni difficili"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "难熬日子里的每日日记提问"
+          }
+        }
+      }
+    },
+    "Money and pouches avoided, tracked automatically": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Money and pouches avoided, tracked automatically"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespartes Geld und vermiedene Nikotinbeutel, automatisch erfasst"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сэкономленные деньги и паучи считаются автоматически"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ušetřené peníze a nespotřebované sáčky se počítají automaticky"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparade pengar och undvikna påsar, räknas automatiskt"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Säästetyt rahat ja väliin jääneet pussit lasketaan automaattisesti"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bespaard geld en vermeden zakjes, automatisch bijgehouden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dinero y bolsitas evitadas, calculados automáticamente"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparede penge og undgåede poser, registreret automatisk"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaoszczędzone pieniądze i saszetki liczone automatycznie"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ušetrené peniaze a vynechané vrecúška sa rátajú automaticky"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spart penger og unngåtte poser, registrert automatisk"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bani economisiți și pliculețe evitate, calculate automat"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заощаджені гроші та пакетики рахуються автоматично"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soldi e bustine risparmiati, calcolati in automatico"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动记录省下的钱和没用的尼古丁袋"
+          }
+        }
+      }
+    },
+    "Money and pouches avoided, on pace for %@ a year": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Money and pouches avoided, on pace for %@ a year"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespartes Geld und vermiedene Nikotinbeutel, auf Kurs für %1$@ im Jahr"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сэкономленные деньги и паучи: за год выйдет около %1$@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ušetřené peníze a sáčky: za rok to vychází na %1$@"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparade pengar och undvikna påsar, i takt med %1$@ per år"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Säästetyt rahat ja pussit: vuodessa noin %1$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bespaard geld en vermeden zakjes, op koers voor %1$@ per jaar"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dinero y bolsitas evitadas: vas camino de %1$@ al año"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparede penge og undgåede poser, på vej mod %1$@ om året"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaoszczędzone pieniądze i saszetki: w skali roku około %1$@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ušetrené peniaze a vrecúška: za rok to vychádza na %1$@"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spart penger og unngåtte poser, på vei mot %1$@ i året"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bani economisiți și pliculețe evitate: în ritmul acesta, %1$@ pe an"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заощаджені гроші та пакетики: за рік вийде близько %1$@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soldi e bustine risparmiati: in un anno circa %1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "省下的钱和尼古丁袋：按此速度一年约 %1$@"
+          }
+        }
+      }
+    },
+    "You just committed. Try every tool that keeps you nicotine-free, free for %lld days.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "You just committed. Try every tool that keeps you nicotine-free, free for %lld day."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "You just committed. Try every tool that keeps you nicotine-free, free for %lld days."
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du hast dich gerade entschieden. Teste jedes Werkzeug, das dich nikotinfrei hält, %1$lld Tag kostenlos."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du hast dich gerade entschieden. Teste jedes Werkzeug, das dich nikotinfrei hält, %1$lld Tage kostenlos."
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Вы только что приняли решение. Попробуйте бесплатно %1$lld день все инструменты, которые помогают не возвращаться к никотину."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Вы только что приняли решение. Попробуйте бесплатно %1$lld дня все инструменты, которые помогают не возвращаться к никотину."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Вы только что приняли решение. Попробуйте бесплатно %1$lld дней все инструменты, которые помогают не возвращаться к никотину."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Вы только что приняли решение. Попробуйте бесплатно %1$lld дня все инструменты, которые помогают не возвращаться к никотину."
+                }
+              }
+            }
+          }
+        },
+        "cs": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Právě jste se rozhodli. Vyzkoušejte %1$lld den zdarma všechny nástroje, které vám pomáhají zůstat bez nikotinu."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Právě jste se rozhodli. Vyzkoušejte %1$lld dny zdarma všechny nástroje, které vám pomáhají zůstat bez nikotinu."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Právě jste se rozhodli. Vyzkoušejte %1$lld dne zdarma všechny nástroje, které vám pomáhají zůstat bez nikotinu."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Právě jste se rozhodli. Vyzkoušejte %1$lld dní zdarma všechny nástroje, které vám pomáhají zůstat bez nikotinu."
+                }
+              }
+            }
+          }
+        },
+        "sv": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har just bestämt dig. Testa alla verktyg som håller dig nikotinfri, gratis i %1$lld dag."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har just bestämt dig. Testa alla verktyg som håller dig nikotinfri, gratis i %1$lld dagar."
+                }
+              }
+            }
+          }
+        },
+        "fi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Teit juuri päätöksen. Kokeile kaikkia nikotiinittomuutta tukevia työkaluja ilmaiseksi %1$lld päivän ajan."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Teit juuri päätöksen. Kokeile kaikkia nikotiinittomuutta tukevia työkaluja ilmaiseksi %1$lld päivän ajan."
+                }
+              }
+            }
+          }
+        },
+        "nl": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Je hebt net een besluit genomen. Probeer alle tools die je nicotinevrij houden %1$lld dag gratis."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Je hebt net een besluit genomen. Probeer alle tools die je nicotinevrij houden %1$lld dagen gratis."
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Acabas de comprometerte. Prueba gratis durante %1$lld día todas las herramientas que te mantienen sin nicotina."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Acabas de comprometerte. Prueba gratis durante %1$lld días todas las herramientas que te mantienen sin nicotina."
+                }
+              }
+            }
+          }
+        },
+        "da": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har lige truffet en beslutning. Prøv alle værktøjer, der holder dig nikotinfri, gratis i %1$lld dag."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har lige truffet en beslutning. Prøv alle værktøjer, der holder dig nikotinfri, gratis i %1$lld dage."
+                }
+              }
+            }
+          }
+        },
+        "pl": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Decyzja podjęta. Wypróbuj za darmo przez %1$lld dzień wszystkie narzędzia, które pomagają wytrwać bez nikotyny."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Decyzja podjęta. Wypróbuj za darmo przez %1$lld dni wszystkie narzędzia, które pomagają wytrwać bez nikotyny."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Decyzja podjęta. Wypróbuj za darmo przez %1$lld dni wszystkie narzędzia, które pomagają wytrwać bez nikotyny."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Decyzja podjęta. Wypróbuj za darmo przez %1$lld dnia wszystkie narzędzia, które pomagają wytrwać bez nikotyny."
+                }
+              }
+            }
+          }
+        },
+        "sk": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Rozhodnutie padlo. Vyskúšaj zadarmo na %1$lld deň všetky nástroje, ktoré ti pomáhajú zostať bez nikotínu."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Rozhodnutie padlo. Vyskúšaj zadarmo na %1$lld dni všetky nástroje, ktoré ti pomáhajú zostať bez nikotínu."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Rozhodnutie padlo. Vyskúšaj zadarmo na %1$lld dňa všetky nástroje, ktoré ti pomáhajú zostať bez nikotínu."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Rozhodnutie padlo. Vyskúšaj zadarmo na %1$lld dní všetky nástroje, ktoré ti pomáhajú zostať bez nikotínu."
+                }
+              }
+            }
+          }
+        },
+        "nb": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har nettopp bestemt deg. Prøv alle verktøyene som holder deg nikotinfri, gratis i %1$lld dag."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Du har nettopp bestemt deg. Prøv alle verktøyene som holder deg nikotinfri, gratis i %1$lld dager."
+                }
+              }
+            }
+          }
+        },
+        "ro": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Tocmai v-ați angajat. Încercați gratuit, timp de %1$lld zi, toate instrumentele care vă ajută să rămâneți fără nicotină."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Tocmai v-ați angajat. Încercați gratuit, timp de %1$lld zile, toate instrumentele care vă ajută să rămâneți fără nicotină."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Tocmai v-ați angajat. Încercați gratuit, timp de %1$lld de zile, toate instrumentele care vă ajută să rămâneți fără nicotină."
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ви щойно ухвалили рішення. Спробуйте безкоштовно протягом %1$lld дня всі інструменти, які допомагають залишатися без нікотину."
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ви щойно ухвалили рішення. Спробуйте безкоштовно протягом %1$lld днів всі інструменти, які допомагають залишатися без нікотину."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ви щойно ухвалили рішення. Спробуйте безкоштовно протягом %1$lld днів всі інструменти, які допомагають залишатися без нікотину."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ви щойно ухвалили рішення. Спробуйте безкоштовно протягом %1$lld дня всі інструменти, які допомагають залишатися без нікотину."
+                }
+              }
+            }
+          }
+        },
+        "it": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Hai appena preso un impegno. Prova gratis per %1$lld giorno tutti gli strumenti che ti aiutano a restare senza nicotina."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Hai appena preso un impegno. Prova gratis per %1$lld giorni tutti gli strumenti che ti aiutano a restare senza nicotina."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "你刚刚下定决心。免费试用 %1$lld 天，解锁所有帮你远离尼古丁的工具。"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "version": "1.1"

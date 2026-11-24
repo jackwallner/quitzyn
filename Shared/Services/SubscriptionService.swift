@@ -465,11 +465,11 @@ final class SubscriptionService: NSObject {
         return trialPackages.first { $0.soberPackageKind == preferredKind }
     }
 
-    /// Monthly first for the one-tap onboarding trial (2026-10-16), matching
-    /// Sober. A yearly CTA sends Apple's sheet to the full year's price, and
-    /// fleet-wide the onboarding pages that sell a monthly trial convert best
-    /// (Mahj, 129 of 130 trials monthly, 43% of viewers). The paywall keeps
-    /// its own default; this only picks what the onboarding button buys.
+    /// Monthly first for the one-tap onboarding trial, as Quit Zyn's own page
+    /// sold it from Aug 11 to Oct 6 (8.0% of new customers started a trial,
+    /// $0.52 per customer). The yearly button of 1.2.7 fell to 2.9% and $0.
+    /// The paywall keeps its own default; this only picks what the onboarding
+    /// button buys.
     nonisolated static func preferredTrialKind(from kinds: [SoberPackageKind]) -> SoberPackageKind? {
         if kinds.contains(.monthly) { return .monthly }
         if kinds.contains(.yearly) { return .yearly }
