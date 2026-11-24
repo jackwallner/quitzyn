@@ -26,13 +26,13 @@ A virtual garden that grows from seed to ancient tree as your streak continues. 
 
 ### Body recovery timeline
 
-13 health benefits backed by the ACS, NCI, and AHA. See nicotine clear at 24h, cravings ease at 3 days, and circulation improve over weeks.
+The first 5 health milestones are free, each backed by a public health source such as the ACS or NCI.
 
 ### Full health timeline
 
-See all 13 benefits with detailed explanations and source links. See the complete picture of your body's recovery.
+All 13 milestones, from 2 hours to 1 year without nicotine, each with what the ACS, NCI or another public health source reports at that point, and a link to it.
 
-Included with Pro
+Included with Bloom+
 
 ### See your progress
 
@@ -42,7 +42,7 @@ A color-coded calendar showing nicotine-free (green), slip (red), and yet to che
 
 Daily reflection prompts, freeform writing, and a feeling picker. All entries are private and stored locally on your device.
 
-Included with Pro
+Included with Bloom+
 
 ### Achievements
 
@@ -52,7 +52,7 @@ Included with Pro
 
 See how much money, how many pouches, and how much nicotine you've avoided since starting. Set your own daily cost and pouch estimates.
 
-Included with Pro
+Included with Bloom+
 
 ### At a glance
 
