@@ -69,11 +69,16 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   money/pouches/nicotine saved, craving patterns, additional garden species.
 
 ## App-specific notes
-- Ratings: no in-app rating question (App Review 5.6.1). After a **daily
-  check-in**, a **ridden-out craving** or a **garden growth celebration**, Home
-  calls the system `requestReview()` about 3.5s later if nothing is over it
-  (from the 2nd launch, 30-day cooldown). Settings has separate "Send Feedback"
-  and "Rate Quit Zyn" rows. App Store ID `6784788496`. (Shared rules in the
+- Ratings: no in-app rating question (App Review 5.6.1). The only automatic
+  ask is `requestReview()` on Home about 3.5s after a good result (`ReviewMoment`):
+  a **daily check-in**, a **welcome-back "Still nicotine-free"**, a **garden
+  growth celebration**, or a **craving ridden out** (never one that was given in
+  to or left unanswered). It re-checks that Home is on screen with no sheet,
+  alert, cover, trial offer or paywall over it, else the moment is dropped and
+  the next one asks. Gates: 2nd launch, 30-day cooldown stamped when the call
+  is made, opening the write-review page ends the asks, feedback never does,
+  never before onboarding is done. Settings has separate "Send Feedback" and
+  "Rate Quit Zyn" rows. App Store ID `6784788496`. (Shared rules in the
   `ios-dev` skill.)
 - `Sober.storekit` tests the paywall in the simulator without RevenueCat dashboard config.
 - A started trial is tracked by `TrialLifecycle`, which asks for notification permission
