@@ -544,7 +544,10 @@ struct PaywallView: View {
                 }
             } catch {
                 ConversionDiagnostics.record(.purchaseFailed)
-                errorMessage = String(localized: "Couldn't complete the purchase. Please try again.")
+                errorMessage = SubscriptionService.purchaseFailureMessage(
+                    for: error,
+                    fallback: String(localized: "Couldn't complete the purchase. Please try again.")
+                )
             }
         }
     }

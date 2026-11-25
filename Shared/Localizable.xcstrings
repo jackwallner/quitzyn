@@ -70099,107 +70099,6 @@
         }
       }
     },
-    "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile.": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dein Kauf wartet auf die Genehmigung. Bloom+ wird automatisch freigeschaltet, sobald der Kauf bestätigt ist. In der Zwischenzeit kannst du die kostenlose Version weiter nutzen."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ваша покупка ожидает одобрения. Bloom+ автоматически откроется, когда покупка будет одобрена. А пока вы можете пользоваться бесплатной версией."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Váš nákup čeká na schválení. Bloom+ se automaticky odemkne po potvrzení nákupu. Mezitím můžete dál používat bezplatnou verzi."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ditt köp väntar på godkännande. Bloom+ låses upp automatiskt när köpet har bekräftats. Under tiden kan du fortsätta använda gratisversionen."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ostoksesi odottaa hyväksyntää. Bloom+ avautuu automaattisesti, kun osto vahvistetaan. Sillä välin voit jatkaa ilmaisen version käyttöä."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Je aankoop wacht op goedkeuring. Bloom+ wordt automatisch ontgrendeld zodra de aankoop is bevestigd. Tot die tijd kun je de gratis versie blijven gebruiken."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu compra está pendiente de aprobación. Bloom+ se desbloqueará automáticamente cuando se confirme. Mientras tanto, puedes seguir usando la versión gratis."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dit køb afventer godkendelse. Bloom+ låses automatisk op, når købet er bekræftet. Indtil da kan du fortsætte med gratisversionen."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Twój zakup czeka na zatwierdzenie. Po jego potwierdzeniu Bloom+ odblokuje się automatycznie. W międzyczasie możesz korzystać z wersji bezpłatnej."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tvoj nákup čaká na schválenie. Po potvrdení sa Bloom+ odomkne automaticky. Dovtedy môžeš používať bezplatnú verziu."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kjøpet ditt venter på godkjenning. Bloom+ låses opp automatisk når kjøpet er bekreftet. I mellomtiden kan du bruke gratisversjonen."
-          }
-        },
-        "ro": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Achiziția dvs. așteaptă aprobarea. Bloom+ se va activa automat după confirmare. Între timp, puteți folosi versiunea gratuită."
-          }
-        },
-        "uk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ваша покупка очікує на схвалення. Після підтвердження Bloom+ розблокується автоматично. Тим часом ви можете користуватися безкоштовною версією."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Il tuo acquisto è in attesa di approvazione. Dopo la conferma, Bloom+ si sbloccherà automaticamente. Nel frattempo puoi continuare a usare la versione gratuita."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "购买正在等待批准。确认后，Bloom+ 会自动解锁；在此期间，你仍可使用免费版。"
-          }
-        }
-      }
-    },
     "Your tree joins the grove": {
       "extractionState": "manual",
       "localizations": {
@@ -75439,6 +75338,107 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "Waiting for approval. Your purchase unlocks once it is approved.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for approval. Your purchase unlocks once it is approved."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warte auf Genehmigung. Dein Kauf wird freigeschaltet, sobald er genehmigt ist."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ожидание подтверждения. Покупка откроется после одобрения."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čeká se na schválení. Nákup se odemkne, jakmile bude schválen."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Väntar på godkännande. Ditt köp låses upp när det har godkänts."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odotetaan hyväksyntää. Ostos avautuu, kun se on hyväksytty."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wachten op goedkeuring. Je aankoop wordt ontgrendeld zodra deze is goedgekeurd."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esperando aprobación. Tu compra se desbloqueará cuando se apruebe."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Venter på godkendelse. Dit køb låses op, når det er godkendt."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oczekiwanie na zatwierdzenie. Zakup zostanie odblokowany po zatwierdzeniu."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čaká sa na schválenie. Nákup sa odomkne po jeho schválení."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Venter på godkjenning. Kjøpet ditt låses opp når det er godkjent."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se așteaptă aprobarea. Achiziția se deblochează după ce este aprobată."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Очікування схвалення. Покупку буде розблоковано після схвалення."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In attesa di approvazione. L'acquisto si sblocca una volta approvato."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在等待批准。购买获批后即会解锁。"
           }
         }
       }

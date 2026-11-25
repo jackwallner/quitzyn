@@ -30,6 +30,8 @@ struct OnboardingView: View {
     @State private var trialResolutionInFlight = false
     @State private var trialResolutionError: String?
     @State private var trialError: String?
+    /// An Ask to Buy waiting on approval: a calm line, not an error.
+    @State private var trialPendingApproval = false
     @State private var restoreInFlight = false
     @State private var showPaywallFallback = false
     @State private var didShowOnboardingTrial = false
@@ -494,11 +496,22 @@ struct OnboardingView: View {
 
             if let trialError {
                 errorLine(trialError)
+            } else if trialPendingApproval {
+                pendingLine(SubscriptionService.pendingApprovalMessage)
             }
         }
     }
 
     private static let trialFailureCopy = String(localized: "Couldn't start your trial. Please try again.")
+
+    private func pendingLine(_ text: String) -> some View {
+        Text(text)
+            .font(Theme.caption(weight: .semibold))
+            .foregroundStyle(.white.opacity(0.85))
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+    }
 
     private func errorLine(_ text: String) -> some View {
         Text(text)
@@ -732,6 +745,7 @@ struct OnboardingView: View {
         }
         ConversionDiagnostics.record(.trialCTATapped)
         trialError = nil
+        trialPendingApproval = false
         trialInFlight = true
         Task { @MainActor in
             defer { trialInFlight = false }
@@ -745,14 +759,14 @@ struct OnboardingView: View {
                     // Not finishing: leaving here made an Ask to Buy look like a
                     // trial that never started. The isProSubscriber change
                     // finishes once approved, and the free option stays available.
-                    trialError = SubscriptionService.pendingApprovalMessage
+                    trialPendingApproval = true
                 case .cancelled:
                     // Backing out of Apple's sheet returns the same screen.
                     ConversionDiagnostics.record(.purchaseCancelled)
                 }
             } catch {
                 ConversionDiagnostics.record(.purchaseFailed)
-                trialError = Self.trialFailureCopy
+                trialError = SubscriptionService.purchaseFailureMessage(for: error, fallback: Self.trialFailureCopy)
             }
         }
         #else
@@ -769,6 +783,7 @@ struct OnboardingView: View {
         Task { @MainActor in
             defer { restoreInFlight = false }
             trialError = nil
+            trialPendingApproval = false
             await subscriptions.restorePurchases()
             if subscriptions.isProSubscriber {
                 completeOnboarding()
