@@ -672,11 +672,11 @@ struct OnboardingView: View {
                     .legalTarget()
             }
             .disabled(restoreInFlight)
-            Text("·")
+            legalSeparator
             Link(destination: PaywallLinks.standardEULA) {
                 Text("Terms of Use").legalTarget()
             }
-            Text("·")
+            legalSeparator
             Link(destination: PaywallLinks.privacyPolicy) {
                 Text("Privacy Policy").legalTarget()
             }
@@ -684,6 +684,11 @@ struct OnboardingView: View {
         .font(Theme.caption(weight: .medium))
         .foregroundStyle(.white)
         .tint(.white)
+    }
+
+    /// Kept clear of the links' tap frames so the dot never reads as part of "Restore".
+    private var legalSeparator: some View {
+        Text(verbatim: "·").padding(.horizontal, 3).accessibilityHidden(true)
     }
 
     private func formatHour(_ h: Int) -> String {
