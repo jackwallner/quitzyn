@@ -19,6 +19,8 @@ struct TrialOfferSheet: View {
     let directPurchase: Bool
     let isPurchasing: Bool
     let errorMessage: String?
+    /// An Ask to Buy waiting on approval: shown calmly, not as an error.
+    var isPendingApproval = false
     let onStartTrial: () -> Void
     let onSeeAllPlans: () -> Void
     let onDismiss: () -> Void
@@ -102,6 +104,11 @@ struct TrialOfferSheet: View {
                     Text(errorMessage)
                         .font(Theme.caption())
                         .foregroundStyle(Theme.danger)
+                        .multilineTextAlignment(.center)
+                } else if isPendingApproval {
+                    Text(SubscriptionService.pendingApprovalMessage)
+                        .font(Theme.caption())
+                        .foregroundStyle(Theme.textSecondary)
                         .multilineTextAlignment(.center)
                 }
 

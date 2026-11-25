@@ -421,6 +421,9 @@ struct MainTabView: View {
     @State private var trialOfferFocus: BloomFeature?
     @State private var trialPurchaseInFlight = false
     @State private var trialPurchaseError: String?
+    /// An Ask to Buy waiting on approval. Cleared with the sheet, so a later
+    /// opening never starts on a stale "waiting" line.
+    @State private var trialPurchasePending = false
     @State private var timeline = TimelineSelection()
     @State private var paneGeometry = PaneGeometry()
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
@@ -572,6 +575,7 @@ struct MainTabView: View {
         .sheet(isPresented: $showTrialOffer, onDismiss: {
             trialPurchaseInFlight = false
             trialPurchaseError = nil
+            trialPurchasePending = false
             if pendingPaywallAfterTrialDismiss {
                 pendingPaywallAfterTrialDismiss = false
                 showTrialPaywall = true
@@ -586,6 +590,7 @@ struct MainTabView: View {
                 directPurchase: hasDirectTrialPackage,
                 isPurchasing: trialPurchaseInFlight,
                 errorMessage: trialPurchaseError,
+                isPendingApproval: trialPurchasePending,
                 onStartTrial: startDirectTrialPurchase,
                 onSeeAllPlans: {
                     pendingPaywallAfterTrialDismiss = true
@@ -660,6 +665,7 @@ struct MainTabView: View {
             return
         }
         trialPurchaseError = nil
+        trialPurchasePending = false
         trialPurchaseInFlight = true
         ConversionDiagnostics.record(.trialCTATapped)
         Task { @MainActor in
@@ -673,14 +679,17 @@ struct MainTabView: View {
                     ConversionDiagnostics.record(.purchasePending)
                     // Keep the sheet up so the tap has a visible answer. The
                     // isProSubscriber change below closes it once approved.
-                    trialPurchaseError = SubscriptionService.pendingApprovalMessage
+                    trialPurchasePending = true
                 case .cancelled:
                     ConversionDiagnostics.record(.purchaseCancelled)
                     trialPurchaseError = String(localized: "Trial start cancelled. Tap again to continue.")
                 }
             } catch {
                 ConversionDiagnostics.record(.purchaseFailed)
-                trialPurchaseError = String(localized: "Couldn't start your trial. Please try again.")
+                trialPurchaseError = SubscriptionService.purchaseFailureMessage(
+                    for: error,
+                    fallback: String(localized: "Couldn't start your trial. Please try again.")
+                )
             }
         }
     }

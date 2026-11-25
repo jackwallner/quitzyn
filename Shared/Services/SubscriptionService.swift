@@ -348,7 +348,7 @@ final class SubscriptionService: NSObject {
         let result: PurchaseResultData
         do {
             result = try await Purchases.shared.purchase(package: package)
-        } catch let error as RevenueCat.ErrorCode where error == .paymentPendingError {
+        } catch where PurchaseFailure.classify(error) == .pending {
             // Ask to Buy, SCA, or parental approval. Not a failure: StoreKit
             // finishes it later and the delegate flips the entitlement.
             return .pending
@@ -380,7 +380,18 @@ final class SubscriptionService: NSObject {
 
     /// Shown wherever a purchase comes back deferred, so every surface says the same thing.
     static let pendingApprovalMessage =
-        String(localized: "Your purchase is waiting for approval. Bloom+ unlocks on its own once it's confirmed, and you can keep using the free version meanwhile.")
+        String(localized: "Waiting for approval. Your purchase unlocks once it is approved.")
+
+    /// Shown when a purchase fails because the App Store could not be reached,
+    /// in place of RevenueCat's English description.
+    static let unreachableMessage =
+        String(localized: "Couldn't load subscription options. Check your connection and try again.")
+
+    /// What a surface shows for a purchase that threw: the connection line for
+    /// a lost connection, else the surface's own `fallback`.
+    static func purchaseFailureMessage(for error: Error, fallback: String) -> String {
+        PurchaseFailure.classify(error) == .unreachable ? unreachableMessage : fallback
+    }
 
     func restorePurchases() async {
         guard storeIsLive else { return }
@@ -619,6 +630,24 @@ extension SubscriptionService: PurchasesDelegate {
 
 enum PurchaseError: Error {
     case notConfigured
+}
+
+/// How a thrown purchase error is read. A pending Ask to Buy is a wait, not a
+/// failure, and a lost connection reads as the translated connection line.
+/// Everything else stays an error the surface words itself.
+enum PurchaseFailure: Equatable {
+    case pending
+    case unreachable
+    case other
+
+    static func classify(_ error: Error) -> PurchaseFailure {
+        guard let code = error as? RevenueCat.ErrorCode else { return .other }
+        switch code {
+        case .paymentPendingError: return .pending
+        case .networkError, .offlineConnectionError: return .unreachable
+        default: return .other
+        }
+    }
 }
 #endif
 
