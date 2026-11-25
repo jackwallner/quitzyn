@@ -878,9 +878,14 @@ struct OnboardingView: View {
         #endif
     }
 
+    /// The wording arm comes from RevenueCat offering metadata (`trial_cta`);
+    /// the control is this page's own "Start my N-day free trial".
     private var trialCTATitle: String {
-        guard let trialDays else { return String(localized: "Start my free trial") }
-        return String(localized: "Start my \(trialDays)-day free trial")
+        #if canImport(RevenueCat)
+        subscriptions.trialCTAArm.title(.onboarding, days: trialDays)
+        #else
+        TrialCTA.myDays.title(.onboarding, days: trialDays)
+        #endif
     }
 
     /// Nil until the store says how long the trial is. A literal fallback would

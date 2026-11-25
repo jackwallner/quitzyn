@@ -80,6 +80,7 @@ write "nicotine" or "pouch" in craving/slip/patterns code, add a term instead.
   never before onboarding is done. Settings has separate "Send Feedback" and
   "Rate Quit Zyn" rows. App Store ID `6784788496`. (Shared rules in the
   `ios-dev` skill.)
+- Remote config: RevenueCat offering metadata (`RemoteConfig`, current offering) drives the trial button wording (`trial_cta`: `my_days` control, `seven_day`, `my`, `your`) and the `rating_prompt` off switch. Wording tests go through offering metadata `trial_cta`; switch keys must be set the same on every offering. DEBUG pin: `-quitzyn.rc.<key> <value>`.
 - `Sober.storekit` tests the paywall in the simulator without RevenueCat dashboard config.
 - A started trial is tracked by `TrialLifecycle`, which asks for notification permission
   and schedules the heads-up `TrialTimeline` promises, two days before conversion.

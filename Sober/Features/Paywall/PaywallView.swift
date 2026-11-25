@@ -471,8 +471,10 @@ struct PaywallView: View {
         guard let package = selectedPackage else { return String(localized: "Continue") }
         if package.soberPackageKind == .lifetime { return String(localized: "Unlock Lifetime") }
         if subscriptions.isEligibleForIntroOffer(package), let title = package.soberIntroOfferCTATitle {
-            return title
+            // `trial_cta` reworded: the control is this plan's own intro title.
+            return subscriptions.trialCTAArm.title(.paywall, days: package.soberIntroOfferDays, planTitle: title)
         }
+        // Ineligible accounts get no trial promise on any arm (Apple 3.1.2).
         return String(localized: "Continue with Bloom+")
     }
 
