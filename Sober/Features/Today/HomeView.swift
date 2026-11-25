@@ -689,7 +689,10 @@ struct HomeView: View {
     /// moment, the second launch, the 30-day cooldown, the write-review stop,
     /// and RevenueCat's `rating_prompt` switch.
     private var canAskForReview: Bool {
-        ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
+        // UI-test and screenshot launches never ask: on the simulator the system
+        // rating dialog would cover Home and swallow the journey's next tap.
+        !QuitZynScreenshotMode.isEnabled
+            && ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
             && !reviewPromptShownThisSession
             && subscriptions.isOn(.ratingPrompt)
     }
