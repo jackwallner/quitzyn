@@ -36,6 +36,9 @@ struct HomeView: View {
     /// tap opens is closed: the pitch's sheet replaced it, dropping the note.
     @State private var pendingCheckInPitchCount: Int?
     @State private var reviewPromptShownThisSession = false
+    /// Whether Home is the screen in front. The rating ask never lands on
+    /// another tab or after Home has gone away.
+    @State private var isOnScreen = false
     /// Measured to keep the garden's floor from pushing the stack past its
     /// space (see `fittedGardenMinHeight`).
     @State private var stackSpace = StackSpace()
@@ -126,7 +129,9 @@ struct HomeView: View {
             } message: {
                 Text("Your day counter will restart at zero. Your history is kept.")
             }
+            .onDisappear { isOnScreen = false }
             .onAppear {
+                isOnScreen = true
                 GardenService(context: context).applyVitalityDecay()
                 refreshDailyState()
                 presentPostOnboardingPaywallIfNeeded()
@@ -169,7 +174,7 @@ struct HomeView: View {
                         withAnimation { showGrowth = false }
                         growthEvent = nil
                         WidgetSnapshotPump.push(context: context)
-                        recordPositiveMomentForReview()
+                        recordPositiveMomentForReview(.growthCelebration)
                         presentPostOnboardingPaywallIfNeeded()
                         scheduleTrialPitchAfterGrowthCelebration()
                     }
@@ -344,7 +349,7 @@ struct HomeView: View {
                         GardenService(context: context).water()
                         refreshCheckInState()
                         WidgetSnapshotPump.push(context: context)
-                        recordPositiveMomentForReview()
+                        recordPositiveMomentForReview(.welcomeBackCheckIn)
                         // No note sheet opens here, so nothing would send it.
                         recordCheckInForTrialPitch()
                         sendPendingCheckInPitch()
@@ -455,7 +460,7 @@ struct HomeView: View {
                 GardenService(context: context).water()
                 refreshCheckInState()
                 WidgetSnapshotPump.push(context: context)
-                recordPositiveMomentForReview()
+                recordPositiveMomentForReview(.dailyCheckIn)
                 recordCheckInForTrialPitch()
                 showCheckInDetail = true
             } label: {
@@ -575,7 +580,7 @@ struct HomeView: View {
             showSlipSheet = true
         }
         guard outcome == .rodeItOut else { return }
-        recordPositiveMomentForReview()
+        recordPositiveMomentForReview(.craving(outcome))
         guard !isPro else { return }
         let count = TrialSubsequentPitchGate.incrementPersistedCount(key: AppGroup.cravingRodeOutCountKey)
         Task {
@@ -638,8 +643,8 @@ struct HomeView: View {
         }
     }
 
-    private func recordPositiveMomentForReview() {
-        ReviewPromptTracker.recordPositiveMoment()
+    private func recordPositiveMomentForReview(_ moment: ReviewMoment) {
+        guard ReviewPromptTracker.recordPositiveMoment(moment) else { return }
         NotificationCenter.default.post(name: .soberPositiveMomentForReview, object: nil)
     }
 
@@ -651,28 +656,41 @@ struct HomeView: View {
     }
 
     /// The rating ask after a positive moment: Apple's own prompt, no question
-    /// in front of it. Waits for celebrations to finish, then asks only if
-    /// Home is still clear. A blocked ask keeps the moment pending in the
-    /// tracker; the check-in note sheet's dismissal or the next moment asks.
+    /// in front of it, and the only automatic trigger the app has. Waits for
+    /// celebrations to finish, then asks only if Home is still on screen and
+    /// clear. A moment that finds something over Home is skipped and the next
+    /// good result asks; the exception is the check-in note sheet the same tap
+    /// opens, whose dismissal asks for that same check-in.
     private func scheduleReviewRequestAfterPositiveMoment() {
-        guard ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding),
-              !reviewPromptShownThisSession,
-              isHomeClear
-        else { return }
+        // Something already over Home (the note sheet this check-in opened)
+        // waits: its dismissal calls back in for the same moment.
+        guard isOnScreen, isHomeClear, canAskForReview else { return }
 
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 3_500_000_000)
-            guard isHomeClear,
+            guard isOnScreen, isHomeClear,
                   // A trial pitch may have been scheduled from the same moment
                   // (e.g. a growth-celebration dismiss); never ask over it.
                   !TrialOfferCoordinator.shared.isPresentingSheet,
                   TrialOfferCoordinator.shared.pendingRequest == nil,
-                  ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
-            else { return }
+                  canAskForReview
+            else {
+                // Something is up: this moment is spent, the next one asks.
+                ReviewPromptTracker.consumePendingPositiveMoment()
+                return
+            }
             reviewPromptShownThisSession = true
             ReviewPromptTracker.markShown()
             requestReview()
         }
+    }
+
+    /// Every gate that does not depend on what is on screen: a fresh good
+    /// moment, the second launch, the 30-day cooldown, the write-review stop,
+    /// and RevenueCat's `rating_prompt` switch.
+    private var canAskForReview: Bool {
+        ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
+            && !reviewPromptShownThisSession
     }
 
     private func recordCheckInForTrialPitch() {

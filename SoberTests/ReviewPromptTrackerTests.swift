@@ -107,4 +107,82 @@ struct ReviewPromptTrackerTests {
             #expect(ReviewPromptTracker.canRequestReview(hasCompletedSetup: true))
         }
     }
+
+    // MARK: - The good moment
+
+    /// Only a result the user just achieved asks. A craving that was not ridden
+    /// out never does, and neither does one left unanswered.
+    @Test func onlyGoodResultsAreMoments() {
+        #expect(ReviewMoment.dailyCheckIn.isGoodResult)
+        #expect(ReviewMoment.welcomeBackCheckIn.isGoodResult)
+        #expect(ReviewMoment.growthCelebration.isGoodResult)
+        #expect(ReviewMoment.craving(.rodeItOut).isGoodResult)
+        #expect(!ReviewMoment.craving(.gaveIn).isGoodResult)
+        #expect(!ReviewMoment.craving(.unresolved).isGoodResult)
+    }
+
+    @Test func aGoodResultArmsTheAskAndABadOneDoesNot() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            ReviewPromptTracker.hasPendingPositiveMoment = false
+            #expect(!ReviewPromptTracker.recordPositiveMoment(.craving(.gaveIn)))
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+            #expect(ReviewPromptTracker.recordPositiveMoment(.craving(.rodeItOut)))
+            #expect(ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+        }
+    }
+
+    @Test func noMomentNoAskEvenOnALaterLaunch() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            ReviewPromptTracker.hasPendingPositiveMoment = false
+            #expect(ReviewPromptTracker.canRequestReview(hasCompletedSetup: true))
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+        }
+    }
+
+    @Test func aSkippedMomentIsSpentAndTheNextOneAsks() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            ReviewPromptTracker.recordPositiveMoment(.dailyCheckIn)
+            ReviewPromptTracker.consumePendingPositiveMoment()
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+            ReviewPromptTracker.recordPositiveMoment(.growthCelebration)
+            #expect(ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+        }
+    }
+
+    /// An unrelated sheet closing much later must not ask for a moment that
+    /// was blocked long ago.
+    @Test func aStaleMomentLapses() {
+        withCleanTracker {
+            ReviewPromptTracker.recordPositiveMoment(.dailyCheckIn)
+            let now = Date.now
+            #expect(ReviewPromptTracker.isPendingPositiveMomentFresh(now: now.addingTimeInterval(60)))
+            #expect(!ReviewPromptTracker.isPendingPositiveMomentFresh(now: now.addingTimeInterval(11 * 60)))
+        }
+    }
+
+    /// The cooldown is stamped when the call is made, so a second moment right
+    /// after it waits the full 30 days.
+    @Test func theCallStampsTheCooldown() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 2
+            ReviewPromptTracker.recordPositiveMoment(.dailyCheckIn)
+            #expect(ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+            ReviewPromptTracker.markShown()
+            ReviewPromptTracker.recordPositiveMoment(.dailyCheckIn)
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+            let later = Date.now.addingTimeInterval(31 * 86_400)
+            #expect(ReviewPromptTracker.canRequestReview(hasCompletedSetup: true, now: later))
+        }
+    }
+
+    @Test func neverBeforeOnboardingIsDone() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            ReviewPromptTracker.recordPositiveMoment(.dailyCheckIn)
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: false))
+        }
+    }
 }
