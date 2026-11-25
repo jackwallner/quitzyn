@@ -691,6 +691,7 @@ struct HomeView: View {
     private var canAskForReview: Bool {
         ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
             && !reviewPromptShownThisSession
+            && subscriptions.isOn(.ratingPrompt)
     }
 
     private func recordCheckInForTrialPitch() {

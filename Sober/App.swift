@@ -591,6 +591,7 @@ struct MainTabView: View {
                 isPurchasing: trialPurchaseInFlight,
                 errorMessage: trialPurchaseError,
                 isPendingApproval: trialPurchasePending,
+                ctaArm: subscriptions.trialCTAArm,
                 onStartTrial: startDirectTrialPurchase,
                 onSeeAllPlans: {
                     pendingPaywallAfterTrialDismiss = true

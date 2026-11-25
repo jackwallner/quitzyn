@@ -21,6 +21,8 @@ struct TrialOfferSheet: View {
     let errorMessage: String?
     /// An Ask to Buy waiting on approval: shown calmly, not as an error.
     var isPendingApproval = false
+    /// The `trial_cta` wording arm; the control is this sheet's own copy.
+    var ctaArm: TrialCTA = .myDays
     let onStartTrial: () -> Void
     let onSeeAllPlans: () -> Void
     let onDismiss: () -> Void
@@ -47,8 +49,7 @@ struct TrialOfferSheet: View {
 
     private var ctaTitle: String {
         guard hasTrial else { return String(localized: "Continue") }
-        guard let trialDays else { return String(localized: "Start My Free Trial") }
-        return String(localized: "Start My \(trialDays)-Day Free Trial")
+        return ctaArm.title(.sheet, days: trialDays)
     }
 
     private var subheadline: String {

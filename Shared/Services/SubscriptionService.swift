@@ -59,6 +59,10 @@ final class SubscriptionService: NSObject {
     /// True once RevenueCat has returned intro-offer eligibility. Until then the
     /// paywall must not promise a free trial it can't confirm (Apple 3.1.2).
     private(set) var introEligibilityResolved: Bool = false
+
+    /// The current offering's metadata (a running Experiment's variant
+    /// included), nil until offerings have loaded. Read through `RemoteConfig`.
+    private(set) var offeringMetadata: [String: Any]?
     #endif
 
     private var paywallImpressionsThisSession: Set<String> = []
@@ -229,6 +233,7 @@ final class SubscriptionService: NSObject {
         defer { isLoadingProducts = false }
         do {
             let offerings = try await Purchases.shared.offerings()
+            offeringMetadata = offerings.current?.metadata
             let offering = offerings.soberPaywallOffering
             packages = offering?.soberSortedPackages ?? []
             if packages.isEmpty {
@@ -309,6 +314,12 @@ final class SubscriptionService: NSObject {
         // event counts alone, which meant an install with no onboarding events
         // would never have sent the paywall keys either.
         attributes.merge(ConversionDiagnostics.subscriberAttributes) { _, fleet in fleet }
+        // The wording arm this customer was served, so a trial_cta test can be
+        // read by attribute as well as by Experiment. Only once offerings have
+        // loaded: before that every customer would read as control.
+        if offeringMetadata != nil {
+            attributes[TrialCTA.metadataKey] = trialCTAArm.rawValue
+        }
         guard !attributes.isEmpty else { return }
         Purchases.shared.attribution.setAttributes(attributes)
     }
@@ -647,6 +658,14 @@ enum PurchaseFailure: Equatable {
         case .networkError, .offlineConnectionError: return .unreachable
         default: return .other
         }
+    }
+}
+
+extension SubscriptionService {
+    var trialCTAArm: TrialCTA { TrialCTA.from(metadata: offeringMetadata) }
+
+    func isOn(_ remoteSwitch: RemoteSwitch) -> Bool {
+        RemoteConfig.isOn(remoteSwitch, in: offeringMetadata)
     }
 }
 #endif
