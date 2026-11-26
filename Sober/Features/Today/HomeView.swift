@@ -685,13 +685,23 @@ struct HomeView: View {
         }
     }
 
+    /// DEBUG launch flags only the UI tests and screenshot runs pass.
+    private static var isTestHarnessLaunch: Bool {
+        #if DEBUG
+        let args = ProcessInfo.processInfo.arguments
+        return QuitZynScreenshotMode.isEnabled || args.contains("-previewStore")
+        #else
+        return false
+        #endif
+    }
+
     /// Every gate that does not depend on what is on screen: a fresh good
     /// moment, the second launch, the 30-day cooldown, the write-review stop,
     /// and RevenueCat's `rating_prompt` switch.
     private var canAskForReview: Bool {
         // UI-test and screenshot launches never ask: on the simulator the system
         // rating dialog would cover Home and swallow the journey's next tap.
-        !QuitZynScreenshotMode.isEnabled
+        !Self.isTestHarnessLaunch
             && ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: hasCompletedOnboarding)
             && !reviewPromptShownThisSession
             && subscriptions.isOn(.ratingPrompt)
