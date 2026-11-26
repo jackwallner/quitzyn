@@ -146,19 +146,21 @@ struct CravingModeView: View {
             ZStack {
                 Circle()
                     .stroke(Theme.ringTrack, lineWidth: 1)
-                    .frame(width: 260, height: 260)
                 Circle()
                     .fill(Theme.brandPrimary.opacity(0.14))
-                    .frame(width: 260, height: 260)
                     .scaleEffect(circleScale)
                 Circle()
                     .stroke(Theme.brandPrimary.opacity(0.5), lineWidth: 2)
-                    .frame(width: 260, height: 260)
                     .scaleEffect(circleScale)
                 Text(breathPhase.label)
                     .font(Theme.heading())
                     .foregroundStyle(Theme.brandPrimary)
             }
+            // 260 pt where it fits. On a 568 pt screen (Display Zoom, SE) it
+            // gives up height first, so the dock stays where the done step's is.
+            .frame(maxWidth: 260, maxHeight: 260)
+            .aspectRatio(1, contentMode: .fit)
+            .layoutPriority(1)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(breathPhase.label)
             .accessibilityIdentifier("craving.breathing")

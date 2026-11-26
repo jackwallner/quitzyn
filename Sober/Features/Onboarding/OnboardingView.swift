@@ -219,47 +219,64 @@ struct OnboardingView: View {
             Text("Your usual can")
                 .font(Theme.subhead(weight: .semibold))
                 .foregroundStyle(.white)
-            HStack(spacing: Theme.Space.m) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Price")
-                        .font(Theme.caption())
-                        .foregroundStyle(Theme.onGradientText)
-                    HStack(spacing: Theme.Space.m) {
-                        stepButton("minus") {
-                            costPerCan = spendScale.clampedCanPrice(costPerCan - spendScale.canPriceStep)
-                        }
-                        Text(formatCurrencyDecimal(costPerCan))
-                            .font(.system(size: 22, weight: .bold, design: .rounded))
-                            .monospacedDigit()
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                            .frame(minWidth: 56)
-                        stepButton("plus") {
-                            costPerCan = spendScale.clampedCanPrice(costPerCan + spendScale.canPriceStep)
-                        }
-                    }
+            // Side by side when they fit; stacked at 320 pt (Display Zoom, SE),
+            // where the pair ran 20 pt past the screen and widened the page.
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: Theme.Space.m) {
+                    canPriceColumn
+                        // Room goes to the price before the spacer: "120 CZK"
+                        // wrapped when the two split it evenly.
+                        .layoutPriority(1)
+                    Spacer(minLength: 0)
+                    canPouchesColumn(alignment: .trailing)
                 }
-                // Room goes to the price before the spacer: "120 CZK" wrapped
-                // when the two split it evenly.
-                .layoutPriority(1)
-                Spacer(minLength: 0)
-                VStack(alignment: .trailing, spacing: 4) {
-                    Text("Pouches")
-                        .font(Theme.caption())
-                        .foregroundStyle(Theme.onGradientText)
-                    Picker("Pouches per can", selection: $pouchesPerCan) {
-                        ForEach([15, 20, 24], id: \.self) { count in
-                            Text("\(count)").tag(count)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    .colorScheme(.dark)
-                    .frame(width: 132)
+                VStack(alignment: .leading, spacing: Theme.Space.m) {
+                    canPriceColumn
+                    canPouchesColumn(alignment: .leading)
                 }
             }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(Theme.Space.l)
         .background(Theme.onGradientPanel, in: RoundedRectangle(cornerRadius: 18))
+    }
+
+    private var canPriceColumn: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Price")
+                .font(Theme.caption())
+                .foregroundStyle(Theme.onGradientText)
+            HStack(spacing: Theme.Space.m) {
+                stepButton("minus") {
+                    costPerCan = spendScale.clampedCanPrice(costPerCan - spendScale.canPriceStep)
+                }
+                Text(formatCurrencyDecimal(costPerCan))
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(minWidth: 56)
+                stepButton("plus") {
+                    costPerCan = spendScale.clampedCanPrice(costPerCan + spendScale.canPriceStep)
+                }
+            }
+        }
+    }
+
+    private func canPouchesColumn(alignment: HorizontalAlignment) -> some View {
+        VStack(alignment: alignment, spacing: 4) {
+            Text("Pouches")
+                .font(Theme.caption())
+                .foregroundStyle(Theme.onGradientText)
+            Picker("Pouches per can", selection: $pouchesPerCan) {
+                ForEach([15, 20, 24], id: \.self) { count in
+                    Text("\(count)").tag(count)
+                }
+            }
+            .pickerStyle(.segmented)
+            .colorScheme(.dark)
+            .frame(width: 132)
+        }
     }
 
     private func stepButton(_ icon: String, action: @escaping () -> Void) -> some View {
